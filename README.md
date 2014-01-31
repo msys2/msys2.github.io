@@ -12,9 +12,9 @@ Based on information found in ..:
 ---
 
 From:
-https://github.com/iljau/msys2_zipped/releases/tag/v0.1
+https://github.com/iljau/msys2_zip/releases/tag/v0.1
 
-1. Download: https://github.com/iljau/msys2_zipped/releases/download/v0.1/msys32.zip
+1. Download: https://github.com/iljau/msys2_zip/releases/download/v0.1/msys32.zip
 2. Unzip it using [`7-Zip`](http://www.7-zip.org/) (_because at least in Windows 7 `"Extract all..."` context menu option will hang your `explorer.exe`_)
 3. Launch `mingw32_shell.bat`
 
@@ -36,3 +36,4 @@ See also:
 - https://github.com/cbucher/console
 - https://github.com/fish-shell/fish-shell/issues/810
 - https://github.com/fish-shell/fish-shell/issues/319
+- 
