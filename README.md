@@ -36,4 +36,4 @@ See also:
 - https://github.com/cbucher/console
 - https://github.com/fish-shell/fish-shell/issues/810
 - https://github.com/fish-shell/fish-shell/issues/319
-- 
+- http://sourceforge.net/mailarchive/message.php?msg_id=30882322
