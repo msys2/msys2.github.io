@@ -32,6 +32,7 @@ But good for a start.
 ---
 
 See also:
-- http://bliker.github.io/cmder/
+- https://github.com/bliker/cmder / http://bliker.github.io/cmder/
+- https://github.com/cbucher/console
 - https://github.com/fish-shell/fish-shell/issues/810
 - https://github.com/fish-shell/fish-shell/issues/319
