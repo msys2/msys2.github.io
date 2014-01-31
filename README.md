@@ -1,0 +1,28 @@
+Originally: http://stackoverflow.com/a/21389480/2419207
+
+---
+
+Based on information found in ..:
+
+- https://ghc.haskell.org/trac/ghc/wiki/Building/Preparation/Windows/MSYS2
+- https://wiki.archlinux.org/index.php/pacman
+
+.. I created huge zip file containing most of 32-bit packages and libraries.
+
+From:
+https://github.com/iljau/msys2_zipped/releases/tag/v0.1
+
+1. Download [`msys32.zip`](https://github.com/iljau/msys2_zipped/releases/download/v0.1/msys32.zip)
+2. Unzip it
+3. Launch `mingw32_shell.bat`
+
+    `$ clang++ --version`<br />
+    `clang version 3.4 (tags/RELEASE_34/final)`<br />
+    `Target: i686-w64-mingw32`<br />
+    `Thread model: posix`
+    
+I got my [`hello_world.cpp`](https://en.wikibooks.org/wiki/C%2B%2B_Programming/Examples/Hello_world#Hello_World_-_Writing.2C_Compiling_and_Running_a_C.2B.2B_Program) compiled.
+
+It didn't print anything, though. ;-D
+
+But good for a start.
