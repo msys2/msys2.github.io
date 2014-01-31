@@ -28,3 +28,10 @@ Thread model: posix
 I got my [`hello_world.cpp`](https://en.wikibooks.org/wiki/C%2B%2B_Programming/Examples/Hello_world#Hello_World_-_Writing.2C_Compiling_and_Running_a_C.2B.2B_Program) compiled. It didn't print anything, though. ;-D
 
 But good for a start.
+
+---
+
+See also:
+- http://bliker.github.io/cmder/
+- https://github.com/fish-shell/fish-shell/issues/810
+- https://github.com/fish-shell/fish-shell/issues/319
