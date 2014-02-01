@@ -12,10 +12,10 @@ Based on information found in ..:
 ---
 
 From:
-https://github.com/iljau/msys2_zip/releases/tag/v0.1
+https://github.com/iljau/msys2_zip/releases/tag/v0.3
 
-1. Download: https://github.com/iljau/msys2_zip/releases/download/v0.1/msys32.zip
-2. Unzip it using [`7-Zip`](http://www.7-zip.org/) (_because at least in Windows 7 `"Extract all..."` context menu option will hang your `explorer.exe`_)
+1. Download: https://github.com/iljau/msys2_zip/releases/download/v0.3/msys32.exe
+2. Let it run.
 3. Launch `mingw32_shell.bat`
 
 ```
