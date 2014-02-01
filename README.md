@@ -31,9 +31,11 @@ But good for a start.
 
 ---
 
-See also:
+*References*:
 - https://github.com/bliker/cmder / http://bliker.github.io/cmder/
 - https://github.com/cbucher/console
 - https://github.com/fish-shell/fish-shell/issues/810
 - https://github.com/fish-shell/fish-shell/issues/319
 - http://sourceforge.net/mailarchive/message.php?msg_id=30882322
+- https://github.com/kripken/emscripten/issues/2029
+- http://cygwin.1069669.n5.nabble.com/Cygwin-installer-could-be-much-more-better-td105775.html
