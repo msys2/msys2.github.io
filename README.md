@@ -42,3 +42,7 @@ But good for a start.
 - http://sourceforge.net/mailarchive/message.php?msg_id=30882322
 - https://github.com/kripken/emscripten/issues/2029
 - http://cygwin.1069669.n5.nabble.com/Cygwin-installer-could-be-much-more-better-td105775.html
+
+*This wouldn't be possible without*:
+- https://www.dropbox.com/help/1964/en
+- https://github.com/blog/1547-release-your-software
