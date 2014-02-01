@@ -32,6 +32,8 @@ But good for a start.
 ---
 
 *References*:
+- https://ghc.haskell.org/trac/ghc/wiki/Building/Preparation/Windows/MSYS2
+- http://sourceforge.net/projects/s-zipsfxbuilder/
 - https://github.com/bliker/cmder / http://bliker.github.io/cmder/
 - https://github.com/cbucher/console
 - https://github.com/fish-shell/fish-shell/issues/810
