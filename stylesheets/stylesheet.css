@@ -172,6 +172,10 @@ code, pre {
   font-size: 14px;
 }
 
+.pre {
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+}
+
 code {
   background-color: #f2f2f2;
   border: solid 1px #ddd;
