@@ -23,12 +23,12 @@
         </header>
 
         <section id="downloads" class="clearfix">
-          <a href="https://github.com/msys2/installer/releases/download/v0.11/msys32-base-setup.exe" class="button">&nbsp;&nbsp;msys32-base-setup.exe</a>
-          <a href="https://github.com/msys2/installer/releases/download/v0.11/msys64-base-setup.exe" class="button">&nbsp;&nbsp;msys64-base-setup.exe</a>
+          <a href="http://sourceforge.net/projects/msys2/files/Base/i686/msys2-i686-20140624.exe/download" class="button">&nbsp;&nbsp;msys2-i686-setup.exe</a>
+          <a href="http://sourceforge.net/projects/msys2/files/Base/x86_64/msys2-x86_64-20140624.exe/download" class="button">&nbsp;&nbsp;msys2-x86_64-setup.exe</a>
           <!--
           <a href="http://kent.dl.sourceforge.net/project/msys2/Base/i686/msys2-base-i686-20140216.tar.xz" class="button"><span>Download .tar.xz</span></a>
           -->
-          <a href="https://github.com/msys2/msys2.github.io" id="view-on-github" class="button"><span>View on GitHub</span></a>
+          <a href="https://github.com/msys2" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
 
         <hr>
@@ -38,11 +38,11 @@
             <p>
             <ol>
                 <li>
-                    <p>Download <a href="https://github.com/iljau/msys2-installer/releases/download/v0.8/msys32-base-setup.exe">msys32-base-setup.exe</a></p>
+                    <p>Download <a href="http://sourceforge.net/projects/msys2/files/Base/i686/msys2-i686-20140624.exe/download">msys2-i686-setup.exe</a></p>
                 </li>
-                <li><p>Clicking on <strong>"Run"</strong> is mildly suggested:
+                <li><p>Clicking on <strong>"Next"</strong> is mildly suggested:
                     <br />
-                        <img src="./1_msys32-warning.png"/>
+                        <img src="./1_msys32-start.png"/>
                     </p>
                 </li>
                 <li>
@@ -51,10 +51,10 @@
                         <img src="./2_msys32-install_path.png"/>
                     </p>
                 </li>
-                <li><p>
+                <!--li><p>
                     You'll see new folder on the desktop..:
                     <br />
-                    <img src="./3_msys32-desktop.png"/>
+                    <img src="./3_msys32-shortcut.png"/>
 
                 </p>
                 </li>
@@ -65,12 +65,36 @@
                         <br />
                         <img src="./4_msys32-folder.png">
                     </p>
+                </li-->
+
+                <li>
+                    <p>
+                        Run MSYS2 Shell when Finished:
+                        <br />
+                        <img src="./5_msys2-finish_install.png">
+                    </p>
                 </li>
                 
                 <li>
-                  Take look at <a href="https://github.com/JuliaLang/julia/issues/3640#issuecomment-35830176">github.com/JuliaLang/julia/issues/3640#issuecomment-35830176</a>
-                
-                  for additional details.
+                    <p>
+                        Update the system packages with <strong>Pacman -Syu</strong>:<br />
+                        Then close MSYS2 and restart the shell
+                        <br />
+                        <img src="./6_msys2-update-system.png">
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Now <strong>Pacman</strong> is fully committed to the windows cause :)<br />
+                        <br />
+                        <img src="./7_msys2-install-freely.png">
+                    </p>
+                </li>
+
+                <li>
+                  Take look at <a href="http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/">Detailed MSYS2 install guide</a>
+                  for additional details and troubleshooting.
                 </li>
       
 
@@ -158,6 +182,7 @@
             <p>
                 <ul>
                     <li><a class="user-mention" href="https://github.com/Alexpux">Alexpux (Алексей)</a></li>
+                    <li><a class="user-mention" href="https://github.com/mingwandroid">martell (Martell Malone)</a></li>
                     <li><a class="user-mention" href="https://github.com/mingwandroid">mingwandroid (Ray Donnelly)</a></li>
                     <li><a class="user-mention" href="https://github.com/niXman">niXman</a></li>
                 </ul>
@@ -175,12 +200,13 @@
                     <li><a href="https://sourceforge.net/p/msys2/wiki/MSYS2%20installation/">sourceforge.net/p/msys2/wiki/MSYS2 installation</a></li>
                     <li><a href="https://sourceforge.net/p/msys2/tickets/">sourceforge.net/p/msys2/tickets</a></li>
                     <li><a href="https://sourceforge.net/p/msys2/discussion/general/">sourceforge.net/p/msys2/discussion/general</a></li>
+                    <li><a href="irc://irc.oftc.net:6667/msys2">IRC Channel</a></li>
                 </ul>
             </p>
         </section>
 
         <footer>
-          msys2-installer is maintained by <a href="https://github.com/iljau">iljau</a><br>
+          msys2.github.io is maintained by <a href="https://github.com/martell">Martell</a><br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
