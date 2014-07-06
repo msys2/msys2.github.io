@@ -1,4 +1,4 @@
 The most complete documentation currently available:
 
-"JuliaLang / julia: Using MSYS2. #3640":
-https://github.com/JuliaLang/julia/issues/3640#issuecomment-35830176
+"The MSYS2 Sourceforge Project page":
+https://sourceforge.net/p/msys2/wiki/Home/
