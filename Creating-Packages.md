@@ -31,4 +31,11 @@ Typical usage
 
 makepkg -Ccf  -This builds a package a packages them and is what you should typically use
 makepkg -Rdf  -The repackage a package and should be used on a package fail only
+
+For mingw packages you must substitute for makepkg-mingw
+
+makepkg-mingw -Ccf
+makepkg-mingw -Rdf
+
+
  
