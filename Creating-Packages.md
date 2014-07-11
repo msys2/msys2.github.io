@@ -13,4 +13,22 @@ When building out PKGBUILD scripts we have two tools available to us.
 * **makepkg** - these is used to build msys2-packages
 * **makepkg-mingw** - this iteration of the tool is used to build mingw packages
 
+Our PKGBUILD script is split up into several sections.
+* **prepare** - these is the function that is called before building
+* **build** - they is where you compile you library (i.e. make)
+* **check** - an optional step to check your build
+* **package** - the final stage where you package up a pacman package
+
+There are many other arguments such as the package name, the depends etc
+
+The makepkg tool takes server arguments
+
+* -C - clean up the source directory before build
+* -c - clean up the source directory after build
+* -f - force build even if already done
+
+Typical usage
+
+makepkg -Ccf  -This builds a package a packages them and is what you should typically use
+makepkg -Rdf  -The repackage a package and should be used on a package fail only
  
