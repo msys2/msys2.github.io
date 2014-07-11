@@ -3,4 +3,4 @@ Typically you would have each PKGBUILD in it's own folder as it downloads source
 
 In msys2 there are 2 types of packages
 * msys2 packages - these run in the emulation layer and are typically linux only programs
-* mingw packages - these are native mingw-w64 packages that create native programs for windows
+* mingw packages - these run natively just like any other windows program
