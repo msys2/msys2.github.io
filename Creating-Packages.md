@@ -34,8 +34,8 @@ makepkg -Rdf  -The repackage a package and should be used on a package fail only
 
 For mingw packages you must substitute for makepkg-mingw
 
-makepkg-mingw -Ccf
-makepkg-mingw -Rdf
+makepkg-mingw -Ccf  
+makepkg-mingw -Rdf  
 
 
  
