@@ -191,12 +191,12 @@
                    href="#donation"><span
                         class="octicon octicon-link"></span></a>Donation
 			</h3>			
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="HKH5VYYLGP8XN">
-			<input type="image" src="https://www.paypalobjects.com/en_US/RU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
+			<form action="https://merchant.webmoney.ru/lmi/payment.asp" method="POST">
+ 			   <input type="hidden" name="LMI_PAYMENT_AMOUNT" value="10.00">
+ 			  <input type="hidden" name="LMI_PAYMENT_DESC_BASE64" value="TVNZUzI=">
+ 			 <input type="hidden" name="LMI_PAYEE_PURSE" value="Z110171850957">
+			 <input type="submit" class="wmbtn" style="font-famaly:Verdana, Helvetica, sans-serif!important;padding:0 10px;height:30px;font-size:12px!important;border:1px solid #538ec1!important;background:#a4cef4!important;color:#fff!important;" value=" Donate 10.00 WMZ ">
+		 </form>
         </section>
 
         <footer>
