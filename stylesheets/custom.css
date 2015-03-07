@@ -1,0 +1,11 @@
+.left-donation-col {
+	width: 290px;
+	height: 600px;
+	float: left;
+}
+
+.right-donation-col {
+	width: 290px;
+	height: 600px;
+	float: right;
+}
