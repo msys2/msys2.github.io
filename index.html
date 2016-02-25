@@ -20,10 +20,16 @@
           <h1>MSYS2 installer</h1>
           <h2>One click installer for <a href="https://github.com/msys2">msys2</a></h2>
         </header>
-        <section id="downloads" class="clearfix">
-          <a href="http://repo.msys2.org/distrib/i686/msys2-i686-20160205.exe" class="button">&nbsp;&nbsp;msys2-i686-20160205.exe</a>
-          <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20160205.exe" class="button">&nbsp;&nbsp;msys2-x86_64-20160205.exe</a>
-          <a href="https://github.com/msys2" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        <section id="downloads">
+          <div class="clearfix">
+            <a href="http://repo.msys2.org/distrib/i686/msys2-i686-20160205.exe" class="button">&nbsp;&nbsp;msys2-i686-20160205.exe</a>
+            <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20160205.exe" class="button">&nbsp;&nbsp;msys2-x86_64-20160205.exe</a>
+            <a href="https://github.com/msys2" id="view-on-github" class="button"><span>View on GitHub</span></a>
+          </div>
+          <div class="clearfix">
+            <span class="checksum-button">SHA256: 37ccf5bc416545079f03382633c3842a0d93a559009fc56280d6b966c1642c41</span>
+            <span class="checksum-button">SHA256: 3c0673086ff41776de88935d60bff4bdcd6455ab72adb47575fae49d3e671f21</span>
+          </div>
         </section>
         <hr/>
         <section id="main_content">
@@ -49,10 +55,10 @@
             </li>
             <li>
               Update the system packages with
-              <pre>pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime</pre>
+              <pre>update-core</pre>
             </li>
             <li>
-              Close MSYS2, run it again from Start menu and update the rest with
+              If needed, close MSYS2, run it again from Start menu. Update the rest with
               <pre>pacman -Su</pre>
               <img src="./6_msys2-update-system.png" alt="MSYS2 shell with pacman's output about system upgrade" />
               <br/><br/>
@@ -76,6 +82,7 @@
             <li><a class="user-mention" href="https://github.com/Alexpux">Alexpux (Алексей)</a></li>
             <li><a class="user-mention" href="https://github.com/martell">martell (Martell Malone)</a></li>
             <li><a class="user-mention" href="https://github.com/mingwandroid">mingwandroid (Ray Donnelly)</a></li>
+            <li><a class="user-mention" href="https://github.com/elieux">Elieux (David Macek)</a></li>
             <li><a class="user-mention" href="https://github.com/niXman">niXman</a></li>
           </ul>
           <h3>
@@ -83,10 +90,16 @@
             Support and Contact
           </h3>
           <ul>
-            <li><a href="https://sourceforge.net/p/msys2/wiki/">sf.net/p/msys2/wiki</a></li>
-            <li><a href="https://sourceforge.net/p/msys2/tickets/">sf.net/p/msys2/tickets</a></li>
-            <li><a href="https://sourceforge.net/p/msys2/discussion/general/">sf.net/p/msys2/discussion/general</a></li>
-            <li><a href="irc://irc.oftc.net:6667/msys2">IRC Channel</a></li>
+            <li>read our <a href="https://sourceforge.net/p/msys2/wiki/">wiki on SourceForge</a></li>
+            <li>search or file <a href="https://github.com/alexpux/msys2-packages/issues">issues for msys2 packages on GitHub</a></li>
+            <li>search or file <a href="https://github.com/alexpux/mingw-packages/issues">issues for mingw-w64 packages on GitHub</a></li>
+            <li>read and post to our <a href="https://sourceforge.net/p/msys2/mailman/msys2-users/">mailing list</a></li>
+            <li>talk on our <a href="irc://irc.oftc.net:6667/msys2">IRC channel</a></li>
+            <li>file <a href="https://github.com/alexpux/cygwin/issues">issues for the MSYS2 runtime on GitHub</a></li>
+            <li>file <a href="https://github.com/alexpux/msys2-pacman/issues">issues for our Pacman fork on GitHub</a></li>
+            <li>improve <a href="https://github.com/msys2/msys2.github.io">this site on GitHub</a></li>
+            <li>don't file <a href="https://sourceforge.net/p/msys2/tickets/">tickets on SourceForge</a></li>
+            <li>participate in <a href="https://sourceforge.net/p/msys2/discussion/general/">discussion on SourceForge</a></li>
           </ul>
           <h3>
             <a id="Donations" class="anchor" href="#donation"><span class="octicon octicon-link"></span></a>
