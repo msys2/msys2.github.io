@@ -57,14 +57,16 @@
               <br/><br/>
             </li>
             <li>
-              Update the package database with:
-              <pre>pacman -Sy</pre>
+              (This is a once only operation until new installers are released)
+              update the package database and pacman with:
+              <pre>pacman -Sy pacman</pre>
             </li>
             <li>
-              Update the core system packages with:
-              <pre>pacman -Su pacman pacman-mirrors</pre>
-            <li>
               If needed, close MSYS2, run it again from Start menu. Update the rest with:
+              Update the package database and core system packages with:
+              <pre>pacman -Syu</pre>
+            <li>
+              Again, if needed, close MSYS2, run it again from Start menu. Update the rest with:
               <pre>pacman -Su</pre>
               <img src="./6_msys2-update-system.png" alt="MSYS2 shell with pacman's output about system upgrade" />
               <br/><br/>
