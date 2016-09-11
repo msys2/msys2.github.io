@@ -26,3 +26,16 @@
 	box-shadow: 0px 1px 5px #e8e8e8;
 	border-radius: 10px;
 }
+
+li p:first-of-type {
+	display: inline;
+}
+
+li img, li pre {
+	display: block;
+	margin-top: 1em;
+}
+
+li img {
+	margin-bottom: 1em;
+}

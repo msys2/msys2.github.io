@@ -1,160 +1,165 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/custom.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>MSYS2 installer</title>
-  </head>
-  <body>
-    <div id="container">
-      <div class="inner">
-        <header>
-          <h1>MSYS2 installer</h1>
-          <h2>One click installer for <a href="https://github.com/msys2">msys2</a></h2>
-        </header>
-        <section id="downloads">
-          <div class="clearfix">
-            <a href="http://repo.msys2.org/distrib/i686/msys2-i686-20160205.exe" class="button">&nbsp;&nbsp;msys2-i686-20160205.exe</a>
-            <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20160205.exe" class="button">&nbsp;&nbsp;msys2-x86_64-20160205.exe</a>
-            <a href="https://github.com/msys2" id="view-on-github" class="button"><span>View on GitHub</span></a>
-          </div>
-          <div class="clearfix">
-            <span class="checksum-button">SHA256: 37ccf5bc416545079f03382633c3842a0d93a559009fc56280d6b966c1642c41</span>
-            <span class="checksum-button">SHA256: 3c0673086ff41776de88935d60bff4bdcd6455ab72adb47575fae49d3e671f21</span>
-          </div>
-        </section>
-        <hr/>
-        <section id="main_content">
-          <ol>
-            <li>
-              Download and run the installer - "x86_64" for 64-bit, "i686" for 32-bit Windows
-              <br/><br/>
-            </li>
-            <li>
-              Click <strong>"Next"</strong>
-              <br/>
-              <img src="./1_msys32-start.png" alt="First screen of MSYS2 installation" />
-              <br/><br/>
-            </li>
-            <li>
-              Enter <strong>Installation Folder</strong> (ASCII, no accents, spaces nor symlinks, short path)
-              <br/>
-              <img src="./2_msys32-install_path.png" alt="Second screen of MSYS2 installation" />
-              <br/><br/>
-            </li>
-            <li>
-              Tick <strong>Run MSYS2 now</strong>
-              <br/>
-              <img src="./5_msys2-finish_install.png" alt="Third screen of MSYS2 installation" />
-              <br/><br/>
-            </li>
-            <li>
-              (This is a once only operation until new installers are released)
-              update the package database and pacman with:
-              <pre>pacman -Sy pacman</pre>
-            </li>
-            <li>
-              If needed, close MSYS2, run it again from Start menu. Update the rest with:
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/custom.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <title>MSYS2 installer</title>
+</head>
+<body>
+  <div id="container">
+    <div class="inner">
+      <header>
+        <h1>MSYS2</h1>
+        <h2>A Cygwin-derived software distro for Windows using Arch Linux's Pacman</h2>
+      </header>
+      <section id="downloads">
+        <h2>Downloads</h2>
+        <div class="clearfix">
+          <a href="http://repo.msys2.org/distrib/i686/msys2-i686-20160205.exe" class="button"><span>32-bit Installer</span></a>
+          <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20160205.exe" class="button"><span>64-bit Installer</span></a>
+          <a href="https://github.com/msys2" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </div>
+        <div class="clearfix">
+          <span class="checksum-button">SHA256: 37ccf5bc416545079f03382633c3842a0d93a559009fc56280d6b966c1642c41</span>
+          <span class="checksum-button">SHA256: 3c0673086ff41776de88935d60bff4bdcd6455ab72adb47575fae49d3e671f21</span>
+        </div>
+      </section>
+      <section id="main_content">
+        <h2>Installing</h2>
+        <ol>
+          <li>
+            <p>Download and run the installer.</p>
+          </li>
+          <li>
+            <p>Click <strong>Next</strong>.</p>
+            <img src="./images/1.png" alt="First screen of MSYS2 installation" />
+          </li>
+          <li>
+            <p>Enter an <strong>Installation Folder</strong> (ASCII, no accents, spaces, or symlinks, short path).</p>
+            <img src="./images/2.png" alt="Second screen of MSYS2 installation" />
+          </li>
+          <li>
+            <p>Click <strong>Next</strong>.</p>
+            <img src="./images/3.png" alt="Third screen of MSYS2 installation">
+          <li>
+            <p>Tick <strong>Run MSYS2 now</strong>.</p>
+            <img src="./images/4.png" alt="Fourth screen of MSYS2 installation" />
+          </li>
+          <li>
+            <p>Update the package database and Pacman with:</p>
+            <pre>pacman -Sy pacman</pre>
+          </li>
+          <li>
+            <p>
+              Close MSYS2, and start it again by running <strong>MSYS2 Shell</strong> from the Start Menu.
               Update the package database and core system packages with:
               <pre>pacman -Syu</pre>
-            <li>
-              Again, if needed, close MSYS2, run it again from Start menu. Update the rest with:
-              <pre>pacman -Su</pre>
-              <img src="./6_msys2-update-system.png" alt="MSYS2 shell with pacman's output about system upgrade" />
-              <br/><br/>
-            </li>
-            <li>
-              Now <strong>Pacman</strong> is fully committed to the Windows cause :)<br />
-              <img src="./7_msys2-install-freely.png" alt="MSYS2 shell with pacman's output about package installation" />
-              <br/><br/>
-            </li>
-            <li>
-              Take look at <a href="http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/">Detailed MSYS2 install guide</a>
-              for troubleshooting and additional details on how to keep your MSYS2 up-to-date.
-              <br/><br/>
-            </li>
-          </ol>
-          <h3>
-            <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>
-            Authors and Contributors
-          </h3>
+              After running this command, some errors may appear, this is normal. After the command completes, close MSYS2. If a dialog appears that warns you that processes are currently running, it's fine to ignore it and close MSYS2 anyway.
+            </p>
+          </li>
+          <li>
+            <p>At this point, the location of the MSYS2 bootstrapping script has changed, so the Start Menu entries will need to be fixed so that they point to the correct script. Open up the file location of the MSYS2 Start Menu entry. On Windows 10 you can do this by right clicking on the <strong>MSYS2 Shell</strong> Start Menu entry, selecting <strong>More</strong>, and then selecting <strong>Open File Location</strong>. Once the file location appears, right click on the <strong>MSYS2 Shell</strong> shortcut and select <strong>Properties</strong>. Delete everything under <strong>Target</strong> and replace it with something like:
+            </p>
+            <pre>C:\msys64\msys2_shell.cmd</pre>
+            <p>
+              You might have to change the previous location slightly depending on where you installed MSYS2 and whether you downloaded the 32-bit or the 64-bit installer. When in doubt, check for yourself to make sure the script exists.
+            </p>
+            <img src="./images/5.png" alt="Changing the location of MSYS2's shortcuts">
+            <p>Press <strong>OK</strong> and then change the <strong>Target</strong> for the <strong>MinGW-w64 Win64 Shell</strong> to:
+            </p>
+            <pre>C:\msys64\msys2_shell.cmd -mingw64</pre>
+            <p>Lastly, change the <strong>Target</strong> for the <strong>MinGW-w64 Win32 Shell</strong> to:</p>
+            <pre>C:\msys64\msys2_shell.cmd -mingw32</pre>
+          </li>
+          <li>
+            <p>Open MSYS2 again and run:</p>
+            <pre>pacman -Su</pre>
+            <p>Now Pacman is fully committed to the Windows cause! 😊</p>
+            <img src="./images/6.png" alt="MSYS2 shell with Pacman's output about package installation">
+          </li>
+        </ol>
+        <p>Take look at the <a href="http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/">Detailed MSYS2 install guide</a> for troubleshooting and additional details on how to keep your MSYS2 up-to-date.</p>
+        <h2>
+          <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>
+          Authors and Contributors
+        </h2>
+        <ul>
+          <li><a class="user-mention" href="https://github.com/Alexpux">Alexpux (Алексей)</a></li>
+          <li><a class="user-mention" href="https://github.com/martell">martell (Martell Malone)</a></li>
+          <li><a class="user-mention" href="https://github.com/mingwandroid">mingwandroid (Ray Donnelly)</a></li>
+          <li><a class="user-mention" href="https://github.com/elieux">Elieux (David Macek)</a></li>
+          <li><a class="user-mention" href="https://github.com/renatosilva">Renato Silva</a></li>
+          <li><a class="user-mention" href="https://github.com/niXman">niXman</a></li>
+        </ul>
+        <h2>
+          <a id="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>
+          Support and Contact
+        </h2>
+        <ul>
+          <li>read our <a href="https://sourceforge.net/p/msys2/wiki/">wiki on SourceForge</a></li>
+          <li>search or file <a href="https://github.com/alexpux/msys2-packages/issues">issues for msys2 packages on GitHub</a></li>
+          <li>search or file <a href="https://github.com/alexpux/mingw-packages/issues">issues for mingw-w64 packages on GitHub</a></li>
+          <li>read and post to our <a href="https://sourceforge.net/p/msys2/mailman/msys2-users/">mailing list</a></li>
+          <li>talk on our <a href="irc://irc.oftc.net:6667/msys2">IRC channel</a></li>
+          <li>file <a href="https://github.com/alexpux/cygwin/issues">issues for the MSYS2 runtime on GitHub</a></li>
+          <li>file <a href="https://github.com/alexpux/msys2-pacman/issues">issues for our Pacman fork on GitHub</a></li>
+          <li>improve <a href="https://github.com/msys2/msys2.github.io">this site on GitHub</a></li>
+          <li>don't file <a href="https://sourceforge.net/p/msys2/tickets/">tickets on SourceForge</a></li>
+          <li>participate in <a href="https://sourceforge.net/p/msys2/discussion/general/">discussion on SourceForge</a></li>
+        </ul>
+        <h2>
+          <a id="Donations" class="anchor" href="#donation"><span class="octicon octicon-link"></span></a>
+          Donations
+        </h2>
+        <div class="left-donation-col">
+          <h4>Webmoney transfer</h4>
+          <h5>to Alexey Pavlov (<a href="https://github.com/alexpux" class="user-mention">@alexpux</a>)</h5>
+          <p>To webmoney wallets:</p>
           <ul>
-            <li><a class="user-mention" href="https://github.com/Alexpux">Alexpux (Алексей)</a></li>
-            <li><a class="user-mention" href="https://github.com/martell">martell (Martell Malone)</a></li>
-            <li><a class="user-mention" href="https://github.com/mingwandroid">mingwandroid (Ray Donnelly)</a></li>
-            <li><a class="user-mention" href="https://github.com/elieux">Elieux (David Macek)</a></li>
-            <li><a class="user-mention" href="https://github.com/renatosilva">Renato Silva</a></li>
-            <li><a class="user-mention" href="https://github.com/niXman">niXman</a></li>
+            <li>E271473533800</li>
+            <li>R691797957081</li>
+            <li>Z110171850957</li>
           </ul>
-          <h3>
-            <a id="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>
-            Support and Contact
-          </h3>
-          <ul>
-            <li>read our <a href="https://sourceforge.net/p/msys2/wiki/">wiki on SourceForge</a></li>
-            <li>search or file <a href="https://github.com/alexpux/msys2-packages/issues">issues for msys2 packages on GitHub</a></li>
-            <li>search or file <a href="https://github.com/alexpux/mingw-packages/issues">issues for mingw-w64 packages on GitHub</a></li>
-            <li>read and post to our <a href="https://sourceforge.net/p/msys2/mailman/msys2-users/">mailing list</a></li>
-            <li>talk on our <a href="irc://irc.oftc.net:6667/msys2">IRC channel</a></li>
-            <li>file <a href="https://github.com/alexpux/cygwin/issues">issues for the MSYS2 runtime on GitHub</a></li>
-            <li>file <a href="https://github.com/alexpux/msys2-pacman/issues">issues for our Pacman fork on GitHub</a></li>
-            <li>improve <a href="https://github.com/msys2/msys2.github.io">this site on GitHub</a></li>
-            <li>don't file <a href="https://sourceforge.net/p/msys2/tickets/">tickets on SourceForge</a></li>
-            <li>participate in <a href="https://sourceforge.net/p/msys2/discussion/general/">discussion on SourceForge</a></li>
-          </ul>
-          <h3>
-            <a id="Donations" class="anchor" href="#donation"><span class="octicon octicon-link"></span></a>
-            Donations
-          </h3>
-          <div class="left-donation-col">
-            <h4>Webmoney transfer</h4>
-            <h5>to Alexey Pavlov (<a href="https://github.com/alexpux" class="user-mention">@alexpux</a>)</h5>
-            <p>To webmoney wallets:</p>
-            <ul>
-              <li>E271473533800</li>
-              <li>R691797957081</li>
-              <li>Z110171850957</li>
-            </ul>
-            <p>To Paypal account: alexpux@gmail.com</p>
-            <p>To yandex.money: 41001429355429</p>
-          </div>
-          <div class="right-donation-col">
-            <h4>PayPal</h4>
-            <h5>to Ray Donnelly (<a href="https://github.com/mingwandroid" class="user-mention">@mingwandroid</a>)</h5>
-            <br/>
-            <p>Via button:</p>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-                ">
-              <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-            </form>
-          </div>
-          <div class="clearfix"></div>
-        </section>
-        <footer>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-      </div>
+          <p>To Paypal account: alexpux@gmail.com</p>
+          <p>To yandex.money: 41001429355429</p>
+        </div>
+        <div class="right-donation-col">
+          <h4>PayPal</h4>
+          <h5>to Ray Donnelly (<a href="https://github.com/mingwandroid" class="user-mention">@mingwandroid</a>)</h5>
+          <br/>
+          <p>Via button:</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+            ">
+            <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </section>
+      <footer>
+        This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+      </footer>
     </div>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-48356013-1', 'msys2.github.io');
-      ga('send', 'pageview');
+  ga('create', 'UA-48356013-1', 'msys2.github.io');
+  ga('send', 'pageview');
 
-    </script>
-  </body>
+  </script>
+</body>
 </html>
