@@ -38,6 +38,12 @@
               <p>The name is a contraction of Minimal SYStem 2, and aims to provide support to facilitate using the bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.</p>
               <p>We wanted a package management system to provide easy installation of packages, and ported Arch Linux's Pacman. This brings many powerful features such as dependency resolution and simple complete system upgrades, as well as providing the build system - makepkg{,-mingw} - which is used to make these packages.</p>
           </h5>
+          <h3>What is the difference between MSYS2 and MINGW ?</h3>
+              <p>Mingw32 and 64 shells provide means of building native Windows apps;
+              <br />Msys2 provides a runtime to emulate POSIX aspects missing in WinAPI,
+              <br />most notably stdin/out/err redirection.
+              <br />If you run into problems, you might be mixing the two.
+              </p>
           <br />
           <h3>
             <a id="msys2-restrictions" class="anchor" href="#msys2-restrictions"><span class="octicon octicon-link"></span></a>
