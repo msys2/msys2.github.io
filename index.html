@@ -11,7 +11,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>MSYS2 installer</title>
+    <title>MSYS2 homepage</title>
   </head>
   <body>
     <div id="container">
@@ -33,11 +33,9 @@
         </section>
         <hr/>
         <section id="main_content">
-          <h5>
-              <p>MSYS2 is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software.</p>
-              <p>The name is a contraction of Minimal SYStem 2, and aims to provide support to facilitate using the bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.</p>
-              <p>We wanted a package management system to provide easy installation of packages, and ported Arch Linux's Pacman. This brings many powerful features such as dependency resolution and simple complete system upgrades, as well as providing the build system - makepkg{,-mingw} - which is used to make these packages.</p>
-          </h5>
+          <h3>MSYS2 is a software distro and building platform for Windows</h3>
+          <p>At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It provides a bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.</p>
+          <p>It features a package management system to provide easy installation of packages, Pacman. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.</p>
           <br />
           <h3>
             <a id="msys2-restrictions" class="anchor" href="#msys2-restrictions"><span class="octicon octicon-link"></span></a>
@@ -72,16 +70,10 @@
               <br/><br/>
             </li>
             <li>
-              (This is a once only operation until new installers are released)
-              update the package database and pacman with:
-              <pre>pacman -Sy pacman</pre>
-            </li>
-            <li>
-              If needed, close MSYS2, run it again from Start menu. Update the rest with:
               Update the package database and core system packages with:
               <pre>pacman -Syu</pre>
             <li>
-              Again, if needed, close MSYS2, run it again from Start menu. Update the rest with:
+              If needed, close MSYS2, run it again from Start menu. Update the rest with:
               <pre>pacman -Su</pre>
               <img src="./6_msys2-update-system.png" alt="MSYS2 shell with pacman's output about system upgrade" />
               <br/><br/>
@@ -92,7 +84,7 @@
               <br/><br/>
             </li>
             <li>
-              Take look at <a href="http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/">Detailed MSYS2 install guide</a>
+              Take look at <a href="https://github.com/msys2/msys2/wiki/MSYS2-installation/">Detailed MSYS2 install guide</a>
               for troubleshooting and additional details on how to keep your MSYS2 up-to-date.
               <br/><br/>
             </li>
@@ -114,7 +106,7 @@
             Support and Contact
           </h3>
           <ul>
-            <li>read our <a href="https://sourceforge.net/p/msys2/wiki/">wiki on SourceForge</a></li>
+            <li>read our <a href="https://github.com/msys2/msys2/wiki">wiki on GitHub</a></li>
             <li>search or file <a href="https://github.com/alexpux/msys2-packages/issues">issues for msys2 packages on GitHub</a></li>
             <li>search or file <a href="https://github.com/alexpux/mingw-packages/issues">issues for mingw-w64 packages on GitHub</a></li>
             <li>read and post to our <a href="https://sourceforge.net/p/msys2/mailman/msys2-users/">mailing list</a></li>
