@@ -137,7 +137,8 @@ Running a program under winpty (by prefixing the command line with `wintpy`) wil
 
 MSYS2 includes wrappers for some affected programs, so that they will work correctly most of the time. Examples can be seen in packages containing REPLs (python3, lua, nodejs, ...).
 
-[mintty issue #56 on Google Code](http://code.google.com/p/mintty/issues/detail?id=56)
+[mintty issue #56](https://github.com/mintty/mintty/issues/56), original [on Google Code](http://code.google.com/p/mintty/issues/detail?id=56)
+
 [winpty on GitHub](https://github.com/rprichard/winpty)
 
 Signals in mintty
