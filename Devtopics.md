@@ -6,20 +6,20 @@ Unify public relations, solidify hosting
 People are sometimes (often?) confused about where to get information about the project. It would be great if all the user-facing parts were on msys2.org and all the developer-facing parts on GitHub. Back-ends can be wherever (mailing lists and big file storage would be examples of things that we can't do with GitHub).
 
 We currently have:
-- [GitHub org](https://github.com/msys2) for official contributions upstream
+- [GitHub org](https://github.com/msys2) for our main repositories
+- [a secondary GitHub org](https://github.com/msys2-contrib) for contributions upstream and as a working place
 - GitHub repos for source and issue tracking, [msys2-runtime](https://github.com/Alexpux/Cygwin), [msys2-pacman](https://github.com/Alexpux/MSYS2-pacman), [msys2-keyring](https://github.com/Alexpux/MSYS2-keyring), [msys2-packages](https://github.com/Alexpux/MSYS2-packages), [mingw-w64-packages](https://github.com/Alexpux/MINGW-packages), [path_convert](https://github.com/Alexpux/path_convert)
-- [https://sourceforge.net/p/msys2/](SourceForge project) for wiki, mailing lists, forums, secondary ticket tracker, secondary source tracking and as a secondary mirror
+- [https://sourceforge.net/p/msys2/](SourceForge project) for mailing lists, forums, and as a secondary mirror
 - http://msys2.github.io with installation and donation instructions [with source on GitHub](https://github.com/msys2/msys2.github.io)
 - http://msys2.org, our own domain (owned by Pepsi?), with a CMS that is currently unused (hosted by Diablo-D3)
 - http://repo.msys2.org as the primary mirror (hosted by Diablo-D3)
 
 What to do:
-- migrate tickets, forums and discussion from SF to GH; delete or at least disable them on SF afterwards
-- remove source code from SF
-- transfer wikipages from SF to GH (or own website); delete or at least disable on SF afterwards
-- copy/move active MSYS2-related repositories on GH to the msys2 org, including issues (Alexpux/..., maybe Elieux/msys2-launcher and other contributed tools)
-- maybe transfer domain ownership
-- find more (fast and reliable) mirrors so we can ditch SF file hosting
+- migrate tickets from SF to GH; close them on SF afterwards
+- migrate forums and discussion from SF to GH; disable them on SF afterwards
+- move active MSYS2-related repositories on GH to the msys2 org, including issues (Alexpux/..., maybe Elieux/msys2-launcher and other contributed tools)
+- transfer msys2.org domain ownership
+- maybe find more (fast and reliable) mirrors so we can ditch SF file hosting
 - try moving the mailing list including archives from SF, see [mbox export](https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/); can we use Sourceware? can we have our own (some say that mailman on our own server would be spam-filtered badly)? notify list members of the change (possibly set up a redirect for some time)
 - change links in packages ("submit bug" URLs) and elsewhere
 
