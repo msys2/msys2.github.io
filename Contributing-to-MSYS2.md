@@ -111,7 +111,7 @@ Package                                | Purpose
 Web Links
 ---------
 
-[Pacman on ArchWiki](https://wiki.archlinux.org/index.php/Pacman)
-[Pacman tips on ArchWiki](https://wiki.archlinux.org/index.php/Pacman_tips)
-[makepkg on ArchWiki](https://wiki.archlinux.org/index.php/makepkg)
-[bash on ArchWiki](https://wiki.archlinux.org/index.php/bash)
+- [Pacman on ArchWiki](https://wiki.archlinux.org/index.php/Pacman)
+- [Pacman tips on ArchWiki](https://wiki.archlinux.org/index.php/Pacman_tips)
+- [makepkg on ArchWiki](https://wiki.archlinux.org/index.php/makepkg)
+- [bash on ArchWiki](https://wiki.archlinux.org/index.php/bash)
