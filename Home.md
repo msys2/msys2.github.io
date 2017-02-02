@@ -15,6 +15,7 @@
 - [FAQ](FAQ) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
 - [About terminals, consoles and shells](Terminals)
 - [Developer discussion](Devtopics)
+- [Signing packages](Signing-packages) (draft)
 
 If you have any problems with the POSIX side of MSYS2 (e.g. ssh, home directories, user accounts, native symlinks, signal handling, ...), try to consult the [Cygwin documentation](https://cygwin.com/docs.html) first, as a lot of what's written there applies to MSYS2 as well.
 
