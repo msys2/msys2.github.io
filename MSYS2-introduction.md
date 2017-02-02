@@ -6,7 +6,7 @@ We wanted a package management system to provide easy installation of packages, 
 
 Both 32 and 64-bit are supported.
 
-Here is the [list of packages we provide as of 18th April 2015](https://sourceforge.net/p/msys2/wiki/Packages/)
+Here is an irregularly updated [list of packages we provide](Packages)
 
 MSYS2 consists of three subsystems and their corresponding package repositories, `msys2`, `mingw32`, and `mingw64`.
 

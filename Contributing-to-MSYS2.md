@@ -93,7 +93,7 @@ Identifier           | Platform(s)                | Usage
 Resources
 =========
 
-Read through our wiki, especially the [Porting](https://sourceforge.net/p/msys2/wiki/Porting/) section.
+Read through our wiki, especially the [Porting](Porting) section.
 
 Useful Packages and Tools
 -------------------------
