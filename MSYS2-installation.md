@@ -50,6 +50,7 @@ IV. General Package Management
     **`pacman -R <package_names|package_groups>`**
   3. Searching for packages:
     **`pacman -Ss <name_pattern>`**
+
 Other pacman options can be found in the [Arch Linux wiki][1].
 
 V. Issues and workarounds
