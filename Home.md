@@ -2,7 +2,7 @@
 
 - [Introduction](MSYS2-introduction) - overview and important information
 - [Installing and upgrading](MSYS2-installation) - required reading for all users
-- [Re-installing from scratch](MSYS2-re-installation) - in case of unrecoverable problems
+- [Re-installing from scratch](MSYS2-reinstallation) - in case of unrecoverable problems
 - [Building packages and contributing](Contributing-to-MSYS2) - how packages are built and how to make new ones
 - [Creating packages](Creating-packages) - a shorter version of the above
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin) - differences and similarities
