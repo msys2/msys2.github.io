@@ -14,6 +14,7 @@
 - [Distributing software without pacman](Distributing) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
 - [FAQ](FAQ) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
 - [About terminals, consoles and shells](Terminals)
+- [Setting up SSHd on MSYS2](Setting-up-SSHd)
 - [Developer discussion](Devtopics)
 - [Signing packages](Signing-packages) (draft)
 
