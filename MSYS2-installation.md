@@ -20,6 +20,8 @@ The installers and base archives only contain the tools necessary to 1) start **
 
 III. Updating packages
 ======================
+  Partial upgrades (i.e. updating just `pacman` while not updating `msys2-runtime`) are not supported and are expected to break stuff.
+
   1. Since pacman 5.0.1.6403, you can just
     - Run **`pacman -Syuu`**. Follow the instructions. Repeat this step until it says there are no packages to update.
 
