@@ -1,17 +1,44 @@
-[ draft ]
+[ rough draft ]
 
-1) have a GPG key
-Essentially you do gpg --gen-key: https://fedoraproject.org/wiki/Creating_GPG_Keys#Creating_GPG_Keys_Using_the_Command_Line
-It's probably good to back it up: https://fedoraproject.org/wiki/Creating_GPG_Keys#Making_a_Key_Backup_Using_the_Command_Line
-If you're going to use the key for GPG/MIME or share your signed packages with other people, you probably need to do this: https://fedoraproject.org/wiki/Creating_GPG_Keys#Exporting_a_GPG_Key_Using_the_Command_Line
-In case you need to restore from the backup later, you probably have to follow the import with gpg --edit-key <keyid> and trust it ultimately.
+Have a GPG key
+--------------
 
-2) import into pacman
-This is needed because pacman has its own keystore and different rules for trusting keys.
-For this you need to have the public key exported in a file or uploaded to a keyserver. Then import and sign it with pacman-key: https://wiki.archlinux.org/index.php/pacman-key#Adding_unofficial_keys
-If you're an official packager, then the new key will be distributed via a MSYS2 update: https://wiki.archlinux.org/index.php/pacman-key#Adding_developer_keys
+Create your new key:
+`gpg --gen-key`
+[more...](https://fedoraproject.org/wiki/Creating_GPG_Keys#Creating_GPG_Keys_Using_the_Command_Line) [ TBD: how strong should the key be? ]
 
-3) actually sign stuff
-Old packages: gpg --detach-sign --no-armor <pkg> for each package
-New packages: just add --sign to makepkg command line, or use BUILDENV configuration array
-Databases: repo-add -s -v <db> <pkg>
+Back it up:
+`gpg --export-secret-keys --armor <keyid> > my_key_backup.asc`
+[more...](https://fedoraproject.org/wiki/Creating_GPG_Keys#Making_a_Key_Backup_Using_the_Command_Line)
+
+In case you need to import the backup later:
+`gpg --import <backup_file>`, `gpg --edit-key <keyid>` and `trust` it ultimately.
+
+Export the public key:
+`gpg --export --armor <keyid> > my_pub_key.asc`
+
+If you're going to use the key for GPG/MIME or share your signed packages with other people, you probably need publish your key:
+`gpg --send-key <keyid>`
+[more...](https://fedoraproject.org/wiki/Creating_GPG_Keys#Exporting_a_GPG_Key_Using_the_Command_Line)
+
+
+Import into pacman
+---------------------
+
+This is needed because pacman has its own keystore and own rules for trusting keys. Either you get approved as a packager for the MSYS2 project, or you have to import your key manually.
+
+To import and sign your key with `pacman-key`:
+1. `pacman-key --add <pubkeyfile>`, or if it's published `pacman-key --recv-keys <keyid>`
+2. `pacman-key --lsign-key <keyid>`
+[more...](https://wiki.archlinux.org/index.php/pacman-key#Adding_unofficial_keys)
+
+To make your key a trusted developer key for signing official packages, you have to get your key included in the respective keyring and get it signed by at least 3 master keys. The package and repository is `msys2-keyring` for MSYS2, see [Alexpux/msys2-keyring](https://github.com/Alexpux/MSYS2-keyring/). The package and repository for Arch Linux is `archlinux-keyring`, see https://projects.archlinux.org/archlinux-keyring.git/. These packages install keyring files into `/usr/share/pacman/keyrings` which then can be imported and locally signed in one batch using `pacman-key --populate <keyringname>`.
+
+
+Actually sign stuff
+-------------------
+
+- Old packages: `gpg --detach-sign --no-armor <pkg>` for each package (all such packages need to be re-`repo-add`ed to make the database aware of the new signatures)
+- New packages: just add `--sign` to makepkg command line or set the related `makepkg.conf` option
+- Databases: `repo-add -s -v <db> <pkg>`
+
