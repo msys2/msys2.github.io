@@ -13,10 +13,10 @@ II. Installation
 ================
 The installers and base archives only contain the tools necessary to 1) start **MSYS2** 2) update the pre-installed packages and 3) install new packages.
 
- * After installing or extracting MSYS2 you should start MSYS2 by executing **msys2_shell.bat**.
+ * After installing or extracting MSYS2 you should start MSYS2 by executing **msys2_shell.cmd**.
   (if you did not use an installer and this is first time running of MSYS2 after unpacking, then at this point it will create the files and settings necessary for it to function properly. After this initial run you **MUST** restart MSYS2 so that the settings are correct)
 
- * Now you can update the base MSYS2 packages to their latest versions. MSYS2 comes with a package manager **[Pacman][1]** which was ported from Arch Linux. 
+ * Now you can update the base MSYS2 packages to their latest versions. MSYS2 comes with a package manager **[Pacman][1]** which was ported from Arch Linux.
 
 III. Updating packages
 ======================

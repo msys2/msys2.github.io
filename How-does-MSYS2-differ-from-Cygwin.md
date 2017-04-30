@@ -9,15 +9,6 @@ MSYS2 tries to provide an environment for building native Windows software. MSYS
 
 MSYS2 provies a minimal shell required to run autotools and other build systems which get the source for software from the Internet from different repositories, configure them and build them. The shell and core tools exist mainly to allow porting Unix programs to run natively on Windows (i.e. without requiring a POSIX emulation layer). MSYS2 doesn't try to duplicate Cygwin's efforts more than necessary, so the number of provided POSIX-emulated software is very small.
 
-
-History and future
-==================
-
-MSYS2 is ideologically a successor to MSYS, which is again a Cygwin fork that optionally accompanies the mingw.org compiler toolchain. MSYS -- although definitely useful -- is really old and getting in the way of developers. MSYS2 was created to replace the original MSYS while avoiding its problems.
-
-It is our hope that MSYS2 be viewed as a complimentary off-shot of Cygwin (even *hopefully* by the Cygwin developers!), and we still hold out hopes that MSYS2 can someday operate as a special mode for Cygwin (via a DLL plugin mechanism).
-
-
 Packages
 ========
 
@@ -27,7 +18,6 @@ MSYS2 uses Pacman (of Arch Linux) to manage its packages and comes with three di
 - `mingw32`: Containing 32-bit native Windows software (compiled with mingw-w64 i686 toolchain)
 
 Cygwin comes only with Cygwin-dependent software. It uses its own package management system, commonly called setup.exe.
-
 
 Runtime
 =======

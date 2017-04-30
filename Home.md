@@ -2,9 +2,11 @@
 
 - [Introduction](MSYS2-introduction) - overview and important information
 - [Installing and upgrading](MSYS2-installation) - required reading for all users
+- [Using packages](Using-packages) - how to find and install packages
+- [History](History) - about the project's inception and origins
 - [Re-installing from scratch](MSYS2-reinstallation) - in case of unrecoverable problems
-- [Building packages and contributing](Contributing-to-MSYS2) - how packages are built and how to make new ones
-- [Creating packages](Creating-packages) - a shorter version of the above
+- [Contributing](Contributing-to-MSYS2) - how to help the project
+- [Creating packages](Creating-packages) - how packages are built and how to make new ones
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin) - differences and similarities
 - [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine
 - [Porting for MSYS2 or MinGW-w64](Porting) - useful resources and common issues

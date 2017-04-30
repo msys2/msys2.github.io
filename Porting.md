@@ -14,6 +14,24 @@ $(info The version of MSYS you are running is $(msys_version) (0 meaning not MSY
 ~~~~
 
 
+Platform checks
+---------------
+
+You may need to use platform checks to switch between behaviour suited for MSYS2 and the default one. Some useful identifiers:
+
+Identifier           | Platform(s)                | Usage
+---------------------|----------------------------|----------------------------
+`_WIN32`             | mingw, msvc                | C code (`#ifdef ...`)
+`_WIN64`             | 64-bit mingw, 64-bit msvc  | C code (`#ifdef ...`)
+`__CYGWIN__`         | msys2, cygwin              | C code (`#ifdef ...`)
+`__MSYS__`           | msys2                      | C code (`#ifdef ...`)
+`x86_64-pc-msys2`    | 64-bit msys2               | Build scripts (`if [ $host = '...' ]`)
+`i686-pc-msys2`      | 32-bit msys2               | Build scripts (`if [ $host = '...' ]`)
+`x86_64-w64-mingw32` | 64-bit mingw               | Build scripts (`if [ $host = '...' ]`)
+`i686-w64-mingw32`   | 32-bit mingw               | Build scripts (`if [ $host = '...' ]`)
+`msys`               | msys2                      | Python (`sys.platform`)
+`win32`              | mingw                      | Python (`sys.platform`)
+
 Filesystem namespaces
 ---------------------
 
