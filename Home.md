@@ -10,7 +10,6 @@
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin) - differences and similarities
 - [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine
 - [Porting for MSYS2 or MinGW-w64](Porting) - useful resources and common issues
-- [Tips for investigating package issues using GDB on Qt Creator](GDB-qtcreator) - when things get complicated, good tools are important (WIP)
 - [Package list](Packages) - list of packages we provide
 - [Launchers](Launchers) - various ways to launch MSYS2 shells
 - [Distributing software without pacman](Distributing) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
@@ -19,6 +18,7 @@
 - [Setting up SSHd on MSYS2](Setting-up-SSHd)
 - [Developer discussion](Devtopics)
 - [Signing packages](Signing-packages) (draft)
+- [Tips for investigating package issues using GDB on Qt Creator](GDB-qtcreator) (draft)
 
 **More documentation:**
 
