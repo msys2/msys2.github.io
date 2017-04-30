@@ -12,7 +12,7 @@
 - [Package list](Packages) - list of packages we provide
 - [Launchers](Launchers) - various ways to launch MSYS2 shells
 - [Distributing software without pacman](Distributing) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
-- [FAQ](FAQ) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
+- [FAQ](FAQ)
 - [About terminals, consoles and shells](Terminals)
 - [Setting up SSHd on MSYS2](Setting-up-SSHd)
 - [Developer discussion](Devtopics)
