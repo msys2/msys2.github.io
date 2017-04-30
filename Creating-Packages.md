@@ -87,8 +87,8 @@ Once you are familiar with the process, we recommend creating a PKGBUILD and usi
 ### Which subsystem?
 
 In MSYS2 there are 2 types of packages:
-* **[msys packages](http://github.com/msys2/MSYS2-packages)** - these run on the emulation layer and are typically POSIX-only programs
-* **[mingw packages](http://github.com/msys2/MINGW-packages)** - these run natively just like any other Windows program
+* **msys packages** - these run on the emulation layer and are typically POSIX-only programs
+* **mingw packages** - these run natively just like any other Windows program
 
 You should think of these two systems as separate where **msys2** packages should generally only be build dependencies of **mingw** packages. You also can't link a **mingw** program against an **msys** library.
 
