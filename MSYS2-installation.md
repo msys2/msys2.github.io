@@ -46,14 +46,14 @@ IV. General Package Management
 ==============================
   1. Installing new packages:
     **`pacman -S <package_names|package_groups>`**
-     For example, pacman -S make gettext base-devel
+     For example, `pacman -S make gettext base-devel`
      In this example <base-devel> is a package group which contains many packages. If you try to install a package group, Pacman will ask you whether you want to install one package from the group or all of the packages from the group.
   2. Removing packages:
     **`pacman -R <package_names|package_groups>`**
   3. Searching for packages:
     **`pacman -Ss <name_pattern>`**
 
-Other pacman options can be found in the [Arch Linux wiki][1].
+More on our [Using packages wikipage](Using-packages).
 
 V. Issues and workarounds
 =========================
@@ -63,5 +63,3 @@ V. Issues and workarounds
   4. Sometimes a package upgrade fails with `failed to commit transaction (conflicting files)` and `some-pkg: /path/to/some/file exists in filesystem`. If you're sure you didn't put the offending files there manually, move or delete the files and start the upgrade again.
   5. If your MSYS2 is unable to start after an upgrade, it's possible you just have some lingering MSYS2 processes (loaded with an older version of the runtime) that are conflicting with the processes you're trying to start. Hunt down these processes in your favorite task manager and kill them, or just reboot your system.
   6. After an update, you get `error: GPGME error: No data` then you were unlucky and caught SourceForge at a bad time. Check `/var/lib/pacman/sync` and if the files in there contain an HTML formatted error page, then delete those files and try again.
-
-[1]: https://wiki.archlinux.org/index.php/pacman
