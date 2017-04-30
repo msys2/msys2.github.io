@@ -1,4 +1,4 @@
-**Welcome to the MSYS2 Wiki**
+**Welcome to the MSYS2 wiki**
 
 - [Introduction](MSYS2-introduction) - overview and important information
 - [Installing and upgrading](MSYS2-installation) - required reading for all users
@@ -18,11 +18,15 @@
 - [Developer discussion](Devtopics)
 - [Signing packages](Signing-packages) (draft)
 
+**More documentation:**
+
 If you have any problems with the POSIX side of MSYS2 (e.g. ssh, home directories, user accounts, native symlinks, signal handling, ...), try to consult the [Cygwin documentation](https://cygwin.com/docs.html) first, as a lot of what's written there applies to MSYS2 as well.
 
 There is also an [excellent introduction from Matthieu Vachon](https://sourceforge.net/p/msys2/discussion/general/thread/dcf8f4d3/#8473/588e) describing MSYS2, the shells, pacman and other stuff in a less technical, more practical way.
 
 Some pages on the [Git for Windows wiki](https://github.com/git-for-windows/git/wiki) are relevant to MSYS2 as well.
+
+There are various [communication channels](http://www.msys2.org/#support-or-contact) set up, including the [#msys2 IRC channel](irc://irc.oftc.net:6667/msys2) on OFTC and the mailing list at msys2-users@lists.sourceforge.net.
 
 **Project members:**
 - [Alexey](https://github.com/alexpux) (Project Leader)
