@@ -1,6 +1,6 @@
-#!/bin/sh.exe
+#!/bin/sh
 
-###### This is a pacman dump of all the packages we provide as of _2017-05-01_. The commands used to generate this list are:
+###### This is a pacman dump of all the packages we provide as of _2017-05-01_. The commands used to re-generate this list are listed below.
 
     LANG=C
     {
