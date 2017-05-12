@@ -10,7 +10,7 @@ We wanted a package management system to provide easy installation of packages, 
 
 Cygwin is a POSIX platform atop of Windows (the Win32 subsystem), running in user-mode. It requires a POSIX compatibility layer at runtime. It doesn't emulate Linux, it's not the same thing as WSL.
 
-It is our hope that MSYS2 be viewed as a complimentary off-shot of Cygwin (even *hopefully* by the Cygwin developers!), and we still hold out hopes that MSYS2 can someday operate as a special mode for Cygwin (via a DLL plugin mechanism).
+It is our hope that MSYS2 be viewed as a complementary off-shot of Cygwin (even *hopefully* by the Cygwin developers!), and we still hold out hopes that MSYS2 can someday operate as a special mode for Cygwin (via a DLL plugin mechanism).
 
 ## MinGW-w64
 
