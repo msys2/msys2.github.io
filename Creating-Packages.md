@@ -155,7 +155,7 @@ If there are issues, fix them in your PKGBUILD and re-build or re-package as nec
 
 ### Commit
 
-Integrate your recipe into your local clone of the **msys-packages** or **mingw-packages** repository. In order to help us avoid accumulating useless commits in the repository, please follow these guidelines:
+Integrate your recipe into your local clone of the **msys2-packages** or **mingw-packages** repository. In order to help us avoid accumulating useless commits in the repository, please follow these guidelines:
 - create a new branch for your work
 - put all your work into it, preferrably in just 1 commit
 - if you want to pull changes from our repository, use the rebasing strategy (`git pull --rebase`) to place your commits above ours, do not just merge
@@ -166,7 +166,7 @@ Altough these guidelines (which rely heavily on rewriting history) are not suita
 
 ### Send PR
 
-Open and send a pull request against the master branch of the official repositories on GitHub, currently residing under the user @Alexpux. Please include a short description of what you're submitting and why. In case your recipe is not final yet, add "[do not merge]" to the title and explain in the description.
+Open and send a pull request against the master branch of the official repositories on GitHub, currently residing under the user @Alexpux ([links here](https://github.com/msys2/msys2)). Please include a short description of what you're submitting and why. In case your recipe is not final yet, add "[do not merge]" to the title and explain in the description.
 
 ### Check
 
