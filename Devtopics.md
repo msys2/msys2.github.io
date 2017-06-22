@@ -42,6 +42,9 @@ What to do:
 - make the buildbot automatically upload packages
 - also work towards reproducible builds (https://reproducible-builds.org/)
 
+Additional discussions:
+- [#2616](https://github.com/Alexpux/MINGW-packages/issues/2616)
+- [#2006](https://github.com/Alexpux/MINGW-packages/issues/2006)
 
 Official release
 ---
