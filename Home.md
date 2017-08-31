@@ -8,7 +8,7 @@
 - [Contributing](Contributing-to-MSYS2) - how to help the project
 - [Creating packages](Creating-packages) - how packages are built and how to make new ones
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin) - differences and similarities
-- [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly broken with current version of MSYS2 and no-one is actively working on a fix as far as we know]
+- [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/Alexpux/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]
 - [Porting for MSYS2 or MinGW-w64](Porting) - useful resources and common issues
 - [Package list](Packages) - list of packages we provide
 - [Launchers](Launchers) - various ways to launch MSYS2 shells
