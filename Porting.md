@@ -6,7 +6,7 @@ MSYS2 provides two versions of make, one in the `make` package and one in the `m
 
 Detecting version of MSYS from GNU make
 ---------------------------------------
-You can use the following `Makefile` snippet to detect whether you are running GNU make from an MSYS or an MSYS2 shell. I you run it through `mingw32-make.exe` from `cmd.exe` you will likely get an error since `uname` will not be found on your `PATH`. If you run it through `mingw32-make.exe` from one of the MSYS shells, it will set `msys_version` to 1 or 2 as appropriate. On any other system with `uname` present, it will set it to 0.
+You can use the following `Makefile` snippet to detect whether you are running GNU make from an MSYS or an MSYS2 shell. If you run it through `mingw32-make.exe` from `cmd.exe` you will likely get an error since `uname` will not be found on your `PATH`. If you run it through `mingw32-make.exe` from one of the MSYS shells, it will set `msys_version` to 1 or 2 as appropriate. On any other system with `uname` present, it will set it to 0.
 
 ~~~~
 msys_version := $(if $(findstring Msys, $(shell uname -o)),$(word 1, $(subst ., ,$(shell uname -r))),0)
@@ -48,7 +48,7 @@ Explanation: The value of root (`/`) is emitted to a text file via echo (which i
 
 To work around this, path conversion can be selectively disabled. MSYS2 reads an environment variable called `MSYS2_ARG_CONV_EXCL`. This is a `;` delimited string each part of which is compared against the front part of each argument and if a match is found, that conversion is skipped. An example of a value for `MSYS2_ARG_CONV_EXCL` that would inhibit path transformations of the 3 cases above is `/switch;/sdcard;--root=`.
 
-The development repository for this path conversion code is <https://github.com/Alexpux/path_convert>. If you find a case that you thing is unambiguously being converted incorrectly, please raise an issue there and/or a pull request with the broken test-case.
+The development repository for this path conversion code is <https://github.com/Alexpux/path_convert>. If you find a case that you think is unambiguously being converted incorrectly, please raise an issue there and/or a pull request with the broken test-case.
 
 
 Hard-coded paths and relocation
@@ -133,7 +133,8 @@ Undefined references and linking to DLLs/SOs
 
 Linux/ELF platforms generally don't do anything special to link to shared objects, they just leave the undefined references in the binary. Windows however requires all references to be resolved at link time. In case of DLLs, this is solved by the .dll.a import libraries that add the relevant .dll to the binary's import table and insert correct calls into the code, but it needs that correct linker flags be passed when linking binaries. Note that the linker is aware of these files and will use them automatically when using the standard `-l` arguments, for example `-lfoo` will make the linker check for `libfoo.dll.a` and `libfoo.a`, in this order (unless specified otherwise).
 
-Libtool generally refuses to create DLLs unless `-no-undefined` is passed to the linker invocation (`library_la_LDFLAGS`?).
+Libtool generally refuses to create DLLs unless `-no-undefined` is passed to the linker invocation (`library_la_LDFLAGS = -no-undefined`).
+See: https://lists.gnu.org/archive/html/libtool/2007-04/msg00066.html
 
 
 Library prefixes
@@ -151,7 +152,7 @@ mintty is primarily designed to be a good terminal emulator (in the POSIX sense 
 
 One way of fixing this problem is to run native programs inside a real Windows console, hide the console and use the console API to communicate with the program. This approach has obvious disadvantages, but it's good enough. Actually, this is the way most Windows console emulators work (e.g. ConsoleZ, ConEmu). There is also a wrapper program called winpty that does exactly this and translates the I/O to/from standard terminal sequences which mintty understands.
 
-Running a program under winpty (by prefixing the command line with `wintpy`) will make the program think it is running interactively, but it will also break any special features depending on terminal sequences, possibly including colored text output and TUIs.
+Running a program under winpty (by prefixing the command line with `winpty`) will make the program think it is running interactively, but it will also break any special features depending on terminal sequences, possibly including colored text output and TUIs.
 
 MSYS2 includes wrappers for some affected programs, so that they will work correctly most of the time. Examples can be seen in packages containing REPLs (python3, lua, nodejs, ...).
 
