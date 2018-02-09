@@ -1,6 +1,6 @@
 You should *not* launch sh.exe directly as that doesn't start a login shell or set the correct environment variables for the type of shell that you want to use. Instead, your choices are:
 
-**msys2_shell.bat**, **mingw64_shell.bat** and **mingw32_shell.bat**, the old-school batch files from the `filesystem` package.
+**msys2_shell.cmd**, the improved multi-purpose batch file from the `filesystem` package.
 
 **msys2.exe**, **mingw64.exe**, **mingw32.exe**, the new pinnable launchers from the `msys2-launcher` package from @Elieux. [GitHub](https://github.com/elieux/msys2-launcher), [discussion](https://github.com/Alexpux/MSYS2-packages/issues/370#issuecomment-152021427), [discussion](https://sourceforge.net/p/msys2/mailman/message/34599465/)
 
@@ -17,3 +17,5 @@ You should *not* launch sh.exe directly as that doesn't start a login shell or s
 **git-bash.exe** and **start-ssh-agent.cmd** as part of the Git for Windows project from @dscho. [GitHub](https://github.com/git-for-windows/git/blob/master/compat/win32/git-wrapper.c), [GitHub](https://github.com/git-for-windows/MINGW-packages/tree/master/mingw-w64-git)
 
 **Open MSYS2 here** from @magthe, with contributions from @sushovan-dw and @ryanpfeeley. [Gist+discussion](https://gist.github.com/magthe/a60293fe395af7245a9e)
+
+**msys2_shell.bat**, **mingw64_shell.bat** and **mingw32_shell.bat**, the old-school batch files from old versions of the `filesystem` package.
