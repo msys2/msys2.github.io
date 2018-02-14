@@ -1,6 +1,6 @@
 You should *not* launch sh.exe directly as that doesn't start a login shell or set the correct environment variables for the type of shell that you want to use. Instead, your choices are:
 
-**msys2_shell.cmd**, the improved multi-purpose batch file from the `filesystem` package.
+[**msys2_shell.cmd**](https://github.com/Alexpux/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd), the improved multi-purpose batch file from the [`filesystem` package](https://github.com/Alexpux/MSYS2-packages/tree/master/filesystem).  Run `msys2_shell.cmd --help` for usage.
 
 **msys2.exe**, **mingw64.exe**, **mingw32.exe**, the new pinnable launchers from the `msys2-launcher` package from @Elieux. [GitHub](https://github.com/elieux/msys2-launcher), [discussion](https://github.com/Alexpux/MSYS2-packages/issues/370#issuecomment-152021427), [discussion](https://sourceforge.net/p/msys2/mailman/message/34599465/)
 
@@ -18,4 +18,4 @@ You should *not* launch sh.exe directly as that doesn't start a login shell or s
 
 **Open MSYS2 here** from @magthe, with contributions from @sushovan-dw and @ryanpfeeley. [Gist+discussion](https://gist.github.com/magthe/a60293fe395af7245a9e)
 
-**msys2_shell.bat**, **mingw64_shell.bat** and **mingw32_shell.bat**, the old-school batch files from old versions of the `filesystem` package.
+[**msys2_shell.bat**](https://github.com/Alexpux/MSYS2-packages/blob/b827a678b1793571968a4d27f72f981d99c305ef/filesystem/msys2_shell.bat), [**mingw64_shell.bat**](https://github.com/Alexpux/MSYS2-packages/blob/b827a678b1793571968a4d27f72f981d99c305ef/filesystem/mingw64_shell.bat) and [**mingw32_shell.bat**](https://github.com/Alexpux/MSYS2-packages/blob/b827a678b1793571968a4d27f72f981d99c305ef/filesystem/mingw32_shell.bat), the old-school batch files from [old versions of the `filesystem` package](https://github.com/Alexpux/MSYS2-packages/tree/b827a678b1793571968a4d27f72f981d99c305ef/filesystem).
