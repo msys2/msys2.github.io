@@ -6,7 +6,7 @@ When we release new installers and new base tar.xz packages, we'd appreciate it 
 Re-installing
 -------------
 
-1. Run your existing MSYS2 installation via `msys2_shell.bat`.
+1. Run your existing MSYS2 installation via `msys2_shell.cmd`.
 
 2. Make a list of installed packages:
 
@@ -14,11 +14,11 @@ Re-installing
 
 3. Rename your `msys??` folder to `msys??.old`.
 
-4. Run the installer (or untar the base package, run `msys2_shell.bat`, then exit it).
+4. Run the installer (or untar the base package, run `msys2_shell.cmd`, then exit it).
 
 5. To save server bandwidth and your time, move your old cached packages directory to the new installation. In Explorer, remove the empty `msys??\var\cache\pacman\pkg` folder, then replace it with `msys??.old\var\cache\pacman\pkg`.
 
-6. Run the new MSYS2 installation via `msys2_shell.bat`.
+6. Run the new MSYS2 installation via `msys2_shell.cmd`.
 
 7. Update the package databases:
 
@@ -28,7 +28,7 @@ Re-installing
 
         pacman --needed -S bash pacman pacman-mirrors msys2-runtime
 
-9. If any packages got updated during step 8, you MUST restart MSYS2, otherwise you can get fork errors in the next step. You need to exit all MSYS2 shells (and if using MSYS2 32bit, run `autorebase.bat`) then re-launch `msys2_shell.bat`.
+9. If any packages got updated during step 8, you MUST restart MSYS2, otherwise you can get fork errors in the next step. You need to exit all MSYS2 shells (and if using MSYS2 32bit, run `autorebase.bat`) then re-launch `msys2_shell.cmd`.
 
 10. Re-install your old packages, by entering:
 
