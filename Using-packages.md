@@ -2,7 +2,7 @@
 
 The MSYS2 software distribution uses a port of `pacman` from Arch Linux to manage (install, remove and update) binary packages and also to build those packages in the first place.
 
-Packages in MSYS2 work like packages in popular Linux distributions. A package is an archive containing a piece of software. This normally means executable files, shared and static libraries, header files, config files, and manual pages. Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, the files contained are extracted into your MSYS2 installation directory and the metadata are stored in a local database.
+Packages in MSYS2 work like packages in popular Linux distributions. A package is an archive containing a piece of software. This normally means executable files, runtime libraries, data, shared and static link libraries, header files, config files, and manual pages. Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, the files contained are extracted into your MSYS2 installation directory and the metadata are stored in a local database.
 
 There are 3 package repositories, **msys2**, **mingw32**, and **mingw64**. The packages in **msys2** are named just like on a Linux distribution, the packages in **mingw** are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages.
 
@@ -176,3 +176,8 @@ Total Installed Size:  32.09 MiB
 
 :: Proceed with installation? [Y/n]
 ```
+
+## Resources
+
+- [Pacman on ArchWiki](https://wiki.archlinux.org/index.php/Pacman)
+- [Pacman tips on ArchWiki](https://wiki.archlinux.org/index.php/Pacman_tips)

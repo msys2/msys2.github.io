@@ -8,15 +8,16 @@ In this document, to attempt to avoid confusion, MSYS2 refers to the software di
 
 ### Package recipes
 
-Packages are built from programmatic recipes to ensure build are reproducibles. A recipe is a file which describe how to build, package and install a given software.
+Packages are built from programmatic recipes to ensure builds are reproducible. A recipe is a set of files which describe how to build, package and install a given piece of software; these are often specific to MSYS2.
 
-In the simplest form it is a single file called **PKGBUILD** file, which contains metadata for the package, a specification where the source for the given software can be found, and a few lines of code which when executed builds the binary software for the selected environment. For more complex cases it also contains install scripts or a number of patch files which are needed to be applied on the released version of the upstream software in order to be able to compile and work in the given environment.
+In the simplest form it is a single file named `PKGBUILD`, which contains metadata for the package, a specification where the source for the given software can be found, and a few lines of code which that takes the source and builds the final software from it. For more complex cases it also contains install scripts or a number of patch files which are needed to be applied on the released version of the upstream software in order to be able to compile and work in the given environment.
 
-Typically, each PKGBUILD is in its own directory along with any extra files it needs. The directory is also used when building as a working place by default.
+Typically, each recipe is in its own directory. The directory is also used when building as a working place by default.
 
 ### PKGBUILD
 
 Use 2 spaces for indentation: `expand -t 2 PKGBUILD > PKGBUILD.new && mv PKGBUILD.new PKGBUILD`
+
 A PKGBUILD is a bash script defining variables and functions that are then used by the build system to create the package. The [PKGBUILD manpage](https://www.archlinux.org/pacman/PKGBUILD.5.html) and the [PKGBUILD wikipage on ArchWiki)(https://wiki.archlinux.org/index.php/PKGBUILD) are good sources to read about all the details of PKGBUILDs. The **mingw** PKGBUILDs are loosely based on the [mingw-w64 cross-compilation packages guidelines in Arch Linux](https://wiki.archlinux.org/index.php/MinGW_package_guidelines). If you don't want to read all that just yet, just read some existing PKGBUILDs; the purpose of most parts should be obvious.
 
 ### Patch files
@@ -82,7 +83,7 @@ Please do *not* create pull requests for PKGBUILDs that just repackage binary re
 
 The steps above describe an intuitive process of going from the idea of creating a package to making it available to you and others using `pacman`. You can of course customize the process to suit you and your situation.
 
-Once you are familiar with the process, we recommend creating a PKGBUILD and using `makepkg` straight away for all packages. It's a great way to record your build steps in a reproducible way, which is not only useful for you, but also for other people when asked for help on the package.
+Once you are familiar with the process, we recommend creating recipes and using `makepkg` straight away for all packages. It's a great way to record your build steps in a reproducible way, which is not only useful for you, but also for other people when asked for help with the builds.
 
 ### Which subsystem?
 
@@ -92,7 +93,16 @@ In MSYS2 there are 2 types of packages:
 
 You should think of these two systems as separate where **msys2** packages should generally only be build dependencies of **mingw** packages. You also can't link a **mingw** program against an **msys** library.
 
-This means you first need to decide which subsystem (and which repository) is the right one for your new package. The [Introduction page](MSYS2-introduction) describes the relevant guidelines if you want the package to be accepted into the official repositories, but it's useful to follow them even if you're planning to keep the package for yourself.
+This means you first need to decide which subsystem (and which repository) is the right one for your new package. The set of things that belong to the `msys2` subsystem is pretty small:
+- essential POSIX stuff: `filesystem`, `msys2-runtime`, ...
+- the native toolchain: `gcc`, `binutils`, `gdb`, ...
+- supporting programs that are hard to port to Windows: `pacman`, `bash`, `automake`, `make`, ...
+- programs for bridging the gap: `mintty`, `winpty`, ...
+- supporting programs, even though they're portable: `python`, `man`, `vim`, `git`, ...
+- carefully chosen useful tools: `mc`, `ssh`, `rsync`, `lftp`, ...
+- dependencies of these packages
+
+In other words, if a program is needed to build native software, but is itself hard to port, it can be made into a `msys2` package. Anything else needs to be done as a `mingw` package or vetted individually.
 
 ### Build software
 
@@ -114,11 +124,11 @@ Check that the software does what it should. Try its testsuite.
 
 If the software doesn't work straight away or doesn't even build, you'll probably need to pass some arguments to the build scripts or modify (patch) its build system, its source code, its definitions files etc. Such patches will be stored as files alongside the PKGBUILD.
 
-This part is very specific to each software and may require searching the Internet, talking to the software's developers or support team, talking to us etc. The [Porting wikipage](Porting) may help with some common issues. While it is probably okay to make quick (monkey-)patches that fix the software our use case (and possibly break it for every other), is it better to make proper surgical-precision patches and attempt to have them accepted by the software developer ("upstream").
+This part is very specific to each software and may require searching the Internet, talking to the software's developers or support team, talking to us etc. The [Porting wikipage](Porting) may help with some common issues. While it is probably okay to make quick (monkey-)patches that fix the software for our use case (and possibly break it for every other), is it better to make proper surgical-precision patches and attempt to have them accepted by the software developer ("upstream").
 
 ### Recipe
 
-Create a `PKGBUILD` describing all the steps necessary to build and package the software, including any patches or additional files. Make sure the follow the style and ideas of other packages if applicable. A good strategy is to find some existing working packages that use the same build system as your software does and use them as a template for your package.
+Create a `PKGBUILD` describing all the steps necessary to build and package the software, including any patches or additional files. Make sure the follow the style and ideas of other recipes if applicable. A good strategy is to find some existing working recipes that use the same build system as your software does and use them as a template for your recipe. You can also take inspiration from an official Arch Linux (or unofficial AUR) recipe for your software.
 
 ### Build package
 
@@ -186,7 +196,7 @@ In case you had to made changes in order to be able to compile and run properly 
 
 ## Resources
 
-Read through our wiki, especially the [Porting section](Porting).
+Read through our wiki, especially about [pacman](Using-packages) and the [Porting section](Porting).
 
 ### Useful packages and tools
 
@@ -201,5 +211,4 @@ Package                                | Purpose
 
 ### Various links
 
-- [Pacman tips on ArchWiki](https://wiki.archlinux.org/index.php/Pacman_tips)
 - [bash on ArchWiki](https://wiki.archlinux.org/index.php/bash)
