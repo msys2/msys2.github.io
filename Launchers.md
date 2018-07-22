@@ -4,6 +4,8 @@ You should *not* launch sh.exe directly as that doesn't start a login shell or s
 
 **msys2.exe**, **mingw64.exe**, **mingw32.exe**, the new pinnable launchers from the `msys2-launcher` package from @Elieux. [GitHub](https://github.com/elieux/msys2-launcher), [discussion](https://github.com/Alexpux/MSYS2-packages/issues/370#issuecomment-152021427), [discussion](https://sourceforge.net/p/msys2/mailman/message/34599465/)
 
+A nice explanation how to [set up ConEmu](https://superuser.com/a/1297072) to run MSYS2 inside it by jstine.
+
 **msys2_env.bat** from @DavidEGrayson. [Gist](https://gist.github.com/DavidEGrayson/2e5923b9c0d8acb3f7a7), [discussion](https://github.com/Alexpux/MSYS2-packages/issues/370#issuecomment-151658726)
 
 **msys2.cmd**, **mingw64.cmd**, **mingw32.cmd** from @Elieux. [Gist](https://gist.github.com/elieux/dd6d0c15cc0ae503f830)
