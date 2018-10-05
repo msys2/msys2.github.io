@@ -27,7 +27,7 @@ Cygwin provides a runtime library called `cygwin1.dll` that provides the POSIX c
 1. Automatic path mangling of command line arguments and environment variables to Windows form on the fly. (This can be [selectively turned off](Porting#user-content-filesystem-namespaces).)
 2. Ability to change the reported OS using an environment variable (`MSYSTEM`, with values of `MSYS2`, `MINGW32`, and `MINGW64`).  This allows mingw-w64 software to be built in native build mode (as opposed to cross-compilation mode).
 3. Conversion of output of native Windown applications from Windows line endings to POSIX line endings by removing trailing `'\r'` characters, so that e.g. `bb=$(gcc --print-search-dirs)` works as expected.
-4. Replacement of symlinks with copying, so that Windown programs don't trip up on these files. MSYS2 also supports creating native NTFS symlinks, but these only work if the user has been granted the appropriate Windows permissions and are subject to other limitations.
+4. Replacement of symlinks with copying, so that Windows programs don't trip up on these files. MSYS2 also supports creating native NTFS symlinks, but these are limited in other ways.
 5. Removal of the `/cygdrive` prefix for automounts. This is to retain compatibility with MSYS-enabled software that makes assumptions about `/c/` being equivalent to `C:/`, and it saves a bit of typing.
 6. Switch to `noacl` on default mounts. This prevents any permission mangling from MSYS2.
 7. MSYS2 releases might be ahead of or behind Cygwin releases.
