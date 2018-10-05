@@ -25,16 +25,17 @@ Runtime
 Cygwin provides a runtime library called `cygwin1.dll` that provides the POSIX compatibility layer where necessary. The MSYS2 variant of this library is called `msys-2.0.dll` and includes the following changes to support using native Windows programs:
 
 1. Automatic path mangling of command line arguments and environment variables to Windows form on the fly. (This can be [selectively turned off](Porting#user-content-filesystem-namespaces).)
-2. Ability to change `OSNAME` with an environment variable (`MSYSTEM`) which changes between `MSYS2` and `MINGW32` or `MINGW64` according to the nature of the software people are trying to build.
+2. Ability to change the reported OS using an environment variable (`MSYSTEM`, with values of `MSYS2`, `MINGW32`, and `MINGW64`).  This allows mingw-w64 software to be built in native build mode (as opposed to cross-compilation mode).
 3. Conversion of output of native Windown applications from Windows line endings to POSIX line endings by removing trailing `'\r'` characters, so that e.g. `bb=$(gcc --print-search-dirs)` works as expected.
 4. Replacement of symlinks with copying, so that Windown programs don't trip up on these files. MSYS2 also supports creating native NTFS symlinks, but these only work if the user has been granted the appropriate Windows permissions and are subject to other limitations.
-5. Addition of the "-W" option to the `pwd` command in bash for compatibility with the old MSYS.
-6. Removal of the `/cygdrive` prefix for automounts. Again this is to retain compatibility with MSYS-enabled software that makes assumptions about `/c/` being equivalent to `C:/`, and it saves a bit of typing.
-7. MSYS2-provided userland software also includes various changes to help retain compatibility and interoperability. (An example is Perl reporting `msys` as `$^O`.)
-8. Switch to `noacl` on default mounts. This prevents any permission mangling from MSYS2.
-9. MSYS2 releases are based Cygwin's trunk, so they're more recent than contemporary Cygwin releases most of the time.
+5. Removal of the `/cygdrive` prefix for automounts. This is to retain compatibility with MSYS-enabled software that makes assumptions about `/c/` being equivalent to `C:/`, and it saves a bit of typing.
+6. Switch to `noacl` on default mounts. This prevents any permission mangling from MSYS2.
+7. MSYS2 releases might be ahead of or behind Cygwin releases.
 
 Other notable differences:
 
 1. System root is `/usr`, not `/`.
 2. Removal of system integration stuff, such as `cyglsa`, `cygserver`, `cygstart`...
+3. Dynamic libraries are prefixed `msys` instead of `cyg` (most other platforms, including mingw-w64, use `lib`).
+4. Addition of the "-W" option to the `pwd` command in shells for compatibility with the old MSYS.
+5. Various changes in utilities to help retain compatibility and interoperability.  An example is Perl reporting `msys` as `$^O`, or Sed recognizing CRLF as a line ending.
