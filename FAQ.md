@@ -20,4 +20,4 @@ error: failed to prepare transaction (could not satisfy dependencies)
 :: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency 'mingw-w64-i686-gcc=8.3.0-2' required by mingw-w64-i686-gcc-objc
 ```
 
-Ada and ObjC is currently unsupported in MSYS2 builds due to long-standing issues with the i686 variant.  Run `pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc` and/or `pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc`, then update.
+Ada and ObjC are currently unsupported in MSYS2 builds due to long-standing issues with the i686 variant.  Run `pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc` and/or `pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc`, then update.
