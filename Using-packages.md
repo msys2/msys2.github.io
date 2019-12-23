@@ -132,7 +132,7 @@ Note that this operation only compares the file paths, so proper capitalization 
 
 The two recommended tools that can scan a repository and find packages that contain specific files are `pacman -F` and `pkgfile`. Below are examples of `pacman -F` usage:
 
-Call `pacman -Fy` to update your package database. To find an exact match, call `pacman -Fs <filename>` (don't include the path in the filename). To find a substring match, call `pacman -Fxs <filename>`.
+Call `pacman -Fy` to update your package database. To find an exact match, call `pacman -Fs <filename>` (don't include the path in the filename). To find a substring match, call `pacman -Fx <filename>`.
 
 Note that this operation only compares the file paths, so proper capitalization and the `.exe` suffix (if applicable) is required.
 
