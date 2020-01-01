@@ -1,4 +1,4 @@
-You should *not* launch sh.exe directly as that doesn't start a login shell or set the correct environment variables for the type of shell that you want to use. Instead, your choices are:
+You should *not* launch sh.exe directly as that doesn't start a login shell or set the correct environment variables for the type of shell that you want to use. Instead, your best choices are:
 
 [**msys2_shell.cmd**](https://github.com/Alexpux/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd), the improved multi-purpose batch file from the [`filesystem` package](https://github.com/Alexpux/MSYS2-packages/tree/master/filesystem).  Run `msys2_shell.cmd --help` for usage.
 
@@ -21,3 +21,19 @@ A nice explanation how to [set up ConEmu](https://superuser.com/a/1297072) to ru
 **Open MSYS2 here** from @magthe, with contributions from @sushovan-dw and @ryanpfeeley. [Gist+discussion](https://gist.github.com/magthe/a60293fe395af7245a9e)
 
 [**msys2_shell.bat**](https://github.com/Alexpux/MSYS2-packages/blob/b827a678b1793571968a4d27f72f981d99c305ef/filesystem/msys2_shell.bat), [**mingw64_shell.bat**](https://github.com/Alexpux/MSYS2-packages/blob/b827a678b1793571968a4d27f72f981d99c305ef/filesystem/mingw64_shell.bat) and [**mingw32_shell.bat**](https://github.com/Alexpux/MSYS2-packages/blob/b827a678b1793571968a4d27f72f981d99c305ef/filesystem/mingw32_shell.bat), the old-school batch files from [old versions of the `filesystem` package](https://github.com/Alexpux/MSYS2-packages/tree/b827a678b1793571968a4d27f72f981d99c305ef/filesystem).
+
+### The idea
+
+If you need to start a shell correctly, but none of the ways above suit you, devise your own way based on this knowledge:
+
+- set `MSYSTEM=...` into the environment, with the value of either `MSYS`, `MINGW32`, or `MINGW64`
+- then run a *login* shell
+
+The typical one-liner if your options are limited is `C:\\msys64\\usr\\bin\\env MSYSTEM=MSYS /usr/bin/bash -li`.
+
+Caveats:
+
+- MSYS2 inherits multi-user capabilities from Cygwin and there is a notion of user's default shell.  Not everyone's default shell is *bash*.  To correctly figure out the default shell from outside (i.e. without directly calling the POSIX APIs), you can use this shell one-liner or an equivalent: `getent passwd $(whoami) | cut -d: -f7`
+- There are other environment variables that control MSYS2 at runtime or initialization.  See the source of launchers above to figure them out if needed.
+- You might need to set `CHERE_INVOKING=1` for the shell to stay in the current working directory.
+- If you need to run a specific command instead of an interactive shell, you still need to go through a login shell, e.g. `... /usr/bin/bash -lc python`.
