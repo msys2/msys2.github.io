@@ -2,7 +2,7 @@ MSYS2 is software distribution and a building platform for Windows. It provides 
 
 It is an independent rewrite of MSys, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software.
 
-Both 32-bit and 64-bit variants exist and receive mostly the same level of support. Here is an irregularly updated [list of packages we provide](Packages).
+Both 32-bit and 64-bit variants exist and receive mostly the same level of support. Here is a [list of packages we provide](Packages).
 
 ## Subsystems
 
@@ -30,7 +30,7 @@ Use `msys2` shell for running `pacman`, `makepkg`, `makepkg-mingw` and for build
 
 MSYS2 uses a port of Arch Linux's **pacman** for package management. This brings many powerful features such as dependency resolution and simple complete system upgrades, as well as providing the build system (`makepkg-mingw`) - which is used to make these packages.
 
-Packages for `msys2` are built from recipes in the `msys2-packages` Git repository, packages for `mingw` are in `mingw-packages`. Official repositories are on GitHub under user Alexpux and on SF.net under the MSYS2 project. When looking for `msys2` packages or deciding to create a new one, keep in mind that MSYS2 doesn't intend to compete with Cygwin or duplicate their efforts. The set of things that belong to the `msys2` subsystem is pretty small and needs to stay that way.
+Packages for `msys2` are built from recipes in the `msys2-packages` Git repository, packages for `mingw` are in `mingw-packages`. Official repositories are on GitHub under user the *msys2* organization. When looking for `msys2` packages or deciding to create a new one, keep in mind that MSYS2 doesn't intend to compete with Cygwin or duplicate their efforts. The set of things that belong to the `msys2` subsystem is pretty small and needs to stay that way.
 
 You might be wondering why there appears to be only one arch variant of the `msys2` repository. In reality there are two, but the decision about which one to use is made at the time you install it, depending on whether you installed the i686 or the x86_64 version. It is possible to install both if you wish. Actually, you can have multiple installations of each on your computer, but you should never run programs from two different MSYS2 XXbit variants at the same time due to DLL address space and version conflicts. Also note that the uninstaller will only remove the most recently installed one of each variant).
 
