@@ -16,13 +16,13 @@ The installers and base archives only contain the tools necessary to 1) start **
  * After installing or extracting MSYS2 you should start MSYS2 by executing **msys2_shell.cmd**.
   (if you did not use an installer and this is first time running of MSYS2 after unpacking, then at this point it will create the files and settings necessary for it to function properly. After this initial run you **MUST** restart MSYS2 so that the settings are correct)
 
- * Now you can update the base MSYS2 packages to their latest versions. MSYS2 comes with a package manager **[Pacman][1]** which was ported from Arch Linux.
+ * Now you can update the base MSYS2 packages to their latest versions. MSYS2 comes with a ported version of the **[Pacman][1]** package manager (known from Arch Linux).
 
 III. Updating packages
 ======================
-  Partial upgrades (i.e. updating just `pacman` while not updating `msys2-runtime`) are not supported and are expected to break stuff.
+  Partial upgrades (e.g. updating just `pacman` while not updating `msys2-runtime`) are not supported and are expected to break stuff.
 
-  1. Since pacman 5.0.1.6403, you can just
+  1. Since pacman 5.0.1.6403, you can just:
     - Run **`pacman -Syuu`**. Follow the instructions. Repeat this step until it says there are no packages to update.
 
   2. Since pacman 4.2.1.6187, there's an `update-core` script that helps you to update MSYS2 in the right way. To update your MSYS2 installation you need:
@@ -34,7 +34,7 @@ III. Updating packages
     **`pacman -Sy`**
      This command connects to the remote repositories and downloads the package databases.
     - The next step is to update the installed packages (do this initially and as often as you want thereafter):
-     The 'normal' way (**don't do this**) from Arch Linux would be to simply issue:
+     The 'normal' way (**don't do this**) would be to simply issue:
     **`pacman -Suu`**
      ... however, because all MSYS2 programs share the same address space for DLLs due to how MSYS2 (well, Cygwin) implements 'fork', updating bash, MSYS2 or Pacman itself can cause subsequent package updates to fail. For this reason, the safest procedure for updating MSYS2 is to do it in two stages; first those 'core' MSYS2 packages:
     **`pacman --needed -S bash pacman pacman-mirrors msys2-runtime`**

@@ -33,7 +33,7 @@ A buildbot would be the best solution, but it may take a long time to get one. R
 We're currently testing buildbot integrations with both AppVeyor and a customized Drone CI with MSYS2 on Wine on Linux from Qian on https://www.tea-ci.org . Both should be triggered on pull requests, merges and pushes to mingw-packages and msys2-packages. There's a separate IRC channel for messages from the Drone buildbot (#msys2-ci on OFTC).
 
 What to do:
-- write down packaging rules (rules inherited from ArchLinux, rules about `pkgbase`, `pkgname`, `description`, FHS, 32+64 bits, ...)
+- write down packaging rules (rules inherited from Arch Linux, rules about `pkgbase`, `pkgname`, `description`, FHS, 32+64 bits, ...)
 - prepare automated checks to prevent mistakes (one idea: compare package file list between latest and new version of the package)
 - agree on a way to maintain a list of packages to build (a script that compares package files with PKGBUILDs?)
 - agree on a way to make sure the repository is updated by at most one person at a time

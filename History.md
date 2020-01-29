@@ -4,7 +4,7 @@
 
 The name is a contraction of Minimal SYStem 2, and aims to provide support to facilitate using the bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
 
-We wanted a package management system to provide easy installation of packages, and ported Arch Linux's Pacman. This brings many powerful features such as dependency resolution and simple complete system upgrades, as well as providing the build system which is used to make these packages.
+We wanted a package management system to provide easy installation of packages, and ported Pacman (known from Arch Linux). This brings many powerful features such as dependency resolution and simple complete system upgrades, as well as providing the build system which is used to make these packages.
 
 ## Cygwin
 

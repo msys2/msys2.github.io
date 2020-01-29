@@ -12,7 +12,7 @@ MSYS2 provides a minimal shell required to run autotools and other build systems
 Packages
 ========
 
-MSYS2 uses Pacman (of Arch Linux) to manage its packages and comes with three different package repositories:
+MSYS2 uses Pacman (known from Arch Linux) to manage its packages and comes with three different package repositories:
 - `msys2`: Containing MSYS2-dependent software
 - `mingw64`: Containing 64-bit native Windows software (compiled with mingw-w64 x86_64 toolchain)
 - `mingw32`: Containing 32-bit native Windows software (compiled with mingw-w64 i686 toolchain)
