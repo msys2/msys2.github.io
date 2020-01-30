@@ -100,6 +100,7 @@ Links:
 - https://github.com/Alexpux/Cygwin/pull/8
 - https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows
 - https://wiki.qt.io/MSYS2
+- https://www.gtk.org/download/windows.php#MSYS2
 - https://wiki.gnome.org/Initiatives/Windows
 - https://github.com/xmrig/xmrig/wiki/Windows-Build
 - https://github.com/LuminanceHDR/LuminanceHDR/tree/master/build_files/platforms/msys2
