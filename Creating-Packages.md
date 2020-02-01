@@ -2,9 +2,9 @@ The MSYS2 software distribution uses a port of Pacman (known from Arch Linux) to
 
 ## General information
 
-There are 3 package repositories, `msys2`, `mingw32`, and `mingw64`. `msys2` software (from the `msys2` repository) is software that depends on `msys-2.0.dll` and is very similar to Cygwin software (which is a POSIX emulation layer for Windows). Native Windows software (from this project's perspective) is software that doesn't depend on `msys-2.0.dll`, and links dynamically to the highly compatible `msvcrt.dll`.
+There are 3 package repositories, **msys**, **mingw32**, and **mingw64**. **msys** software (from the **msys** repository) is software that depends on `msys-2.0.dll` and is very similar to Cygwin software (which is a POSIX emulation layer for Windows). Native Windows software (from this project's perspective) is software that doesn't depend on `msys-2.0.dll`, and links dynamically to the highly compatible `msvcrt.dll`.
 
-In this document, to attempt to avoid confusion, MSYS2 refers to the software distribution while **msys2** or **msys** refers to the repository, the packages in that repository and the software in those packages that link to `msys-2.0.dll`.
+In this document, to attempt to avoid confusion, MSYS2 refers to the software distribution while **msys** refers to the repository, the packages in that repository and the software in those packages that link to `msys-2.0.dll`.
 
 ### Package recipes
 
@@ -31,7 +31,7 @@ Where
 
 ### Building
 
-The actual build and packaging is done by running `makepkg` or `makepkg-mingw`. The former is used to build **msys2** packages and the latter for **mingw** packages. To learn more, read the [makepkg manpage](https://www.archlinux.org/pacman/makepkg.8.html) and the [makepkg wikipage on ArchWiki](https://wiki.archlinux.org/index.php/makepkg). When building *either* **msys** or native software, you should use the MSYS shell, not the MINGW{32,64} shells.
+The actual build and packaging is done by running `makepkg` or `makepkg-mingw`. The former is used to build **msys** packages and the latter for **mingw** packages. To learn more, read the [makepkg manpage](https://www.archlinux.org/pacman/makepkg.8.html) and the [makepkg wikipage on ArchWiki](https://wiki.archlinux.org/index.php/makepkg). When building *either* **msys** or native software, you should use the MSYS shell, not the MINGW{32,64} shells.
 
 The process happens in multiple phases:
 
@@ -76,7 +76,7 @@ Please do *not* create pull requests for PKGBUILDs that just repackage binary re
 8. Test the installed package
 9. Modify the recipe if necessary and repeat
 10. Commit the new package to the target repository (on your own GitHub account)
-11. Send a pull request to merge the new repice into the official repository
+11. Send a pull request to merge the new recipe into the official repository
 12. Check CI results, reviews and comments
 13. Fix issues if necessary and repeat
 14. Offer your fixes to the software's developers (upstream)
@@ -91,9 +91,9 @@ In MSYS2 there are 2 types of packages:
 * **msys packages** - these run on the emulation layer and are typically POSIX-only programs
 * **mingw packages** - these run natively just like any other Windows program
 
-You should think of these two systems as separate where **msys2** packages should generally only be build dependencies of **mingw** packages. You also can't link a **mingw** program against an **msys** library.
+You should think of these two systems as separate where **msys** packages should generally only be build dependencies of **mingw** packages. You also can't link a **mingw** program against an **msys** library.
 
-This means you first need to decide which subsystem (and which repository) is the right one for your new package. The set of things that belong to the `msys2` subsystem is pretty small:
+This means you first need to decide which subsystem (and which repository) is the right one for your new package. The set of things that belong to the **msys** subsystem is pretty small:
 - essential POSIX stuff: `filesystem`, `msys2-runtime`, ...
 - the native toolchain: `gcc`, `binutils`, `gdb`, ...
 - supporting programs that are hard to port to Windows: `pacman`, `bash`, `automake`, `make`, ...
@@ -102,7 +102,7 @@ This means you first need to decide which subsystem (and which repository) is th
 - carefully chosen useful tools: `mc`, `ssh`, `rsync`, `lftp`, ...
 - dependencies of these packages
 
-In other words, if a program is needed to build native software, but is itself hard to port, it can be made into a `msys2` package. Anything else needs to be done as a `mingw` package or vetted individually.
+In other words, if a program is needed to build native software, but is itself hard to port, it can be made into an **msys** package. Anything else needs to be done as a **mingw** package or vetted individually.
 
 ### Build software
 
@@ -110,15 +110,15 @@ In order to be able to compile a software or build a package you need to install
 
 The core packages groups you need to install if you wish to build from PKGBUILDs are:
 - `base-devel` for any building
-- `msys2-devel` for building msys2 packages
-- `mingw-w64-i686-toolchain` for building mingw32 packages
-- `mingw-w64-x86_64-toolchain` for building mingw64 packages
+- `msys2-devel` for building **msys** packages
+- `mingw-w64-i686-toolchain` for building **mingw32** packages
+- `mingw-w64-x86_64-toolchain` for building **mingw64** packages
 
 If you don't install the required package group, building might fail with unexpected errors. Note that -- contrary to what you might expect -- `base-devel` doesn't contain `gcc` nor `binutils`.
 
 ### Test software
 
-Check that the software does what it should. Try its testsuite.
+Check that the software does what it should. Try its test suite.
 
 ### Patch software
 
@@ -134,7 +134,7 @@ Create a `PKGBUILD` describing all the steps necessary to build and package the 
 
 Run the makepkg command (`makepkg` or `makepkg-mingw`) on your recipe.
 
-`makepkg-mingw` is essentially a wrapper that does a few checks, sets up the correct environments and runs `makepkg` twice, once for mingw32 and once for mingw64. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define `MINGW_INSTALLS` in the environment, with either `mingw32` or `mingw64` as the value, for example:
+`makepkg-mingw` is essentially a wrapper that does a few checks, sets up the correct environments and runs `makepkg` twice, once for **mingw32** and once for **mingw64**. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define `MINGW_INSTALLS` in the environment, with either `mingw32` or `mingw64` as the value, for example:
 
     MINGW_INSTALLS=mingw32 makepkg-mingw -sCLf
 
@@ -167,20 +167,20 @@ If there are issues, fix them in your PKGBUILD and re-build or re-package as nec
 
 Integrate your recipe into your local clone of the **msys2-packages** or **mingw-packages** repository. In order to help us avoid accumulating useless commits in the repository, please follow these guidelines:
 - create a new branch for your work
-- put all your work into it, preferrably in just 1 commit
+- put all your work into it, preferably in just 1 commit
 - if you want to pull changes from our repository, use the rebasing strategy (`git pull --rebase`) to place your commits above ours, do not just merge
 - if you need to change something in your recipe, amend your existing commit (`git commit --amend`)
 - push your new branch onto your repository "fork" on your GitHub account, using `git push --force-with-lease` if necessary
 
-Altough these guidelines (which rely heavily on rewriting history) are not suitable for public development on main branches (`master` etc.), they're an excellent match for this kind the iterative work-in-progress development that happens when contributing new packages.
+Although these guidelines (which rely heavily on rewriting history) are not suitable for public development on main branches (`master` etc.), they're an excellent match for this kind the iterative work-in-progress development that happens when contributing new packages.
 
 ### Send PR
 
-Open and send a pull request against the master branch of the official repositories on GitHub, currently residing under the user @Alexpux ([links here](https://github.com/msys2/msys2)). Please include a short description of what you're submitting and why. In case your recipe is not final yet, add "[do not merge]" to the title and explain in the description.
+Open and send a pull request against the master branch of the official repositories on GitHub ([links here](https://github.com/msys2/msys2)). Please include a short description of what you're submitting and why. In case your recipe is not final yet, add "[do not merge]" to the title and explain in the description.
 
 ### Check
 
-Our CI systems will automatically try to build your package, but don't panic if the build fails. Unfortunately, the CI systems are not perfect and may fail even if your package is fine.
+Our CI systems will automatically try to build your package. If it fails, try to figure out why. However, the CI systems are not perfect and unfortunately may fail even if your package is fine.
 
 The project maintainers will try to look at your PR and review it. This may take some time and sometimes happens in bursts, so don't be discouraged if you get no response for a few days, but don't be afraid to explicitly ask for help or a review on our IRC channel.
 
