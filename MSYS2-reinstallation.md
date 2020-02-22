@@ -32,7 +32,7 @@ Re-installing
 
 10. Re-install your old packages, by entering:
 
-        pacman -S --needed --force $(cat /c/packages.txt)
+        pacman -S --needed $(cat /c/packages.txt)
 
 You may also want to compare your new $HOME folder with your old one and merge across your dotfiles and other files.
 
