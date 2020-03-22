@@ -11,6 +11,7 @@
 - [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/Alexpux/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]
 - [Porting for MSYS2 or MinGW-w64](Porting) - useful resources and common issues
 - [Package list](Packages) - list of packages we provide
+- [Mirrors](Mirrors) - infos regarding repo mirrors and how to create one
 - [Launchers](Launchers) - various ways to launch MSYS2 shells
 - [Distributing software without pacman](Distributing) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
 - [FAQ](FAQ)
