@@ -770,13 +770,17 @@
 </ul>
 <h2 id="get-more-people">Get more people</h2>
 <p>The MSYS2 team is pretty small and we could use more people.  Some contributors become pretty active and motivated from time to time, but often they burn out after a while.  Since there are so few of core people, the occasional interested users, contributors and issue reporters are often greeted by silence and turned off.</p>
-<p>What to do to get them:
-- respond to them on IRC, Gitter, ML, handle their bug reports and contributions on GitHub in a timely fashion
-- good documentation helps with frequent inquiries, automated checks help with code reviews
-- get money and pay people?
-- other ideas?</p>
-<p>Links:
-- <a href="https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2">https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2</a></p>
+<p>What to do to get them:</p>
+<ul>
+<li>respond to them on IRC, Gitter, ML, handle their bug reports and contributions on GitHub in a timely fashion</li>
+<li>good documentation helps with frequent inquiries, automated checks help with code reviews</li>
+<li>get money and pay people?</li>
+<li>other ideas?</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2">https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2</a></li>
+</ul>
 <h2 id="fix-pacman-errors-wrt-conflicts-in-binfoo-vs-binfooexe">Fix pacman errors wrt. conflicts in <code>bin/foo</code> vs <code>bin/foo.exe</code></h2>
 <p>The runtime emulates extension-less executables by also looking for <code>.exe</code> on various FS calls. (There are more of these hacks, for example for symlink emulation.) This is causing pacman to complain when two packages independently provide both <code>foo</code> and <code>foo.exe</code>, or even worse <code>dir/</code> and <code>dir.exe</code>. People have to either disregard these conflicts with <code>--force</code>or (re-)install packages in a specific order.</p>
 <p>A possible solution to these conflicts would be to disable the .exe interpolation, but then something would break, either users wouldn't be able to either run MSYS2 executables directly from Windows, or couldn't use the short extension-less names of commands in MSYS2. Therefore there also has to be a change that will mitigate that. We can for example design some passes for <code>makepkg</code>:</p>
