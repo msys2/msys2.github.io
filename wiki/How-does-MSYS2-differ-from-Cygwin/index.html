@@ -510,10 +510,12 @@
 <p>MSYS2 tries to provide an environment for building native Windows software. MSYS2 provides a large collection of packages containing such software, and libraries for their development. As a large portion of the software uses GNU build tools which are tightly coupled to the unix world, this environment is also POSIX-compatible, and is in fact based on Cygwin. </p>
 <p>MSYS2 provides a minimal shell required to run autotools and other build systems which get the source for software from the Internet from different repositories, configure them and build them. The shell and core tools exist mainly to allow porting Unix programs to run natively on Windows (i.e. without requiring a POSIX emulation layer). MSYS2 doesn't try to duplicate Cygwin's efforts more than necessary, so the number of provided POSIX-emulated software is very small.</p>
 <h1 id="packages">Packages</h1>
-<p>MSYS2 uses Pacman (known from Arch Linux) to manage its packages and comes with three different package repositories:
-- <code>msys2</code>: Containing MSYS2-dependent software
-- <code>mingw64</code>: Containing 64-bit native Windows software (compiled with mingw-w64 x86_64 toolchain)
-- <code>mingw32</code>: Containing 32-bit native Windows software (compiled with mingw-w64 i686 toolchain)</p>
+<p>MSYS2 uses Pacman (known from Arch Linux) to manage its packages and comes with three different package repositories:</p>
+<ul>
+<li><code>msys2</code>: Containing MSYS2-dependent software</li>
+<li><code>mingw64</code>: Containing 64-bit native Windows software (compiled with mingw-w64 x86_64 toolchain)</li>
+<li><code>mingw32</code>: Containing 32-bit native Windows software (compiled with mingw-w64 i686 toolchain)</li>
+</ul>
 <p>Cygwin comes only with Cygwin-dependent software. It uses its own package management system, commonly called setup.exe.</p>
 <h1 id="runtime">Runtime</h1>
 <p>Cygwin provides a runtime library called <code>cygwin1.dll</code> that provides the POSIX compatibility layer where necessary. The MSYS2 variant of this library is called <code>msys-2.0.dll</code> and includes the following changes to support using native Windows programs:</p>
