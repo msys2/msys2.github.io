@@ -1,0 +1,60 @@
+site_name: MSYS2
+theme:
+    name: material
+    logo: 'logo.svg'
+    favicon: 'favicon.ico'
+    palette:
+        primary: 'indigo'
+        accent: 'indigo'
+
+extra_css:
+    - 'stylesheets/extra.css'
+
+site_url: https://www.msys2.org
+repo_url: https://github.com/msys2/msys2.github.io
+edit_uri: edit/source/docs/
+
+markdown_extensions:
+    - codehilite
+    - sane_lists
+    - admonition
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+nav:
+    - 'Getting Started': index.md
+    - Wiki:
+        - wiki/Home.md
+        - wiki/Contributing-to-MSYS2.md
+        - wiki/Creating-Packages.md
+        - wiki/Devtopics.md
+        - wiki/Distributing.md
+        - wiki/FAQ.md
+        - wiki/GDB-qtcreator.md
+        - wiki/History.md
+        - wiki/How-does-MSYS2-differ-from-Cygwin.md
+        - wiki/Launchers.md
+        - wiki/Mirrors.md
+        - wiki/MSYS2-installation.md
+        - wiki/MSYS2-introduction.md
+        - wiki/MSYS2-reinstallation.md
+        - wiki/Packages.md
+        - wiki/Porting.md
+        - wiki/Setting-up-SSHd.md
+        - wiki/Signing-packages.md
+        - wiki/Terminals.md
+        - wiki/Using-packages.md
