@@ -18,13 +18,14 @@ Typically, each recipe is in its own directory. The directory is also used when 
 
 Use 2 spaces for indentation: `expand -t 2 PKGBUILD > PKGBUILD.new && mv PKGBUILD.new PKGBUILD`
 
-A PKGBUILD is a bash script defining variables and functions that are then used by the build system to create the package. The [PKGBUILD manpage](https://www.archlinux.org/pacman/PKGBUILD.5.html) and the [PKGBUILD wikipage on ArchWiki)(https://wiki.archlinux.org/index.php/PKGBUILD) are good sources to read about all the details of PKGBUILDs. The **mingw** PKGBUILDs are loosely based on the [mingw-w64 cross-compilation packages guidelines in Arch Linux](https://wiki.archlinux.org/index.php/MinGW_package_guidelines). If you don't want to read all that just yet, just read some existing PKGBUILDs; the purpose of most parts should be obvious.
+A PKGBUILD is a bash script defining variables and functions that are then used by the build system to create the package. The [PKGBUILD manpage](https://www.archlinux.org/pacman/PKGBUILD.5.html) and the [PKGBUILD wikipage on ArchWiki](https://wiki.archlinux.org/index.php/PKGBUILD) are good sources to read about all the details of PKGBUILDs. The **mingw** PKGBUILDs are loosely based on the [mingw-w64 cross-compilation packages guidelines in Arch Linux](https://wiki.archlinux.org/index.php/MinGW_package_guidelines). If you don't want to read all that just yet, just read some existing PKGBUILDs; the purpose of most parts should be obvious.
 
 ### Patch files
 
 When creating a patch file, you can use the following naming convention for its name: `###-target-Purpose.patch`
 
 Where
+
 * `###` a sequence number, starting from 001
 * `target`, is the package name and version (separated by a hyphen) for which the patch was first created
 * `[Purpose]` describes what the patch is fixing or improving
@@ -94,6 +95,7 @@ In MSYS2 there are 2 types of packages:
 You should think of these two systems as separate where **msys** packages should generally only be build dependencies of **mingw** packages. You also can't link a **mingw** program against an **msys** library.
 
 This means you first need to decide which subsystem (and which repository) is the right one for your new package. The set of things that belong to the **msys** subsystem is pretty small:
+
 - essential POSIX stuff: `filesystem`, `msys2-runtime`, ...
 - the native toolchain: `gcc`, `binutils`, `gdb`, ...
 - supporting programs that are hard to port to Windows: `pacman`, `bash`, `automake`, `make`, ...
@@ -109,6 +111,7 @@ In other words, if a program is needed to build native software, but is itself h
 In order to be able to compile a software or build a package you need to install basic packages, as the MSYS2 install does not contain build tools.
 
 The core packages groups you need to install if you wish to build from PKGBUILDs are:
+
 - `base-devel` for any building
 - `msys2-devel` for building **msys** packages
 - `mingw-w64-i686-toolchain` for building **mingw32** packages
@@ -124,7 +127,7 @@ Check that the software does what it should. Try its test suite.
 
 If the software doesn't work straight away or doesn't even build, you'll probably need to pass some arguments to the build scripts or modify (patch) its build system, its source code, its definitions files etc. Such patches will be stored as files alongside the PKGBUILD.
 
-This part is very specific to each software and may require searching the Internet, talking to the software's developers or support team, talking to us etc. The [Porting wikipage](Porting) may help with some common issues. While it is probably okay to make quick (monkey-)patches that fix the software for our use case (and possibly break it for every other), is it better to make proper surgical-precision patches and attempt to have them accepted by the software developer ("upstream").
+This part is very specific to each software and may require searching the Internet, talking to the software's developers or support team, talking to us etc. The [Porting wikipage](Porting.md) may help with some common issues. While it is probably okay to make quick (monkey-)patches that fix the software for our use case (and possibly break it for every other), is it better to make proper surgical-precision patches and attempt to have them accepted by the software developer ("upstream").
 
 ### Recipe
 
@@ -153,6 +156,7 @@ If the package build successfully, it's good to check its contents first before 
 Make sure the package installed all the files which it's supposed to distribute: executables, shared and static libraries, configuration files, header files, licenses, documentation etc.
 
 Pay special attention to the configuration files and make sure they are not containing hard-coded path elements and are pointing to the right location. Typical config files:
+
 * `*-config` files in the `${prefix}/bin` directory
 * `*.pc` files for `pkg-config` in the `${prefix}/lib/pkgconfig` directory
 * `*.cmake` files in the `${prefix}/lib/cmake` directory
@@ -166,6 +170,7 @@ If there are issues, fix them in your PKGBUILD and re-build or re-package as nec
 ### Commit
 
 Integrate your recipe into your local clone of the **msys2-packages** or **mingw-packages** repository. In order to help us avoid accumulating useless commits in the repository, please follow these guidelines:
+
 - create a new branch for your work
 - put all your work into it, preferably in just 1 commit
 - if you want to pull changes from our repository, use the rebasing strategy (`git pull --rebase`) to place your commits above ours, do not just merge
@@ -196,7 +201,7 @@ In case you had to made changes in order to be able to compile and run properly 
 
 ## Resources
 
-Read through our wiki, especially about [pacman](Using-packages) and the [Porting section](Porting).
+Read through our wiki, especially about [pacman](Using-packages.md) and the [Porting section](Porting.md).
 
 ### Useful packages and tools
 

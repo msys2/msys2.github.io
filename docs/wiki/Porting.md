@@ -184,6 +184,7 @@ Setting floating point precision
 
 Floating point precision issues with multiple threads:
 gfortran, open mp and floating point precision by Carl Kleffner:
+
 - https://sourceforge.net/p/mingw-w64/mailman/message/33332276/
 - https://gcc.gnu.org/wiki/FloatingPointMath
 - https://gcc.gnu.org/wiki/x87note

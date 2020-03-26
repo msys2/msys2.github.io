@@ -84,6 +84,7 @@ mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/libpugixml.dll.a
 ```
 
 As you can see the package contains:
+
 * a binary executable library file (libpugixml.dll),
 * a static library (libpugixml.dll.a),
 * 2 header files (pugixml.hpp, pugiconfig.hpp),

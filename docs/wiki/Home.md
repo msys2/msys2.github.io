@@ -1,25 +1,25 @@
 **Welcome to the MSYS2 wiki**
 
-- [Introduction](MSYS2-introduction) - overview and important information
-- [Installing and upgrading](MSYS2-installation) - required reading for all users
-- [Using packages](Using-packages) - how to find and install packages
-- [History](History) - about the project's inception and origins
-- [Re-installing from scratch](MSYS2-reinstallation) - in case of unrecoverable problems
-- [Contributing](Contributing-to-MSYS2) - how to help the project
-- [Creating packages](Creating-packages) - how packages are built and how to make new ones
-- [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin) - differences and similarities
+- [Introduction](MSYS2-introduction.md) - overview and important information
+- [Installing and upgrading](MSYS2-installation.md) - required reading for all users
+- [Using packages](Using-packages.md) - how to find and install packages
+- [History](History.md) - about the project's inception and origins
+- [Re-installing from scratch](MSYS2-reinstallation.md) - in case of unrecoverable problems
+- [Contributing](Contributing-to-MSYS2.md) - how to help the project
+- [Creating packages](Creating-Packages.md) - how packages are built and how to make new ones
+- [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin.md) - differences and similarities
 - [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/Alexpux/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]
-- [Porting for MSYS2 or MinGW-w64](Porting) - useful resources and common issues
-- [Package list](Packages) - list of packages we provide
-- [Mirrors](Mirrors) - infos regarding repo mirrors and how to create one
-- [Launchers](Launchers) - various ways to launch MSYS2 shells
-- [Distributing software without pacman](Distributing) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
-- [FAQ](FAQ)
-- [About terminals, consoles and shells](Terminals)
-- [Setting up SSHd on MSYS2](Setting-up-SSHd)
-- [Developer discussion](Devtopics)
-- [Signing packages](Signing-packages) (draft)
-- [Tips for investigating package issues using GDB on Qt Creator](GDB-qtcreator) (draft)
+- [Porting for MSYS2 or MinGW-w64](Porting.md) - useful resources and common issues
+- [Package list](Packages.md) - list of packages we provide
+- [Mirrors](Mirrors.md) - infos regarding repo mirrors and how to create one
+- [Launchers](Launchers.md) - various ways to launch MSYS2 shells
+- [Distributing software without pacman](Distributing.md) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
+- [FAQ](FAQ.md)
+- [About terminals, consoles and shells](Terminals.md)
+- [Setting up SSHd on MSYS2](Setting-up-SSHd.md)
+- [Developer discussion](Devtopics.md)
+- [Signing packages](Signing-packages.md) (draft)
+- [Tips for investigating package issues using GDB on Qt Creator](GDB-qtcreator.md) (draft)
 
 **More documentation:**
 
@@ -32,13 +32,16 @@ Some pages on the [Git for Windows wiki](https://github.com/git-for-windows/git/
 There are various [communication channels](http://www.msys2.org/#support-or-contact) set up, including the [#msys2 IRC channel](irc://irc.oftc.net:6667/msys2) on OFTC and the mailing list at msys2-users@lists.sourceforge.net.
 
 **Project members:**
+
 - [Alexey](https://github.com/alexpux) (Project Leader)
 - [Ray Donnelly](https://github.com/mingwandroid)
 - [Martell Malone](https://github.com/martell)
 - [David Macek](https://github.com/elieux)
 
 **With thanks to:**
+
 - [The MinGW-w64 Project](http://mingw-w64.sourceforge.net/)
 - [The Cygwin Project](https://www.cygwin.com/)
 - [The Qt-Project](http://qt-project.org/)
+
 ... and all of the other Open Source software projects we build, package and distribute

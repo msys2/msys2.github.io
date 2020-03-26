@@ -28,6 +28,7 @@ Import into pacman
 This is needed because pacman has its own keystore and own rules for trusting keys. Either you get approved as a packager for the MSYS2 project, or you have to import your key manually.
 
 To import and sign your key with `pacman-key`:
+
 1. `pacman-key --add <pubkeyfile>`, or if it's published `pacman-key --recv-keys <keyid>`
 2. `pacman-key --lsign-key <keyid>`
 [more...](https://wiki.archlinux.org/index.php/pacman-key#Adding_unofficial_keys)
