@@ -119,12 +119,14 @@ Get more people
 The MSYS2 team is pretty small and we could use more people.  Some contributors become pretty active and motivated from time to time, but often they burn out after a while.  Since there are so few of core people, the occasional interested users, contributors and issue reporters are often greeted by silence and turned off.
 
 What to do to get them:
+
 - respond to them on IRC, Gitter, ML, handle their bug reports and contributions on GitHub in a timely fashion
 - good documentation helps with frequent inquiries, automated checks help with code reviews
 - get money and pay people?
 - other ideas?
 
 Links:
+
 - https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2
 
 
