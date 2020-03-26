@@ -1,0 +1,1088 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://www.msys2.org/wiki/Porting/">
+      
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.0.0rc3">
+    
+    
+      
+        <title>Porting - MSYS2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.dfb60779.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.31180ff2.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    
+      
+      <a href="#mingw32-make" class="md-skip" data-md-component="skip">
+        Skip to content
+      </a>
+    
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://www.msys2.org" title="MSYS2" class="md-header-nav__button md-logo" aria-label="MSYS2">
+      
+        <img src="../../logo.svg" alt="logo">
+      
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis md-ellipsis">
+        
+          <span class="md-header-nav__topic">
+            MSYS2
+          </span>
+          <span class="md-header-nav__topic">
+            
+              Porting
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/msys2/msys2.github.io/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.msys2.org" title="MSYS2" class="md-nav__button md-logo" aria-label="MSYS2">
+      
+        <img src="../../logo.svg" alt="logo">
+      
+    </a>
+    MSYS2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/msys2/msys2.github.io/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Wiki
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Wiki" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+      Contributing to MSYS2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-Packages/" title="Creating Packages" class="md-nav__link">
+      Creating Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+      Devtopics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Distributing/" title="Distributing" class="md-nav__link">
+      Distributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+      GDB qtcreator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../History/" title="History" class="md-nav__link">
+      History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+      How does MSYS2 differ from Cygwin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+      Launchers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mirrors/" title="Mirrors" class="md-nav__link">
+      Mirrors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+      MSYS2 installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+      MSYS2 introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
+      MSYS2 reinstallation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packages/" title="Packages" class="md-nav__link">
+      Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Porting
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Porting" class="md-nav__link md-nav__link--active">
+      Porting
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mingw32-make" class="md-nav__link">
+    mingw32-make
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecting-version-of-msys-from-gnu-make" class="md-nav__link">
+    Detecting version of MSYS from GNU make
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-checks" class="md-nav__link">
+    Platform checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filesystem-namespaces" class="md-nav__link">
+    Filesystem namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-coded-paths-and-relocation" class="md-nav__link">
+    Hard-coded paths and relocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-printf-format-specifier-issues" class="md-nav__link">
+    C *printf Format Specifier issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-size-of-struct-timeval" class="md-nav__link">
+    Different size of struct timeval
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-3264-bit-peculiarities" class="md-nav__link">
+    More 32/64 bit peculiarities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-conventions-stdcall-and-autotools" class="md-nav__link">
+    Calling conventions, stdcall, and autotools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macroinline-function-and-autotools" class="md-nav__link">
+    Macro/inline function and autotools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guarded-time-functions-ansi-format-specifiers" class="md-nav__link">
+    Guarded time functions, ANSI format specifiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undefined-references-and-linking-to-dllssos" class="md-nav__link">
+    Undefined references and linking to DLLs/SOs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-prefixes" class="md-nav__link">
+    Library prefixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-streams-in-mintty" class="md-nav__link">
+    Standard streams in mintty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signals-in-mintty" class="md-nav__link">
+    Signals in mintty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paths-in-mingw-python" class="md-nav__link">
+    Paths in mingw Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-files" class="md-nav__link">
+    Response files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-floating-point-precision" class="md-nav__link">
+    Setting floating point precision
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-parsing" class="md-nav__link">
+    Command line parsing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-resources" class="md-nav__link">
+    Other resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+      Setting up SSHd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Signing-packages/" title="Signing packages" class="md-nav__link">
+      Signing packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+      Terminals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-packages/" title="Using packages" class="md-nav__link">
+      Using packages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mingw32-make" class="md-nav__link">
+    mingw32-make
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecting-version-of-msys-from-gnu-make" class="md-nav__link">
+    Detecting version of MSYS from GNU make
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-checks" class="md-nav__link">
+    Platform checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filesystem-namespaces" class="md-nav__link">
+    Filesystem namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-coded-paths-and-relocation" class="md-nav__link">
+    Hard-coded paths and relocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-printf-format-specifier-issues" class="md-nav__link">
+    C *printf Format Specifier issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-size-of-struct-timeval" class="md-nav__link">
+    Different size of struct timeval
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-3264-bit-peculiarities" class="md-nav__link">
+    More 32/64 bit peculiarities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-conventions-stdcall-and-autotools" class="md-nav__link">
+    Calling conventions, stdcall, and autotools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macroinline-function-and-autotools" class="md-nav__link">
+    Macro/inline function and autotools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guarded-time-functions-ansi-format-specifiers" class="md-nav__link">
+    Guarded time functions, ANSI format specifiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undefined-references-and-linking-to-dllssos" class="md-nav__link">
+    Undefined references and linking to DLLs/SOs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-prefixes" class="md-nav__link">
+    Library prefixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-streams-in-mintty" class="md-nav__link">
+    Standard streams in mintty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signals-in-mintty" class="md-nav__link">
+    Signals in mintty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paths-in-mingw-python" class="md-nav__link">
+    Paths in mingw Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-files" class="md-nav__link">
+    Response files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-floating-point-precision" class="md-nav__link">
+    Setting floating point precision
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-parsing" class="md-nav__link">
+    Command line parsing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-resources" class="md-nav__link">
+    Other resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Porting.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Porting</h1>
+                
+                <p>While in our humble opinions, MSYS2 makes collaborative, organised development of open-source software on Windows a workable proposition, there are a few things to be aware of that we commonly run into, mostly due to the design decisions made by Microsoft, our preference for using native tools and compilers rather than cross msys2-to-native ones and our wish to be as flexible as we can be.</p>
+<h2 id="mingw32-make">mingw32-make</h2>
+<p>MSYS2 provides two versions of make, one in the <code>make</code> package and one in the <code>mingw-w64-{i686,x86_64}-make</code> packages. The latter one is called <code>mingw32-make</code> on command line, is fully native and doesn't depend on <code>msys2</code> shells. The downside is that it doesn't work with many <code>Makefile</code>s. Unless you know what you're doing, use the regular <code>make</code>.</p>
+<h2 id="detecting-version-of-msys-from-gnu-make">Detecting version of MSYS from GNU make</h2>
+<p>You can use the following <code>Makefile</code> snippet to detect whether you are running GNU make from an MSYS or an MSYS2 shell. If you run it through <code>mingw32-make.exe</code> from <code>cmd.exe</code> you will likely get an error since <code>uname</code> will not be found on your <code>PATH</code>. If you run it through <code>mingw32-make.exe</code> from one of the MSYS shells, it will set <code>msys_version</code> to 1 or 2 as appropriate. On any other system with <code>uname</code> present, it will set it to 0.</p>
+<div class="highlight"><pre><span></span><code>msys_version := $(if $(findstring Msys, $(shell uname -o)),$(word 1, $(subst ., ,$(shell uname -r))),0)
+$(info The version of MSYS you are running is $(msys_version) (0 meaning not MSYS at all))
+</code></pre></div>
+
+<h2 id="platform-checks">Platform checks</h2>
+<p>You may need to use platform checks to switch between behaviour suited for MSYS2 and the default one. Some useful identifiers:</p>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Platform(s)</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_WIN32</code></td>
+<td>mingw, msvc</td>
+<td>C code (<code>#ifdef ...</code>)</td>
+</tr>
+<tr>
+<td><code>_WIN64</code></td>
+<td>64-bit mingw, 64-bit msvc</td>
+<td>C code (<code>#ifdef ...</code>)</td>
+</tr>
+<tr>
+<td><code>__CYGWIN__</code></td>
+<td>msys2, cygwin</td>
+<td>C code (<code>#ifdef ...</code>)</td>
+</tr>
+<tr>
+<td><code>__MSYS__</code></td>
+<td>msys2</td>
+<td>C code (<code>#ifdef ...</code>)</td>
+</tr>
+<tr>
+<td><code>x86_64-pc-msys2</code></td>
+<td>64-bit msys2</td>
+<td>Build scripts (<code>if [ $host = '...' ]</code>)</td>
+</tr>
+<tr>
+<td><code>i686-pc-msys2</code></td>
+<td>32-bit msys2</td>
+<td>Build scripts (<code>if [ $host = '...' ]</code>)</td>
+</tr>
+<tr>
+<td><code>x86_64-w64-mingw32</code></td>
+<td>64-bit mingw</td>
+<td>Build scripts (<code>if [ $host = '...' ]</code>)</td>
+</tr>
+<tr>
+<td><code>i686-w64-mingw32</code></td>
+<td>32-bit mingw</td>
+<td>Build scripts (<code>if [ $host = '...' ]</code>)</td>
+</tr>
+<tr>
+<td><code>msys</code></td>
+<td>msys2</td>
+<td>Python (<code>sys.platform</code>)</td>
+</tr>
+<tr>
+<td><code>win32</code></td>
+<td>mingw</td>
+<td>Python (<code>sys.platform</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="filesystem-namespaces">Filesystem namespaces</h2>
+<p>In MSYS2 there are two different filesystem namespaces in play. If you are building purely <code>msys2</code> software, you can ignore the Windows filesystem namespace entirely, however, when building native software using MSYS2's tools, you must be mindful that when <code>msys2</code> executes a native program, it will translate environment variables and command arguments from msys2-form to native-form. To do this, it converts things that <em>look</em> like <code>msys2</code> paths. Sometimes it gets this wrong, e.g.:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">command.exe /switch</span>
+</code></pre></div>
+
+
+<p>Explanation: <code>/switch</code> is a Windows style switch. Note that Windows programs commonly accept unambiguous dash-prefixed switches (<code>-switch</code>) as well.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">adb push readme.txt /sdcard/0/</span>
+</code></pre></div>
+
+
+<p>Explanation: <code>/sdcard/0/</code> is a path on a foreign system.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">./configure --root=/</span>
+</code></pre></div>
+
+
+<p>Explanation: The value of root (<code>/</code>) is emitted to a text file via echo (which is an <code>msys2</code> program and hence not mangled) and also to a <code>Makefile</code> (through autotools) which passes it to a native program, which reads the text file replacing each instance of <code>/</code> with "some-other-path". This will go wrong as <code>/</code> passed to the native program was converted to e.g. <code>C:/msys64/</code> and therefore the necessary substitutions did not happen. [last sentence needs review or rewording]</p>
+<p>To work around this, path conversion can be selectively disabled. MSYS2 reads an environment variable called <code>MSYS2_ARG_CONV_EXCL</code>. This is a <code>;</code> delimited string each part of which is compared against the front part of each argument and if a match is found, that conversion is skipped. An example of a value for <code>MSYS2_ARG_CONV_EXCL</code> that would inhibit path transformations of the 3 cases above is <code>/switch;/sdcard;--root=</code>.</p>
+<p>The development repository for this path conversion code is <a href="https://github.com/Alexpux/path_convert">https://github.com/Alexpux/path_convert</a>. If you find a case that you think is unambiguously being converted incorrectly, please raise an issue there and/or a pull request with the broken test-case.</p>
+<h2 id="hard-coded-paths-and-relocation">Hard-coded paths and relocation</h2>
+<p>When installing MSYS2, the user selects the root folder. POSIX software has a habit of baking the installation paths into the packages at build time, which is okay for <code>msys2</code> software (which only sees the single-root virtual filesystem), but usually causes failures in native software. When a program tries to load its data files using these absolute paths on another MSYS2 installed to a different root folder, it won't find them. For this reason, adding path relocation patches is a common necessity for <code>mingw</code> packages (but never for <code>msys2</code> packages). The point is to find the path where the program's executable resides, cutting off the <code>/bin</code> from the end and finding all necessary files using paths relative to that. Since this is a pretty common task and is not exactly trivial to get it right for all cases, we wrote some re-usable C code for that, available at <a href="https://github.com/Alexpux/MINGW-packages/tree/master/mingw-w64-pathtools">https://github.com/Alexpux/MINGW-packages/tree/master/mingw-w64-pathtools</a>.</p>
+<p>Sometimes these paths are baked into shell scripts or pkg-config's <code>.pc</code> files. In that case, you should use sed in the <code>PKGBUILD</code> <code>package()</code> function to correct this back to the <code>msys2</code> version of the path. [please review last sentence] An example of this can be seen at <a href="https://github.com/Alexpux/MINGW-packages/blob/master/mingw-w64-libtool/PKGBUILD#L55">https://github.com/Alexpux/MINGW-packages/blob/master/mingw-w64-libtool/PKGBUILD#L55</a>.</p>
+<h2 id="c-printf-format-specifier-issues">C *printf Format Specifier issues</h2>
+<p>The vc6.0 msvcrt.dll that MinGW-w64 targets doesn't implement support for the ANSI standard format specifiers. MinGW-w64 works around this by providing their own implementation. To enable this you should pass -D__USE_MINGW_ANSI_STDIO=1 to the MinGW-w64 C and C++ compilers. All of our C/C++ packages are built with this flag.</p>
+<h2 id="different-size-of-struct-timeval">Different size of struct timeval</h2>
+<p>The Windows (and thus mingw-w64) <code>struct timeval</code> is defined as having two <code>long</code> members, while the POSIX specs say it's supposed to have one <code>time_t</code> and one <code>suseconds_t</code> member. This means that on 64-bit, the size of the struct will be different from what you would expect on Linux/Cygwin/MSYS2.</p>
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms740560(v=vs.85).aspx">struct timeval on MSDN</a>
+<a href="http://pubs.opengroup.org/onlinepubs/007908775/xsh/systime.h.html">struct timeval on OpenGroup.org</a></p>
+<h2 id="more-3264-bit-peculiarities">More 32/64 bit peculiarities</h2>
+<p>Sorting out the stat thing by LRN:
+<a href="https://gnunet.org/sorting-out-stat-thing">https://gnunet.org/sorting-out-stat-thing</a></p>
+<h2 id="calling-conventions-stdcall-and-autotools">Calling conventions, stdcall, and autotools</h2>
+<p>Details about Windows' 32bit calling conventions:
+<a href="http://www.willus.com/mingw/yongweiwu_stdcall.html">http://www.willus.com/mingw/yongweiwu_stdcall.html</a></p>
+<p>Problems stdcall causes with autotool's AC_CHECK_FUNC and AC_SEARCH_LIBS:
+<a href="http://lists.gnu.org/archive/html/autoconf/2013-05/msg00090.html">http://lists.gnu.org/archive/html/autoconf/2013-05/msg00090.html</a></p>
+<h2 id="macroinline-function-and-autotools">Macro/inline function and autotools</h2>
+<p><code>AC_CHECK_FUNCS</code> and friends can't deal with function macros and static inline functions (because the checking code tries to <code>#undef</code> the symbol, doesn't include any headers and declares the symbol as extern instead). Possible solution is replacing them with more elaborate checks using <code>AC_LINK_IFELSE</code> or <code>AC_COMPILE_IFELSE</code>. For example this:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">AC_CHECK_FUNCS</span><span class="p">(</span><span class="o">[</span><span class="n">localtime_r</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="o">[</span><span class="n">AM_CONDITIONAL([HAVE_LOCALTIME_R</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">)</span><span class="err">]</span><span class="p">,</span><span class="w"></span>
+<span class="o">[</span><span class="n">AM_CONDITIONAL([HAVE_LOCALTIME_R</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">)</span><span class="err">]</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>... can be replaced with this:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">AC_MSG_CHECKING</span><span class="p">([</span><span class="k">for</span> <span class="n">localtime_r</span><span class="p">])</span>
+<span class="n">AC_LINK_IFELSE</span><span class="p">([</span><span class="n">AC_LANG_PROGRAM</span><span class="p">([[</span>
+  <span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="p">]],</span> <span class="p">[[</span>
+  <span class="kt">time_t</span> <span class="n">t</span><span class="p">;</span> <span class="k">struct</span> <span class="n">tm</span> <span class="n">r</span><span class="p">;</span>
+  <span class="n">localtime_r</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+<span class="p">]])],</span>
+<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">yes</span><span class="p">])</span>
+ <span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span> <span class="nb">true</span><span class="p">)</span>
+ <span class="n">AC_DEFINE</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">Define</span> <span class="n">to</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="err">`</span><span class="n">localtime_r</span><span class="err">&#39;</span> <span class="n">function</span> <span class="n">or</span> <span class="n">macro</span><span class="p">.])],</span>
+<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">no</span><span class="p">])</span>
+ <span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span> <span class="nb">false</span><span class="p">)])</span>
+</code></pre></div>
+
+
+<p>Don't forget to <code>autoreconf -fi</code> after patching <code>configure.ac</code>.</p>
+<p>A tidy workaround from flameeyes for asprintf/vasprintf (but generally applicable):
+<a href="https://mailman.videolan.org/pipermail/vlc-devel/2015-March/101802.html">https://mailman.videolan.org/pipermail/vlc-devel/2015-March/101802.html</a></p>
+<h2 id="guarded-time-functions-ansi-format-specifiers">Guarded time functions, ANSI format specifiers</h2>
+<p>Some things in mingw-w64 are (maybe unexpectedly) guarded by <code>#ifdef</code>s. Check out <code>_POSIX_C_SOURCE</code>, <code>__USE_MINGW_ANSI_STDIO</code>, the <code>time.h</code> file. Note that (at the time of writing) <code>pthread.h</code> contains some defines that affect the definitions in <code>time.h</code>.</p>
+<h2 id="undefined-references-and-linking-to-dllssos">Undefined references and linking to DLLs/SOs</h2>
+<p>[this section may contain misinformations; it needs review from a knowledgeable person]</p>
+<p>Linux/ELF platforms generally don't do anything special to link to shared objects, they just leave the undefined references in the binary. Windows however requires all references to be resolved at link time. In case of DLLs, this is solved by the .dll.a import libraries that add the relevant .dll to the binary's import table and insert correct calls into the code, but it needs that correct linker flags be passed when linking binaries. Note that the linker is aware of these files and will use them automatically when using the standard <code>-l</code> arguments, for example <code>-lfoo</code> will make the linker check for <code>libfoo.dll.a</code> and <code>libfoo.a</code>, in this order (unless specified otherwise).</p>
+<p>Libtool generally refuses to create DLLs unless <code>-no-undefined</code> is passed to the linker invocation (<code>library_la_LDFLAGS = -no-undefined</code>).
+See: <a href="https://lists.gnu.org/archive/html/libtool/2007-04/msg00066.html">https://lists.gnu.org/archive/html/libtool/2007-04/msg00066.html</a></p>
+<h2 id="library-prefixes">Library prefixes</h2>
+<p><code>mingw</code> DLLs follow the convention of prefixing libraries with <code>lib</code>. This affects shared libraries (<code>.dll</code>), static object archives (<code>.a</code>), and DLL import libraries (<code>.dll.a</code>). Because <code>msys2</code> DLLs are generally ABI-incompatible with everything from outside of <code>msys2</code>, they are prefixed with <code>msys2-</code> instead. For completeness, we note that Cygwin DLLs are prefixed with <code>cyg</code>.</p>
+<p>[does libtool or the linker handle this automatically?]</p>
+<h2 id="standard-streams-in-mintty">Standard streams in mintty</h2>
+<p>mintty is primarily designed to be a good terminal emulator (in the POSIX sense of the word) and it works well with bash, ssh and other Cygwin/MSYS2 programs. Because native Windows console programs use a fundamentally different way of handling console input/output, mintty uses pipes to connect to their standard streams (stdin, stdout, stderr). Unfortunately, this has the effect that <code>isatty</code> and similar APIs (used to check whether a stream is attached to an interactive console or a pipe/file) will return incorrect values for native programs running under mintty.</p>
+<p>One way of fixing this problem is to run native programs inside a real Windows console, hide the console and use the console API to communicate with the program. This approach has obvious disadvantages, but it's good enough. Actually, this is the way most Windows console emulators work (e.g. ConsoleZ, ConEmu). There is also a wrapper program called winpty that does exactly this and translates the I/O to/from standard terminal sequences which mintty understands.</p>
+<p>Running a program under winpty (by prefixing the command line with <code>winpty</code>) will make the program think it is running interactively, but it will also break any special features depending on terminal sequences, possibly including colored text output and TUIs.</p>
+<p>MSYS2 includes wrappers for some affected programs, so that they will work correctly most of the time. Examples can be seen in packages containing REPLs (python3, lua, nodejs, ...).</p>
+<p><a href="https://github.com/mintty/mintty/issues/56">mintty issue #56</a>, original <a href="http://code.google.com/p/mintty/issues/detail?id=56">on Google Code</a></p>
+<p><a href="https://github.com/rprichard/winpty">winpty on GitHub</a></p>
+<h2 id="signals-in-mintty">Signals in mintty</h2>
+<p>When running a native Windows program in mintty (or urxvt, apparently), Ctrl+C will not be correctly passed to the process. Instead, it seems to be eaten by the terminal and the running process is terminated.</p>
+<p><a href="https://sourceforge.net/p/msys2/tickets/135/">ticket #135</a></p>
+<h2 id="paths-in-mingw-python">Paths in mingw Python</h2>
+<p>The mingw python provided by MSYS2 will try to produce paths that are right for the environment it's running in. According to the value of <code>MSYSTEM</code>, it will use either forward or backward slashes as <code>os.path.sep</code>.</p>
+<h2 id="response-files">Response files</h2>
+<p>When passing arguments with absolute paths to native Windows programs (such as <code>/mingw64/bin/gcc</code>), these paths  get (in most cases) automatically converted by MSYS2 if they're in POSIX format. However, if you're passing these paths inside a file (e.g. a response file for GCC -- <code>gcc @somefile</code>), they need to be pre-converted to Windows native format.</p>
+<p><a href="https://sourceforge.net/p/msys2/discussion/general/thread/b82485a3/">discussion topic: gcc -I (eye) uses msys2 path or windows path?</a></p>
+<h2 id="setting-floating-point-precision">Setting floating point precision</h2>
+<p>Floating point precision issues with multiple threads:
+gfortran, open mp and floating point precision by Carl Kleffner:</p>
+<ul>
+<li><a href="https://sourceforge.net/p/mingw-w64/mailman/message/33332276/">https://sourceforge.net/p/mingw-w64/mailman/message/33332276/</a></li>
+<li><a href="https://gcc.gnu.org/wiki/FloatingPointMath">https://gcc.gnu.org/wiki/FloatingPointMath</a></li>
+<li><a href="https://gcc.gnu.org/wiki/x87note">https://gcc.gnu.org/wiki/x87note</a></li>
+</ul>
+<h2 id="command-line-parsing">Command line parsing</h2>
+<p>Windows programs parse the command line themselves, it isn't parsed for them by the calling process, as on Linux. This means that if wildcards (glob patterns) are to be accepted by the program, it has to be able to expand them somehow. MinGW-w64 supplies the correct start-up code, so it happens automatically, in a manner compatible with MSVC-compiled programs. If undesirable, the behavior can be disabled at program build.</p>
+<p>Cygwin/MSYS2 programs have to deal with a mix of both approaches, but they can apparently deal with it. Note that they don't behave exactly like native programs, for example they understand single-quoted arguments.</p>
+<p><a href="http://www.daviddeley.com/autohotkey/parameters/parameters.htm">"How Command Line Parameters Are Parsed" by David Deley</a></p>
+<p><a href="http://blogs.msdn.com/b/twistylittlepassagesallalike/archive/2011/04/23/everyone-quotes-arguments-the-wrong-way.aspx">"Everyone quotes command line arguments the wrong way" by Daniel Colascione</a></p>
+<h2 id="other-resources">Other resources</h2>
+<p>A collection of articles on general C and C++ topics.
+<a href="http://locklessinc.com/articles/">http://locklessinc.com/articles/</a></p>
+<p>The MinGW-w64 project's wiki.
+<a href="http://sourceforge.net/p/mingw-w64/wiki2/browse_pages/">http://sourceforge.net/p/mingw-w64/wiki2/browse_pages/</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Packages/" title="Packages" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Packages
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Setting up SSHd
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">
+          MkDocs
+        </a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script>var __config={}</script>
+    
+    
+      <script src="../../assets/javascripts/vendor.0c35f0aa.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fc354861.min.js"></script><script id="__lang" type="application/json">
+        {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}
+      </script>
+      <script>
+        __material = initialize(Object.assign({
+          url: {
+            base: "../..",
+            worker: {
+              search: "../../assets/javascripts/worker/search.2613054f.min.js"
+            }
+          },
+          features: []
+        }, typeof __config !== "undefined" ? __config : {}))
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1191 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://www.msys2.org/wiki/Creating-Packages/">
+      
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.0.0rc3">
+    
+    
+      
+        <title>Creating Packages - MSYS2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.dfb60779.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.31180ff2.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    
+      
+      <a href="#general-information" class="md-skip" data-md-component="skip">
+        Skip to content
+      </a>
+    
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://www.msys2.org" title="MSYS2" class="md-header-nav__button md-logo" aria-label="MSYS2">
+      
+        <img src="../../logo.svg" alt="logo">
+      
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis md-ellipsis">
+        
+          <span class="md-header-nav__topic">
+            MSYS2
+          </span>
+          <span class="md-header-nav__topic">
+            
+              Creating Packages
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/msys2/msys2.github.io/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.msys2.org" title="MSYS2" class="md-nav__button md-logo" aria-label="MSYS2">
+      
+        <img src="../../logo.svg" alt="logo">
+      
+    </a>
+    MSYS2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/msys2/msys2.github.io/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Wiki
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Wiki" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+      Contributing to MSYS2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Creating Packages
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Creating Packages" class="md-nav__link md-nav__link--active">
+      Creating Packages
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-information" class="md-nav__link">
+    General information
+  </a>
+  
+    <nav class="md-nav" aria-label="General information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-recipes" class="md-nav__link">
+    Package recipes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkgbuild" class="md-nav__link">
+    PKGBUILD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-files" class="md-nav__link">
+    Patch files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    Building
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#re-building-a-package" class="md-nav__link">
+    Re-building a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-new-package-from-start-to-finish" class="md-nav__link">
+    A new package from start to finish
+  </a>
+  
+    <nav class="md-nav" aria-label="A new package from start to finish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-subsystem" class="md-nav__link">
+    Which subsystem?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-software" class="md-nav__link">
+    Build software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-software" class="md-nav__link">
+    Test software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-software" class="md-nav__link">
+    Patch software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe" class="md-nav__link">
+    Recipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-package" class="md-nav__link">
+    Build package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-package" class="md-nav__link">
+    Install package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-package" class="md-nav__link">
+    Test package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-package" class="md-nav__link">
+    Modify package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    Commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-pr" class="md-nav__link">
+    Send PR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upstream" class="md-nav__link">
+    Upstream
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-packages-and-tools" class="md-nav__link">
+    Useful packages and tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#various-links" class="md-nav__link">
+    Various links
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+      Devtopics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Distributing/" title="Distributing" class="md-nav__link">
+      Distributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+      GDB qtcreator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../History/" title="History" class="md-nav__link">
+      History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+      How does MSYS2 differ from Cygwin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+      Launchers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mirrors/" title="Mirrors" class="md-nav__link">
+      Mirrors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+      MSYS2 installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+      MSYS2 introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
+      MSYS2 reinstallation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Packages/" title="Packages" class="md-nav__link">
+      Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Porting/" title="Porting" class="md-nav__link">
+      Porting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+      Setting up SSHd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Signing-packages/" title="Signing packages" class="md-nav__link">
+      Signing packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+      Terminals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-packages/" title="Using packages" class="md-nav__link">
+      Using packages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-information" class="md-nav__link">
+    General information
+  </a>
+  
+    <nav class="md-nav" aria-label="General information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-recipes" class="md-nav__link">
+    Package recipes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkgbuild" class="md-nav__link">
+    PKGBUILD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-files" class="md-nav__link">
+    Patch files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    Building
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#re-building-a-package" class="md-nav__link">
+    Re-building a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-new-package-from-start-to-finish" class="md-nav__link">
+    A new package from start to finish
+  </a>
+  
+    <nav class="md-nav" aria-label="A new package from start to finish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-subsystem" class="md-nav__link">
+    Which subsystem?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-software" class="md-nav__link">
+    Build software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-software" class="md-nav__link">
+    Test software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-software" class="md-nav__link">
+    Patch software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe" class="md-nav__link">
+    Recipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-package" class="md-nav__link">
+    Build package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-package" class="md-nav__link">
+    Install package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-package" class="md-nav__link">
+    Test package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-package" class="md-nav__link">
+    Modify package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    Commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-pr" class="md-nav__link">
+    Send PR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix" class="md-nav__link">
+    Fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upstream" class="md-nav__link">
+    Upstream
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-packages-and-tools" class="md-nav__link">
+    Useful packages and tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#various-links" class="md-nav__link">
+    Various links
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Creating-Packages.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Creating Packages</h1>
+                
+                <p>The MSYS2 software distribution uses a port of Pacman (known from Arch Linux) to safely install, remove and update binary packages and also to build those packages in the first place.</p>
+<h2 id="general-information">General information</h2>
+<p>There are 3 package repositories, <strong>msys</strong>, <strong>mingw32</strong>, and <strong>mingw64</strong>. <strong>msys</strong> software (from the <strong>msys</strong> repository) is software that depends on <code>msys-2.0.dll</code> and is very similar to Cygwin software (which is a POSIX emulation layer for Windows). Native Windows software (from this project's perspective) is software that doesn't depend on <code>msys-2.0.dll</code>, and links dynamically to the highly compatible <code>msvcrt.dll</code>.</p>
+<p>In this document, to attempt to avoid confusion, MSYS2 refers to the software distribution while <strong>msys</strong> refers to the repository, the packages in that repository and the software in those packages that link to <code>msys-2.0.dll</code>.</p>
+<h3 id="package-recipes">Package recipes</h3>
+<p>Packages are built from programmatic recipes to ensure builds are reproducible. A recipe is a set of files which describe how to build, package and install a given piece of software; these are often specific to MSYS2.</p>
+<p>In the simplest form it is a single file named <code>PKGBUILD</code>, which contains metadata for the package, a specification where the source for the given software can be found, and a few lines of code which that takes the source and builds the final software from it. For more complex cases it also contains install scripts or a number of patch files which are needed to be applied on the released version of the upstream software in order to be able to compile and work in the given environment.</p>
+<p>Typically, each recipe is in its own directory. The directory is also used when building as a working place by default.</p>
+<h3 id="pkgbuild">PKGBUILD</h3>
+<p>Use 2 spaces for indentation: <code>expand -t 2 PKGBUILD &gt; PKGBUILD.new &amp;&amp; mv PKGBUILD.new PKGBUILD</code></p>
+<p>A PKGBUILD is a bash script defining variables and functions that are then used by the build system to create the package. The <a href="https://www.archlinux.org/pacman/PKGBUILD.5.html">PKGBUILD manpage</a> and the <a href="https://wiki.archlinux.org/index.php/PKGBUILD">PKGBUILD wikipage on ArchWiki</a> are good sources to read about all the details of PKGBUILDs. The <strong>mingw</strong> PKGBUILDs are loosely based on the <a href="https://wiki.archlinux.org/index.php/MinGW_package_guidelines">mingw-w64 cross-compilation packages guidelines in Arch Linux</a>. If you don't want to read all that just yet, just read some existing PKGBUILDs; the purpose of most parts should be obvious.</p>
+<h3 id="patch-files">Patch files</h3>
+<p>When creating a patch file, you can use the following naming convention for its name: <code>###-target-Purpose.patch</code></p>
+<p>Where</p>
+<ul>
+<li><code>###</code> a sequence number, starting from 001</li>
+<li><code>target</code>, is the package name and version (separated by a hyphen) for which the patch was first created</li>
+<li><code>[Purpose]</code> describes what the patch is fixing or improving</li>
+</ul>
+<h3 id="building">Building</h3>
+<p>The actual build and packaging is done by running <code>makepkg</code> or <code>makepkg-mingw</code>. The former is used to build <strong>msys</strong> packages and the latter for <strong>mingw</strong> packages. To learn more, read the <a href="https://www.archlinux.org/pacman/makepkg.8.html">makepkg manpage</a> and the <a href="https://wiki.archlinux.org/index.php/makepkg">makepkg wikipage on ArchWiki</a>. When building <em>either</em> <strong>msys</strong> or native software, you should use the MSYS shell, not the MINGW{32,64} shells.</p>
+<p>The process happens in multiple phases:</p>
+<ul>
+<li>download, verify and extract - the package sources are downloaded if necessary, checked against checksums and PGP signatures if specified, and extracted into a working directory (<code>src</code> by default)</li>
+<li><code>prepare()</code> - using this function, the packager can specify what should happen with the sources before the actual build; apply patches and source modifications here</li>
+<li><code>build()</code> - this function contains commands to run the build tool(s), e.g. <code>./configure</code> and <code>make</code></li>
+<li><code>check()</code> - an optional step to check the build products by e.g. running the software's test suite</li>
+<li><code>package()</code> - this function is provided with a temporary directory, where it should put the final contents of the package using e.g. <code>make install</code></li>
+<li>tidy, archive and sign - the package contents are scanned for some issues, tidied up and packaged into the final <code>.tar.xz</code> with an optional signature in <code>.tar.xz.sig</code></li>
+</ul>
+<p>The makepkg tool takes arguments allowing you to turn off some phases or some checks. The typical usage is <code>makepkg -sCLf</code> for a full build and <code>makepkg -RdLf</code> for a "re-package". Re-packaging is useful when the process failed in <code>package()</code> and you don't want to run the long build part again. <code>makepkg-mingw</code> takes the same arguments.</p>
+<h2 id="re-building-a-package">Re-building a package</h2>
+<p>To get you started, you can try just re-building an existing package. This may also be helpful if you need to diagnose an issue and need the debugging symbols.</p>
+<p>An example of fetching the <strong>msys</strong> repository source, building and then installing a package from it is:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">git clone &quot;https://github.com/Alexpux/MSYS2-packages&quot;</span>
+<span class="err">cd MSYS2-packages/flex</span>
+<span class="err">makepkg -sCLf</span>
+<span class="err">pacman -U flex-*.pkg.tar.xz</span>
+</code></pre></div>
+
+
+<p>An example of fetching the <strong>mingw</strong> repository source, building and then installing a package from it is:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">git clone &quot;https://github.com/Alexpux/MINGW-packages&quot;</span>
+<span class="err">cd MINGW-packages/mingw-w64-python3</span>
+<span class="err">makepkg-mingw -sCLf</span>
+<span class="err">pacman -U mingw-w64-*-python3-*-any.pkg.tar.xz</span>
+</code></pre></div>
+
+
+<h2 id="a-new-package-from-start-to-finish">A new package from start to finish</h2>
+<p>Please do <em>not</em> create pull requests for PKGBUILDs that just repackage binary releases from other projects. This is contrary to the goals of MSYS2. If the software cannot be built for some reason then try to fix the cause of that.</p>
+<ol>
+<li>Decide which subsystem to target (<strong>msys</strong> or <strong>mingw</strong>)</li>
+<li>Build the software in the target subsystem</li>
+<li>Test the functionality</li>
+<li>Create patches if necessary and repeat</li>
+<li>Prepare a recipe</li>
+<li>Build the package</li>
+<li>Install the package locally</li>
+<li>Test the installed package</li>
+<li>Modify the recipe if necessary and repeat</li>
+<li>Commit the new package to the target repository (on your own GitHub account)</li>
+<li>Send a pull request to merge the new recipe into the official repository</li>
+<li>Check CI results, reviews and comments</li>
+<li>Fix issues if necessary and repeat</li>
+<li>Offer your fixes to the software's developers (upstream)</li>
+</ol>
+<p>The steps above describe an intuitive process of going from the idea of creating a package to making it available to you and others using <code>pacman</code>. You can of course customize the process to suit you and your situation.</p>
+<p>Once you are familiar with the process, we recommend creating recipes and using <code>makepkg</code> straight away for all packages. It's a great way to record your build steps in a reproducible way, which is not only useful for you, but also for other people when asked for help with the builds.</p>
+<h3 id="which-subsystem">Which subsystem?</h3>
+<p>In MSYS2 there are 2 types of packages:
+* <strong>msys packages</strong> - these run on the emulation layer and are typically POSIX-only programs
+* <strong>mingw packages</strong> - these run natively just like any other Windows program</p>
+<p>You should think of these two systems as separate where <strong>msys</strong> packages should generally only be build dependencies of <strong>mingw</strong> packages. You also can't link a <strong>mingw</strong> program against an <strong>msys</strong> library.</p>
+<p>This means you first need to decide which subsystem (and which repository) is the right one for your new package. The set of things that belong to the <strong>msys</strong> subsystem is pretty small:</p>
+<ul>
+<li>essential POSIX stuff: <code>filesystem</code>, <code>msys2-runtime</code>, ...</li>
+<li>the native toolchain: <code>gcc</code>, <code>binutils</code>, <code>gdb</code>, ...</li>
+<li>supporting programs that are hard to port to Windows: <code>pacman</code>, <code>bash</code>, <code>automake</code>, <code>make</code>, ...</li>
+<li>programs for bridging the gap: <code>mintty</code>, <code>winpty</code>, ...</li>
+<li>supporting programs, even though they're portable: <code>python</code>, <code>man</code>, <code>vim</code>, <code>git</code>, ...</li>
+<li>carefully chosen useful tools: <code>mc</code>, <code>ssh</code>, <code>rsync</code>, <code>lftp</code>, ...</li>
+<li>dependencies of these packages</li>
+</ul>
+<p>In other words, if a program is needed to build native software, but is itself hard to port, it can be made into an <strong>msys</strong> package. Anything else needs to be done as a <strong>mingw</strong> package or vetted individually.</p>
+<h3 id="build-software">Build software</h3>
+<p>In order to be able to compile a software or build a package you need to install basic packages, as the MSYS2 install does not contain build tools.</p>
+<p>The core packages groups you need to install if you wish to build from PKGBUILDs are:</p>
+<ul>
+<li><code>base-devel</code> for any building</li>
+<li><code>msys2-devel</code> for building <strong>msys</strong> packages</li>
+<li><code>mingw-w64-i686-toolchain</code> for building <strong>mingw32</strong> packages</li>
+<li><code>mingw-w64-x86_64-toolchain</code> for building <strong>mingw64</strong> packages</li>
+</ul>
+<p>If you don't install the required package group, building might fail with unexpected errors. Note that -- contrary to what you might expect -- <code>base-devel</code> doesn't contain <code>gcc</code> nor <code>binutils</code>.</p>
+<h3 id="test-software">Test software</h3>
+<p>Check that the software does what it should. Try its test suite.</p>
+<h3 id="patch-software">Patch software</h3>
+<p>If the software doesn't work straight away or doesn't even build, you'll probably need to pass some arguments to the build scripts or modify (patch) its build system, its source code, its definitions files etc. Such patches will be stored as files alongside the PKGBUILD.</p>
+<p>This part is very specific to each software and may require searching the Internet, talking to the software's developers or support team, talking to us etc. The <a href="../Porting/">Porting wikipage</a> may help with some common issues. While it is probably okay to make quick (monkey-)patches that fix the software for our use case (and possibly break it for every other), is it better to make proper surgical-precision patches and attempt to have them accepted by the software developer ("upstream").</p>
+<h3 id="recipe">Recipe</h3>
+<p>Create a <code>PKGBUILD</code> describing all the steps necessary to build and package the software, including any patches or additional files. Make sure the follow the style and ideas of other recipes if applicable. A good strategy is to find some existing working recipes that use the same build system as your software does and use them as a template for your recipe. You can also take inspiration from an official Arch Linux (or unofficial AUR) recipe for your software.</p>
+<h3 id="build-package">Build package</h3>
+<p>Run the makepkg command (<code>makepkg</code> or <code>makepkg-mingw</code>) on your recipe.</p>
+<p><code>makepkg-mingw</code> is essentially a wrapper that does a few checks, sets up the correct environments and runs <code>makepkg</code> twice, once for <strong>mingw32</strong> and once for <strong>mingw64</strong>. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define <code>MINGW_INSTALLS</code> in the environment, with either <code>mingw32</code> or <code>mingw64</code> as the value, for example:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">MINGW_INSTALLS=mingw32 makepkg-mingw -sCLf</span>
+</code></pre></div>
+
+
+<p>... or you could export it from <code>~/.profile</code> so it's set up automatically:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">export MINGW_INSTALLS=mingw32</span>
+</code></pre></div>
+
+
+<p>Note that if you want to contribute, we'd appreciate it if you test your packages on both architectures (32 and 64 bits), which is only possible on a 64-bit Windows system. If you can't do that for some reason, we can test your pull requests on a 64-bit system.</p>
+<h3 id="install-package">Install package</h3>
+<p>If the package build successfully, it's good to check its contents first before installing to see if it contains what you intended. When installing (using <code>pacman -U pkgname-pkgver-arch.tar.xz</code>), pacman checks for any filesystem conflicts and then places the package contents into your MSYS2 root as it would do with any other package. You can also remove the package using <code>pacman -R pkgname</code>.</p>
+<h3 id="test-package">Test package</h3>
+<p>Make sure the package installed all the files which it's supposed to distribute: executables, shared and static libraries, configuration files, header files, licenses, documentation etc.</p>
+<p>Pay special attention to the configuration files and make sure they are not containing hard-coded path elements and are pointing to the right location. Typical config files:</p>
+<ul>
+<li><code>*-config</code> files in the <code>${prefix}/bin</code> directory</li>
+<li><code>*.pc</code> files for <code>pkg-config</code> in the <code>${prefix}/lib/pkgconfig</code> directory</li>
+<li><code>*.cmake</code> files in the <code>${prefix}/lib/cmake</code> directory</li>
+</ul>
+<p>Verify that the package works even if installed into a clean updated MSYS2 installation, preferably not in the default <code>C:\msys{32,64}</code> location (and maybe even temporarily rename your primary MSYS2 installation root). This checks that you specified the runtime dependencies correctly and that the software doesn't try to use hard-coded paths from your build.</p>
+<h3 id="modify-package">Modify package</h3>
+<p>If there are issues, fix them in your PKGBUILD and re-build or re-package as necessary. Make sure you're not using stale build products or source files from a previous build (use the <code>-C</code> flag for makepkg).</p>
+<h3 id="commit">Commit</h3>
+<p>Integrate your recipe into your local clone of the <strong>msys2-packages</strong> or <strong>mingw-packages</strong> repository. In order to help us avoid accumulating useless commits in the repository, please follow these guidelines:</p>
+<ul>
+<li>create a new branch for your work</li>
+<li>put all your work into it, preferably in just 1 commit</li>
+<li>if you want to pull changes from our repository, use the rebasing strategy (<code>git pull --rebase</code>) to place your commits above ours, do not just merge</li>
+<li>if you need to change something in your recipe, amend your existing commit (<code>git commit --amend</code>)</li>
+<li>push your new branch onto your repository "fork" on your GitHub account, using <code>git push --force-with-lease</code> if necessary</li>
+</ul>
+<p>Although these guidelines (which rely heavily on rewriting history) are not suitable for public development on main branches (<code>master</code> etc.), they're an excellent match for this kind the iterative work-in-progress development that happens when contributing new packages.</p>
+<h3 id="send-pr">Send PR</h3>
+<p>Open and send a pull request against the master branch of the official repositories on GitHub (<a href="https://github.com/msys2/msys2">links here</a>). Please include a short description of what you're submitting and why. In case your recipe is not final yet, add "[do not merge]" to the title and explain in the description.</p>
+<h3 id="check">Check</h3>
+<p>Our CI systems will automatically try to build your package. If it fails, try to figure out why. However, the CI systems are not perfect and unfortunately may fail even if your package is fine.</p>
+<p>The project maintainers will try to look at your PR and review it. This may take some time and sometimes happens in bursts, so don't be discouraged if you get no response for a few days, but don't be afraid to explicitly ask for help or a review on our IRC channel.</p>
+<h3 id="fix">Fix</h3>
+<p>If there are any issues pointed out, try to fix them and update your pull request. GitHub will automatically refresh the pull request when you push to your branch, there is no need to create a new PR. After pushing, add a comment to the PR to notify the reviewers.</p>
+<p>If there are no issues with the package, it will be merged. Please note that this doesn't make the package immediately available through pacman. The binary repositories are updated in bursts.</p>
+<h3 id="upstream">Upstream</h3>
+<p>In case you had to made changes in order to be able to compile and run properly (and hence created patches), please make an effort to submit proper patches and PRs to the upstream project so that the patches can be removed from our repositories and can be of use to other Windows developers.</p>
+<h2 id="resources">Resources</h2>
+<p>Read through our wiki, especially about <a href="../Using-packages/">pacman</a> and the <a href="../Porting/">Porting section</a>.</p>
+<h3 id="useful-packages-and-tools">Useful packages and tools</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mingw-w64-{i686,x86_64}-qt-creator</code></td>
+<td>to build/debug qmake, qbs, autotools and cmake based packages</td>
+</tr>
+<tr>
+<td><code>mingw-w64-{i686,x86_64}-codelite-git</code></td>
+<td>if you dislike qt-creator</td>
+</tr>
+<tr>
+<td><code>mingw-w64-{i686,x86_64}-gedit</code></td>
+<td>to avoid notepad and notepad++</td>
+</tr>
+<tr>
+<td><code>mingw-w64-{i686,x86_64}-meld3</code></td>
+<td>to compare files and directories</td>
+</tr>
+<tr>
+<td><code>perl-ack</code></td>
+<td>Faster, better replacement for <code>grep</code></td>
+</tr>
+<tr>
+<td><code>mingw-w64-{i686,x86_64}-ag</code></td>
+<td>Very fast replacement for <code>grep</code> or <code>perl-ack</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="various-links">Various links</h3>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/bash">bash on ArchWiki</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Contributing to MSYS2
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Devtopics/" title="Devtopics" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Devtopics
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">
+          MkDocs
+        </a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script>var __config={}</script>
+    
+    
+      <script src="../../assets/javascripts/vendor.0c35f0aa.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fc354861.min.js"></script><script id="__lang" type="application/json">
+        {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}
+      </script>
+      <script>
+        __material = initialize(Object.assign({
+          url: {
+            base: "../..",
+            worker: {
+              search: "../../assets/javascripts/worker/search.2613054f.min.js"
+            }
+          },
+          features: []
+        }, typeof __config !== "undefined" ? __config : {}))
+      </script>
+      
+    
+  </body>
+</html>
