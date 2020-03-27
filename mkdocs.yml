@@ -10,6 +10,15 @@ theme:
 extra_css:
     - 'stylesheets/extra.css'
 
+extra:
+    social:
+        - icon: 'fontawesome/brands/github'
+          link: 'https://github.com/msys2'
+        - icon: 'fontawesome/brands/gitter'
+          link: 'https://gitter.im/msys2/msys2'
+        - icon: 'fontawesome/brands/twitter'
+          link: 'https://twitter.com/msys2org'
+
 site_url: https://www.msys2.org
 repo_url: https://github.com/msys2/msys2.github.io
 edit_uri: edit/source/docs/
