@@ -46,6 +46,7 @@ What to do:
 - also work towards reproducible builds (https://reproducible-builds.org/)
 
 Additional discussions:
+
 - [#2616](https://github.com/Alexpux/MINGW-packages/issues/2616)
 - [#2006](https://github.com/Alexpux/MINGW-packages/issues/2006)
 
@@ -144,6 +145,7 @@ A possible solution to these conflicts would be to disable the .exe interpolatio
 This way, we can even make all non-binaries like shell scripts directly executable from Windows.
 
 What to help with:
+
 - think/discuss if this is a good idea
 
 
