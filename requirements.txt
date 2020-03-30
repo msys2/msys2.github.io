@@ -6,10 +6,10 @@ lunr==0.5.6
 Markdown==3.2.1
 MarkupSafe==1.1.1
 mkdocs==1.1
-mkdocs-material==5.0.0rc3
+mkdocs-material==5.0.0rc4
 nltk==3.4.5
 Pygments==2.6.1
-pymdown-extensions==7.0rc1
+pymdown-extensions==7.0rc2
 PyYAML==5.3.1
 six==1.14.0
 tornado==6.0.4
