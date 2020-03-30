@@ -53,7 +53,7 @@ IV. General Package Management
   3. Searching for packages:
     **`pacman -Ss <name_pattern>`**
 
-More on our [Using packages wikipage](Using-packages).
+More on our [Using packages wikipage](Using-packages.md).
 
 V. Issues and workarounds
 =========================
