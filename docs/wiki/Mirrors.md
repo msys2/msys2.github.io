@@ -1,3 +1,7 @@
+---
+title: Creating a Mirror
+---
+
 ## Available Mirrors
 
 The mirrors are defined in the [pacman-mirrors](https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors) package.

@@ -46,7 +46,16 @@ markdown_extensions:
 
 nav:
     - 'Getting Started': index.md
-    - Wiki:
+    - Documentation:
+        # For users of MSYS2 which just use the provided software
+        # or develop their software using MSYS2 provided packages/tools.
+        - wiki/Using-packages.md
+    - Development:
+        # For MSYS2 developers, maintaining, creating packages, porting packages,
+        # infrastructure, mirrors etc and everything else.
+        - wiki/Mirrors.md
+    - Old Wiki:
+        # Old stuff that should ideally move to the above categories in the future
         - wiki/Home.md
         - wiki/Contributing-to-MSYS2.md
         - wiki/Creating-Packages.md
@@ -57,7 +66,6 @@ nav:
         - wiki/History.md
         - wiki/How-does-MSYS2-differ-from-Cygwin.md
         - wiki/Launchers.md
-        - wiki/Mirrors.md
         - wiki/MSYS2-installation.md
         - wiki/MSYS2-introduction.md
         - wiki/MSYS2-reinstallation.md
@@ -66,4 +74,3 @@ nav:
         - wiki/Setting-up-SSHd.md
         - wiki/Signing-packages.md
         - wiki/Terminals.md
-        - wiki/Using-packages.md

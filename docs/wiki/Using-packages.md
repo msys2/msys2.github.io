@@ -1,3 +1,7 @@
+---
+title: Package Management
+---
+
 ## Package repositories
 
 The MSYS2 software distribution uses a port of `pacman` (known from Arch Linux) to manage (install, remove and update) binary packages and also to build those packages in the first place.
