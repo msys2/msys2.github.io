@@ -17,7 +17,7 @@
     
     
       
-        <title>Using packages - MSYS2</title>
+        <title>Package Management</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Using packages
+              Package Management
             
           </span>
         </div>
@@ -204,17 +204,209 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Wiki
+      Documentation
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Wiki" data-md-level="1">
+    <nav class="md-nav" aria-label="Documentation" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
-        Wiki
+        Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Package Management
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Package Management" class="md-nav__link md-nav__link--active">
+      Package Management
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#package-repositories" class="md-nav__link">
+    Package repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-package" class="md-nav__link">
+    Finding package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-package" class="md-nav__link">
+    Installing a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling-a-package" class="md-nav__link">
+    Uninstalling a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-specific-version-of-a-package-or-a-stand-alone-packages" class="md-nav__link">
+    Installing a specific version of a package or a stand-alone packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-the-content-of-a-package" class="md-nav__link">
+    Listing the content of a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-dependencies-of-a-package" class="md-nav__link">
+    Finding dependencies of a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-out-which-package-a-file-belongs-to" class="md-nav__link">
+    Finding out which package a file belongs to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-which-package-will-install-the-file-you-need" class="md-nav__link">
+    Finding which package will install the file you need
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-writing-long-package-names" class="md-nav__link">
+    Avoiding writing long package names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Development
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Development" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mirrors/" title="Creating a Mirror" class="md-nav__link">
+      Creating a Mirror
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Old Wiki
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Old Wiki" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Old Wiki
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -345,18 +537,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Mirrors/" title="Mirrors" class="md-nav__link">
-      Mirrors
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
       MSYS2 installation
     </a>
@@ -444,126 +624,6 @@
     <a href="../Terminals/" title="Terminals" class="md-nav__link">
       Terminals
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Using packages
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Using packages" class="md-nav__link md-nav__link--active">
-      Using packages
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#package-repositories" class="md-nav__link">
-    Package repositories
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finding-package" class="md-nav__link">
-    Finding package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-a-package" class="md-nav__link">
-    Installing a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstalling-a-package" class="md-nav__link">
-    Uninstalling a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-a-specific-version-of-a-package-or-a-stand-alone-packages" class="md-nav__link">
-    Installing a specific version of a package or a stand-alone packages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-the-content-of-a-package" class="md-nav__link">
-    Listing the content of a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finding-dependencies-of-a-package" class="md-nav__link">
-    Finding dependencies of a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finding-out-which-package-a-file-belongs-to" class="md-nav__link">
-    Finding out which package a file belongs to
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finding-which-package-will-install-the-file-you-need" class="md-nav__link">
-    Finding which package will install the file you need
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avoiding-writing-long-package-names" class="md-nav__link">
-    Avoiding writing long package names
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -692,7 +752,7 @@
                   
                 
                 
-                  <h1>Using packages</h1>
+                  <h1>Package Management</h1>
                 
                 <h2 id="package-repositories">Package repositories</h2>
 <p>The MSYS2 software distribution uses a port of <code>pacman</code> (known from Arch Linux) to manage (install, remove and update) binary packages and also to build those packages in the first place.</p>
@@ -831,6 +891,8 @@ Total Installed Size:  32.09 MiB
 <li><a href="https://wiki.archlinux.org/index.php/Pacman_tips">Pacman tips on ArchWiki</a></li>
 </ul>
                 
+                  
+                
               
               
                 
@@ -848,7 +910,7 @@ Total Installed Size:  32.09 MiB
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Terminals/" title="Terminals" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -857,11 +919,25 @@ Total Installed Size:  32.09 MiB
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Terminals
+                Getting Started
               </div>
             </div>
           </a>
         
+        
+          <a href="../Mirrors/" title="Creating a Mirror" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Creating a Mirror
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

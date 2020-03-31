@@ -47,6 +47,7 @@
 .md-typeset h3, .md-typeset h2 {
     color: var(--msys2-red);
     font-weight: normal;
+    margin-top: 1.2rem;
 }
 
 .md-container {
