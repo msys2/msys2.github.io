@@ -6,6 +6,8 @@ theme:
     palette:
         primary: 'indigo'
         accent: 'indigo'
+    features:
+        - instant
 
 extra_css:
     - 'stylesheets/extra.css'
