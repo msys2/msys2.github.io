@@ -263,8 +263,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#finding-package" class="md-nav__link">
-    Finding package
+  <a href="#finding-a-package" class="md-nav__link">
+    Finding a package
   </a>
   
 </li>
@@ -663,8 +663,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#finding-package" class="md-nav__link">
-    Finding package
+  <a href="#finding-a-package" class="md-nav__link">
+    Finding a package
   </a>
   
 </li>
@@ -758,7 +758,7 @@
 <p>The MSYS2 software distribution uses a port of <code>pacman</code> (known from Arch Linux) to manage (install, remove and update) binary packages and also to build those packages in the first place.</p>
 <p>Packages in MSYS2 work like packages in popular Linux distributions. A package is an archive containing a piece of software. This normally means executable files, runtime libraries, data, shared and static link libraries, header files, config files, and manual pages. Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, the files contained are extracted into your MSYS2 installation directory and the metadata are stored in a local database.</p>
 <p>There are 3 package repositories, <strong>msys2</strong>, <strong>mingw32</strong>, and <strong>mingw64</strong>. The packages in <strong>msys2</strong> are named just like on a Linux distribution, the packages in <strong>mingw</strong> are prefixed by either <code>mingw-w64-i686-</code> for 32-bit packages, or <code>mingw-w64-x86_64-</code> for 64-bit packages.</p>
-<h2 id="finding-package">Finding package</h2>
+<h2 id="finding-a-package">Finding a package</h2>
 <p>If you want to find a specific package in the repository (and that package can or cannot be installed on your machine) you can use the following command:</p>
 <p><code>pacman -Ss &lt;name or part of the name of the package&gt;</code></p>
 <p>Example:</p>
@@ -848,7 +848,7 @@ Depends On      : mingw-w64-x86_64-expat  mingw-w64-x86_64-gcc-libs
 <p>Note that this operation only compares the file paths, so proper capitalization and the <code>.exe</code> suffix (if applicable) is required. Also note that this works only on installed packages, it will not scan the whole package repositories.</p>
 <h2 id="finding-which-package-will-install-the-file-you-need">Finding which package will install the file you need</h2>
 <p>The two recommended tools that can scan a repository and find packages that contain specific files are <code>pacman -F</code> and <code>pkgfile</code>. Below are examples of <code>pacman -F</code> usage:</p>
-<p>Call <code>pacman -Fy</code> to update your package database. To find an exact match, call <code>pacman -Fs &lt;filename&gt;</code> (don't include the path in the filename). To find a substring match, call <code>pacman -Fx &lt;filename&gt;</code>.</p>
+<p>Call <code>pacman -Fy</code> to update your package database. To find an exact match, call <code>pacman -F &lt;filename&gt;</code> (don't include the path in the filename). To find a substring match, call <code>pacman -Fx &lt;filename&gt;</code>.</p>
 <p>Note that this operation only compares the file paths, so proper capitalization and the <code>.exe</code> suffix (if applicable) is required.</p>
 <h2 id="avoiding-writing-long-package-names">Avoiding writing long package names</h2>
 <p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names. Examples:</p>
