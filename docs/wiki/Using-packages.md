@@ -11,7 +11,7 @@ Packages in MSYS2 work like packages in popular Linux distributions. A package i
 There are 3 package repositories, **msys2**, **mingw32**, and **mingw64**. The packages in **msys2** are named just like on a Linux distribution, the packages in **mingw** are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages.
 
 
-## Finding package
+## Finding a package
 
 If you want to find a specific package in the repository (and that package can or cannot be installed on your machine) you can use the following command:
 
@@ -137,7 +137,7 @@ Note that this operation only compares the file paths, so proper capitalization 
 
 The two recommended tools that can scan a repository and find packages that contain specific files are `pacman -F` and `pkgfile`. Below are examples of `pacman -F` usage:
 
-Call `pacman -Fy` to update your package database. To find an exact match, call `pacman -Fs <filename>` (don't include the path in the filename). To find a substring match, call `pacman -Fx <filename>`.
+Call `pacman -Fy` to update your package database. To find an exact match, call `pacman -F <filename>` (don't include the path in the filename). To find a substring match, call `pacman -Fx <filename>`.
 
 Note that this operation only compares the file paths, so proper capitalization and the `.exe` suffix (if applicable) is required.
 
