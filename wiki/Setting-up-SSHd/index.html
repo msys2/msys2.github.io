@@ -548,7 +548,109 @@
                 
                   <h1>Setting up SSHd</h1>
                 
-                <p>The nice folks working on GHC wrote down the necessary steps to get SSHd up on MSYS2. It's essentially the same as on Cygwin, but Cygwin has got a nice setup script, while MSYS2 does not. Read the guide on <a href="https://ghc.haskell.org/trac/ghc/wiki/Building/Windows/SSHD">the GHC wikipage on SSHd</a>. There's also <a href="https://gist.github.com/samhocevar/00eec26d9e9988d080ac">an SSHd setup script</a> by @samhocevar, including helpful comments.</p>
+                <div class="highlight"><pre><span></span><code>#!/bin/sh
+#
+#  msys2-sshd-setup.sh — configure sshd on MSYS2 and run it as a Windows service
+#
+#  Replaces ssh-host-config &lt;https://github.com/openssh/openssh-portable/blob/master/contrib/cygwin/ssh-host-config&gt;
+#  Adapted from &lt;https://ghc.haskell.org/trac/ghc/wiki/Building/Windows/SSHD&gt; by Sam Hocevar &lt;sam@hocevar.net&gt;
+#  Adapted from &lt;https://gist.github.com/samhocevar/00eec26d9e9988d080ac&gt; by David Macek
+#
+#  Prerequisites:
+#    — a 64-bit installation of MSYS2 itself: https://msys2.org
+#    — some packages: pacman -S openssh cygrunsrv mingw-w64-x86_64-editrights
+#
+#  Gotchas:
+#    — the log file will be /var/log/msys2_sshd.log
+#    — if you get error “sshd: fatal: seteuid XXX : No such device or address”
+#      in the logs, try “passwd -R” (with admin privileges)
+#    — if you get error “chown(/dev/pty1, XXX, YYY) failed: Invalid argument”
+#      in the logs, make sure your account and group names are detectable (see
+#      `id`); issues are often caused by having /etc/{passwd,group} or having
+#      a modified /etc/nsswitch.conf
+#
+#  Changelog:
+#   16 Apr 2020 — remove additional privileged user
+#               — only touch /etc/{passwd,group} if they exist
+#   27 Jun 2019 — rename service to msys2_sshd to avoid conflicts with Windows OpenSSH
+#               — use mkgroup.exe as suggested in the comments
+#               — fix a problem with CRLF and grep
+#   24 Aug 2015 — run server with -e to redirect logs to /var/log/sshd.log
+#
+
+set -e
+
+#
+# Configuration
+#
+
+PRIV_USER=SYSTEM
+UNPRIV_USER=sshd # DO NOT CHANGE; this username is hardcoded in the openssh code
+UNPRIV_NAME=&quot;Privilege separation user for sshd&quot;
+
+EMPTY_DIR=/var/empty
+
+
+#
+# Check installation sanity
+#
+
+if ! /mingw64/bin/editrights -h &gt;/dev/null; then
+    echo &quot;ERROR: Missing &#39;editrights&#39;. Try: pacman -S mingw-w64-x86_64-editrights.&quot;
+    exit 1
+fi
+
+if ! cygrunsrv -v &gt;/dev/null; then
+    echo &quot;ERROR: Missing &#39;cygrunsrv&#39;. Try: pacman -S cygrunsrv.&quot;
+    exit 1
+fi
+
+if ! ssh-keygen -A; then
+    echo &quot;ERROR: Missing &#39;ssh-keygen&#39;. Try: pacman -S openssh.&quot;
+    exit 1
+fi
+
+
+#
+# The unprivileged sshd user (for privilege separation)
+#
+
+add=&quot;$(if ! net user &quot;${UNPRIV_USER}&quot; &gt;/dev/null; then echo &quot;//add&quot;; fi)&quot;
+if ! net user &quot;${UNPRIV_USER}&quot; ${add} //fullname:&quot;${UNPRIV_NAME}&quot; \
+              //homedir:&quot;$(cygpath -w ${EMPTY_DIR})&quot; //active:no; then
+    echo &quot;ERROR: Unable to create Windows user ${PRIV_USER}&quot;
+    exit 1
+fi
+
+
+#
+# Add or update /etc/passwd entries
+#
+
+if test -f /etc/passwd; then
+    sed -i -e &#39;/^&#39;&quot;${UNPRIV_USER}&quot;&#39;:/d&#39; /etc/passwd
+    SED=&#39;/^&#39;&quot;${UNPRIV_USER}&quot;&#39;:/s?^\(\([^:]*:\)\{5\}\).*?\1&#39;&quot;${EMPTY_DIR}&quot;&#39;:/bin/false?p&#39;
+    mkpasswd -l -u &quot;${UNPRIV_USER}&quot; | sed -e &#39;s/^[^:]*+//&#39; | sed -ne &quot;${SED}&quot; \
+             &gt;&gt; /etc/passwd
+    mkgroup.exe -l &gt; /etc/group
+fi
+
+
+#
+# Finally, register service with cygrunsrv and start it
+#
+
+cygrunsrv -R msys2_sshd || true
+cygrunsrv -I msys2_sshd -d &quot;MSYS2 sshd&quot; -p \
+          /usr/bin/sshd.exe -a &quot;-D -e&quot; -y tcpip -u &quot;${PRIV_USER}&quot; -w &quot;${tmp_pass}&quot;
+
+# The SSH service should start automatically when Windows is rebooted. You can
+# manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`
+if ! net start msys2_sshd; then
+    echo &quot;ERROR: Unable to start msys2_sshd service&quot;
+    exit 1
+fi
+</code></pre></div>
                 
               
               
