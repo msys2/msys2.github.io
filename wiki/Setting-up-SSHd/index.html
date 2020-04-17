@@ -548,108 +548,108 @@
                 
                   <h1>Setting up SSHd</h1>
                 
-                <div class="highlight"><pre><span></span><code>#!/bin/sh
-#
-#  msys2-sshd-setup.sh — configure sshd on MSYS2 and run it as a Windows service
-#
-#  Replaces ssh-host-config &lt;https://github.com/openssh/openssh-portable/blob/master/contrib/cygwin/ssh-host-config&gt;
-#  Adapted from &lt;https://ghc.haskell.org/trac/ghc/wiki/Building/Windows/SSHD&gt; by Sam Hocevar &lt;sam@hocevar.net&gt;
-#  Adapted from &lt;https://gist.github.com/samhocevar/00eec26d9e9988d080ac&gt; by David Macek
-#
-#  Prerequisites:
-#    — a 64-bit installation of MSYS2 itself: https://msys2.org
-#    — some packages: pacman -S openssh cygrunsrv mingw-w64-x86_64-editrights
-#
-#  Gotchas:
-#    — the log file will be /var/log/msys2_sshd.log
-#    — if you get error “sshd: fatal: seteuid XXX : No such device or address”
-#      in the logs, try “passwd -R” (with admin privileges)
-#    — if you get error “chown(/dev/pty1, XXX, YYY) failed: Invalid argument”
-#      in the logs, make sure your account and group names are detectable (see
-#      `id`); issues are often caused by having /etc/{passwd,group} or having
-#      a modified /etc/nsswitch.conf
-#
-#  Changelog:
-#   16 Apr 2020 — remove additional privileged user
-#               — only touch /etc/{passwd,group} if they exist
-#   27 Jun 2019 — rename service to msys2_sshd to avoid conflicts with Windows OpenSSH
-#               — use mkgroup.exe as suggested in the comments
-#               — fix a problem with CRLF and grep
-#   24 Aug 2015 — run server with -e to redirect logs to /var/log/sshd.log
-#
+                <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+<span class="c1">#</span>
+<span class="c1">#  msys2-sshd-setup.sh — configure sshd on MSYS2 and run it as a Windows service</span>
+<span class="c1">#</span>
+<span class="c1">#  Replaces ssh-host-config &lt;https://github.com/openssh/openssh-portable/blob/master/contrib/cygwin/ssh-host-config&gt;</span>
+<span class="c1">#  Adapted from &lt;https://ghc.haskell.org/trac/ghc/wiki/Building/Windows/SSHD&gt; by Sam Hocevar &lt;sam@hocevar.net&gt;</span>
+<span class="c1">#  Adapted from &lt;https://gist.github.com/samhocevar/00eec26d9e9988d080ac&gt; by David Macek</span>
+<span class="c1">#</span>
+<span class="c1">#  Prerequisites:</span>
+<span class="c1">#    — a 64-bit installation of MSYS2 itself: https://msys2.org</span>
+<span class="c1">#    — some packages: pacman -S openssh cygrunsrv mingw-w64-x86_64-editrights</span>
+<span class="c1">#</span>
+<span class="c1">#  Gotchas:</span>
+<span class="c1">#    — the log file will be /var/log/msys2_sshd.log</span>
+<span class="c1">#    — if you get error “sshd: fatal: seteuid XXX : No such device or address”</span>
+<span class="c1">#      in the logs, try “passwd -R” (with admin privileges)</span>
+<span class="c1">#    — if you get error “chown(/dev/pty1, XXX, YYY) failed: Invalid argument”</span>
+<span class="c1">#      in the logs, make sure your account and group names are detectable (see</span>
+<span class="c1">#      `id`); issues are often caused by having /etc/{passwd,group} or having</span>
+<span class="c1">#      a modified /etc/nsswitch.conf</span>
+<span class="c1">#</span>
+<span class="c1">#  Changelog:</span>
+<span class="c1">#   16 Apr 2020 — remove additional privileged user</span>
+<span class="c1">#               — only touch /etc/{passwd,group} if they exist</span>
+<span class="c1">#   27 Jun 2019 — rename service to msys2_sshd to avoid conflicts with Windows OpenSSH</span>
+<span class="c1">#               — use mkgroup.exe as suggested in the comments</span>
+<span class="c1">#               — fix a problem with CRLF and grep</span>
+<span class="c1">#   24 Aug 2015 — run server with -e to redirect logs to /var/log/sshd.log</span>
+<span class="c1">#</span>
 
-set -e
+<span class="nb">set</span> -e
 
-#
-# Configuration
-#
+<span class="c1">#</span>
+<span class="c1"># Configuration</span>
+<span class="c1">#</span>
 
-PRIV_USER=SYSTEM
-UNPRIV_USER=sshd # DO NOT CHANGE; this username is hardcoded in the openssh code
-UNPRIV_NAME=&quot;Privilege separation user for sshd&quot;
+<span class="nv">PRIV_USER</span><span class="o">=</span>SYSTEM
+<span class="nv">UNPRIV_USER</span><span class="o">=</span>sshd <span class="c1"># DO NOT CHANGE; this username is hardcoded in the openssh code</span>
+<span class="nv">UNPRIV_NAME</span><span class="o">=</span><span class="s2">&quot;Privilege separation user for sshd&quot;</span>
 
-EMPTY_DIR=/var/empty
-
-
-#
-# Check installation sanity
-#
-
-if ! /mingw64/bin/editrights -h &gt;/dev/null; then
-    echo &quot;ERROR: Missing &#39;editrights&#39;. Try: pacman -S mingw-w64-x86_64-editrights.&quot;
-    exit 1
-fi
-
-if ! cygrunsrv -v &gt;/dev/null; then
-    echo &quot;ERROR: Missing &#39;cygrunsrv&#39;. Try: pacman -S cygrunsrv.&quot;
-    exit 1
-fi
-
-if ! ssh-keygen -A; then
-    echo &quot;ERROR: Missing &#39;ssh-keygen&#39;. Try: pacman -S openssh.&quot;
-    exit 1
-fi
+<span class="nv">EMPTY_DIR</span><span class="o">=</span>/var/empty
 
 
-#
-# The unprivileged sshd user (for privilege separation)
-#
+<span class="c1">#</span>
+<span class="c1"># Check installation sanity</span>
+<span class="c1">#</span>
 
-add=&quot;$(if ! net user &quot;${UNPRIV_USER}&quot; &gt;/dev/null; then echo &quot;//add&quot;; fi)&quot;
-if ! net user &quot;${UNPRIV_USER}&quot; ${add} //fullname:&quot;${UNPRIV_NAME}&quot; \
-              //homedir:&quot;$(cygpath -w ${EMPTY_DIR})&quot; //active:no; then
-    echo &quot;ERROR: Unable to create Windows user ${PRIV_USER}&quot;
-    exit 1
-fi
+<span class="k">if</span> ! /mingw64/bin/editrights -h &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;editrights&#39;. Try: pacman -S mingw-w64-x86_64-editrights.&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> ! cygrunsrv -v &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;cygrunsrv&#39;. Try: pacman -S cygrunsrv.&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> ! ssh-keygen -A<span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;ssh-keygen&#39;. Try: pacman -S openssh.&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
 
 
-#
-# Add or update /etc/passwd entries
-#
+<span class="c1">#</span>
+<span class="c1"># The unprivileged sshd user (for privilege separation)</span>
+<span class="c1">#</span>
 
-if test -f /etc/passwd; then
-    sed -i -e &#39;/^&#39;&quot;${UNPRIV_USER}&quot;&#39;:/d&#39; /etc/passwd
-    SED=&#39;/^&#39;&quot;${UNPRIV_USER}&quot;&#39;:/s?^\(\([^:]*:\)\{5\}\).*?\1&#39;&quot;${EMPTY_DIR}&quot;&#39;:/bin/false?p&#39;
-    mkpasswd -l -u &quot;${UNPRIV_USER}&quot; | sed -e &#39;s/^[^:]*+//&#39; | sed -ne &quot;${SED}&quot; \
+<span class="nv">add</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> &gt;/dev/null<span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">&quot;//add&quot;</span><span class="p">;</span> <span class="k">fi)</span><span class="s2">&quot;</span>
+<span class="k">if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="si">${</span><span class="nv">add</span><span class="si">}</span> //fullname:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_NAME</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+              //homedir:<span class="s2">&quot;</span><span class="k">$(</span>cygpath -w <span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="k">)</span><span class="s2">&quot;</span> //active:no<span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to create Windows user </span><span class="si">${</span><span class="nv">PRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+
+<span class="c1">#</span>
+<span class="c1"># Add or update /etc/passwd entries</span>
+<span class="c1">#</span>
+
+<span class="k">if</span> <span class="nb">test</span> -f /etc/passwd<span class="p">;</span> <span class="k">then</span>
+    sed -i -e <span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/d&#39;</span> /etc/passwd
+    <span class="nv">SED</span><span class="o">=</span><span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/s?^\(\([^:]*:\)\{5\}\).*?\1&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/bin/false?p&#39;</span>
+    mkpasswd -l -u <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^[^:]*+//&#39;</span> <span class="p">|</span> sed -ne <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SED</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
              &gt;&gt; /etc/passwd
     mkgroup.exe -l &gt; /etc/group
-fi
+<span class="k">fi</span>
 
 
-#
-# Finally, register service with cygrunsrv and start it
-#
+<span class="c1">#</span>
+<span class="c1"># Finally, register service with cygrunsrv and start it</span>
+<span class="c1">#</span>
 
-cygrunsrv -R msys2_sshd || true
-cygrunsrv -I msys2_sshd -d &quot;MSYS2 sshd&quot; -p \
-          /usr/bin/sshd.exe -a &quot;-D -e&quot; -y tcpip -u &quot;${PRIV_USER}&quot; -w &quot;${tmp_pass}&quot;
+cygrunsrv -R msys2_sshd <span class="o">||</span> <span class="nb">true</span>
+cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p <span class="se">\</span>
+          /usr/bin/sshd.exe -a <span class="s2">&quot;-D -e&quot;</span> -y tcpip -u <span class="s2">&quot;</span><span class="si">${</span><span class="nv">PRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> -w <span class="s2">&quot;</span><span class="si">${</span><span class="nv">tmp_pass</span><span class="si">}</span><span class="s2">&quot;</span>
 
-# The SSH service should start automatically when Windows is rebooted. You can
-# manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`
-if ! net start msys2_sshd; then
-    echo &quot;ERROR: Unable to start msys2_sshd service&quot;
-    exit 1
-fi
+<span class="c1"># The SSH service should start automatically when Windows is rebooted. You can</span>
+<span class="c1"># manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`</span>
+<span class="k">if</span> ! net start msys2_sshd<span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to start msys2_sshd service&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
 </code></pre></div>
                 
               
