@@ -1,4 +1,4 @@
-```
+```bash
 #!/bin/sh
 #
 #  msys2-sshd-setup.sh — configure sshd on MSYS2 and run it as a Windows service
