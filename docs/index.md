@@ -4,6 +4,7 @@
 </header>
 
 <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe" class="button">msys2-x86_64-20190524.exe</a>
+ <small>← recommended</small>
 
 `SHA256: 2dacadcc70cc122054e60914cbc6b689f685bef5713915a90f4185dd9da7954e`
 
