@@ -4,13 +4,8 @@
 </header>
 
 <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe" class="button">msys2-x86_64-20190524.exe</a>
- <small>← recommended</small>
 
 `SHA256: 2dacadcc70cc122054e60914cbc6b689f685bef5713915a90f4185dd9da7954e`
-
-<a href="http://repo.msys2.org/distrib/i686/msys2-i686-20190524.exe" class="button">msys2-i686-20190524.exe</a>
-
-`SHA256: c5a1881f7ac5a0449fe9b30d3140111a88072727f510c4a66bfa905f8c78e839`
 
 ## MSYS2 is a software distro and building platform for Windows
 
@@ -25,7 +20,7 @@ It features a package management system, Pacman, to provide easy installation of
 
 ## Installation
 
-1. Download and run the installer - "x86_64" for 64-bit, "i686" for 32-bit Windows
+1. Download and run the installer
 2. Click **"Next"**
 
     ![First screen of MSYS2 installation](images/1_msys32-start.png)
