@@ -570,6 +570,7 @@
 <span class="c1">#      a modified /etc/nsswitch.conf</span>
 <span class="c1">#</span>
 <span class="c1">#  Changelog:</span>
+<span class="c1">#   09 May 2020 — completely remove additional privileged user</span>
 <span class="c1">#   16 Apr 2020 — remove additional privileged user</span>
 <span class="c1">#               — only touch /etc/{passwd,group} if they exist</span>
 <span class="c1">#   27 Jun 2019 — rename service to msys2_sshd to avoid conflicts with Windows OpenSSH</span>
@@ -584,7 +585,6 @@
 <span class="c1"># Configuration</span>
 <span class="c1">#</span>
 
-<span class="nv">PRIV_USER</span><span class="o">=</span>SYSTEM
 <span class="nv">UNPRIV_USER</span><span class="o">=</span>sshd <span class="c1"># DO NOT CHANGE; this username is hardcoded in the openssh code</span>
 <span class="nv">UNPRIV_NAME</span><span class="o">=</span><span class="s2">&quot;Privilege separation user for sshd&quot;</span>
 
@@ -618,7 +618,7 @@
 <span class="nv">add</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> &gt;/dev/null<span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">&quot;//add&quot;</span><span class="p">;</span> <span class="k">fi)</span><span class="s2">&quot;</span>
 <span class="k">if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="si">${</span><span class="nv">add</span><span class="si">}</span> //fullname:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_NAME</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
               //homedir:<span class="s2">&quot;</span><span class="k">$(</span>cygpath -w <span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="k">)</span><span class="s2">&quot;</span> //active:no<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to create Windows user </span><span class="si">${</span><span class="nv">PRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to create Windows user </span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span>
     <span class="nb">exit</span> <span class="m">1</span>
 <span class="k">fi</span>
 
@@ -641,8 +641,7 @@
 <span class="c1">#</span>
 
 cygrunsrv -R msys2_sshd <span class="o">||</span> <span class="nb">true</span>
-cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p <span class="se">\</span>
-          /usr/bin/sshd.exe -a <span class="s2">&quot;-D -e&quot;</span> -y tcpip -u <span class="s2">&quot;</span><span class="si">${</span><span class="nv">PRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> -w <span class="s2">&quot;</span><span class="si">${</span><span class="nv">tmp_pass</span><span class="si">}</span><span class="s2">&quot;</span>
+cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /usr/bin/sshd.exe -a <span class="s2">&quot;-D -e&quot;</span> -y tcpip
 
 <span class="c1"># The SSH service should start automatically when Windows is rebooted. You can</span>
 <span class="c1"># manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`</span>
