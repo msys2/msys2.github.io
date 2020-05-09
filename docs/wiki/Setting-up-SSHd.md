@@ -21,6 +21,7 @@
 #      a modified /etc/nsswitch.conf
 #
 #  Changelog:
+#   09 May 2020 — completely remove additional privileged user
 #   16 Apr 2020 — remove additional privileged user
 #               — only touch /etc/{passwd,group} if they exist
 #   27 Jun 2019 — rename service to msys2_sshd to avoid conflicts with Windows OpenSSH
@@ -35,7 +36,6 @@ set -e
 # Configuration
 #
 
-PRIV_USER=SYSTEM
 UNPRIV_USER=sshd # DO NOT CHANGE; this username is hardcoded in the openssh code
 UNPRIV_NAME="Privilege separation user for sshd"
 
@@ -69,7 +69,7 @@ fi
 add="$(if ! net user "${UNPRIV_USER}" >/dev/null; then echo "//add"; fi)"
 if ! net user "${UNPRIV_USER}" ${add} //fullname:"${UNPRIV_NAME}" \
               //homedir:"$(cygpath -w ${EMPTY_DIR})" //active:no; then
-    echo "ERROR: Unable to create Windows user ${PRIV_USER}"
+    echo "ERROR: Unable to create Windows user ${UNPRIV_USER}"
     exit 1
 fi
 
@@ -92,8 +92,7 @@ fi
 #
 
 cygrunsrv -R msys2_sshd || true
-cygrunsrv -I msys2_sshd -d "MSYS2 sshd" -p \
-          /usr/bin/sshd.exe -a "-D -e" -y tcpip -u "${PRIV_USER}" -w "${tmp_pass}"
+cygrunsrv -I msys2_sshd -d "MSYS2 sshd" -p /usr/bin/sshd.exe -a "-D -e" -y tcpip
 
 # The SSH service should start automatically when Windows is rebooted. You can
 # manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`
