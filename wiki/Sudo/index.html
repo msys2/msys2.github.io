@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Home/">
+        <link rel="canonical" href="https://www.msys2.org/wiki/Sudo/">
       
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Home - MSYS2</title>
+        <title>Sudo - MSYS2</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#do-you-need-sudo" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Home
+              Sudo
             
           </span>
         </div>
@@ -275,12 +280,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Old Wiki
@@ -302,18 +305,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Home/" title="Home" class="md-nav__link">
       Home
     </a>
-    
   </li>
 
         
@@ -533,12 +529,49 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#do-you-need-sudo" class="md-nav__link">
+    Do you need Sudo?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-sudo" class="md-nav__link">
+    How to get Sudo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Home.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Sudo.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -546,50 +579,12 @@
                   
                 
                 
-                  <h1>Home</h1>
+                  <h1>Sudo</h1>
                 
-                <p><strong>Welcome to the MSYS2 wiki</strong></p>
-<ul>
-<li><a href="../MSYS2-introduction/">Introduction</a> - overview and important information</li>
-<li><a href="../MSYS2-installation/">Installing and upgrading</a> - required reading for all users</li>
-<li><a href="../Using-packages/">Using packages</a> - how to find and install packages</li>
-<li><a href="../History/">History</a> - about the project's inception and origins</li>
-<li><a href="../MSYS2-reinstallation/">Re-installing from scratch</a> - in case of unrecoverable problems</li>
-<li><a href="../Contributing-to-MSYS2/">Contributing</a> - how to help the project</li>
-<li><a href="../Creating-Packages/">Creating packages</a> - how packages are built and how to make new ones</li>
-<li><a href="../How-does-MSYS2-differ-from-Cygwin/">MSYS2 vs. Cygwin</a> - differences and similarities</li>
-<li><a href="https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine">MSYS2 on Wine</a> - how to install and use MSYS2 under Wine [sadly <a href="https://github.com/Alexpux/MSYS2-packages/issues/682">broken</a> with current version of MSYS2 and no-one is actively working on a fix as far as we know]</li>
-<li><a href="../Porting/">Porting for MSYS2 or MinGW-w64</a> - useful resources and common issues</li>
-<li><a href="../Packages/">Package list</a> - list of packages we provide</li>
-<li><a href="../Launchers/">Launchers</a> - various ways to launch MSYS2 shells</li>
-<li><a href="../Distributing/">Distributing software without pacman</a> - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users</li>
-<li><a href="../FAQ/">FAQ</a></li>
-<li><a href="../Terminals/">About terminals, consoles and shells</a></li>
-<li><a href="../Setting-up-SSHd/">Setting up SSHd on MSYS2</a></li>
-<li><a href="../Sudo/">Sudo on MSYS2</a></li>
-<li><a href="../Devtopics/">Developer discussion</a></li>
-<li><a href="../Signing-packages/">Signing packages</a> (draft)</li>
-<li><a href="../GDB-qtcreator/">Tips for investigating package issues using GDB on Qt Creator</a> (draft)</li>
-</ul>
-<p><strong>More documentation:</strong></p>
-<p>If you have any problems with the POSIX side of MSYS2 (e.g. ssh, home directories, user accounts, native symlinks, signal handling, ...), try to consult the <a href="https://cygwin.com/docs.html">Cygwin documentation</a> first, as a lot of what's written there applies to MSYS2 as well.</p>
-<p>There is also an <a href="https://sourceforge.net/p/msys2/discussion/general/thread/dcf8f4d3/#8473/588e">excellent introduction from Matthieu Vachon</a> describing MSYS2, the shells, pacman and other stuff in a less technical, more practical way.</p>
-<p>Some pages on the <a href="https://github.com/git-for-windows/git/wiki">Git for Windows wiki</a> are relevant to MSYS2 as well.</p>
-<p>There are various <a href="http://www.msys2.org/#support-or-contact">communication channels</a> set up, including the <a href="irc://irc.oftc.net:6667/msys2">#msys2 IRC channel</a> on OFTC and the mailing list at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#115;&#121;&#115;&#50;&#45;&#117;&#115;&#101;&#114;&#115;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#115;&#111;&#117;&#114;&#99;&#101;&#102;&#111;&#114;&#103;&#101;&#46;&#110;&#101;&#116;">&#109;&#115;&#121;&#115;&#50;&#45;&#117;&#115;&#101;&#114;&#115;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#115;&#111;&#117;&#114;&#99;&#101;&#102;&#111;&#114;&#103;&#101;&#46;&#110;&#101;&#116;</a>.</p>
-<p><strong>Project members:</strong></p>
-<ul>
-<li><a href="https://github.com/alexpux">Alexey</a> (Project Leader)</li>
-<li><a href="https://github.com/mingwandroid">Ray Donnelly</a></li>
-<li><a href="https://github.com/martell">Martell Malone</a></li>
-<li><a href="https://github.com/elieux">David Macek</a></li>
-</ul>
-<p><strong>With thanks to:</strong></p>
-<ul>
-<li><a href="http://mingw-w64.sourceforge.net/">The MinGW-w64 Project</a></li>
-<li><a href="https://www.cygwin.com/">The Cygwin Project</a></li>
-<li><a href="http://qt-project.org/">The Qt-Project</a></li>
-</ul>
-<p>... and all of the other Open Source software projects we build, package and distribute</p>
+                <h2 id="do-you-need-sudo">Do you need Sudo?</h2>
+<p>In regular GNU/Linux environments, people use <code>sudo</code> to perform administrative tasks on their system, e.g. installing and removing packages, editing system configuration.  Since the most common way of installing MSYS2 results in the MSYS2 root directory being writable by the user, these tasks can be performed without doing anything special.  If you made your MSYS2 root read only for users or want to run Windows administrative tasks from MSYS2, continue reading.</p>
+<h2 id="how-to-get-sudo">How to get Sudo</h2>
+<p>Since MSYS2 doesn't support all the things a classic Sudo needs (setuid? PAM?), we need a replacement.  One such replacement that doesn't seem to suffer from horrible security flaws is <a href="https://github.com/imachug/win-sudo"><em>win-sudo</em></a>.  It doesn't support (as of May 2020) the various different arguments (<code>-H</code>, <code>-u</code> etc.), but it does work in the most common use case of <code>sudo foo</code> running <code>foo</code> with elevated privileges.  The authorization is handled by UAC, same as any other Windows program.</p>
                 
               
               
@@ -604,41 +599,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../Mirrors/" title="Creating a Mirror" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Creating a Mirror
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Contributing to MSYS2
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
