@@ -16,6 +16,7 @@
 - [FAQ](FAQ.md)
 - [About terminals, consoles and shells](Terminals.md)
 - [Setting up SSHd on MSYS2](Setting-up-SSHd.md)
+- [Sudo on MSYS2](Sudo.md)
 - [Developer discussion](Devtopics.md)
 - [Signing packages](Signing-packages.md) (draft)
 - [Tips for investigating package issues using GDB on Qt Creator](GDB-qtcreator.md) (draft)
