@@ -3,9 +3,9 @@
 <h2>One click installer for <a href="https://github.com/msys2">msys2</a></h2>
 </header>
 
-<a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe" class="button">msys2-x86_64-20190524.exe</a>
+<a href="https://github.com/msys2/msys2-installer/releases/download/2020-05-17/msys2-x86_64-20200517.exe" class="button">msys2-x86_64-20200517.exe</a>
 
-`SHA256: 2dacadcc70cc122054e60914cbc6b689f685bef5713915a90f4185dd9da7954e`
+`SHA256: a650c3c2d5be98456c4ba6d965b24a160f0e025a6212821c519ddd6b3fe1d019`
 
 ## MSYS2 is a software distro and building platform for Windows
 
