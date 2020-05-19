@@ -50,6 +50,13 @@ Additional discussions:
 - [#2616](https://github.com/Alexpux/MINGW-packages/issues/2616)
 - [#2006](https://github.com/Alexpux/MINGW-packages/issues/2006)
 
+Build bots:
+
+- https://github.com/eine/setup-msys2
+- https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
+- https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin
+- https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2
+
 
 Official release
 ---
