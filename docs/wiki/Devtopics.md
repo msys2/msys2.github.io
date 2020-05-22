@@ -56,6 +56,7 @@ Build bots:
 - https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
 - https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin
 - https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2
+- https://circleci.com/docs/2.0/hello-world-windows/
 
 
 Official release
