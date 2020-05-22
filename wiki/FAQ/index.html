@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#various-breakage" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -370,9 +375,40 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        FAQ
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
     <a href="./" title="FAQ" class="md-nav__link md-nav__link--active">
       FAQ
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#various-breakage" class="md-nav__link">
+    Various breakage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -533,6 +569,36 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#various-breakage" class="md-nav__link">
+    Various breakage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -548,13 +614,14 @@
                 
                   <h1>FAQ</h1>
                 
-                <ol>
+                <h2 id="various-breakage">Various breakage</h2>
+<ol>
 <li>
-<p>Why is <code>update-core</code> not found after an <code>update-core</code>?</p>
+<p><code>update-core</code> is missing.</p>
 <p>The function of <code>update-core</code> is transferred to <code>pacman -Syuu</code>.</p>
 </li>
 <li>
-<p>Windows: After <code>pacman -Syu</code> a command window lingers after startup.</p>
+<p>A command window lingers after startup.</p>
 <p>Change the argument <code>/K</code> to <code>/C</code> in all three start menu shortcuts.</p>
 </li>
 <li>
@@ -562,17 +629,26 @@
 <p>This indicates that Pacman isn't sure it is safe to overwrite some files.  This sometimes happens during regular package updates, but could also happen if you installed some software manually (<code>make install</code>, <code>npm install npm -g</code> etc.).  To continue with the operation, pass <code>--overwrite &lt;conflicting_file_path&gt;</code> to the Pacman command line.  For other options, see the <a href="https://wiki.archlinux.org/index.php/Pacman#.22Failed_to_commit_transaction_.28conflicting_files.29.22_error">Arch Linux FAQ entry about Pacman file conflicts</a>.</p>
 </li>
 <li>
-<p>Pacman says:
+<p>GCC update breaks dependencies for Ada and ObjC.</p>
 <div class="highlight"><pre><span></span><code>looking for conflicting packages...
 error: failed to prepare transaction (could not satisfy dependencies)
 :: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-x86_64-gcc=8.3.0-2&#39; required by mingw-w64-x86_64-gcc-ada
 :: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-x86_64-gcc=8.3.0-2&#39; required by mingw-w64-x86_64-gcc-objc
 :: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-i686-gcc=8.3.0-2&#39; required by mingw-w64-i686-gcc-ada
 :: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-i686-gcc=8.3.0-2&#39; required by mingw-w64-i686-gcc-objc
-</code></pre></div></p>
+</code></pre></div>
+
+<p>Ada and ObjC were unsupported for a while in MSYS2 builds due to long-standing issues with the i686 variant.  One had to run <code>pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc</code> and/or <code>pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc</code>, then update.</p>
+</li>
+<li>
+<p>Pacman fails to install packages with <code>Unrecognized archive format</code>.</p>
+<p>For a while, the core packages were prematurely packaged using zstd without giving users time to update to zstd-enabled pacman first.  This should be resolved now.</p>
+</li>
+<li>
+<p>MSYS2 fails to start after an update.  Installer fails to re-install.</p>
+<p>Make sure there are no msys2 processes running (especially sshd, dirmngr, gpg-agent, bash, pacman and mintty) and try again.  If that fails, try a reboot.</p>
 </li>
 </ol>
-<p>Ada and ObjC were unsupported for a while in MSYS2 builds due to long-standing issues with the i686 variant.  One had to run <code>pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc</code> and/or <code>pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc</code>, then update.</p>
                 
               
               
