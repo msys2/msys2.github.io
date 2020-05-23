@@ -39,13 +39,13 @@ It features a package management system, Pacman, to provide easy installation of
     pacman -Syu
     ```
 
+    ![MSYS2 shell with pacman's output about system upgrade](images/6_msys2-update-system.png)
+
 6. If needed, close MSYS2, run it again from Start menu. Update the rest with:
 
     ```
     pacman -Su
     ```
-
-    ![MSYS2 shell with pacman's output about system upgrade](images/6_msys2-update-system.png)
 
 7. Now **Pacman** is fully committed to the Windows cause :)
 
