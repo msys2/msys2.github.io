@@ -9,21 +9,21 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Mirrors/">
+        <link rel="canonical" href="https://www.msys2.org/news/">
       
       
-      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="shortcut icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
       
-        <title>Creating a Mirror</title>
+        <title>News - MSYS2</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -41,7 +41,7 @@
     
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#available-mirrors" class="md-skip">
+        <a href="#news" class="md-skip">
           Skip to content
         </a>
       
@@ -74,7 +74,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://www.msys2.org" title="MSYS2" class="md-header-nav__button md-logo" aria-label="MSYS2">
       
-  <img src="../../logo.svg" alt="logo">
+  <img src="../logo.svg" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Creating a Mirror
+              News
             
           </span>
         </div>
@@ -160,7 +160,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://www.msys2.org" title="MSYS2" class="md-nav__button md-logo" aria-label="MSYS2">
       
-  <img src="../../logo.svg" alt="logo">
+  <img src="../logo.svg" alt="logo">
 
     </a>
     MSYS2
@@ -187,7 +187,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Getting Started" class="md-nav__link">
+    <a href=".." title="Getting Started" class="md-nav__link">
       Getting Started
     </a>
   </li>
@@ -197,11 +197,53 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../news/" title="News" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        News
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="News" class="md-nav__link md-nav__link--active">
       News
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2020-05-22-msys2-fails-to-start-after-a-msys2-runtime-upgrade" class="md-nav__link">
+    2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -236,7 +278,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-packages/" title="Package Management" class="md-nav__link">
+    <a href="../wiki/Using-packages/" title="Package Management" class="md-nav__link">
       Package Management
     </a>
   </li>
@@ -251,12 +293,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Development
@@ -278,56 +318,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Creating a Mirror
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Creating a Mirror" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../wiki/Mirrors/" title="Creating a Mirror" class="md-nav__link">
       Creating a Mirror
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#available-mirrors" class="md-nav__link">
-    Available Mirrors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-mirror" class="md-nav__link">
-    Creating a New Mirror
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -367,7 +362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Home/" title="Home" class="md-nav__link">
+    <a href="../wiki/Home/" title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -379,7 +374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+    <a href="../wiki/Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
       Contributing to MSYS2
     </a>
   </li>
@@ -391,7 +386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Creating-Packages/" title="Creating Packages" class="md-nav__link">
+    <a href="../wiki/Creating-Packages/" title="Creating Packages" class="md-nav__link">
       Creating Packages
     </a>
   </li>
@@ -403,7 +398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+    <a href="../wiki/Devtopics/" title="Devtopics" class="md-nav__link">
       Devtopics
     </a>
   </li>
@@ -415,7 +410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Distributing/" title="Distributing" class="md-nav__link">
+    <a href="../wiki/Distributing/" title="Distributing" class="md-nav__link">
       Distributing
     </a>
   </li>
@@ -427,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+    <a href="../wiki/FAQ/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -439,7 +434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+    <a href="../wiki/GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
       GDB qtcreator
     </a>
   </li>
@@ -451,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../History/" title="History" class="md-nav__link">
+    <a href="../wiki/History/" title="History" class="md-nav__link">
       History
     </a>
   </li>
@@ -463,7 +458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+    <a href="../wiki/How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
       How does MSYS2 differ from Cygwin
     </a>
   </li>
@@ -475,7 +470,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+    <a href="../wiki/Launchers/" title="Launchers" class="md-nav__link">
       Launchers
     </a>
   </li>
@@ -487,7 +482,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+    <a href="../wiki/MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
       MSYS2 installation
     </a>
   </li>
@@ -499,7 +494,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+    <a href="../wiki/MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
       MSYS2 introduction
     </a>
   </li>
@@ -511,7 +506,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
+    <a href="../wiki/MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
       MSYS2 reinstallation
     </a>
   </li>
@@ -523,7 +518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Packages/" title="Packages" class="md-nav__link">
+    <a href="../wiki/Packages/" title="Packages" class="md-nav__link">
       Packages
     </a>
   </li>
@@ -535,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Porting/" title="Porting" class="md-nav__link">
+    <a href="../wiki/Porting/" title="Porting" class="md-nav__link">
       Porting
     </a>
   </li>
@@ -547,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+    <a href="../wiki/Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
       Setting up SSHd
     </a>
   </li>
@@ -559,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Signing-packages/" title="Signing packages" class="md-nav__link">
+    <a href="../wiki/Signing-packages/" title="Signing packages" class="md-nav__link">
       Signing packages
     </a>
   </li>
@@ -571,7 +566,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+    <a href="../wiki/Terminals/" title="Terminals" class="md-nav__link">
       Terminals
     </a>
   </li>
@@ -596,6 +591,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -606,15 +603,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#available-mirrors" class="md-nav__link">
-    Available Mirrors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-mirror" class="md-nav__link">
-    Creating a New Mirror
+  <a href="#2020-05-22-msys2-fails-to-start-after-a-msys2-runtime-upgrade" class="md-nav__link">
+    2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade
   </a>
   
 </li>
@@ -631,7 +621,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Mirrors.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/news.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -639,24 +629,18 @@
                   
                 
                 
-                  <h1>Creating a Mirror</h1>
-                
-                <h2 id="available-mirrors">Available Mirrors</h2>
-<p>The mirrors are defined in the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package.</p>
-<h2 id="creating-a-new-mirror">Creating a New Mirror</h2>
-<ul>
-<li>The repository size is ~400GB (as of 2020-03)</li>
-<li>You can use rsync to update your mirror using <code>rsync -rtlvH --delete-after --delay-updates --safe-links</code></li>
-<li>If you want to add your mirror to the main mirror list please open a PR against the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package</li>
-</ul>
-<p>Our main repository supports rsync: <code>rsync://repo.msys2.org/builds</code></p>
-<p>Some of the existing mirrors also support rsync:</p>
-<ul>
-<li><code>rsync://mirror.yandex.ru/mirrors/msys2</code></li>
-<li><code>rsync://mirror.selfnet.de/msys2</code></li>
-</ul>
-                
-                  
+                <h1 id="news">News</h1>
+<h3 id="2020-05-22-msys2-fails-to-start-after-a-msys2-runtime-upgrade">2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade</h3>
+<p>MSYS2 programs will fail to start if programs started before the update are
+still running in the background (especially sshd, dirmngr, gpg-agent, bash,
+pacman and mintty). You can stop them by running the following in a Windows
+terminal:</p>
+<div class="highlight"><pre><span></span><code>taskkill /f /fi <span class="s2">&quot;MODULES eq msys-2.0.dll&quot;</span>
+</code></pre></div>
+
+<p>If that fails, try a reboot.</p>
+<p>We've improved our update process so this shouldn't happen again with future
+updates.</p>
                 
               
               
@@ -675,7 +659,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Using-packages/" title="Package Management" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -684,19 +668,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Package Management
+                Getting Started
               </div>
             </div>
           </a>
         
         
-          <a href="../Home/" title="Home" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../wiki/Using-packages/" title="Package Management" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Home
+                Package Management
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -754,15 +738,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: ["instant"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
