@@ -48,6 +48,7 @@ markdown_extensions:
 
 nav:
     - 'Getting Started': index.md
+    - news.md
     - Documentation:
         # For users of MSYS2 which just use the provided software
         # or develop their software using MSYS2 provided packages/tools.
