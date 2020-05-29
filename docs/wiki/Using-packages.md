@@ -143,7 +143,7 @@ Note that this operation only compares the file paths, so proper capitalization 
 
 ## Avoiding writing long package names
 
-Use `pacboy` to install **mingw** packages without having to type the long package names. Examples:
+Use `pacboy` to install **mingw** packages without having to type the long package names (install `pacboy` first using `pacman -S pactoys` if necessary).  Examples:
 
 ```
 $ pacboy -S x265:x
