@@ -864,7 +864,7 @@ Depends On      : mingw-w64-x86_64-expat  mingw-w64-x86_64-gcc-libs
 <p>Call <code>pacman -Fy</code> to update your package database. To find an exact match, call <code>pacman -F &lt;filename&gt;</code> (don't include the path in the filename). To find a substring match, call <code>pacman -Fx &lt;filename&gt;</code>.</p>
 <p>Note that this operation only compares the file paths, so proper capitalization and the <code>.exe</code> suffix (if applicable) is required.</p>
 <h2 id="avoiding-writing-long-package-names">Avoiding writing long package names</h2>
-<p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names. Examples:</p>
+<p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names (install <code>pacboy</code> first using <code>pacman -S pactoys</code> if necessary).  Examples:</p>
 <p><div class="highlight"><pre><span></span><code>$ pacboy -S x265:x
 resolving dependencies...
 looking for conflicting packages...
