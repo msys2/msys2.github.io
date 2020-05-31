@@ -234,6 +234,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-05-31-update-fails-with-could-not-open-file" class="md-nav__link">
+    2020-05-31 - Update fails with "could not open file"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-05-22-msys2-fails-to-start-after-a-msys2-runtime-upgrade" class="md-nav__link">
     2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade
   </a>
@@ -603,6 +610,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-05-31-update-fails-with-could-not-open-file" class="md-nav__link">
+    2020-05-31 - Update fails with "could not open file"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-05-22-msys2-fails-to-start-after-a-msys2-runtime-upgrade" class="md-nav__link">
     2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade
   </a>
@@ -630,6 +644,19 @@
                 
                 
                 <h1 id="news">News</h1>
+<h3 id="2020-05-31-update-fails-with-could-not-open-file">2020-05-31 - Update fails with "could not open file"</h3>
+<p>In case your update process errors out with something similar to</p>
+<blockquote>
+<p>error: could not open file /var/cache/pacman/pkg/zstd-1.4.5-1-x86_64.pkg.tar.zst: Child process exited with status 127</p>
+</blockquote>
+<p>update pacman separately first:</p>
+<div class="highlight"><pre><span></span><code>pacman -Sydd pacman
+</code></pre></div>
+
+<p>This issue is caused by a pacman version that is too old and can't handle newer
+packages compressed with zstd. In case you are seeing this problem in CI
+consider using a newer base which contains a newer pacman which supports zstd:
+<a href="https://github.com/msys2/msys2-installer/releases">https://github.com/msys2/msys2-installer/releases</a></p>
 <h3 id="2020-05-22-msys2-fails-to-start-after-a-msys2-runtime-upgrade">2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade</h3>
 <p>MSYS2 programs will fail to start if programs started before the update are
 still running in the background (especially sshd, dirmngr, gpg-agent, bash,
