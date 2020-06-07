@@ -5,7 +5,7 @@ Unify public relations, solidify hosting
 ---
 People are sometimes (often?) confused about where to get information about the project. It would be great if all the user-facing parts were on msys2.org and all the developer-facing parts on GitHub. Back-ends can be wherever (mailing lists and big file storage would be examples of things that we can't do with GitHub).
 
-@alexpux doesn't agree, but @elieux believes one issue tracker for the whole project is better than separate ones. [Git for Windows](https://github.org/git-for-windows/git/issues) sets a particularly good example.
+@alexpux doesn't agree, but @elieux believes one issue tracker for the whole project is better than separate ones. [Git for Windows](https://github.com/git-for-windows/git/issues) sets a particularly good example.
 
 We currently have:
 
