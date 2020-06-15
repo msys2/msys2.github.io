@@ -234,6 +234,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-06-15-base-metapackage-separate-pacman-contrib" class="md-nav__link">
+    2020-06-15 - base metapackage; separate pacman-contrib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-05-31-update-fails-with-could-not-open-file" class="md-nav__link">
     2020-05-31 - Update fails with "could not open file"
   </a>
@@ -610,6 +617,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-06-15-base-metapackage-separate-pacman-contrib" class="md-nav__link">
+    2020-06-15 - base metapackage; separate pacman-contrib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-05-31-update-fails-with-could-not-open-file" class="md-nav__link">
     2020-05-31 - Update fails with "could not open file"
   </a>
@@ -644,6 +658,15 @@
                 
                 
                 <h1 id="news">News</h1>
+<h3 id="2020-06-15-base-metapackage-separate-pacman-contrib">2020-06-15 - <code>base</code> metapackage; separate <code>pacman-contrib</code></h3>
+<p>Following a similar change in Arch Linux, the <code>base</code> group was replaced with
+a <code>base</code> metapackage.  If you installed your MSYS2 using an installer older than
+2020-06-02, please run <code>pacman -S base</code> to get up to date.</p>
+<p>This also installs the <code>pacman-contrib</code> package where <code>updpkgsums</code>, <code>pactree</code>
+etc. now live (previously included in the <code>pacman</code> package).</p>
+<p>Details at <a href="https://github.com/msys2/MSYS2-packages/pull/1979">#1979</a>,
+<a href="https://github.com/msys2/MSYS2-packages/issues/1976">#1976</a> and
+<a href="https://github.com/msys2/MSYS2-packages/pull/1988">#1988</a>.</p>
 <h3 id="2020-05-31-update-fails-with-could-not-open-file">2020-05-31 - Update fails with "could not open file"</h3>
 <p>In case your update process errors out with something similar to</p>
 <blockquote>
