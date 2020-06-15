@@ -1,5 +1,19 @@
 # News
 
+### 2020-06-15 - `base` metapackage; separate `pacman-contrib`
+
+Following a similar change in Arch Linux, the `base` group was replaced with
+a `base` metapackage.  If you installed your MSYS2 using an installer older than
+2020-06-02, please run `pacman -S base` to get up to date.
+
+This also installs the `pacman-contrib` package where `updpkgsums`, `pactree`
+etc. now live (previously included in the `pacman` package).
+
+Details at [#1979](https://github.com/msys2/MSYS2-packages/pull/1979),
+[#1976](https://github.com/msys2/MSYS2-packages/issues/1976) and
+[#1988](https://github.com/msys2/MSYS2-packages/pull/1988).
+
+
 ### 2020-05-31 - Update fails with "could not open file"
 
 In case your update process errors out with something similar to
