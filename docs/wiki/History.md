@@ -15,6 +15,7 @@ It is our hope that MSYS2 be viewed as a complementary off-shot of Cygwin (even 
 ## MinGW-w64
 
 MinGW is an abbreviation of *Minimalist GNU for Windows*. The idea of MinGW is to provide a development platform for building cross-platform applications on Windows. The important pieces are:
+
 * a set of FOSS Windows specific header files and import libraries which enable the use of the Windows API,
 * a supplementary library and a runtime that fill in some gaps.
 
