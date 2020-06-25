@@ -66,7 +66,7 @@ It features a package management system, Pacman, to provide easy installation of
 
 ## Support and Contact
 
-*   read our [wiki on GitHub](https://github.com/msys2/msys2/wiki)
+*   read our [wiki](https://www.msys2.org/wiki/Home/)
 *   browse our [package lists](https://packages.msys2.org/)
 *   search for and file [issues for msys2 packages on GitHub](https://github.com/msys2/msys2-packages/issues)
 *   search for and file [issues for mingw-w64 packages on GitHub](https://github.com/msys2/mingw-packages/issues)
