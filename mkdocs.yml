@@ -52,11 +52,11 @@ nav:
     - Documentation:
         # For users of MSYS2 which just use the provided software
         # or develop their software using MSYS2 provided packages/tools.
-        - wiki/Using-packages.md
+        - docs/package-management.md
     - Development:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
         # infrastructure, mirrors etc and everything else.
-        - wiki/Mirrors.md
+        - dev/mirrors.md
     - Old Wiki:
         # Old stuff that should ideally move to the above categories in the future
         - wiki/Home.md
