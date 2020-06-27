@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Distributing/">
+        <link rel="canonical" href="https://www.msys2.org/dev/mirrors/">
       
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Distributing - MSYS2</title>
+        <title>Creating a Mirror</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#possibly-useful-sources-of-information" class="md-skip">
+        <a href="#available-mirrors" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Distributing
+              Creating a Mirror
             
           </span>
         </div>
@@ -251,10 +251,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Development
@@ -276,11 +278,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../dev/mirrors/" title="Creating a Mirror" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Creating a Mirror
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Creating a Mirror" class="md-nav__link md-nav__link--active">
       Creating a Mirror
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-mirrors" class="md-nav__link">
+    Available Mirrors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-mirror" class="md-nav__link">
+    Creating a New Mirror
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -290,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev/keyring/" title="MSYS2 Keyring" class="md-nav__link">
+    <a href="../keyring/" title="MSYS2 Keyring" class="md-nav__link">
       MSYS2 Keyring
     </a>
   </li>
@@ -305,12 +352,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Old Wiki
@@ -334,7 +379,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Home/" title="Home" class="md-nav__link">
+    <a href="../../wiki/Home/" title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -346,7 +391,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+    <a href="../../wiki/Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
       Contributing to MSYS2
     </a>
   </li>
@@ -358,7 +403,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Creating-Packages/" title="Creating Packages" class="md-nav__link">
+    <a href="../../wiki/Creating-Packages/" title="Creating Packages" class="md-nav__link">
       Creating Packages
     </a>
   </li>
@@ -370,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+    <a href="../../wiki/Devtopics/" title="Devtopics" class="md-nav__link">
       Devtopics
     </a>
   </li>
@@ -380,49 +425,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Distributing
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Distributing" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../wiki/Distributing/" title="Distributing" class="md-nav__link">
       Distributing
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#possibly-useful-sources-of-information" class="md-nav__link">
-    Possibly useful sources of information
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -432,7 +439,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+    <a href="../../wiki/FAQ/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -444,7 +451,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+    <a href="../../wiki/GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
       GDB qtcreator
     </a>
   </li>
@@ -456,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../History/" title="History" class="md-nav__link">
+    <a href="../../wiki/History/" title="History" class="md-nav__link">
       History
     </a>
   </li>
@@ -468,7 +475,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+    <a href="../../wiki/How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
       How does MSYS2 differ from Cygwin
     </a>
   </li>
@@ -480,7 +487,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+    <a href="../../wiki/Launchers/" title="Launchers" class="md-nav__link">
       Launchers
     </a>
   </li>
@@ -492,7 +499,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
       MSYS2 installation
     </a>
   </li>
@@ -504,7 +511,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+    <a href="../../wiki/MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
       MSYS2 introduction
     </a>
   </li>
@@ -516,7 +523,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
       MSYS2 reinstallation
     </a>
   </li>
@@ -528,7 +535,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Packages/" title="Packages" class="md-nav__link">
+    <a href="../../wiki/Packages/" title="Packages" class="md-nav__link">
       Packages
     </a>
   </li>
@@ -540,7 +547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Porting/" title="Porting" class="md-nav__link">
+    <a href="../../wiki/Porting/" title="Porting" class="md-nav__link">
       Porting
     </a>
   </li>
@@ -552,7 +559,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+    <a href="../../wiki/Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
       Setting up SSHd
     </a>
   </li>
@@ -564,7 +571,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Signing-packages/" title="Signing packages" class="md-nav__link">
+    <a href="../../wiki/Signing-packages/" title="Signing packages" class="md-nav__link">
       Signing packages
     </a>
   </li>
@@ -576,7 +583,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+    <a href="../../wiki/Terminals/" title="Terminals" class="md-nav__link">
       Terminals
     </a>
   </li>
@@ -611,8 +618,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#possibly-useful-sources-of-information" class="md-nav__link">
-    Possibly useful sources of information
+  <a href="#available-mirrors" class="md-nav__link">
+    Available Mirrors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-mirror" class="md-nav__link">
+    Creating a New Mirror
   </a>
   
 </li>
@@ -629,7 +643,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Distributing.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/dev/mirrors.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -637,19 +651,24 @@
                   
                 
                 
-                  <h1>Distributing</h1>
+                  <h1>Creating a Mirror</h1>
                 
-                <p>[ This page is a stub. Help us by sending your experience and ideas for improvements. ]</p>
-<h2 id="possibly-useful-sources-of-information">Possibly useful sources of information</h2>
+                <h2 id="available-mirrors">Available Mirrors</h2>
+<p>The mirrors are defined in the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package.</p>
+<h2 id="creating-a-new-mirror">Creating a New Mirror</h2>
 <ul>
-<li><a href="https://github.com/achadwick/styrene">Styrene</a> from Andrew Chadwick</li>
-<li>the build scripts for <a href="https://git-for-windows.github.io">Git for Windows</a>, especially <a href="https://github.com/git-for-windows/build-extra/blob/master/make-file-list.sh">make-file-list.sh</a></li>
-<li>a <a href="https://sourceforge.net/p/msys2/tickets/34/#1cb7"><code>deploy.sh</code> script</a> from @rubenvb</li>
-<li>a <a href="https://github.com/matlo/GIMX/blob/e461c6ed3650b3707c17252a367413b36d1d1d0e/Makefile#L26">Makefile rule</a> from @matlo</li>
-<li>a newer <a href="https://github.com/matlo/GIMX/blob/master/Makefile#L27-L56">Makefile rule</a> from @matlo</li>
-<li>the <a href="https://www.archlinux.org/pacman/pactree.8.html"><code>pactree</code></a> command</li>
-<li>a <a href="https://bitbucket.org/librepilot/librepilot/src/4c9c3c202caad2250a35ce6aed796f5f46b5224c/make/copy_dependencies.py"><code>copy_dependencies.py</code> script</a> for librepilot from @filnet, <a href="https://github.com/Alexpux/MINGW-packages/issues/2634">discussion</a></li>
+<li>The repository size is ~400GB (as of 2020-03)</li>
+<li>You can use rsync to update your mirror using <code>rsync -rtlvH --delete-after --delay-updates --safe-links</code></li>
+<li>If you want to add your mirror to the main mirror list please open a PR against the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package</li>
 </ul>
+<p>Our main repository supports rsync: <code>rsync://repo.msys2.org/builds</code></p>
+<p>Some of the existing mirrors also support rsync:</p>
+<ul>
+<li><code>rsync://mirror.yandex.ru/mirrors/msys2</code></li>
+<li><code>rsync://mirror.selfnet.de/msys2</code></li>
+</ul>
+                
+                  
                 
               
               
@@ -668,7 +687,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Devtopics/" title="Devtopics" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../docs/package-management/" title="Package Management" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -677,19 +696,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Devtopics
+                Package Management
               </div>
             </div>
           </a>
         
         
-          <a href="../FAQ/" title="FAQ" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../keyring/" title="MSYS2 Keyring" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                FAQ
+                MSYS2 Keyring
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

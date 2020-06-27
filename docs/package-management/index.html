@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/MSYS2-reinstallation/">
+        <link rel="canonical" href="https://www.msys2.org/docs/package-management/">
       
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -17,7 +17,7 @@
     
     
       
-        <title>MSYS2 reinstallation - MSYS2</title>
+        <title>Package Management</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#package-repositories" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              MSYS2 reinstallation
+              Package Management
             
           </span>
         </div>
@@ -209,10 +209,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Documentation
@@ -234,11 +236,119 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../docs/package-management/" title="Package Management" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Package Management
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Package Management" class="md-nav__link md-nav__link--active">
       Package Management
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#package-repositories" class="md-nav__link">
+    Package repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-a-package" class="md-nav__link">
+    Finding a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-package" class="md-nav__link">
+    Installing a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling-a-package" class="md-nav__link">
+    Uninstalling a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-specific-version-of-a-package-or-a-stand-alone-packages" class="md-nav__link">
+    Installing a specific version of a package or a stand-alone packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-the-content-of-a-package" class="md-nav__link">
+    Listing the content of a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-dependencies-of-a-package" class="md-nav__link">
+    Finding dependencies of a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-out-which-package-a-file-belongs-to" class="md-nav__link">
+    Finding out which package a file belongs to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-which-package-will-install-the-file-you-need" class="md-nav__link">
+    Finding which package will install the file you need
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-writing-long-package-names" class="md-nav__link">
+    Avoiding writing long package names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -305,12 +415,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Old Wiki
@@ -334,7 +442,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Home/" title="Home" class="md-nav__link">
+    <a href="../../wiki/Home/" title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -346,7 +454,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+    <a href="../../wiki/Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
       Contributing to MSYS2
     </a>
   </li>
@@ -358,7 +466,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Creating-Packages/" title="Creating Packages" class="md-nav__link">
+    <a href="../../wiki/Creating-Packages/" title="Creating Packages" class="md-nav__link">
       Creating Packages
     </a>
   </li>
@@ -370,7 +478,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+    <a href="../../wiki/Devtopics/" title="Devtopics" class="md-nav__link">
       Devtopics
     </a>
   </li>
@@ -382,7 +490,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Distributing/" title="Distributing" class="md-nav__link">
+    <a href="../../wiki/Distributing/" title="Distributing" class="md-nav__link">
       Distributing
     </a>
   </li>
@@ -394,7 +502,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+    <a href="../../wiki/FAQ/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -406,7 +514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+    <a href="../../wiki/GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
       GDB qtcreator
     </a>
   </li>
@@ -418,7 +526,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../History/" title="History" class="md-nav__link">
+    <a href="../../wiki/History/" title="History" class="md-nav__link">
       History
     </a>
   </li>
@@ -430,7 +538,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+    <a href="../../wiki/How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
       How does MSYS2 differ from Cygwin
     </a>
   </li>
@@ -442,7 +550,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+    <a href="../../wiki/Launchers/" title="Launchers" class="md-nav__link">
       Launchers
     </a>
   </li>
@@ -454,7 +562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
       MSYS2 installation
     </a>
   </li>
@@ -466,7 +574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+    <a href="../../wiki/MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
       MSYS2 introduction
     </a>
   </li>
@@ -476,70 +584,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MSYS2 reinstallation
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="MSYS2 reinstallation" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../wiki/MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
       MSYS2 reinstallation
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#re-installing" class="md-nav__link">
-    Re-installing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reversing-the-procedure" class="md-nav__link">
-    Reversing the procedure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finally" class="md-nav__link">
-    Finally
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -549,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Packages/" title="Packages" class="md-nav__link">
+    <a href="../../wiki/Packages/" title="Packages" class="md-nav__link">
       Packages
     </a>
   </li>
@@ -561,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Porting/" title="Porting" class="md-nav__link">
+    <a href="../../wiki/Porting/" title="Porting" class="md-nav__link">
       Porting
     </a>
   </li>
@@ -573,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+    <a href="../../wiki/Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
       Setting up SSHd
     </a>
   </li>
@@ -585,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Signing-packages/" title="Signing packages" class="md-nav__link">
+    <a href="../../wiki/Signing-packages/" title="Signing packages" class="md-nav__link">
       Signing packages
     </a>
   </li>
@@ -597,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+    <a href="../../wiki/Terminals/" title="Terminals" class="md-nav__link">
       Terminals
     </a>
   </li>
@@ -632,29 +681,78 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#package-repositories" class="md-nav__link">
+    Package repositories
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#re-installing" class="md-nav__link">
-    Re-installing
+  <a href="#finding-a-package" class="md-nav__link">
+    Finding a package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reversing-the-procedure" class="md-nav__link">
-    Reversing the procedure
+  <a href="#installing-a-package" class="md-nav__link">
+    Installing a package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#finally" class="md-nav__link">
-    Finally
+  <a href="#uninstalling-a-package" class="md-nav__link">
+    Uninstalling a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-specific-version-of-a-package-or-a-stand-alone-packages" class="md-nav__link">
+    Installing a specific version of a package or a stand-alone packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-the-content-of-a-package" class="md-nav__link">
+    Listing the content of a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-dependencies-of-a-package" class="md-nav__link">
+    Finding dependencies of a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-out-which-package-a-file-belongs-to" class="md-nav__link">
+    Finding out which package a file belongs to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-which-package-will-install-the-file-you-need" class="md-nav__link">
+    Finding which package will install the file you need
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-writing-long-package-names" class="md-nav__link">
+    Avoiding writing long package names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
   </a>
   
 </li>
@@ -671,7 +769,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/MSYS2-reinstallation.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/docs/package-management.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -679,68 +777,146 @@
                   
                 
                 
-                  <h1>MSYS2 reinstallation</h1>
+                  <h1>Package Management</h1>
                 
-                <h2 id="introduction">Introduction</h2>
-<p>When we release new installers and new base tar.xz packages, we'd appreciate it if people can help out by testing complete re-installs of their entire MSYS2. The procedure is safe as it is fully reversible. Also, if your system gets messed up, this procedure could help to get you running again.</p>
-<h2 id="re-installing">Re-installing</h2>
-<ol>
-<li>
-<p>Run your existing MSYS2 installation via <code>msys2_shell.cmd</code>.</p>
-</li>
-<li>
-<p>Make a list of installed packages:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">pacman -Qqe | xargs echo &gt; /c/packages.txt ; exit</span>
+                <h2 id="package-repositories">Package repositories</h2>
+<p>The MSYS2 software distribution uses a port of <code>pacman</code> (known from Arch Linux) to manage (install, remove and update) binary packages and also to build those packages in the first place.</p>
+<p>Packages in MSYS2 work like packages in popular Linux distributions. A package is an archive containing a piece of software. This normally means executable files, runtime libraries, data, shared and static link libraries, header files, config files, and manual pages. Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, the files contained are extracted into your MSYS2 installation directory and the metadata are stored in a local database.</p>
+<p>There are 3 package repositories, <strong>msys2</strong>, <strong>mingw32</strong>, and <strong>mingw64</strong>. The packages in <strong>msys2</strong> are named just like on a Linux distribution, the packages in <strong>mingw</strong> are prefixed by either <code>mingw-w64-i686-</code> for 32-bit packages, or <code>mingw-w64-x86_64-</code> for 64-bit packages.</p>
+<h2 id="finding-a-package">Finding a package</h2>
+<p>If you want to find a specific package in the repository (and that package can or cannot be installed on your machine) you can use the following command:</p>
+<p><code>pacman -Ss &lt;name or part of the name of the package&gt;</code></p>
+<p>Example:</p>
+<p><code>$ pacman -Ss openjp</code></p>
+<div class="codehilite"><pre><span></span><code><span class="n">mingw32</span><span class="o">/</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="o">-</span><span class="n">i686</span><span class="o">-</span><span class="n">openjpeg</span><span class="w"> </span><span class="mf">1.5.2</span><span class="o">-</span><span class="mi">7</span><span class="w"></span>
+<span class="w">    </span><span class="n">An</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">JPEG</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="n">codec</span><span class="w"> </span><span class="p">(</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="p">)</span><span class="w"></span>
+<span class="n">mingw32</span><span class="o">/</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="o">-</span><span class="n">i686</span><span class="o">-</span><span class="n">openjpeg2</span><span class="w"> </span><span class="mf">2.1.0</span><span class="o">-</span><span class="mi">7</span><span class="w"></span>
+<span class="w">    </span><span class="n">An</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">JPEG</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="n">codec</span><span class="w"> </span><span class="p">(</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="p">)</span><span class="w"></span>
+<span class="n">mingw64</span><span class="o">/</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">openjpeg</span><span class="w"> </span><span class="mf">1.5.2</span><span class="o">-</span><span class="mi">7</span><span class="w"></span>
+<span class="w">    </span><span class="n">An</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">JPEG</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="n">codec</span><span class="w"> </span><span class="p">(</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="p">)</span><span class="w"></span>
+<span class="n">mingw64</span><span class="o">/</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">openjpeg2</span><span class="w"> </span><span class="mf">2.1.0</span><span class="o">-</span><span class="mi">7</span><span class="w"> </span><span class="o">[</span><span class="n">installed</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="n">An</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">JPEG</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="n">codec</span><span class="w"> </span><span class="p">(</span><span class="n">mingw</span><span class="o">-</span><span class="n">w64</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 
-</li>
-<li>
-<p>Rename your <code>msys??</code> folder to <code>msys??.old</code>.</p>
-</li>
-<li>
-<p>Run the installer (or untar the base package, run <code>msys2_shell.cmd</code>, then exit it).</p>
-</li>
-<li>
-<p>To save server bandwidth and your time, move your old cached packages directory to the new installation. In Explorer, remove the empty <code>msys??\var\cache\pacman\pkg</code> folder, then replace it with <code>msys??.old\var\cache\pacman\pkg</code>.</p>
-</li>
-<li>
-<p>Run the new MSYS2 installation via <code>msys2_shell.cmd</code>.</p>
-</li>
-<li>
-<p>Update the package databases:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">pacman -Sy</span>
+<p>As you can see the <code>mingw-w64-x86_64-openjpeg2</code> package is installed, while the <code>mingw-w64-x86_64-openjpeg</code> package is <strong>not</strong> installed.</p>
+<p>If you would like to search <strong>only</strong> among the packages which has been already installed, use the following command:</p>
+<p><code>pacman -Qs &lt;name or part of the name of the package&gt;</code></p>
+<h2 id="installing-a-package">Installing a package</h2>
+<p>If you wan to install a package, use the following command:</p>
+<p><code>pacman -S &lt;name of the package&gt;</code></p>
+<p>If the package has dependencies which are not installed, <code>pacman</code> will ask you whether you would like to install the dependencies in the first place.</p>
+<p><code>pacman -S</code> also accepts virtual package names and package group names. Virtual package names can be often encountered with packages built from Git, e.g. <code>msys2-launcher-git</code> can be installed by requesting <code>msys-launcher</code>. Package groups simplify installation of related packages, e.g. install <code>base-devel</code> to get basic development tools. Please note that neither of those are real packages, so the commands below won't accept these names and you need to use the real package names instead.</p>
+<h2 id="uninstalling-a-package">Uninstalling a package</h2>
+<p>The following command will remove a package (but not its dependencies nor any files produced by running it):</p>
+<p><code>pacman -R &lt;name of the package&gt;</code></p>
+<h2 id="installing-a-specific-version-of-a-package-or-a-stand-alone-packages">Installing a specific version of a package or a stand-alone packages</h2>
+<p>Older (or pre-release) versions of packages can be installed directly from the package archive (<code>.tar.xz</code>). <a href="http://repo.msys2.org/">The data store</a> for the repositories contains older versions of packages, but beware that you might need to recursively find correct versions of dependencies for the desired package. Once downloaded, the package can be installed like this:</p>
+<p><code>pacman -U &lt;packagefile.tar.xz&gt;</code></p>
+<h2 id="listing-the-content-of-a-package">Listing the content of a package</h2>
+<p>If you would like to know what has been installed as a part of a specific package use the following command:</p>
+<p><code>pacman -Ql &lt;name of the package&gt;</code></p>
+<p>Example:</p>
+<p><code>$ pacman -Ql mingw-w64-x86_64-pugixml</code></p>
+<div class="highlight"><pre><span></span><code>mingw-w64-x86_64-pugixml /mingw64/
+mingw-w64-x86_64-pugixml /mingw64/bin/
+mingw-w64-x86_64-pugixml /mingw64/bin/libpugixml.dll
+mingw-w64-x86_64-pugixml /mingw64/include/
+mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/
+mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/pugiconfig.hpp
+mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/pugixml.hpp
+mingw-w64-x86_64-pugixml /mingw64/lib/
+mingw-w64-x86_64-pugixml /mingw64/lib/cmake/
+mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/
+mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/pugixml-config-noconfig.cmake
+mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/pugixml-config.cmake
+mingw-w64-x86_64-pugixml /mingw64/lib/pkgconfig/
+mingw-w64-x86_64-pugixml /mingw64/lib/pkgconfig/pugixml.pc
+mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/
+mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/libpugixml.dll.a
 </code></pre></div>
 
-
-</li>
-<li>
-<p>Update the core packages:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">pacman --needed -S bash pacman pacman-mirrors msys2-runtime</span>
+<p>As you can see the package contains:</p>
+<ul>
+<li>a binary executable library file (libpugixml.dll),</li>
+<li>a static library (libpugixml.dll.a),</li>
+<li>2 header files (pugixml.hpp, pugiconfig.hpp),</li>
+<li>2 cmake files,</li>
+<li>and a PKGCONFIG file (pugixml.pc).</li>
+</ul>
+<h2 id="finding-dependencies-of-a-package">Finding dependencies of a package</h2>
+<p>You can use <code>pactree</code> to figure out which packages are needed to make a package working properly:</p>
+<p><code>$ pactree mingw-w64-x86_64-gettext</code></p>
+<div class="highlight"><pre><span></span><code>mingw-w64-x86_64-gettext
+├─mingw-w64-x86_64-expat
+├─mingw-w64-x86_64-gcc-libs
+│ ├─mingw-w64-x86_64-gmp
+│ ├─mingw-w64-x86_64-libwinpthread-git provides mingw-w64-x86_64-libwinpthread
+│ └─mingw-w64-x86_64-gcc-libgfortran
+│   └─mingw-w64-x86_64-gcc-libs
+└─mingw-w64-x86_64-libiconv
 </code></pre></div>
 
-
-</li>
-<li>
-<p>If any packages got updated during step 8, you MUST restart MSYS2, otherwise you can get fork errors in the next step. You need to exit all MSYS2 shells (and if using MSYS2 32bit, run <code>autorebase.bat</code>) then re-launch <code>msys2_shell.cmd</code>.</p>
-</li>
-<li>
-<p>Re-install your old packages, by entering:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">pacman -S --needed $(cat /c/packages.txt)</span>
+<p>Alternatively you can use <code>pacman -Qi</code> to get the list of <strong>direct</strong> dependencies of a package:</p>
+<p><code>$ pacman -Qi mingw-w64-x86_64-gettext</code></p>
+<div class="highlight"><pre><span></span><code>Name            : mingw-w64-x86_64-gettext
+Version         : 0.19.7-1
+Description     : GNU internationalization library (mingw-w64)
+[...]
+Depends On      : mingw-w64-x86_64-expat  mingw-w64-x86_64-gcc-libs
+                  mingw-w64-x86_64-libiconv
 </code></pre></div>
 
+<h2 id="finding-out-which-package-a-file-belongs-to">Finding out which package a file belongs to</h2>
+<p>Use the following command to trace a file back to its owning package:</p>
+<p><code>pacman -Qo &lt;full file path&gt;</code></p>
+<p>Note that this operation only compares the file paths, so proper capitalization and the <code>.exe</code> suffix (if applicable) is required. Also note that this works only on installed packages, it will not scan the whole package repositories.</p>
+<h2 id="finding-which-package-will-install-the-file-you-need">Finding which package will install the file you need</h2>
+<p>The two recommended tools that can scan a repository and find packages that contain specific files are <code>pacman -F</code> and <code>pkgfile</code>. Below are examples of <code>pacman -F</code> usage:</p>
+<p>Call <code>pacman -Fy</code> to update your package database. To find an exact match, call <code>pacman -F &lt;filename&gt;</code> (don't include the path in the filename). To find a substring match, call <code>pacman -Fx &lt;filename&gt;</code>.</p>
+<p>Note that this operation only compares the file paths, so proper capitalization and the <code>.exe</code> suffix (if applicable) is required.</p>
+<h2 id="avoiding-writing-long-package-names">Avoiding writing long package names</h2>
+<p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names (install <code>pacboy</code> first using <code>pacman -S pactoys</code> if necessary).  Examples:</p>
+<p><div class="highlight"><pre><span></span><code>$ pacboy -S x265:x
+resolving dependencies...
+looking for conflicting packages...
 
-</li>
-</ol>
-<p>You may also want to compare your new $HOME folder with your old one and merge across your dotfiles and other files.</p>
-<h2 id="reversing-the-procedure">Reversing the procedure</h2>
-<ol>
-<li>Move the pkg folder back from <code>msys??\var\cache\pacman\pkg</code> to <code>msys??.old\var\cache\pacman\pkg</code>.</li>
-<li>Delete the new <code>msys??</code> folder.</li>
-<li>Rename <code>msys??.old</code> to <code>msys??</code>.</li>
-</ol>
-<h2 id="finally">Finally</h2>
-<p>It would be good if you can try working with the new installation to see if everything's OK, and if not, please report a bug (try to use e.g. strace or procmon to figure out what goes wrong and meld3 or Beyond Compare to help track down which files are different).</p>
+Packages (1) mingw-w64-x86_64-x265-2.3-1
+
+Total Download Size:    0.97 MiB
+Total Installed Size:  20.72 MiB
+
+:: Proceed with installation? [Y/n]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>$ pacboy -S x265:i
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) mingw-w64-i686-x265-2.3-1
+
+Total Download Size:    0.97 MiB
+Total Installed Size:  11.37 MiB
+
+:: Proceed with installation? [Y/n]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>$ pacboy -S x265:m
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (2) mingw-w64-i686-x265-2.3-1  mingw-w64-x86_64-x265-2.3-1
+
+Total Download Size:    0.97 MiB
+Total Installed Size:  32.09 MiB
+
+:: Proceed with installation? [Y/n]
+</code></pre></div></p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Pacman">Pacman on ArchWiki</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Pacman_tips">Pacman tips on ArchWiki</a></li>
+</ul>
+                
+                  
                 
               
               
@@ -759,7 +935,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../news/" title="News" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -768,19 +944,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MSYS2 introduction
+                News
               </div>
             </div>
           </a>
         
         
-          <a href="../Packages/" title="Packages" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../dev/mirrors/" title="Creating a Mirror" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Packages
+                Creating a Mirror
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
