@@ -57,6 +57,7 @@ nav:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
         # infrastructure, mirrors etc and everything else.
         - dev/mirrors.md
+        - dev/keyring.md
     - Old Wiki:
         # Old stuff that should ideally move to the above categories in the future
         - wiki/Home.md
