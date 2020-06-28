@@ -3,14 +3,35 @@
 <h2>Software Distribution and Building Platform for Windows</h2>
 </header>
 
+**MSYS2** is a collection of tools and libraries providing you with an
+easy-to-use environment for building, installing and running native Windows
+software.
 
+It consists of a command line terminal called
+[mintty](https://mintty.github.io/), bash, version control systems like git and
+subversion, tools like tar and awk and even build systems like autotools, all
+based on a modified version of [Cygwin](https://cygwin.com). Despite some of
+these central parts being based on Cygwin, the main focus of MSYS2 is to provide
+a build environment for native Windows software and the Cygwin-using parts are
+kept at a minimum. MSYS2 provides up-to-date native builds for GCC, mingw-w64,
+CPython, CMake, Meson, OpenSSL, FFmpeg, Rust, Ruby, just to name a few.
 
+To provide easy installation of packages and a way to keep them updated it
+features a package management system called
+[Pacman](https://wiki.archlinux.org/index.php/pacman), which should be familiar
+to Arch Linux users. It brings many powerful features such as dependency
+resolution and simple complete system upgrades, as well as straight-forward and
+reproducible package building. Our package repository contains [more than 1800
+pre-built packages](https://packages.msys2.org/base) ready to install.
 
+For more details see ['What is MSYS2?'](docs/what-is-msys2.md) which also
+compares MSYS2 to other software distributions and development environments like
+[Cygwin](https://cygwin.com),
+[WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux),
+[Chololatey](https://chocolatey.org/), [Scoop](https://scoop.sh/), ... and ['Who
+Is Using MSYS2?'](docs/who-is-using-msys2.md) to see which projects are using
+MSYS2 and what for.
 
-
-At its core, it is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It provides a bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
-
-It features a package management system, Pacman, to provide easy installation of packages. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.
 
 ## Installation Prerequisites
 
@@ -18,7 +39,6 @@ It features a package management system, Pacman, to provide easy installation of
 * Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2020-06-02/msys2-x86_64-20200602.exe" class="button">msys2-x86_64-20200602.exe</a>
 
      SHA256 checksum: `a4fd4e48f506618ee5eb8bbd439c2b37433edff5ada04c72db82ccbdbca35cd7`
-
 
 
 ## Installation
