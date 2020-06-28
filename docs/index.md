@@ -1,22 +1,25 @@
 <header>
-<h1>MSYS2 installer</h1>
-<h2>One click installer for <a href="https://github.com/msys2">msys2</a></h2>
+<h1>MSYS2</h1>
+<h2>Software Distribution and Building Platform for Windows</h2>
 </header>
 
-<a href="https://github.com/msys2/msys2-installer/releases/download/2020-06-02/msys2-x86_64-20200602.exe" class="button">msys2-x86_64-20200602.exe</a>
 
-`SHA256: a4fd4e48f506618ee5eb8bbd439c2b37433edff5ada04c72db82ccbdbca35cd7`
 
-## MSYS2 is a software distro and building platform for Windows
+
+
 
 At its core, it is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It provides a bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
 
 It features a package management system, Pacman, to provide easy installation of packages. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.
 
-## Installation restrictions
+## Installation Prerequisites
 
-* MSYS2 can't be installed on FAT* partitions.
-* Current MSYS2 can't be installed on Windows XP anymore.
+* MSYS2 requires Windows 7 (64 bit) or newer
+* Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2020-06-02/msys2-x86_64-20200602.exe" class="button">msys2-x86_64-20200602.exe</a>
+
+     SHA256 checksum: `a4fd4e48f506618ee5eb8bbd439c2b37433edff5ada04c72db82ccbdbca35cd7`
+
+
 
 ## Installation
 
