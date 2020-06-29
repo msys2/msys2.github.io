@@ -322,6 +322,30 @@
 
 
   <li class="md-nav__item">
+    <a href="docs/what-is-msys2/" title="What is MSYS2?" class="md-nav__link">
+      What is MSYS2?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-nav__link">
+      Who Is Using MSYS2?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="docs/package-management/" title="Package Management" class="md-nav__link">
       Package Management
     </a>
@@ -736,8 +760,31 @@
 <h2>Software Distribution and Building Platform for Windows</h2>
 </header>
 
-<p>At its core, it is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It provides a bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.</p>
-<p>It features a package management system, Pacman, to provide easy installation of packages. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.</p>
+<p><strong>MSYS2</strong> is a collection of tools and libraries providing you with an
+easy-to-use environment for building, installing and running native Windows
+software.</p>
+<p>It consists of a command line terminal called
+<a href="https://mintty.github.io/">mintty</a>, bash, version control systems like git and
+subversion, tools like tar and awk and even build systems like autotools, all
+based on a modified version of <a href="https://cygwin.com">Cygwin</a>. Despite some of
+these central parts being based on Cygwin, the main focus of MSYS2 is to provide
+a build environment for native Windows software and the Cygwin-using parts are
+kept at a minimum. MSYS2 provides up-to-date native builds for GCC, mingw-w64,
+CPython, CMake, Meson, OpenSSL, FFmpeg, Rust, Ruby, just to name a few.</p>
+<p>To provide easy installation of packages and a way to keep them updated it
+features a package management system called
+<a href="https://wiki.archlinux.org/index.php/pacman">Pacman</a>, which should be familiar
+to Arch Linux users. It brings many powerful features such as dependency
+resolution and simple complete system upgrades, as well as straight-forward and
+reproducible package building. Our package repository contains <a href="https://packages.msys2.org/base">more than 1800
+pre-built packages</a> ready to install.</p>
+<p>For more details see <a href="docs/what-is-msys2/">'What is MSYS2?'</a> which also
+compares MSYS2 to other software distributions and development environments like
+<a href="https://cygwin.com">Cygwin</a>,
+<a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>,
+<a href="https://chocolatey.org/">Chololatey</a>, <a href="https://scoop.sh/">Scoop</a>, ... and <a href="docs/who-is-using-msys2/">'Who
+Is Using MSYS2?'</a> to see which projects are using
+MSYS2 and what for.</p>
 <h2 id="installation-prerequisites">Installation Prerequisites</h2>
 <ul>
 <li>MSYS2 requires Windows 7 (64 bit) or newer</li>

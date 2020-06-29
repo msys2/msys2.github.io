@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Signing-packages/">
+        <link rel="canonical" href="https://www.msys2.org/docs/what-is-msys2/">
       
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Signing packages - MSYS2</title>
+        <title>What is MSYS2? - MSYS2</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#have-a-gpg-key" class="md-skip">
+        <a href="#what-is-msys2" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Signing packages
+              What is MSYS2?
             
           </span>
         </div>
@@ -209,10 +209,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Documentation
@@ -234,11 +236,94 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../docs/what-is-msys2/" title="What is MSYS2?" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        What is MSYS2?
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="What is MSYS2?" class="md-nav__link md-nav__link--active">
       What is MSYS2?
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#msys2-vs-other-projects" class="md-nav__link">
+    MSYS2 vs Other Projects
+  </a>
+  
+    <nav class="md-nav" aria-label="MSYS2 vs Other Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-wsl" class="md-nav__link">
+    MSYS2 vs WSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-chocolatey" class="md-nav__link">
+    MSYS2 vs Chocolatey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-cygwin" class="md-nav__link">
+    MSYS2 vs Cygwin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-scoop" class="md-nav__link">
+    MSYS2 vs Scoop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-arch-linux" class="md-nav__link">
+    MSYS2 vs Arch Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -248,7 +333,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docs/who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-nav__link">
+    <a href="../who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-nav__link">
       Who Is Using MSYS2?
     </a>
   </li>
@@ -260,7 +345,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docs/package-management/" title="Package Management" class="md-nav__link">
+    <a href="../package-management/" title="Package Management" class="md-nav__link">
       Package Management
     </a>
   </li>
@@ -329,12 +414,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Old Wiki
@@ -358,7 +441,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Home/" title="Home" class="md-nav__link">
+    <a href="../../wiki/Home/" title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -370,7 +453,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+    <a href="../../wiki/Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
       Contributing to MSYS2
     </a>
   </li>
@@ -382,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Creating-Packages/" title="Creating Packages" class="md-nav__link">
+    <a href="../../wiki/Creating-Packages/" title="Creating Packages" class="md-nav__link">
       Creating Packages
     </a>
   </li>
@@ -394,7 +477,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+    <a href="../../wiki/Devtopics/" title="Devtopics" class="md-nav__link">
       Devtopics
     </a>
   </li>
@@ -406,7 +489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Distributing/" title="Distributing" class="md-nav__link">
+    <a href="../../wiki/Distributing/" title="Distributing" class="md-nav__link">
       Distributing
     </a>
   </li>
@@ -418,7 +501,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+    <a href="../../wiki/FAQ/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -430,7 +513,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+    <a href="../../wiki/GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
       GDB qtcreator
     </a>
   </li>
@@ -442,7 +525,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../History/" title="History" class="md-nav__link">
+    <a href="../../wiki/History/" title="History" class="md-nav__link">
       History
     </a>
   </li>
@@ -454,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+    <a href="../../wiki/How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
       How does MSYS2 differ from Cygwin
     </a>
   </li>
@@ -466,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+    <a href="../../wiki/Launchers/" title="Launchers" class="md-nav__link">
       Launchers
     </a>
   </li>
@@ -478,7 +561,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
       MSYS2 installation
     </a>
   </li>
@@ -490,7 +573,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+    <a href="../../wiki/MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
       MSYS2 introduction
     </a>
   </li>
@@ -502,7 +585,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
       MSYS2 reinstallation
     </a>
   </li>
@@ -514,7 +597,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Packages/" title="Packages" class="md-nav__link">
+    <a href="../../wiki/Packages/" title="Packages" class="md-nav__link">
       Packages
     </a>
   </li>
@@ -526,7 +609,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Porting/" title="Porting" class="md-nav__link">
+    <a href="../../wiki/Porting/" title="Porting" class="md-nav__link">
       Porting
     </a>
   </li>
@@ -538,7 +621,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+    <a href="../../wiki/Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
       Setting up SSHd
     </a>
   </li>
@@ -548,63 +631,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Signing packages
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Signing packages" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../wiki/Signing-packages/" title="Signing packages" class="md-nav__link">
       Signing packages
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#have-a-gpg-key" class="md-nav__link">
-    Have a GPG key
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-into-pacman" class="md-nav__link">
-    Import into pacman
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#actually-sign-stuff" class="md-nav__link">
-    Actually sign stuff
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -614,7 +645,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+    <a href="../../wiki/Terminals/" title="Terminals" class="md-nav__link">
       Terminals
     </a>
   </li>
@@ -639,6 +670,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -649,23 +682,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#have-a-gpg-key" class="md-nav__link">
-    Have a GPG key
+  <a href="#msys2-vs-other-projects" class="md-nav__link">
+    MSYS2 vs Other Projects
+  </a>
+  
+    <nav class="md-nav" aria-label="MSYS2 vs Other Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-wsl" class="md-nav__link">
+    MSYS2 vs WSL
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#import-into-pacman" class="md-nav__link">
-    Import into pacman
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-chocolatey" class="md-nav__link">
+    MSYS2 vs Chocolatey
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#actually-sign-stuff" class="md-nav__link">
-    Actually sign stuff
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-cygwin" class="md-nav__link">
+    MSYS2 vs Cygwin
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-scoop" class="md-nav__link">
+    MSYS2 vs Scoop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys2-vs-arch-linux" class="md-nav__link">
+    MSYS2 vs Arch Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -681,7 +741,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Signing-packages.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/docs/what-is-msys2.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -689,38 +749,18 @@
                   
                 
                 
-                  <h1>Signing packages</h1>
-                
-                <p>[ rough draft ]</p>
-<h2 id="have-a-gpg-key">Have a GPG key</h2>
-<p>Create your new key:
-<code>gpg --gen-key</code>
-<a href="https://fedoraproject.org/wiki/Creating_GPG_Keys#Creating_GPG_Keys_Using_the_Command_Line">more...</a> [ TBD: how strong should the key be? ]</p>
-<p>Back it up:
-<code>gpg --export-secret-keys --armor &lt;keyid&gt; &gt; my_key_backup.asc</code>
-<a href="https://fedoraproject.org/wiki/Creating_GPG_Keys#Making_a_Key_Backup_Using_the_Command_Line">more...</a></p>
-<p>In case you need to import the backup later:
-<code>gpg --import &lt;backup_file&gt;</code>, <code>gpg --edit-key &lt;keyid&gt;</code> and <code>trust</code> it ultimately.</p>
-<p>Export the public key:
-<code>gpg --export --armor &lt;keyid&gt; &gt; my_pub_key.asc</code></p>
-<p>If you're going to use the key for GPG/MIME or share your signed packages with other people, you probably need publish your key:
-<code>gpg --send-key &lt;keyid&gt;</code>
-<a href="https://fedoraproject.org/wiki/Creating_GPG_Keys#Exporting_a_GPG_Key_Using_the_Command_Line">more...</a></p>
-<h2 id="import-into-pacman">Import into pacman</h2>
-<p>This is needed because pacman has its own keystore and own rules for trusting keys. Either you get approved as a packager for the MSYS2 project, or you have to import your key manually.</p>
-<p>To import and sign your key with <code>pacman-key</code>:</p>
-<ol>
-<li><code>pacman-key --add &lt;pubkeyfile&gt;</code>, or if it's published <code>pacman-key --recv-keys &lt;keyid&gt;</code></li>
-<li><code>pacman-key --lsign-key &lt;keyid&gt;</code>
-<a href="https://wiki.archlinux.org/index.php/pacman-key#Adding_unofficial_keys">more...</a></li>
-</ol>
-<p>To make your key a trusted developer key for signing official packages, you have to get your key included in the respective keyring and get it signed by at least 3 master keys. The package and repository is <code>msys2-keyring</code> for MSYS2, see <a href="https://github.com/Alexpux/MSYS2-keyring/">Alexpux/msys2-keyring</a>. The package and repository for Arch Linux is <code>archlinux-keyring</code>, see <a href="https://projects.archlinux.org/archlinux-keyring.git/">https://projects.archlinux.org/archlinux-keyring.git/</a>. These packages install keyring files into <code>/usr/share/pacman/keyrings</code> which then can be imported and locally signed in one batch using <code>pacman-key --populate &lt;keyringname&gt;</code>.</p>
-<h2 id="actually-sign-stuff">Actually sign stuff</h2>
-<ul>
-<li>Old packages: <code>gpg --detach-sign --no-armor &lt;pkg&gt;</code> for each package (all such packages need to be re-<code>repo-add</code>ed to make the database aware of the new signatures)</li>
-<li>New packages: just add <code>--sign</code> to makepkg command line or set the related <code>makepkg.conf</code> option</li>
-<li>Databases: <code>repo-add -s -v &lt;db&gt; &lt;pkg&gt;</code></li>
-</ul>
+                <h1 id="what-is-msys2">What is MSYS2?</h1>
+<h2 id="msys2-vs-other-projects">MSYS2 vs Other Projects</h2>
+<h4 id="msys2-vs-wsl">MSYS2 vs WSL</h4>
+<p>TODO</p>
+<h4 id="msys2-vs-chocolatey">MSYS2 vs Chocolatey</h4>
+<p>TODO</p>
+<h4 id="msys2-vs-cygwin">MSYS2 vs Cygwin</h4>
+<p>TODO</p>
+<h4 id="msys2-vs-scoop">MSYS2 vs Scoop</h4>
+<p>TODO</p>
+<h4 id="msys2-vs-arch-linux">MSYS2 vs Arch Linux</h4>
+<p>TODO</p>
                 
               
               
@@ -739,7 +779,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../news/" title="News" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -748,19 +788,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Setting up SSHd
+                News
               </div>
             </div>
           </a>
         
         
-          <a href="../Terminals/" title="Terminals" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Terminals
+                Who Is Using MSYS2?
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
