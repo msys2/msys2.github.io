@@ -15,9 +15,9 @@ It features a package management system, Pacman, to provide easy installation of
 ## Installation Prerequisites
 
 * MSYS2 requires Windows 7 (64 bit) or newer
-* Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2020-06-02/msys2-x86_64-20200602.exe" class="button">msys2-x86_64-20200602.exe</a>
+* Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2020-06-29/msys2-x86_64-20200629.exe" class="button">msys2-x86_64-20200629.exe</a>
 
-     SHA256 checksum: `a4fd4e48f506618ee5eb8bbd439c2b37433edff5ada04c72db82ccbdbca35cd7`
+     SHA256 checksum: `9151542f22907e62696ce335ea9a4e179782610853ed2cfa2cfcfe02cbe0e63f`
 
 
 
