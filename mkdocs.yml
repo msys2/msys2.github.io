@@ -53,6 +53,7 @@ nav:
         # For users of MSYS2 which just use the provided software
         # or develop their software using MSYS2 provided packages/tools.
         - docs/what-is-msys2.md
+        - docs/ci.md
         - docs/who-is-using-msys2.md
         - docs/package-management.md
     - Development:
