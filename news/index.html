@@ -235,6 +235,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-06-29-new-packagers" class="md-nav__link">
+    2020-06-29 - new packagers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-06-15-base-metapackage-separate-pacman-contrib" class="md-nav__link">
     2020-06-15 - base metapackage; separate pacman-contrib
   </a>
@@ -666,6 +673,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-06-29-new-packagers" class="md-nav__link">
+    2020-06-29 - new packagers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-06-15-base-metapackage-separate-pacman-contrib" class="md-nav__link">
     2020-06-15 - base metapackage; separate pacman-contrib
   </a>
@@ -707,6 +721,64 @@
                 
                 
                 <h1 id="news">News</h1>
+<h3 id="2020-06-29-new-packagers">2020-06-29 - new packagers</h3>
+<p>Alexey is stepping down from his role as the main packager and two new packagers
+have been appointed in his place:</p>
+<ul>
+<li>David Macek with <a href="http://keys.gnupg.net/pks/lookup?search=0x87771331B3F1FF5263856A6D974C8BE49078F532&amp;fingerprint=on&amp;op=vindex">signing key 0x9078f532</a></li>
+<li>Christoph Reiter with <a href="http://keys.gnupg.net/pks/lookup?search=0x5F944B027F7FE2091985AA2EFA11531AA0AA7F57fingerprint=on&amp;op=vindex">signing key 0xa0aa7f57</a></li>
+</ul>
+<p>You can see the keys in full without relying on keyservers in the <a href="https://github.com/msys2/MSYS2-keyring/">msys2-keyring
+GitHub repository</a>.</p>
+<p>We have released a new <code>msys2-keyring</code> package from that source (and a new
+installer that includes them) and we are waiting for a bit before uploading new
+databases and packages, but if you don't update the keyring in time, you'll see
+something like this:</p>
+<div class="highlight"><pre><span></span><code>:: Synchronizing package databases...
+downloading mingw32.db...
+downloading mingw32.db.sig...
+error: mingw32: key &quot;4A6129F4E4B84AE46ED7F635628F528CF3053E04&quot; is unknown
+:: Import PGP key 4096R/87771331B3F1FF5263856A6D974C8BE49078F532, &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot;, created: 2018-01-14? [Y/n]
+error: mingw32: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot; is marginal trust
+error: failed to update mingw32 (invalid or corrupted database (PGP signature))
+
+downloading mingw64.db...
+downloading mingw64.db.sig...
+error: mingw64: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot; is marginal trust
+error: failed to update mingw64 (invalid or corrupted database (PGP signature))
+
+downloading msys.db...
+downloading msys.db.sig...
+error: msys: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot; is marginal trust
+error: failed to update msys (invalid or corrupted database (PGP signature))
+error: failed to synchronize all databases
+
+error: mingw32: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot; is marginal trust
+error: mingw64: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot; is marginal trust
+error: msys: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&quot; is marginal trust
+</code></pre></div>
+
+<p>We have prepared the following steps to verify and install the new keyring
+manually after which you should be able to use <code>pacman -Syu</code> again:</p>
+<div class="highlight"><pre><span></span><code>$ curl -O http://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
+$ curl -O http://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig
+
+$ pacman-key --verify msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz{.sig,}
+==&gt; Checking msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig... (detached)
+gpg: Signature made Mon Jun 29 07:36:14 2020 CEST
+gpg:                using DSA key AD351C50AE085775EB59333B5F92EFC1A47D45A1
+gpg: Note: trustdb not writable
+gpg: Good signature from &quot;Alexey Pavlov (Alexpux) &lt;alexpux@gmail.com&gt;&quot; [full]
+
+# pacman -U msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
+</code></pre></div>
+
+<p>If you still see signature errors, resetting your pacman key store might help:</p>
+<div class="highlight"><pre><span></span><code># rm -r /etc/pacman.d/gnupg/
+# pacman-key --init
+# pacman-key --populate msys2
+</code></pre></div>
+
 <h3 id="2020-06-15-base-metapackage-separate-pacman-contrib">2020-06-15 - <code>base</code> metapackage; separate <code>pacman-contrib</code></h3>
 <p>Following a similar change in Arch Linux, the <code>base</code> group was replaced with
 a <code>base</code> metapackage.  If you installed your MSYS2 using an installer older than
