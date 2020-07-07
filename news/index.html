@@ -730,10 +730,10 @@ have been appointed in his place:</p>
 </ul>
 <p>You can see the keys in full without relying on keyservers in the <a href="https://github.com/msys2/MSYS2-keyring/">msys2-keyring
 GitHub repository</a>.</p>
-<p>We have released a new <code>msys2-keyring</code> package from that source (and a new
+<p>We have released a new <em>msys2-keyring</em> package from that source (and a new
 installer that includes them) and we are waiting for a bit before uploading new
-databases and packages, but if you don't update the keyring in time, you'll see
-something like this:</p>
+databases and packages to give people time to update.  If you don't update the
+keyring in time, you'll see something like this:</p>
 <div class="highlight"><pre><span></span><code>:: Synchronizing package databases...
 downloading mingw32.db...
 downloading mingw32.db.sig...
@@ -767,7 +767,6 @@ $ pacman-key --verify msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz{.sig,}
 ==&gt; Checking msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig... (detached)
 gpg: Signature made Mon Jun 29 07:36:14 2020 CEST
 gpg:                using DSA key AD351C50AE085775EB59333B5F92EFC1A47D45A1
-gpg: Note: trustdb not writable
 gpg: Good signature from &quot;Alexey Pavlov (Alexpux) &lt;alexpux@gmail.com&gt;&quot; [full]
 
 # pacman -U msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
