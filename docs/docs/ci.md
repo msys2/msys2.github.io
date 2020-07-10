@@ -7,7 +7,7 @@ GitHub Action which handles everything from installing the latest MSYS2,
 updating it and installing all the packages you need. All you have to do is to
 provide a BASH script that runs your code in the MSYS2 environment.
 
-1) Create a workflow file, see [the GitHub docs forr details](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#creating-a-workflow-file)
+1) Create a workflow file, see [the GitHub docs for details](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#creating-a-workflow-file)
 
 2) Paste the following into your workflow file:
 
