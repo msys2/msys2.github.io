@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#various-breakage" class="md-skip">
+        <a href="#what-to-do-when-pacman-is-telling-me-there-are-conflicts-in-the-file-system" class="md-skip">
           Skip to content
         </a>
       
@@ -462,57 +462,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#various-breakage" class="md-nav__link">
-    Various breakage
-  </a>
-  
-    <nav class="md-nav" aria-label="Various breakage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#update-core-is-missing" class="md-nav__link">
-    update-core is missing.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-command-window-lingers-after-startup" class="md-nav__link">
-    A command window lingers after startup.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#what-to-do-when-pacman-is-telling-me-there-are-conflicts-in-the-file-system" class="md-nav__link">
     What to do when Pacman is telling me there are conflicts in the file system?
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gcc-update-breaks-dependencies-for-ada-and-objc" class="md-nav__link">
-    GCC update breaks dependencies for Ada and ObjC.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pacman-fails-to-install-packages-with-unrecognized-archive-format" class="md-nav__link">
-    Pacman fails to install packages with Unrecognized archive format.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-fails-to-start-after-an-update-installer-fails-to-re-install" class="md-nav__link">
-    MSYS2 fails to start after an update.  Installer fails to re-install.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -696,57 +648,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#various-breakage" class="md-nav__link">
-    Various breakage
-  </a>
-  
-    <nav class="md-nav" aria-label="Various breakage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#update-core-is-missing" class="md-nav__link">
-    update-core is missing.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-command-window-lingers-after-startup" class="md-nav__link">
-    A command window lingers after startup.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#what-to-do-when-pacman-is-telling-me-there-are-conflicts-in-the-file-system" class="md-nav__link">
     What to do when Pacman is telling me there are conflicts in the file system?
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gcc-update-breaks-dependencies-for-ada-and-objc" class="md-nav__link">
-    GCC update breaks dependencies for Ada and ObjC.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pacman-fails-to-install-packages-with-unrecognized-archive-format" class="md-nav__link">
-    Pacman fails to install packages with Unrecognized archive format.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-fails-to-start-after-an-update-installer-fails-to-re-install" class="md-nav__link">
-    MSYS2 fails to start after an update.  Installer fails to re-install.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -772,27 +676,9 @@
                 
                   <h1>FAQ</h1>
                 
-                <h2 id="various-breakage">Various breakage</h2>
-<h4 id="update-core-is-missing"><code>update-core</code> is missing.</h4>
-<p>The function of <code>update-core</code> is transferred to <code>pacman -Syuu</code>.</p>
-<h4 id="a-command-window-lingers-after-startup">A command window lingers after startup.</h4>
-<p>Change the argument <code>/K</code> to <code>/C</code> in all three start menu shortcuts.</p>
+                <p>To read about breaking changes that used to be listed on this page, go to <a href="/news/">News</a>.</p>
 <h4 id="what-to-do-when-pacman-is-telling-me-there-are-conflicts-in-the-file-system">What to do when Pacman is telling me there are conflicts in the file system?</h4>
 <p>This indicates that Pacman isn't sure it is safe to overwrite some files.  This sometimes happens during regular package updates, but could also happen if you installed some software manually (<code>make install</code>, <code>npm install npm -g</code> etc.).  To continue with the operation, pass <code>--overwrite &lt;conflicting_file_path&gt;</code> to the Pacman command line.  For other options, see the <a href="https://wiki.archlinux.org/index.php/Pacman#.22Failed_to_commit_transaction_.28conflicting_files.29.22_error">Arch Linux FAQ entry about Pacman file conflicts</a>.</p>
-<h4 id="gcc-update-breaks-dependencies-for-ada-and-objc">GCC update breaks dependencies for Ada and ObjC.</h4>
-<div class="highlight"><pre><span></span><code>looking for conflicting packages...
-error: failed to prepare transaction (could not satisfy dependencies)
-:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-x86_64-gcc=8.3.0-2&#39; required by mingw-w64-x86_64-gcc-ada
-:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-x86_64-gcc=8.3.0-2&#39; required by mingw-w64-x86_64-gcc-objc
-:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-i686-gcc=8.3.0-2&#39; required by mingw-w64-i686-gcc-ada
-:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency &#39;mingw-w64-i686-gcc=8.3.0-2&#39; required by mingw-w64-i686-gcc-objc
-</code></pre></div>
-
-<p>Ada and ObjC were unsupported for a while in MSYS2 builds due to long-standing issues with the i686 variant.  One had to run <code>pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc</code> and/or <code>pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc</code>, then update.</p>
-<h4 id="pacman-fails-to-install-packages-with-unrecognized-archive-format">Pacman fails to install packages with <code>Unrecognized archive format</code>.</h4>
-<p>For a while, the core packages were prematurely packaged using zstd without giving users time to update to zstd-enabled pacman first.  This should be resolved now.</p>
-<h4 id="msys2-fails-to-start-after-an-update-installer-fails-to-re-install">MSYS2 fails to start after an update.  Installer fails to re-install.</h4>
-<p>Make sure there are no msys2 processes running (especially sshd, dirmngr, gpg-agent, bash, pacman and mintty) and try again.  If that fails, try a reboot.</p>
                 
               
               
