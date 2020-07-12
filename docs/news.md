@@ -66,7 +66,7 @@ If you still see signature errors, resetting your pacman key store might help:
 ```
 
 
-### 2020-06-15 - `base` metapackage; separate `pacman-contrib`
+### 2020-06-15 - New `base` metapackage; `pacman-contrib` is now separate
 
 Following a similar change in Arch Linux, the `base` group was replaced with
 a `base` metapackage.  If you installed your MSYS2 using an installer older than
@@ -80,7 +80,7 @@ Details at [#1979](https://github.com/msys2/MSYS2-packages/pull/1979),
 [#1988](https://github.com/msys2/MSYS2-packages/pull/1988).
 
 
-### 2020-05-31 - Update fails with "could not open file"
+### 2020-05-31 - Update may fail with "could not open file"
 
 In case your update process errors out with something similar to
 
@@ -98,7 +98,7 @@ consider using a newer base which contains a newer pacman which supports zstd:
 https://github.com/msys2/msys2-installer/releases
 
 
-### 2020-05-22 - MSYS2 fails to start after a msys2-runtime upgrade
+### 2020-05-22 - MSYS2 may fail to start after a msys2-runtime upgrade
 
 MSYS2 programs will fail to start if programs started before the update are
 still running in the background (especially sshd, dirmngr, gpg-agent, bash,
@@ -113,3 +113,52 @@ If that fails, try a reboot.
 
 We've improved our update process so this shouldn't happen again with future
 updates.
+
+
+### 2020-05-22 - Pacman may fail to install packages with `Unrecognized archive format`
+
+For a while, the core packages were prematurely packaged using zstd without
+giving users time to update to zstd-enabled pacman first.  This should be
+resolved now.
+
+
+### 2020-05-17 - 32-bit MSYS2 no longer actively supported
+
+32-bit mingw-w64 packages are still supported, this is about the POSIX emulation
+layer, i.e. the runtime, Bash, MinTTY...
+
+After this date, we don't plan on building updated msys-i686 packages nor
+releasing i686 installers anymore.  This is due to increasingly frustrating
+difficulties with limited 32-bit address space, high penetration of 64-bit
+systems and Cygwin (our upstream) starting their way to drop 32-bit support as
+well.
+
+
+### 2019-06-03 - mingw-w64 Ada and ObjC unsupported until further notice
+
+Pacman may say this when updating:
+
+```
+looking for conflicting packages...
+error: failed to prepare transaction (could not satisfy dependencies)
+:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency 'mingw-w64-x86_64-gcc=8.3.0-2' required by mingw-w64-x86_64-gcc-ada
+:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency 'mingw-w64-x86_64-gcc=8.3.0-2' required by mingw-w64-x86_64-gcc-objc
+:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency 'mingw-w64-i686-gcc=8.3.0-2' required by mingw-w64-i686-gcc-ada
+:: installing mingw-w64-x86_64-gcc (9.1.0-1) breaks dependency 'mingw-w64-i686-gcc=8.3.0-2' required by mingw-w64-i686-gcc-objc
+```
+
+Ada and ObjC are currently unsupported in MSYS2 builds due to long-standing
+issues with the i686 variant.  Run
+`pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc` and/or
+`pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc`, then update.
+
+
+### 2016 - Core update integrated into Pacman; `update-core` removed
+
+The function of `update-core` is transferred to `pacman -Syuu`.
+
+
+### 2016 - Command window may linger after startup
+
+Change the argument `/K` to `/C` in all three Start menu shortcuts.
+
