@@ -36,9 +36,9 @@ MSYS2 and what for.
 ## Installation Prerequisites
 
 * MSYS2 requires Windows 7 (64 bit) or newer
-* Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200719.exe" class="button">msys2-x86_64-20200719.exe</a>
+* Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200720.exe" class="button">msys2-x86_64-20200720.exe</a>
 
-     SHA256 checksum: `e341cb1968af1216f4eace5bae0b88966c50ce7c47e44274da4214b37cb9626f`
+     SHA256 checksum: `ad6b58b355a852d9df7c6dc2722d0eca139042cf262ae7363e0a5e7dd2a6c5c9`
 
 
 ## Installation
