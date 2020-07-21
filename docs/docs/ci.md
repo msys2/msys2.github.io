@@ -23,7 +23,7 @@ jobs:
         shell: msys2 {0}
     steps:
       - uses: actions/checkout@v2
-      - uses: msys2/setup-msys2@v1
+      - uses: msys2/setup-msys2@v2
         with:
           msystem: MINGW64
           update: true
@@ -35,7 +35,7 @@ jobs:
 ```
 
 For more details on the 'msys2/setup-msys2' action and all the available options
-see https://github.com/msys2/setup-msys2
+see https://github.com/marketplace/actions/setup-msys2
 
 ## Appveyor
 
