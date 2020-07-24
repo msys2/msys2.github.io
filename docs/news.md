@@ -57,6 +57,24 @@ gpg: Good signature from "Alexey Pavlov (Alexpux) <alexpux@gmail.com>" [full]
 # pacman -U msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
 ```
 
+If you can't even import the key and the above command fails like this:
+
+```
+error: msys: key "4A6129F4E4B84AE46ED7F635628F528CF3053E04" is unknown
+:: Import PGP key 4A6129F4E4B84AE46ED7F635628F528CF3053E04? [Y/n]
+[...]
+error: database 'msys' is not valid (invalid or corrupted database (PGP signature))
+loading packages...
+error: failed to prepare transaction (invalid or corrupted database)
+```
+
+... you have to convince pacman to not care about those databases for a while,
+for example like this:
+
+```
+# pacman -U --config <(echo) msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
+```
+
 If you still see signature errors, resetting your pacman key store might help:
 
 ```
