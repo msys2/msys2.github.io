@@ -52,7 +52,7 @@ Additional discussions:
 
 Build bots:
 
-- https://github.com/eine/setup-msys2
+- https://github.com/msys2/setup-msys2
 - https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
 - https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin
 - https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2
@@ -107,10 +107,13 @@ Another change to consider is to start building only release versions of the cor
 
 Connect with downstreams
 ---
-Altough we are probably not so big among end-users yet, a lot of cross-platform developers know about MSYS2 and support it and even some big projects use it for their official builds.  We should get in touch with them and help them (it is, after all, one of the core goals of the project).
+Altough we are probably not so big among end-users yet, a lot of cross-platform developers know about MSYS2 and support it and even some big projects use it for their official builds.  Some applications and environments use MSYS2 internally.  We should get in touch with them and help them (it is, after all, one of the core goals of the project).
 
 Links:
 
+- https://vcpkg.readthedocs.io/en/latest/maintainers/vcpkg_acquire_msys/
+- https://chocolatey.org/packages/msys2/
+- also see all the buildbots above
 - https://github.com/git-for-windows/git/issues/284
 - https://github.com/Alexpux/Cygwin/pull/8
 - https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows
