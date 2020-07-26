@@ -80,4 +80,5 @@ nav:
         - wiki/Porting.md
         - wiki/Setting-up-SSHd.md
         - wiki/Signing-packages.md
+        - wiki/Sudo.md
         - wiki/Terminals.md
