@@ -1,3 +1,9 @@
+!!! hint
+
+    In case you are experiencing **signature errors** when using pacman you will
+    have to manually install a new keyring package. Please follow [the instructions
+    in our news section](./news.md#2020-06-29-new-packagers).
+
 <header>
 <h1>MSYS2</h1>
 <h2>Software Distribution and Building Platform for Windows</h2>
