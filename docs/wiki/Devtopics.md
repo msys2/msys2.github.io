@@ -119,6 +119,7 @@ Links:
 - https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows
 - https://wiki.qt.io/MSYS2
 - https://www.gtk.org/download/windows.php#MSYS2
+- https://cran.r-project.org/bin/windows/Rtools/
 - https://wiki.inkscape.org/wiki/index.php?title=Compiling_Inkscape_on_Windows_with_MSYS2
 - https://wiki.gnome.org/Initiatives/Windows
 - https://github.com/xmrig/xmrig/wiki/Windows-Build
