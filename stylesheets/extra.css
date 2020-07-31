@@ -65,11 +65,11 @@ a.button {
     border-left: solid 1px #b7b7b7;
     border-right: solid 1px #b7b7b7;
     border-bottom: solid 1px #b3b3b3;
-    color: #303030;
+    color: var(--md-typeset-a-color);
     line-height: 25px;
     font-weight: bold;
     font-size: 12px;
-    padding: 4px 10px;
+    padding: 4px 15px;
     display: inline-block;
     margin-right: 14px;  
     background: #fdfdfd; /* Old browsers */
