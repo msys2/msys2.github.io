@@ -39,30 +39,26 @@ Is Using MSYS2?'](docs/who-is-using-msys2.md) to see which projects are using
 MSYS2 and what for.
 
 
-## Installation Prerequisites
-
-* MSYS2 requires Windows 7 (64 bit) or newer
-* Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200720.exe" class="button">msys2-x86_64-20200720.exe</a>
-
-     SHA256 checksum: `ad6b58b355a852d9df7c6dc2722d0eca139042cf262ae7363e0a5e7dd2a6c5c9`
-
-
 ## Installation
 
-1. Download and run the installer
-2. Click **"Next"**
+1. Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200720.exe" class="button">msys2-x86_64-20200720.exe</a>
+
+    <span style="opacity: 0.6;">SHA256 checksum: `ad6b58b355a852d9df7c6dc2722d0eca139042cf262ae7363e0a5e7dd2a6c5c9`</span>
+
+2. Run the installer. MSYS2 requires 64 bit Windows 7 or newer.
+3. Click **"Next"**
 
     ![First screen of MSYS2 installation](images/1_msys32-start.png)
 
-3. Enter **Installation Folder** (ASCII, no accents, spaces nor symlinks, short path)
+4. Enter **Installation Folder** (ASCII, no accents, spaces nor symlinks, short path)
 
     ![Second screen of MSYS2 installation](images/2_msys32-install_path.png)
 
-4. Tick **Run MSYS2 now**
+5. Tick **Run MSYS2 now**
 
     ![Third screen of MSYS2 installation](images/5_msys2-finish_install.png)
 
-5. Update the package database and core system packages with:
+6. Update the package database and core system packages with:
 
     ```
     pacman -Syu
@@ -70,17 +66,17 @@ MSYS2 and what for.
 
     ![MSYS2 shell with pacman's output about system upgrade](images/6_msys2-update-system.png)
 
-6. If needed, close MSYS2, run it again from Start menu. Update the rest with:
+7. If needed, close MSYS2, run it again from Start menu. Update the rest with:
 
     ```
     pacman -Su
     ```
 
-7. Now **Pacman** is fully committed to the Windows cause :)
+8. Now **Pacman** is fully committed to the Windows cause :)
 
     ![MSYS2 shell with pacman's output about package installation](images/7_msys2-install-freely.png)
 
-8. Take look at [Detailed MSYS2 install guide](wiki/MSYS2-installation.md) for
+9. Take look at [Detailed MSYS2 install guide](wiki/MSYS2-installation.md) for
    troubleshooting and additional details on how to keep your MSYS2 up-to-date.
 
 ##  Authors and Contributors
