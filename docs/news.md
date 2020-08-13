@@ -115,6 +115,7 @@ packages compressed with zstd. In case you are seeing this problem in CI
 consider using a newer base which contains a newer pacman which supports zstd:
 https://github.com/msys2/msys2-installer/releases
 
+You may need to backup a copy of `C:\msys64\usr\bin\pacman.exe` then overwrite it with `msys2-base-x86_64-20******.tar.xz/msys64/usr/bin/pacman.exe`.
 
 ### 2020-05-22 - MSYS2 may fail to start after a msys2-runtime upgrade
 
