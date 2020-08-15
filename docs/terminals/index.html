@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Sudo/">
+        <link rel="canonical" href="https://www.msys2.org/docs/terminals/">
       
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Sudo - MSYS2</title>
+        <title>Terminals - MSYS2</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#do-you-need-sudo" class="md-skip">
+        <a href="#terminals" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Sudo
+              Terminals
             
           </span>
         </div>
@@ -210,10 +210,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Documentation
@@ -237,7 +239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docs/what-is-msys2/" title="What is MSYS2?" class="md-nav__link">
+    <a href="../what-is-msys2/" title="What is MSYS2?" class="md-nav__link">
       What is MSYS2?
     </a>
   </li>
@@ -249,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docs/ci/" title="Using MSYS2 in CI" class="md-nav__link">
+    <a href="../ci/" title="Using MSYS2 in CI" class="md-nav__link">
       Using MSYS2 in CI
     </a>
   </li>
@@ -261,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docs/who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-nav__link">
+    <a href="../who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-nav__link">
       Who Is Using MSYS2?
     </a>
   </li>
@@ -271,11 +273,60 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../docs/terminals/" title="Terminals" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Terminals
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Terminals" class="md-nav__link md-nav__link--active">
       Terminals
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mintty" class="md-nav__link">
+    Mintty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-terminal" class="md-nav__link">
+    Windows Terminal
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -285,7 +336,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../docs/package-management/" title="Package Management" class="md-nav__link">
+    <a href="../package-management/" title="Package Management" class="md-nav__link">
       Package Management
     </a>
   </li>
@@ -354,12 +405,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Old Wiki
@@ -383,7 +432,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Home/" title="Home" class="md-nav__link">
+    <a href="../../wiki/Home/" title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -395,7 +444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
+    <a href="../../wiki/Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
       Contributing to MSYS2
     </a>
   </li>
@@ -407,7 +456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Creating-Packages/" title="Creating Packages" class="md-nav__link">
+    <a href="../../wiki/Creating-Packages/" title="Creating Packages" class="md-nav__link">
       Creating Packages
     </a>
   </li>
@@ -419,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Devtopics/" title="Devtopics" class="md-nav__link">
+    <a href="../../wiki/Devtopics/" title="Devtopics" class="md-nav__link">
       Devtopics
     </a>
   </li>
@@ -431,7 +480,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Distributing/" title="Distributing" class="md-nav__link">
+    <a href="../../wiki/Distributing/" title="Distributing" class="md-nav__link">
       Distributing
     </a>
   </li>
@@ -443,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+    <a href="../../wiki/FAQ/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -455,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
+    <a href="../../wiki/GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
       GDB qtcreator
     </a>
   </li>
@@ -467,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../History/" title="History" class="md-nav__link">
+    <a href="../../wiki/History/" title="History" class="md-nav__link">
       History
     </a>
   </li>
@@ -479,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
+    <a href="../../wiki/How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
       How does MSYS2 differ from Cygwin
     </a>
   </li>
@@ -491,7 +540,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Launchers/" title="Launchers" class="md-nav__link">
+    <a href="../../wiki/Launchers/" title="Launchers" class="md-nav__link">
       Launchers
     </a>
   </li>
@@ -503,7 +552,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
       MSYS2 installation
     </a>
   </li>
@@ -515,7 +564,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
+    <a href="../../wiki/MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
       MSYS2 introduction
     </a>
   </li>
@@ -527,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
+    <a href="../../wiki/MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
       MSYS2 reinstallation
     </a>
   </li>
@@ -539,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Packages/" title="Packages" class="md-nav__link">
+    <a href="../../wiki/Packages/" title="Packages" class="md-nav__link">
       Packages
     </a>
   </li>
@@ -551,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Porting/" title="Porting" class="md-nav__link">
+    <a href="../../wiki/Porting/" title="Porting" class="md-nav__link">
       Porting
     </a>
   </li>
@@ -563,7 +612,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
+    <a href="../../wiki/Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
       Setting up SSHd
     </a>
   </li>
@@ -575,7 +624,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Signing-packages/" title="Signing packages" class="md-nav__link">
+    <a href="../../wiki/Signing-packages/" title="Signing packages" class="md-nav__link">
       Signing packages
     </a>
   </li>
@@ -585,56 +634,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Sudo
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Sudo" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../wiki/Sudo/" title="Sudo" class="md-nav__link">
       Sudo
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#do-you-need-sudo" class="md-nav__link">
-    Do you need Sudo?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-get-sudo" class="md-nav__link">
-    How to get Sudo
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -644,7 +648,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Terminals/" title="Terminals" class="md-nav__link">
+    <a href="../../wiki/Terminals/" title="Terminals" class="md-nav__link">
       Terminals
     </a>
   </li>
@@ -669,6 +673,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -679,15 +685,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#do-you-need-sudo" class="md-nav__link">
-    Do you need Sudo?
+  <a href="#mintty" class="md-nav__link">
+    Mintty
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-get-sudo" class="md-nav__link">
-    How to get Sudo
+  <a href="#windows-terminal" class="md-nav__link">
+    Windows Terminal
   </a>
   
 </li>
@@ -704,7 +710,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/wiki/Sudo.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/docs/terminals.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -712,12 +718,65 @@
                   
                 
                 
-                  <h1>Sudo</h1>
-                
-                <h2 id="do-you-need-sudo">Do you need Sudo?</h2>
-<p>In regular GNU/Linux environments, people use <code>sudo</code> to perform administrative tasks on their system, e.g. installing and removing packages, editing system configuration.  Since the most common way of installing MSYS2 results in the MSYS2 root directory being writable by the user, these tasks can be performed without doing anything special.  If you made your MSYS2 root read only for users or want to run Windows administrative tasks from MSYS2, continue reading.</p>
-<h2 id="how-to-get-sudo">How to get Sudo</h2>
-<p>Since MSYS2 doesn't support all the things a classic Sudo needs (setuid? PAM?), we need a replacement.  One such replacement that doesn't seem to suffer from horrible security flaws is <a href="https://github.com/imachug/win-sudo"><em>win-sudo</em></a>.  It doesn't support (as of May 2020) the various different arguments (<code>-H</code>, <code>-u</code> etc.), but it does work in the most common use case of <code>sudo foo</code> running <code>foo</code> with elevated privileges.  The authorization is handled by UAC, same as any other Windows program.</p>
+                <h1 id="terminals">Terminals</h1>
+<h2 id="mintty">Mintty</h2>
+<p><img align="right" alt="image" src="../mintty.png" width="45%" /></p>
+<p><img align="right" alt="image" src="../launchers.png" style="clear:both" width="45%" /></p>
+<p><a href="https://mintty.github.io">Mintty</a> is the default terminal application in MSYS2
+and is included in the installer. We also include some custom Mintty integration
+by providing separate launchers with corresponding .ini configuration files
+(msys2{.exe,.ini}/mingw32{.exe,.ini}/mingw64{.exe,.ini}) for all the MSYS2
+environments, so you can easily configure your environments and pin the
+launchers to your Windows taskbar.</p>
+<p>See <a href="https://github.com/msys2/msys2-launcher">https://github.com/msys2/msys2-launcher</a> and <a href="https://mintty.github.io">https://mintty.github.io</a> for
+more details.<br style="clear:both"/></p>
+<h2 id="windows-terminal">Windows Terminal</h2>
+<p><img align="right" alt="image" src="../winterm.png" width="45%" /></p>
+<p>The new Windows Terminal application, which by default supports cmd, powershell
+and WSL can also be extended to support a MSYS2 shell.</p>
+<ul>
+<li>Get it via the <a href="https://aka.ms/terminal">Windows app store</a> if you don't have
+  it installed already.</li>
+<li>In the tab dropdown menu select "Settings" which opens a code editor showing
+  a JSON configuration file.</li>
+<li>Insert the example profiles shown below under the <code>profiles</code> key. Note that
+  the examples assume that you have MSYS2 installed under <code>C:\msys64</code>.</li>
+<li>You can make one of the MSYS2 profiles the default by setting the <code>defaultProfile</code>
+  key to the <code>name</code> value of one of the profile entries.</li>
+</ul>
+<p>For more info on the different profile settings see
+<a href="https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings">https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings</a> <br style="clear:both"/></p>
+<div class="highlight"><pre><span></span><code><span class="err">//</span> <span class="err">This</span> <span class="err">makes</span> <span class="err">MINGW</span><span class="mi">64</span> <span class="err">the</span> <span class="err">default</span> <span class="err">shell</span>
+<span class="s2">&quot;defaultProfile&quot;</span><span class="err">:</span> <span class="s2">&quot;MINGW64 / MSYS2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;profiles&quot;</span><span class="err">:</span> <span class="p">[</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MINGW64 / MSYS2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/mingw64.ico&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MINGW32 / MSYS2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/mingw32.ico&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MSYS / MSYS2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2.ico&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
+  <span class="p">},</span>
+  <span class="err">//</span> <span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div>
                 
               
               
@@ -736,7 +795,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Signing-packages/" title="Signing packages" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -745,19 +804,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Signing packages
+                Who Is Using MSYS2?
               </div>
             </div>
           </a>
         
         
-          <a href="../Terminals/" title="Terminals" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../package-management/" title="Package Management" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Terminals
+                Package Management
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
