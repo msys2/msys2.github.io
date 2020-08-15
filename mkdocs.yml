@@ -26,6 +26,7 @@ repo_url: https://github.com/msys2/msys2.github.io
 edit_uri: edit/source/docs/
 
 markdown_extensions:
+    - attr_list
     - codehilite
     - sane_lists
     - admonition
@@ -55,6 +56,7 @@ nav:
         - docs/what-is-msys2.md
         - docs/ci.md
         - docs/who-is-using-msys2.md
+        - docs/terminals.md
         - docs/package-management.md
     - Development:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
