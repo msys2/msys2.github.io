@@ -747,35 +747,41 @@ and WSL can also be extended to support a MSYS2 shell.</p>
 <p>For more info on the different profile settings see
 <a href="https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings">https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings</a> <br style="clear:both"/></p>
 <div class="highlight"><pre><span></span><code><span class="err">//</span> <span class="err">This</span> <span class="err">makes</span> <span class="err">MINGW</span><span class="mi">64</span> <span class="err">the</span> <span class="err">default</span> <span class="err">shell</span>
-<span class="s2">&quot;defaultProfile&quot;</span><span class="err">:</span> <span class="s2">&quot;MINGW64 / MSYS2&quot;</span><span class="err">,</span>
-<span class="s2">&quot;profiles&quot;</span><span class="err">:</span> <span class="p">[</span>
-  <span class="err">//</span> <span class="err">...</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MINGW64 / MSYS2&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/mingw64.ico&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MINGW32 / MSYS2&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/mingw32.ico&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MSYS / MSYS2&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2.ico&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
-  <span class="p">},</span>
-  <span class="err">//</span> <span class="err">...</span>
-<span class="p">]</span>
+<span class="s2">&quot;defaultProfile&quot;</span><span class="err">:</span> <span class="s2">&quot;{17da3cac-b318-431e-8a3e-7fcdefe6d114}&quot;</span><span class="err">,</span>
+<span class="s2">&quot;profiles&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;list&quot;</span><span class="p">:</span>
+  <span class="p">[</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;guid&quot;</span><span class="p">:</span> <span class="s2">&quot;{17da3cac-b318-431e-8a3e-7fcdefe6d114}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MINGW64 / MSYS2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/mingw64.ico&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;guid&quot;</span><span class="p">:</span> <span class="s2">&quot;{2d51fdc4-a03b-4efe-81bc-722b7f6f3820}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MINGW32 / MSYS2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/mingw32.ico&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;guid&quot;</span><span class="p">:</span> <span class="s2">&quot;{71160544-14d8-4194-af25-d05feeac7233}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MSYS / MSYS2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;commandline&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;C:/msys64/msys2.ico&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fontFace&quot;</span><span class="p">:</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">9</span>
+    <span class="p">},</span>
+    <span class="err">//</span> <span class="err">...</span>
+  <span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
                 
               
