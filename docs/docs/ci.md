@@ -47,13 +47,13 @@ to update MSYS2 first. For this you need to run the following commands:
 
 ```powershell
 # Update MSYS2
-C:\msys64\user\bin\bash -lc "pacman -Syuu"  # Core update (in case any core packages are outdated)
-C:\msys64\user\bin\bash -lc "pacman -Syuu"  # Normal update
+C:\msys64\usr\bin\bash -lc "pacman -Syuu"  # Core update (in case any core packages are outdated)
+C:\msys64\usr\bin\bash -lc "pacman -Syuu"  # Normal update
 
 # Then run your code
 $env:CHERE_INVOKING = 'yes'  # Preserve the current working directory
 $env:MSYSTEM = 'MINGW64'  # Start a 64 bit Mingw environment
-C:\msys64\user\bin\bash -lc "./ci-build.sh"
+C:\msys64\usr\bin\bash -lc "./ci-build.sh"
 ```
 
 ## Other Systems
