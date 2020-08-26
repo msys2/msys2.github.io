@@ -41,34 +41,40 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
 
 ```json
 // This makes MINGW64 the default shell
-"defaultProfile": "MINGW64 / MSYS2",
-"profiles": [
-  // ...
-  {
-    "name": "MINGW64 / MSYS2",
-    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
-    "startingDirectory": "C:/msys64/home/%USERNAME%",
-    "icon": "C:/msys64/mingw64.ico",
-    "fontFace": "Lucida Console",
-    "fontSize": 9
-  },
-  {
-    "name": "MINGW32 / MSYS2",
-    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
-    "startingDirectory": "C:/msys64/home/%USERNAME%",
-    "icon": "C:/msys64/mingw32.ico",
-    "fontFace": "Lucida Console",
-    "fontSize": 9
-  },
-  {
-    "name": "MSYS / MSYS2",
-    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
-    "startingDirectory": "C:/msys64/home/%USERNAME%",
-    "icon": "C:/msys64/msys2.ico",
-    "fontFace": "Lucida Console",
-    "fontSize": 9
-  },
-  // ...
-]
+"defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+"profiles": {
+  "list":
+  [
+    // ...
+    {
+      "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+      "name": "MINGW64 / MSYS2",
+      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
+      "startingDirectory": "C:/msys64/home/%USERNAME%",
+      "icon": "C:/msys64/mingw64.ico",
+      "fontFace": "Lucida Console",
+      "fontSize": 9
+    },
+    {
+      "guid": "{2d51fdc4-a03b-4efe-81bc-722b7f6f3820}",
+      "name": "MINGW32 / MSYS2",
+      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
+      "startingDirectory": "C:/msys64/home/%USERNAME%",
+      "icon": "C:/msys64/mingw32.ico",
+      "fontFace": "Lucida Console",
+      "fontSize": 9
+    },
+    {
+      "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+      "name": "MSYS / MSYS2",
+      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+      "startingDirectory": "C:/msys64/home/%USERNAME%",
+      "icon": "C:/msys64/msys2.ico",
+      "fontFace": "Lucida Console",
+      "fontSize": 9
+    },
+    // ...
+  ]
+}
 ```
 
