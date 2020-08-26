@@ -51,14 +51,14 @@ To get you started, you can try just re-building an existing package. This may a
 
 An example of fetching the **msys** repository source, building and then installing a package from it is:
 
-    git clone "https://github.com/Alexpux/MSYS2-packages"
+    git clone "https://github.com/msys2/MSYS2-packages"
     cd MSYS2-packages/flex
     makepkg -sCLf
     pacman -U flex-*.pkg.tar.xz
 
 An example of fetching the **mingw** repository source, building and then installing a package from it is:
 
-    git clone "https://github.com/Alexpux/MINGW-packages"
+    git clone "https://github.com/msys2/MINGW-packages"
     cd MINGW-packages/mingw-w64-python3
     makepkg-mingw -sCLf
     pacman -U mingw-w64-*-python3-*-any.pkg.tar.xz
