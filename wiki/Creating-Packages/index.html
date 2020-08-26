@@ -1092,7 +1092,7 @@
 <h2 id="re-building-a-package">Re-building a package</h2>
 <p>To get you started, you can try just re-building an existing package. This may also be helpful if you need to diagnose an issue and need the debugging symbols.</p>
 <p>An example of fetching the <strong>msys</strong> repository source, building and then installing a package from it is:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">git clone &quot;https://github.com/Alexpux/MSYS2-packages&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="err">git clone &quot;https://github.com/msys2/MSYS2-packages&quot;</span>
 <span class="err">cd MSYS2-packages/flex</span>
 <span class="err">makepkg -sCLf</span>
 <span class="err">pacman -U flex-*.pkg.tar.xz</span>
@@ -1100,7 +1100,7 @@
 
 
 <p>An example of fetching the <strong>mingw</strong> repository source, building and then installing a package from it is:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">git clone &quot;https://github.com/Alexpux/MINGW-packages&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="err">git clone &quot;https://github.com/msys2/MINGW-packages&quot;</span>
 <span class="err">cd MINGW-packages/mingw-w64-python3</span>
 <span class="err">makepkg-mingw -sCLf</span>
 <span class="err">pacman -U mingw-w64-*-python3-*-any.pkg.tar.xz</span>
