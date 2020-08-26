@@ -770,13 +770,13 @@ see <a href="https://www.appveyor.com/docs/windows-images-software/">https://www
 <p>In case you want to update the MSYS2 installation and install packages you need
 to update MSYS2 first. For this you need to run the following commands:</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Update MSYS2</span>
-<span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">user</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;pacman -Syuu&quot;</span>  <span class="c"># Core update (in case any core packages are outdated)</span>
-<span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">user</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;pacman -Syuu&quot;</span>  <span class="c"># Normal update</span>
+<span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;pacman -Syuu&quot;</span>  <span class="c"># Core update (in case any core packages are outdated)</span>
+<span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;pacman -Syuu&quot;</span>  <span class="c"># Normal update</span>
 
 <span class="c"># Then run your code</span>
 <span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
 <span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
-<span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">user</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;./ci-build.sh&quot;</span>
+<span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;./ci-build.sh&quot;</span>
 </code></pre></div>
 
 <h2 id="other-systems">Other Systems</h2>
