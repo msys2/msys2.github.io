@@ -41,9 +41,9 @@ MSYS2 and what for.
 
 ## Installation
 
-1. Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200720.exe" class="button">msys2-x86_64-20200720.exe</a>
+1. Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200903.exe" class="button">msys2-x86_64-20200903.exe</a>
 
-    <span style="opacity: 0.6;">SHA256 checksum: `ad6b58b355a852d9df7c6dc2722d0eca139042cf262ae7363e0a5e7dd2a6c5c9`</span>
+    <span style="opacity: 0.6;">SHA256 checksum: `1424eee8175ad63e0db08e1b7ac47f90a2ea43df0a1b53d9a433849fcc5f6762`</span>
 
 2. Run the installer. MSYS2 requires 64 bit Windows 7 or newer.
 3. Click **"Next"**
