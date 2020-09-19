@@ -34,7 +34,7 @@ and WSL can also be extended to support a MSYS2 shell.
 * Insert the example profiles shown below under the `profiles` key. Note that
   the examples assume that you have MSYS2 installed under `C:\msys64`.
 * You can make one of the MSYS2 profiles the default by setting the `defaultProfile`
-  key to the `name` value of one of the profile entries.
+  key to the `guid` value of one of the profile entries.
 
 For more info on the different profile settings see
 https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings <br style="clear:both"/>
