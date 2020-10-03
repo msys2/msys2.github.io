@@ -34,7 +34,7 @@ For more details see ['What is MSYS2?'](docs/what-is-msys2.md) which also
 compares MSYS2 to other software distributions and development environments like
 [Cygwin](https://cygwin.com),
 [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux),
-[Chololatey](https://chocolatey.org/), [Scoop](https://scoop.sh/), ... and ['Who
+[Chocolatey](https://chocolatey.org/), [Scoop](https://scoop.sh/), ... and ['Who
 Is Using MSYS2?'](docs/who-is-using-msys2.md) to see which projects are using
 MSYS2 and what for.
 
