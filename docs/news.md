@@ -1,5 +1,13 @@
 # News
 
+### 2020-10-07 - server downtime
+
+From Friday 2nd to Wednesday 10th, the main hosting at repo.msys2.org was down.
+The server unfortunately completely died and the hosting had to be moved
+elsewhere.  We thank Diablo-D3 for having provided the hardware and hosting.  If
+you notice anything wrong with repo.msys2.org since the move, please tell us.
+
+
 ### 2020-06-29 - new packagers
 
 Alexey is stepping down from his role as the main packager and two new packagers

@@ -1,17 +1,3 @@
-!!! hint
-
-    The primary download server is currently (since Oct 2nd) down.  We are working
-    on bringing it back up.  Pacman has preconfigured mirrors so package installations
-    should work, albeit with timeouts.  The setup package can be downloaded from
-    [SourceForge](https://sourceforge.net/projects/msys2/files/Base/x86_64/) or
-    [GitHub](https://github.com/msys2/msys2-installer/releases/tag/2020-09-03).
-
-!!! hint
-
-    In case you are experiencing **signature errors** when using pacman you will
-    have to manually install a new keyring package. Please follow [the instructions
-    in our news section](./news.md#2020-06-29-new-packagers).
-
 <header>
 <h1>MSYS2</h1>
 <h2>Software Distribution and Building Platform for Windows</h2>

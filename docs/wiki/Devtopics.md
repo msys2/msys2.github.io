@@ -9,59 +9,41 @@ People are sometimes (often?) confused about where to get information about the 
 
 We currently have:
 
-- [GitHub org](https://github.com/msys2) for our main repositories
+- [GitHub org](https://github.com/msys2) for our main repositories (it had the wiki in the past)
 - [a secondary GitHub org](https://github.com/msys2-contrib) for contributions upstream and as a working place
-- other GitHub repos for source and issue tracking, [msys2-pacman](https://github.com/Alexpux/MSYS2-pacman), [msys2-keyring](https://github.com/Alexpux/MSYS2-keyring), [path_convert](https://github.com/Alexpux/path_convert)
-- [SourceForge project](https://sourceforge.net/p/msys2/) for mailing lists and as a secondary mirror (it had forums and the wiki in the past)
-- https://msys2.org (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions [with source on GitHub](https://github.com/msys2/msys2.github.io)
+- other GitHub repos for source and issue tracking, [msys2-pacman](https://github.com/Alexpux/MSYS2-pacman)
+- [SourceForge project](https://sourceforge.net/p/msys2/) for mailing lists and as a mirror (it had forums and the wiki in the past)
+- https://msys2.org (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions and the documentation [with source on GitHub](https://github.com/msys2/msys2.github.io)
 - [an online repo browser](https://packages.msys2.org/), hosted by @lazka
-- http://repo.msys2.org as the primary mirror, hosted by Diablo-D3
+- http://repo.msys2.org as the source for mirrors and a canonical location for installers, hosted by @elieux
 
 What to do:
 
 - migrate tickets from SF to GH; close them on SF afterwards
 - migrate forums and discussion from SF to GH
-- move active MSYS2-related repositories on GH to the msys2 org, including issues (Alexpux/..., maybe Elieux/msys2-launcher and other contributed tools)
-- maybe find more (fast and reliable) mirrors so we can ditch SF file hosting
+- move active MSYS2-related repositories on GH to the msys2 org, including issues
+- find more (fast and reliable) mirrors
 - try moving the mailing list including archives from SF, see [mbox export](https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/); can we use Sourceware? can we have our own (some say that mailman on our own server would be spam-filtered badly)? notify list members of the change (possibly set up a redirect for some time)
 - change links in packages ("submit bug" URLs) and elsewhere
 
 
 Off-load package building and uploading
 ---
-Currently, Alexey is responsible for building and uploading packages (both new and updated ones). Approving packages for inclusion is done mostly by him and sometimes by other contributors. We need to delegate the burden of building packages to more people so that Alexey has time for other stuff and updates are not put on hold in times of his unavailability. The build queue is maintained by a script and displayed separately [for new packages](https://packages.msys2.org/new) and [for updated packages](https://packages.msys2.org/queue).
+For a long time, @alexpux was responsible for building all packages.  Ray, Renato, Qian, and other people had tried to use various CI platforms, with varying results.  Since 2020, @lazka and @eine have set up a CI to automatically build most packages in https://github.com/msys2/msys2-autobuild in cooperation with an API on https://packages.msys2.org/.  Now @elieux is only responsible for uploading and signing them.
 
-A buildbot for uploading packages would be the best solution, but it may take a long time to get one. Ray, Renato, Qian, and other people have tried to use AppVeyor for building MSYS2 packages, with varying results. It currently isn't completely feasible for us due to their time limits on individual builds (GCC and Qt are the biggest offenders here).
-
-We have buildbot integrations with both AppVeyor and Azure for checking pull requests, merges and pushes to mingw-packages and msys2-packages.
+Approving pull requests for packages is done by a number of people.
 
 What to do:
 
 - write down packaging rules (rules inherited from Arch Linux, rules about `pkgbase`, `pkgname`, `description`, FHS, 32+64 bits, ...)
 - prepare automated checks to prevent mistakes (an idea: compare package file list between latest and new version of the package)
-- agree on a way to make sure the repository is updated by at most one person at a time
-- designate packagers and sign packager keys if necessary
-- get a buildbot that can build all packages
-- make the buildbot automatically upload packages
+- automate signing and uploading of packages?
 - also work towards reproducible builds (https://reproducible-builds.org/)
-
-Additional discussions:
-
-- [#2616](https://github.com/Alexpux/MINGW-packages/issues/2616)
-- [#2006](https://github.com/Alexpux/MINGW-packages/issues/2006)
-
-Build bots:
-
-- https://github.com/msys2/setup-msys2
-- https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
-- https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin
-- https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2
-- https://circleci.com/docs/2.0/hello-world-windows/
 
 
 Official release
 ---
-MSYS2 is currently marketed as a potentially unstable developer tool and it's not yet advertised in any way to end users. People are sometimes confusing it (in their minds, or in their words, or both) with MSys, much like MinGW-w64 is confused with MinGW.org. The naming clash of MSYS2 the distribution vs. msys2 the emulation layer is also unfortunate (again reminiscent of the MinGW-w64 projects vs. its distributions).
+MSYS2 is quite known but it's not obvious e.g. how stable and reliable it's supposed to be.  People are sometimes confusing it (in their minds, or in their words, or both) with MSys, much like MinGW-w64 is confused with MinGW.org.  The naming clash of MSYS2 the distribution vs. msys2 the emulation layer is also unfortunate (again reminiscent of the MinGW-w64 projects vs. its distributions).
 
 What to do:
 
@@ -113,7 +95,11 @@ Links:
 
 - https://vcpkg.readthedocs.io/en/latest/maintainers/vcpkg_acquire_msys/
 - https://chocolatey.org/packages/msys2/
-- also see all the buildbots above
+- https://github.com/msys2/setup-msys2
+- https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
+- https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin
+- https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2
+- https://circleci.com/docs/2.0/hello-world-windows/
 - https://github.com/git-for-windows/git/issues/284
 - https://github.com/Alexpux/Cygwin/pull/8
 - https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows
@@ -141,7 +127,7 @@ What to do to get them:
 
 Links:
 
-- https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2
+- https://www.msys2.org/wiki/Contributing-to-MSYS2/
 
 
 Fix pacman errors wrt. conflicts in `bin/foo` vs `bin/foo.exe`
@@ -181,7 +167,7 @@ Links:
 - [UnxUtils](http://unxutils.sourceforge.net/)
 - [GNU on Windows](https://github.com/bmatzelle/gow/wiki)
 - [mksh/Win32](https://www.mirbsd.org/permalinks/wlog-10_e20130718-tg.htm)
-- [busybox-w32](https://frippery.org/busybox/) and [MinGit](https://github.com/git-for-windows/git/wiki/MinGit#experimental-busybox-based-mingit)
+- [busybox-w32](https://frippery.org/busybox/) and [MinGit](https://github.com/git-for-windows/git/wiki/MinGit#experimental-busybox-based-mingit) and [mingw-w64-busybox](https://github.com/git-for-windows/MINGW-packages/tree/main/mingw-w64-busybox)
 
 
 Midipix
