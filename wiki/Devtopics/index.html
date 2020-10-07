@@ -832,52 +832,35 @@
 <p>@alexpux doesn't agree, but @elieux believes one issue tracker for the whole project is better than separate ones. <a href="https://github.com/git-for-windows/git/issues">Git for Windows</a> sets a particularly good example.</p>
 <p>We currently have:</p>
 <ul>
-<li><a href="https://github.com/msys2">GitHub org</a> for our main repositories</li>
+<li><a href="https://github.com/msys2">GitHub org</a> for our main repositories (it had the wiki in the past)</li>
 <li><a href="https://github.com/msys2-contrib">a secondary GitHub org</a> for contributions upstream and as a working place</li>
-<li>other GitHub repos for source and issue tracking, <a href="https://github.com/Alexpux/MSYS2-pacman">msys2-pacman</a>, <a href="https://github.com/Alexpux/MSYS2-keyring">msys2-keyring</a>, <a href="https://github.com/Alexpux/path_convert">path_convert</a></li>
-<li><a href="https://sourceforge.net/p/msys2/">SourceForge project</a> for mailing lists and as a secondary mirror (it had forums and the wiki in the past)</li>
-<li><a href="https://msys2.org">https://msys2.org</a> (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions <a href="https://github.com/msys2/msys2.github.io">with source on GitHub</a></li>
+<li>other GitHub repos for source and issue tracking, <a href="https://github.com/Alexpux/MSYS2-pacman">msys2-pacman</a></li>
+<li><a href="https://sourceforge.net/p/msys2/">SourceForge project</a> for mailing lists and as a mirror (it had forums and the wiki in the past)</li>
+<li><a href="https://msys2.org">https://msys2.org</a> (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions and the documentation <a href="https://github.com/msys2/msys2.github.io">with source on GitHub</a></li>
 <li><a href="https://packages.msys2.org/">an online repo browser</a>, hosted by @lazka</li>
-<li><a href="http://repo.msys2.org">http://repo.msys2.org</a> as the primary mirror, hosted by Diablo-D3</li>
+<li><a href="http://repo.msys2.org">http://repo.msys2.org</a> as the source for mirrors and a canonical location for installers, hosted by @elieux</li>
 </ul>
 <p>What to do:</p>
 <ul>
 <li>migrate tickets from SF to GH; close them on SF afterwards</li>
 <li>migrate forums and discussion from SF to GH</li>
-<li>move active MSYS2-related repositories on GH to the msys2 org, including issues (Alexpux/..., maybe Elieux/msys2-launcher and other contributed tools)</li>
-<li>maybe find more (fast and reliable) mirrors so we can ditch SF file hosting</li>
+<li>move active MSYS2-related repositories on GH to the msys2 org, including issues</li>
+<li>find more (fast and reliable) mirrors</li>
 <li>try moving the mailing list including archives from SF, see <a href="https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/">mbox export</a>; can we use Sourceware? can we have our own (some say that mailman on our own server would be spam-filtered badly)? notify list members of the change (possibly set up a redirect for some time)</li>
 <li>change links in packages ("submit bug" URLs) and elsewhere</li>
 </ul>
 <h2 id="off-load-package-building-and-uploading">Off-load package building and uploading</h2>
-<p>Currently, Alexey is responsible for building and uploading packages (both new and updated ones). Approving packages for inclusion is done mostly by him and sometimes by other contributors. We need to delegate the burden of building packages to more people so that Alexey has time for other stuff and updates are not put on hold in times of his unavailability. The build queue is maintained by a script and displayed separately <a href="https://packages.msys2.org/new">for new packages</a> and <a href="https://packages.msys2.org/queue">for updated packages</a>.</p>
-<p>A buildbot for uploading packages would be the best solution, but it may take a long time to get one. Ray, Renato, Qian, and other people have tried to use AppVeyor for building MSYS2 packages, with varying results. It currently isn't completely feasible for us due to their time limits on individual builds (GCC and Qt are the biggest offenders here).</p>
-<p>We have buildbot integrations with both AppVeyor and Azure for checking pull requests, merges and pushes to mingw-packages and msys2-packages.</p>
+<p>For a long time, @alexpux was responsible for building all packages.  Ray, Renato, Qian, and other people had tried to use various CI platforms, with varying results.  Since 2020, @lazka and @eine have set up a CI to automatically build most packages in <a href="https://github.com/msys2/msys2-autobuild">https://github.com/msys2/msys2-autobuild</a> in cooperation with an API on <a href="https://packages.msys2.org/">https://packages.msys2.org/</a>.  Now @elieux is only responsible for uploading and signing them.</p>
+<p>Approving pull requests for packages is done by a number of people.</p>
 <p>What to do:</p>
 <ul>
 <li>write down packaging rules (rules inherited from Arch Linux, rules about <code>pkgbase</code>, <code>pkgname</code>, <code>description</code>, FHS, 32+64 bits, ...)</li>
 <li>prepare automated checks to prevent mistakes (an idea: compare package file list between latest and new version of the package)</li>
-<li>agree on a way to make sure the repository is updated by at most one person at a time</li>
-<li>designate packagers and sign packager keys if necessary</li>
-<li>get a buildbot that can build all packages</li>
-<li>make the buildbot automatically upload packages</li>
+<li>automate signing and uploading of packages?</li>
 <li>also work towards reproducible builds (<a href="https://reproducible-builds.org/">https://reproducible-builds.org/</a>)</li>
 </ul>
-<p>Additional discussions:</p>
-<ul>
-<li><a href="https://github.com/Alexpux/MINGW-packages/issues/2616">#2616</a></li>
-<li><a href="https://github.com/Alexpux/MINGW-packages/issues/2006">#2006</a></li>
-</ul>
-<p>Build bots:</p>
-<ul>
-<li><a href="https://github.com/msys2/setup-msys2">https://github.com/msys2/setup-msys2</a></li>
-<li><a href="https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md">https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md</a> (<a href="https://github.com/actions/virtual-environments/pull/632">https://github.com/actions/virtual-environments/pull/632</a> + <a href="https://github.com/actions/virtual-environments/pull/630">https://github.com/actions/virtual-environments/pull/630</a>)</li>
-<li><a href="https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin">https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin</a></li>
-<li><a href="https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2">https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2</a></li>
-<li><a href="https://circleci.com/docs/2.0/hello-world-windows/">https://circleci.com/docs/2.0/hello-world-windows/</a></li>
-</ul>
 <h2 id="official-release">Official release</h2>
-<p>MSYS2 is currently marketed as a potentially unstable developer tool and it's not yet advertised in any way to end users. People are sometimes confusing it (in their minds, or in their words, or both) with MSys, much like MinGW-w64 is confused with MinGW.org. The naming clash of MSYS2 the distribution vs. msys2 the emulation layer is also unfortunate (again reminiscent of the MinGW-w64 projects vs. its distributions).</p>
+<p>MSYS2 is quite known but it's not obvious e.g. how stable and reliable it's supposed to be.  People are sometimes confusing it (in their minds, or in their words, or both) with MSys, much like MinGW-w64 is confused with MinGW.org.  The naming clash of MSYS2 the distribution vs. msys2 the emulation layer is also unfortunate (again reminiscent of the MinGW-w64 projects vs. its distributions).</p>
 <p>What to do:</p>
 <ul>
 <li>decide if there's a need for a different name for <em>the whole thing</em>; if yes, decide upon one</li>
@@ -919,7 +902,11 @@
 <ul>
 <li><a href="https://vcpkg.readthedocs.io/en/latest/maintainers/vcpkg_acquire_msys/">https://vcpkg.readthedocs.io/en/latest/maintainers/vcpkg_acquire_msys/</a></li>
 <li><a href="https://chocolatey.org/packages/msys2/">https://chocolatey.org/packages/msys2/</a></li>
-<li>also see all the buildbots above</li>
+<li><a href="https://github.com/msys2/setup-msys2">https://github.com/msys2/setup-msys2</a></li>
+<li><a href="https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md">https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md</a> (<a href="https://github.com/actions/virtual-environments/pull/632">https://github.com/actions/virtual-environments/pull/632</a> + <a href="https://github.com/actions/virtual-environments/pull/630">https://github.com/actions/virtual-environments/pull/630</a>)</li>
+<li><a href="https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin">https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin</a></li>
+<li><a href="https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2">https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2</a></li>
+<li><a href="https://circleci.com/docs/2.0/hello-world-windows/">https://circleci.com/docs/2.0/hello-world-windows/</a></li>
 <li><a href="https://github.com/git-for-windows/git/issues/284">https://github.com/git-for-windows/git/issues/284</a></li>
 <li><a href="https://github.com/Alexpux/Cygwin/pull/8">https://github.com/Alexpux/Cygwin/pull/8</a></li>
 <li><a href="https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows">https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows</a></li>
@@ -944,7 +931,7 @@
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2">https://github.com/msys2/msys2/wiki/Contributing-to-MSYS2</a></li>
+<li><a href="https://www.msys2.org/wiki/Contributing-to-MSYS2/">https://www.msys2.org/wiki/Contributing-to-MSYS2/</a></li>
 </ul>
 <h2 id="fix-pacman-errors-wrt-conflicts-in-binfoo-vs-binfooexe">Fix pacman errors wrt. conflicts in <code>bin/foo</code> vs <code>bin/foo.exe</code></h2>
 <p>The runtime emulates extension-less executables by also looking for <code>.exe</code> on various FS calls. (There are more of these hacks, for example for symlink emulation.) This is causing pacman to complain when two packages independently provide both <code>foo</code> and <code>foo.exe</code>, or even worse <code>dir/</code> and <code>dir.exe</code>. People have to either disregard these conflicts with <code>--force</code>or (re-)install packages in a specific order.</p>
@@ -978,7 +965,7 @@
 <li><a href="http://unxutils.sourceforge.net/">UnxUtils</a></li>
 <li><a href="https://github.com/bmatzelle/gow/wiki">GNU on Windows</a></li>
 <li><a href="https://www.mirbsd.org/permalinks/wlog-10_e20130718-tg.htm">mksh/Win32</a></li>
-<li><a href="https://frippery.org/busybox/">busybox-w32</a> and <a href="https://github.com/git-for-windows/git/wiki/MinGit#experimental-busybox-based-mingit">MinGit</a></li>
+<li><a href="https://frippery.org/busybox/">busybox-w32</a> and <a href="https://github.com/git-for-windows/git/wiki/MinGit#experimental-busybox-based-mingit">MinGit</a> and <a href="https://github.com/git-for-windows/MINGW-packages/tree/main/mingw-w64-busybox">mingw-w64-busybox</a></li>
 </ul>
 <h2 id="midipix">Midipix</h2>
 <p>Maybe?</p>
