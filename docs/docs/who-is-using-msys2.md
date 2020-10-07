@@ -9,5 +9,6 @@
 * [Media-autobuild_suite](https://github.com/m-ab-s/media-autobuild_suite) uses MSYS2 for automatically building FFmpeg and other media related tools
 * [UrusStudio Installer](https://github.com/UrusTeam/urusstudio_installer) uses MSYS2 for building and running Urus Studio IDE and URUS System.
 * [KeePassXC](https://github.com/keepassxreboot/keepassxc) uses MSYS2 for building and running KeePassXC password manager.
+* [Gaphor](https://gaphor.org) uses MSYS2 for its Windows releases and for CI
 
 *Feel free to add your project to this list!*
