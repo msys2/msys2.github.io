@@ -1,5 +1,13 @@
 # News
 
+### 2020-10-08 - main repo pruned
+
+Due to limited space on the new server and SourceForge file hosting, we are
+starting to remove older unused packages from the archives.  There should still
+be a 1 year's worth of packages available for downgrades.  Mirrors are free to
+choose whether they want to keep everything or follow the lead.
+
+
 ### 2020-10-07 - server downtime
 
 From Friday 2nd to Wednesday 10th, the main hosting at repo.msys2.org was down.
