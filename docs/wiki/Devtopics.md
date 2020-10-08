@@ -16,6 +16,7 @@ We currently have:
 - https://msys2.org (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions and the documentation [with source on GitHub](https://github.com/msys2/msys2.github.io)
 - [an online repo browser](https://packages.msys2.org/), hosted by @lazka
 - http://repo.msys2.org as the source for mirrors and a canonical location for installers, hosted by @elieux
+- [twitter account](https://twitter.com/msys2org), run by @lazka
 
 What to do:
 
