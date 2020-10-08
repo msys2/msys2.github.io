@@ -91,10 +91,11 @@ MSYS2 and what for.
 *   search for and file [issues for mingw-w64 packages on GitHub](https://github.com/msys2/mingw-packages/issues)
 *   search for very old [tickets on SourceForge](https://sourceforge.net/p/msys2/tickets/)
 *   read and post to our [mailing list](https://sourceforge.net/p/msys2/mailman/msys2-users/)
-*   talk on our [IRC channel](irc://irc.oftc.net:6667/msys2)
+*   talk in our [IRC channel](irc://irc.oftc.net:6667/msys2)
 *   talk in our [Gitter room](https://gitter.im/msys2/msys2)
+*   follow our [Twitter account](https://twitter.com/msys2org)
 *   read older [discussion on SourceForge](https://sourceforge.net/p/msys2/discussion/general/)
-*   more links on our [developer homepage on GitHub](https://github.com/msys2/msys2)
+*   more links on our [homepage on GitHub](https://github.com/msys2/msys2)
 
 ## Donations
 
