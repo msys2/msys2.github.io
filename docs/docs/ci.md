@@ -47,8 +47,8 @@ to update MSYS2 first. For this you need to run the following commands:
 
 ```powershell
 # Update MSYS2
-C:\msys64\usr\bin\bash -lc "pacman -Syuu"  # Core update (in case any core packages are outdated)
-C:\msys64\usr\bin\bash -lc "pacman -Syuu"  # Normal update
+C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"  # Core update (in case any core packages are outdated)
+C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"  # Normal update
 
 # Then run your code
 $env:CHERE_INVOKING = 'yes'  # Preserve the current working directory
@@ -77,8 +77,8 @@ MSYS2 yourself.
    # Run for the first time
    C:\msys64\usr\bin\bash -lc ' '
    # Update MSYS2
-   C:\msys64\usr\bin\bash -lc 'pacman -Syuu'  # Core update (in case any core packages are outdated)
-   C:\msys64\usr\bin\bash -lc 'pacman -Syuu'  # Normal update
+   C:\msys64\usr\bin\bash -lc 'pacman --noconfirm -Syuu'  # Core update (in case any core packages are outdated)
+   C:\msys64\usr\bin\bash -lc 'pacman --noconfirm -Syuu'  # Normal update
    ```
 
 3) Run your code (`ci-build.sh` in this case)
