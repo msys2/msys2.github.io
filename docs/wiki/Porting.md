@@ -48,6 +48,8 @@ Explanation: The value of root (`/`) is emitted to a text file via echo (which i
 
 To work around this, path conversion can be selectively disabled. MSYS2 reads an environment variable called `MSYS2_ARG_CONV_EXCL`. This is a `;` delimited string each part of which is compared against the front part of each argument and if a match is found, that conversion is skipped. An example of a value for `MSYS2_ARG_CONV_EXCL` that would inhibit path transformations of the 3 cases above is `/switch;/sdcard;--root=`.
 
+Setting `MSYS2_ARG_CONV_EXCL=*` prevents any path transformation.
+
 The development repository for this path conversion code is <https://github.com/Alexpux/path_convert>. If you find a case that you think is unambiguously being converted incorrectly, please raise an issue there and/or a pull request with the broken test-case.
 
 
