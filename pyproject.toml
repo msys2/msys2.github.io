@@ -7,7 +7,7 @@ authors = ["Christoph Reiter <reiter.christoph@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 mkdocs = "^1.1.2"
-mkdocs-material = "^5.2.2"
+mkdocs-material = "^6.1.6"
 
 [tool.poetry.dev-dependencies]
 
