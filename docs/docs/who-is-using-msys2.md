@@ -11,5 +11,6 @@
 * [KeePassXC](https://github.com/keepassxreboot/keepassxc) uses MSYS2 for building and running KeePassXC password manager.
 * [Gaphor](https://gaphor.org) uses MSYS2 for its Windows releases and for CI
 * [OpenModelica](https://openmodelica.org/) uses MSYS2 for building the OpenModelica tools and compiling the generated simulation code on Windows.
+* [Nuwen's MinGW Build](https://nuwen.net/mingw.html) uses MSYS2 to build the files.
 
 *Feel free to add your project to this list!*
