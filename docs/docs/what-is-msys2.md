@@ -17,7 +17,7 @@ MSYS2 allows you to build native Windows programs, while with
 [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) you can only
 cross compile them which makes things more complicated. If you are just looking
 for Linux CLI tools, or want to build software that ends up on a Linux server
-anyway than WSL is the better choice.
+anyway then WSL is the better choice.
 
 #### MSYS2 vs Chocolatey
 
