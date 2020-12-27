@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/docs/what-is-msys2/">
+        <link rel="canonical" href="https://www.msys2.org/docs/filesystem-paths/">
       
       <link rel="shortcut icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>What is MSYS2? - MSYS2</title>
+        <title>Filesystem Paths - MSYS2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-msys2" class="md-skip">
+        <a href="#filesystem-paths" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              What is MSYS2?
+              Filesystem Paths
             
           </span>
         </div>
@@ -251,90 +251,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        What is MSYS2?
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../what-is-msys2/" class="md-nav__link">
       What is MSYS2?
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#msys2-vs-other-projects" class="md-nav__link">
-    MSYS2 vs Other Projects
-  </a>
-  
-    <nav class="md-nav" aria-label="MSYS2 vs Other Projects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-wsl" class="md-nav__link">
-    MSYS2 vs WSL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-chocolatey" class="md-nav__link">
-    MSYS2 vs Chocolatey
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-cygwin" class="md-nav__link">
-    MSYS2 vs Cygwin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-arch-linux" class="md-nav__link">
-    MSYS2 vs Arch Linux
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-scoop" class="md-nav__link">
-    MSYS2 vs Scoop
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -395,11 +316,90 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../filesystem-paths/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Filesystem Paths
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Filesystem Paths
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manual-unix-windows-path-conversion" class="md-nav__link">
+    Manual Unix ⟷ Windows Path Conversion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-unix-windows-path-conversion" class="md-nav__link">
+    Automated Unix ⟶ Windows Path Conversion
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Unix ⟶ Windows Path Conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-arguments" class="md-nav__link">
+    Process Arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-unix-path-conversion" class="md-nav__link">
+    Windows ⟶ Unix Path Conversion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-package-prefix-hack" class="md-nav__link">
+    The package prefix (hack)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -764,50 +764,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#msys2-vs-other-projects" class="md-nav__link">
-    MSYS2 vs Other Projects
+  <a href="#manual-unix-windows-path-conversion" class="md-nav__link">
+    Manual Unix ⟷ Windows Path Conversion
   </a>
   
-    <nav class="md-nav" aria-label="MSYS2 vs Other Projects">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-unix-windows-path-conversion" class="md-nav__link">
+    Automated Unix ⟶ Windows Path Conversion
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Unix ⟶ Windows Path Conversion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#msys2-vs-wsl" class="md-nav__link">
-    MSYS2 vs WSL
+  <a href="#process-arguments" class="md-nav__link">
+    Process Arguments
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#msys2-vs-chocolatey" class="md-nav__link">
-    MSYS2 vs Chocolatey
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-cygwin" class="md-nav__link">
-    MSYS2 vs Cygwin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-arch-linux" class="md-nav__link">
-    MSYS2 vs Arch Linux
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msys2-vs-scoop" class="md-nav__link">
-    MSYS2 vs Scoop
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-unix-path-conversion" class="md-nav__link">
+    Windows ⟶ Unix Path Conversion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-package-prefix-hack" class="md-nav__link">
+    The package prefix (hack)
+  </a>
   
 </li>
       
@@ -823,54 +823,117 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/docs/what-is-msys2.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/docs/filesystem-paths.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="what-is-msys2">What is MSYS2?</h1>
-<p>MSYS2 isn't "one tool to rule them all", but tries to focus on what it's good
-at. It provides a native build environment, based on open source software, and
-makes you feel right at home when you are already comfortable with Linux. There
-are good reasons to use multiple different environments and tools for different
-tasks on Windows.</p>
-<h2 id="msys2-vs-other-projects">MSYS2 vs Other Projects</h2>
-<p>In case you'd like to see more comparisons or feel that they could be improved
-please let us know.</p>
-<h4 id="msys2-vs-wsl">MSYS2 vs WSL</h4>
-<p>MSYS2 allows you to build native Windows programs, while with
-<a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a> you can only
-cross compile them which makes things more complicated. If you are just looking
-for Linux CLI tools, or want to build software that ends up on a Linux server
-anyway then WSL is the better choice.</p>
-<h4 id="msys2-vs-chocolatey">MSYS2 vs Chocolatey</h4>
-<p><a href="https://chocolatey.org/">Chocolatey</a> mainly bundles already built (open and
-closed source) software and makes it easy to install/update them. In MSYS2 on
-the other hand all packages are built from source and you can easily reproduce
-the builds on your machine. Chocolatey packages have the advantage that the
-bundled installers usually have better Windows integration, in that they set up
-file associations, shortcuts, etc. and because they are not built from source
-there are also lots of packages for closed source software like Visual Studio
-etc. that would be hard to manage/update otherwise.</p>
-<h4 id="msys2-vs-cygwin">MSYS2 vs Cygwin</h4>
-<p>The unixy tools in MSYS2 are directly based on <a href="https://cygwin.com">Cygwin</a>, so
-there is some overlap there. While Cygwin focuses on building Unix software on
-Windows as is, MSYS2 focuses on building native software built against the
-Windows APIs.</p>
-<h4 id="msys2-vs-arch-linux">MSYS2 vs Arch Linux</h4>
-<p>MSYS2 and <a href="https://www.archlinux.org">Arch Linux</a> share the package manager and
-all that comes with it, like build definitions, rules for how to package things,
-how updates work, how packages are signed, how packages are shipped, the rolling
-release nature and so on. By re-using this functionality and concepts we can
-focus on the actual packages and profit from the experience and work of Arch
-Linux developers. Users already familiar with Arch Linux will also have an
-easier time getting started.</p>
-<h4 id="msys2-vs-scoop">MSYS2 vs Scoop</h4>
-<p>Due to lack of experience with <a href="https://scoop.sh">scoop</a> see their comparison page:</p>
+                <h1 id="filesystem-paths">Filesystem Paths</h1>
+<p>Many of our build processes are made up of a mix of Cygwin tools (makepkg/bash for
+starters) and native Windows tools. When building things the paths of input and
+output files and directories are often communicated between them via process
+arguments or environment variables. The problem here is that those are in many
+cases not compatible:</p>
 <ul>
-<li><a href="https://github.com/lukesampson/scoop/wiki/Chocolatey-Comparison">https://github.com/lukesampson/scoop/wiki/Chocolatey-Comparison</a></li>
-<li><a href="https://github.com/lukesampson/scoop/wiki/Cygwin-and-MSYS-Comparison">https://github.com/lukesampson/scoop/wiki/Cygwin-and-MSYS-Comparison</a></li>
+<li><code>C:\nope</code> is not a valid Unix path and <code>\n</code> might make problems when being
+  interpreted as an escape sequence.</li>
+<li><code>C:/nope</code> is slightly better, because, while it's not a valid Unix path, if
+  it's just forwarded to some other Windows tools things might work out fine.</li>
+<li><code>/foo</code> is both a valid Windows path (drive relative path evaluating to
+  <code>C:\foo</code> for example) and a valid Unix path, but resolves to a different path.
+  Again, if it's just forwarded to some other Unix tool then things might work
+  out fine.</li>
+<li><code>foo/bar.txt</code>just works, relative to the current working directory, while
+  <code>foo\bar.txt</code> is only OK with native tools.</li>
+<li>Path lists, commonly used in environment variables like <code>FOO=/foo:/bar</code> also
+  will never work, since paths are separated by <code>;</code> on Windows and not <code>:</code>,
+  similarly <code>c:/foo</code> could be interpreted as a Unix path list containing <code>c</code> and
+  <code>/foo</code> when a path list is expected.</li>
 </ul>
+<p>The only solution here is to avoid mixing Unix/Cygwin and native tools outside
+of makepkg (preferred) or convert them when they get passed between the
+different programs. For the latter MSYS2 provides an automatic conversion that
+just works automatically in many cases.</p>
+<h2 id="manual-unix-windows-path-conversion">Manual Unix ⟷ Windows Path Conversion</h2>
+<p>MSYS2 ships the Cygwin tool <code>cygpath</code> by default which allows converting paths
+between the Unix format, Windows format, and mixed format, see <code>cygpath --help</code>
+for details.</p>
+<div class="highlight"><pre><span></span><code>$ cygpath -u C:<span class="se">\\</span>foo
+/c/foo
+$ cygpath -m /mingw64/bin
+C:/msys64/mingw64/bin
+$ cygpath -w /mingw64/bin
+C:<span class="se">\m</span>sys64<span class="se">\m</span>ingw64<span class="se">\b</span>in
+</code></pre></div>
+<h2 id="automated-unix-windows-path-conversion">Automated Unix ⟶ Windows Path Conversion</h2>
+<h3 id="process-arguments">Process Arguments</h3>
+<p>When calling native executables from the context of Cygwin then all the
+arguments that look like Unix paths will get auto converted to Windows. For
+example when calling native Python from the context of bash:</p>
+<div class="highlight"><pre><span></span><code>$ python3 -c <span class="s2">&quot;import sys; print(sys.argv)&quot;</span> --dir<span class="o">=</span>/foo
+<span class="o">[</span><span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;--dir=C:/msys64/foo&#39;</span><span class="o">]</span>
+$ python3 -c <span class="s2">&quot;import sys; print(sys.argv)&quot;</span> --dir<span class="o">=</span>/foo:/bla
+<span class="o">[</span><span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;--dir=C:\\msys64\\foo;C:\\msys64\\bla&#39;</span><span class="o">]</span>
+</code></pre></div>
+<p>While this is helpful in many cases it's also not perfect and in corner cases
+converts arguments that look like Unix paths while they are not, or detects
+lists of Unix paths where there are none. For these cases you can exclude
+certain arguments via the <code>MSYS2_ARG_CONV_EXCL</code> environment variable:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">MSYS2_ARG_CONV_EXCL</span><span class="o">=</span><span class="s1">&#39;--dir=&#39;</span> python3 -c <span class="s2">&quot;import sys; print(sys.argv)&quot;</span> --dir<span class="o">=</span>/foo
+<span class="o">[</span><span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;--dir=/foo&#39;</span><span class="o">]</span>
+</code></pre></div>
+<p><code>MSYS2_ARG_CONV_EXCL</code> can either be <code>*</code> to mean exclude everything, or a list of
+one ore more arguments prefixes separated by <code>;</code>, like
+<code>MSYS2_ARG_CONV_EXCL=--dir=;--bla=;/test</code>. It matches the prefix against the
+whole argument string.</p>
+<h3 id="environment-variables">Environment Variables</h3>
+<p>Similar to process arguments, paths in environment variables get converted too:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">MYVAR</span><span class="o">=</span>/foo python3 -c <span class="s2">&quot;import os; print(os.environ[&#39;MYVAR&#39;])&quot;</span>
+C:/msys64/foo
+$ $ <span class="nv">MYVAR</span><span class="o">=</span>/foo:/bar python3 -c <span class="s2">&quot;import os; print(os.environ[&#39;MYVAR&#39;])&quot;</span>
+C:<span class="se">\m</span>sys64<span class="se">\f</span>oo<span class="p">;</span>C:<span class="se">\m</span>sys64<span class="se">\b</span>ar
+</code></pre></div>
+<p>You can disable the conversion with <code>MSYS2_ENV_CONV_EXCL</code>:</p>
+<div class="highlight"><pre><span></span><code>$ MSYS2_ENV_CONV_EXCL=&#39;MYVAR&#39; MYVAR=/foo python3 -c &quot;import os; print(os.environ[&#39;MYVAR&#39;])&quot;
+/foo
+</code></pre></div>
+<p><code>MSYS2_ENV_CONV_EXCL</code> can either be <code>*</code> to mean exclude everything, or a list of
+one ore more environment variable prefixes separated by <code>;</code>, like
+<code>MSYS2_ENV_CONV_EXCL=FOO;BAR;/test</code>. It matches the prefix against the following
+string <code>KEY=VALUE</code>.</p>
+<p>Cygwin special cases some environment variables that are known to be paths or
+path lists and does less guessing with them. For example <code>HOME</code> will never be
+interpreted as a path list even if it contains <code>:</code>.</p>
+<h2 id="windows-unix-path-conversion">Windows ⟶ Unix Path Conversion</h2>
+<p>You might wonder why calling things like <code>ls C:/</code> might work and suspect that
+again auto conversion is used, but that's not the case:</p>
+<div class="highlight"><pre><span></span><code>$ /usr/bin/python3 -c <span class="s2">&quot;import sys, os; print(sys.argv, os.listdir(sys.argv[1]))&quot;</span> C:/
+<span class="o">[</span><span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;C:/&#39;</span><span class="o">]</span> <span class="o">[</span><span class="s1">&#39;$Recycle.Bin&#39;</span>, <span class="s1">&#39;$SysReset&#39;</span>, ...<span class="o">]</span>
+</code></pre></div>
+<p>Cygwin which provides the POSIX API will just forward the paths to the Windows
+API as is. This works as long as the tool does not try to interpret the path too
+much and just forwards it to the system API. If that doesn't work in your case
+you can use <code>cygpath</code>:</p>
+<div class="highlight"><pre><span></span><code>$ /usr/bin/python3 -c <span class="s2">&quot;import sys, os; print(sys.argv, os.listdir(sys.argv[1]))&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>cygpath -u C:/<span class="k">)</span><span class="s2">&quot;</span>
+<span class="o">[</span><span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;/c/&#39;</span><span class="o">]</span> <span class="o">[</span><span class="s1">&#39;$Recycle.Bin&#39;</span>, <span class="s1">&#39;$SysReset&#39;</span>, ...<span class="o">]</span>
+</code></pre></div>
+<h2 id="the-package-prefix-hack">The package prefix (hack)</h2>
+<p>When looking at some of our package recipes you might have seen something like:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">MSYS2_ARG_CONV_EXCL</span><span class="o">=</span><span class="s2">&quot;--prefix=&quot;</span> <span class="se">\</span>
+  meson <span class="se">\</span>
+    --prefix<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MINGW_PREFIX</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+    ...
+</code></pre></div>
+<p>which results in <code>meson --prefix=/mingw64 ...</code> being executed.</p>
+<p><code>/mingw64</code> in this case is the UNIX prefix where the package will be installed
+to and in addition is a valid Windows path (a drive relative path, so
+<code>C:\mingw64</code>), so the native build tools will concatenate it with DESTDIR and
+copy things to the right place.</p>
+<p>In the native Windows world this path doesn't make much sense, as <code>C:\mingw64</code>
+likely doesn't match where the software lives, but ideally all native Windows
+tools are relocatable and wont use the prefix at runtime anyway. And if they do
+and happen to call Cygwin tools then the prefix resolves to the correct path
+because the Cygwin root path is relocatable.</p>
                 
               
               
@@ -889,7 +952,7 @@ easier time getting started.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../news/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../package-management/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -898,19 +961,19 @@ easier time getting started.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                News
+                Package Management
               </div>
             </div>
           </a>
         
         
-          <a href="../ci/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../dev/mirrors/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Using MSYS2 in CI
+                Creating a Mirror
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
