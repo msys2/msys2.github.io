@@ -41,7 +41,7 @@ $ cygpath -w /mingw64/bin
 C:\msys64\mingw64\bin
 ```
 
-## Automated Unix ⟶ Windows Path Conversion
+## Automatic Unix ⟶ Windows Path Conversion
 
 ### Process Arguments
 
