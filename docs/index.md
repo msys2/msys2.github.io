@@ -175,8 +175,10 @@ MSYS2 and what for.
 
 8. To start building using the mingw-w64 GCC, close this window and run "MSYS MinGW 64-bit" from Start menu.  Now you can call `make` or `gcc` to build software for Windows.
 
-9. Take look at [Detailed MSYS2 install guide](wiki/MSYS2-installation.md) for
-   troubleshooting and additional details on how to keep your MSYS2 up-to-date.
+9. Check out [the introduction page](wiki/MSYS2-introduction/) to learn which
+   Start menu item to use when and which packages to install.  Take look at
+   [Detailed MSYS2 install guide](wiki/MSYS2-installation/) for troubleshooting
+   and additional details on how to keep your MSYS2 up-to-date.
 
 ##  Authors and Contributors
 
