@@ -40,35 +40,140 @@ MSYS2 and what for.
     <span style="opacity: 0.6;">SHA256 checksum: `274a11559ede8b892da63dacab30dcf968b811fe21caccc9a1fb9137a5e56062`</span>
 
 2. Run the installer. MSYS2 requires 64 bit Windows 7 or newer.
-3. Click **"Next"**
 
-    ![First screen of MSYS2 installation](images/1_msys32-start.png)
-
-4. Enter **Installation Folder** (ASCII, no accents, spaces nor symlinks, short path)
+3. Enter your desired **Installation Folder** (short ASCII-only path, no accents, no spaces, no symlinks, no subst or network drives).
 
     ![Second screen of MSYS2 installation](images/2_msys32-install_path.png)
 
-5. Tick **Run MSYS2 now**
+4. When done, tick **Run MSYS2 now**.
 
     ![Third screen of MSYS2 installation](images/5_msys2-finish_install.png)
 
-6. Update the package database and core system packages with:
+5. Update the package database and base packages.  Unless your setup file is very recent, it will take two steps.  First run `pacman -Syu`:
 
     ```
-    pacman -Syu
+    $ pacman -Syu
+    :: Synchronizing package databases...
+     mingw32                        805.0 KiB
+     mingw32.sig                    438.0   B
+     mingw64                        807.9 KiB
+     mingw64.sig                    438.0   B
+     msys                           289.3 KiB
+     msys.sig                       438.0   B
+    :: Starting core system upgrade...
+    warning: terminate other MSYS2 programs before proceeding
+    resolving dependencies...
+    looking for conflicting packages...
+    
+    Packages (6) bash-5.1.004-1  filesystem-2021.01-1
+                 mintty-1~3.4.4-1  msys2-runtime-3.1.7-4
+                 pacman-5.2.2-9  pacman-mirrors-20201208-1
+    
+    Total Download Size:   11.05 MiB
+    Total Installed Size:  53.92 MiB
+    Net Upgrade Size:      -1.24 MiB
+    
+    :: Proceed with installation? [Y/n] Y
+    :: Retrieving packages...
+     bash-5.1.004-1-x86_64            2.3 MiB
+     filesystem-2021.01-1-any        33.2 KiB
+     mintty-1~3.4.4-1-x86_64        767.2 KiB
+     msys2-runtime-3.1.7-4-x86_64     2.6 MiB
+     pacman-mirrors-20201208-1-any    3.8 KiB
+     pacman-5.2.2-9-x86_64            5.4 MiB
+    (6/6) checking keys in keyring       100%
+    (6/6) checking package integrity     100%
+    (6/6) loading package files          100%
+    (6/6) checking for file conflicts    100%
+    (6/6) checking available disk space  100%
+    :: Processing package changes...
+    (1/6) upgrading bash                 100%
+    (2/6) upgrading filesystem           100%
+    (3/6) upgrading mintty               100%
+    (4/6) upgrading msys2-runtime        100%
+    (5/6) upgrading pacman-mirrors       100%
+    (6/6) upgrading pacman               100%
+    :: Running post-transaction hooks...
+    (1/1) Updating the info directory file...
+          0 [main] pacman (42236) C:\msys64\usr\bin\pacman.exe: *** fatal error - cygheap base mismatch detected - 0x18034B408/0x180345408.
+    This problem is probably due to using incompatible versions of the cygwin DLL.
+    Search for cygwin1.dll using the Windows Start->Find/Search facility
+    and delete all but the most recent version.  The most recent version *should*
+    reside in x:\cygwin\bin, where 'x' is the drive on which you have
+    installed the cygwin distribution.  Rebooting is also suggested if you
+    are unable to find another cygwin DLL.
+          0 [main] pacman 427 dofork: child -1 - forked process 42236 died unexpectedly, retry 0, exit code 0xC0000142, errno 11
+    error: could not fork a new process (Resource temporarily unavailable)
+    :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n] Y
     ```
 
-    ![MSYS2 shell with pacman's output about system upgrade](images/6_msys2-update-system.png)
+    The last error is expected and won't be an issue.
 
-7. If needed, close MSYS2, run it again from Start menu. Update the rest with:
+6. Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with `pacman -Su`:
 
     ```
-    pacman -Su
+    $ pacman -Su
+    :: Starting core system upgrade...
+     there is nothing to do
+    :: Starting full system upgrade...
+    resolving dependencies...
+    looking for conflicting packages...
+    
+    Packages (20) base-2020.12-1  bsdtar-3.5.0-1
+                  [... more packages listed ...]
+    
+    Total Download Size:   12.82 MiB
+    Total Installed Size:  44.25 MiB
+    Net Upgrade Size:       3.01 MiB
+    
+    :: Proceed with installation? [Y/n] Y
+    [... downloading and installation continues ...]
     ```
 
-8. Now **Pacman** is fully committed to the Windows cause :)
+7. Now MSYS2 is ready for you.  You probably will want to install some tools and the mingw-w64 GCC to start compiling:
 
-    ![MSYS2 shell with pacman's output about package installation](images/7_msys2-install-freely.png)
+    ````
+    $ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+    warning: file-5.39-2 is up to date -- skipping
+    [... more warnings ...]
+    :: There are 48 members in group base-devel:
+    :: Repository msys
+       1) asciidoc  2) autoconf  3) autoconf2.13  4) autogen
+       [... more packages listed ...]
+    
+    Enter a selection (default=all): all
+    :: There are 19 members in group mingw-w64-x86_64-toolchain:
+    :: Repository mingw64
+       1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
+       [... more packages listed ...]
+    
+    Enter a selection (default=all): alll
+    resolving dependencies...
+    looking for conflicting packages...
+    
+    Packages (123) docbook-xml-4.5-2  docbook-xsl-1.79.2-1
+                   [... more packages listed ...]
+                   m4-1.4.18-2  make-4.3-1  man-db-2.9.3-1
+                   mingw-w64-x86_64-binutils-2.35.1-3
+                   mingw-w64-x86_64-crt-git-9.0.0.6090.ad98746a-1
+                   mingw-w64-x86_64-gcc-10.2.0-6
+                   mingw-w64-x86_64-gcc-ada-10.2.0-6
+                   mingw-w64-x86_64-gcc-fortran-10.2.0-6
+                   mingw-w64-x86_64-gcc-libgfortran-10.2.0-6
+                   mingw-w64-x86_64-gcc-libs-10.2.0-6
+                   mingw-w64-x86_64-gcc-objc-10.2.0-6
+                   mingw-w64-x86_64-gdb-10.1-2
+                   mingw-w64-x86_64-gdb-multiarch-10.1-2
+                  [... more packages listed ...]
+    
+    Total Download Size:    196.15 MiB
+    Total Installed Size:  1254.96 MiB
+    
+    :: Proceed with installation? [Y/n] Y
+    [... downloading and installation continues ...]
+    ````
+
+8. To start building using the mingw-w64 GCC, close this window and run "MSYS MinGW 64-bit" from Start menu.  Now you can call `make` or `gcc` to build software for Windows.
 
 9. Take look at [Detailed MSYS2 install guide](wiki/MSYS2-installation.md) for
    troubleshooting and additional details on how to keep your MSYS2 up-to-date.
