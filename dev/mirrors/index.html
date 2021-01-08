@@ -759,8 +759,18 @@
                 <h2 id="available-mirrors">Available Mirrors</h2>
 <p>The mirrors are defined in the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package.</p>
 <h2 id="creating-a-new-mirror">Creating a New Mirror</h2>
+<p>The repository size is ~150 GiB (as of 2021/01) with the distribution of sizes like this:</p>
+<div class="highlight"><pre><span></span><code>-100B:  ~1000 files
+  -1K: ~13000 files
+ -10K:   ~200 files
+-100K:  ~3000 files
+  -1M:  ~5000 files
+ -10M:  ~4000 files
+-100M:  ~1000 files
+  -1G:   ~200 files
+ -10G:    ~20 files
+</code></pre></div>
 <ul>
-<li>The repository size is ~150 GiB (as of 2020/10)</li>
 <li>You can use rsync to update your mirror using <code>rsync -rtlvH --delete-after --delay-updates --safe-links</code></li>
 <li>If you want to add your mirror to the main mirror list please open a PR against the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package</li>
 </ul>
