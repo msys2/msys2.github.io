@@ -29,6 +29,15 @@ Our main repository supports rsync: `rsync://repo.msys2.org/builds`
 
 Some of the existing mirrors also support rsync:
 
-* `rsync://mirror.yandex.ru/mirrors/msys2`
+* `rsync://download.nus.edu.sg/msys2/`
+* `rsync://ftp.acc.umu.se/mirror/msys2.org/`
+* `rsync://ftp.nluug.nl/msys2/builds/`
+* `rsync://mirror.clarkson.edu/msys2/`
+* `rsync://mirrors.dotsrc.org/msys2/`
+* `rsync://mirror.selfnet.de/msys2/`
 * `rsync://mirror.selfnet.de/msys2`
-
+* `rsync://mirrors.tuna.tsinghua.edu.cn/msys2/`
+* `rsync://mirror.ufro.cl/msys2/`
+* `rsync://mirror.yandex.ru/mirrors/msys2`
+* `rsync://quantum-mirror.hu/mirrors/pub/msys2/`
+* `rsync://rsync.osuosl.org/msys2/`
