@@ -41,3 +41,5 @@ Some of the existing mirrors also support rsync:
 * `rsync://mirror.yandex.ru/mirrors/msys2`
 * `rsync://quantum-mirror.hu/mirrors/pub/msys2/`
 * `rsync://rsync.osuosl.org/msys2/`
+
+If you want to view the current mirrors and urls, goto [mirrorlist.md](https://github.com/msys2/MSYS2-packages/blob/master/pacman-mirrors/mirrorlist.md)
