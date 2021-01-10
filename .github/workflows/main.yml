@@ -3,8 +3,8 @@ name: github pages
 on:
   workflow_dispatch:
   push:
-    branches:
-      - source
+    branches-ignore:
+      - master
 
 jobs:
   deploy:
@@ -34,6 +34,7 @@ jobs:
       - run: mkdocs build
 
       - name: Deploy
+        if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/source')
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
