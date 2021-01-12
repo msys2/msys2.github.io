@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block extrahead %}
+  {% set title = config.site_name%} 
+  {% if page and page.meta and page.meta.title %}
+    {% set title = title ~ " - " ~ page.meta.title %}
+  {% elif page and page.title and not page.is_homepage %}
+    {% set title = title ~ " - " ~ page.title | striptags %}
+  {% endif %}
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+{%- if page.is_homepage %}
+<meta property="og:description" content="{{ config.site_description }}" />
+{% else %}{%- if page %}
+<meta property="og:description" content="{{ page.meta.summary }}" />
+{% endif %}{% endif %}
+<meta property="og:url" content="{{ page.canonical_url }}" />
+<meta property="og:image" content="https://www.msys2.org/logo.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="250" />
+<script type="application/ld+json">
+  {
+    "image": "https://www.msys2.org/logo.png",
+    "@type": "WebSite",
+    "headline": "MSYS2",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.msys2.org/logo.png"
+      }
+    },
+    "url": "https://www.msys2.org",
+    "description": "Software Distribution and Building Platform for Windows",
+    "name": "MSYS2",
+    "@context": "https://schema.org"
+  }
+</script>
+{% endblock %}

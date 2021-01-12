@@ -1,3 +1,7 @@
+---
+title: News
+summary: Important events happening.
+---
 # News
 
 ### 2020-10-08 - main repo pruned

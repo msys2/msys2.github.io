@@ -1,4 +1,5 @@
 site_name: MSYS2
+site_description: Software Distribution and Building Platform for Windows
 theme:
     name: material
     logo: 'logo.svg'
@@ -8,6 +9,7 @@ theme:
         accent: 'indigo'
     features:
         - instant
+    custom_dir: overrides
 
 extra_css:
     - 'stylesheets/extra.css'
@@ -26,6 +28,7 @@ repo_url: https://github.com/msys2/msys2.github.io
 edit_uri: edit/source/docs/
 
 markdown_extensions:
+    - meta
     - attr_list
     - codehilite
     - sane_lists

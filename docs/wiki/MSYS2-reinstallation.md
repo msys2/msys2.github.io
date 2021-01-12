@@ -1,3 +1,7 @@
+---
+title: Re-installing MSYS2
+summary: When we release new installers and new base tar.xz packages
+---
 Introduction
 ------------
 

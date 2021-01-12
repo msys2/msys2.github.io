@@ -1,3 +1,8 @@
+---
+title: Filesystem Paths
+summary: Many of our build processes are made up of a mix of Cygwin tools (makepkg/bash for starters) 
+    and native Windows tools.
+---
 # Filesystem Paths
 
 Many of our build processes are made up of a mix of Cygwin tools (makepkg/bash for

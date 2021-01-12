@@ -1,3 +1,7 @@
+---
+title: Signing Packages
+summary: Create a GPG key and import it into pacman.
+---
 [ rough draft ]
 
 Have a GPG key

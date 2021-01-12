@@ -1,3 +1,7 @@
+---
+title: Terminals
+summary: This is a basic explanation of how console programs work in Cygwin and MSYS2.
+---
 This is a basic explanation of how [console programs](https://en.wikipedia.org/wiki/Console_application) work in Cygwin and MSYS2. [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) (graphical, windowed) programs fall outside of the scope of this text.
 
 Note that this topic is not simple and there are many factors that can cause differences in observed behavior (`TERM`, `LANG`, `LC_*`...). The following information is our best understanding and our best attempt at explaining it. If the reader has any corrections or clarifications, please post to the mailing list. Note that where we say MSYS2 below, it usually denotes Cygwin as well.

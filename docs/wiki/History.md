@@ -1,3 +1,7 @@
+---
+title: MSYS2 History
+summary: MSYS2 is an independent rewrite of MSYS, based on modern Cygwin and MinGW-w64 with the aim of better interoperability with native Windows software.
+---
 ## MSYS2
 
 **MSYS2** is an independent rewrite of MSYS, based on modern Cygwin and MinGW-w64 with the aim of better interoperability with native Windows software.

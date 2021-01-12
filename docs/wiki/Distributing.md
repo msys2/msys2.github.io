@@ -1,3 +1,7 @@
+---
+title: Distributing
+summary: Possibly useful sources of information
+---
 [ This page is a stub. Help us by sending your experience and ideas for improvements. ]
 
 Possibly useful sources of information

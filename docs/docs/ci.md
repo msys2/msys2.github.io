@@ -1,3 +1,7 @@
+---
+title: Using MSYS2 in CI
+summary: There are many ways to use MSYS2 in CI. The recommended way is Github Actions.
+---
 # Using MSYS2 in CI
 
 ## Github Actions (recommended)
