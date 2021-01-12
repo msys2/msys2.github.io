@@ -1,3 +1,6 @@
+---
+title: MSYS2 Keyring
+---
 # MSYS2 Keyring
 
 * Repository: <https://github.com/msys2/MSYS2-keyring>

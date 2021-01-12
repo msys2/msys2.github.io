@@ -1,4 +1,9 @@
-Hi. If you're interested in helping the MSYS2 project, we will appreciate it. Please come to our IRC channel [#msys on OFTC](irc://irc.oftc.net:6667/msys2) or [Gitter room](https://gitter.im/msys2/msys2) and talk to us. Don't be discouraged if nobody responds straight away, people are often busy or asleep.
+---
+title: Contributing to MSYS2
+summary: If you're interested in helping the MSYS2 project, we will appreciate it
+---
+Hi. If you're interested in helping the MSYS2 project, we will appreciate it. Please come to our IRC channel [#msys on OFTC](irc://irc.oftc.net:6667/msys2) or [Gitter room](https://gitter.im/msys2/msys2) or [Discord Server](https://discord.gg/jPQdRdDcT9) and talk to us.
+Don't be discouraged if nobody responds straight away, people are often busy or asleep.
 
 How can you help:
 

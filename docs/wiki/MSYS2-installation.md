@@ -1,3 +1,7 @@
+---
+title: MSYS2-Installation
+summary: MSYS2 ships in the form of installers and base archives.
+---
 I. Downloading
 ==============
 **MSYS2** ships in the form of installers and base archives. They can be installed or extracted to any place on your computer, but you **MUST** use folder names that consist of only ascii characters and no spaces (also it makes good sense to put it in a path that doesn't use many characters due to PATH_MAX being 260; C:\msys32 or C:\msys64 is ideal).

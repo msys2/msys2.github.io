@@ -1,3 +1,8 @@
+---
+title: Porting
+summary: While in our humble opinions, MSYS2 makes collaborative, organised development of open-source software on Windows a workable proposition, there are a few things to be aware of that we commonly run into,
+     mostly due to the design decisions made by Microsoft, our preference for using native tools and compilers rather than cross msys2-to-native ones and our wish to be as flexible as we can be.
+---
 While in our humble opinions, MSYS2 makes collaborative, organised development of open-source software on Windows a workable proposition, there are a few things to be aware of that we commonly run into, mostly due to the design decisions made by Microsoft, our preference for using native tools and compilers rather than cross msys2-to-native ones and our wish to be as flexible as we can be.
 
 mingw32-make

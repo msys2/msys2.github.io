@@ -1,5 +1,6 @@
 ---
 title: Creating a Mirror
+summary: Creating a Mirror for MSYS2
 ---
 
 ## Available Mirrors
