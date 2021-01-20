@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Software Distribution and Building Platform for Windows">
+      
       
       
       
@@ -16,7 +18,7 @@
     
     
       
-        <title>Sudo - MSYS2</title>
+        <title>Do you need Sudo? - MSYS2</title>
       
     
     
@@ -48,6 +50,38 @@
       
     
     
+   
+  
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MSYS2 - Do you need Sudo?" />
+<meta property="og:description" content="In regular GNU/Linux environments, people use `sudo` to perform administrative tasks on their system" />
+
+<meta property="og:url" content="https://www.msys2.org/wiki/Sudo/" />
+<meta property="og:image" content="https://www.msys2.org/logo.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="250" />
+<script type="application/ld+json">
+  {
+    "image": "https://www.msys2.org/logo.png",
+    "@type": "WebSite",
+    "headline": "MSYS2",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.msys2.org/logo.png"
+      }
+    },
+    "url": "https://www.msys2.org",
+    "description": "Software Distribution and Building Platform for Windows",
+    "name": "MSYS2",
+    "@context": "https://schema.org"
+  }
+</script>
+
   </head>
   
   
@@ -97,7 +131,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Sudo
+              Do you need Sudo?
             
           </span>
         </div>
@@ -416,7 +450,7 @@
 
   <li class="md-nav__item">
     <a href="../Home/" class="md-nav__link">
-      Home
+      Welcome to the MSYS2 wiki
     </a>
   </li>
 
@@ -455,7 +489,7 @@
 
   <li class="md-nav__item">
     <a href="../Devtopics/" class="md-nav__link">
-      Devtopics
+      TODO LIST
     </a>
   </li>
 
@@ -494,7 +528,7 @@
 
   <li class="md-nav__item">
     <a href="../GDB-qtcreator/" class="md-nav__link">
-      GDB qtcreator
+      Qt Creator
     </a>
   </li>
 
@@ -507,7 +541,7 @@
 
   <li class="md-nav__item">
     <a href="../History/" class="md-nav__link">
-      History
+      MSYS2 History
     </a>
   </li>
 
@@ -520,7 +554,7 @@
 
   <li class="md-nav__item">
     <a href="../How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
-      How does MSYS2 differ from Cygwin
+      How does MSYS2 differ from Cygwin?
     </a>
   </li>
 
@@ -533,7 +567,7 @@
 
   <li class="md-nav__item">
     <a href="../Launchers/" class="md-nav__link">
-      Launchers
+      Lauchers
     </a>
   </li>
 
@@ -546,7 +580,7 @@
 
   <li class="md-nav__item">
     <a href="../MSYS2-installation/" class="md-nav__link">
-      MSYS2 installation
+      MSYS2-Installation
     </a>
   </li>
 
@@ -559,7 +593,7 @@
 
   <li class="md-nav__item">
     <a href="../MSYS2-introduction/" class="md-nav__link">
-      MSYS2 introduction
+      MSYS2-Introduction
     </a>
   </li>
 
@@ -572,7 +606,7 @@
 
   <li class="md-nav__item">
     <a href="../MSYS2-reinstallation/" class="md-nav__link">
-      MSYS2 reinstallation
+      Re-installing MSYS2
     </a>
   </li>
 
@@ -585,7 +619,7 @@
 
   <li class="md-nav__item">
     <a href="../Packages/" class="md-nav__link">
-      Packages
+      Packages List
     </a>
   </li>
 
@@ -624,7 +658,7 @@
 
   <li class="md-nav__item">
     <a href="../Signing-packages/" class="md-nav__link">
-      Signing packages
+      Signing Packages
     </a>
   </li>
 
@@ -643,12 +677,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Sudo
+        Do you need Sudo?
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Sudo
+      Do you need Sudo?
     </a>
     
       
@@ -754,12 +788,14 @@
                   </a>
                 
                 
-                  <h1>Sudo</h1>
+                  <h1>Do you need Sudo?</h1>
                 
                 <h2 id="do-you-need-sudo">Do you need Sudo?</h2>
 <p>In regular GNU/Linux environments, people use <code>sudo</code> to perform administrative tasks on their system, e.g. installing and removing packages, editing system configuration.  Since the most common way of installing MSYS2 results in the MSYS2 root directory being writable by the user, these tasks can be performed without doing anything special.  If you made your MSYS2 root read only for users or want to run Windows administrative tasks from MSYS2, continue reading.</p>
 <h2 id="how-to-get-sudo">How to get Sudo</h2>
 <p>Since MSYS2 doesn't support all the things a classic Sudo needs (setuid? PAM?), we need a replacement.  One such replacement that doesn't seem to suffer from horrible security flaws is <a href="https://github.com/imachug/win-sudo"><em>win-sudo</em></a>.  It doesn't support (as of May 2020) the various different arguments (<code>-H</code>, <code>-u</code> etc.), but it does work in the most common use case of <code>sudo foo</code> running <code>foo</code> with elevated privileges.  The authorization is handled by UAC, same as any other Windows program.</p>
+                
+                  
                 
               
               
@@ -787,7 +823,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Signing packages
+                Signing Packages
               </div>
             </div>
           </a>
