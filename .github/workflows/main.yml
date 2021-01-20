@@ -2,6 +2,7 @@ name: github pages
 
 on:
   workflow_dispatch:
+  pull_request:
   push:
     branches-ignore:
       - master
