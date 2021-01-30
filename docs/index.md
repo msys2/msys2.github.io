@@ -182,17 +182,6 @@ MSYS2 and what for.
    [Detailed MSYS2 install guide](wiki/MSYS2-installation/) for troubleshooting
    and additional details on how to keep your MSYS2 up-to-date.
 
-## Installer Integrity
-
-Each installer file has a detached signature that is accessible by appending
-`.sig` to the download URL. You can verify the signature via:
-
-```bash
-gpg --recv-key '0EBF 782C 5D53 F7E5 FB02 A667 46BD 761F 7A49 B0EC'
-gpg --verify msys2-x86_64-*.exe.sig msys2-x86_64-*.exe
-# Make sure it says "Good signature" and the fingerprint matches the one above
-```
-
 ##  Authors and Contributors
 
 * [Alexpux (Алексей)](https://github.com/Alexpux)
