@@ -17,8 +17,8 @@ make debugging easier in case of regressions.
 shouldn't notice any changes, but in case this leads to problems all of it can
 be disabled/reverted via linker flags:
 
-* mingw64: `-Wl,--disable-dynamicbase,--disable-high-entropy-va,--disable-nxcompat,--default-image-base-low`
-* mingw32: `-Wl,--disable-dynamicbase,--disable-nxcompat`
+* mingw64: `-Wl,--disable-dynamicbase,--disable-high-entropy-va,--default-image-base-low`
+* mingw32: `-Wl,--disable-dynamicbase`
 
 Note that this is only a temporary workaround and some of these flags will not
 be available forever, so you should either fix your code or file a bug in case
