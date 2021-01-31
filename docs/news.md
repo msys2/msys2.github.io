@@ -4,6 +4,39 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-01-31 - ASLR enabled by default
+
+**Backstory:** About 5 months ago we started backporting patches to our binutils
+2.35 to allow enabling ASLR support via various flags. We also enabled these
+flags in our build system, so any package in our repo that was updated in the
+last 5 months has ASLR support enabled. We've now updated to 2.36 which in
+theory has ASLR enabled by default but have reverted the defaults for now to
+make debugging easier in case of regressions.
+
+**Next steps:** In the coming days we will enable ASLR by default. Ideally you
+shouldn't notice any changes, but in case this leads to problems all of it can
+be disabled/reverted via linker flags:
+
+* mingw64: `-Wl,--disable-dynamicbase,--disable-high-entropy-va,--disable-nxcompat,--default-image-base-low`
+* mingw32: `-Wl,--disable-dynamicbase,--disable-nxcompat`
+
+Note that this is only a temporary workaround and some of these flags will not
+be available forever, so you should either fix your code or file a bug in case
+you suspect a toolchain issue.
+
+Thanks to the binutils developers for improving/fixing ASLR support and to
+everyone helping on the MSYS2 side of things, especially [Jeremy
+Drake](https://github.com/jeremyd2019) for backporting, upstreaming and fixing
+bugs exposed by these changes.
+
+**Known issues:**
+
+* In case you are seeing errors such as `relocation truncated to fit:
+  IMAGE_REL_AMD64_REL32 against undefined symbol` try building with
+  `-Wl,--default-image-base-low`. Here is the upstream bug report:
+  https://sourceware.org/bugzilla/show_bug.cgi?id=26659
+
+
 ### 2020-10-08 - main repo pruned
 
 Due to limited space on the new server and SourceForge file hosting, we are
