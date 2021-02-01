@@ -279,6 +279,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2021-01-31-aslr-enabled-by-default" class="md-nav__link">
+    2021-01-31 - ASLR enabled by default
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-10-08-main-repo-pruned" class="md-nav__link">
     2020-10-08 - main repo pruned
   </a>
@@ -825,6 +832,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2021-01-31-aslr-enabled-by-default" class="md-nav__link">
+    2021-01-31 - ASLR enabled by default
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-10-08-main-repo-pruned" class="md-nav__link">
     2020-10-08 - main repo pruned
   </a>
@@ -919,6 +933,34 @@
                 
                 
                 <h1 id="news">News</h1>
+<h3 id="2021-01-31-aslr-enabled-by-default">2021-01-31 - ASLR enabled by default</h3>
+<p><strong>Backstory:</strong> About 5 months ago we started backporting patches to our binutils
+2.35 to allow enabling ASLR support via various flags. We also enabled these
+flags in our build system, so any package in our repo that was updated in the
+last 5 months has ASLR support enabled. We've now updated to 2.36 which in
+theory has ASLR enabled by default but have reverted the defaults for now to
+make debugging easier in case of regressions.</p>
+<p><strong>Next steps:</strong> In the coming days we will enable ASLR by default. Ideally you
+shouldn't notice any changes, but in case this leads to problems all of it can
+be disabled/reverted via linker flags:</p>
+<ul>
+<li>mingw64: <code>-Wl,--disable-dynamicbase,--disable-high-entropy-va,--default-image-base-low</code></li>
+<li>mingw32: <code>-Wl,--disable-dynamicbase</code></li>
+</ul>
+<p>Note that this is only a temporary workaround and some of these flags will not
+be available forever, so you should either fix your code or file a bug in case
+you suspect a toolchain issue.</p>
+<p>Thanks to the binutils developers for improving/fixing ASLR support and to
+everyone helping on the MSYS2 side of things, especially <a href="https://github.com/jeremyd2019">Jeremy
+Drake</a> for backporting, upstreaming and fixing
+bugs exposed by these changes.</p>
+<p><strong>Known issues:</strong></p>
+<ul>
+<li>In case you are seeing errors such as <code>relocation truncated to fit:
+  IMAGE_REL_AMD64_REL32 against undefined symbol</code> try building with
+  <code>-Wl,--default-image-base-low</code>. Here is the upstream bug report:
+  <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=26659">https://sourceware.org/bugzilla/show_bug.cgi?id=26659</a></li>
+</ul>
 <h3 id="2020-10-08-main-repo-pruned">2020-10-08 - main repo pruned</h3>
 <p>Due to limited space on the new server and SourceForge file hosting, we are
 starting to remove older unused packages from the archives.  There should still
