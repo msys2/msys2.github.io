@@ -10,6 +10,8 @@ You should *not* launch sh.exe directly as that doesn't start a login shell or s
 
 A nice explanation how to [set up ConEmu](https://superuser.com/a/1297072) to run MSYS2 inside it by jstine.
 
+Configuration for [an MSYS2 shell in Visual Studio Code](https://stackoverflow.com/a/48016561).
+
 **msys2_env.bat** from @DavidEGrayson. [Gist](https://gist.github.com/DavidEGrayson/2e5923b9c0d8acb3f7a7), [discussion](https://github.com/Alexpux/MSYS2-packages/issues/370#issuecomment-151658726)
 
 **msys2.cmd**, **mingw64.cmd**, **mingw32.cmd** from @Elieux. [Gist](https://gist.github.com/elieux/dd6d0c15cc0ae503f830)
