@@ -286,6 +286,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2020-12-26-zstd-exemption-for-core-packages-removed" class="md-nav__link">
+    2020-12-26 - Zstd exemption for core packages removed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-10-08-main-repo-pruned" class="md-nav__link">
     2020-10-08 - main repo pruned
   </a>
@@ -839,6 +846,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2020-12-26-zstd-exemption-for-core-packages-removed" class="md-nav__link">
+    2020-12-26 - Zstd exemption for core packages removed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-10-08-main-repo-pruned" class="md-nav__link">
     2020-10-08 - main repo pruned
   </a>
@@ -961,6 +975,17 @@ bugs exposed by these changes.</p>
   <code>-Wl,--default-image-base-low</code>. Here is the upstream bug report:
   <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=26659">https://sourceware.org/bugzilla/show_bug.cgi?id=26659</a></li>
 </ul>
+<h3 id="2020-12-26-zstd-exemption-for-core-packages-removed">2020-12-26 - Zstd exemption for core packages removed</h3>
+<p>Given it's been months since we began the switch to Zstd for compressing
+packages, we've now started using it for core packages as well.  This means
+older installations without Zstd support won't be able to cleanly upgrade
+anymore.</p>
+<p>@dmn-star compiled these commands that should update an older installation to
+support Zstd and unblock futher upgrades:</p>
+<div class="highlight"><pre><span></span><code>pacman --noconfirm -U &quot;http://repo.msys2.org/msys/x86_64/libzstd-1.4.4-2-x86_64.pkg.tar.xz&quot;
+pacman --noconfirm -U &quot;http://repo.msys2.org/msys/x86_64/zstd-1.4.4-2-x86_64.pkg.tar.xz&quot;
+pacman --noconfirm -U &quot;http://repo.msys2.org/msys/x86_64/pacman-5.2.1-6-x86_64.pkg.tar.xz&quot;
+</code></pre></div>
 <h3 id="2020-10-08-main-repo-pruned">2020-10-08 - main repo pruned</h3>
 <p>Due to limited space on the new server and SourceForge file hosting, we are
 starting to remove older unused packages from the archives.  There should still
