@@ -37,6 +37,23 @@ bugs exposed by these changes.
   https://sourceware.org/bugzilla/show_bug.cgi?id=26659
 
 
+### 2020-12-26 - Zstd exemption for core packages removed
+
+Given it's been months since we began the switch to Zstd for compressing
+packages, we've now started using it for core packages as well.  This means
+older installations without Zstd support won't be able to cleanly upgrade
+anymore.
+
+@dmn-star compiled these commands that should update an older installation to
+support Zstd and unblock futher upgrades:
+
+```
+pacman --noconfirm -U "http://repo.msys2.org/msys/x86_64/libzstd-1.4.4-2-x86_64.pkg.tar.xz"
+pacman --noconfirm -U "http://repo.msys2.org/msys/x86_64/zstd-1.4.4-2-x86_64.pkg.tar.xz"
+pacman --noconfirm -U "http://repo.msys2.org/msys/x86_64/pacman-5.2.1-6-x86_64.pkg.tar.xz"
+```
+
+
 ### 2020-10-08 - main repo pruned
 
 Due to limited space on the new server and SourceForge file hosting, we are
