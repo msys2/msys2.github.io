@@ -1,3 +1,8 @@
+One can apparently connect the OpenSSHd build included with Windows to MSYS2.
+Diablo-D3 has written down the steps here: https://github.com/Diablo-D3/dotfiles#opensshd-on-windows
+
+MSYS2 can also use its own OpenSSHd.  Use the set-up script below.
+
 ```bash
 #!/bin/sh
 #
