@@ -182,6 +182,12 @@ MSYS2 and what for.
    [Detailed MSYS2 install guide](wiki/MSYS2-installation/) for troubleshooting
    and additional details on how to keep your MSYS2 up-to-date.
 
+## Sponsors
+
+Our main server is sponsored by [appfleet.com](https://appfleet.com)
+
+[![appfleet.com](appfleet.svg){: width=250px}](https://appfleet.com)
+
 ##  Authors and Contributors
 
 * [Alexpux (Алексей)](https://github.com/Alexpux)
