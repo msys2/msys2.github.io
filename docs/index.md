@@ -95,17 +95,6 @@ MSYS2 and what for.
     (4/6) upgrading msys2-runtime        100%
     (5/6) upgrading pacman-mirrors       100%
     (6/6) upgrading pacman               100%
-    :: Running post-transaction hooks...
-    (1/1) Updating the info directory file...
-          0 [main] pacman (42236) C:\msys64\usr\bin\pacman.exe: *** fatal error - cygheap base mismatch detected - 0x18034B408/0x180345408.
-    This problem is probably due to using incompatible versions of the cygwin DLL.
-    Search for cygwin1.dll using the Windows Start->Find/Search facility
-    and delete all but the most recent version.  The most recent version *should*
-    reside in x:\cygwin\bin, where 'x' is the drive on which you have
-    installed the cygwin distribution.  Rebooting is also suggested if you
-    are unable to find another cygwin DLL.
-          0 [main] pacman 427 dofork: child -1 - forked process 42236 died unexpectedly, retry 0, exit code 0xC0000142, errno 11
-    error: could not fork a new process (Resource temporarily unavailable)
     :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n] Y
     ```
 
