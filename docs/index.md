@@ -98,8 +98,6 @@ MSYS2 and what for.
     :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n] Y
     ```
 
-    The last error is expected and won't be an issue.
-
 6. Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with `pacman -Su`:
 
     ```
