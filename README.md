@@ -48,4 +48,4 @@ For dependency changes:
 * `poetry shell`
 * `poetry install`
 * `...`
-* `poetry export -f requirements.txt -o requirements.txt`
+* `poetry export --without-hashes -o requirements.txt`
