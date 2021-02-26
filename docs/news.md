@@ -6,14 +6,12 @@ summary: Important events happening.
 
 ### 2021-01-31 - ASLR enabled by default
 
-**Backstory:** About 5 months ago we started backporting patches to our binutils
+About 5 months ago we started backporting patches to our binutils
 2.35 to allow enabling ASLR support via various flags. We also enabled these
 flags in our build system, so any package in our repo that was updated in the
-last 5 months has ASLR support enabled. We've now updated to 2.36 which in
-theory has ASLR enabled by default but have reverted the defaults for now to
-make debugging easier in case of regressions.
+last 5 months has ASLR support enabled.
 
-**Next steps:** In the coming days we will enable ASLR by default. Ideally you
+We've now updated to 2.36 which has ASLR enabled by default. Ideally you
 shouldn't notice any changes, but in case this leads to problems all of it can
 be disabled/reverted via linker flags:
 
