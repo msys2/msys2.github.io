@@ -4,6 +4,12 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-02-27 - New server for repo.msys2.org/packages.msys2.org
+
+On 2021-02-27 we will move repo.msys2.org to a new server. There will be a short
+downtime during the move.
+
+
 ### 2021-01-31 - ASLR enabled by default
 
 About 5 months ago we started backporting patches to our binutils
