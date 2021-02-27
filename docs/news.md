@@ -4,10 +4,23 @@ summary: Important events happening.
 ---
 # News
 
-### 2021-02-27 - New server for repo.msys2.org/packages.msys2.org
+### 2021-02-27 - New server for repo.msys2.org and packages.msys2.org
 
-On 2021-02-27 we will move repo.msys2.org to a new server. There will be a short
-downtime during the move.
+We have moved repo.msys2.org (and package.msys2.org) to a new server.  There was
+a short downtime, but everything should be running great now.  Big thanks to
+appfleet.com for sponsoring the new server.
+
+New mirrorlists for Pacman will be published soon.  After you get them, your
+package installs and updates should be faster than before and without the
+404s and glitches.
+
+With the migration, Christoph (@lazka) will now be updating and signing
+the Pacman databases more often.  This should go smoothly as the GPG keys are
+already in place and the process has been tested on the new server before it
+went live.
+
+By the way, the redirect domain msys2.org (no www.) should work more
+reliably now and HTTPS is now available for it.
 
 
 ### 2021-01-31 - ASLR enabled by default
