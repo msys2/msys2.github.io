@@ -46,7 +46,7 @@ The process happens in multiple phases:
 * `build()` - this function contains commands to run the build tool(s), e.g. `./configure` and `make`
 * `check()` - an optional step to check the build products by e.g. running the software's test suite
 * `package()` - this function is provided with a temporary directory, where it should put the final contents of the package using e.g. `make install`
-* tidy, archive and sign - the package contents are scanned for some issues, tidied up and packaged into the final `.tar.xz` with an optional signature in `.tar.xz.sig`
+* tidy, archive and sign - the package contents are scanned for some issues, tidied up and packaged into the final `.tar.zst` with an optional signature in `.tar.zst.sig`
 
 The makepkg tool takes arguments allowing you to turn off some phases or some checks. The typical usage is `makepkg -sCLf` for a full build and `makepkg -RdLf` for a "re-package". Re-packaging is useful when the process failed in `package()` and you don't want to run the long build part again. `makepkg-mingw` takes the same arguments.
 
@@ -59,14 +59,14 @@ An example of fetching the **msys** repository source, building and then install
     git clone "https://github.com/msys2/MSYS2-packages"
     cd MSYS2-packages/flex
     makepkg -sCLf
-    pacman -U flex-*.pkg.tar.xz
+    pacman -U flex-*.pkg.tar.zst
 
 An example of fetching the **mingw** repository source, building and then installing a package from it is:
 
     git clone "https://github.com/msys2/MINGW-packages"
     cd MINGW-packages/mingw-w64-python3
     makepkg-mingw -sCLf
-    pacman -U mingw-w64-*-python3-*-any.pkg.tar.xz
+    pacman -U mingw-w64-*-python3-*-any.pkg.tar.zst
 
 ## A new package from start to finish
 
@@ -154,7 +154,7 @@ Note that if you want to contribute, we'd appreciate it if you test your package
 
 ### Install package
 
-If the package build successfully, it's good to check its contents first before installing to see if it contains what you intended. When installing (using `pacman -U pkgname-pkgver-arch.tar.xz`), pacman checks for any filesystem conflicts and then places the package contents into your MSYS2 root as it would do with any other package. You can also remove the package using `pacman -R pkgname`.
+If the package build successfully, it's good to check its contents first before installing to see if it contains what you intended. When installing (using `pacman -U pkgname-pkgver-arch.tar.zst`), pacman checks for any filesystem conflicts and then places the package contents into your MSYS2 root as it would do with any other package. You can also remove the package using `pacman -R pkgname`.
 
 ### Test package
 

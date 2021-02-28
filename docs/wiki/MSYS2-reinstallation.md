@@ -1,11 +1,11 @@
 ---
 title: Re-installing MSYS2
-summary: When we release new installers and new base tar.xz packages
+summary: When we release new installers and new base tar.zst packages
 ---
 Introduction
 ------------
 
-When we release new installers and new base tar.xz packages, we'd appreciate it if people can help out by testing complete re-installs of their entire MSYS2. The procedure is safe as it is fully reversible. Also, if your system gets messed up, this procedure could help to get you running again.
+When we release new installers and new base tar.zst packages, we'd appreciate it if people can help out by testing complete re-installs of their entire MSYS2. The procedure is safe as it is fully reversible. Also, if your system gets messed up, this procedure could help to get you running again.
 
 Re-installing
 -------------

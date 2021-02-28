@@ -56,7 +56,11 @@ The following command will remove a package (but not its dependencies nor any fi
 
 ## Installing a specific version of a package or a stand-alone packages
 
-Older (or pre-release) versions of packages can be installed directly from the package archive (`.tar.xz`). [The data store](http://repo.msys2.org/) for the repositories contains older versions of packages, but beware that you might need to recursively find correct versions of dependencies for the desired package. Once downloaded, the package can be installed like this:
+Older (or pre-release) versions of packages can be installed directly from the package archive (`.tar.zst` or `.tar.xz`). [The data store](http://repo.msys2.org/) for the repositories contains older versions of packages, but beware that you might need to recursively find correct versions of dependencies for the desired package. Once downloaded, the package can be installed like this:
+
+`pacman -U <packagefile.tar.zst>`
+
+or
 
 `pacman -U <packagefile.tar.xz>`
 
