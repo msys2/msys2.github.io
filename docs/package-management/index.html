@@ -945,7 +945,9 @@
 <p>The following command will remove a package (but not its dependencies nor any files produced by running it):</p>
 <p><code>pacman -R &lt;name of the package&gt;</code></p>
 <h2 id="installing-a-specific-version-of-a-package-or-a-stand-alone-packages">Installing a specific version of a package or a stand-alone packages</h2>
-<p>Older (or pre-release) versions of packages can be installed directly from the package archive (<code>.tar.xz</code>). <a href="http://repo.msys2.org/">The data store</a> for the repositories contains older versions of packages, but beware that you might need to recursively find correct versions of dependencies for the desired package. Once downloaded, the package can be installed like this:</p>
+<p>Older (or pre-release) versions of packages can be installed directly from the package archive (<code>.tar.zst</code> or <code>.tar.xz</code>). <a href="http://repo.msys2.org/">The data store</a> for the repositories contains older versions of packages, but beware that you might need to recursively find correct versions of dependencies for the desired package. Once downloaded, the package can be installed like this:</p>
+<p><code>pacman -U &lt;packagefile.tar.zst&gt;</code></p>
+<p>or</p>
 <p><code>pacman -U &lt;packagefile.tar.xz&gt;</code></p>
 <h2 id="listing-the-content-of-a-package">Listing the content of a package</h2>
 <p>If you would like to know what has been installed as a part of a specific package use the following command:</p>
