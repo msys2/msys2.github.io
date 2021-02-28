@@ -75,7 +75,7 @@ MSYS2 and what for.
     Total Installed Size:  53.92 MiB
     Net Upgrade Size:      -1.24 MiB
     
-    :: Proceed with installation? [Y/n] Y
+    :: Proceed with installation? [Y/n]
     :: Retrieving packages...
      bash-5.1.004-1-x86_64            2.3 MiB
      filesystem-2021.01-1-any        33.2 KiB
@@ -95,7 +95,7 @@ MSYS2 and what for.
     (4/6) upgrading msys2-runtime        100%
     (5/6) upgrading pacman-mirrors       100%
     (6/6) upgrading pacman               100%
-    :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n] Y
+    :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
     ```
 
 6. Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with `pacman -Su`:
@@ -115,11 +115,11 @@ MSYS2 and what for.
     Total Installed Size:  44.25 MiB
     Net Upgrade Size:       3.01 MiB
     
-    :: Proceed with installation? [Y/n] Y
+    :: Proceed with installation? [Y/n]
     [... downloading and installation continues ...]
     ```
 
-7. Now MSYS2 is ready for you.  You probably will want to install some tools and the mingw-w64 GCC to start compiling:
+7. Now MSYS2 is ready for you.  You will probably want to install some tools and the mingw-w64 GCC to start compiling:
 
     ````
     $ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
@@ -130,13 +130,13 @@ MSYS2 and what for.
        1) asciidoc  2) autoconf  3) autoconf2.13  4) autogen
        [... more packages listed ...]
     
-    Enter a selection (default=all): all
+    Enter a selection (default=all):
     :: There are 19 members in group mingw-w64-x86_64-toolchain:
     :: Repository mingw64
        1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
        [... more packages listed ...]
     
-    Enter a selection (default=all): alll
+    Enter a selection (default=all):
     resolving dependencies...
     looking for conflicting packages...
     
@@ -158,7 +158,7 @@ MSYS2 and what for.
     Total Download Size:    196.15 MiB
     Total Installed Size:  1254.96 MiB
     
-    :: Proceed with installation? [Y/n] Y
+    :: Proceed with installation? [Y/n]
     [... downloading and installation continues ...]
     ````
 
@@ -169,21 +169,24 @@ MSYS2 and what for.
    [Detailed MSYS2 install guide](wiki/MSYS2-installation/) for troubleshooting
    and additional details on how to keep your MSYS2 up-to-date.
 
+
 ## Sponsors
 
 Our main server is sponsored by [appfleet.com](https://appfleet.com)
 
 [![appfleet.com](appfleet.svg){: width=250px}](https://appfleet.com)
 
+
 ##  Authors and Contributors
 
-* [Alexpux (Алексей)](https://github.com/Alexpux)
+* [Alexpux (Alexey Pavlov)](https://github.com/Alexpux)
 * [martell (Martell Malone)](https://github.com/martell)
 * [mingwandroid (Ray Donnelly)](https://github.com/mingwandroid)
 * [Elieux (David Macek)](https://github.com/elieux)
 * [lazka (Christoph Reiter)](https://github.com/lazka)
 * [Renato Silva](https://github.com/renatosilva)
 * [niXman](https://github.com/niXman)
+
 
 ## Support and Contact
 
@@ -199,6 +202,7 @@ Our main server is sponsored by [appfleet.com](https://appfleet.com)
 *   follow our [Twitter account](https://twitter.com/msys2org)
 *   read older [discussion on SourceForge](https://sourceforge.net/p/msys2/discussion/general/)
 *   more links on our [homepage on GitHub](https://github.com/msys2/msys2)
+
 
 ## Donations
 
