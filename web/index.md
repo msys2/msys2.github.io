@@ -43,7 +43,7 @@ MSYS2 and what for.
 
 2. Run the installer. MSYS2 requires 64 bit Windows 7 or newer.
 
-3. Enter your desired **Installation Folder** (short ASCII-only path, no accents, no spaces, no symlinks, no subst or network drives).
+3. Enter your desired **Installation Folder** (short ASCII-only path on a NTFS volume, no accents, no spaces, no symlinks, no subst or network drives, no FAT).
 
     ![Second screen of MSYS2 installation](images/install-2-path.png)
 
