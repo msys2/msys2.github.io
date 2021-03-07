@@ -45,11 +45,11 @@ MSYS2 and what for.
 
 3. Enter your desired **Installation Folder** (short ASCII-only path, no accents, no spaces, no symlinks, no subst or network drives).
 
-    ![Second screen of MSYS2 installation](images/2_msys32-install_path.png)
+    ![Second screen of MSYS2 installation](images/install-2-path.png)
 
 4. When done, tick **Run MSYS2 now**.
 
-    ![Third screen of MSYS2 installation](images/5_msys2-finish_install.png)
+    ![Third screen of MSYS2 installation](images/install-3-finish.png)
 
 5. Update the package database and base packages.  Unless your setup file is very recent, it will take two steps.  First run `pacman -Syu`:
 
