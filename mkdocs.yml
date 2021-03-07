@@ -1,5 +1,6 @@
 site_name: MSYS2
 site_description: Software Distribution and Building Platform for Windows
+docs_dir: web/
 theme:
     name: material
     logo: 'logo.svg'
@@ -25,7 +26,7 @@ extra:
 
 site_url: https://www.msys2.org
 repo_url: https://github.com/msys2/msys2.github.io
-edit_uri: edit/source/docs/
+edit_uri: edit/source/web/
 
 markdown_extensions:
     - meta
