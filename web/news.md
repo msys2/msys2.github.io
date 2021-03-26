@@ -4,6 +4,15 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-03-25 - Temporarily broken msys2-launcher package
+
+The repo contained a broken msys2-launcher package for a few hours today causing things like
+"msys2.exe" to just show an error dialog. You can get back to a working setup this way:
+
+* Start `C:/msys64/msys2_shell.cmd` to get a shell
+* Run `pacman -Suy` to get all the fixed packages
+
+
 ### 2021-02-27 - New server for repo.msys2.org and packages.msys2.org
 
 We have moved repo.msys2.org (and package.msys2.org) to a new server.  There was
