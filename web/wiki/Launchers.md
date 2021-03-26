@@ -1,5 +1,5 @@
 ---
-title: Lauchers
+title: Launchers
 summary: How to start MSYS2?
 ---
 You should *not* launch sh.exe directly as that doesn't start a login shell or set the correct environment variables for the type of shell that you want to use. Instead, your best choices are:
