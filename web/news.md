@@ -57,9 +57,9 @@ bugs exposed by these changes.
 
 **Known issues:**
 
-* In case you are seeing errors such as `relocation truncated to fit:
+* (Fixed now) ~In case you are seeing errors such as `relocation truncated to fit:
   IMAGE_REL_AMD64_REL32 against undefined symbol` try building with
-  `-Wl,--default-image-base-low`. Here is the upstream bug report:
+  `-Wl,--default-image-base-low`.~ Here is the upstream bug report:
   https://sourceware.org/bugzilla/show_bug.cgi?id=26659
 
 
