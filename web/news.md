@@ -57,10 +57,10 @@ bugs exposed by these changes.
 
 **Known issues:**
 
-* (Fixed now) ~In case you are seeing errors such as `relocation truncated to fit:
+* (Fixed now) ~~In case you are seeing errors such as `relocation truncated to fit:
   IMAGE_REL_AMD64_REL32 against undefined symbol` try building with
-  `-Wl,--default-image-base-low`.~ Here is the upstream bug report:
-  https://sourceware.org/bugzilla/show_bug.cgi?id=26659
+  `-Wl,--default-image-base-low`. Here is the upstream bug report:
+  https://sourceware.org/bugzilla/show_bug.cgi?id=26659~~
 
 
 ### 2020-12-26 - Zstd exemption for core packages removed
