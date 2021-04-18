@@ -70,7 +70,7 @@ MSYS2 yourself.
 
    ```powershell
    # Download the archive
-   (New-Object System.Net.WebClient).DownloadFile('https://github.com/msys2/msys2-installer/releases/download/2020-06-29/msys2-base-x86_64-20200629.sfx.exe', 'msys2.exe')
+   (New-Object System.Net.WebClient).DownloadFile('https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe', 'msys2.exe')
    .\msys2.exe -y -oC:\  # Extract to C:\msys64
    Remove-Item msys2.exe  # Delete the archive again
    ```
