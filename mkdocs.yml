@@ -90,3 +90,4 @@ nav:
         - wiki/Signing-packages.md
         - wiki/Sudo.md
         - wiki/Terminals.md
+        - wiki/JIT-Debugging.md
