@@ -885,6 +885,12 @@ MSYS2 yourself.</p>
 <span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
 <span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;./ci-build.sh&#39;</span>
 </code></pre></div>
+<p>4) End all processes that might have been started by the MSYS2 update/setup</p>
+<p>In some cases CI systems will wait until all processes you have started have
+also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
+that will stay around in the background forever. To end them all you can run:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">FI</span> <span class="s2">&quot;MODULES eq msys-2.0.dll&quot;</span>
+</code></pre></div>
                 
                   
                 
