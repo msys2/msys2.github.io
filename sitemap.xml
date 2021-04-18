@@ -115,5 +115,9 @@
      <loc>https://www.msys2.org/wiki/Terminals/</loc>
      <lastmod>2021-04-18</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://www.msys2.org/wiki/JIT-Debugging/</loc>
+     <lastmod>2021-04-18</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
