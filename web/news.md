@@ -4,6 +4,21 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-04-21 - R.I.P. [mingwandroid](https://github.com/mingwandroid)
+
+Ray Donnelly is a co-founder and developer of MSYS2 and after a multi year fight
+with cancer passed away on 2021-04-20.
+
+![ray](./ray.jpg){: style="max-width: 300px; width:100%; border: 2px solid #333; box-shadow: 0px 0px 3px #ccc;" }
+
+If you want to know more about his life and work see his fundraiser
+descriptions:
+
+* https://uk.gofundme.com/f/help-Ray-fund-a-hospice-bedroom
+* https://uk.gofundme.com/f/arku72-help-ray-fight-cancer
+
+He was always helpful, knowledgeable, and friendly, and he will be greatly missed.
+
 ### 2021-03-25 - Temporarily broken msys2-launcher package
 
 The repo contained a broken msys2-launcher package for a few hours today causing things like
