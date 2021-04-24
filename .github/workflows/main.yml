@@ -7,10 +7,8 @@ on:
     branches-ignore:
       - master
 
-concurrency: ci-${{ github.ref }}
-
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -36,8 +34,25 @@ jobs:
 
       - run: mkdocs build
 
+      - name: Upload Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: ./site
+
+  deploy:
+    needs: build
+    concurrency: ci-${{ github.ref }}
+    permissions:
+      contents: write
+    if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/source')
+    steps:
+      - name: Download Results
+        uses: actions/download-artifact@v2
+        with:
+          name: website
+
       - name: Deploy
-        if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/source')
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
