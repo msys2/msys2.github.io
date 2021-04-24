@@ -41,6 +41,7 @@ jobs:
           path: ./site
 
   deploy:
+    runs-on: ubuntu-18.04
     needs: build
     concurrency: ci-${{ github.ref }}
     permissions:
