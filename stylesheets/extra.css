@@ -32,8 +32,10 @@
 .md-typeset code {
     background-color: #fafafa;
     border: 1px solid #ddd;
-    padding: 0.1em 0.25em;
+    padding: 0.05em 0.25em;
     box-shadow: none;
+    word-break: normal;
+    color: var(--md-code-hl-name-color);
 }
 
 .md-typeset h2 {
@@ -91,6 +93,10 @@ a.button:hover {
 
 table, .admonition {
     background-color: #fafafa;
+}
+
+.md-typeset table tr th {
+    min-width: 0 !important;
 }
 
 .md-header, .md-footer, .md-nav__source {
