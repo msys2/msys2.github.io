@@ -17,7 +17,7 @@ tools.
 
 || Name | Prefix | Toolchain | Architecture | C Library | C++ Library |
 | - |-  |-       |-|-|-|-|
-| ![msys](msys.png){: style="max-width:25px" } | **MSYS** | `/usr` | gcc | x86_64 | cygwin | cygwin |
+| ![msys](msys.png){: style="max-width:25px" } | **MSYS** | `/usr` | gcc | x86_64 | cygwin/msvcrt | libstdc++ |
 | ![mingw64](mingw64.png){: style="max-width:25px" } | **MINGW64** | `/mingw64` | gcc | x86_64 | msvcrt | libstdc++ |
 | ![ucrt64](ucrt64.png){: style="max-width:25px" } | **UCRT64** | `/ucrt64` | gcc | x86_64 | ucrt | libstdc++ |
 | ![clang64](clang64.png){: style="max-width:25px" } | **CLANG64** | `/clang64` | llvm | x86_64 | ucrt | libc++ |
