@@ -222,3 +222,4 @@ Our main server is sponsored by [appfleet.com](https://appfleet.com)
 #### Christoph Reiter ([@lazka](https://github.com/lazka))
 
 * GitHub Sponsors: https://github.com/sponsors/lazka
+* PayPal: [reiter.christoph@gmail.com](https://www.paypal.com/donate?hosted_button_id=LDTZEZT6EXVEC)
