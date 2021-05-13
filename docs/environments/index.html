@@ -366,6 +366,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gcc-vs-llvmclang" class="md-nav__link">
+    GCC vs LLVM/Clang
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msvcrt-vs-ucrt" class="md-nav__link">
+    MSVCRT vs UCRT
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -785,6 +799,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gcc-vs-llvmclang" class="md-nav__link">
+    GCC vs LLVM/Clang
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msvcrt-vs-ucrt" class="md-nav__link">
+    MSVCRT vs UCRT
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -874,6 +902,48 @@ tools.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="gcc-vs-llvmclang">GCC vs LLVM/Clang</h2>
+<p>These are the default compilers/toolchains used for building all packages in the
+respective repositories.</p>
+<p><strong>GCC</strong> based environments:</p>
+<ul>
+<li>Widely tested/used at this point</li>
+<li>Fortran support</li>
+<li>While there also exists a Clang package in the MINGW environments, that one
+  still uses the GNU linker and the GNU C++ library. In same cases Clang is used
+  to build packages as well there, in case upstream prefers Clang over gcc for
+  example.</li>
+</ul>
+<p><strong>LLVM/Clang</strong> based environments:</p>
+<ul>
+<li>Only uses LLVM tools, LLD as a linker, LIBC++ as a C++ standard library</li>
+<li>Clang provides ASAN support</li>
+<li>Native TLS support</li>
+<li>LLD is faster than LD, but does not support all the features LD supports</li>
+<li>Some tools lack feature parity with equivalent GNU tools</li>
+<li>Supports ARM64 on Windows</li>
+</ul>
+<h2 id="msvcrt-vs-ucrt">MSVCRT vs UCRT</h2>
+<p>These are two variants of the C standard library on Windows.</p>
+<p><strong>MSVCRT</strong> is available by default on all Windows versions, but due to backwards
+compatibility issues is stuck in the past, not C99 compatible and is missing
+some features.</p>
+<ul>
+<li>It isn't C99 compatible, for example the printf() function family, but...</li>
+<li>mingw-w64 provides replacement functions to make things C99 compatible in many
+  cases</li>
+<li>It doesn't support the UTF-8 locale</li>
+<li>Because MSVC uses UCRT, and CRTs shouldn't be mixed, you can't mix it with
+  libraries built with MSVC.</li>
+<li>Works out of the box on every Windows machine.</li>
+</ul>
+<p><strong>UCRT</strong> is a newer version which is also used by Visual Studio by default. It
+should work and behave as if the code was compiled with MSVC.</p>
+<ul>
+<li>Better compatibility with MSVC, both at build time and at run time.</li>
+<li>It only ships by default on Windows 10 and for older versions you have to
+  provide it yourself or depend on the user having it installed.</li>
+</ul>
                 
                   
                 
