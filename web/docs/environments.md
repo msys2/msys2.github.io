@@ -1,3 +1,10 @@
+---
+title: Environments
+summary: The differences between the environments is
+    mainly between environment variables, default compilers/linkers, architecture,
+    system libraries used etc.
+---
+
 # Environments
 
 MSYS2 comes with different environments/subsystems and the first thing you have
