@@ -85,7 +85,9 @@ More 32/64 bit peculiarities
 ----------------------------
 
 Sorting out the stat thing by LRN:
-https://gnunet.org/sorting-out-stat-thing
+https://archive.li/IsgPq
+
+(Original URL - now down: `https://gnunet.org/sorting-out-stat-thing`)
 
 
 Calling conventions, stdcall, and autotools
