@@ -60,6 +60,27 @@ $env:MSYSTEM = 'MINGW64'  # Start a 64 bit Mingw environment
 C:\msys64\usr\bin\bash -lc "./ci-build.sh"
 ```
 
+## Docker
+
+Install MSYS2 under `C:\msys64` into a Windows based Docker image:
+
+```docker
+# select as base image matching your host to get process isolation
+FROM mcr.microsoft.com/windows/servercore:2004
+
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+RUN [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; \
+  Invoke-WebRequest -UseBasicParsing -uri "https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe" -OutFile msys2.exe; \
+  .\msys2.exe -y -oC:\; \
+  Remove-Item msys2.exe ; \
+  function msys() { C:\msys64\usr\bin\bash.exe @('-lc') + @Args; } \
+  msys ' '; \
+  msys 'pacman --noconfirm -Syuu'; \
+  msys 'pacman --noconfirm -Syuu'; \
+  msys 'pacman --noconfirm -Scc';
+```
+
 ## Other Systems
 
 On systems that don't provide MSYS2 integration you need to install and update
