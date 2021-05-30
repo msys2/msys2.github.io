@@ -386,6 +386,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-systems" class="md-nav__link">
     Other Systems
   </a>
@@ -807,6 +814,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-systems" class="md-nav__link">
     Other Systems
   </a>
@@ -874,6 +888,23 @@ to update MSYS2 first. For this you need to run the following commands:</p>
 <span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
 <span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
 <span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;./ci-build.sh&quot;</span>
+</code></pre></div>
+<h2 id="docker">Docker</h2>
+<p>Install MSYS2 under <code>C:\msys64</code> into a Windows based Docker image:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># select as base image matching your host to get process isolation</span>
+<span class="k">FROM</span> <span class="s">mcr.microsoft.com/windows/servercore:2004</span>
+
+<span class="k">SHELL</span> <span class="p">[</span><span class="s2">&quot;powershell&quot;</span><span class="p">,</span> <span class="s2">&quot;-Command&quot;</span><span class="p">,</span> <span class="s2">&quot;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&quot;</span><span class="p">]</span>
+
+<span class="k">RUN</span> <span class="o">[</span>Net.ServicePointManager<span class="o">]</span>::SecurityProtocol <span class="o">=</span> <span class="o">[</span>Net.SecurityProtocolType<span class="o">]</span>::Tls12<span class="p">;</span> <span class="se">\</span>
+  Invoke-WebRequest -UseBasicParsing -uri <span class="s2">&quot;https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe&quot;</span> -OutFile msys2.exe<span class="p">;</span> <span class="se">\</span>
+  .<span class="se">\m</span>sys2.exe -y -oC:<span class="se">\;</span> <span class="se">\</span>
+  Remove-Item msys2.exe <span class="p">;</span> <span class="se">\</span>
+  <span class="k">function</span> msys<span class="o">()</span> <span class="o">{</span> C:<span class="se">\m</span>sys64<span class="se">\u</span>sr<span class="se">\b</span>in<span class="se">\b</span>ash.exe @<span class="o">(</span><span class="s1">&#39;-lc&#39;</span><span class="o">)</span> + @Args<span class="p">;</span> <span class="o">}</span> <span class="se">\</span>
+  msys <span class="s1">&#39; &#39;</span><span class="p">;</span> <span class="se">\</span>
+  msys <span class="s1">&#39;pacman --noconfirm -Syuu&#39;</span><span class="p">;</span> <span class="se">\</span>
+  msys <span class="s1">&#39;pacman --noconfirm -Syuu&#39;</span><span class="p">;</span> <span class="se">\</span>
+  msys <span class="s1">&#39;pacman --noconfirm -Scc&#39;</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="other-systems">Other Systems</h2>
 <p>On systems that don't provide MSYS2 integration you need to install and update
