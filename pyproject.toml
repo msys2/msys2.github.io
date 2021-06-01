@@ -7,8 +7,7 @@ authors = ["Christoph Reiter <reiter.christoph@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 mkdocs = "^1.1.2"
-# 7.0 blocked by https://github.com/squidfunk/mkdocs-material/issues/2337
-mkdocs-material = "^6.1.6"
+mkdocs-material = "^7.1.6"
 
 [tool.poetry.dev-dependencies]
 
