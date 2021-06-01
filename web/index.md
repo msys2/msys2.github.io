@@ -187,23 +187,6 @@ Our main server is sponsored by [appfleet.com](https://appfleet.com)
 * [Renato Silva](https://github.com/renatosilva)
 * [niXman](https://github.com/niXman)
 
-
-## Support and Contact
-
-*   read our [wiki](https://www.msys2.org/wiki/Home/)
-*   browse our [package lists](https://packages.msys2.org/)
-*   search for and file [issues for msys2 packages on GitHub](https://github.com/msys2/msys2-packages/issues)
-*   search for and file [issues for mingw-w64 packages on GitHub](https://github.com/msys2/mingw-packages/issues)
-*   search for very old [tickets on SourceForge](https://sourceforge.net/p/msys2/tickets/)
-*   read and post to our [mailing list](https://sourceforge.net/p/msys2/mailman/msys2-users/)
-*   talk in our [Gitter room](https://gitter.im/msys2/msys2)
-*   talk in our [Discord server](https://discord.gg/jPQdRdDcT9)
-*   talk in our [IRC channel](irc://irc.oftc.net:6667/msys2)
-*   follow our [Twitter account](https://twitter.com/msys2org)
-*   read older [discussion on SourceForge](https://sourceforge.net/p/msys2/discussion/general/)
-*   more links on our [homepage on GitHub](https://github.com/msys2/msys2)
-
-
 ## Donations
 
 #### Alexey Pavlov ([@alexpux](https://github.com/alexpux))
