@@ -142,13 +142,13 @@ Create a `PKGBUILD` describing all the steps necessary to build and package the 
 
 Run the makepkg command (`makepkg` or `makepkg-mingw`) on your recipe.
 
-`makepkg-mingw` is essentially a wrapper that does a few checks, sets up the correct environments and runs `makepkg` twice, once for **mingw32** and once for **mingw64**. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define `MINGW_INSTALLS` in the environment, with either `mingw32` or `mingw64` as the value, for example:
+`makepkg-mingw` is essentially a wrapper that does a few checks, sets up the correct environments and runs `makepkg` twice, once for **mingw32** and once for **mingw64**. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define `MINGW_ARCH` in the environment, with either `mingw32` or `mingw64` as the value, for example:
 
-    MINGW_INSTALLS=mingw32 makepkg-mingw -sCLf
+    MINGW_ARCH=mingw64 makepkg-mingw -sCLf
 
 ... or you could export it from `~/.profile` so it's set up automatically:
 
-    export MINGW_INSTALLS=mingw32
+    export MINGW_ARCH=mingw64
 
 Note that if you want to contribute, we'd appreciate it if you test your packages on both architectures (32 and 64 bits), which is only possible on a 64-bit Windows system. If you can't do that for some reason, we can test your pull requests on a 64-bit system.
 
