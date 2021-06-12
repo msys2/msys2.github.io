@@ -1272,12 +1272,12 @@ pacman -U mingw-w64-*-python3-*-any.pkg.tar.zst
 <p>Create a <code>PKGBUILD</code> describing all the steps necessary to build and package the software, including any patches or additional files. Make sure the follow the style and ideas of other recipes if applicable. A good strategy is to find some existing working recipes that use the same build system as your software does and use them as a template for your recipe. You can also take inspiration from an official Arch Linux (or unofficial AUR) recipe for your software.</p>
 <h3 id="build-package">Build package</h3>
 <p>Run the makepkg command (<code>makepkg</code> or <code>makepkg-mingw</code>) on your recipe.</p>
-<p><code>makepkg-mingw</code> is essentially a wrapper that does a few checks, sets up the correct environments and runs <code>makepkg</code> twice, once for <strong>mingw32</strong> and once for <strong>mingw64</strong>. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define <code>MINGW_INSTALLS</code> in the environment, with either <code>mingw32</code> or <code>mingw64</code> as the value, for example:</p>
-<div class="codehilite"><pre><span></span><code>MINGW_INSTALLS=mingw32 makepkg-mingw -sCLf
+<p><code>makepkg-mingw</code> is essentially a wrapper that does a few checks, sets up the correct environments and runs <code>makepkg</code> twice, once for <strong>mingw32</strong> and once for <strong>mingw64</strong>. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define <code>MINGW_ARCH</code> in the environment, with either <code>mingw32</code> or <code>mingw64</code> as the value, for example:</p>
+<div class="codehilite"><pre><span></span><code>MINGW_ARCH=mingw64 makepkg-mingw -sCLf
 </code></pre></div>
 
 <p>... or you could export it from <code>~/.profile</code> so it's set up automatically:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">MINGW_INSTALLS</span><span class="o">=</span><span class="n">mingw32</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">MINGW_ARCH</span><span class="o">=</span><span class="n">mingw64</span>
 </code></pre></div>
 
 <p>Note that if you want to contribute, we'd appreciate it if you test your packages on both architectures (32 and 64 bits), which is only possible on a 64-bit Windows system. If you can't do that for some reason, we can test your pull requests on a 64-bit system.</p>
