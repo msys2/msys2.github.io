@@ -960,7 +960,7 @@ whole argument string.</p>
 <p>Similar to process arguments, paths in environment variables get converted too:</p>
 <div class="highlight"><pre><span></span><code>$ <span class="nv">MYVAR</span><span class="o">=</span>/foo python3 -c <span class="s2">&quot;import os; print(os.environ[&#39;MYVAR&#39;])&quot;</span>
 C:/msys64/foo
-$ $ <span class="nv">MYVAR</span><span class="o">=</span>/foo:/bar python3 -c <span class="s2">&quot;import os; print(os.environ[&#39;MYVAR&#39;])&quot;</span>
+$ <span class="nv">MYVAR</span><span class="o">=</span>/foo:/bar python3 -c <span class="s2">&quot;import os; print(os.environ[&#39;MYVAR&#39;])&quot;</span>
 C:<span class="se">\m</span>sys64<span class="se">\f</span>oo<span class="p">;</span>C:<span class="se">\m</span>sys64<span class="se">\b</span>ar
 </code></pre></div>
 <p>You can disable the conversion with <code>MSYS2_ENV_CONV_EXCL</code>:</p>
