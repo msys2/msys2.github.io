@@ -83,7 +83,7 @@ Similar to process arguments, paths in environment variables get converted too:
 ```shell
 $ MYVAR=/foo python3 -c "import os; print(os.environ['MYVAR'])"
 C:/msys64/foo
-$ $ MYVAR=/foo:/bar python3 -c "import os; print(os.environ['MYVAR'])"
+$ MYVAR=/foo:/bar python3 -c "import os; print(os.environ['MYVAR'])"
 C:\msys64\foo;C:\msys64\bar
 ```
 
