@@ -200,7 +200,7 @@ Our main server is sponsored by [appfleet.com](https://appfleet.com)
 
 #### Ray Donnelly ([@mingwandroid](https://github.com/mingwandroid))
 
-* PayPal: [ray.donnelly@gmail.com](https://www.paypal.com/donate/?business=ray.donnelly%40gmail.com&item_name=Ray+Donnelly+MSYS2+development+donation&currency_code=GBP)
+See <https://www.msys2.org/news/#2021-04-21-rip-mingwandroid>
 
 #### Christoph Reiter ([@lazka](https://github.com/lazka))
 
