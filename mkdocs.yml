@@ -9,7 +9,7 @@ theme:
         primary: 'indigo'
         accent: 'indigo'
     features:
-        - instant
+        - navigation.instant
     custom_dir: overrides
 
 extra_css:
