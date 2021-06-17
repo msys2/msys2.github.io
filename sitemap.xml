@@ -127,5 +127,9 @@
      <loc>https://www.msys2.org/contact/</loc>
      <lastmod>2021-06-17</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://www.msys2.org/codeofconduct/</loc>
+     <lastmod>2021-06-17</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
