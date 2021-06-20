@@ -186,6 +186,9 @@ Our main server is sponsored by [appfleet.com](https://appfleet.com)
 * [lazka (Christoph Reiter)](https://github.com/lazka)
 * [Renato Silva](https://github.com/renatosilva)
 * [niXman](https://github.com/niXman)
+* [naveen521kk (Naveen M K)](https://github.com/naveen521kk)
+* [Biswa96 (Biswapriyo Nath)](https://github.com/Biswa96)
+* [jeremyd2019 (Jeremy Drake)](https://github.com/jeremyd2019)
 
 ## Donations
 
