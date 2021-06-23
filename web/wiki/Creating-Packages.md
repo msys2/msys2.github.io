@@ -94,6 +94,7 @@ Once you are familiar with the process, we recommend creating recipes and using 
 ### Which subsystem?
 
 In MSYS2 there are 2 types of packages:
+
 * **msys packages** - these run on the emulation layer and are typically POSIX-only programs
 * **mingw packages** - these run natively just like any other Windows program
 
