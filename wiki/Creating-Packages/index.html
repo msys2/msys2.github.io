@@ -1253,9 +1253,11 @@ pacman -U mingw-w64-*-python3-*-any.pkg.tar.zst
 <p>The steps above describe an intuitive process of going from the idea of creating a package to making it available to you and others using <code>pacman</code>. You can of course customize the process to suit you and your situation.</p>
 <p>Once you are familiar with the process, we recommend creating recipes and using <code>makepkg</code> straight away for all packages. It's a great way to record your build steps in a reproducible way, which is not only useful for you, but also for other people when asked for help with the builds.</p>
 <h3 id="which-subsystem">Which subsystem?</h3>
-<p>In MSYS2 there are 2 types of packages:
-* <strong>msys packages</strong> - these run on the emulation layer and are typically POSIX-only programs
-* <strong>mingw packages</strong> - these run natively just like any other Windows program</p>
+<p>In MSYS2 there are 2 types of packages:</p>
+<ul>
+<li><strong>msys packages</strong> - these run on the emulation layer and are typically POSIX-only programs</li>
+<li><strong>mingw packages</strong> - these run natively just like any other Windows program</li>
+</ul>
 <p>You should think of these two systems as separate where <strong>msys</strong> packages should generally only be build dependencies of <strong>mingw</strong> packages. You also can't link a <strong>mingw</strong> program against an <strong>msys</strong> library.</p>
 <p>This means you first need to decide which subsystem (and which repository) is the right one for your new package. The set of things that belong to the <strong>msys</strong> subsystem is pretty small:</p>
 <ul>
