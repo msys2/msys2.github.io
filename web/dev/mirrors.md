@@ -1,21 +1,70 @@
----
-title: Creating a Mirror
-summary: Creating a Mirror for MSYS2
----
+# Mirrors
 
-## Available Mirrors
+Our [main repo server](https://repo.msys2.org/) is located in Germany and
+contains the pacman databases and packages, matching source packages and
+installers. The whole content of the mirror is regularly synced to multiple
+mirrors across the world.
 
-The mirrors are defined in the [pacman-mirrors](https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors) package.
+All these servers are registered with pacman under `/etc/pacman.d/mirrorlist.*`.
+The first URL in those lists is the primary mirror, all others will be used as a
+fallback. You can make another mirror the primary one by moving it to the top.
 
-## Creating a New Mirror
+In case you have problems with a particular mirror please let us know by filing
+an issue: https://github.com/msys2/msys2.github.io/issues
 
-The repository size is ~150 GiB (as of 2021/01) with the distribution of sizes like this:
+## Primary Server
+
+| Name | URL | Contact | Note |
+| -    | -   | -       | -    |
+| repo.msys2.org | [HTTPS](https://repo.msys2.org/) \| [RSYNC](rsync://repo.msys2.org/builds/) | [contact](../contact.md) | primary |
+| mirror.msys2.org | [HTTPS](https://mirror.msys2.org/) | [contact](../contact.md) | geo redirection service for Tier 1 mirrors |
+
+## Tier 1 Mirrors
+
+**Requirements:** Reliable, 1GBit/s+ with enough free bandwidth, rsync server
+support, HTTPS support, synced at least once per day from the primary server.
+
+**Map**: <https://mirror.msys2.org/?mirrorstats>
+
+| Name | URLs  | Contact | Note |
+| -    | -     | -       |-     |
+| download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) \| [RSYNC](rsync://download.nus.edu.sg/msys2/) | <download@nus.edu.sg> | |
+| ftp.acc.umu.se | [HTTPS](https://ftp.acc.umu.se/mirror/msys2.org/) \| [RSYNC](rsync://ftp.acc.umu.se/mirror/msys2.org/) | <ftp-adm@acc.umu.se> | |
+| ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> | |
+| ftp.osuosl.org | [HTTPS](https://ftp.osuosl.org/pub/msys2/) \| [RSYNC](rsync://rsync.osuosl.org/msys2/) | <hosting-request@osuosl.org> | |
+| mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [Cameron Weinfurt](mailto:weinfuc@clarkson.edu) | |
+| mirror.selfnet.de | [HTTPS](https://mirror.selfnet.de/msys2/) \| [RSYNC](rsync://mirror.selfnet.de/msys2/) | 
+| mirror.ufro.cl | [HTTPS](https://mirror.ufro.cl/msys2/) \| [RSYNC](rsync://mirror.ufro.cl/msys2/) | [Jonathan Gutiérrez](mailto:jonathan.gutierrez@ufrontera.cl) |  |
+| mirror.yandex.ru | [HTTPS](https://mirror.yandex.ru/mirrors/msys2/) \| [RSYNC](rsync://mirror.yandex.ru/mirrors/msys2/) | - |  |
+| mirrors.dotsrc.org | [HTTPS](https://mirrors.dotsrc.org/msys2/) \| [RSYNC](rsync://mirrors.dotsrc.org/msys2/) | <staff@dotsrc.org> | |
+| mirrors.tuna.tsinghua.edu.cn | [HTTPS](https://mirrors.tuna.tsinghua.edu.cn/msys2/) \| [RSYNC](rsync://mirror.selfnet.de/msys2/) | - |
+| mirrors.ustc.edu.cn | [HTTPS](https://mirrors.ustc.edu.cn/msys2/) \| [RSYNC](rsync://rsync.mirrors.ustc.edu.cn/repo/msys2/) | <lug@ustc.edu.cn> | |
+
+## Tier 2 Mirrors
+
+**Requirements:** Synced regularly.
+
+| Name | URLs  | Contact | Note |
+| -    | -     | -       |-     |
+| downloads.sourceforge.net | [HTTPS](https://downloads.sourceforge.net/project/msys2/) | [contact](../contact.md) | |
+| fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | <smlr@ukr.net> | (too slow for T1) |
+| ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> | |
+| mirror.bit.edu.cn | [HTTPS](https://mirror.bit.edu.cn/msys2/) | <webmaster@bitnp.net> |
+| mirror.jmu.edu | [HTTPS](http://mirror.jmu.edu/pub/msys2/) | <mirrormaster@jmu.edu> | |
+| mirrors.piconets.webwerks.in | [HTTPS](https://mirrors.piconets.webwerks.in/msys2-mirror/) | <mirrors@piconets.com> | |
+| mirrors.sjtug.sjtu.edu.cn | [HTTPS](https://mirrors.sjtug.sjtu.edu.cn/msys2/) | | |
+| quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> | (too slow for T1) |
+| www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) | |
+| repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/x86_64/) | | (partial mirror) |
+
+## Adding a New Mirror
+
+The repository size is ~240 GiB (see https://mirror.jmu.edu/ for current stats)
+with the distribution of sizes like this:
 
 ```
--100B:  ~1000 files
-  -1K: ~13000 files
- -10K:   ~200 files
--100K:  ~3000 files
+  -1K: ~14000 files
+-100K:  ~3200 files
   -1M:  ~5000 files
  -10M:  ~4000 files
 -100M:  ~1000 files
@@ -23,24 +72,12 @@ The repository size is ~150 GiB (as of 2021/01) with the distribution of sizes l
  -10G:    ~20 files
 ```
 
-* You can use rsync to update your mirror using `rsync -rtlvH --delete-after --delay-updates --safe-links`
-* If you want to add your mirror to the main mirror list please open a PR against the [pacman-mirrors](https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors) package
+You can use rsync to update your mirror using
 
-Our main repository supports rsync: `rsync://repo.msys2.org/builds`
+```shell
+rsync -rtlvH --delete-after --delay-updates --safe-links \
+    rsync://repo.msys2.org/builds ./msys2
+```
 
-Some of the existing mirrors also support rsync:
-
-* `rsync://download.nus.edu.sg/msys2/`
-* `rsync://ftp.acc.umu.se/mirror/msys2.org/`
-* `rsync://ftp.nluug.nl/msys2/builds/`
-* `rsync://mirror.clarkson.edu/msys2/`
-* `rsync://mirrors.dotsrc.org/msys2/`
-* `rsync://mirror.selfnet.de/msys2/`
-* `rsync://mirror.selfnet.de/msys2`
-* `rsync://mirrors.tuna.tsinghua.edu.cn/msys2/`
-* `rsync://mirror.ufro.cl/msys2/`
-* `rsync://mirror.yandex.ru/mirrors/msys2`
-* `rsync://quantum-mirror.hu/mirrors/pub/msys2/`
-* `rsync://rsync.osuosl.org/msys2/`
-
-If you want to view the current mirrors and urls, goto [mirrorlist.md](https://github.com/msys2/MSYS2-packages/blob/master/pacman-mirrors/mirrorlist.md)
+To register your mirror please open an issue here:
+https://github.com/msys2/msys2.github.io/issues
