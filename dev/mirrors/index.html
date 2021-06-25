@@ -18,7 +18,7 @@
     
     
       
-        <title>Creating a Mirror - MSYS2</title>
+        <title>Mirrors - MSYS2</title>
       
     
     
@@ -55,8 +55,8 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2 - Creating a Mirror" />
-<meta property="og:description" content="Creating a Mirror for MSYS2" />
+<meta property="og:title" content="MSYS2 - Mirrors" />
+<meta property="og:description" content="" />
 
 <meta property="og:url" content="https://www.msys2.org/dev/mirrors/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#available-mirrors" class="md-skip">
+        <a href="#mirrors" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating a Mirror
+              Mirrors
             
           </span>
         </div>
@@ -423,20 +423,24 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Creating a Mirror
+          Mirrors
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Creating a Mirror
+        Mirrors
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -446,15 +450,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#available-mirrors" class="md-nav__link">
-    Available Mirrors
+  <a href="#primary-server" class="md-nav__link">
+    Primary Server
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-mirror" class="md-nav__link">
-    Creating a New Mirror
+  <a href="#tier-1-mirrors" class="md-nav__link">
+    Tier 1 Mirrors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tier-2-mirrors" class="md-nav__link">
+    Tier 2 Mirrors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-mirror" class="md-nav__link">
+    Adding a New Mirror
   </a>
   
 </li>
@@ -801,6 +819,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -809,15 +829,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#available-mirrors" class="md-nav__link">
-    Available Mirrors
+  <a href="#primary-server" class="md-nav__link">
+    Primary Server
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-mirror" class="md-nav__link">
-    Creating a New Mirror
+  <a href="#tier-1-mirrors" class="md-nav__link">
+    Tier 1 Mirrors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tier-2-mirrors" class="md-nav__link">
+    Tier 2 Mirrors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-mirror" class="md-nav__link">
+    Adding a New Mirror
   </a>
   
 </li>
@@ -839,45 +873,214 @@
                   </a>
                 
                 
-                  <h1>Creating a Mirror</h1>
-                
-                <h2 id="available-mirrors">Available Mirrors</h2>
-<p>The mirrors are defined in the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package.</p>
-<h2 id="creating-a-new-mirror">Creating a New Mirror</h2>
-<p>The repository size is ~150 GiB (as of 2021/01) with the distribution of sizes like this:</p>
-<div class="highlight"><pre><span></span><code>-100B:  ~1000 files
-  -1K: ~13000 files
- -10K:   ~200 files
--100K:  ~3000 files
+                <h1 id="mirrors">Mirrors</h1>
+<p>Our <a href="https://repo.msys2.org/">main repo server</a> is located in Germany and
+contains the pacman databases and packages, matching source packages and
+installers. The whole content of the mirror is regularly synced to multiple
+mirrors across the world.</p>
+<p>All these servers are registered with pacman under <code>/etc/pacman.d/mirrorlist.*</code>.
+The first URL in those lists is the primary mirror, all others will be used as a
+fallback. You can make another mirror the primary one by moving it to the top.</p>
+<p>In case you have problems with a particular mirror please let us know by filing
+an issue: <a href="https://github.com/msys2/msys2.github.io/issues">https://github.com/msys2/msys2.github.io/issues</a></p>
+<h2 id="primary-server">Primary Server</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>URL</th>
+<th>Contact</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo.msys2.org</td>
+<td><a href="https://repo.msys2.org/">HTTPS</a> | <a href="rsync://repo.msys2.org/builds/">RSYNC</a></td>
+<td><a href="../../contact/">contact</a></td>
+<td>primary</td>
+</tr>
+<tr>
+<td>mirror.msys2.org</td>
+<td><a href="https://mirror.msys2.org/">HTTPS</a></td>
+<td><a href="../../contact/">contact</a></td>
+<td>geo redirection service for Tier 1 mirrors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tier-1-mirrors">Tier 1 Mirrors</h2>
+<p><strong>Requirements:</strong> Reliable, 1GBit/s+ with enough free bandwidth, rsync server
+support, HTTPS support, synced at least once per day from the primary server.</p>
+<p><strong>Map</strong>: <a href="https://mirror.msys2.org/?mirrorstats">https://mirror.msys2.org/?mirrorstats</a></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>URLs</th>
+<th>Contact</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>download.nus.edu.sg</td>
+<td><a href="https://download.nus.edu.sg/mirror/msys2/">HTTPS</a> | <a href="rsync://download.nus.edu.sg/msys2/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#111;&#119;&#110;&#108;&#111;&#97;&#100;&#64;&#110;&#117;&#115;&#46;&#101;&#100;&#117;&#46;&#115;&#103;">&#100;&#111;&#119;&#110;&#108;&#111;&#97;&#100;&#64;&#110;&#117;&#115;&#46;&#101;&#100;&#117;&#46;&#115;&#103;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>ftp.acc.umu.se</td>
+<td><a href="https://ftp.acc.umu.se/mirror/msys2.org/">HTTPS</a> | <a href="rsync://ftp.acc.umu.se/mirror/msys2.org/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#116;&#112;&#45;&#97;&#100;&#109;&#64;&#97;&#99;&#99;&#46;&#117;&#109;&#117;&#46;&#115;&#101;">&#102;&#116;&#112;&#45;&#97;&#100;&#109;&#64;&#97;&#99;&#99;&#46;&#117;&#109;&#117;&#46;&#115;&#101;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>ftp.nluug.nl</td>
+<td><a href="https://ftp.nluug.nl/pub/os/windows/msys2/builds/">HTTPS</a> | <a href="rsync://ftp.nluug.nl/msys2/builds/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#116;&#112;&#45;&#97;&#100;&#109;&#105;&#110;&#64;&#110;&#108;&#117;&#117;&#103;&#46;&#110;&#108;">&#102;&#116;&#112;&#45;&#97;&#100;&#109;&#105;&#110;&#64;&#110;&#108;&#117;&#117;&#103;&#46;&#110;&#108;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>ftp.osuosl.org</td>
+<td><a href="https://ftp.osuosl.org/pub/msys2/">HTTPS</a> | <a href="rsync://rsync.osuosl.org/msys2/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#111;&#115;&#116;&#105;&#110;&#103;&#45;&#114;&#101;&#113;&#117;&#101;&#115;&#116;&#64;&#111;&#115;&#117;&#111;&#115;&#108;&#46;&#111;&#114;&#103;">&#104;&#111;&#115;&#116;&#105;&#110;&#103;&#45;&#114;&#101;&#113;&#117;&#101;&#115;&#116;&#64;&#111;&#115;&#117;&#111;&#115;&#108;&#46;&#111;&#114;&#103;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirror.clarkson.edu</td>
+<td><a href="https://mirror.clarkson.edu/msys2/">HTTPS</a> | <a href="rsync://mirror.clarkson.edu/msys2/">RSYNC</a></td>
+<td><a href="mailto:weinfuc@clarkson.edu">Cameron Weinfurt</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirror.selfnet.de</td>
+<td><a href="https://mirror.selfnet.de/msys2/">HTTPS</a> | <a href="rsync://mirror.selfnet.de/msys2/">RSYNC</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mirror.ufro.cl</td>
+<td><a href="https://mirror.ufro.cl/msys2/">HTTPS</a> | <a href="rsync://mirror.ufro.cl/msys2/">RSYNC</a></td>
+<td><a href="mailto:jonathan.gutierrez@ufrontera.cl">Jonathan Gutiérrez</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirror.yandex.ru</td>
+<td><a href="https://mirror.yandex.ru/mirrors/msys2/">HTTPS</a> | <a href="rsync://mirror.yandex.ru/mirrors/msys2/">RSYNC</a></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>mirrors.dotsrc.org</td>
+<td><a href="https://mirrors.dotsrc.org/msys2/">HTTPS</a> | <a href="rsync://mirrors.dotsrc.org/msys2/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#116;&#97;&#102;&#102;&#64;&#100;&#111;&#116;&#115;&#114;&#99;&#46;&#111;&#114;&#103;">&#115;&#116;&#97;&#102;&#102;&#64;&#100;&#111;&#116;&#115;&#114;&#99;&#46;&#111;&#114;&#103;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirrors.tuna.tsinghua.edu.cn</td>
+<td><a href="https://mirrors.tuna.tsinghua.edu.cn/msys2/">HTTPS</a> | <a href="rsync://mirror.selfnet.de/msys2/">RSYNC</a></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>mirrors.ustc.edu.cn</td>
+<td><a href="https://mirrors.ustc.edu.cn/msys2/">HTTPS</a> | <a href="rsync://rsync.mirrors.ustc.edu.cn/repo/msys2/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#117;&#103;&#64;&#117;&#115;&#116;&#99;&#46;&#101;&#100;&#117;&#46;&#99;&#110;">&#108;&#117;&#103;&#64;&#117;&#115;&#116;&#99;&#46;&#101;&#100;&#117;&#46;&#99;&#110;</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tier-2-mirrors">Tier 2 Mirrors</h2>
+<p><strong>Requirements:</strong> Synced regularly.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>URLs</th>
+<th>Contact</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>downloads.sourceforge.net</td>
+<td><a href="https://downloads.sourceforge.net/project/msys2/">HTTPS</a></td>
+<td><a href="../../contact/">contact</a></td>
+<td></td>
+</tr>
+<tr>
+<td>fastmirror.pp.ua</td>
+<td><a href="https://fastmirror.pp.ua/msys2/">HTTPS</a> | <a href="rsync://fastmirror.pp.ua/msys2/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#109;&#108;&#114;&#64;&#117;&#107;&#114;&#46;&#110;&#101;&#116;">&#115;&#109;&#108;&#114;&#64;&#117;&#107;&#114;&#46;&#110;&#101;&#116;</a></td>
+<td>(too slow for T1)</td>
+</tr>
+<tr>
+<td>ftp.cc.uoc.gr</td>
+<td><a href="https://ftp.cc.uoc.gr/mirrors/msys2/">HTTPS</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#105;&#114;&#114;&#111;&#114;&#115;&#64;&#99;&#99;&#46;&#117;&#111;&#99;&#46;&#103;&#114;">&#109;&#105;&#114;&#114;&#111;&#114;&#115;&#64;&#99;&#99;&#46;&#117;&#111;&#99;&#46;&#103;&#114;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirror.bit.edu.cn</td>
+<td><a href="https://mirror.bit.edu.cn/msys2/">HTTPS</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#101;&#98;&#109;&#97;&#115;&#116;&#101;&#114;&#64;&#98;&#105;&#116;&#110;&#112;&#46;&#110;&#101;&#116;">&#119;&#101;&#98;&#109;&#97;&#115;&#116;&#101;&#114;&#64;&#98;&#105;&#116;&#110;&#112;&#46;&#110;&#101;&#116;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirror.jmu.edu</td>
+<td><a href="http://mirror.jmu.edu/pub/msys2/">HTTPS</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#105;&#114;&#114;&#111;&#114;&#109;&#97;&#115;&#116;&#101;&#114;&#64;&#106;&#109;&#117;&#46;&#101;&#100;&#117;">&#109;&#105;&#114;&#114;&#111;&#114;&#109;&#97;&#115;&#116;&#101;&#114;&#64;&#106;&#109;&#117;&#46;&#101;&#100;&#117;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirrors.piconets.webwerks.in</td>
+<td><a href="https://mirrors.piconets.webwerks.in/msys2-mirror/">HTTPS</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#105;&#114;&#114;&#111;&#114;&#115;&#64;&#112;&#105;&#99;&#111;&#110;&#101;&#116;&#115;&#46;&#99;&#111;&#109;">&#109;&#105;&#114;&#114;&#111;&#114;&#115;&#64;&#112;&#105;&#99;&#111;&#110;&#101;&#116;&#115;&#46;&#99;&#111;&#109;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>mirrors.sjtug.sjtu.edu.cn</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/msys2/">HTTPS</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>quantum-mirror.hu</td>
+<td><a href="https://quantum-mirror.hu/mirrors/pub/msys2/">HTTPS</a> | <a href="rsync://quantum-mirror.hu/msys2/">RSYNC</a></td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#111;&#111;&#116;&#64;&#113;&#117;&#97;&#110;&#116;&#117;&#109;&#45;&#109;&#105;&#114;&#114;&#111;&#114;&#46;&#104;&#117;">&#114;&#111;&#111;&#116;&#64;&#113;&#117;&#97;&#110;&#116;&#117;&#109;&#45;&#109;&#105;&#114;&#114;&#111;&#114;&#46;&#104;&#117;</a></td>
+<td>(too slow for T1)</td>
+</tr>
+<tr>
+<td>www2.futureware.at</td>
+<td><a href="https://www2.futureware.at/~nickoe/msys2-mirror/">HTTPS</a></td>
+<td><a href="mailto:oe.nick@gmail.com">Nick Østergaard</a></td>
+<td></td>
+</tr>
+<tr>
+<td>repo.casualgamer.ca</td>
+<td><a href="https://repo.casualgamer.ca/x86_64/">HTTPS</a></td>
+<td></td>
+<td>(partial mirror)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adding-a-new-mirror">Adding a New Mirror</h2>
+<p>The repository size is ~240 GiB (see <a href="https://mirror.jmu.edu/">https://mirror.jmu.edu/</a> for current stats)
+with the distribution of sizes like this:</p>
+<div class="highlight"><pre><span></span><code>  -1K: ~14000 files
+-100K:  ~3200 files
   -1M:  ~5000 files
  -10M:  ~4000 files
 -100M:  ~1000 files
   -1G:   ~200 files
  -10G:    ~20 files
 </code></pre></div>
-<ul>
-<li>You can use rsync to update your mirror using <code>rsync -rtlvH --delete-after --delay-updates --safe-links</code></li>
-<li>If you want to add your mirror to the main mirror list please open a PR against the <a href="https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors">pacman-mirrors</a> package</li>
-</ul>
-<p>Our main repository supports rsync: <code>rsync://repo.msys2.org/builds</code></p>
-<p>Some of the existing mirrors also support rsync:</p>
-<ul>
-<li><code>rsync://download.nus.edu.sg/msys2/</code></li>
-<li><code>rsync://ftp.acc.umu.se/mirror/msys2.org/</code></li>
-<li><code>rsync://ftp.nluug.nl/msys2/builds/</code></li>
-<li><code>rsync://mirror.clarkson.edu/msys2/</code></li>
-<li><code>rsync://mirrors.dotsrc.org/msys2/</code></li>
-<li><code>rsync://mirror.selfnet.de/msys2/</code></li>
-<li><code>rsync://mirror.selfnet.de/msys2</code></li>
-<li><code>rsync://mirrors.tuna.tsinghua.edu.cn/msys2/</code></li>
-<li><code>rsync://mirror.ufro.cl/msys2/</code></li>
-<li><code>rsync://mirror.yandex.ru/mirrors/msys2</code></li>
-<li><code>rsync://quantum-mirror.hu/mirrors/pub/msys2/</code></li>
-<li><code>rsync://rsync.osuosl.org/msys2/</code></li>
-</ul>
-<p>If you want to view the current mirrors and urls, goto <a href="https://github.com/msys2/MSYS2-packages/blob/master/pacman-mirrors/mirrorlist.md">mirrorlist.md</a></p>
-                
-                  
+<p>You can use rsync to update your mirror using</p>
+<div class="highlight"><pre><span></span><code>rsync -rtlvH --delete-after --delay-updates --safe-links <span class="se">\</span>
+    rsync://repo.msys2.org/builds ./msys2
+</code></pre></div>
+<p>To register your mirror please open an issue here:
+<a href="https://github.com/msys2/msys2.github.io/issues">https://github.com/msys2/msys2.github.io/issues</a></p>
                 
               
               
