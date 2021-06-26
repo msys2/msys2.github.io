@@ -76,7 +76,7 @@ You can use rsync to update your mirror using
 
 ```shell
 rsync -rtlvH --delete-after --delay-updates --safe-links \
-    rsync://repo.msys2.org/builds ./msys2
+    rsync://repo.msys2.org/builds/ ./msys2
 ```
 
 To register your mirror please open an issue here:
