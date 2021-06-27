@@ -55,7 +55,7 @@ support, HTTPS support, synced at least once per day from the primary server.
 | mirrors.sjtug.sjtu.edu.cn | [HTTPS](https://mirrors.sjtug.sjtu.edu.cn/msys2/) | | |
 | quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> | (too slow for T1) |
 | www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) | |
-| repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/x86_64/) | | (partial mirror) |
+| repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | | |
 
 ## Adding a New Mirror
 
