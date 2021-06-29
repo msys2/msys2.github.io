@@ -79,5 +79,15 @@ rsync -rtlvH --delete-after --delay-updates --safe-links \
     rsync://repo.msys2.org/builds/ ./msys2
 ```
 
+Our repository layout is compatible with Arch Linux, which means you can use the
+following script to sync everything more frequently and efficiently:
+
+https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/roles/syncrepo/files/syncrepo-template.sh
+
+```shell
+source_url='rsync://repo.msys2.org/builds/'
+lastupdate_url='https://repo.msys2.org/lastupdate'
+```
+
 To register your mirror please open an issue here:
 https://github.com/msys2/msys2.github.io/issues
