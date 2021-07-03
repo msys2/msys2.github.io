@@ -189,6 +189,7 @@ Our main server is sponsored by [appfleet.com](https://appfleet.com)
 * [naveen521kk (Naveen M K)](https://github.com/naveen521kk)
 * [Biswa96 (Biswapriyo Nath)](https://github.com/Biswa96)
 * [jeremyd2019 (Jeremy Drake)](https://github.com/jeremyd2019)
+* [mati865 (Mateusz Mikuła)](https://github.com/mati865)
 
 ## Donations
 
