@@ -4,6 +4,24 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-07-04 - Some Mirror/Server/Repository Changes
+
+**Primary Pacman Server**: We've switched the main server in the pacman config
+to https://mirror.msys2.org. This server will redirect pacman to an up-to-date
+mirror [near you](https://mirror.msys2.org/?mirrorstats) for each file. We hope
+this will improve the download speed for users further away from Europe. We also
+have a new overview of all mirrors [here](./dev/mirrors.md).
+
+**Repo Path Renaming:** We've renamed `mingw/i686/` to `mingw/mingw32/` and
+`mingw/x86_86/` to `mingw/mingw64/` and added symlinks for the old paths. This
+means 100GB of resyncing for mirrors using rsync (sorry :/). Having the repo
+name in the directory path allows us to have one mirrorlist configuration for
+all repos in the future.
+
+**Sourceforge**: Due to space constraints we no longer host the source packages
+on Sourceforge. They are still available on our main server and on all mirrors.
+
+
 ### 2021-04-21 - R.I.P. [mingwandroid](https://github.com/mingwandroid)
 
 Ray Donnelly is a co-founder and developer of MSYS2 and after a multi year fight
