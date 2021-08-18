@@ -1213,18 +1213,18 @@ $(info The version of MSYS you are running is $(msys_version) (0 meaning not MSY
 </code></pre></div>
 
 <p>... can be replaced with this:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">AC_MSG_CHECKING</span><span class="p">([</span><span class="k">for</span> <span class="n">localtime_r</span><span class="p">])</span>
-<span class="n">AC_LINK_IFELSE</span><span class="p">([</span><span class="n">AC_LANG_PROGRAM</span><span class="p">([[</span>
-  <span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
-<span class="p">]],</span> <span class="p">[[</span>
-  <span class="kt">time_t</span> <span class="n">t</span><span class="p">;</span> <span class="k">struct</span> <span class="nc">tm</span> <span class="n">r</span><span class="p">;</span>
-  <span class="n">localtime_r</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
-<span class="p">]])],</span>
-<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">yes</span><span class="p">])</span>
- <span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span> <span class="nb">true</span><span class="p">)</span>
- <span class="n">AC_DEFINE</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">Define</span> <span class="n">to</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="err">`</span><span class="n">localtime_r</span><span class="err">&#39;</span> <span class="n">function</span> <span class="n">or</span> <span class="n">macro</span><span class="p">.])],</span>
-<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">no</span><span class="p">])</span>
- <span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span> <span class="nb">false</span><span class="p">)])</span>
+<div class="codehilite"><pre><span></span><code><span class="n">AC_MSG_CHECKING</span><span class="p">([</span><span class="k">for</span><span class="w"> </span><span class="n">localtime_r</span><span class="p">])</span><span class="w"></span>
+<span class="n">AC_LINK_IFELSE</span><span class="p">([</span><span class="n">AC_LANG_PROGRAM</span><span class="p">([[</span><span class="w"></span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="p">]],</span><span class="w"> </span><span class="p">[[</span><span class="w"></span>
+<span class="w">  </span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="k">struct</span> <span class="nc">tm</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">localtime_r</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">r</span><span class="p">);</span><span class="w"></span>
+<span class="p">]])],</span><span class="w"></span>
+<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">yes</span><span class="p">])</span><span class="w"></span>
+<span class="w"> </span><span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="n">AC_DEFINE</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">Define</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="n">localtime_r</span><span class="err">&#39;</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">macro</span><span class="p">.])],</span><span class="w"></span>
+<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">no</span><span class="p">])</span><span class="w"></span>
+<span class="w"> </span><span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="nb">false</span><span class="p">)])</span><span class="w"></span>
 </code></pre></div>
 
 <p>Don't forget to <code>autoreconf -fi</code> after patching <code>configure.ac</code>.</p>
