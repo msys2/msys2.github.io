@@ -172,9 +172,9 @@ MSYS2 and what for.
 
 ## Sponsors
 
-Our main server is sponsored by [appfleet.com](https://appfleet.com)
+Our main server is sponsored by [jsdelivr.com](https://www.jsdelivr.com)
 
-[![appfleet.com](appfleet.svg){: width=250px}](https://appfleet.com)
+[![jsdelivr.com](jsdelivr.svg){: width=250px}](https://www.jsdelivr.com)
 
 
 ##  Authors and Contributors

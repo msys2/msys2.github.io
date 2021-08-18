@@ -50,7 +50,7 @@ The repo contained a broken msys2-launcher package for a few hours today causing
 
 We have moved repo.msys2.org (and package.msys2.org) to a new server.  There was
 a short downtime, but everything should be running great now.  Big thanks to
-appfleet.com for sponsoring the new server.
+~~appfleet.com~~ jsdelivr.com for sponsoring the new server.
 
 New mirrorlists for Pacman will be published soon.  After you get them, your
 package installs and updates should be faster than before and without the
