@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Using-packages/">
+        <link rel="canonical" href="https://www.msys2.org/dev/python/">
       
       <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
-        <title>Package Management - MSYS2</title>
+        <title>Python - MSYS2</title>
       
     
     
@@ -57,10 +57,10 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2 - Package Management" />
+<meta property="og:title" content="MSYS2 - Python" />
 <meta property="og:description" content="" />
 
-<meta property="og:url" content="https://www.msys2.org/wiki/Using-packages/" />
+<meta property="og:url" content="https://www.msys2.org/dev/python/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="250" />
@@ -102,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#python" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -127,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Package Management
+              Python
             
           </span>
         </div>
@@ -393,12 +398,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         Development
@@ -416,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/mirrors/" class="md-nav__link">
+      <a href="../mirrors/" class="md-nav__link">
         Mirrors
       </a>
     </li>
@@ -428,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/keyring/" class="md-nav__link">
+      <a href="../keyring/" class="md-nav__link">
         MSYS2 Keyring
       </a>
     </li>
@@ -438,11 +445,51 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../dev/python/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Python
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#major-version-upgrade-workflow" class="md-nav__link">
+    Major Version Upgrade Workflow
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -482,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Home/" class="md-nav__link">
+      <a href="../../wiki/Home/" class="md-nav__link">
         Welcome to the MSYS2 wiki
       </a>
     </li>
@@ -494,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contributing-to-MSYS2/" class="md-nav__link">
+      <a href="../../wiki/Contributing-to-MSYS2/" class="md-nav__link">
         Contributing to MSYS2
       </a>
     </li>
@@ -506,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Creating-Packages/" class="md-nav__link">
+      <a href="../../wiki/Creating-Packages/" class="md-nav__link">
         Creating Packages
       </a>
     </li>
@@ -518,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Devtopics/" class="md-nav__link">
+      <a href="../../wiki/Devtopics/" class="md-nav__link">
         TODO LIST
       </a>
     </li>
@@ -530,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributing/" class="md-nav__link">
+      <a href="../../wiki/Distributing/" class="md-nav__link">
         Distributing
       </a>
     </li>
@@ -542,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
+      <a href="../../wiki/FAQ/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -554,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GDB-qtcreator/" class="md-nav__link">
+      <a href="../../wiki/GDB-qtcreator/" class="md-nav__link">
         Qt Creator
       </a>
     </li>
@@ -566,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../History/" class="md-nav__link">
+      <a href="../../wiki/History/" class="md-nav__link">
         MSYS2 History
       </a>
     </li>
@@ -578,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
+      <a href="../../wiki/How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
         How does MSYS2 differ from Cygwin?
       </a>
     </li>
@@ -590,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Launchers/" class="md-nav__link">
+      <a href="../../wiki/Launchers/" class="md-nav__link">
         Launchers
       </a>
     </li>
@@ -602,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MSYS2-installation/" class="md-nav__link">
+      <a href="../../wiki/MSYS2-installation/" class="md-nav__link">
         MSYS2-Installation
       </a>
     </li>
@@ -614,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MSYS2-introduction/" class="md-nav__link">
+      <a href="../../wiki/MSYS2-introduction/" class="md-nav__link">
         MSYS2-Introduction
       </a>
     </li>
@@ -626,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MSYS2-reinstallation/" class="md-nav__link">
+      <a href="../../wiki/MSYS2-reinstallation/" class="md-nav__link">
         Re-installing MSYS2
       </a>
     </li>
@@ -638,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packages/" class="md-nav__link">
+      <a href="../../wiki/Packages/" class="md-nav__link">
         Packages List
       </a>
     </li>
@@ -650,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Porting/" class="md-nav__link">
+      <a href="../../wiki/Porting/" class="md-nav__link">
         Porting
       </a>
     </li>
@@ -662,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Setting-up-SSHd/" class="md-nav__link">
+      <a href="../../wiki/Setting-up-SSHd/" class="md-nav__link">
         Setting up SSHd
       </a>
     </li>
@@ -674,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Signing-packages/" class="md-nav__link">
+      <a href="../../wiki/Signing-packages/" class="md-nav__link">
         Signing Packages
       </a>
     </li>
@@ -686,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Sudo/" class="md-nav__link">
+      <a href="../../wiki/Sudo/" class="md-nav__link">
         Do you need Sudo?
       </a>
     </li>
@@ -698,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terminals/" class="md-nav__link">
+      <a href="../../wiki/Terminals/" class="md-nav__link">
         Terminals
       </a>
     </li>
@@ -710,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../JIT-Debugging/" class="md-nav__link">
+      <a href="../../wiki/JIT-Debugging/" class="md-nav__link">
         Just-in-time Debugging
       </a>
     </li>
@@ -760,21 +807,71 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#major-version-upgrade-workflow" class="md-nav__link">
+    Major Version Upgrade Workflow
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/Using-packages.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/dev/python.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Package Management</h1>
-                
-                <p>Move to <a href="../../docs/package-management/">here</a></p>
-                
-                  
+                <h1 id="python">Python</h1>
+<ul>
+<li>PKGBUILD: <a href="https://github.com/msys2/MINGW-packages/tree/master/mingw-w64-python">https://github.com/msys2/MINGW-packages/tree/master/mingw-w64-python</a></li>
+<li>Source: <a href="https://github.com/msys2-contrib/cpython-mingw">https://github.com/msys2-contrib/cpython-mingw</a></li>
+</ul>
+<h2 id="major-version-upgrade-workflow">Major Version Upgrade Workflow</h2>
+<ul>
+<li>Create a new branch at <a href="https://github.com/msys2-contrib/cpython-mingw">https://github.com/msys2-contrib/cpython-mingw</a> for the new version</li>
+<li>Copy the existing PKGBUILD to a "python3.x" and set <code>_primary_python=no</code></li>
+<li>Test the new version (Windows 7 support?)</li>
+<li>Maybe wait for 3.x.1 / 2 for the initial issues to be ironed out</li>
+<li>Figure out which packages need to be rebuild:<ul>
+<li>Use <a href="https://github.com/jeremyd2019/package-grokker">https://github.com/jeremyd2019/package-grokker</a> to detect dependencies on
+  the .dll</li>
+<li><code>pacman -Fqx '/python3\.9/' '.*\.pyc'</code> to detect the remaining packages</li>
+</ul>
+</li>
+<li>Try to update packages that need to be rebuild to get potential Python related
+  fixes.</li>
+<li>Move the PKGBUILD over to <code>mingw-w64-python</code> and make it the default one and
+  rebuild all relevant packages</li>
+<li>Let autobuild handle the rest</li>
+</ul>
                 
               
               
@@ -790,6 +887,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../keyring/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MSYS2 Keyring" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              MSYS2 Keyring
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../wiki/Home/" class="md-footer__link md-footer__link--next" aria-label="Next: Welcome to the MSYS2 wiki" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Welcome to the MSYS2 wiki
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
