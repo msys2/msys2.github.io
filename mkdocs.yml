@@ -70,6 +70,7 @@ nav:
         # infrastructure, mirrors etc and everything else.
         - dev/mirrors.md
         - dev/keyring.md
+        - dev/python.md
     - Other Topics:
         # Old stuff that should ideally move to the above categories in the future
         - wiki/Home.md
