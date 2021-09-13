@@ -1149,9 +1149,9 @@ older installations without Zstd support won't be able to cleanly upgrade
 anymore.</p>
 <p>@dmn-star compiled these commands that should update an older installation to
 support Zstd and unblock futher upgrades:</p>
-<div class="highlight"><pre><span></span><code>pacman --noconfirm -U &quot;http://repo.msys2.org/msys/x86_64/libzstd-1.4.4-2-x86_64.pkg.tar.xz&quot;
-pacman --noconfirm -U &quot;http://repo.msys2.org/msys/x86_64/zstd-1.4.4-2-x86_64.pkg.tar.xz&quot;
-pacman --noconfirm -U &quot;http://repo.msys2.org/msys/x86_64/pacman-5.2.1-6-x86_64.pkg.tar.xz&quot;
+<div class="highlight"><pre><span></span><code>pacman --noconfirm -U &quot;https://repo.msys2.org/msys/x86_64/libzstd-1.4.4-2-x86_64.pkg.tar.xz&quot;
+pacman --noconfirm -U &quot;https://repo.msys2.org/msys/x86_64/zstd-1.4.4-2-x86_64.pkg.tar.xz&quot;
+pacman --noconfirm -U &quot;https://repo.msys2.org/msys/x86_64/pacman-5.2.1-6-x86_64.pkg.tar.xz&quot;
 </code></pre></div>
 <h3 id="2020-10-08-main-repo-pruned">2020-10-08 - main repo pruned</h3>
 <p>Due to limited space on the new server and SourceForge file hosting, we are
@@ -1201,8 +1201,8 @@ error: msys: signature from &quot;David Macek &lt;david.macek.0@gmail.com&gt;&qu
 </code></pre></div>
 <p>We have prepared the following steps to verify and install the new keyring
 manually after which you should be able to use <code>pacman -Syu</code> again:</p>
-<div class="highlight"><pre><span></span><code>$ curl -O http://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
-$ curl -O http://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig
+<div class="highlight"><pre><span></span><code>$ curl -O https://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
+$ curl -O https://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig
 
 $ pacman-key --verify msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig
 ==&gt; Checking msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig... (detached)
