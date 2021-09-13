@@ -32,7 +32,7 @@ There is also an [excellent introduction from Matthieu Vachon](https://sourcefor
 
 Some pages on the [Git for Windows wiki](https://github.com/git-for-windows/git/wiki) are relevant to MSYS2 as well.
 
-There are various [communication channels](http://www.msys2.org/#support-or-contact) set up, including the [#msys2 IRC channel](irc://irc.oftc.net:6667/msys2) on OFTC and the mailing list at msys2-users@lists.sourceforge.net.
+There are various [communication channels](https://www.msys2.org/#support-or-contact) set up, including the [#msys2 IRC channel](irc://irc.oftc.net:6667/msys2) on OFTC and the mailing list at msys2-users@lists.sourceforge.net.
 
 **Project members:**
 

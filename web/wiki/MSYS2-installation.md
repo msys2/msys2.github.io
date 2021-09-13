@@ -7,9 +7,9 @@ I. Downloading
 **MSYS2** ships in the form of installers and base archives. They can be installed or extracted to any place on your computer, but you **MUST** use folder names that consist of only ascii characters and no spaces (also it makes good sense to put it in a path that doesn't use many characters due to PATH_MAX being 260; C:\msys32 or C:\msys64 is ideal).
   You can download the installers or base MSYS2 archives from the links below:
 
-  1. [**32-bit**](http://repo.msys2.org/distrib/i686/)
+  1. [**32-bit**](https://repo.msys2.org/distrib/i686/)
 
-  2. [**64-bit**](http://repo.msys2.org/distrib/x86_64/)
+  2. [**64-bit**](https://repo.msys2.org/distrib/x86_64/)
 
 Note: if you are using 64-bit Windows, there is *no* reason to use 32-bit MSYS2. Well, to be honest, there is one reason: you want to develop MSYS2 software (or contribute to MSYS2-packages) and want to test that the software/package also works on 32-bit MSYS2. When it comes to native software, 64-bit MSYS2 can be used to build, install and run both 32-bit and 64-bit variants. 64-bit MSYS2 software (practically speaking) never needs to be "re-based", giving a better user experience.
 
