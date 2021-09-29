@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip wheel
-          python3 -m pip install -r ./requirements.txt
+          python3 -m pip install -r ./requirements.txt 
 
       - run: mkdocs build
 
