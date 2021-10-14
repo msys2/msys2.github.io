@@ -4,6 +4,13 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-10-14 - OpenSSH 8.8 dropped support for old ssh-rsa keys using SHA-1
+
+The recent OpenSSH update disabled support for old ssh-rsa keys using SHA-1 by
+default. See https://www.openssh.com/txt/release-8.8
+"Potentially-incompatible changes" for details and possible workarounds.
+
+
 ### 2021-07-04 - Some Mirror/Server/Repository Changes
 
 **Primary Pacman Server**: We've switched the main server in the pacman config
