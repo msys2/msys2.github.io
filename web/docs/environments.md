@@ -66,7 +66,10 @@ stuck in the past, not C99 compatible and is missing some features.
   cases
 * It doesn't support the UTF-8 locale
 * Binaries linked with MSVCRT should not be mixed with UCRT ones because the
-  internal structures and data types are different. Same rule is applied for
+  internal structures and data types are different. (More strictly, object
+  files or static libraries built for different targets shouldn't be mixed.
+  DLLs built for different CRTs can be mixed as long as they don't share
+  CRT objects, e.g. `FILE*`, across DLL boundaries.) Same rule is applied for
   MSVC compiled binaries because MSVC uses UCRT by default (if not changed).
 * Works out of the box on every Microsoft Windows versions.
 
