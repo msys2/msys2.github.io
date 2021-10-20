@@ -29,6 +29,7 @@ tools.
 | ![ucrt64](ucrt64.png){: style="max-width:25px" } | **UCRT64** | `/ucrt64` | gcc | x86_64 | ucrt | libstdc++ |
 | ![clang64](clang64.png){: style="max-width:25px" } | **CLANG64** | `/clang64` | llvm | x86_64 | ucrt | libc++ |
 | ![mingw32](mingw32.png){: style="max-width:25px" } | **MINGW32** | `/mingw32` |  gcc | i686  | msvcrt | libstdc++ |
+| ![clang32](clang32.png){: style="max-width:25px" } | **CLANG32** | `/clang32` | llvm | i686 | ucrt | libc++ |
 
 ## GCC vs LLVM/Clang
 
