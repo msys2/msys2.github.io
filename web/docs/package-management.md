@@ -10,7 +10,9 @@ The MSYS2 software distribution uses a port of `pacman` (known from Arch Linux) 
 
 Packages in MSYS2 work like packages in popular Linux distributions. A package is an archive containing a piece of software. This normally means executable files, runtime libraries, data, shared and static link libraries, header files, config files, and manual pages. Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, the files contained are extracted into your MSYS2 installation directory and the metadata are stored in a local database.
 
-There are 3 package repositories, **msys2**, **mingw32**, and **mingw64**. The packages in **msys2** are named just like on a Linux distribution, the packages in **mingw** are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages.
+There are 6 package repositories, the "classical" ones **msys2**, **mingw32**, and **mingw64** and the newer **ucrt64**, **clang32**, and **clang64**.
+The packages in **msys2** are named just like on a Linux distribution, the packages in the others are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages with a secondary prefix `clang` or `ucrt` where applicable.  
+For more details about those see ['Environments'](environments.md).
 
 
 ## Finding a package
