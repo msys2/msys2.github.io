@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.msys2.org/docs/cmake/</loc>
+         <lastmod>2021-10-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.msys2.org/docs/environments/</loc>
          <lastmod>2021-10-22</lastmod>
          <changefreq>daily</changefreq>
