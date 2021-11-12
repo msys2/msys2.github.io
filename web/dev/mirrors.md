@@ -61,7 +61,7 @@ support, HTTPS support, synced at least once per day from the primary server.
 
 ## Adding a New Mirror
 
-The repository size is ~240 GiB (see https://mirror.jmu.edu/ for current stats)
+The repository size is ~340 GiB (see https://mirror.jmu.edu/ for current stats)
 with the distribution of sizes like this:
 
 ```
