@@ -172,10 +172,15 @@ MSYS2 and what for.
 
 ## Sponsors
 
-Our main server is sponsored by [jsdelivr.com](https://www.jsdelivr.com)
+Our main server is sponsored by [jsDelivr](https://www.jsdelivr.com)
 
-[![jsdelivr.com](jsdelivr.svg){: width=250px}](https://www.jsdelivr.com)
+[![jsdelivr.com](sponsors/jsdelivr.svg){: width=250px}](https://www.jsdelivr.com)
 
+[ExtremeIX](https://extreme-ix.org/) sponsors our mirror in India
+
+[![extreme-ix.org](sponsors/extreme-ix.png){: width=250px}](https://extreme-ix.org/)
+
+Various organizations provide us with mirrors all around the world, see [our mirror list](dev/mirrors.md) for details.
 
 ##  Authors and Contributors
 
