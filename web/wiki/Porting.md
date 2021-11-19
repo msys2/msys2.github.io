@@ -34,7 +34,7 @@ Identifier           | Platform(s)                | Usage
 `i686-pc-msys2`      | 32-bit msys2               | Build scripts (`if [ $host = '...' ]`)
 `x86_64-w64-mingw32` | 64-bit mingw               | Build scripts (`if [ $host = '...' ]`)
 `i686-w64-mingw32`   | 32-bit mingw               | Build scripts (`if [ $host = '...' ]`)
-`msys`               | msys2                      | Python (`sys.platform`)
+`cygwin`             | msys2                      | Python (`sys.platform`)
 `win32`              | mingw                      | Python (`sys.platform`)
 
 Filesystem namespaces
@@ -61,9 +61,9 @@ The development repository for this path conversion code is <https://github.com/
 Hard-coded paths and relocation
 -------------------------------
 
-When installing MSYS2, the user selects the root folder. POSIX software has a habit of baking the installation paths into the packages at build time, which is okay for `msys2` software (which only sees the single-root virtual filesystem), but usually causes failures in native software. When a program tries to load its data files using these absolute paths on another MSYS2 installed to a different root folder, it won't find them. For this reason, adding path relocation patches is a common necessity for `mingw` packages (but never for `msys2` packages). The point is to find the path where the program's executable resides, cutting off the `/bin` from the end and finding all necessary files using paths relative to that. Since this is a pretty common task and is not exactly trivial to get it right for all cases, we wrote some re-usable C code for that, available at <https://github.com/Alexpux/MINGW-packages/tree/master/mingw-w64-pathtools>.
+When installing MSYS2, the user selects the root folder. POSIX software has a habit of baking the installation paths into the packages at build time, which is okay for `msys2` software (which only sees the single-root virtual filesystem), but usually causes failures in native software. When a program tries to load its data files using these absolute paths on another MSYS2 installed to a different root folder, it won't find them. For this reason, adding path relocation patches is a common necessity for `mingw` packages (but never for `msys2` packages). The point is to find the path where the program's executable resides, cutting off the `/bin` from the end and finding all necessary files using paths relative to that. Since this is a pretty common task and is not exactly trivial to get it right for all cases, we wrote some re-usable C code for that, available at <https://github.com/msys2/MINGW-packages/tree/master/mingw-w64-pathtools>.
 
-Sometimes these paths are baked into shell scripts or pkg-config's `.pc` files. In that case, you should use sed in the `PKGBUILD` `package()` function to correct this back to the `msys2` version of the path. [please review last sentence] An example of this can be seen at <https://github.com/Alexpux/MINGW-packages/blob/master/mingw-w64-libtool/PKGBUILD#L55>.
+Sometimes these paths are baked into shell scripts or pkg-config's `.pc` files. In that case, you should use sed in the `PKGBUILD` `package()` function to correct this back to the `msys2` version of the path. [please review last sentence] An example of this can be seen at <https://github.com/msys2/MINGW-packages/blob/e0280472a1912cfcd9e714f6e0d06c407326e0df/mingw-w64-libtool/PKGBUILD#L79>.
 
 
 C *printf Format Specifier issues
@@ -169,11 +169,6 @@ MSYS2 includes wrappers for some affected programs, so that they will work corre
 
 [winpty on GitHub](https://github.com/rprichard/winpty)
 
-Signals in mintty
------------------
-When running a native Windows program in mintty (or urxvt, apparently), Ctrl+C will not be correctly passed to the process. Instead, it seems to be eaten by the terminal and the running process is terminated.
-
-[ticket #135](https://sourceforge.net/p/msys2/tickets/135/)
 
 Paths in mingw Python
 ---------------------
