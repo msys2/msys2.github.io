@@ -796,13 +796,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#signals-in-mintty" class="md-nav__link">
-    Signals in mintty
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#paths-in-mingw-python" class="md-nav__link">
     Paths in mingw Python
   </a>
@@ -1063,13 +1056,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#signals-in-mintty" class="md-nav__link">
-    Signals in mintty
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#paths-in-mingw-python" class="md-nav__link">
     Paths in mingw Python
   </a>
@@ -1183,7 +1169,7 @@ $(info The version of MSYS you are running is $(msys_version) (0 meaning not MSY
 <td>Build scripts (<code>if [ $host = '...' ]</code>)</td>
 </tr>
 <tr>
-<td><code>msys</code></td>
+<td><code>cygwin</code></td>
 <td>msys2</td>
 <td>Python (<code>sys.platform</code>)</td>
 </tr>
@@ -1212,8 +1198,8 @@ $(info The version of MSYS you are running is $(msys_version) (0 meaning not MSY
 <p>Setting <code>MSYS2_ARG_CONV_EXCL=*</code> prevents any path transformation.</p>
 <p>The development repository for this path conversion code is <a href="https://github.com/Alexpux/path_convert">https://github.com/Alexpux/path_convert</a>. If you find a case that you think is unambiguously being converted incorrectly, please raise an issue there and/or a pull request with the broken test-case.</p>
 <h2 id="hard-coded-paths-and-relocation">Hard-coded paths and relocation</h2>
-<p>When installing MSYS2, the user selects the root folder. POSIX software has a habit of baking the installation paths into the packages at build time, which is okay for <code>msys2</code> software (which only sees the single-root virtual filesystem), but usually causes failures in native software. When a program tries to load its data files using these absolute paths on another MSYS2 installed to a different root folder, it won't find them. For this reason, adding path relocation patches is a common necessity for <code>mingw</code> packages (but never for <code>msys2</code> packages). The point is to find the path where the program's executable resides, cutting off the <code>/bin</code> from the end and finding all necessary files using paths relative to that. Since this is a pretty common task and is not exactly trivial to get it right for all cases, we wrote some re-usable C code for that, available at <a href="https://github.com/Alexpux/MINGW-packages/tree/master/mingw-w64-pathtools">https://github.com/Alexpux/MINGW-packages/tree/master/mingw-w64-pathtools</a>.</p>
-<p>Sometimes these paths are baked into shell scripts or pkg-config's <code>.pc</code> files. In that case, you should use sed in the <code>PKGBUILD</code> <code>package()</code> function to correct this back to the <code>msys2</code> version of the path. [please review last sentence] An example of this can be seen at <a href="https://github.com/Alexpux/MINGW-packages/blob/master/mingw-w64-libtool/PKGBUILD#L55">https://github.com/Alexpux/MINGW-packages/blob/master/mingw-w64-libtool/PKGBUILD#L55</a>.</p>
+<p>When installing MSYS2, the user selects the root folder. POSIX software has a habit of baking the installation paths into the packages at build time, which is okay for <code>msys2</code> software (which only sees the single-root virtual filesystem), but usually causes failures in native software. When a program tries to load its data files using these absolute paths on another MSYS2 installed to a different root folder, it won't find them. For this reason, adding path relocation patches is a common necessity for <code>mingw</code> packages (but never for <code>msys2</code> packages). The point is to find the path where the program's executable resides, cutting off the <code>/bin</code> from the end and finding all necessary files using paths relative to that. Since this is a pretty common task and is not exactly trivial to get it right for all cases, we wrote some re-usable C code for that, available at <a href="https://github.com/msys2/MINGW-packages/tree/master/mingw-w64-pathtools">https://github.com/msys2/MINGW-packages/tree/master/mingw-w64-pathtools</a>.</p>
+<p>Sometimes these paths are baked into shell scripts or pkg-config's <code>.pc</code> files. In that case, you should use sed in the <code>PKGBUILD</code> <code>package()</code> function to correct this back to the <code>msys2</code> version of the path. [please review last sentence] An example of this can be seen at <a href="https://github.com/msys2/MINGW-packages/blob/e0280472a1912cfcd9e714f6e0d06c407326e0df/mingw-w64-libtool/PKGBUILD#L79">https://github.com/msys2/MINGW-packages/blob/e0280472a1912cfcd9e714f6e0d06c407326e0df/mingw-w64-libtool/PKGBUILD#L79</a>.</p>
 <h2 id="c-printf-format-specifier-issues">C *printf Format Specifier issues</h2>
 <p>The vc6.0 msvcrt.dll that MinGW-w64 targets doesn't implement support for the ANSI standard format specifiers. MinGW-w64 works around this by providing their own implementation. To enable this you should pass -D__USE_MINGW_ANSI_STDIO=1 to the MinGW-w64 C and C++ compilers. All of our C/C++ packages are built with this flag.</p>
 <h2 id="different-size-of-struct-timeval">Different size of struct timeval</h2>
@@ -1271,9 +1257,6 @@ See: <a href="https://lists.gnu.org/archive/html/libtool/2007-04/msg00066.html">
 <p>MSYS2 includes wrappers for some affected programs, so that they will work correctly most of the time. Examples can be seen in packages containing REPLs (python3, lua, nodejs, ...).</p>
 <p><a href="https://github.com/mintty/mintty/issues/56">mintty issue #56</a>, original <a href="http://code.google.com/p/mintty/issues/detail?id=56">on Google Code</a></p>
 <p><a href="https://github.com/rprichard/winpty">winpty on GitHub</a></p>
-<h2 id="signals-in-mintty">Signals in mintty</h2>
-<p>When running a native Windows program in mintty (or urxvt, apparently), Ctrl+C will not be correctly passed to the process. Instead, it seems to be eaten by the terminal and the running process is terminated.</p>
-<p><a href="https://sourceforge.net/p/msys2/tickets/135/">ticket #135</a></p>
 <h2 id="paths-in-mingw-python">Paths in mingw Python</h2>
 <p>The mingw python provided by MSYS2 will try to produce paths that are right for the environment it's running in. According to the value of <code>MSYSTEM</code>, it will use either forward or backward slashes as <code>os.path.sep</code>.</p>
 <h2 id="response-files">Response files</h2>
