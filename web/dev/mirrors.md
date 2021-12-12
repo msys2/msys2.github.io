@@ -32,7 +32,6 @@ support, HTTPS support, synced at least once per day from the primary server.
 | ftp.acc.umu.se | [HTTPS](https://ftp.acc.umu.se/mirror/msys2.org/) \| [RSYNC](rsync://ftp.acc.umu.se/mirror/msys2.org/) | <ftp-adm@acc.umu.se> | |
 | ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> | |
 | ftp.osuosl.org | [HTTPS](https://ftp.osuosl.org/pub/msys2/) \| [RSYNC](rsync://rsync.osuosl.org/msys2/) | <hosting-request@osuosl.org> | |
-| mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [Cameron Weinfurt](mailto:weinfuc@clarkson.edu) | |
 | mirror.internet.asn.au | [HTTPS](https://mirror.internet.asn.au/pub/msys2/) \| [RSYNC](rsync://mirror.internet.asn.au/msys2/) |  <peering@ix.asn.au> |
 | mirror.selfnet.de | [HTTPS](https://mirror.selfnet.de/msys2/) \| [RSYNC](rsync://mirror.selfnet.de/msys2/) | 
 | mirror.ufro.cl | [HTTPS](https://mirror.ufro.cl/msys2/) \| [RSYNC](rsync://mirror.ufro.cl/msys2/) | [Jonathan Gutiérrez](mailto:jonathan.gutierrez@ufrontera.cl) |  |
@@ -50,6 +49,7 @@ support, HTTPS support, synced at least once per day from the primary server.
 | Name | URLs  | Contact | Note |
 | -    | -     | -       |-     |
 | downloads.sourceforge.net | [HTTPS](https://downloads.sourceforge.net/project/msys2/) | [contact](../contact.md) | |
+| mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [Cameron Weinfurt](mailto:weinfuc@clarkson.edu) | (too slow for T1) |
 | fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | <smlr@ukr.net> | (too slow for T1) |
 | ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> | |
 | mirrors.bit.edu.cn | [HTTPS](https://mirrors.bit.edu.cn/msys2/) | <webmaster@bitnp.net> |
