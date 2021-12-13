@@ -28,6 +28,7 @@ support, HTTPS support, synced at least once per day from the primary server.
 
 | Name | URLs  | Contact | Note |
 | -    | -     | -       |-     |
+| mirror.umd.edu | [HTTPS](https://mirror.umd.edu/msys2/) \| [RSYNC](rsync://mirror.umd.edu/msys2/) | see website| |
 | download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) \| [RSYNC](rsync://download.nus.edu.sg/msys2/) | <download@nus.edu.sg> | |
 | ftp.acc.umu.se | [HTTPS](https://ftp.acc.umu.se/mirror/msys2.org/) \| [RSYNC](rsync://ftp.acc.umu.se/mirror/msys2.org/) | <ftp-adm@acc.umu.se> | |
 | ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> | |
