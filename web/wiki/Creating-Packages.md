@@ -119,7 +119,6 @@ In order to be able to compile a software or build a package you need to install
 The core packages groups you need to install if you wish to build from PKGBUILDs are:
 
 - `base-devel` for any building
-- `msys2-devel` for building **msys** packages
 - `mingw-w64-i686-toolchain` for building **mingw32** packages
 - `mingw-w64-x86_64-toolchain` for building **mingw64** packages
 
