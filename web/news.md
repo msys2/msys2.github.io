@@ -4,6 +4,27 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-12-21 - Potential Incompatibilities with newer Python setuptools
+
+**tl;dr:** use `export SETUPTOOLS_USE_DISTUTILS=stdlib` if you have problems
+building/installing packages with newer versions of setuptools from pypi.
+
+The Python packaging ecosystem is currently in the transition of removing
+distutils from CPython and moving it into setuptools. Historically distutils is
+patched quite a bit by us to make it work with our directory layout and to build
+packages with gcc/clang instead of MSVC. With this move our patches are no
+longer used and setuptools will fail in various ways, or install things into
+wrong places.
+
+We are working with upstream to include our patches, but this will take some
+more time. In the meantime you can force setuptools to use the (still patched)
+distutils from the CPython stdlib via `export SETUPTOOLS_USE_DISTUTILS=stdlib`
+The setuptools version in our repo however will continue to use the patched
+distutils until all issues are resolved and is not affected.
+
+🙏 Many thanks to the distutils and setuptools maintainers for considering our
+patches, despite Cygwin/MSYS2 not being officially supported by CPython.
+
 ### 2021-10-14 - OpenSSH 8.8 dropped support for old ssh-rsa keys using SHA-1
 
 The recent OpenSSH update disabled support for old ssh-rsa keys using SHA-1 by
