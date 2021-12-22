@@ -60,6 +60,7 @@ support, HTTPS support, synced at least once per day from the primary server.
 | quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> | (too slow for T1) |
 | www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) | |
 | repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | | |
+| mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> | |
 
 ## Adding a New Mirror
 
