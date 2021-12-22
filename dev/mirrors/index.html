@@ -940,7 +940,7 @@ an issue: <a href="https://github.com/msys2/msys2.github.io/issues">https://gith
 </table>
 <h2 id="tier-1-mirrors">Tier 1 Mirrors</h2>
 <p><strong>Requirements:</strong> Reliable, 1GBit/s+ with enough free bandwidth, rsync server
-support, HTTPS support, synced at least once per day from the primary server.</p>
+support (*), HTTPS support, synced at least once per day from the primary server.</p>
 <p><strong>Map</strong>: <a href="https://mirror.msys2.org/?mirrorstats">https://mirror.msys2.org/?mirrorstats</a></p>
 <table>
 <thead>
@@ -1038,6 +1038,7 @@ support, HTTPS support, synced at least once per day from the primary server.</p
 </tr>
 </tbody>
 </table>
+<p>(*) rsync is required by <a href="https://github.com/etix/mirrorbits">mirrorbits</a>, which we use to auto-redirect users to a local mirror via <a href="https://mirror.msys2.org">mirror.msys2.org</a></p>
 <h2 id="tier-2-mirrors">Tier 2 Mirrors</h2>
 <p><strong>Requirements:</strong> Synced regularly.</p>
 <table>
