@@ -4,6 +4,22 @@ summary: Important events happening.
 ---
 # News
 
+### 2021-12-22 - Ongoing Cleanup of the `base-devel` Package Group
+
+The `base-devel` package group is the set of packages required to be installed
+before running `makepkg` / `makepkg-mingw`. We have recently started to clean
+this group up and moved some of the packages to be explicit dependencies in the
+`PKGBUILD` files instead.
+
+One notable removal is various autotools related packages. There now exists an
+`autotools` and a `${MINGW_PACKAGE_PREFIX}-autotools` meta package which will
+pull in anything related to autotools which packages can add to their
+`makedepends`.
+
+This cleanup can lead to build errors in case your build setup assumes certain
+packages being installed with `base-devel`. If that is the case make sure to
+install those missing packages explicitly instead.
+
 ### 2021-12-21 - Potential Incompatibilities with newer Python setuptools
 
 **tl;dr:** use `export SETUPTOOLS_USE_DISTUTILS=stdlib` if you have problems
