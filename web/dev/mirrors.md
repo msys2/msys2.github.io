@@ -63,6 +63,7 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) | |
 | repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | | |
 | mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> | |
+| mirror.iscas.ac.cn | [HTTPS](https://mirror.iscas.ac.cn/msys2/) | | |
 
 ## Adding a New Mirror
 
