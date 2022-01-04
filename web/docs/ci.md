@@ -114,12 +114,15 @@ MSYS2 yourself.
    C:\msys64\usr\bin\bash -lc './ci-build.sh'
    ```
 
-4) End all processes that might have been started by the MSYS2 update/setup
+## FAQ
 
-In some cases CI systems will wait until all processes you have started have
-also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
-that will stay around in the background forever. To end them all you can run:
+* My CI system doesn't exit at the end of the run and hangs. What's wrong?
 
-  ```powershell
-  taskkill /F /FI "MODULES eq msys-2.0.dll"
-  ```
+  In some cases CI systems will wait until all processes you have started have
+  also ended, but the MSYS2 setup and update might spawn processes for gnupg
+  etc. that will stay around in the background forever. To end them all you can
+  run:
+
+    ```powershell
+    taskkill /F /FI "MODULES eq msys-2.0.dll"
+    ```
