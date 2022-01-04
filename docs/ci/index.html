@@ -405,6 +405,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -886,6 +893,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -937,6 +951,8 @@ see <a href="https://github.com/marketplace/actions/setup-msys2">https://github.
 <h2 id="appveyor">Appveyor</h2>
 <p>Appveyor provides a MSYS2 installation on all their images under <code>C:\msys64</code>,
 see <a href="https://www.appveyor.com/docs/windows-images-software/">https://www.appveyor.com/docs/windows-images-software/</a></p>
+<p>Make sure to use the <code>Visual Studio 2019</code> image or newer, as the MSYS2
+installation on older images is outdated and updating there no longer works.</p>
 <p>In case you want to update the MSYS2 installation and install packages you need
 to update MSYS2 first. For this you need to run the following commands:</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Update MSYS2</span>
@@ -987,12 +1003,25 @@ MSYS2 yourself.</p>
 <span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
 <span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;./ci-build.sh&#39;</span>
 </code></pre></div>
-<p>4) End all processes that might have been started by the MSYS2 update/setup</p>
+<h2 id="faq">FAQ</h2>
+<ul>
+<li>My CI system doesn't exit at the end of the run and hangs. What's wrong?</li>
+</ul>
 <p>In some cases CI systems will wait until all processes you have started have
-also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
-that will stay around in the background forever. To end them all you can run:</p>
-<div class="highlight"><pre><span></span><code><span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">FI</span> <span class="s2">&quot;MODULES eq msys-2.0.dll&quot;</span>
+  also ended, but the MSYS2 setup and update might spawn processes for gnupg
+  etc. that will stay around in the background forever. To end them all you can
+  run:</p>
+<div class="codehilite"><pre><span></span><code>```powershell
+taskkill /F /FI &quot;MODULES eq msys-2.0.dll&quot;
+```
 </code></pre></div>
+
+<ul>
+<li>MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?</li>
+</ul>
+<p>The MSYS2 installation on older Appveyor images hasn't been updated in years
+  and is no longer supported. Either use the <code>Visual Studio 2019</code> image or
+  newer, or install MSYS2 manually as described above.</p>
                 
                   
                 
