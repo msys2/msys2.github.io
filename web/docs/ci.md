@@ -46,6 +46,9 @@ see https://github.com/marketplace/actions/setup-msys2
 Appveyor provides a MSYS2 installation on all their images under `C:\msys64`,
 see https://www.appveyor.com/docs/windows-images-software/
 
+Make sure to use the `Visual Studio 2019` image or newer, as the MSYS2
+installation on older images is outdated and updating there no longer works.
+
 In case you want to update the MSYS2 installation and install packages you need
 to update MSYS2 first. For this you need to run the following commands:
 
@@ -126,3 +129,9 @@ MSYS2 yourself.
     ```powershell
     taskkill /F /FI "MODULES eq msys-2.0.dll"
     ```
+
+* MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?
+
+  The MSYS2 installation on older Appveyor images hasn't been updated in years
+  and is no longer supported. Either use the `Visual Studio 2019` image or
+  newer, or install MSYS2 manually as described above.
