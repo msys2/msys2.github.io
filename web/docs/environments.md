@@ -30,6 +30,7 @@ tools.
 | ![clang64](clang64.png){: style="max-width:25px" } | **CLANG64** | `/clang64` | llvm | x86_64 | ucrt | libc++ |
 | ![mingw32](mingw32.png){: style="max-width:25px" } | **MINGW32** | `/mingw32` |  gcc | i686  | msvcrt | libstdc++ |
 | ![clang32](clang32.png){: style="max-width:25px" } | **CLANG32** | `/clang32` | llvm | i686 | ucrt | libc++ |
+| ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `/clangarm64` | llvm | aarch64 | ucrt | libc++ |
 
 ## GCC vs LLVM/Clang
 
