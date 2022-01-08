@@ -16,6 +16,7 @@ title: Who Is Using MSYS2?
   * [azonenberg/scopehal-apps](https://github.com/azonenberg/scopehal-apps) uses MSYS2 for building libscopehal, glscopeclient and other client applications for libscopehal.
   * [Serial-Studio/Serial-Studio](https://github.com/Serial-Studio/Serial-Studio) uses MSYS2 for building and testing Serial Studio.
   * [VUnit/vunit](https://github.com/VUnit/vunit) uses MSYS2 for testing VUnit.
+* [ImPPG](https://github.com/GreatAttractor/imppg) uses MSYS2 for its Windows releases.
 * [Inkscape](https://inkscape.org) uses MSYS2 for its Windows releases and for CI ([Documentation](https://wiki.inkscape.org/wiki/index.php?title=Compiling_Inkscape_on_Windows_with_MSYS2))
 * [KeePassXC](https://github.com/keepassxreboot/keepassxc) uses MSYS2 for building and running KeePassXC password manager.
 * [Media-autobuild_suite](https://github.com/m-ab-s/media-autobuild_suite) uses MSYS2 for automatically building FFmpeg and other media related tools
