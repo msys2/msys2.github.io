@@ -16,6 +16,11 @@ One notable removal is various autotools related packages. There now exists an
 pull in anything related to autotools which packages can add to their
 `makedepends`.
 
+Further more the group was replaced with a package of the same name, to make
+adding/removing packages easier. Note that pacman prefers packages over groups
+for the same name, so the set of included packages is now listed here
+https://packages.msys2.org/package/base-devel
+
 This cleanup can lead to build errors in case your build setup assumes certain
 packages being installed with `base-devel`. If that is the case make sure to
 install those missing packages explicitly instead.
