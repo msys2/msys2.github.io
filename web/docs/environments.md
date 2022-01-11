@@ -22,8 +22,8 @@ tools.
 
 ## Overview
 
-|   | Name | Prefix | Toolchain | Architecture | Package prefix | C Library | C++ Library |
-| - | -    | -      | -         | -            | -              | -         |-            |
+|   | Name [^1] | Prefix | Toolchain | Architecture  | Package prefix [^2] | C Library | C++ Library |
+| - | -         | -      | -         | -             | -                   | -         |-            |
 | ![msys](msys.png){: style="max-width:25px" }       | **MSYS**    | `/usr`     | gcc  | x86_64 | None                      | cygwin | libstdc++ |
 | ![mingw64](mingw64.png){: style="max-width:25px" } | **MINGW64** | `/mingw64` | gcc  | x86_64 | `mingw-w64-x86_64-`       | msvcrt | libstdc++ |
 | ![ucrt64](ucrt64.png){: style="max-width:25px" }   | **UCRT64**  | `/ucrt64`  | gcc  | x86_64 | `mingw-w64-ucrt-x86_64-`  | ucrt   | libstdc++ |
@@ -31,6 +31,44 @@ tools.
 | ![mingw32](mingw32.png){: style="max-width:25px" } | **MINGW32** | `/mingw32` | gcc  | i686   | `mingw-w64-i686-`         | msvcrt | libstdc++ |
 | ![clang32](clang32.png){: style="max-width:25px" } | **CLANG32** | `/clang32` | llvm | i686   | `mingw-w64-clang-i686-`   | ucrt   | libc++ |
 | ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `/clangarm64` | llvm | aarch64 | `mingw-w64-clang-aarch64-` | ucrt | libc++ |
+
+[^1]: `MSYSTEM` 
+[^2]: `MINGW_PACKAGE_PREFIX`
+
+## Active environments
+
+The package manager uses only environments that are configured under `/etc/pacman.conf`.
+You may add/uncomment/remove/comment those as needed:
+
+```pkgconf
+# always include msys!
+[msys]
+Include = /etc/pacman.d/mirrorlist.msys
+
+[mingw32]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[mingw64]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[ucrt64]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[clang64]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[clang32]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+#[clangarm64]
+#Include = /etc/pacman.d/mirrorlist.mingw
+```
+
+For more details about how to install packages see ['Package Management'](package-management.md).
+
+To launch an environment either use the wrapper executables like `ucrt64.exe` or
+call `msys2_shell.cmd` with either the matching parameter like `msys2_shell.cmd -clang64`
+or by setting `MSYSTEM`.
 
 ## GCC vs LLVM/Clang
 
