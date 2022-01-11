@@ -22,15 +22,15 @@ tools.
 
 ## Overview
 
-|| Name | Prefix | Toolchain | Architecture | C Library | C++ Library |
-| - |-  |-       |-|-|-|-|
-| ![msys](msys.png){: style="max-width:25px" } | **MSYS** | `/usr` | gcc | x86_64 | cygwin | libstdc++ |
-| ![mingw64](mingw64.png){: style="max-width:25px" } | **MINGW64** | `/mingw64` | gcc | x86_64 | msvcrt | libstdc++ |
-| ![ucrt64](ucrt64.png){: style="max-width:25px" } | **UCRT64** | `/ucrt64` | gcc | x86_64 | ucrt | libstdc++ |
-| ![clang64](clang64.png){: style="max-width:25px" } | **CLANG64** | `/clang64` | llvm | x86_64 | ucrt | libc++ |
-| ![mingw32](mingw32.png){: style="max-width:25px" } | **MINGW32** | `/mingw32` |  gcc | i686  | msvcrt | libstdc++ |
-| ![clang32](clang32.png){: style="max-width:25px" } | **CLANG32** | `/clang32` | llvm | i686 | ucrt | libc++ |
-| ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `/clangarm64` | llvm | aarch64 | ucrt | libc++ |
+|   | Name | Prefix | Toolchain | Architecture | Package prefix | C Library | C++ Library |
+| - | -    | -      | -         | -            | -              | -         |-            |
+| ![msys](msys.png){: style="max-width:25px" }       | **MSYS**    | `/usr`     | gcc  | x86_64 | None                      | cygwin | libstdc++ |
+| ![mingw64](mingw64.png){: style="max-width:25px" } | **MINGW64** | `/mingw64` | gcc  | x86_64 | `mingw-w64-x86_64-`       | msvcrt | libstdc++ |
+| ![ucrt64](ucrt64.png){: style="max-width:25px" }   | **UCRT64**  | `/ucrt64`  | gcc  | x86_64 | `mingw-w64-ucrt-x86_64-`  | ucrt   | libstdc++ |
+| ![clang64](clang64.png){: style="max-width:25px" } | **CLANG64** | `/clang64` | llvm | x86_64 | `mingw-w64-clang-x86_64-` | ucrt   | libc++ |
+| ![mingw32](mingw32.png){: style="max-width:25px" } | **MINGW32** | `/mingw32` | gcc  | i686   | `mingw-w64-i686-`         | msvcrt | libstdc++ |
+| ![clang32](clang32.png){: style="max-width:25px" } | **CLANG32** | `/clang32` | llvm | i686   | `mingw-w64-clang-i686-`   | ucrt   | libc++ |
+| ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `/clangarm64` | llvm | aarch64 | `mingw-w64-clang-aarch64-` | ucrt | libc++ |
 
 ## GCC vs LLVM/Clang
 
