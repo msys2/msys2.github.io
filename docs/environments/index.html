@@ -373,6 +373,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#active-environments" class="md-nav__link">
+    Active environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gcc-vs-llvmclang" class="md-nav__link">
     GCC vs LLVM/Clang
   </a>
@@ -859,6 +866,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#active-environments" class="md-nav__link">
+    Active environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gcc-vs-llvmclang" class="md-nav__link">
     GCC vs LLVM/Clang
   </a>
@@ -905,10 +919,11 @@ tools.</p>
 <thead>
 <tr>
 <th></th>
-<th>Name</th>
+<th>Name <a href="`MSYSTEM`">^1</a></th>
 <th>Prefix</th>
 <th>Toolchain</th>
 <th>Architecture</th>
+<th>Package prefix <a href="`MINGW_PACKAGE_PREFIX`">^2</a></th>
 <th>C Library</th>
 <th>C++ Library</th>
 </tr>
@@ -920,6 +935,7 @@ tools.</p>
 <td><code>/usr</code></td>
 <td>gcc</td>
 <td>x86_64</td>
+<td>None</td>
 <td>cygwin</td>
 <td>libstdc++</td>
 </tr>
@@ -929,6 +945,7 @@ tools.</p>
 <td><code>/mingw64</code></td>
 <td>gcc</td>
 <td>x86_64</td>
+<td><code>mingw-w64-x86_64-</code></td>
 <td>msvcrt</td>
 <td>libstdc++</td>
 </tr>
@@ -938,6 +955,7 @@ tools.</p>
 <td><code>/ucrt64</code></td>
 <td>gcc</td>
 <td>x86_64</td>
+<td><code>mingw-w64-ucrt-x86_64-</code></td>
 <td>ucrt</td>
 <td>libstdc++</td>
 </tr>
@@ -947,6 +965,7 @@ tools.</p>
 <td><code>/clang64</code></td>
 <td>llvm</td>
 <td>x86_64</td>
+<td><code>mingw-w64-clang-x86_64-</code></td>
 <td>ucrt</td>
 <td>libc++</td>
 </tr>
@@ -956,6 +975,7 @@ tools.</p>
 <td><code>/mingw32</code></td>
 <td>gcc</td>
 <td>i686</td>
+<td><code>mingw-w64-i686-</code></td>
 <td>msvcrt</td>
 <td>libstdc++</td>
 </tr>
@@ -965,6 +985,7 @@ tools.</p>
 <td><code>/clang32</code></td>
 <td>llvm</td>
 <td>i686</td>
+<td><code>mingw-w64-clang-i686-</code></td>
 <td>ucrt</td>
 <td>libc++</td>
 </tr>
@@ -974,11 +995,41 @@ tools.</p>
 <td><code>/clangarm64</code></td>
 <td>llvm</td>
 <td>aarch64</td>
+<td><code>mingw-w64-clang-aarch64-</code></td>
 <td>ucrt</td>
 <td>libc++</td>
 </tr>
 </tbody>
 </table>
+<h2 id="active-environments">Active environments</h2>
+<p>The package manager uses only environments that are configured under <code>/etc/pacman.conf</code>.
+You may add/uncomment/remove/comment those as needed:</p>
+<div class="highlight"><pre><span></span><code># always include msys!
+[msys]
+Include = /etc/pacman.d/mirrorlist.msys
+
+[mingw32]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[mingw64]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[ucrt64]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[clang64]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+[clang32]
+Include = /etc/pacman.d/mirrorlist.mingw
+
+#[clangarm64]
+#Include = /etc/pacman.d/mirrorlist.mingw
+</code></pre></div>
+<p>For more details about how to install packages see <a href="../package-management/">'Package Management'</a>.</p>
+<p>To launch an environment either use the wrapper executables like <code>ucrt64.exe</code> or
+call <code>msys2_shell.cmd</code> with either the matching parameter like <code>msys2_shell.cmd -clang64</code>
+or by setting <code>MSYSTEM</code>.</p>
 <h2 id="gcc-vs-llvmclang">GCC vs LLVM/Clang</h2>
 <p>These are the default compilers/toolchains used for building all packages in the
 respective repositories.</p>
