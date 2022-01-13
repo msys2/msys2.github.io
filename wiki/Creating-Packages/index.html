@@ -1301,14 +1301,13 @@ pacman -U mingw-w64-*-python3-*-any.pkg.tar.zst
 </ul>
 <p>In other words, if a program is needed to build native software, but is itself hard to port, it can be made into an <strong>msys</strong> package. Anything else needs to be done as a <strong>mingw</strong> package or vetted individually.</p>
 <h3 id="build-software">Build software</h3>
-<p>In order to be able to compile a software or build a package you need to install basic packages, as the MSYS2 install does not contain build tools.</p>
-<p>The core packages groups you need to install if you wish to build from PKGBUILDs are:</p>
-<ul>
-<li><code>base-devel</code> for any building</li>
-<li><code>mingw-w64-i686-toolchain</code> for building <strong>mingw32</strong> packages</li>
-<li><code>mingw-w64-x86_64-toolchain</code> for building <strong>mingw64</strong> packages</li>
-</ul>
-<p>If you don't install the required package group, building might fail with unexpected errors. Note that -- contrary to what you might expect -- <code>base-devel</code> doesn't contain <code>gcc</code> nor <code>binutils</code>.</p>
+<p>In order to be able to compile a software or build a package you need to install
+basic packages by installing <code>base-devel</code>, as the MSYS2 install does not contain
+build tools.</p>
+<p>If you don't install the required package, building might fail with unexpected
+errors.</p>
+<p>Note that -- contrary to what you might expect -- <code>base-devel</code> doesn't contain
+<code>gcc</code> nor <code>binutils</code>.</p>
 <h3 id="test-software">Test software</h3>
 <p>Check that the software does what it should. Try its test suite.</p>
 <h3 id="patch-software">Patch software</h3>
