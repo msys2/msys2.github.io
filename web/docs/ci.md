@@ -31,7 +31,7 @@ jobs:
         with:
           msystem: MINGW64
           update: true
-          install: git mingw-w64-x86_64-toolchain
+          install: git mingw-w64-x86_64-cc
       - name: CI-Build
         run: |
           echo 'Running in MSYS2!'

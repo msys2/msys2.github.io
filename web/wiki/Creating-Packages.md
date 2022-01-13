@@ -114,15 +114,15 @@ In other words, if a program is needed to build native software, but is itself h
 
 ### Build software
 
-In order to be able to compile a software or build a package you need to install basic packages, as the MSYS2 install does not contain build tools.
+In order to be able to compile a software or build a package you need to install
+basic packages by installing `base-devel`, as the MSYS2 install does not contain
+build tools.
 
-The core packages groups you need to install if you wish to build from PKGBUILDs are:
+If you don't install the required package, building might fail with unexpected
+errors.
 
-- `base-devel` for any building
-- `mingw-w64-i686-toolchain` for building **mingw32** packages
-- `mingw-w64-x86_64-toolchain` for building **mingw64** packages
-
-If you don't install the required package group, building might fail with unexpected errors. Note that -- contrary to what you might expect -- `base-devel` doesn't contain `gcc` nor `binutils`.
+Note that -- contrary to what you might expect -- `base-devel` doesn't contain
+`gcc` nor `binutils`.
 
 ### Test software
 
