@@ -94,5 +94,6 @@ nav:
         - wiki/Sudo.md
         - wiki/Terminals.md
         - wiki/JIT-Debugging.md
+        - wiki/package_licensing.md
     - 'contact.md'
     - 'codeofconduct.md'
