@@ -91,3 +91,9 @@ You can set the license field to `spdx:Apache-2.0 AND MIT AND CC-BY-4.0`.
 In case the documentation is split out into a separate package then you can use
 `spdx:Apache-2.0 AND MIT` for the main package and `spdx:CC-BY-4.0` for the
 documentation package.
+
+#### How can I specify a custom license in an SPDX expression that is not on the SPDX license list?
+
+You can define your own license ID with the following format
+`LicenseRef-<idstring>` where `idstring` is allowed to contain `[A-Za-z0-9.-]`.
+For example: `LicenseRef-my-special-license`
