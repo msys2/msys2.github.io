@@ -65,6 +65,8 @@ nav:
         - docs/terminals.md
         - Package Management:
           - docs/package-management.md
+          - docs/package-naming.md
+          - docs/repos-mirrors.md
           - docs/package-management-tips.md
         - docs/filesystem-paths.md
         - docs/cmake.md
