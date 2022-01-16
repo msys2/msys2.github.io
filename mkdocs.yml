@@ -63,7 +63,8 @@ nav:
         - docs/environments.md
         - docs/ci.md
         - docs/terminals.md
-        - docs/package-management.md
+        - Package Management:
+          - docs/package-management.md
         - Packaging:
           - docs/package-licensing.md
         - docs/filesystem-paths.md
