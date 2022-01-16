@@ -119,19 +119,18 @@ MSYS2 yourself.
 
 ## FAQ
 
-* My CI system doesn't exit at the end of the run and hangs. What's wrong?
+**My CI system doesn't exit at the end of the run and hangs. What's wrong?**
 
-  In some cases CI systems will wait until all processes you have started have
-  also ended, but the MSYS2 setup and update might spawn processes for gnupg
-  etc. that will stay around in the background forever. To end them all you can
-  run:
+In some cases CI systems will wait until all processes you have started have
+also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
+that will stay around in the background forever. To end them all you can run:
 
-    ```powershell
-    taskkill /F /FI "MODULES eq msys-2.0.dll"
-    ```
+```powershell
+taskkill /F /FI "MODULES eq msys-2.0.dll"
+```
 
-* MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?
+**MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?**
 
-  The MSYS2 installation on older Appveyor images hasn't been updated in years
-  and is no longer supported. Either use the `Visual Studio 2019` image or
-  newer, or install MSYS2 manually as described above.
+The MSYS2 installation on older Appveyor images hasn't been updated in years and
+is no longer supported. Either use the `Visual Studio 2019` image or newer, or
+install MSYS2 manually as described above.
