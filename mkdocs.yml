@@ -65,13 +65,13 @@ nav:
         - docs/terminals.md
         - Package Management:
           - docs/package-management.md
-        - Packaging:
-          - docs/package-licensing.md
         - docs/filesystem-paths.md
         - docs/cmake.md
     - Development:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
         # infrastructure, mirrors etc and everything else.
+        - Packaging:
+          - dev/package-licensing.md
         - dev/mirrors.md
         - dev/keyring.md
         - dev/python.md
