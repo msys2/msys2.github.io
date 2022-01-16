@@ -64,6 +64,8 @@ nav:
         - docs/ci.md
         - docs/terminals.md
         - docs/package-management.md
+        - Packaging:
+          - docs/package-licensing.md
         - docs/filesystem-paths.md
         - docs/cmake.md
     - Development:
@@ -94,6 +96,5 @@ nav:
         - wiki/Sudo.md
         - wiki/Terminals.md
         - wiki/JIT-Debugging.md
-        - wiki/package_licensing.md
     - 'contact.md'
     - 'codeofconduct.md'

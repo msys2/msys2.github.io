@@ -1,4 +1,4 @@
-# Package Licensing Guidelines
+# License Metadata
 
 Software we package is always licensed and there are two places where the
 licenses are recorded in a package:
