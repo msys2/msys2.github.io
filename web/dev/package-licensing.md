@@ -56,32 +56,6 @@ systems.
 
 ## FAQ
 
-#### How can I figure out the license of a package?
-
-To list the license of an installed package you can run:
-
-```bash
-$ pacman -Qi meson | grep '^Licenses'
-Licenses        : Apache 2
-```
-
-To list the license of a package in the sync database you can run:
-
-```bash
-$ pacman -Si meson | grep '^Licenses'
-Licenses        : Apache 2
-```
-
-To list all license files installed by a package in the recommended location:
-
-```bash
-$ pacman -Ql meson | grep -E "/share/licenses/.+/.+"
-meson /usr/share/licenses/meson/COPYING
-```
-
-Note that not every package includes the license text as a file, nor puts it
-in this specific recommended location.
-
 #### The package includes different components with different licenses, what should I do?
 
 Let's say the package source is licensed under `Apache-2.0`, there is a vendored
