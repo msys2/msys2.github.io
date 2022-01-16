@@ -436,10 +436,73 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Package Management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Package Management" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Package Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../package-management/" class="md-nav__link">
         Package Management
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-naming/" class="md-nav__link">
+        Package Naming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repos-mirrors/" class="md-nav__link">
+        Repositories and Mirrors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-management-tips/" class="md-nav__link">
+        Tips and Tricks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -497,6 +560,69 @@
           Development
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Packaging
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Packaging" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Packaging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/new-package/" class="md-nav__link">
+        Creating a new Package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/package-guidelines/" class="md-nav__link">
+        Package Guidelines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/package-licensing/" class="md-nav__link">
+        License Metadata
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
           
             
   
@@ -804,18 +930,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wiki/package_licensing/" class="md-nav__link">
-        Package Licensing Guidelines
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -1016,24 +1130,16 @@ MSYS2 yourself.</p>
 <span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;./ci-build.sh&#39;</span>
 </code></pre></div>
 <h2 id="faq">FAQ</h2>
-<ul>
-<li>My CI system doesn't exit at the end of the run and hangs. What's wrong?</li>
-</ul>
+<p><strong>My CI system doesn't exit at the end of the run and hangs. What's wrong?</strong></p>
 <p>In some cases CI systems will wait until all processes you have started have
-  also ended, but the MSYS2 setup and update might spawn processes for gnupg
-  etc. that will stay around in the background forever. To end them all you can
-  run:</p>
-<div class="codehilite"><pre><span></span><code>```powershell
-taskkill /F /FI &quot;MODULES eq msys-2.0.dll&quot;
-```
+also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
+that will stay around in the background forever. To end them all you can run:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">FI</span> <span class="s2">&quot;MODULES eq msys-2.0.dll&quot;</span>
 </code></pre></div>
-
-<ul>
-<li>MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?</li>
-</ul>
-<p>The MSYS2 installation on older Appveyor images hasn't been updated in years
-  and is no longer supported. Either use the <code>Visual Studio 2019</code> image or
-  newer, or install MSYS2 manually as described above.</p>
+<p><strong>MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?</strong></p>
+<p>The MSYS2 installation on older Appveyor images hasn't been updated in years and
+is no longer supported. Either use the <code>Visual Studio 2019</code> image or newer, or
+install MSYS2 manually as described above.</p>
                 
                   
                 

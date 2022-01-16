@@ -373,13 +373,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#active-environments" class="md-nav__link">
-    Active environments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#gcc-vs-llvmclang" class="md-nav__link">
     GCC vs LLVM/Clang
   </a>
@@ -429,10 +422,73 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Package Management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Package Management" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Package Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../package-management/" class="md-nav__link">
         Package Management
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-naming/" class="md-nav__link">
+        Package Naming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repos-mirrors/" class="md-nav__link">
+        Repositories and Mirrors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-management-tips/" class="md-nav__link">
+        Tips and Tricks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -490,6 +546,69 @@
           Development
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Packaging
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Packaging" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Packaging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/new-package/" class="md-nav__link">
+        Creating a new Package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/package-guidelines/" class="md-nav__link">
+        Package Guidelines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/package-licensing/" class="md-nav__link">
+        License Metadata
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
           
             
   
@@ -797,18 +916,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wiki/package_licensing/" class="md-nav__link">
-        Package Licensing Guidelines
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -878,13 +985,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#active-environments" class="md-nav__link">
-    Active environments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#gcc-vs-llvmclang" class="md-nav__link">
     GCC vs LLVM/Clang
   </a>
@@ -931,11 +1031,10 @@ tools.</p>
 <thead>
 <tr>
 <th></th>
-<th>Name <a href="`MSYSTEM`">^1</a></th>
+<th>Name</th>
 <th>Prefix</th>
 <th>Toolchain</th>
 <th>Architecture</th>
-<th>Package prefix <a href="`MINGW_PACKAGE_PREFIX`">^2</a></th>
 <th>C Library</th>
 <th>C++ Library</th>
 </tr>
@@ -947,7 +1046,6 @@ tools.</p>
 <td><code>/usr</code></td>
 <td>gcc</td>
 <td>x86_64</td>
-<td>None</td>
 <td>cygwin</td>
 <td>libstdc++</td>
 </tr>
@@ -957,7 +1055,6 @@ tools.</p>
 <td><code>/mingw64</code></td>
 <td>gcc</td>
 <td>x86_64</td>
-<td><code>mingw-w64-x86_64-</code></td>
 <td>msvcrt</td>
 <td>libstdc++</td>
 </tr>
@@ -967,7 +1064,6 @@ tools.</p>
 <td><code>/ucrt64</code></td>
 <td>gcc</td>
 <td>x86_64</td>
-<td><code>mingw-w64-ucrt-x86_64-</code></td>
 <td>ucrt</td>
 <td>libstdc++</td>
 </tr>
@@ -977,7 +1073,6 @@ tools.</p>
 <td><code>/clang64</code></td>
 <td>llvm</td>
 <td>x86_64</td>
-<td><code>mingw-w64-clang-x86_64-</code></td>
 <td>ucrt</td>
 <td>libc++</td>
 </tr>
@@ -987,7 +1082,6 @@ tools.</p>
 <td><code>/mingw32</code></td>
 <td>gcc</td>
 <td>i686</td>
-<td><code>mingw-w64-i686-</code></td>
 <td>msvcrt</td>
 <td>libstdc++</td>
 </tr>
@@ -997,7 +1091,6 @@ tools.</p>
 <td><code>/clang32</code></td>
 <td>llvm</td>
 <td>i686</td>
-<td><code>mingw-w64-clang-i686-</code></td>
 <td>ucrt</td>
 <td>libc++</td>
 </tr>
@@ -1007,41 +1100,14 @@ tools.</p>
 <td><code>/clangarm64</code></td>
 <td>llvm</td>
 <td>aarch64</td>
-<td><code>mingw-w64-clang-aarch64-</code></td>
 <td>ucrt</td>
 <td>libc++</td>
 </tr>
 </tbody>
 </table>
-<h2 id="active-environments">Active environments</h2>
-<p>The package manager uses only environments that are configured under <code>/etc/pacman.conf</code>.
-You may add/uncomment/remove/comment those as needed:</p>
-<div class="highlight"><pre><span></span><code># always include msys!
-[msys]
-Include = /etc/pacman.d/mirrorlist.msys
-
-[mingw32]
-Include = /etc/pacman.d/mirrorlist.mingw
-
-[mingw64]
-Include = /etc/pacman.d/mirrorlist.mingw
-
-[ucrt64]
-Include = /etc/pacman.d/mirrorlist.mingw
-
-[clang64]
-Include = /etc/pacman.d/mirrorlist.mingw
-
-[clang32]
-Include = /etc/pacman.d/mirrorlist.mingw
-
-#[clangarm64]
-#Include = /etc/pacman.d/mirrorlist.mingw
-</code></pre></div>
-<p>For more details about how to install packages see <a href="../package-management/">'Package Management'</a>.</p>
-<p>To launch an environment either use the wrapper executables like <code>ucrt64.exe</code> or
-call <code>msys2_shell.cmd</code> with either the matching parameter like <code>msys2_shell.cmd -clang64</code>
-or by setting <code>MSYSTEM</code>.</p>
+<p>The active environment is selected via the <code>MSYSTEM</code> environment variable.
+Setting <code>MSYSTEM</code> to <code>UCRT64</code> and starting a login shell will put you in that
+environment.</p>
 <h2 id="gcc-vs-llvmclang">GCC vs LLVM/Clang</h2>
 <p>These are the default compilers/toolchains used for building all packages in the
 respective repositories.</p>

@@ -370,6 +370,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Package Management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Package Management" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Package Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -433,13 +456,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-the-content-of-a-package" class="md-nav__link">
-    Listing the content of a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#finding-dependencies-of-a-package" class="md-nav__link">
     Finding dependencies of a package
   </a>
@@ -461,13 +477,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoiding-writing-long-package-names" class="md-nav__link">
-    Avoiding writing long package names
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
@@ -478,6 +487,48 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-naming/" class="md-nav__link">
+        Package Naming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repos-mirrors/" class="md-nav__link">
+        Repositories and Mirrors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-management-tips/" class="md-nav__link">
+        Tips and Tricks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -535,6 +586,69 @@
           Development
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Packaging
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Packaging" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Packaging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/new-package/" class="md-nav__link">
+        Creating a new Package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/package-guidelines/" class="md-nav__link">
+        Package Guidelines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/package-licensing/" class="md-nav__link">
+        License Metadata
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
           
             
   
@@ -842,18 +956,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wiki/package_licensing/" class="md-nav__link">
-        Package Licensing Guidelines
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -949,13 +1051,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-the-content-of-a-package" class="md-nav__link">
-    Listing the content of a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#finding-dependencies-of-a-package" class="md-nav__link">
     Finding dependencies of a package
   </a>
@@ -972,13 +1067,6 @@
         <li class="md-nav__item">
   <a href="#finding-which-package-will-install-the-file-you-need" class="md-nav__link">
     Finding which package will install the file you need
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avoiding-writing-long-package-names" class="md-nav__link">
-    Avoiding writing long package names
   </a>
   
 </li>
@@ -1046,36 +1134,6 @@ For more details about those see <a href="../environments/">'Environments'</a>.<
 <p><code>pacman -U &lt;packagefile.tar.zst&gt;</code></p>
 <p>or</p>
 <p><code>pacman -U &lt;packagefile.tar.xz&gt;</code></p>
-<h2 id="listing-the-content-of-a-package">Listing the content of a package</h2>
-<p>If you would like to know what has been installed as a part of a specific package use the following command:</p>
-<p><code>pacman -Ql &lt;name of the package&gt;</code></p>
-<p>Example:</p>
-<p><code>$ pacman -Ql mingw-w64-x86_64-pugixml</code></p>
-<div class="highlight"><pre><span></span><code>mingw-w64-x86_64-pugixml /mingw64/
-mingw-w64-x86_64-pugixml /mingw64/bin/
-mingw-w64-x86_64-pugixml /mingw64/bin/libpugixml.dll
-mingw-w64-x86_64-pugixml /mingw64/include/
-mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/
-mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/pugiconfig.hpp
-mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/pugixml.hpp
-mingw-w64-x86_64-pugixml /mingw64/lib/
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/pugixml-config-noconfig.cmake
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/pugixml-config.cmake
-mingw-w64-x86_64-pugixml /mingw64/lib/pkgconfig/
-mingw-w64-x86_64-pugixml /mingw64/lib/pkgconfig/pugixml.pc
-mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/
-mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/libpugixml.dll.a
-</code></pre></div>
-<p>As you can see the package contains:</p>
-<ul>
-<li>a binary executable library file (libpugixml.dll),</li>
-<li>a static library (libpugixml.dll.a),</li>
-<li>2 header files (pugixml.hpp, pugiconfig.hpp),</li>
-<li>2 cmake files,</li>
-<li>and a PKGCONFIG file (pugixml.pc).</li>
-</ul>
 <h2 id="finding-dependencies-of-a-package">Finding dependencies of a package</h2>
 <p>You can use <code>pactree</code> to figure out which packages are needed to make a package working properly:</p>
 <p><code>$ pactree mingw-w64-x86_64-gettext</code></p>
@@ -1105,41 +1163,6 @@ Depends On      : mingw-w64-x86_64-expat  mingw-w64-x86_64-gcc-libs
 <p>The two recommended tools that can scan a repository and find packages that contain specific files are <code>pacman -F</code> and <code>pkgfile</code>. Below are examples of <code>pacman -F</code> usage:</p>
 <p>Call <code>pacman -Fy</code> to update your package database. To find an exact match, call <code>pacman -F &lt;filename&gt;</code> (don't include the path in the filename). To find a substring match, call <code>pacman -Fx &lt;filename&gt;</code>.</p>
 <p>Note that this operation only compares the file paths, so proper capitalization and the <code>.exe</code> suffix (if applicable) is required.</p>
-<h2 id="avoiding-writing-long-package-names">Avoiding writing long package names</h2>
-<p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names (install <code>pacboy</code> first using <code>pacman -S pactoys</code> if necessary).  Examples:</p>
-<p><div class="highlight"><pre><span></span><code>$ pacboy -S x265:x
-resolving dependencies...
-looking for conflicting packages...
-
-Packages (1) mingw-w64-x86_64-x265-2.3-1
-
-Total Download Size:    0.97 MiB
-Total Installed Size:  20.72 MiB
-
-:: Proceed with installation? [Y/n]
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>$ pacboy -S x265:i
-resolving dependencies...
-looking for conflicting packages...
-
-Packages (1) mingw-w64-i686-x265-2.3-1
-
-Total Download Size:    0.97 MiB
-Total Installed Size:  11.37 MiB
-
-:: Proceed with installation? [Y/n]
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>$ pacboy -S x265:m
-resolving dependencies...
-looking for conflicting packages...
-
-Packages (2) mingw-w64-i686-x265-2.3-1  mingw-w64-x86_64-x265-2.3-1
-
-Total Download Size:    0.97 MiB
-Total Installed Size:  32.09 MiB
-
-:: Proceed with installation? [Y/n]
-</code></pre></div></p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://wiki.archlinux.org/index.php/Pacman">Pacman on ArchWiki</a></li>
@@ -1182,13 +1205,13 @@ Total Installed Size:  32.09 MiB
       
       
         
-        <a href="../filesystem-paths/" class="md-footer__link md-footer__link--next" aria-label="Next: Filesystem Paths" rel="next">
+        <a href="../package-naming/" class="md-footer__link md-footer__link--next" aria-label="Next: Package Naming" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Filesystem Paths
+              Package Naming
             </div>
           </div>
           <div class="md-footer__button md-icon">
