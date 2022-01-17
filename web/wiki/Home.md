@@ -16,7 +16,6 @@ title: Welcome to the MSYS2 wiki
 - [Package list](Packages.md) - list of packages we provide
 - [Launchers](Launchers.md) - various ways to launch MSYS2 shells
 - [Distributing software without pacman](Distributing.md) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
-- [FAQ](FAQ.md)
 - [About terminals, consoles and shells](Terminals.md)
 - [Setting up SSHd on MSYS2](Setting-up-SSHd.md)
 - [Sudo on MSYS2](Sudo.md)

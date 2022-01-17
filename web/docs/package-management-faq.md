@@ -1,8 +1,4 @@
----
-title: FAQ
-summary: To read about breaking changes that used to be listed on this page
----
-To read about breaking changes that used to be listed on this page, go to [News](/news/).
+# FAQ
 
 #### What to do when Pacman is telling me there are conflicts in the file system?
 

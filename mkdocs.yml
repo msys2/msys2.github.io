@@ -68,6 +68,7 @@ nav:
           - docs/package-naming.md
           - docs/repos-mirrors.md
           - docs/package-management-tips.md
+          - docs/package-management-faq.md
         - docs/filesystem-paths.md
         - docs/cmake.md
     - Development:
@@ -87,7 +88,6 @@ nav:
         - wiki/Creating-Packages.md
         - wiki/Devtopics.md
         - wiki/Distributing.md
-        - wiki/FAQ.md
         - wiki/GDB-qtcreator.md
         - wiki/History.md
         - wiki/How-does-MSYS2-differ-from-Cygwin.md
