@@ -94,7 +94,6 @@ nav:
         - wiki/MSYS2-installation.md
         - wiki/MSYS2-introduction.md
         - wiki/MSYS2-reinstallation.md
-        - wiki/Packages.md
         - wiki/Porting.md
         - wiki/Setting-up-SSHd.md
         - wiki/Signing-packages.md

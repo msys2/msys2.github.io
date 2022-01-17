@@ -6,7 +6,7 @@ MSYS2 is software distribution and a building platform for Windows. It provides 
 
 It is an independent rewrite of MSys, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software.
 
-Both 32-bit and 64-bit variants exist and receive mostly the same level of support. Here is a [list of packages we provide](Packages.md).
+Both 32-bit and 64-bit variants exist and receive mostly the same level of support.
 
 ## Subsystems
 

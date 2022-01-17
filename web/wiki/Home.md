@@ -12,7 +12,6 @@ title: Welcome to the MSYS2 wiki
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin.md) - differences and similarities
 - [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/Alexpux/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]
 - [Porting for MSYS2 or MinGW-w64](Porting.md) - useful resources and common issues
-- [Package list](Packages.md) - list of packages we provide
 - [Launchers](Launchers.md) - various ways to launch MSYS2 shells
 - [Distributing software without pacman](Distributing.md) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users
 - [About terminals, consoles and shells](Terminals.md)
