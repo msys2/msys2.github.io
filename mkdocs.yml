@@ -70,7 +70,8 @@ nav:
           - docs/package-management-tips.md
           - docs/package-management-faq.md
         - docs/filesystem-paths.md
-        - docs/cmake.md
+        - Languages & Tools:
+          - docs/cmake.md
     - Development:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
         # infrastructure, mirrors etc and everything else.
