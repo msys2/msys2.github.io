@@ -34,13 +34,6 @@ Some pages on the [Git for Windows wiki](https://github.com/git-for-windows/git/
 
 There are various [communication channels](https://www.msys2.org/#support-or-contact) set up, including the [#msys2 IRC channel](irc://irc.oftc.net:6667/msys2) on OFTC and the mailing list at msys2-users@lists.sourceforge.net.
 
-**Project members:**
-
-- [Alexey](https://github.com/alexpux) (Project Leader)
-- [Ray Donnelly](https://github.com/mingwandroid)
-- [Martell Malone](https://github.com/martell)
-- [David Macek](https://github.com/elieux)
-
 **With thanks to:**
 
 - [The MinGW-w64 Project](http://mingw-w64.sourceforge.net/)
