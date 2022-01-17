@@ -8,7 +8,6 @@ title: Welcome to the MSYS2 wiki
 - [Using packages](Using-packages.md) - how to find and install packages
 - [History](History.md) - about the project's inception and origins
 - [Re-installing from scratch](MSYS2-reinstallation.md) - in case of unrecoverable problems
-- [Contributing](Contributing-to-MSYS2.md) - how to help the project
 - [Creating packages](Creating-Packages.md) - how packages are built and how to make new ones
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin.md) - differences and similarities
 - [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/Alexpux/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]

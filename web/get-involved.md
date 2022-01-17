@@ -1,21 +1,23 @@
 ---
-title: Contributing to MSYS2
+title: Get Involved
 summary: If you're interested in helping the MSYS2 project, we will appreciate it
 ---
+
 Hi. If you're interested in helping the MSYS2 project, we will appreciate it. Please come to our IRC channel [#msys2 on OFTC](irc://irc.oftc.net:6667/msys2) or [Gitter room](https://gitter.im/msys2/msys2) or [Discord Server](https://discord.gg/jPQdRdDcT9) and talk to us.
 Don't be discouraged if nobody responds straight away, people are often busy or asleep.
 
 How can you help:
 
-- prepare and maintain packages
-- help other users
-- spread the word
-- use MSYS2 for your projects
-- report bugs
-- fix bugs
-- upstream patches
-- improve core packages
-- write documentation
-- help with organization or infrastructure
-- provide mirrors
-- donate
+- Prepare and maintain packages
+- Help other users
+- Spread the word
+- Use MSYS2 for your projects
+- Triage bugs
+- Report bugs
+- Fix bugs
+- Upstream patches
+- Improve core packages
+- Write documentation
+- Help with organization or infrastructure
+- Provide mirrors
+- Donated
