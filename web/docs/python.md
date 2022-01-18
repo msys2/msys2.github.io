@@ -8,6 +8,20 @@ Some differences/features compared to the official Windows CPython:
 * `sys.path` uses the Unix directory layout, see `python -m site`
 * Virtual environments also work with bash: `python -m venv _venv`, `source _venv/bin/activate` and so on.
 
+### Portability
+
+As long as you don't hardcode/assume platform specific values and paths and always use things like `os.sep`, do path operations with `os.path` or `pathlib` and derive Python installation related paths and configuration from the `sysconfig` module then your Python code should work just like with the official Windows CPython installation.
+
+If for some reason you still need to detect our fork you can check for it as follows:
+
+```python
+import os
+import sysconfig
+
+if os.name == "nt" and sysconfig.get_platform().startswith("mingw"):
+    print("cpython-mingw detected!")
+```
+
 ### Known issues
 
 * C extensions are not compatible with the official CPython, which means pip can't use binary wheels from PyPI and packages have to be build when installing them.
