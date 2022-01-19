@@ -5,33 +5,10 @@ summary: Here are some topics and milestones that deserve more discussion or wor
 ---
 Here are some topics and milestones that deserve more discussion or work. This page should serve as an overview of our long-term issues and goals and be a place to write down the decisions and open questions so that they don't get buried in IRC logs or mailing list archives. Each goal should be described in appropriate detail and should be broken up into smaller tasks for interested members to tackle the goal step by step.
 
+## Finish the SourceForge migration
 
-Unify public relations, solidify hosting
----
-People are sometimes (often?) confused about where to get information about the project. It would be great if all the user-facing parts were on msys2.org and all the developer-facing parts on GitHub. Back-ends can be wherever (mailing lists and big file storage would be examples of things that we can't do with GitHub).
-
-@alexpux doesn't agree, but @elieux believes one issue tracker for the whole project is better than separate ones. [Git for Windows](https://github.com/git-for-windows/git/issues) sets a particularly good example.
-
-We currently have:
-
-- [GitHub org](https://github.com/msys2) for our main repositories (it had the wiki in the past)
-- [a secondary GitHub org](https://github.com/msys2-contrib) for contributions upstream and as a working place
-- other GitHub repos for source and issue tracking, [msys2-pacman](https://github.com/Alexpux/MSYS2-pacman)
-- [SourceForge project](https://sourceforge.net/p/msys2/) for mailing lists and as a mirror (it had forums and the wiki in the past)
-- https://msys2.org (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions and the documentation [with source on GitHub](https://github.com/msys2/msys2.github.io)
-- [an online repo browser](https://packages.msys2.org/), hosted by @lazka
-- http://repo.msys2.org as the source for mirrors and a canonical location for installers, hosted by @elieux
-- [twitter account](https://twitter.com/msys2org), run by @lazka
-
-What to do:
-
-- migrate tickets from SF to GH; close them on SF afterwards
-- migrate forums and discussion from SF to GH
-- move active MSYS2-related repositories on GH to the msys2 org, including issues
-- find more (fast and reliable) mirrors
-- try moving the mailing list including archives from SF, see [mbox export](https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/); can we use Sourceware? can we have our own (some say that mailman on our own server would be spam-filtered badly)? notify list members of the change (possibly set up a redirect for some time)
-- change links in packages ("submit bug" URLs) and elsewhere
-
+- triage/migrate tickets from SF to GH; close them on SF afterwards
+- archive the (closed) mailing list maybe? see [mbox export](https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/)
 
 Off-load package building and uploading
 ---
