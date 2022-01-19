@@ -27,3 +27,12 @@ Each of these keys is signed by at least three master keys.
 | [0xD595C9AB2C51581E](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0xD595C9AB2C51581E) | `C65E C896 6983 541D 52B9 7A16 D595 C9AB 2C51 581E` | [martell](https://github.com/martell)           |
 | [0x974C8BE49078F532](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0x974C8BE49078F532) | `8777 1331 B3F1 FF52 6385 6A6D 974C 8BE4 9078 F532` | [elieux](https://github.com/elieux)             |
 | [0xFA11531AA0AA7F57](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0xFA11531AA0AA7F57) | `5F94 4B02 7F7F E209 1985 AA2E FA11 531A A0AA 7F57` | [lazka](https://github.com/lazka)               |
+
+### Master Key Signatures
+
+| Developer Key | Signed by                                    |
+|---------------|----------------------------------------------|
+| alexpux       | alexpux, nacho, mingwandroid, martell, lazka |
+| martell       | alexpux, martell, mingwandroid               |
+| elieux        | elieux, alexpux, lazka                       |
+| lazka         | alexpux, lazka, elieux                       |
