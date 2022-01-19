@@ -170,12 +170,6 @@ MSYS2 includes wrappers for some affected programs, so that they will work corre
 [winpty on GitHub](https://github.com/rprichard/winpty)
 
 
-Paths in mingw Python
----------------------
-
-The mingw python provided by MSYS2 will try to produce paths that are right for the environment it's running in. According to the value of `MSYSTEM`, it will use either forward or backward slashes as `os.path.sep`.
-
-
 Response files
 --------------
 
