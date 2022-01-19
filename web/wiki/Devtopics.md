@@ -10,19 +10,12 @@ Here are some topics and milestones that deserve more discussion or work. This p
 - triage/migrate tickets from SF to GH; close them on SF afterwards
 - archive the (closed) mailing list maybe? see [mbox export](https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/)
 
-Off-load package building and uploading
----
-For a long time, @alexpux was responsible for building all packages.  Ray, Renato, Qian, and other people had tried to use various CI platforms, with varying results.  Since 2020, @lazka and @eine have set up a CI to automatically build most packages in https://github.com/msys2/msys2-autobuild in cooperation with an API on https://packages.msys2.org/.  Now @elieux is only responsible for uploading and signing them.
-
-Approving pull requests for packages is done by a number of people.
-
-What to do:
+## Streamline automation for the package review/build/upload process
 
 - write down packaging rules (rules inherited from Arch Linux, rules about `pkgbase`, `pkgname`, `description`, FHS, 32+64 bits, ...)
 - prepare automated checks to prevent mistakes (an idea: compare package file list between latest and new version of the package)
-- automate signing and uploading of packages?
 - also work towards reproducible builds (https://reproducible-builds.org/)
-
+- don't build for mingw32 in CI if the package doesn't support it etc.
 
 Official release
 ---
