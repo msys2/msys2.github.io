@@ -8,6 +8,7 @@
     --msys2-red: #c0000d;
     --msys2-dark-bg: #333;
     --msys2-text: #444;
+    --msys2-dark-text: #303030;
 }
 
 .md-typeset pre > code {
@@ -40,14 +41,15 @@
 
 .md-typeset h2 {
     font-size: 1.1rem;
+    color: var(--msys2-red);
 }
 
 .md-typeset h3 {
     font-size: 0.9rem;
+    color: var(--msys2-dark-text)
 }
 
 .md-typeset h3, .md-typeset h2 {
-    color: var(--msys2-red);
     font-weight: normal;
     margin-top: 1.2rem;
 }
@@ -150,7 +152,7 @@ body {
 .md-typeset h1 {
     font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 900;
-    color: #303030;
+    color: var(--msys2-dark-text);
     font-size: 32px;
     letter-spacing: -1px;
     line-height: 1.2em;
