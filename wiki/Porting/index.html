@@ -937,13 +937,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paths-in-mingw-python" class="md-nav__link">
-    Paths in mingw Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#response-files" class="md-nav__link">
     Response files
   </a>
@@ -1212,13 +1205,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paths-in-mingw-python" class="md-nav__link">
-    Paths in mingw Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#response-files" class="md-nav__link">
     Response files
   </a>
@@ -1413,8 +1399,6 @@ See: <a href="https://lists.gnu.org/archive/html/libtool/2007-04/msg00066.html">
 <p>MSYS2 includes wrappers for some affected programs, so that they will work correctly most of the time. Examples can be seen in packages containing REPLs (python3, lua, nodejs, ...).</p>
 <p><a href="https://github.com/mintty/mintty/issues/56">mintty issue #56</a>, original <a href="http://code.google.com/p/mintty/issues/detail?id=56">on Google Code</a></p>
 <p><a href="https://github.com/rprichard/winpty">winpty on GitHub</a></p>
-<h2 id="paths-in-mingw-python">Paths in mingw Python</h2>
-<p>The mingw python provided by MSYS2 will try to produce paths that are right for the environment it's running in. According to the value of <code>MSYSTEM</code>, it will use either forward or backward slashes as <code>os.path.sep</code>.</p>
 <h2 id="response-files">Response files</h2>
 <p>When passing arguments with absolute paths to native Windows programs (such as <code>/mingw64/bin/gcc</code>), these paths  get (in most cases) automatically converted by MSYS2 if they're in POSIX format. However, if you're passing these paths inside a file (e.g. a response file for GCC -- <code>gcc @somefile</code>), they need to be pre-converted to Windows native format.</p>
 <p><a href="https://sourceforge.net/p/msys2/discussion/general/thread/b82485a3/">discussion topic: gcc -I (eye) uses msys2 path or windows path?</a></p>

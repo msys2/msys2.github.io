@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unify-public-relations-solidify-hosting" class="md-skip">
+        <a href="#finish-the-sourceforge-migration" class="md-skip">
           Skip to content
         </a>
       
@@ -731,15 +731,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unify-public-relations-solidify-hosting" class="md-nav__link">
-    Unify public relations, solidify hosting
+  <a href="#finish-the-sourceforge-migration" class="md-nav__link">
+    Finish the SourceForge migration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#off-load-package-building-and-uploading" class="md-nav__link">
-    Off-load package building and uploading
+  <a href="#streamline-automation-for-the-package-reviewbuildupload-process" class="md-nav__link">
+    Streamline automation for the package review/build/upload process
   </a>
   
 </li>
@@ -1051,15 +1051,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unify-public-relations-solidify-hosting" class="md-nav__link">
-    Unify public relations, solidify hosting
+  <a href="#finish-the-sourceforge-migration" class="md-nav__link">
+    Finish the SourceForge migration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#off-load-package-building-and-uploading" class="md-nav__link">
-    Off-load package building and uploading
+  <a href="#streamline-automation-for-the-package-reviewbuildupload-process" class="md-nav__link">
+    Streamline automation for the package review/build/upload process
   </a>
   
 </li>
@@ -1140,38 +1140,17 @@
                   <h1>TODO LIST</h1>
                 
                 <p>Here are some topics and milestones that deserve more discussion or work. This page should serve as an overview of our long-term issues and goals and be a place to write down the decisions and open questions so that they don't get buried in IRC logs or mailing list archives. Each goal should be described in appropriate detail and should be broken up into smaller tasks for interested members to tackle the goal step by step.</p>
-<h2 id="unify-public-relations-solidify-hosting">Unify public relations, solidify hosting</h2>
-<p>People are sometimes (often?) confused about where to get information about the project. It would be great if all the user-facing parts were on msys2.org and all the developer-facing parts on GitHub. Back-ends can be wherever (mailing lists and big file storage would be examples of things that we can't do with GitHub).</p>
-<p>@alexpux doesn't agree, but @elieux believes one issue tracker for the whole project is better than separate ones. <a href="https://github.com/git-for-windows/git/issues">Git for Windows</a> sets a particularly good example.</p>
-<p>We currently have:</p>
+<h2 id="finish-the-sourceforge-migration">Finish the SourceForge migration</h2>
 <ul>
-<li><a href="https://github.com/msys2">GitHub org</a> for our main repositories (it had the wiki in the past)</li>
-<li><a href="https://github.com/msys2-contrib">a secondary GitHub org</a> for contributions upstream and as a working place</li>
-<li>other GitHub repos for source and issue tracking, <a href="https://github.com/Alexpux/MSYS2-pacman">msys2-pacman</a></li>
-<li><a href="https://sourceforge.net/p/msys2/">SourceForge project</a> for mailing lists and as a mirror (it had forums and the wiki in the past)</li>
-<li><a href="https://msys2.org">https://msys2.org</a> (also msys2.com and msys2.net), our own domains (owned by @elieux), with installation and donation instructions and the documentation <a href="https://github.com/msys2/msys2.github.io">with source on GitHub</a></li>
-<li><a href="https://packages.msys2.org/">an online repo browser</a>, hosted by @lazka</li>
-<li><a href="http://repo.msys2.org">http://repo.msys2.org</a> as the source for mirrors and a canonical location for installers, hosted by @elieux</li>
-<li><a href="https://twitter.com/msys2org">twitter account</a>, run by @lazka</li>
+<li>triage/migrate tickets from SF to GH; close them on SF afterwards</li>
+<li>archive the (closed) mailing list maybe? see <a href="https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/">mbox export</a></li>
 </ul>
-<p>What to do:</p>
-<ul>
-<li>migrate tickets from SF to GH; close them on SF afterwards</li>
-<li>migrate forums and discussion from SF to GH</li>
-<li>move active MSYS2-related repositories on GH to the msys2 org, including issues</li>
-<li>find more (fast and reliable) mirrors</li>
-<li>try moving the mailing list including archives from SF, see <a href="https://sourceforge.net/p/forge/documentation/Mailing%20List%20Archives/">mbox export</a>; can we use Sourceware? can we have our own (some say that mailman on our own server would be spam-filtered badly)? notify list members of the change (possibly set up a redirect for some time)</li>
-<li>change links in packages ("submit bug" URLs) and elsewhere</li>
-</ul>
-<h2 id="off-load-package-building-and-uploading">Off-load package building and uploading</h2>
-<p>For a long time, @alexpux was responsible for building all packages.  Ray, Renato, Qian, and other people had tried to use various CI platforms, with varying results.  Since 2020, @lazka and @eine have set up a CI to automatically build most packages in <a href="https://github.com/msys2/msys2-autobuild">https://github.com/msys2/msys2-autobuild</a> in cooperation with an API on <a href="https://packages.msys2.org/">https://packages.msys2.org/</a>.  Now @elieux is only responsible for uploading and signing them.</p>
-<p>Approving pull requests for packages is done by a number of people.</p>
-<p>What to do:</p>
+<h2 id="streamline-automation-for-the-package-reviewbuildupload-process">Streamline automation for the package review/build/upload process</h2>
 <ul>
 <li>write down packaging rules (rules inherited from Arch Linux, rules about <code>pkgbase</code>, <code>pkgname</code>, <code>description</code>, FHS, 32+64 bits, ...)</li>
 <li>prepare automated checks to prevent mistakes (an idea: compare package file list between latest and new version of the package)</li>
-<li>automate signing and uploading of packages?</li>
 <li>also work towards reproducible builds (<a href="https://reproducible-builds.org/">https://reproducible-builds.org/</a>)</li>
+<li>don't build for mingw32 in CI if the package doesn't support it etc.</li>
 </ul>
 <h2 id="official-release">Official release</h2>
 <p>MSYS2 is quite known but it's not obvious e.g. how stable and reliable it's supposed to be.  People are sometimes confusing it (in their minds, or in their words, or both) with MSys, much like MinGW-w64 is confused with MinGW.org.  The naming clash of MSYS2 the distribution vs. msys2 the emulation layer is also unfortunate (again reminiscent of the MinGW-w64 projects vs. its distributions).</p>
