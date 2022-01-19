@@ -73,3 +73,7 @@ documentation package.
 You can define your own license ID with the following format
 `LicenseRef-<idstring>` where `idstring` is allowed to contain `[A-Za-z0-9.-]`.
 For example: `LicenseRef-my-special-license`
+
+#### The projects is licensed under `GPL-2.0-or-later` and only advertises that but contains `MIT` and `BSD` code as well. Should I include them all?
+
+We can't be expected to hunt down every license in every file of every project. In case the project says it's `GPL-2.0-or-later` then it's fine to just use that.
