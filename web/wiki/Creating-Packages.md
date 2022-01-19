@@ -206,7 +206,7 @@ In case you had to made changes in order to be able to compile and run properly 
 
 ## Resources
 
-Read through our wiki, especially about [pacman](Using-packages.md) and the [Porting section](Porting.md).
+Read through our wiki, especially the [Porting section](Porting.md).
 
 ### Useful packages and tools
 
