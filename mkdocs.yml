@@ -73,6 +73,7 @@ nav:
         - Languages & Tools:
           - docs/cmake.md
           - docs/python.md
+        - docs/faq.md
     - Development:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
         # infrastructure, mirrors etc and everything else.
