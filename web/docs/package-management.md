@@ -12,7 +12,7 @@ Packages in MSYS2 work like packages in popular Linux distributions. A package i
 
 There are 6 package repositories, the "classical" ones **msys2**, **mingw32**, and **mingw64** and the newer **ucrt64**, **clang32**, and **clang64**.
 The packages in **msys2** are named just like on a Linux distribution, the packages in the others are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages with a secondary prefix `clang` or `ucrt` where applicable.  
-For more details about those see ['Environments'](environments.md).
+For more details about those see ['Environments'](environments.md) and '[Package Naming'](package-naming.md).
 
 
 ## Finding a package
