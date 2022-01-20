@@ -58,7 +58,7 @@
   
 <meta property="og:type" content="website" />
 <meta property="og:title" content="MSYS2 - Package Naming" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="The MSYS2 software distribution provides binary packages with for `pacman` using prefixes according to the target environment." />
 
 <meta property="og:url" content="https://www.msys2.org/docs/package-naming/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#package-naming" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -410,8 +410,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Package Naming
@@ -427,14 +425,19 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#avoiding-writing-long-package-names" class="md-nav__link">
@@ -998,14 +1001,19 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#avoiding-writing-long-package-names" class="md-nav__link">
@@ -1031,13 +1039,17 @@
                   </a>
                 
                 
-                <h1 id="package-naming">Package Naming</h1>
+                  <h1>Package Naming</h1>
+                
+                <h2 id="overview">Overview</h2>
+<p>Tha following table lists the packages according to their environment, see <a href="../environments/">'Environments'</a> for general information on these.
+When installing packages, see  <a href="package-,anagement.md">'Package Management'</a>, you'll commonly use the full name including the pacakge prefix as outlined below.</p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Name</th>
-<th>Package prefix</th>
+<th>Name [^1]</th>
+<th>Package prefix [^2]</th>
 </tr>
 </thead>
 <tbody>
@@ -1078,7 +1090,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="avoiding-writing-long-package-names">Avoiding writing long package names</h3>
+<p>[^1]: environment variable <code>MSYSTEM</code> 
+[^2]: environment variable <code>MINGW_PACKAGE_PREFIX</code></p>
+<h2 id="avoiding-writing-long-package-names">Avoiding writing long package names</h2>
 <p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names (install <code>pacboy</code> first using <code>pacman -S pactoys</code> if necessary).  Examples:</p>
 <p><div class="highlight"><pre><span></span><code>$ pacboy -S x265:x
 resolving dependencies...
@@ -1113,6 +1127,8 @@ Total Installed Size:  32.09 MiB
 
 :: Proceed with installation? [Y/n]
 </code></pre></div></p>
+                
+                  
                 
               
               
