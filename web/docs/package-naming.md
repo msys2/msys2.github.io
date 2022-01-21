@@ -6,8 +6,8 @@ summary: The MSYS2 software distribution provides binary packages with for `pacm
 
 ## Overview
 
-Tha following table lists the packages according to their environment, see ['Environments'](environments.md) for general information on these.
-When installing packages, see  ['Package Management'](package-,anagement.md), you'll commonly use the full name including the pacakge prefix as outlined below.
+The following table lists the packages according to their environment, see ['Environments'](environments.md) for general information on these.
+When installing packages, see  ['Package Management'](package-management.md), you'll commonly use the full name including the package prefix as outlined below.
 
 |                                                          | Name [^1]      | Package prefix [^2]        |
 |----------------------------------------------------------|----------------|----------------------------|
