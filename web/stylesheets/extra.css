@@ -39,12 +39,12 @@
 }
 
 .md-typeset h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--msys2-red);
 }
 
 .md-typeset h3 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--msys2-dark-text)
 }
 
@@ -120,7 +120,7 @@ body {
     font-size: 0.7rem;
 }
 
-.md-header-nav__topic {
+.md-nav__title, .md-header__title {
     font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
