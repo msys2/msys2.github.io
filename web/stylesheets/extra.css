@@ -12,8 +12,8 @@
 }
 
 .md-typeset pre > code {
-    background-color: #fafafa;
-    border: 1px solid #ddd;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
 }
 
 .md-typeset header h2 {
@@ -31,12 +31,11 @@
 }
 
 .md-typeset code {
-    background-color: #fafafa;
-    border: 1px solid #ddd;
-    padding: 0.05em 0.25em;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    padding: 0.05em 0.25em 0.075em;
     box-shadow: none;
     word-break: normal;
-    color: var(--md-code-hl-name-color);
 }
 
 .md-typeset h2 {
