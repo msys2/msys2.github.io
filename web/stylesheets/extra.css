@@ -76,8 +76,7 @@ a.button {
     padding: 4px 15px;
     display: inline-block;
     margin-right: 14px;  
-    background: #fdfdfd; /* Old browsers */
-    background: linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* W3C */
+    background: linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%);
     -webkit-box-shadow: 10px 10px 5px #888;
     -moz-box-shadow: 10px 10px 5px #888;
     box-shadow: 0px 1px 5px #e8e8e8;
@@ -88,9 +87,7 @@ a.button:hover {
     border-left: solid 1px #b3b3b3;
     border-right: solid 1px #b3b3b3;
     border-bottom: solid 1px #b3b3b3;
-    background: #fafafa; /* Old browsers */
-    background: linear-gradient(top,  #fdfdfd 0%,#f6f6f6, 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top,  #fdfdfd 0%,#f6f6f6, 100%);
 }
 
 table, .admonition {
