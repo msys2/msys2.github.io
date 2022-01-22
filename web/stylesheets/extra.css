@@ -54,15 +54,6 @@
     margin-top: 1.2rem;
 }
 
-.md-container {
-    background: transparent url(highlight-bg.jpg) 50% 0 no-repeat;
-}
-@media only screen and (max-width:76.1875em) {
-    .md-container {
-        background-position: -100px 0%;
-    }
-}
-
 a.button {
     border-radius: 10px;
     border-top: solid 1px #cbcbcb;
@@ -118,12 +109,8 @@ table, .admonition {
     }
 }
 
-html {
-    background-color: #E8E8E8;
-}
-
 body {
-    background: transparent url(body-bg.png) 0 0 repeat;
+    background-color: #fafafa;
 }
 
 .md-main {
