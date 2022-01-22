@@ -133,7 +133,6 @@ body {
     font-weight: 900;
     color: var(--msys2-dark-text);
     font-size: 32px;
-    letter-spacing: -1px;
     line-height: 1.2em;
     margin: 0;
 }
