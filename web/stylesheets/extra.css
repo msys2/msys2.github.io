@@ -80,8 +80,12 @@ a.button:hover {
     background: linear-gradient(top,  #fdfdfd 0%,#f6f6f6, 100%);
 }
 
-table, .admonition {
+.md-typeset table:not([class]) {
     background-color: #fafafa;
+}
+
+.md-typeset table thead {
+    background-color: #ededed;
 }
 
 .md-typeset table tr th {
