@@ -541,6 +541,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../autotools/" class="md-nav__link">
+        Autotools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1172,6 +1186,7 @@
 <ul>
 <li>C extensions are not compatible with the official CPython, which means pip can't use binary wheels from PyPI and packages have to be build when installing them.</li>
 <li>Some C extensions don't build out of the box since they don't expect non-MSVC on Windows. In some cases we provide patched versions in our repo.</li>
+<li><a href="https://github.com/pypa/setuptools">setuptools</a> &gt;= 60.0 is currently incompatible with MSYS2. You can set <code>export SETUPTOOLS_USE_DISTUTILS=stdlib</code> to work around the issue. We are currently working on restoring compatibility.</li>
 </ul>
 
               
@@ -1186,7 +1201,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../cmake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using CMake in MSYS2" rel="prev">
+        <a href="../autotools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Autotools" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1195,7 +1210,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Using CMake in MSYS2
+              Autotools
             </div>
           </div>
         </a>
