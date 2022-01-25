@@ -72,6 +72,7 @@ nav:
         - docs/filesystem-paths.md
         - Languages & Tools:
           - docs/cmake.md
+          - docs/autotools.md
           - docs/python.md
         - docs/faq.md
     - Development:
