@@ -37,7 +37,7 @@ MSYS2 and what for.
 
 1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2022-01-18/msys2-x86_64-20220118.exe" class="button">msys2-x86_64-20220118.exe</a>
 
-    <span style="opacity: 0.6;">Verify with SHA256 checksum `845cf6a7ea239b3ce3f5b26636a938f70a24b13baccb348119bdf5325ba0f211`
+    <span style="opacity: 0.6; word-wrap: break-word;">Verify with SHA256 checksum `845cf6a7ea239b3ce3f5b26636a938f70a24b13baccb348119bdf5325ba0f211`
     or [GPG signature](https://github.com/msys2/msys2-installer/releases/download/2022-01-18/msys2-x86_64-20220118.exe.sig)
     by [0xf7a49b0ec](http://keyserver.ubuntu.com/pks/lookup?search=0x0ebf782c5d53f7e5fb02a66746bd761f7a49b0ec&fingerprint=on&op=vindex).</span>
 
