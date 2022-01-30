@@ -74,6 +74,7 @@ nav:
           - docs/cmake.md
           - docs/autotools.md
           - docs/python.md
+        - docs/windows_support.md
         - docs/faq.md
     - Development:
         # For MSYS2 developers, maintaining, creating packages, porting packages,
