@@ -1,0 +1,16 @@
+{
+  "name": "msys2-fonts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cp -R node_modules/@fontsource/* ../overrides/fonts"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/chivo": "^4.5.1",
+    "@fontsource/roboto": "^4.5.2",
+    "@fontsource/roboto-mono": "^4.5.1"
+  }
+}

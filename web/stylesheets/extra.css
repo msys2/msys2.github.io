@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo:900');
-
 .md-typeset ol li, .md-typeset ul li {
     margin-bottom: 0.1em;
 }
@@ -9,6 +7,9 @@
     --msys2-dark-bg: #333;
     --msys2-text: #444;
     --msys2-dark-text: #303030;
+
+    --md-text-font:"Roboto";
+    --md-code-font:"Roboto Mono";
 }
 
 .md-typeset pre > code {

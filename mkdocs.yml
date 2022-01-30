@@ -2,6 +2,7 @@ site_name: MSYS2
 site_description: Software Distribution and Building Platform for Windows
 docs_dir: web/
 theme:
+    font: false
     name: material
     logo: 'logo.svg'
     favicon: 'favicon.ico'
@@ -14,6 +15,7 @@ theme:
 
 extra_css:
     - 'stylesheets/extra.css'
+    - 'stylesheets/fonts.css'
 
 extra:
     social:
