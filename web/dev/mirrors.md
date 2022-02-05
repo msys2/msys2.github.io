@@ -53,7 +53,6 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 
 | Name | URLs  | Contact | Note |
 | -    | -     | -       |-     |
-| downloads.sourceforge.net | [HTTPS](https://downloads.sourceforge.net/project/msys2/) | [contact](../contact.md) | |
 | mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [Cameron Weinfurt](mailto:weinfuc@clarkson.edu) | (too slow for T1) |
 | fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | <smlr@ukr.net> | (too slow for T1) |
 | ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> | |
