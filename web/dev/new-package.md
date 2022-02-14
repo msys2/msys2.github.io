@@ -32,6 +32,7 @@ with a similar build system and dependencies in our repository or use one of our
 * Rust/Cargo - tarball: [PKGBUILD.cargo-tarball](https://github.com/msys2/MINGW-packages/blob/master/mingw-w64-PKGBUILD-templates/PKGBUILD.cargo-tarball.sh)
 * Meson - tarball: [PKGBUILD.meson-tarball](https://github.com/msys2/MINGW-packages/blob/master/mingw-w64-PKGBUILD-templates/PKGBUILD.meson-tarball.sh)
 * Python/Setuptools - tarball: [PKGBUILD.python-setuptools](https://github.com/msys2/MINGW-packages/blob/master/mingw-w64-PKGBUILD-templates/PKGBUILD.python-setuptools.sh)
+* Python/pyproject.toml - tarball: [PKGBUILD.python-pyproject](https://github.com/msys2/MINGW-packages/blob/master/mingw-w64-PKGBUILD-templates/PKGBUILD.python-pyproject.sh)
 
 After you have decided on a good starting point:
 
