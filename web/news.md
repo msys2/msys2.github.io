@@ -4,6 +4,12 @@ summary: Important events happening.
 ---
 # News
 
+### 2022-02-24 - repo.msys2.org only available via HTTPS/TLS
+
+We have switched repo.msys2.org to always redirect to a secure connection. If
+for some reason you require HTTP you can use one of our [tier 1
+mirrors](./dev/mirrors.md).
+
 ### 2021-12-22 - Ongoing Cleanup of the `base-devel` Package Group
 
 The `base-devel` package group is the set of packages required to be installed
