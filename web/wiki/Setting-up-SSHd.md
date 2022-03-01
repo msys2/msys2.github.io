@@ -1,5 +1,4 @@
-One can apparently connect the OpenSSHd build included with Windows to MSYS2.
-Diablo-D3 has written down the steps here: https://github.com/Diablo-D3/dotfiles#opensshd-on-windows
+One can connect to MSYS2 via Win32-OpenSSH by creating a batch file (e.g. C:\msys64\sshd_default_shell.cmd) containing `@C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64` (you can change -mingw64 to the environment of your choice) and then setting the registry entry HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH\DefaultShell to the path of that batch file.
 
 MSYS2 can also use its own OpenSSHd.  Use the set-up script below.
 
