@@ -4,6 +4,14 @@ summary: Important events happening.
 ---
 # News
 
+### 2022-03-04 - Sunsetting the SourceForge mirror in 30 days from now
+
+*Note: This should only affect systems not updated in over a year, or users that actively switched to this mirror, which is unlikely.*
+
+Due to space constrains and our ever growing package archive we can no longer update the [SourceForge mirror](https://sourceforge.net/projects/msys2/files/). We already hit the space limit last year but worked around it by no longer syncing source packages. We have now hit the limit again, and decided that it is no longer worth it maintaining it.
+
+**We will remove the SourceForge mirror on 2022-04-03**. We will delete the package databases as well to make DB syncs fail to avoid users using outdated software without them knowing it. After 4 more weeks we will delete the remaining packages and installers.
+
 ### 2022-02-24 - repo.msys2.org only available via HTTPS/TLS
 
 We have switched repo.msys2.org to always redirect to a secure connection. If
