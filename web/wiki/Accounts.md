@@ -3,7 +3,7 @@ title: Accounts and ownership
 summary: Who owns what.
 ---
 
-- domains: msys2.org, msys2.net, msys2.com registered through Hover to Elieux
+- domains: msys2.org, msys2.net, msys2.com registered through Hover to Elieux, same for mingw-w64.org and mingw-w64.net
 - Twitter: @msys2org registered to Lazka
 - GitHub: msys2 org with multiple owners, msys2-contrib org with multiple owners
 - SourceForge: msys2 project with admins Alexey, Elieux, Lazka
