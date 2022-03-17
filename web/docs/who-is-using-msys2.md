@@ -28,5 +28,6 @@ title: Who Is Using MSYS2?
 * [UrusStudio Installer](https://github.com/UrusTeam/urusstudio_installer) uses MSYS2 for building and running Urus Studio IDE and URUS System.
 * [Webots](https://github.com/cyberbotics/webots) uses MSYS2 to build Webots on Windows and for CI.
 * [Xournal++](https://github.com/xournalpp/xournalpp) uses MSYS2 for its Windows releases and for CI ([Documentation](https://github.com/xournalpp/xournalpp/blob/master/readme/WindowsBuild.md)).
+* [Neovim](https://github.com/neovim/neovim) uses MSYS2 for its Windows building and running  ([Documentation](https://github.com/neovim/neovim/wiki/Building-Neovim#windows--msys2--mingw)).
 
 *Feel free to add your project to this list!*
