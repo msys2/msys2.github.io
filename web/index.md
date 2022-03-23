@@ -198,20 +198,10 @@ Various organizations provide us with mirrors all around the world, see [our mir
 
 ## Donations
 
-#### Alexey Pavlov ([@alexpux](https://github.com/alexpux))
+You can donate to the project via [GitHub Sponsors](https://github.com/sponsors/msys2):
 
-* WebMoney transfer to the following WebMoney wallets:
-    * `E271473533800`
-    * `R691797957081`
-    * `Z110171850957`
-* PayPal: [alexpux@gmail.com](https://www.paypal.com/donate/?business=alexpux%40gmail.com)
-* Yandex.Money: `41001429355429`
+[![](./donate/github.png){: width=150px}](https://github.com/sponsors/msys2)
 
-#### Ray Donnelly ([@mingwandroid](https://github.com/mingwandroid))
+or via [Open Collective](https://opencollective.com/msys2):
 
-See <https://www.msys2.org/news/#2021-04-21-rip-mingwandroid>
-
-#### Christoph Reiter ([@lazka](https://github.com/lazka))
-
-* GitHub Sponsors: https://github.com/sponsors/lazka
-* PayPal: [reiter.christoph@gmail.com](https://www.paypal.com/donate?hosted_button_id=LDTZEZT6EXVEC)
+[![](./donate/opencollective.png){: width=280px}](https://opencollective.com/msys2)
