@@ -4,6 +4,11 @@ summary: Important events happening.
 ---
 # News
 
+
+### 2022-04-06 - Windows 7/8 support will be dropped late 2022 or early 2023
+
+Cygwin 3.5 will drop support for Windows <8.1, which means the new requirement will be "64 bit Windows 8.1 / Windows Server 2012 R2". We expect the update to Cygwin 3.5 to be around late 2022, early 2023. For more information, look [here](https://www.msys2.org/docs/windows_support/).
+
 ### 2022-03-04 - Sunsetting the SourceForge mirror in 30 days from now
 
 *Note: This should only affect systems not updated in over a year, or users that actively switched to this mirror, which is unlikely.*
