@@ -180,6 +180,10 @@ Our main server is sponsored by [jsDelivr](https://www.jsdelivr.com)
 
 [![extreme-ix.org](sponsors/extreme-ix.png){: width=250px}](https://extreme-ix.org/)
 
+[Microsoft Open Source Programs Office](https://opensource.microsoft.com/) sponsors us financially via their [FOSS Fund](https://github.com/microsoft/foss-fund#2022)
+
+[![opensource.microsoft.com](sponsors/microsoft.svg){: width=250px}](https://opensource.microsoft.com/)
+
 Various organizations provide us with mirrors all around the world, see [our mirror list](dev/mirrors.md) for details.
 
 ##  Authors and Contributors
