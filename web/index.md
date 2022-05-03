@@ -118,6 +118,31 @@ MSYS2 and what for.
     :: Proceed with installation? [Y/n]
     [... downloading and installation continues ...]
     ```
+    
+   If you encountered an error like this when executing the command `pacman -Su`:
+   
+   ```
+   warning: database file for 'clang32' does not exist (use '-Sy' to download)
+   :: Starting core system upgrade...
+    there is nothing to do
+   :: Starting full system upgrade...
+   error: failed to prepare transaction (could not find database)
+   ```
+   
+   Then use `pacman -Sy` to install the package 'clang32':
+   
+   ```
+   $ pacman -Sy
+    :: Synchronizing package databases...
+    mingw32 is up to date
+    mingw64 is up to date
+    ucrt64 is up to date
+    clang32              1556.8 KiB   331 KiB/s 00:05 [#####################] 100%
+    clang64 is up to date
+    msys is up to date
+   ```
+   
+   Now you're good to go with `pacman -Su` command.
 
 7. Now MSYS2 is ready for you.  You will probably want to install some tools and the mingw-w64 GCC to start compiling:
 
