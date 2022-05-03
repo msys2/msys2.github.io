@@ -98,10 +98,13 @@ MSYS2 and what for.
     :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
     ```
 
-6. Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with `pacman -Su`:
+6. Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with `pacman -Syu`:
 
     ```
-    $ pacman -Su
+    $ pacman -Syu
+     mingw32 is up to date
+     mingw64 is up to date
+     msys is up to date
     :: Starting core system upgrade...
      there is nothing to do
     :: Starting full system upgrade...
