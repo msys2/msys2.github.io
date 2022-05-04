@@ -3,6 +3,7 @@ title: Who Is Using MSYS2?
 ---
 # Who Is Using MSYS2?
 
+* [RubyInstaller2](https://github.com/oneclick/rubyinstaller2) uses MSYS2 to build Ruby for Windows in CI and as build environment for gems with C extensions.
 * [Gaphor](https://gaphor.org) uses MSYS2 for its Windows releases and for CI
 * [Git for Windows](https://gitforwindows.org/) is based on MSYS2
 * [Quod Libet](https://quodlibet.readthedocs.io) uses MSYS2 for its Windows build and for CI
