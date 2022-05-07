@@ -21,6 +21,8 @@ Due to space constrains and our ever growing package archive we can no longer up
 
 **We will remove the SourceForge mirror on 2022-04-03**. We will delete the package databases as well to make DB syncs fail to avoid users using outdated software without them knowing it. After 4 more weeks we will delete the remaining packages and installers.
 
+**2022-05-07**: The mirror has now been removed.
+
 ### 2022-02-24 - repo.msys2.org only available via HTTPS/TLS
 
 We have switched repo.msys2.org to always redirect to a secure connection. If
