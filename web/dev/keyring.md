@@ -11,7 +11,6 @@ title: MSYS2 Keyring
 | Master Key                                                                                                         | Full Fingerprint                                    | Owner                                           |
 |--------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------|
 | [0xF40D263ECA25678A](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0xF40D263ECA25678A) | `D55E 7A6D 7CE9 BA15 87C0 ACAC F40D 263E CA25 678A` | [alexpux](https://github.com/Alexpux)           |
-| [0xBBE514E53E0D0813](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0xBBE514E53E0D0813) | `123D 4D51 A179 3859 C2BE 916B BBE5 14E5 3E0D 0813` | [mingwandroid](https://github.com/mingwandroid) |
 | [0x9F418C233E652008](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0x9F418C233E652008) | `B91B CF33 0328 4BF9 0CC0 43CA 9F41 8C23 3E65 2008` | [nacho](https://github.com/nacho)               |
 | [0xDA7EF2ABAEEA755C](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0xDA7EF2ABAEEA755C) | `9DD0 D421 7D75 A33B 8961 59E6 DA7E F2AB AEEA 755C` | [martell](https://github.com/martell)           |
 | [0x790AE56A1D3CFDDC](https://keyserver.ubuntu.com/pks/lookup?op=vindex&fingerprint=on&search=0x790AE56A1D3CFDDC) | `6E8F EAFF 9644 F54E ED90 EEA0 790A E56A 1D3C FDDC` | [elieux](https://github.com/elieux)             |
