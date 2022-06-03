@@ -86,6 +86,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.msys2.org/docs/git/</loc>
+         <lastmod>2022-06-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.msys2.org/docs/package-management-faq/</loc>
          <lastmod>2022-06-03</lastmod>
          <changefreq>daily</changefreq>
