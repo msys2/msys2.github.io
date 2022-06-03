@@ -76,6 +76,7 @@ nav:
           - docs/cmake.md
           - docs/autotools.md
           - docs/python.md
+          - docs/git.md
         - docs/windows_support.md
         - docs/faq.md
     - Development:
