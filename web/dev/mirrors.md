@@ -84,7 +84,7 @@ with the distribution of sizes like this:
 You can use rsync to update your mirror using
 
 ```shell
-rsync -rtlvH --delete-after --delay-updates --safe-links \
+rsync -rlptH --safe-links --delete-delay --delay-updates \
     rsync://repo.msys2.org/builds/ ./msys2
 ```
 
