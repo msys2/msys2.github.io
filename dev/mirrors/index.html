@@ -1452,7 +1452,7 @@ support (*), HTTPS support, synced at least once per day from the primary server
 </tbody>
 </table>
 <h2 id="adding-a-new-mirror">Adding a New Mirror</h2>
-<p>The repository size is ~340 GiB (see <a href="https://mirror.jmu.edu/">https://mirror.jmu.edu/</a> for current stats)
+<p>The repository size is ~450 GiB (see <a href="https://mirror.jmu.edu/">https://mirror.jmu.edu/</a> for current stats)
 with the distribution of sizes like this:</p>
 <div class="highlight"><pre><span></span><code>  -1K: ~14000 files
 -100K:  ~3200 files
@@ -1463,7 +1463,7 @@ with the distribution of sizes like this:</p>
  -10G:    ~20 files
 </code></pre></div>
 <p>You can use rsync to update your mirror using</p>
-<div class="highlight"><pre><span></span><code>rsync -rtlvH --delete-after --delay-updates --safe-links <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>rsync -rlptH --safe-links --delete-delay --delay-updates <span class="se">\</span>
     rsync://repo.msys2.org/builds/ ./msys2
 </code></pre></div>
 <p>Our repository layout is compatible with Arch Linux, which means you can use the
