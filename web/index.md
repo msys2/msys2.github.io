@@ -21,7 +21,7 @@ features a package management system called
 [Pacman](https://wiki.archlinux.org/index.php/pacman), which should be familiar
 to Arch Linux users. It brings many powerful features such as dependency
 resolution and simple complete system upgrades, as well as straight-forward and
-reproducible package building. Our package repository contains [more than 2500
+reproducible package building. Our package repository contains [more than 2600
 pre-built packages](https://packages.msys2.org/base) ready to install.
 
 For more details see ['What is MSYS2?'](docs/what-is-msys2.md) which also
