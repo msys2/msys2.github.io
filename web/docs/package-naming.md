@@ -26,6 +26,52 @@ When installing packages, see  ['Package Management'](package-management.md), yo
 
 Use `pacboy` to install **mingw** packages without having to type the long package names (install `pacboy` first using `pacman -S pactoys` if necessary).  Examples:
 
+`pacboy` installs the listed packages for one or more environments. The
+selection of environments for each package is controlled by appending
+suffixes on the package name.
+
+In particular, adding the `:p` suffix installs the package for the current
+environment only.
+
+If no suffix is given, the selection of environments depends on what
+environment you're currently in - e.g. in a `mingw64` environment, it
+currently defaults to installing the package for both `mingw32` and `mingw64`.
+
+See the output of `pacboy help` for the list of suffixes:
+```
+$ pacboy help
+
+    Pacboy 2016.6.24
+    Copyright (C) 2015, 2016 Renato Silva
+    Licensed under BSD
+
+    This is a pacman wrapper for MSYS2 which handles the package prefixes
+    automatically, and provides human-friendly commands for common tasks.
+
+    Usage:
+        pacboy [command] [arguments]
+        Arguments will be passed to pacman after translation:
+
+        For 64-bit MSYS2 shell:
+            name:i means i686-only
+            name:x means x86_64-only
+            name:z means clang-i686-only
+            name:c means clang-x86_64-only
+            name:u means ucrt-x86_64-only
+            name:a means clang-aarch64-only
+            name:p means MINGW_PACKAGE_PREFIX-only
+
+        For MSYS shell:
+            name:m means mingw-w64
+            name:l means mingw-w64-clang
+
+        For all shells:
+            name: disables any translation for name
+            repository::name means repository/name
+```
+
+Here are examples of using the `:x`, `:i` and `:m` suffixes for installing
+packages for the `mingw64`, `mingw32` and both environments:
 ```
 $ pacboy -S x265:x
 resolving dependencies...
