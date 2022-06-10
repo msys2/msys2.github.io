@@ -1254,7 +1254,48 @@ When installing packages, see  <a href="../package-management/">'Package Managem
 [^2]: environment variable <code>MINGW_PACKAGE_PREFIX</code></p>
 <h2 id="avoiding-writing-long-package-names">Avoiding writing long package names</h2>
 <p>Use <code>pacboy</code> to install <strong>mingw</strong> packages without having to type the long package names (install <code>pacboy</code> first using <code>pacman -S pactoys</code> if necessary).  Examples:</p>
-<p><div class="highlight"><pre><span></span><code>$ pacboy -S x265:x
+<p><code>pacboy</code> installs the listed packages for one or more environments. The
+selection of environments for each package is controlled by appending
+suffixes on the package name.</p>
+<p>In particular, adding the <code>:p</code> suffix installs the package for the current
+environment only.</p>
+<p>If no suffix is given, the selection of environments depends on what
+environment you're currently in - e.g. in a <code>mingw64</code> environment, it
+currently defaults to installing the package for both <code>mingw32</code> and <code>mingw64</code>.</p>
+<p>See the output of <code>pacboy help</code> for the list of suffixes:
+<div class="highlight"><pre><span></span><code>$ pacboy help
+
+    Pacboy 2016.6.24
+    Copyright (C) 2015, 2016 Renato Silva
+    Licensed under BSD
+
+    This is a pacman wrapper for MSYS2 which handles the package prefixes
+    automatically, and provides human-friendly commands for common tasks.
+
+    Usage:
+        pacboy [command] [arguments]
+        Arguments will be passed to pacman after translation:
+
+        For 64-bit MSYS2 shell:
+            name:i means i686-only
+            name:x means x86_64-only
+            name:z means clang-i686-only
+            name:c means clang-x86_64-only
+            name:u means ucrt-x86_64-only
+            name:a means clang-aarch64-only
+            name:p means MINGW_PACKAGE_PREFIX-only
+
+        For MSYS shell:
+            name:m means mingw-w64
+            name:l means mingw-w64-clang
+
+        For all shells:
+            name: disables any translation for name
+            repository::name means repository/name
+</code></pre></div></p>
+<p>Here are examples of using the <code>:x</code>, <code>:i</code> and <code>:m</code> suffixes for installing
+packages for the <code>mingw64</code>, <code>mingw32</code> and both environments:
+<div class="highlight"><pre><span></span><code>$ pacboy -S x265:x
 resolving dependencies...
 looking for conflicting packages...
 
