@@ -45,6 +45,7 @@ respective repositories.
 
 * Widely tested/used at this point
 * Fortran support
+* Ada support
 * While there also exists a Clang package in the MINGW environments, that one
   still uses the GNU linker and the GNU C++ library. In some cases Clang is used
   to build packages as well there, in case upstream prefers Clang over GCC for
