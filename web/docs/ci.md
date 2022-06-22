@@ -63,6 +63,30 @@ $env:MSYSTEM = 'MINGW64'  # Start a 64 bit Mingw environment
 C:\msys64\usr\bin\bash -lc "./ci-build.sh"
 ```
 
+## GitLab CI/CD
+
+```YAML
+stages:
+  - build_mingw
+
+build-mingw:
+  stage: build_mingw
+  tags:
+    - shared-windows
+    - windows
+    - windows-1809
+  script:
+    - Invoke-WebRequest -Uri 'https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe' -OutFile 'msys2.exe'
+    - .\msys2.exe -y -oC:\
+    - Remove-Item msys2.exe
+    - C:\msys64\usr\bin\bash -lc ' '
+    - C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"
+    - C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"
+    - $env:CHERE_INVOKING = 'yes'
+    - $env:MSYSTEM = 'MINGW64'
+    - C:\msys64\usr\bin\bash -lc "./ci-build.sh"
+```
+
 ## Docker
 
 Install MSYS2 under `C:\msys64` into a Windows based Docker image:
