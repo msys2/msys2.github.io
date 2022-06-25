@@ -213,7 +213,7 @@ Read through our wiki, especially the [Porting section](Porting.md).
 Package                                | Purpose
 ---------------------------------------|------------------------------------------------------------
 `mingw-w64-{i686,x86_64}-qt-creator`   | to build/debug qmake, qbs, autotools and cmake based packages
-`mingw-w64-{i686,x86_64}-codelite-git` | if you dislike qt-creator
+`mingw-w64-{i686,x86_64}-codelite`     | if you dislike qt-creator
 `mingw-w64-{i686,x86_64}-gedit`        | to avoid notepad and notepad++
 `mingw-w64-{i686,x86_64}-meld3`        | to compare files and directories
 `perl-ack`                             | Faster, better replacement for `grep`
