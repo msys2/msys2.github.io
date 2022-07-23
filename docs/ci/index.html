@@ -1252,19 +1252,19 @@
 GitHub Action which handles everything from installing the latest MSYS2,
 updating it and installing all the packages you need. All you have to do is to
 provide a BASH script that runs your code in the MSYS2 environment.</p>
-<p>1) Create a workflow file, see <a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#creating-a-workflow-file">the GitHub docs for details</a></p>
+<p>1) Create a workflow file, for example <code>.github/workflows/msys2.yml</code>, see <a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#creating-a-workflow-file">the GitHub docs for more details</a></p>
 <p>2) Paste the following into your workflow file:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello World</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MSYS2</span><span class="w"></span>
 <span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span><span class="w"></span>
 
 <span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">msys2-mingw64</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows-latest</span><span class="w"></span>
 <span class="w">    </span><span class="nt">defaults</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msys2 {0}</span><span class="w"></span>
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msys2/setup-msys2@v2</span><span class="w"></span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">msystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MINGW64</span><span class="w"></span>
