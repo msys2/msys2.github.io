@@ -5,7 +5,7 @@ description = ""
 authors = ["Christoph Reiter <reiter.christoph@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 mkdocs = "^1.1.2"
 mkdocs-material = "^8.1.7"
 

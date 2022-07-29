@@ -9,23 +9,16 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: '3.7'
           architecture: 'x64'
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
@@ -35,13 +28,13 @@ jobs:
       - run: mkdocs build
 
       - name: Upload Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: website
           path: ./site
 
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: build
     concurrency: ci-${{ github.ref }}
     permissions:
@@ -49,7 +42,7 @@ jobs:
     if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/source')
     steps:
       - name: Download Results
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: website
           path: ./site
