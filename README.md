@@ -35,10 +35,8 @@ For small changes:
 
 For larger changes:
 
-* `python3 -m venv _venv`
-* `source _venv/bin/activate`
-* `python -m pip install -r requirements.txt`
-* `python -m mkdocs serve`
+* `poetry install`
+* `poetry run mkdocs serve`
 * Access http://127.0.0.1:8000 - any changes to the sources should be
   immediately visible in your browser
 * Open a PR with your changes or just push them if you have commit rights
