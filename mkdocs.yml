@@ -63,6 +63,7 @@ nav:
         - docs/what-is-msys2.md
         - docs/who-is-using-msys2.md
         - docs/environments.md
+        - docs/updating.md
         - docs/ci.md
         - docs/terminals.md
         - Package Management:
