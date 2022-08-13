@@ -126,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.msys2.org/docs/updating/</loc>
+         <lastmod>2022-08-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.msys2.org/docs/what-is-msys2/</loc>
          <lastmod>2022-08-13</lastmod>
          <changefreq>daily</changefreq>

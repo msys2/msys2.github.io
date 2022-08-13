@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/docs/package-management-tips/">
+        <link rel="canonical" href="https://www.msys2.org/docs/updating/">
       
       <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Tips and Tricks - MSYS2</title>
+        <title>Updating MSYS2 - MSYS2</title>
       
     
     
@@ -53,10 +53,10 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2 - Tips and Tricks" />
+<meta property="og:title" content="MSYS2 - Updating MSYS2" />
 <meta property="og:description" content="" />
 
-<meta property="og:url" content="https://www.msys2.org/docs/package-management-tips/" />
+<meta property="og:url" content="https://www.msys2.org/docs/updating/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="250" />
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tips-and-tricks" class="md-skip">
+        <a href="#updating-msys2" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tips and Tricks
+              Updating MSYS2
             
           </span>
         </div>
@@ -352,11 +352,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../updating/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Updating MSYS2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Updating MSYS2
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-the-package-cache" class="md-nav__link">
+    Cleaning the package cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-backups-during-updates" class="md-nav__link">
+    Configuration file backups during updates
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -394,14 +442,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
       
       
       
@@ -464,59 +510,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tips and Tricks
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../package-management-tips/" class="md-nav__link">
         Tips and Tricks
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#show-the-license-information-of-a-package" class="md-nav__link">
-    Show the license information of a package
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-the-content-of-a-package" class="md-nav__link">
-    Listing the content of a package
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1189,15 +1187,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#show-the-license-information-of-a-package" class="md-nav__link">
-    Show the license information of a package
+  <a href="#cleaning-the-package-cache" class="md-nav__link">
+    Cleaning the package cache
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-the-content-of-a-package" class="md-nav__link">
-    Listing the content of a package
+  <a href="#configuration-file-backups-during-updates" class="md-nav__link">
+    Configuration file backups during updates
   </a>
   
 </li>
@@ -1214,61 +1212,59 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/docs/package-management-tips.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/docs/updating.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="tips-and-tricks">Tips and Tricks</h1>
-<p>A list of useful small guides related to package management. See lots more on the <a href="https://wiki.archlinux.org/title/Pacman/Tips_and_tricks">Arch
-Linux wiki</a>.</p>
-<h3 id="show-the-license-information-of-a-package">Show the license information of a package</h3>
-<p>To list the license of an installed package you can run:</p>
-<div class="highlight"><pre><span></span><code>$ pacman -Qi meson <span class="p">|</span> grep <span class="s1">&#39;^Licenses&#39;</span>
-Licenses        : Apache <span class="m">2</span>
+<h1 id="updating-msys2">Updating MSYS2</h1>
+<p>After you have installed MSYS2 via the installer or other means, you need to
+continue updating it with the built-in <code>pacman</code> tool. MSYS2 is a <a href="https://en.wikipedia.org/wiki/Rolling_release">rolling
+release</a> distribution and only
+supports full system upgrades, which means there are frequent minor and major
+updates to various packages and you can only update all packages at once.</p>
+<p>To update all packages you should run the following command:</p>
+<div class="highlight"><pre><span></span><code>$ pacman -Suy
+:: Synchronizing package databases...
+ mingw32 is up to date
+ mingw64 is up to date
+ ucrt64 is up to date
+ clang32 is up to date
+ clang64 is up to date
+ msys is up to date
+:: Starting core system upgrade...
+ there is nothing to <span class="k">do</span>
+:: Starting full system upgrade...
+ there is nothing to <span class="k">do</span>
 </code></pre></div>
-<p>To list the license of a package in the sync database you can run:</p>
-<div class="highlight"><pre><span></span><code>$ pacman -Si meson <span class="p">|</span> grep <span class="s1">&#39;^Licenses&#39;</span>
-Licenses        : Apache <span class="m">2</span>
+<p>In some cases, certain core packages will get updated and pacman will prompt you to close all terminals:</p>
+<div class="highlight"><pre><span></span><code>:: To <span class="nb">complete</span> this update all MSYS2 processes including this terminal will be closed. Confirm to proceed <span class="o">[</span>Y/n<span class="o">]</span>
 </code></pre></div>
-<p>For the exact meaning of the license string see <a href="../../dev/package-licensing/">License Metadata</a>.</p>
-<p>To list all license files installed by a package in the recommended location:</p>
-<div class="highlight"><pre><span></span><code>$ pacman -Ql meson <span class="p">|</span> grep -E <span class="s2">&quot;/share/licenses/.+/.+&quot;</span>
-meson /usr/share/licenses/meson/COPYING
+<p>After confirming you need to start a new terminal and run the update (<code>pacman -Suy</code>) again to update the remaining non-core packages.</p>
+<h2 id="cleaning-the-package-cache">Cleaning the package cache</h2>
+<p><code>pacman</code> keeps all packages it downloads under <code>/var/cache/pacman/pkg/</code>. To free up some space by removing old packages run:</p>
+<div class="highlight"><pre><span></span><code>$ paccache -r
+<span class="o">==</span>&gt; finished: <span class="m">5</span> packages removed <span class="o">(</span>disk space saved: <span class="m">49</span>.05 MiB<span class="o">)</span>
 </code></pre></div>
-<p>Note that not every package includes the license text as a file, nor puts it
-in this specific recommended location.</p>
-<h3 id="listing-the-content-of-a-package">Listing the content of a package</h3>
-<p>If you would like to know what has been installed as a part of a specific package use the following command:</p>
-<p><code>pacman -Ql &lt;name of the package&gt;</code></p>
-<p>Example:</p>
-<p><code>$ pacman -Ql mingw-w64-x86_64-pugixml</code></p>
-<div class="highlight"><pre><span></span><code>mingw-w64-x86_64-pugixml /mingw64/
-mingw-w64-x86_64-pugixml /mingw64/bin/
-mingw-w64-x86_64-pugixml /mingw64/bin/libpugixml.dll
-mingw-w64-x86_64-pugixml /mingw64/include/
-mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/
-mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/pugiconfig.hpp
-mingw-w64-x86_64-pugixml /mingw64/include/pugixml-1.8/pugixml.hpp
-mingw-w64-x86_64-pugixml /mingw64/lib/
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/pugixml-config-noconfig.cmake
-mingw-w64-x86_64-pugixml /mingw64/lib/cmake/pugixml/pugixml-config.cmake
-mingw-w64-x86_64-pugixml /mingw64/lib/pkgconfig/
-mingw-w64-x86_64-pugixml /mingw64/lib/pkgconfig/pugixml.pc
-mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/
-mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/libpugixml.dll.a
+<h2 id="configuration-file-backups-during-updates">Configuration file backups during updates</h2>
+<p>When you have modified a global configuration file of a package (under <code>/etc</code> for example) and the content of the file would changed due to an update or the package being remove then pacman will create a backup of the changed file instead of discarding your changes. If you don't change any global configuration files then you can ignore this section.</p>
+<p>1) In case a new package version gets installed which changes the file content, then pacman will leave the existing file alone and create a <code>&lt;filename&gt;.pacnew</code> instead:</p>
+<div class="highlight"><pre><span></span><code>warning: /etc/myconfig.conf installed as /etc/pacman.d/myconfig.conf.pacnew
 </code></pre></div>
-<p>As you can see the package contains:</p>
-<ul>
-<li>a binary executable library file (libpugixml.dll),</li>
-<li>a static library (libpugixml.dll.a),</li>
-<li>2 header files (pugixml.hpp, pugiconfig.hpp),</li>
-<li>2 cmake files,</li>
-<li>and a PKGCONFIG file (pugixml.pc).</li>
-</ul>
+<p>You can run <code>pacdiff</code> which searches for such <code>.pacnew</code> files and will ask you how to deal with them:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">pacdiff</span>
+<span class="o">==</span>&gt; pacnew file found <span class="k">for</span> /etc/myconfig.conf
+:: <span class="o">(</span>V<span class="o">)</span>iew, <span class="o">(</span>M<span class="o">)</span>erge, <span class="o">(</span>S<span class="o">)</span>kip, <span class="o">(</span>R<span class="o">)</span>emove pacnew, <span class="o">(</span>O<span class="o">)</span>verwrite with pacnew, <span class="o">(</span>Q<span class="o">)</span>uit: <span class="o">[</span>v/m/s/r/o/q<span class="o">]</span>
+</code></pre></div>
+<p>2) In case the package which owns the config file you changed gets uninstalled it will save a copy as <code>&lt;filename&gt;.pacsave</code>:</p>
+<div class="highlight"><pre><span></span><code>warning: /etc/myconfig.conf saved as /etc/myconfig.conf.pacsave
+</code></pre></div>
+<p>If you install the package again you can run <code>pacdiff</code> to restore/merge your original changes:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nv">pacdiff</span>
+<span class="o">==</span>&gt; pacsave file found <span class="k">for</span> /etc/myconfig.conf
+:: <span class="o">(</span>V<span class="o">)</span>iew, <span class="o">(</span>M<span class="o">)</span>erge, <span class="o">(</span>S<span class="o">)</span>kip, <span class="o">(</span>R<span class="o">)</span>emove pacsave, <span class="o">(</span>O<span class="o">)</span>verwrite with pacsave, <span class="o">(</span>Q<span class="o">)</span>uit: <span class="o">[</span>v/m/s/r/o/q<span class="o">]</span>
+</code></pre></div>
 
               
             </article>
@@ -1284,7 +1280,7 @@ mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/libpugixml.dll.a
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../repos-mirrors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Repositories and Mirrors" rel="prev">
+        <a href="../environments/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Environments" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1293,20 +1289,20 @@ mingw-w64-x86_64-pugixml /mingw64/lib/pugixml-1.8/libpugixml.dll.a
               <span class="md-footer__direction">
                 Previous
               </span>
-              Repositories and Mirrors
+              Environments
             </div>
           </div>
         </a>
       
       
         
-        <a href="../package-management-faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ" rel="next">
+        <a href="../ci/" class="md-footer__link md-footer__link--next" aria-label="Next: Using MSYS2 in CI" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              FAQ
+              Using MSYS2 in CI
             </div>
           </div>
           <div class="md-footer__button md-icon">
