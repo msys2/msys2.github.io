@@ -26,7 +26,8 @@ $ pacman -Suy
 In some cases, certain core packages will get updated and pacman will prompt you to close all terminals:
 
 ```shell
-:: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
+:: To complete this update all MSYS2 processes including this terminal will be closed.
+   Confirm to proceed [Y/n]
 ```
 
 After confirming you need to start a new terminal and run the update (`pacman -Suy`) again to update the remaining non-core packages.
