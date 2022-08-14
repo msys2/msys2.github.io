@@ -47,84 +47,17 @@ MSYS2 and what for.
 
     ![Second screen of MSYS2 installation](images/install-2-path.png)
 
-4. When done, tick **Run MSYS2 now**.
+4. When done, click **Finish**.
 
     ![Third screen of MSYS2 installation](images/install-3-finish.png)
 
-5. Update the package database and base packages.  Unless your setup file is very recent, it will take two steps.  First run `pacman -Syu`:
+5. Now MSYS2 is ready for you.  Run "MSYS2 MinGW x64" from the Start menu.
 
-    ```
-    $ pacman -Syu
-    :: Synchronizing package databases...
-     mingw32                        805.0 KiB
-     mingw32.sig                    438.0   B
-     mingw64                        807.9 KiB
-     mingw64.sig                    438.0   B
-     msys                           289.3 KiB
-     msys.sig                       438.0   B
-    :: Starting core system upgrade...
-    warning: terminate other MSYS2 programs before proceeding
-    resolving dependencies...
-    looking for conflicting packages...
-    
-    Packages (6) bash-5.1.004-1  filesystem-2021.01-1
-                 mintty-1~3.4.4-1  msys2-runtime-3.1.7-4
-                 pacman-5.2.2-9  pacman-mirrors-20201208-1
-    
-    Total Download Size:   11.05 MiB
-    Total Installed Size:  53.92 MiB
-    Net Upgrade Size:      -1.24 MiB
-    
-    :: Proceed with installation? [Y/n]
-    :: Retrieving packages...
-     bash-5.1.004-1-x86_64            2.3 MiB
-     filesystem-2021.01-1-any        33.2 KiB
-     mintty-1~3.4.4-1-x86_64        767.2 KiB
-     msys2-runtime-3.1.7-4-x86_64     2.6 MiB
-     pacman-mirrors-20201208-1-any    3.8 KiB
-     pacman-5.2.2-9-x86_64            5.4 MiB
-    (6/6) checking keys in keyring       100%
-    (6/6) checking package integrity     100%
-    (6/6) loading package files          100%
-    (6/6) checking for file conflicts    100%
-    (6/6) checking available disk space  100%
-    :: Processing package changes...
-    (1/6) upgrading bash                 100%
-    (2/6) upgrading filesystem           100%
-    (3/6) upgrading mintty               100%
-    (4/6) upgrading msys2-runtime        100%
-    (5/6) upgrading pacman-mirrors       100%
-    (6/6) upgrading pacman               100%
-    :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
-    ```
+    ![Empty MSYS2 terminal window](images/install-4-terminal.png)
 
-6. Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with `pacman -Syu`:
+6. You will probably want to install some tools and the mingw-w64 GCC to start compiling:
 
-    ```
-    $ pacman -Syu
-     mingw32 is up to date
-     mingw64 is up to date
-     msys is up to date
-    :: Starting core system upgrade...
-     there is nothing to do
-    :: Starting full system upgrade...
-    resolving dependencies...
-    looking for conflicting packages...
-    
-    Packages (20) base-2020.12-1  bsdtar-3.5.0-1
-                  [... more packages listed ...]
-    
-    Total Download Size:   12.82 MiB
-    Total Installed Size:  44.25 MiB
-    Net Upgrade Size:       3.01 MiB
-    
-    :: Proceed with installation? [Y/n]
-    [... downloading and installation continues ...]
-    ```
-
-7. Now MSYS2 is ready for you.  You will probably want to install some tools and the mingw-w64 GCC to start compiling:
-
-    ````
+    ```console
     $ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
     warning: file-5.39-2 is up to date -- skipping
     [... more warnings ...]
@@ -163,14 +96,16 @@ MSYS2 and what for.
     
     :: Proceed with installation? [Y/n]
     [... downloading and installation continues ...]
-    ````
+    ```
 
-8. To start building using the mingw-w64 GCC, close this window and run "MSYS MinGW 64-bit" from Start menu.  Now you can call `make` or `gcc` to build software for Windows.
+7. Now you can call `make` or `gcc` to build software for Windows.
 
-9. Check out [the introduction page](wiki/MSYS2-introduction/) to learn which
-   Start menu item to use when and which packages to install.  Take look at
-   [Detailed MSYS2 install guide](wiki/MSYS2-installation/) for troubleshooting
-   and additional details on how to keep your MSYS2 up-to-date.
+    ```console
+    $ gcc --version
+    gcc.exe (Rev3, Built by MSYS2 project) 12.1.0
+    ```
+
+8. After installing MSYS2 it will update itself via `pacman`, see the [update guide](./docs/updating.md) for more information.
 
 
 ## Sponsors

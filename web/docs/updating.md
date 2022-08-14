@@ -8,7 +8,7 @@ updates to various packages and you can only update all packages at once.
 
 To update all packages you should run the following command:
 
-```shell
+```console
 $ pacman -Suy
 :: Synchronizing package databases...
  mingw32 is up to date
@@ -25,7 +25,7 @@ $ pacman -Suy
 
 In some cases, certain core packages will get updated and pacman will prompt you to close all terminals:
 
-```shell
+```console
 :: To complete this update all MSYS2 processes including this terminal will be closed.
    Confirm to proceed [Y/n]
 ```
@@ -36,7 +36,7 @@ After confirming you need to start a new terminal and run the update (`pacman -S
 
 `pacman` keeps all packages it downloads under `/var/cache/pacman/pkg/`. To free up some space by removing old packages run:
 
-```shell
+```console
 $ paccache -r
 ==> finished: 5 packages removed (disk space saved: 49.05 MiB)
 ```
@@ -47,13 +47,13 @@ When you have modified a global configuration file of a package (under `/etc` fo
 
 1) In case a new package version gets installed which changes the file content, then pacman will leave the existing file alone and create a `<filename>.pacnew` instead:
 
-```shell
+```console
 warning: /etc/myconfig.conf installed as /etc/pacman.d/myconfig.conf.pacnew
 ```
 
 You can run `pacdiff` which searches for such `.pacnew` files and will ask you how to deal with them:
 
-```shell
+```console
 $ pacdiff
 ==> pacnew file found for /etc/myconfig.conf
 :: (V)iew, (M)erge, (S)kip, (R)emove pacnew, (O)verwrite with pacnew, (Q)uit: [v/m/s/r/o/q]
@@ -61,13 +61,13 @@ $ pacdiff
 
 2) In case the package which owns the config file you changed gets uninstalled it will save a copy as `<filename>.pacsave`:
 
-```shell
+```console
 warning: /etc/myconfig.conf saved as /etc/myconfig.conf.pacsave
 ```
 
 If you install the package again you can run `pacdiff` to restore/merge your original changes:
 
-```shell
+```console
 $ pacdiff
 ==> pacsave file found for /etc/myconfig.conf
 :: (V)iew, (M)erge, (S)kip, (R)emove pacsave, (O)verwrite with pacsave, (Q)uit: [v/m/s/r/o/q]
