@@ -395,8 +395,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-file-backups-during-updates" class="md-nav__link">
-    Configuration file backups during updates
+  <a href="#managing-configuration-file-backups" class="md-nav__link">
+    Managing configuration file backups
   </a>
   
 </li>
@@ -1194,8 +1194,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-file-backups-during-updates" class="md-nav__link">
-    Configuration file backups during updates
+  <a href="#managing-configuration-file-backups" class="md-nav__link">
+    Managing configuration file backups
   </a>
   
 </li>
@@ -1248,7 +1248,7 @@ updates to various packages and you can only update all packages at once.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>paccache -r
 <span class="go">==&gt; finished: 5 packages removed (disk space saved: 49.05 MiB)</span>
 </code></pre></div>
-<h2 id="configuration-file-backups-during-updates">Configuration file backups during updates</h2>
+<h2 id="managing-configuration-file-backups">Managing configuration file backups</h2>
 <p>When you have modified a global configuration file of a package (under <code>/etc</code> for example) and the content of the file would changed due to an update or the package being remove then pacman will create a backup of the changed file instead of discarding your changes. If you don't change any global configuration files then you can ignore this section.</p>
 <p>1) In case a new package version gets installed which changes the file content, then pacman will leave the existing file alone and create a <code>&lt;filename&gt;.pacnew</code> instead:</p>
 <div class="highlight"><pre><span></span><code><span class="go">warning: /etc/myconfig.conf installed as /etc/pacman.d/myconfig.conf.pacnew</span>
