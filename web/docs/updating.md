@@ -41,7 +41,7 @@ $ paccache -r
 ==> finished: 5 packages removed (disk space saved: 49.05 MiB)
 ```
 
-## Configuration file backups during updates
+## Managing configuration file backups
 
 When you have modified a global configuration file of a package (under `/etc` for example) and the content of the file would changed due to an update or the package being remove then pacman will create a backup of the changed file instead of discarding your changes. If you don't change any global configuration files then you can ignore this section.
 
