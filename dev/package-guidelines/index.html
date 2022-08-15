@@ -729,9 +729,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Package Guidelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Package Guidelines
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#applying-git-patches" class="md-nav__link">
+    Applying git patches
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1158,6 +1189,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#applying-git-patches" class="md-nav__link">
+    Applying git patches
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1175,7 +1221,12 @@
 
 
 <h1 id="package-guidelines">Package Guidelines</h1>
-<p>TODO</p>
+<h2 id="applying-git-patches">Applying git patches</h2>
+<p>Git patches should be applied in <code>prepare()</code>. Since the build system doesn't have a committer configured and we generally try to avoid changing the git history because that distorts the input for a later <code>pkgver()</code> call, we apply patches without committing:</p>
+<ul>
+<li>Use <code>git apply</code> to apply a git patch without creating a commit</li>
+<li>In case of a git checkout use <code>git cherry-pick --no-commit</code> to backport a commit without creating a commit.</li>
+</ul>
 
 
 
