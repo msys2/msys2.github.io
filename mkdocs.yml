@@ -111,6 +111,7 @@ nav:
         - wiki/Sudo.md
         - wiki/Terminals.md
         - wiki/JIT-Debugging.md
+        - wiki/arm64.md
     - 'get-involved.md'
     - 'contact.md'
     - 'codeofconduct.md'
