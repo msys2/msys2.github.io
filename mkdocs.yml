@@ -78,6 +78,7 @@ nav:
           - docs/autotools.md
           - docs/python.md
           - docs/git.md
+          - docs/cpp.md
         - docs/windows_support.md
         - docs/faq.md
     - Development:
