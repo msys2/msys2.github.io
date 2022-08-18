@@ -388,8 +388,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cleaning-the-package-cache" class="md-nav__link">
-    Cleaning the package cache
+  <a href="#pruning-the-package-cache" class="md-nav__link">
+    Pruning the package cache
   </a>
   
 </li>
@@ -1215,8 +1215,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cleaning-the-package-cache" class="md-nav__link">
-    Cleaning the package cache
+  <a href="#pruning-the-package-cache" class="md-nav__link">
+    Pruning the package cache
   </a>
   
 </li>
@@ -1247,12 +1247,8 @@
 
 
 <h1 id="updating-msys2">Updating MSYS2</h1>
-<p>After you have installed MSYS2 via the installer or other means, you need to
-continue updating it with the built-in <code>pacman</code> tool. MSYS2 is a <a href="https://en.wikipedia.org/wiki/Rolling_release">rolling
-release</a> distribution and only
-supports full system upgrades, which means there are frequent minor and major
-updates to various packages and you can only update all packages at once.</p>
-<p>To update all packages you should run the following command:</p>
+<p>After you have installed MSYS2 via the installer or other means, you need to continue updating it with the built-in <code>pacman</code> tool. MSYS2 is a <a href="https://en.wikipedia.org/wiki/Rolling_release">rolling release</a> distribution and only supports full system upgrades, which means there are frequent minor and major updates to various packages and you can only update all packages at once.</p>
+<p>To update all packages run the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman -Suy
 <span class="go">:: Synchronizing package databases...</span>
 <span class="go"> mingw32 is up to date</span>
@@ -1270,26 +1266,26 @@ updates to various packages and you can only update all packages at once.</p>
 <div class="highlight"><pre><span></span><code><span class="go">:: To complete this update all MSYS2 processes including this terminal will be closed.</span>
 <span class="go">   Confirm to proceed [Y/n]</span>
 </code></pre></div>
-<p>After confirming you need to start a new terminal and run the update (<code>pacman -Suy</code>) again to update the remaining non-core packages.</p>
-<h2 id="cleaning-the-package-cache">Cleaning the package cache</h2>
+<p>After confirming you need to start a new terminal and run the update again (<code>pacman -Suy</code>) to update the remaining non-core packages.</p>
+<h2 id="pruning-the-package-cache">Pruning the package cache</h2>
 <p><code>pacman</code> keeps all packages it downloads under <code>/var/cache/pacman/pkg/</code>. To free up some space by removing old packages run:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>paccache -r
 <span class="go">==&gt; finished: 5 packages removed (disk space saved: 49.05 MiB)</span>
 </code></pre></div>
 <h2 id="managing-configuration-file-backups">Managing configuration file backups</h2>
-<p>When you have modified a global configuration file of a package (under <code>/etc</code> for example) and the content of the file would changed due to an update or the package being remove then pacman will create a backup of the changed file instead of discarding your changes. If you don't change any global configuration files then you can ignore this section.</p>
-<p>1) In case a new package version gets installed which changes the file content, then pacman will leave the existing file alone and create a <code>&lt;filename&gt;.pacnew</code> instead:</p>
+<p>When you have modified a global configuration file of a package (under <code>/etc</code> for example) and the package is about to be removed or updated then pacman will avoid deleting your changes. The <code>pacdiff</code> tool can then be used to merge your configuration file with the default state again.</p>
+<p>1) In case a new package version with some changed configuration gets installed, which would discard your changes, pacman will leave the existing file alone and create a <code>&lt;filename&gt;.pacnew</code> with the new configuration instead:</p>
 <div class="highlight"><pre><span></span><code><span class="go">warning: /etc/myconfig.conf installed as /etc/pacman.d/myconfig.conf.pacnew</span>
 </code></pre></div>
-<p>You can run <code>pacdiff</code> which searches for such <code>.pacnew</code> files and will ask you how to deal with them:</p>
+<p>You can run <code>pacdiff</code> which searches for such <code>.pacnew</code> files and will ask you how it should deal with them:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacdiff
 <span class="go">==&gt; pacnew file found for /etc/myconfig.conf</span>
 <span class="go">:: (V)iew, (M)erge, (S)kip, (R)emove pacnew, (O)verwrite with pacnew, (Q)uit: [v/m/s/r/o/q]</span>
 </code></pre></div>
-<p>2) In case the package which owns the config file you changed gets uninstalled it will save a copy as <code>&lt;filename&gt;.pacsave</code>:</p>
+<p>2) In case the configuration file is part of a package which gets uninstalled it will save a copy as <code>&lt;filename&gt;.pacsave</code> instead of deleting it:</p>
 <div class="highlight"><pre><span></span><code><span class="go">warning: /etc/myconfig.conf saved as /etc/myconfig.conf.pacsave</span>
 </code></pre></div>
-<p>If you install the package again you can run <code>pacdiff</code> to restore/merge your original changes:</p>
+<p>If you later on install the package again you can run <code>pacdiff</code> to restore your original changes:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacdiff
 <span class="go">==&gt; pacsave file found for /etc/myconfig.conf</span>
 <span class="go">:: (V)iew, (M)erge, (S)kip, (R)emove pacsave, (O)verwrite with pacsave, (Q)uit: [v/m/s/r/o/q]</span>
