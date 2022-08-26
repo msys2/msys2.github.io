@@ -55,54 +55,36 @@ MSYS2 and what for.
 
     ![Empty MSYS2 terminal window](images/install-4-terminal.png)
 
-6. You will probably want to install some tools and the mingw-w64 GCC to start compiling:
+6. You will probably want to install some tools like the mingw-w64 GCC to start compiling:
 
     ```console
-    $ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
-    warning: file-5.39-2 is up to date -- skipping
-    [... more warnings ...]
-    :: There are 48 members in group base-devel:
-    :: Repository msys
-       1) asciidoc  2) autoconf  3) autoconf2.13  4) autogen
-       [... more packages listed ...]
-    
-    Enter a selection (default=all):
-    :: There are 19 members in group mingw-w64-x86_64-toolchain:
-    :: Repository mingw64
-       1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
-       [... more packages listed ...]
-    
-    Enter a selection (default=all):
+    $ pacman -S mingw-w64-x86_64-gcc
     resolving dependencies...
     looking for conflicting packages...
-    
-    Packages (123) docbook-xml-4.5-2  docbook-xsl-1.79.2-1
-                   [... more packages listed ...]
-                   m4-1.4.18-2  make-4.3-1  man-db-2.9.3-1
-                   mingw-w64-x86_64-binutils-2.35.1-3
-                   mingw-w64-x86_64-crt-git-9.0.0.6090.ad98746a-1
-                   mingw-w64-x86_64-gcc-10.2.0-6
-                   mingw-w64-x86_64-gcc-ada-10.2.0-6
-                   mingw-w64-x86_64-gcc-fortran-10.2.0-6
-                   mingw-w64-x86_64-gcc-libgfortran-10.2.0-6
-                   mingw-w64-x86_64-gcc-libs-10.2.0-6
-                   mingw-w64-x86_64-gcc-objc-10.2.0-6
-                   mingw-w64-x86_64-gdb-10.1-2
-                   mingw-w64-x86_64-gdb-multiarch-10.1-2
-                  [... more packages listed ...]
-    
-    Total Download Size:    196.15 MiB
-    Total Installed Size:  1254.96 MiB
-    
+
+    Packages (15) mingw-w64-x86_64-binutils-2.39-2
+                mingw-w64-x86_64-crt-git-10.0.0.r68.g6eb571448-1
+                mingw-w64-x86_64-gcc-libs-12.2.0-1  mingw-w64-x86_64-gmp-6.2.1-3
+                mingw-w64-x86_64-headers-git-10.0.0.r68.g6eb571448-1
+                mingw-w64-x86_64-isl-0.25-1  mingw-w64-x86_64-libiconv-1.17-1
+                mingw-w64-x86_64-libwinpthread-git-10.0.0.r68.g6eb571448-1
+                mingw-w64-x86_64-mpc-1.2.1-1  mingw-w64-x86_64-mpfr-4.1.0.p13-1
+                mingw-w64-x86_64-windows-default-manifest-6.4-4
+                mingw-w64-x86_64-winpthreads-git-10.0.0.r68.g6eb571448-1
+                mingw-w64-x86_64-zlib-1.2.12-1  mingw-w64-x86_64-zstd-1.5.2-2
+                mingw-w64-x86_64-gcc-12.2.0-1
+
+    Total Installed Size:  397.59 MiB
+
     :: Proceed with installation? [Y/n]
     [... downloading and installation continues ...]
     ```
 
-7. Now you can call `make` or `gcc` to build software for Windows.
+7. Now you can call `gcc` to build software for Windows.
 
     ```console
     $ gcc --version
-    gcc.exe (Rev3, Built by MSYS2 project) 12.1.0
+    gcc.exe (Rev1, Built by MSYS2 project) 12.2.0
     ```
 
 8. After installing MSYS2 it will update itself via `pacman`, see the [update guide](./docs/updating.md) for more information.
