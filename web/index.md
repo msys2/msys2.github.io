@@ -51,7 +51,7 @@ MSYS2 and what for.
 
     ![Third screen of MSYS2 installation](images/install-3-finish.png)
 
-5. Now MSYS2 is ready for you and a terminal for the [MINWG64 environment](./docs/environments) will launch.
+5. Now MSYS2 is ready for you and a terminal for the [MINGW64 environment](./docs/environments) will launch.
 
     ![Empty MSYS2 terminal window](images/install-4-terminal.png)
 
