@@ -679,6 +679,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-long-are-old-packages-kept-on-repomsys2org" class="md-nav__link">
+    How long are old packages kept on repo.msys2.org?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1230,6 +1237,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-long-are-old-packages-kept-on-repomsys2org" class="md-nav__link">
+    How long are old packages kept on repo.msys2.org?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1288,6 +1302,9 @@
 OK!
 </code></pre></div>
 <p>The certificates can be removed again by deleting the .pem/.cer files in <code>/etc/pki/ca-trust/source/anchors</code> and running <code>update-ca-trust</code> again.</p>
+<h3 id="how-long-are-old-packages-kept-on-repomsys2org">How long are old packages kept on repo.msys2.org?</h3>
+<p>1.75 years after a package version leaves the pacman package database, it is removed from the server. This means that if you do not update the pacman DB for more than 1.75 years, the installation of packages may fail until you update.</p>
+<p>External projects that rely on specific package versions on the repo server are advised to mirror those packages if the above retention policy does not meet their needs.</p>
 
 
 
