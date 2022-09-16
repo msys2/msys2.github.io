@@ -48,3 +48,9 @@ OK!
 ```
 
 The certificates can be removed again by deleting the .pem/.cer files in `/etc/pki/ca-trust/source/anchors` and running `update-ca-trust` again.
+
+### How long are old packages kept on repo.msys2.org?
+
+1.75 years after a package version leaves the pacman package database, it is removed from the server. This means that if you do not update the pacman DB for more than 1.75 years, the installation of packages may fail until you update.
+
+External projects that rely on specific package versions on the repo server are advised to mirror those packages if the above retention policy does not meet their needs.
