@@ -22,7 +22,7 @@ The Windows console (*conhost*) does the same for Windows programs. It provides 
 Shells
 ---
 
-A distinct category of programs are [shells](https://en.wikipedia.org/wiki/Shell#Computing). A shell is the actual program that reads commands from the user and runs them.
+A distinct category of programs is [shells](https://en.wikipedia.org/wiki/Shell#Computing). A shell is the actual program that reads commands from the user and runs them.
 
 The "DOS window" in Windows is actually a combination of a Windows console and the Windows shell (**cmd**, command line). Likewise, when you open a mintty window, you'll probably see the **bash** shell running inside and waiting for your commands. This matching is not mandatory though, as bash can be run in a Windows console and cmd can be run in mintty.
 
