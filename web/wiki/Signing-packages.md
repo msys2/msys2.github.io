@@ -21,7 +21,7 @@ In case you need to import the backup later:
 Export the public key:
 `gpg --export --armor <keyid> > my_pub_key.asc`
 
-If you're going to use the key for GPG/MIME or share your signed packages with other people, you probably need publish your key:
+If you're going to use the key for GPG/MIME or share your signed packages with other people, you probably need to publish your key:
 `gpg --send-key <keyid>`
 [more...](https://fedoraproject.org/wiki/Creating_GPG_Keys#Exporting_a_GPG_Key_Using_the_Command_Line)
 

@@ -72,7 +72,7 @@ $ MSYS2_ARG_CONV_EXCL='--dir=' python3 -c "import sys; print(sys.argv)" --dir=/f
 ```
 
 `MSYS2_ARG_CONV_EXCL` can either be `*` to mean exclude everything, or a list of
-one ore more arguments prefixes separated by `;`, like
+one or more arguments prefixes separated by `;`, like
 `MSYS2_ARG_CONV_EXCL=--dir=;--bla=;/test`. It matches the prefix against the
 whole argument string.
 
@@ -95,7 +95,7 @@ $ MSYS2_ENV_CONV_EXCL='MYVAR' MYVAR=/foo python3 -c "import os; print(os.environ
 ```
 
 `MSYS2_ENV_CONV_EXCL` can either be `*` to mean exclude everything, or a list of
-one ore more environment variable prefixes separated by `;`, like
+one or more environment variable prefixes separated by `;`, like
 `MSYS2_ENV_CONV_EXCL=FOO;BAR;/test`. It matches the prefix against the following
 string `KEY=VALUE`.
 
@@ -143,6 +143,6 @@ copy things to the right place.
 
 In the native Windows world this path doesn't make much sense, as `C:\mingw64`
 likely doesn't match where the software lives, but ideally all native Windows
-tools are relocatable and wont use the prefix at runtime anyway. And if they do
+tools are relocatable and won't use the prefix at runtime anyway. And if they do
 and happen to call Cygwin tools then the prefix resolves to the correct path
 because the Cygwin root path is relocatable.

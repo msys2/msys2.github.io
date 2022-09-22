@@ -42,7 +42,7 @@ If you would like to search **only** among the packages which has been already i
 
 ## Installing a package
 
-If you wan to install a package, use the following command:
+If you want to install a package, use the following command:
 
 `pacman -S <name of the package>`
 
