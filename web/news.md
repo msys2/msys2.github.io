@@ -4,6 +4,22 @@ summary: Important events happening.
 ---
 # News
 
+### 2022-09-24 - Two cygwin related behavior changes
+
+1) **ConPTY support in our cygwin fork is now enabled by default.** This means any non-cygwin apps will now behave as if they are run in with a console attached and not redirected. This feature has been enabled in upstream cygwin for quite a while but we wanted to wait until there are no more known issues. We now feel that not enabling it causes more problems then enabling it.
+
+You can **disable it again** by setting `MSYS=disable_pcon`.
+
+2) **Empty environment variables are no longer removed when starting a new non-cygwin process.**
+
+```console
+$ FOO= python -c "import os; print('FOO' in os.environ)" # Old
+False
+$ FOO= python -c "import os; print('FOO' in os.environ)" # New
+True
+```
+
+You can **revert to the old behavior** by setting `MSYS=noemptyenvvalues`. Please let us know if this is breaking anything that can't be solved by just unsetting the env var where needed.
 
 ### 2022-04-06 - Windows 7 / 8 support will be dropped late 2022 or early 2023
 
