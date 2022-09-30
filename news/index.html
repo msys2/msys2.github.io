@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://www.msys2.org/news/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.1">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2e8b5541.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -290,8 +290,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2022-09-24-two-cygwin-related-behavior-changes" class="md-nav__link">
-    2022-09-24 - Two cygwin related behavior changes
+  <a href="#2022-09-24-changed-behavior-for-empty-env-vars" class="md-nav__link">
+    2022-09-24 - Changed behavior for empty env vars
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2022-09-24-conpty-support-enabled-by-default" class="md-nav__link">
+    2022-09-24 - ConPTY support enabled by default
   </a>
   
 </li>
@@ -1369,8 +1376,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2022-09-24-two-cygwin-related-behavior-changes" class="md-nav__link">
-    2022-09-24 - Two cygwin related behavior changes
+  <a href="#2022-09-24-changed-behavior-for-empty-env-vars" class="md-nav__link">
+    2022-09-24 - Changed behavior for empty env vars
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2022-09-24-conpty-support-enabled-by-default" class="md-nav__link">
+    2022-09-24 - ConPTY support enabled by default
   </a>
   
 </li>
@@ -1557,16 +1571,17 @@
 
 
 <h1 id="news">News</h1>
-<h3 id="2022-09-24-two-cygwin-related-behavior-changes">2022-09-24 - Two cygwin related behavior changes</h3>
-<p>1) <strong>ConPTY support in our cygwin fork is now enabled by default.</strong> This means any non-cygwin apps will now behave as if they are run in with a console attached and not redirected. This feature has been enabled in upstream cygwin for quite a while but we wanted to wait until there are no more known issues. We now feel that not enabling it causes more problems then enabling it.</p>
-<p>You can <strong>disable it again</strong> by setting <code>MSYS=disable_pcon</code>.</p>
-<p>2) <strong>Empty environment variables are no longer removed when starting a new non-cygwin process.</strong></p>
+<h3 id="2022-09-24-changed-behavior-for-empty-env-vars">2022-09-24 - Changed behavior for empty env vars</h3>
+<p>Empty environment variables are no longer removed when starting a new non-cygwin process.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">FOO</span><span class="o">=</span> python -c <span class="s2">&quot;import os; print(&#39;FOO&#39; in os.environ)&quot;</span> <span class="c1"># Old</span>
 <span class="go">False</span>
 <span class="gp">$ </span><span class="nv">FOO</span><span class="o">=</span> python -c <span class="s2">&quot;import os; print(&#39;FOO&#39; in os.environ)&quot;</span> <span class="c1"># New</span>
 <span class="go">True</span>
 </code></pre></div>
 <p>You can <strong>revert to the old behavior</strong> by setting <code>MSYS=noemptyenvvalues</code>. Please let us know if this is breaking anything that can't be solved by just unsetting the env var where needed.</p>
+<h3 id="2022-09-24-conpty-support-enabled-by-default">2022-09-24 - ConPTY support enabled by default</h3>
+<p>ConPTY support in our cygwin fork is now enabled by default. This means any non-cygwin apps will now behave as if they are run in with a console attached and not redirected. This feature has been enabled in upstream cygwin for quite a while but we wanted to wait until there are no more known issues. We now feel that not enabling it causes more problems then enabling it.</p>
+<p>You can <strong>disable it again</strong> by setting <code>MSYS=disable_pcon</code>.</p>
 <h3 id="2022-04-06-windows-7-8-support-will-be-dropped-late-2022-or-early-2023">2022-04-06 - Windows 7 / 8 support will be dropped late 2022 or early 2023</h3>
 <p>Cygwin 3.5 will drop support for Windows &lt;8.1, which means the new requirement will be "64 bit Windows 8.1 / Windows Server 2012 R2". We expect the update to Cygwin 3.5 to be around late 2022, early 2023. For more information, look <a href="https://www.msys2.org/docs/windows_support/">here</a>.</p>
 <p>A recent survey suggests that ~2-3% of our active users (excluding cloud servers and CI systems) are still using Windows &lt;8.1. We recommend them stopping to update at the end of the year. We've enabled an inline warning message for them when they open a terminal.</p>
@@ -1937,10 +1952,10 @@ issues with the i686 variant.  Run
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d691e9de.min.js"></script>
+      <script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
       
     
   </body>
