@@ -4,6 +4,10 @@ summary: Important events happening.
 ---
 # News
 
+### 2022-10-10 - libssp is no longer required
+
+Building with `_FORTIFY_SOURCE` no longer requires explicitly linking with libssp (-lssp) and enabling stack protection no longer pulls in libssp. This brings things in line with other platforms. Thanks to [Martin Storsjö](https://github.com/mstorsjo) for implementing this in mingw-w64. Once all our affected packages are rebuilt we will remove the libssp package from our repo.
+
 ### 2022-09-24 - Changed behavior for empty env vars
 
 Empty environment variables are no longer removed when starting a new non-cygwin process.
