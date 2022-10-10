@@ -1304,7 +1304,7 @@ provide a BASH script that runs your code in the MSYS2 environment.</p>
 <span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span><span class="w"></span>
 
 <span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">msys2-mingw64</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">msys2-ucrt64</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows-latest</span><span class="w"></span>
 <span class="w">    </span><span class="nt">defaults</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
@@ -1313,9 +1313,9 @@ provide a BASH script that runs your code in the MSYS2 environment.</p>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msys2/setup-msys2@v2</span><span class="w"></span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">msystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MINGW64</span><span class="w"></span>
+<span class="w">          </span><span class="nt">msystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UCRT64</span><span class="w"></span>
 <span class="w">          </span><span class="nt">update</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">          </span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git mingw-w64-x86_64-cc</span><span class="w"></span>
+<span class="w">          </span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git mingw-w64-ucrt-x86_64-gcc</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI-Build</span><span class="w"></span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">          </span><span class="no">echo &#39;Running in MSYS2!&#39;</span><span class="w"></span>
@@ -1336,7 +1336,7 @@ to update MSYS2 first. For this you need to run the following commands:</p>
 
 <span class="c"># Then run your code</span>
 <span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
-<span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
+<span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;UCRT64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
 <span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;./ci-build.sh&quot;</span>
 </code></pre></div>
 <h2 id="docker">Docker</h2>
@@ -1375,7 +1375,7 @@ MSYS2 yourself.</p>
 </code></pre></div>
 <p>3) Run your code (<code>ci-build.sh</code> in this case)</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
-<span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
+<span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;UCRT64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
 <span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;./ci-build.sh&#39;</span>
 </code></pre></div>
 <h2 id="faq">FAQ</h2>

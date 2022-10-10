@@ -1268,12 +1268,12 @@
 <p>MSYS2 comes with different environments/subsystems and the first thing you have
 to decide is which one to use. The differences among the environments are
 mainly environment variables, default compilers/linkers, architecture,
-system libraries used etc. If you are unsure, go with <strong>MINGW64</strong>.</p>
+system libraries used etc. If you are unsure, go with <strong>UCRT64</strong>.</p>
 <p>The <strong>MSYS</strong> environment contains the unix-like/cygwin based tools, lives under
 <code>/usr</code> and are special in that it is always active. All the other environments
 inherit from the <strong>MSYS</strong> environment and add various things on top of it.</p>
-<p>For example, in the <strong>MINGW64</strong> environment the <code>$PATH</code> variable starts with
-<code>/mingw64/bin:/usr/bin</code> so you get all mingw64 based tools as well as all msys
+<p>For example, in the <strong>UCRT64</strong> environment the <code>$PATH</code> variable starts with
+<code>/ucrt64/bin:/usr/bin</code> so you get all mingw64 based tools as well as all msys
 tools.</p>
 <h2 id="overview">Overview</h2>
 <table>
@@ -1299,15 +1299,6 @@ tools.</p>
 <td>libstdc++</td>
 </tr>
 <tr>
-<td><img alt="mingw64" src="../mingw64.png" style="max-width:25px" /></td>
-<td><strong>MINGW64</strong></td>
-<td><code>/mingw64</code></td>
-<td>gcc</td>
-<td>x86_64</td>
-<td>msvcrt</td>
-<td>libstdc++</td>
-</tr>
-<tr>
 <td><img alt="ucrt64" src="../ucrt64.png" style="max-width:25px" /></td>
 <td><strong>UCRT64</strong></td>
 <td><code>/ucrt64</code></td>
@@ -1326,13 +1317,13 @@ tools.</p>
 <td>libc++</td>
 </tr>
 <tr>
-<td><img alt="mingw32" src="../mingw32.png" style="max-width:25px" /></td>
-<td><strong>MINGW32</strong></td>
-<td><code>/mingw32</code></td>
-<td>gcc</td>
-<td>i686</td>
-<td>msvcrt</td>
-<td>libstdc++</td>
+<td><img alt="clangarm64" src="../clangarm64.png" style="max-width:25px" /></td>
+<td><strong>CLANGARM64</strong></td>
+<td><code>/clangarm64</code></td>
+<td>llvm</td>
+<td>aarch64</td>
+<td>ucrt</td>
+<td>libc++</td>
 </tr>
 <tr>
 <td><img alt="clang32" src="../clang32.png" style="max-width:25px" /></td>
@@ -1344,13 +1335,22 @@ tools.</p>
 <td>libc++</td>
 </tr>
 <tr>
-<td><img alt="clangarm64" src="../clangarm64.png" style="max-width:25px" /></td>
-<td><strong>CLANGARM64</strong></td>
-<td><code>/clangarm64</code></td>
-<td>llvm</td>
-<td>aarch64</td>
-<td>ucrt</td>
-<td>libc++</td>
+<td><img alt="mingw64" src="../mingw64.png" style="max-width:25px" /></td>
+<td><strong>MINGW64</strong></td>
+<td><code>/mingw64</code></td>
+<td>gcc</td>
+<td>x86_64</td>
+<td>msvcrt</td>
+<td>libstdc++</td>
+</tr>
+<tr>
+<td><img alt="mingw32" src="../mingw32.png" style="max-width:25px" /></td>
+<td><strong>MINGW32</strong></td>
+<td><code>/mingw32</code></td>
+<td>gcc</td>
+<td>i686</td>
+<td>msvcrt</td>
+<td>libstdc++</td>
 </tr>
 </tbody>
 </table>

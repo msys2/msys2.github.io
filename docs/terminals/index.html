@@ -1257,7 +1257,7 @@
 <p><a href="https://mintty.github.io">Mintty</a> is the default terminal application in MSYS2
 and is included in the installer. We also include some custom Mintty integration
 by providing separate launchers with corresponding .ini configuration files
-(msys2{.exe,.ini}/mingw32{.exe,.ini}/mingw64{.exe,.ini}) for all the MSYS2
+(msys2{.exe,.ini}/ucrt64{.exe,.ini}/...) for all the MSYS2
 environments, so you can easily configure your environments and pin the
 launchers to your Windows taskbar.</p>
 <p>See <a href="https://github.com/msys2/msys2-launcher">https://github.com/msys2/msys2-launcher</a> and <a href="https://mintty.github.io">https://mintty.github.io</a> for
@@ -1278,7 +1278,7 @@ and WSL can also be extended to support a MSYS2 shell.</p>
 </ul>
 <p>For more info on the different profile settings see
 <a href="https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings">https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings</a> <br style="clear:both"/></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// This makes MINGW64 the default shell</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1">// This makes UCRT64 the default shell</span><span class="w"></span>
 <span class="nt">&quot;defaultProfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{17da3cac-b318-431e-8a3e-7fcdefe6d114}&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="nt">&quot;profiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;list&quot;</span><span class="p">:</span><span class="w"></span>
@@ -1286,22 +1286,10 @@ and WSL can also be extended to support a MSYS2 shell.</p>
 <span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;guid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{17da3cac-b318-431e-8a3e-7fcdefe6d114}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MINGW64 / MSYS2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;commandline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UCRT64 / MSYS2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;commandline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/mingw64.ico&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;font&quot;</span><span class="p">:</span><span class="w"> </span>
-<span class="w">      </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;guid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{2d51fdc4-a03b-4efe-81bc-722b7f6f3820}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MINGW32 / MSYS2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;commandline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;startingDirectory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/home/%USERNAME%&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/mingw32.ico&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/msys64/ucrt64.ico&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;font&quot;</span><span class="p">:</span><span class="w"> </span>
 <span class="w">      </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lucida Console&quot;</span><span class="p">,</span><span class="w"></span>
