@@ -31,8 +31,8 @@ licenses are recorded in a package:
 In case the package provides one or more license text files, they can be
 installed to `<prefix>/share/licenses/<real-package-name>/*`.
 `real-package-name` is the package name without the environment specific prefix,
-so in case of `mingw-w64-x86_64-meson` it is just `meson`. Example:
-`/mingw64/share/licenses/meson/COPYING`
+so in case of `mingw-w64-ucrt-x86_64-meson` it is just `meson`. Example:
+`/ucrt64/share/licenses/meson/COPYING`
 
 These guidelines are inspired by
 

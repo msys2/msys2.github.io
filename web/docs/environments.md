@@ -10,14 +10,14 @@ summary: The differences between the environments is
 MSYS2 comes with different environments/subsystems and the first thing you have
 to decide is which one to use. The differences among the environments are
 mainly environment variables, default compilers/linkers, architecture,
-system libraries used etc. If you are unsure, go with **MINGW64**.
+system libraries used etc. If you are unsure, go with **UCRT64**.
 
 The **MSYS** environment contains the unix-like/cygwin based tools, lives under
 `/usr` and are special in that it is always active. All the other environments
 inherit from the **MSYS** environment and add various things on top of it.
 
-For example, in the **MINGW64** environment the `$PATH` variable starts with
-`/mingw64/bin:/usr/bin` so you get all mingw64 based tools as well as all msys
+For example, in the **UCRT64** environment the `$PATH` variable starts with
+`/ucrt64/bin:/usr/bin` so you get all mingw64 based tools as well as all msys
 tools.
 
 ## Overview
@@ -25,12 +25,12 @@ tools.
 |                                                          | Name           | Prefix        | Toolchain | Architecture | C Library | C++ Library |
 |----------------------------------------------------------|----------------|---------------|-----------|--------------|-----------|-------------|
 | ![msys](msys.png){: style="max-width:25px" }             | **MSYS**       | `/usr`        | gcc       | x86_64       | cygwin    | libstdc++   |
-| ![mingw64](mingw64.png){: style="max-width:25px" }       | **MINGW64**    | `/mingw64`    | gcc       | x86_64       | msvcrt    | libstdc++   |
 | ![ucrt64](ucrt64.png){: style="max-width:25px" }         | **UCRT64**     | `/ucrt64`     | gcc       | x86_64       | ucrt      | libstdc++   |
 | ![clang64](clang64.png){: style="max-width:25px" }       | **CLANG64**    | `/clang64`    | llvm      | x86_64       | ucrt      | libc++      |
-| ![mingw32](mingw32.png){: style="max-width:25px" }       | **MINGW32**    | `/mingw32`    | gcc       | i686         | msvcrt    | libstdc++   |
-| ![clang32](clang32.png){: style="max-width:25px" }       | **CLANG32**    | `/clang32`    | llvm      | i686         | ucrt      | libc++      |
 | ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `/clangarm64` | llvm      | aarch64      | ucrt      | libc++      |
+| ![clang32](clang32.png){: style="max-width:25px" }       | **CLANG32**    | `/clang32`    | llvm      | i686         | ucrt      | libc++      |
+| ![mingw64](mingw64.png){: style="max-width:25px" }       | **MINGW64**    | `/mingw64`    | gcc       | x86_64       | msvcrt    | libstdc++   |
+| ![mingw32](mingw32.png){: style="max-width:25px" }       | **MINGW32**    | `/mingw32`    | gcc       | i686         | msvcrt    | libstdc++   |
 
 The active environment is selected via the `MSYSTEM` environment variable.
 Setting `MSYSTEM` to `UCRT64` and starting a login shell will put you in that

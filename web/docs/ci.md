@@ -20,7 +20,7 @@ name: MSYS2
 on: [push, pull_request]
 
 jobs:
-  msys2-mingw64:
+  msys2-ucrt64:
     runs-on: windows-latest
     defaults:
       run:
@@ -29,9 +29,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: msys2/setup-msys2@v2
         with:
-          msystem: MINGW64
+          msystem: UCRT64
           update: true
-          install: git mingw-w64-x86_64-cc
+          install: git mingw-w64-ucrt-x86_64-gcc
       - name: CI-Build
         run: |
           echo 'Running in MSYS2!'
@@ -59,7 +59,7 @@ C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"  # Normal update
 
 # Then run your code
 $env:CHERE_INVOKING = 'yes'  # Preserve the current working directory
-$env:MSYSTEM = 'MINGW64'  # Start a 64 bit Mingw environment
+$env:MSYSTEM = 'UCRT64'  # Start a 64 bit Mingw environment
 C:\msys64\usr\bin\bash -lc "./ci-build.sh"
 ```
 
@@ -113,7 +113,7 @@ MSYS2 yourself.
 
    ```powershell
    $env:CHERE_INVOKING = 'yes'  # Preserve the current working directory
-   $env:MSYSTEM = 'MINGW64'  # Start a 64 bit Mingw environment
+   $env:MSYSTEM = 'UCRT64'  # Start a 64 bit Mingw environment
    C:\msys64\usr\bin\bash -lc './ci-build.sh'
    ```
 
