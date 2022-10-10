@@ -1373,7 +1373,7 @@ certain arguments via the <code>MSYS2_ARG_CONV_EXCL</code> environment variable:
 <span class="o">[</span><span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;--dir=/foo&#39;</span><span class="o">]</span>
 </code></pre></div>
 <p><code>MSYS2_ARG_CONV_EXCL</code> can either be <code>*</code> to mean exclude everything, or a list of
-one ore more arguments prefixes separated by <code>;</code>, like
+one or more arguments prefixes separated by <code>;</code>, like
 <code>MSYS2_ARG_CONV_EXCL=--dir=;--bla=;/test</code>. It matches the prefix against the
 whole argument string.</p>
 <h3 id="environment-variables">Environment Variables</h3>
@@ -1388,7 +1388,7 @@ C:<span class="se">\m</span>sys64<span class="se">\f</span>oo<span class="p">;</
 /foo
 </code></pre></div>
 <p><code>MSYS2_ENV_CONV_EXCL</code> can either be <code>*</code> to mean exclude everything, or a list of
-one ore more environment variable prefixes separated by <code>;</code>, like
+one or more environment variable prefixes separated by <code>;</code>, like
 <code>MSYS2_ENV_CONV_EXCL=FOO;BAR;/test</code>. It matches the prefix against the following
 string <code>KEY=VALUE</code>.</p>
 <p>Cygwin special cases some environment variables that are known to be paths or
@@ -1421,7 +1421,7 @@ to and in addition is a valid Windows path (a drive relative path, so
 copy things to the right place.</p>
 <p>In the native Windows world this path doesn't make much sense, as <code>C:\mingw64</code>
 likely doesn't match where the software lives, but ideally all native Windows
-tools are relocatable and wont use the prefix at runtime anyway. And if they do
+tools are relocatable and won't use the prefix at runtime anyway. And if they do
 and happen to call Cygwin tools then the prefix resolves to the correct path
 because the Cygwin root path is relocatable.</p>
 
