@@ -290,6 +290,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2022-10-10-libssp-is-no-longer-required" class="md-nav__link">
+    2022-10-10 - libssp is no longer required
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2022-09-24-changed-behavior-for-empty-env-vars" class="md-nav__link">
     2022-09-24 - Changed behavior for empty env vars
   </a>
@@ -1376,6 +1383,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2022-10-10-libssp-is-no-longer-required" class="md-nav__link">
+    2022-10-10 - libssp is no longer required
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2022-09-24-changed-behavior-for-empty-env-vars" class="md-nav__link">
     2022-09-24 - Changed behavior for empty env vars
   </a>
@@ -1571,6 +1585,8 @@
 
 
 <h1 id="news">News</h1>
+<h3 id="2022-10-10-libssp-is-no-longer-required">2022-10-10 - libssp is no longer required</h3>
+<p>Building with <code>_FORTIFY_SOURCE</code> no longer requires explicitly linking with libssp (-lssp) and enabling stack protection no longer pulls in libssp. This brings things in line with other platforms. Thanks to <a href="https://github.com/mstorsjo">Martin Storsjö</a> for implementing this in mingw-w64. Once all our affected packages are rebuilt we will remove the libssp package from our repo.</p>
 <h3 id="2022-09-24-changed-behavior-for-empty-env-vars">2022-09-24 - Changed behavior for empty env vars</h3>
 <p>Empty environment variables are no longer removed when starting a new non-cygwin process.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">FOO</span><span class="o">=</span> python -c <span class="s2">&quot;import os; print(&#39;FOO&#39; in os.environ)&quot;</span> <span class="c1"># Old</span>
