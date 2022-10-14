@@ -14,10 +14,10 @@ an issue: https://github.com/msys2/msys2.github.io/issues
 
 ## Primary Server
 
-| Name | URL | Contact | Note |
-| -    | -   | -       | -    |
-| repo.msys2.org | [HTTPS](https://repo.msys2.org/) \| [RSYNC](rsync://repo.msys2.org/builds/) | [contact](../contact.md) | primary |
-| mirror.msys2.org | [HTTPS](https://mirror.msys2.org/) | [contact](../contact.md) | geo redirection service for Tier 1 mirrors |
+| Name | URL | Note |
+| -    | -   | -    |
+| repo.msys2.org | [HTTPS](https://repo.msys2.org/) \| [RSYNC](rsync://repo.msys2.org/builds/) | primary |
+| mirror.msys2.org | [HTTPS](https://mirror.msys2.org/) | geo redirection service for Tier 1 mirrors |
 
 ## Tier 1 Mirrors
 
@@ -26,27 +26,27 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 
 **Map**: <https://mirror.msys2.org/?mirrorstats>
 
-| Name | URLs  | Contact | Note |
-| -    | -     | -       |-     |
-| mirror.umd.edu | [HTTPS](https://mirror.umd.edu/msys2/) \| [RSYNC](rsync://mirror.umd.edu/msys2/) | see website| |
-| download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) \| [RSYNC](rsync://download.nus.edu.sg/msys2/) | <download@nus.edu.sg> | |
-| ftp.acc.umu.se | [HTTPS](https://ftp.acc.umu.se/mirror/msys2.org/) \| [RSYNC](rsync://ftp.acc.umu.se/mirror/msys2.org/) | <ftp-adm@acc.umu.se> | |
-| ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> | |
+| Name | URLs  |  Note |
+| -    | -     | -     |
+| mirror.umd.edu | [HTTPS](https://mirror.umd.edu/msys2/) \| [RSYNC](rsync://mirror.umd.edu/msys2/) | [website](https://mirror.umd.edu/)|
+| download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) \| [RSYNC](rsync://download.nus.edu.sg/msys2/) | <download@nus.edu.sg> |
+| ftp.acc.umu.se | [HTTPS](https://ftp.acc.umu.se/mirror/msys2.org/) \| [RSYNC](rsync://ftp.acc.umu.se/mirror/msys2.org/) | <ftp-adm@acc.umu.se> |
+| ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> |
 | ftp.osuosl.org | [HTTPS](https://ftp.osuosl.org/pub/msys2/) \| [RSYNC](rsync://rsync.osuosl.org/msys2/) | <hosting-request@osuosl.org> | |
 | mirror.internet.asn.au | [HTTPS](https://mirror.internet.asn.au/pub/msys2/) \| [RSYNC](rsync://mirror.internet.asn.au/msys2/) |  <peering@ix.asn.au> |
-| mirror.selfnet.de | [HTTPS](https://mirror.selfnet.de/msys2/) \| [RSYNC](rsync://mirror.selfnet.de/msys2/) | 
-| mirror.ufro.cl | [HTTPS](https://mirror.ufro.cl/msys2/) \| [RSYNC](rsync://mirror.ufro.cl/msys2/) | [Jonathan Gutiérrez](mailto:jonathan.gutierrez@ufrontera.cl) |  |
-| mirror.yandex.ru | [HTTPS](https://mirror.yandex.ru/mirrors/msys2/) \| [RSYNC](rsync://mirror.yandex.ru/mirrors/msys2/) | - |  |
-| mirrors.dotsrc.org | [HTTPS](https://mirrors.dotsrc.org/msys2/) \| [RSYNC](rsync://mirrors.dotsrc.org/msys2/) | <staff@dotsrc.org> | |
+| mirror.selfnet.de | [HTTPS](https://mirror.selfnet.de/msys2/) \| [RSYNC](rsync://mirror.selfnet.de/msys2/) | [admin](https://github.com/carrotIndustries) |
+| mirror.ufro.cl | [HTTPS](https://mirror.ufro.cl/msys2/) \| [RSYNC](rsync://mirror.ufro.cl/msys2/) | [Jonathan Gutiérrez](mailto:jonathan.gutierrez@ufrontera.cl) |
+| mirror.yandex.ru | [HTTPS](https://mirror.yandex.ru/mirrors/msys2/) \| [RSYNC](rsync://mirror.yandex.ru/mirrors/msys2/) | - |
+| mirrors.dotsrc.org | [HTTPS](https://mirrors.dotsrc.org/msys2/) \| [RSYNC](rsync://mirrors.dotsrc.org/msys2/) | <staff@dotsrc.org> |
 | mirrors.tuna.tsinghua.edu.cn | [HTTPS](https://mirrors.tuna.tsinghua.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.tuna.tsinghua.edu.cn/msys2/) | - |
-| mirrors.ustc.edu.cn | [HTTPS](https://mirrors.ustc.edu.cn/msys2/) \| [RSYNC](rsync://rsync.mirrors.ustc.edu.cn/repo/msys2/) | <lug@ustc.edu.cn> | |
-| mirror.nju.edu.cn | [HTTPS](https://mirror.nju.edu.cn/msys2/) \| [RSYNC](rsync://mirror.nju.edu.cn/msys2/) | <my@yaoge123.com> | |
-| mirrors.bfsu.edu.cn | [HTTPS](https://mirrors.bfsu.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.bfsu.edu.cn/msys2/) | | |
-| repo.extreme-ix.org | [HTTPS](https://repo.extreme-ix.org/msys2/) \| [RSYNC](rsync://repo.extreme-ix.org/msys2/) | <sysadmin@x3me.net> | |
-| mirrors.hit.edu.cn | [HTTPS](https://mirrors.hit.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.hit.edu.cn/msys2/) | | |
-| mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | <mirroradmin@clarkson.edu> |  |
-| mirror2.sandyriver.net | [HTTPS](https://mirror2.sandyriver.net/pub/software/msys2/) \| [RSYNC](rsync://mirror2.sandyriver.net/pub/software/msys2/) | <support@sandyriver.net> |  |
-| quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> |  |
+| mirrors.ustc.edu.cn | [HTTPS](https://mirrors.ustc.edu.cn/msys2/) \| [RSYNC](rsync://rsync.mirrors.ustc.edu.cn/repo/msys2/) | <lug@ustc.edu.cn> |
+| mirror.nju.edu.cn | [HTTPS](https://mirror.nju.edu.cn/msys2/) \| [RSYNC](rsync://mirror.nju.edu.cn/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/155) |
+| mirrors.bfsu.edu.cn | [HTTPS](https://mirrors.bfsu.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.bfsu.edu.cn/msys2/) | [issue](https://github.com/msys2/MSYS2-packages/issues/2775) |
+| repo.extreme-ix.org | [HTTPS](https://repo.extreme-ix.org/msys2/) \| [RSYNC](rsync://repo.extreme-ix.org/msys2/) | <sysadmin@x3me.net> |
+| mirrors.hit.edu.cn | [HTTPS](https://mirrors.hit.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.hit.edu.cn/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/180) |
+| mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/185) |
+| mirror2.sandyriver.net | [HTTPS](https://mirror2.sandyriver.net/pub/software/msys2/) \| [RSYNC](rsync://mirror2.sandyriver.net/pub/software/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/196) |
+| quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> |
 
 (\*) rsync is required by [mirrorbits](https://github.com/etix/mirrorbits), which we use to auto-redirect users to a local mirror via [mirror.msys2.org](https://mirror.msys2.org)
 
@@ -54,18 +54,18 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 
 **Requirements:** Synced regularly.
 
-| Name | URLs  | Contact | Note |
-| -    | -     | -       |-     |
-| fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | <smlr@ukr.net> | (too slow for T1) |
-| ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> | |
+| Name | URLs  | Note    |
+| -    | -     | -       |
+| fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | <smlr@ukr.net> - too slow for T1 |
+| ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> |
 | mirrors.bit.edu.cn | [HTTPS](https://mirrors.bit.edu.cn/msys2/) | <webmaster@bitnp.net> |
-| mirror.jmu.edu | [HTTPS](https://mirror.jmu.edu/pub/msys2/) | <mirrormaster@jmu.edu> | |
-| mirrors.piconets.webwerks.in | [HTTPS](https://mirrors.piconets.webwerks.in/msys2-mirror/) | <mirrors@piconets.com> | |
-| mirrors.sjtug.sjtu.edu.cn | [HTTPS](https://mirrors.sjtug.sjtu.edu.cn/msys2/) | | |
-| www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) | |
-| repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | | |
-| mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> | |
-| mirror.iscas.ac.cn | [HTTPS](https://mirror.iscas.ac.cn/msys2/) | | |
+| mirror.jmu.edu | [HTTPS](https://mirror.jmu.edu/pub/msys2/) | <mirrormaster@jmu.edu> |
+| mirrors.piconets.webwerks.in | [HTTPS](https://mirrors.piconets.webwerks.in/msys2-mirror/) | <mirrors@piconets.com> |
+| mirrors.sjtug.sjtu.edu.cn | [HTTPS](https://mirrors.sjtug.sjtu.edu.cn/msys2/) | |
+| www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) |
+| repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | |
+| mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> |
+| mirror.iscas.ac.cn | [HTTPS](https://mirror.iscas.ac.cn/msys2/) | |
 
 ## Adding a New Mirror
 
