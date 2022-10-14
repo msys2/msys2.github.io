@@ -45,6 +45,8 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | repo.extreme-ix.org | [HTTPS](https://repo.extreme-ix.org/msys2/) \| [RSYNC](rsync://repo.extreme-ix.org/msys2/) | <sysadmin@x3me.net> | |
 | mirrors.hit.edu.cn | [HTTPS](https://mirrors.hit.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.hit.edu.cn/msys2/) | | |
 | mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | <mirroradmin@clarkson.edu> |  |
+| mirror2.sandyriver.net | [HTTPS](https://mirror2.sandyriver.net/pub/software/msys2/) \| [RSYNC](rsync://mirror2.sandyriver.net/pub/software/msys2/) | <support@sandyriver.net> |  |
+| quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> |  |
 
 (\*) rsync is required by [mirrorbits](https://github.com/etix/mirrorbits), which we use to auto-redirect users to a local mirror via [mirror.msys2.org](https://mirror.msys2.org)
 
@@ -60,7 +62,6 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | mirror.jmu.edu | [HTTPS](https://mirror.jmu.edu/pub/msys2/) | <mirrormaster@jmu.edu> | |
 | mirrors.piconets.webwerks.in | [HTTPS](https://mirrors.piconets.webwerks.in/msys2-mirror/) | <mirrors@piconets.com> | |
 | mirrors.sjtug.sjtu.edu.cn | [HTTPS](https://mirrors.sjtug.sjtu.edu.cn/msys2/) | | |
-| quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> | (too slow for T1) |
 | www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) | |
 | repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | | |
 | mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> | |
