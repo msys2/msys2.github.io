@@ -34,3 +34,5 @@ We try to follow the minimum hardware requirements of the Windows versions we su
 * [Windows 7 Support Dates](https://docs.microsoft.com/en-us/lifecycle/products/windows-7)
 * [Windows 8 Support Dates](https://docs.microsoft.com/en-us/lifecycle/products/windows-8)
 * [Windows 8.1 Support Dates](https://docs.microsoft.com/en-us/lifecycle/products/windows-81)
+* [Windows 10 Support Dates](https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro)
+* [Windows 11 Support Dates](https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro)
