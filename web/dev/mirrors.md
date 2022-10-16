@@ -66,6 +66,7 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | |
 | mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> |
 | mirror.iscas.ac.cn | [HTTPS](https://mirror.iscas.ac.cn/msys2/) | |
+| mirrors.tencent.com | [HTTPS](https://mirrors.tencent.com/msys2/) | <petzhou@tencent.com> |
 
 ## Adding a New Mirror
 
