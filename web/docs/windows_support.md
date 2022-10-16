@@ -1,4 +1,4 @@
-# Supported Windows Versions
+# Supported Windows Versions and Hardware
 
 We try to cater to two different types of users for our pre-built packages:
 
@@ -24,6 +24,10 @@ This includes all packages that don't depend on Cygwin.
 **Roadmap:** We will start targeting Windows 8.1 or 10 sometime during 2022, no later than 2023 (at which point even Edge will [no longer support Windows 7](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-supported-operating-systems))
 
 (*) If possible, depending on the upstream support. In some cases we can delay dropping support by staying on older versions/branches longer, or patching them, but that is not always practical or desirable.
+
+## Supported Hardware
+
+We try to follow the minimum hardware requirements of the Windows versions we support.
 
 ## Additional Resources
 
