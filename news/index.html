@@ -1604,7 +1604,7 @@
 <p>In terms of GCC/Clang compiler flags this means going from <code>-march=x86-64</code> to <code>-march=core2 -mno-ssse3</code>. This only affects 64bit packages, and only those that use features available in those newer CPUs, and only once they are updated or rebuilt.</p>
 <h3 id="2022-10-10-libssp-is-no-longer-required">2022-10-10 - libssp is no longer required</h3>
 <p>Building with <code>_FORTIFY_SOURCE</code> no longer requires explicitly linking with libssp (-lssp) and enabling stack protection no longer pulls in libssp. This brings things in line with other platforms. Thanks to <a href="https://github.com/mstorsjo">Martin Storsjö</a> for implementing this in mingw-w64. Once all our affected packages are rebuilt we will remove the libssp package from our repo.</p>
-<p><strong>2022-10-11</strong>: the libssp package has now been removed from the repo</p>
+<p>2022-10-13: We have decided to keep just the libssp DLL around for some more time to avoid breaking existing users</p>
 <h3 id="2022-09-24-changed-behavior-for-empty-env-vars">2022-09-24 - Changed behavior for empty env vars</h3>
 <p>Empty environment variables are no longer removed when starting a new non-cygwin process.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">FOO</span><span class="o">=</span> python -c <span class="s2">&quot;import os; print(&#39;FOO&#39; in os.environ)&quot;</span> <span class="c1"># Old</span>
