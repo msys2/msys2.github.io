@@ -8,7 +8,7 @@ summary: Important events happening.
 
 As a first step of phasing out support for Windows 7, we're raising the minimum hardware requirements to match Windows 8.1, which roughly equals Intel Core 2 / AMD Phenom, so anything after 2006/7 is fine.
 
-In terms of GCC/Clang compiler flags this means going from `-march=x86-64` to `-march=core2 -mno-ssse3`. This only affects 64bit packages, and only those that use features available in those newer CPUs, and only once they are updated or rebuilt.
+In terms of GCC/Clang compiler flags this means going from `-march=x86-64` to `-march=core2 -mno-ssse3`. This only affects 64bit packages, and only those that use features only available in those newer CPUs, and only once they are updated or rebuilt.
 
 ### 2022-10-10 - libssp is no longer required
 
