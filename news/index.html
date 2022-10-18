@@ -1601,7 +1601,7 @@
 <h1 id="news">News</h1>
 <h3 id="2022-10-18-new-minimum-hardware-requirements-cpus-from-20067">2022-10-18 - New minimum hardware requirements (CPUs from ~2006/7+)</h3>
 <p>As a first step of phasing out support for Windows 7, we're raising the minimum hardware requirements to match Windows 8.1, which roughly equals Intel Core 2 / AMD Phenom, so anything after 2006/7 is fine.</p>
-<p>In terms of GCC/Clang compiler flags this means going from <code>-march=x86-64</code> to <code>-march=core2 -mno-ssse3</code>. This only affects 64bit packages, and only those that use features available in those newer CPUs, and only once they are updated or rebuilt.</p>
+<p>In terms of GCC/Clang compiler flags this means going from <code>-march=x86-64</code> to <code>-march=core2 -mno-ssse3</code>. This only affects 64bit packages, and only those that use features only available in those newer CPUs, and only once they are updated or rebuilt.</p>
 <h3 id="2022-10-10-libssp-is-no-longer-required">2022-10-10 - libssp is no longer required</h3>
 <p>Building with <code>_FORTIFY_SOURCE</code> no longer requires explicitly linking with libssp (-lssp) and enabling stack protection no longer pulls in libssp. This brings things in line with other platforms. Thanks to <a href="https://github.com/mstorsjo">Martin Storsjö</a> for implementing this in mingw-w64. Once all our affected packages are rebuilt we will remove the libssp package from our repo.</p>
 <p>2022-10-13: We have decided to keep just the libssp DLL around for some more time to avoid breaking existing users</p>
