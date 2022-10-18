@@ -14,7 +14,7 @@ In terms of GCC/Clang compiler flags this means going from `-march=x86-64` to `-
 
 Building with `_FORTIFY_SOURCE` no longer requires explicitly linking with libssp (-lssp) and enabling stack protection no longer pulls in libssp. This brings things in line with other platforms. Thanks to [Martin Storsjö](https://github.com/mstorsjo) for implementing this in mingw-w64. Once all our affected packages are rebuilt we will remove the libssp package from our repo.
 
-**2022-10-11**: the libssp package has now been removed from the repo
+2022-10-13: We have decided to keep just the libssp DLL around for some more time to avoid breaking existing users
 
 ### 2022-09-24 - Changed behavior for empty env vars
 
