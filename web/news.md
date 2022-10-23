@@ -4,6 +4,10 @@ summary: Important events happening.
 ---
 # News
 
+### 2022-10-23 - mingw packages now built with `-D_FORTIFY_SOURCE=2` and `-fstack-protector-strong`
+
+Our mingw packages will be built with `-D_FORTIFY_SOURCE=2` and `-fstack-protector-strong` from now on.
+
 ### 2022-10-18 - New minimum hardware requirements (CPUs from ~2006/7+)
 
 As a first step of phasing out support for Windows 7, we're raising the minimum hardware requirements to match Windows 8.1, which roughly equals Intel Core 2 / AMD Phenom, so anything after 2006/7 is fine.
