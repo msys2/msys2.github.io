@@ -290,6 +290,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2022-10-23-mingw-packages-now-built-with-d_fortify_source2-and-fstack-protector-strong" class="md-nav__link">
+    2022-10-23 - mingw packages now built with -D_FORTIFY_SOURCE=2 and -fstack-protector-strong
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2022-10-18-new-minimum-hardware-requirements-cpus-from-20067" class="md-nav__link">
     2022-10-18 - New minimum hardware requirements (CPUs from ~2006/7+)
   </a>
@@ -1390,6 +1397,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2022-10-23-mingw-packages-now-built-with-d_fortify_source2-and-fstack-protector-strong" class="md-nav__link">
+    2022-10-23 - mingw packages now built with -D_FORTIFY_SOURCE=2 and -fstack-protector-strong
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2022-10-18-new-minimum-hardware-requirements-cpus-from-20067" class="md-nav__link">
     2022-10-18 - New minimum hardware requirements (CPUs from ~2006/7+)
   </a>
@@ -1599,6 +1613,8 @@
 
 
 <h1 id="news">News</h1>
+<h3 id="2022-10-23-mingw-packages-now-built-with-d_fortify_source2-and-fstack-protector-strong">2022-10-23 - mingw packages now built with <code>-D_FORTIFY_SOURCE=2</code> and <code>-fstack-protector-strong</code></h3>
+<p>Our mingw packages will be built with <code>-D_FORTIFY_SOURCE=2</code> and <code>-fstack-protector-strong</code> from now on.</p>
 <h3 id="2022-10-18-new-minimum-hardware-requirements-cpus-from-20067">2022-10-18 - New minimum hardware requirements (CPUs from ~2006/7+)</h3>
 <p>As a first step of phasing out support for Windows 7, we're raising the minimum hardware requirements to match Windows 8.1, which roughly equals Intel Core 2 / AMD Phenom, so anything after 2006/7 is fine.</p>
 <p>In terms of GCC/Clang compiler flags this means going from <code>-march=x86-64</code> to <code>-march=nocona -msahf</code>. This only affects 64bit packages, and only those that use features only available in those newer CPUs, and only once they are updated or rebuilt.</p>
