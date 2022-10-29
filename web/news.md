@@ -6,7 +6,7 @@ summary: Important events happening.
 
 ### 2022-10-29 - Changing the default environment from MINGW64 to UCRT64
 
-About 1.5 years ago we started adding a new variant of the MINGW64 environment called [UCRT64](./docs/environments), which uses the Universal CRT instead of
+About 1.5 years ago we started adding a new variant of the MINGW64 environment called [UCRT64](./docs/environments.md), which uses the Universal CRT instead of
 the old msvcrt.dll. Now that all our packages are available in this new environment and a very large percentage of our users (~97%) are on a system that includes UCRT, we recommend it as the default environment instead of MINGW64.
 
 The MINGW32/64 environments will continue to exist and there are no plans to remove them, but we will focus our attention more on UCRT64 and the other UCRT-using environments such as CLANG64 and CLANGARM64.
