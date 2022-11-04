@@ -762,6 +762,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#release-signing-keys" class="md-nav__link">
+    Release Signing Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Signing Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-when-a-new-release-is-signed-with-a-new-key" class="md-nav__link">
+    What to do when a new release is signed with a new key?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1218,6 +1238,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#release-signing-keys" class="md-nav__link">
+    Release Signing Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Signing Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-when-a-new-release-is-signed-with-a-new-key" class="md-nav__link">
+    What to do when a new release is signed with a new key?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1245,6 +1285,10 @@
 <li>Use <code>git apply</code> to apply a git patch without creating a commit</li>
 <li>In case of a git checkout use <code>git cherry-pick --no-commit</code> to backport a commit without creating a commit.</li>
 </ul>
+<h2 id="release-signing-keys">Release Signing Keys</h2>
+<h3 id="what-to-do-when-a-new-release-is-signed-with-a-new-key">What to do when a new release is signed with a new key?</h3>
+<p>Visit the upstream website or other official communication channels and verify that the new key is an official release signing key.</p>
+<p>While at it you can also verify that <code>validpgpkeys</code> does not contain inactive signing keys. If a key in <code>validpgpkeys</code> seems unused, either because the person upstream switched to a new key, or if the key isn't listed upstream anymore please remove it from <code>validpgpkeys</code>.</p>
 
 
 
