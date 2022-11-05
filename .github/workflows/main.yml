@@ -13,19 +13,30 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Python
+      - name: Setup Python (pip)
         uses: actions/setup-python@v4
         with:
           python-version: '3.8'
           architecture: 'x64'
           cache: 'pip'
+          cache-dependency-path: .github/workflows/main.yml
+
+      - name: Install poetry
+        run: |
+          python3 -m pip install --upgrade poetry==1.2.2
+
+      - name: Setup Python (poetry)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+          cache: 'poetry'
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip wheel
-          python3 -m pip install -r ./requirements.txt
+          poetry install
 
-      - run: mkdocs build
+      - run: poetry run mkdocs build
 
       - name: Upload Results
         uses: actions/upload-artifact@v3
