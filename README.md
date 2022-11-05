@@ -40,10 +40,3 @@ For larger changes:
 * Access http://127.0.0.1:8000 - any changes to the sources should be
   immediately visible in your browser
 * Open a PR with your changes or just push them if you have commit rights
-
-For dependency changes:
-
-* `poetry shell`
-* `poetry install`
-* `...`
-* `poetry export --without-hashes -o requirements.txt`
