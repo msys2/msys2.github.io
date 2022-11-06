@@ -113,5 +113,7 @@ nav:
         - wiki/JIT-Debugging.md
         - wiki/arm64.md
     - 'get-involved.md'
+    - 'license.md'
     - 'contact.md'
     - 'codeofconduct.md'
+
