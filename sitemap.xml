@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.msys2.org/license/</loc>
+         <lastmod>2022-11-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.msys2.org/news/</loc>
          <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
