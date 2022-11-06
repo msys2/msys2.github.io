@@ -4,6 +4,8 @@ summary: Important events happening.
 ---
 # News
 
+This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://nitter.net/msys2org), including some not-so-important things :)
+
 ### 2022-10-29 - Changing the default environment from MINGW64 to UCRT64
 
 About 1.5 years ago we started adding a new variant of the MINGW64 environment called [UCRT64](./docs/environments.md), which uses the Universal CRT instead of
