@@ -127,6 +127,8 @@ body {
 
 .md-nav__title, .md-header__title {
     font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 .md-typeset h1 {
