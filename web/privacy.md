@@ -14,7 +14,7 @@ In the default configuration pacman will connect to "mirror.msys2.org" when upda
 
 ## Logging
 
-We log the above listed information including the timestamp for every request to "msys2.org" and keep it for a few days for the following reasons:
+We log the above listed information for every request to "msys2.org", including a timestamp, and keep it for up to two weeks for the following reasons:
 
 * Debugging and abuse detection
 * Creation and publication of anonymised usage reports:
