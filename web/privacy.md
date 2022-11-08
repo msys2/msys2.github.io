@@ -19,7 +19,7 @@ We log the above listed information for every request to "msys2.org", including 
 * Debugging and abuse detection
 * Creation and publication of anonymised usage reports:
     * Overall popularity of requested packages and package types, based on the IP and request path
-    * Distribution of Windows/pacman versions used, based on the user agent
+    * Distribution of Windows/pacman versions used, based on the IP and the user agent
     * Distribution of cloud/non-cloud users, based on the IP
 
 For what mirrors log, store or process see their respective websites.
