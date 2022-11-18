@@ -94,7 +94,7 @@ MSYS2 and what for.
 
 Our main server is sponsored by [jsDelivr](https://www.jsdelivr.com)
 
-[![jsdelivr.com](sponsors/jsdelivr.svg){: width=250px}](https://www.jsdelivr.com)
+[![jsdelivr.com](sponsors/jsdelivr.svg#only-light){: width=250px}![jsdelivr.com](sponsors/jsdelivr-white.svg#only-dark){: width=250px}](https://www.jsdelivr.com)
 
 [ExtremeIX](https://extreme-ix.org/) sponsors our mirror in India
 
@@ -102,7 +102,7 @@ Our main server is sponsored by [jsDelivr](https://www.jsdelivr.com)
 
 [Microsoft Open Source Programs Office](https://opensource.microsoft.com/) sponsors us financially via their [FOSS Fund](https://github.com/microsoft/foss-fund#2022)
 
-[![opensource.microsoft.com](sponsors/microsoft.svg){: width=250px}](https://opensource.microsoft.com/)
+[![opensource.microsoft.com](sponsors/microsoft.svg#only-light){: width=250px}![opensource.microsoft.com](sponsors/microsoft-white.svg#only-dark){: width=250px}](https://opensource.microsoft.com/)
 
 Various organizations provide us with mirrors all around the world, see [our mirror list](dev/mirrors.md) for details.
 
@@ -125,7 +125,7 @@ Various organizations provide us with mirrors all around the world, see [our mir
 
 You can donate to the project via [GitHub Sponsors](https://github.com/sponsors/msys2):
 
-[![](./donate/github.png){: width=150px}](https://github.com/sponsors/msys2)
+[![](./donate/github.png#only-light){: width=150px}![](./donate/github-white.png#only-dark){: width=150px}](https://github.com/sponsors/msys2)
 
 or via [Open Collective](https://opencollective.com/msys2):
 
