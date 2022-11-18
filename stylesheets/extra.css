@@ -1,5 +1,6 @@
-.md-typeset ol li, .md-typeset ul li {
-    margin-bottom: 0.1em;
+:root {
+    --md-text-font:"Roboto";
+    --md-code-font:"Roboto Mono";
 }
 
 :root {
@@ -7,14 +8,32 @@
     --msys2-dark-bg: #333;
     --msys2-text: #444;
     --msys2-dark-text: #303030;
+    --msys2-background: #fafafa;
+    --msys2-table-header-background: #ededed;
+    --msys2-code-background: #fff;
+    --msys2-code-border-color: #dfdfdf;
+    --msys2-invert-filter: none;
+}
 
-    --md-text-font:"Roboto";
-    --md-code-font:"Roboto Mono";
+[data-md-color-scheme=slate] {
+    --msys2-red: #d25059;
+    --msys2-dark-bg: #333;
+    --msys2-text: initial;
+    --msys2-dark-text: initial;
+    --msys2-background: var(--md-default-bg-color);
+    --msys2-table-header-background: rgb(39, 39, 48);
+    --msys2-code-background: #333;
+    --msys2-code-border-color: #525252;
+    --msys2-invert-filter: invert(100%);
+}
+
+.md-typeset ol li, .md-typeset ul li {
+    margin-bottom: 0.1em;
 }
 
 .md-typeset pre > code {
-    background-color: #fff;
-    border: 1px solid #dfdfdf;
+    background-color: var(--msys2-code-background);
+    border: 1px solid var(--msys2-code-border-color);
 }
 
 .md-typeset header h2 {
@@ -32,8 +51,8 @@
 }
 
 .md-typeset code {
-    background-color: #fff;
-    border: 1px solid #dfdfdf;
+    background-color: var(--msys2-code-background);
+    border: 1px solid var(--msys2-code-border-color);
     padding: 0.05em 0.25em 0.075em;
     box-shadow: none;
     word-break: normal;
@@ -71,6 +90,7 @@ a.button {
     -webkit-box-shadow: 10px 10px 5px #888;
     -moz-box-shadow: 10px 10px 5px #888;
     box-shadow: 0px 1px 5px #e8e8e8;
+    filter: var(--msys2-invert-filter); /* hacky.. */
 }
 
 a.button:hover {
@@ -82,11 +102,11 @@ a.button:hover {
 }
 
 .md-typeset table:not([class]) {
-    background-color: #fafafa;
+    background-color: var(--msys2-background);
 }
 
 .md-typeset table thead {
-    background-color: #ededed;
+    background-color: var(--msys2-table-header-background);
 }
 
 .md-typeset table tr th {
@@ -107,14 +127,10 @@ a.button:hover {
     html .md-nav--primary .md-nav__title[for="__drawer"] {
         background-color: var(--msys2-dark-bg) !important;
     }
-
-    .md-nav--primary .md-nav__title {
-        background-color: #f5f5f5;
-    }
 }
 
 body {
-    background-color: #fafafa;
+    background-color: var(--msys2-background);
 }
 
 .md-content {
@@ -170,4 +186,5 @@ body {
     margin-left: 0.2em;
     color: transparent;
     flex: 1;
+    filter: var(--msys2-invert-filter);
 }
