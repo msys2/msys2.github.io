@@ -6,7 +6,7 @@
 :root {
     --msys2-red: #c0000d;
     --msys2-dark-bg: #333;
-    --msys2-text: #444;
+    --msys2-text: #3a3a3a;
     --msys2-dark-text: #303030;
     --msys2-background: #fafafa;
     --msys2-table-header-background: #ededed;
@@ -17,10 +17,10 @@
 
 [data-md-color-scheme=slate] {
     --msys2-red: #d25059;
-    --msys2-dark-bg: #333;
-    --msys2-text: initial;
+    --msys2-dark-bg: #2a2a2a;
+    --msys2-text: #fafafa;
     --msys2-dark-text: initial;
-    --msys2-background: var(--md-default-bg-color);
+    --msys2-background: #2F3136;
     --msys2-table-header-background: rgb(39, 39, 48);
     --msys2-code-background: #333;
     --msys2-code-border-color: #525252;
@@ -50,6 +50,10 @@
     color: var(--msys2-red) !important;
 }
 
+.md-nav__link {
+    color: var(--msys2-text);
+}
+
 .md-typeset code {
     background-color: var(--msys2-code-background);
     border: 1px solid var(--msys2-code-border-color);
@@ -61,14 +65,13 @@
 .md-typeset h2 {
     font-size: 1rem;
     color: var(--msys2-red);
+    font-weight: normal;
+    margin-top: 1.2rem;
 }
 
 .md-typeset h3 {
     font-size: 0.85rem;
-    color: var(--msys2-dark-text)
-}
-
-.md-typeset h3, .md-typeset h2 {
+    color: var(--msys2-dark-text);
     font-weight: normal;
     margin-top: 1.2rem;
 }
@@ -143,8 +146,7 @@ body {
 
 .md-nav__title, .md-header__title {
     font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: none !important;
-    box-shadow: none !important;
+    --md-default-bg-color: var(--msys2-background);
 }
 
 .md-typeset h1 {
