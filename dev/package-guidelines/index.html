@@ -804,6 +804,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python-packages" class="md-nav__link">
+    Python Packages
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1310,6 +1317,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python-packages" class="md-nav__link">
+    Python Packages
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1341,6 +1355,17 @@
 <h3 id="what-to-do-when-a-new-release-is-signed-with-a-new-key">What to do when a new release is signed with a new key?</h3>
 <p>Visit the upstream website or other official communication channels and verify that the new key is an official release signing key.</p>
 <p>While at it you can also verify that <code>validpgpkeys</code> does not contain inactive signing keys. If a key in <code>validpgpkeys</code> seems unused, either because the person upstream switched to a new key, or if the key isn't listed upstream anymore please remove it from <code>validpgpkeys</code>.</p>
+<h2 id="python-packages">Python Packages</h2>
+<p>If possible we include ".pyc" and ".opt-1.pyc" for all .py files in all packages because:</p>
+<ul>
+<li>In case the package directory isn't writable to speed up the Python startup</li>
+<li>To avoid file conflicts when a package starts do create their own .pyc files while for the older version the user's Python created them at runtime.</li>
+</ul>
+<p>.pyc files contain the absolute path of their respective Python source file for things like stack traces. Since our packages are relocatable there is no "right" path to store, so we just use the "unix" path, so something like <code>/ucrt64/lib/python3.10/site-packages/foo.py</code>.</p>
+<p>To create such .pyc files in a PKGBUILD for packages which don't do it themselves you can use the following snippet:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">MSYS2_ARG_CONV_EXCL</span><span class="o">=</span><span class="s2">&quot;-p&quot;</span> <span class="se">\</span>
+  python -m compileall -o <span class="m">0</span> -o <span class="m">1</span> -q -s<span class="s2">&quot;</span><span class="si">${</span><span class="nv">pkgdir</span><span class="si">}</span><span class="s2">&quot;</span> -p<span class="s2">&quot;/&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">pkgdir</span><span class="si">}${</span><span class="nv">MINGW_PREFIX</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
 
 
 
