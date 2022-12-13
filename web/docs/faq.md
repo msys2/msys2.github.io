@@ -54,3 +54,16 @@ The certificates can be removed again by deleting the .pem/.cer files in `/etc/p
 1.75 years after a package version leaves the pacman package database, it is removed from the server. This means that if you do not update the pacman DB for more than 1.75 years, the installation of packages may fail until you update.
 
 External projects that rely on specific package versions on the repo server are advised to mirror those packages if the above retention policy does not meet their needs.
+
+### What does "magic number mismatch detected" mean?
+
+msys2 is a fork of cygwin and uses a pinned memory address to allow coordination between different executables running in the same environment. This memory format is determined by a "magic number" header at the top of the pinned memory address to ensure that corrupted memory is not read. While having multiple copies of the msys2 dll running at the same time is not necessarily a problem, what is a problem is having multiple versions that write different versions to the same space (or if that pinned memory gets rebased and accessed in a wrong way).
+
+For this reason, the following scenarios can cause a address memory mismatch:
+
+1. Address randomization being turned on for the initial program or dll
+2. A program loading multiple versions of msys2 with mismatched magic numbers
+3. A program loading multiple versions of msys2 and forcing the dll to be address rebased
+4. A separate program loading msys2 in
+
+Since a lot of command line tools pack msys2 with them to provide a nice operating scenario then you may need to make sure that these are aligned correctly. For this reason, make sure to be using compatible versions of msys2 with other components
