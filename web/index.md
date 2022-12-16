@@ -35,13 +35,13 @@ MSYS2 and what for.
 
 ## Installation
 
-1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2022-10-28/msys2-x86_64-20221028.exe" class="button">msys2-x86_64-20221028.exe</a>
+1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2022-12-16/msys2-x86_64-20221216.exe" class="button">msys2-x86_64-20221216.exe</a>
 
-    <span style="opacity: 0.6; word-wrap: break-word;">Verify with SHA256 checksum `9ab223bee2610196ae8e9c9e0a2951a043cac962692e4118ad4d1e411506cd04`
-    or [GPG signature](https://github.com/msys2/msys2-installer/releases/download/2022-10-28/msys2-x86_64-20221028.exe.sig)
+    <span style="opacity: 0.6; word-wrap: break-word;">Verify with SHA256 checksum `de5b410dd0813e5904aeed082bfc3d9a8167e0f93b296f52d80bee2dfec9f13d`
+    or [GPG signature](https://github.com/msys2/msys2-installer/releases/download/2022-12-16/msys2-x86_64-20221216.exe.sig)
     by [0xf7a49b0ec](http://keyserver.ubuntu.com/pks/lookup?search=0x0ebf782c5d53f7e5fb02a66746bd761f7a49b0ec&fingerprint=on&op=vindex).</span>
 
-2. Run the installer. MSYS2 requires 64 bit Windows 7 or newer.
+2. Run the installer. MSYS2 requires 64 bit Windows 8.1 or newer.
 
 3. Enter your desired **Installation Folder** (short ASCII-only path on a NTFS volume, no accents, no spaces, no symlinks, no subst or network drives, no FAT).
 
