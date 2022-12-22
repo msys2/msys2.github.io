@@ -4,7 +4,7 @@ summary: Important events happening.
 ---
 # News
 
-This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://nitter.net/msys2org) and [Fosstodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
+This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://twitter.com/msys2org) and [Fosstodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
 ### 2022-10-29 - Changing the default environment from MINGW64 to UCRT64
 
