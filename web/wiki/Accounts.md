@@ -9,6 +9,7 @@ summary: Who owns what.
 - GitHub: msys2 org with multiple owners, msys2-contrib org with multiple owners
 - SourceForge: msys2 project with admins Alexey, Elieux, Lazka
 - server: sponsored by JSDelivr, root access given to Elieux and Lazka
+- file backup server: Hetzner Storage Box, managed by Lazka
 - OpenCollective: msys2 project with Lazka and Elieux as admins
 - Discord: https://discord.gg/jPQdRdDcT9 owned by Lazka, admins Lazka and Elieux
 - Gitter: msys2/msys2 with admin access through GitHub
