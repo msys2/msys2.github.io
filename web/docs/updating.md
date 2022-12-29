@@ -28,7 +28,9 @@ In some cases, certain core packages will get updated and pacman will prompt you
 
 After confirming you need to start a new terminal and run the update again (`pacman -Suy`) to update the remaining non-core packages.
 
-## Pruning the package cache
+## Optional Maintenance Tasks
+
+### Pruning the package cache
 
 `pacman` keeps all packages it downloads under `/var/cache/pacman/pkg/`. To free up some space by removing old packages run:
 
@@ -37,7 +39,7 @@ $ paccache -r
 ==> finished: 5 packages removed (disk space saved: 49.05 MiB)
 ```
 
-## Managing configuration file backups
+### Managing configuration file backups
 
 When you have modified a global configuration file of a package (under `/etc` for example) and the package is about to be removed or updated then pacman will avoid deleting your changes. The `pacdiff` tool can then be used to merge your configuration file with the default state again.
 
@@ -68,3 +70,20 @@ $ pacdiff
 ==> pacsave file found for /etc/myconfig.conf
 :: (V)iew, (M)erge, (S)kip, (R)emove pacsave, (O)verwrite with pacsave, (Q)uit: [v/m/s/r/o/q]
 ```
+
+
+## Potential Issues
+
+If you haven't updated MSYS2 for more then half a year then you could end up in a state where an update would require a new or updated package maintainer's signature key but you haven't gotten it through an update yet. This will lead to pacman failing to verify the package or database signatures:
+
+```console
+$ pacman -S lftp
+[...]
+error: lftp: signature from "Some MSYS2 Maintainer <some.msys2.maintainer@gmail.com>" is unknown trust
+:: File /var/cache/pacman/pkg/lftp-4.9.2-3-x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).
+Do you want to delete it? [Y/n]
+```
+
+To get back to a working state you can run `pacman-key --refresh-keys`, which updates the package maintainer keys you already have installed.
+
+In case that doesn't help because a new key is required, you can do a partial upgrade of the keyring to get the missing key, followed by a full upgrade: `pacman -Sy msys2-keyring; pacman -Suy`
