@@ -414,15 +414,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#optional-maintenance-tasks" class="md-nav__link">
+    Optional Maintenance Tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Maintenance Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#pruning-the-package-cache" class="md-nav__link">
     Pruning the package cache
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#managing-configuration-file-backups" class="md-nav__link">
     Managing configuration file backups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potential-issues" class="md-nav__link">
+    Potential Issues
   </a>
   
 </li>
@@ -1271,15 +1291,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#optional-maintenance-tasks" class="md-nav__link">
+    Optional Maintenance Tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Maintenance Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#pruning-the-package-cache" class="md-nav__link">
     Pruning the package cache
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#managing-configuration-file-backups" class="md-nav__link">
     Managing configuration file backups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potential-issues" class="md-nav__link">
+    Potential Issues
   </a>
   
 </li>
@@ -1325,12 +1365,13 @@
 <span class="go">   Confirm to proceed [Y/n]</span>
 </code></pre></div>
 <p>After confirming you need to start a new terminal and run the update again (<code>pacman -Suy</code>) to update the remaining non-core packages.</p>
-<h2 id="pruning-the-package-cache">Pruning the package cache</h2>
+<h2 id="optional-maintenance-tasks">Optional Maintenance Tasks</h2>
+<h3 id="pruning-the-package-cache">Pruning the package cache</h3>
 <p><code>pacman</code> keeps all packages it downloads under <code>/var/cache/pacman/pkg/</code>. To free up some space by removing old packages run:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>paccache -r
 <span class="go">==&gt; finished: 5 packages removed (disk space saved: 49.05 MiB)</span>
 </code></pre></div>
-<h2 id="managing-configuration-file-backups">Managing configuration file backups</h2>
+<h3 id="managing-configuration-file-backups">Managing configuration file backups</h3>
 <p>When you have modified a global configuration file of a package (under <code>/etc</code> for example) and the package is about to be removed or updated then pacman will avoid deleting your changes. The <code>pacdiff</code> tool can then be used to merge your configuration file with the default state again.</p>
 <p>1) In case a new package version with some changed configuration gets installed, which would discard your changes, pacman will leave the existing file alone and create a <code>&lt;filename&gt;.pacnew</code> with the new configuration instead:</p>
 <div class="highlight"><pre><span></span><code><span class="go">warning: /etc/myconfig.conf installed as /etc/pacman.d/myconfig.conf.pacnew</span>
@@ -1348,6 +1389,16 @@
 <span class="go">==&gt; pacsave file found for /etc/myconfig.conf</span>
 <span class="go">:: (V)iew, (M)erge, (S)kip, (R)emove pacsave, (O)verwrite with pacsave, (Q)uit: [v/m/s/r/o/q]</span>
 </code></pre></div>
+<h2 id="potential-issues">Potential Issues</h2>
+<p>If you haven't updated MSYS2 for more then half a year then you could end up in a state where an update would require a new or updated package maintainer's signature key but you haven't gotten it through an update yet. This will lead to pacman failing to verify the package or database signatures:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman -S lftp
+<span class="go">[...]</span>
+<span class="go">error: lftp: signature from &quot;Some MSYS2 Maintainer &lt;some.msys2.maintainer@gmail.com&gt;&quot; is unknown trust</span>
+<span class="go">:: File /var/cache/pacman/pkg/lftp-4.9.2-3-x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).</span>
+<span class="go">Do you want to delete it? [Y/n]</span>
+</code></pre></div>
+<p>To get back to a working state you can run <code>pacman-key --refresh-keys</code>, which updates the package maintainer keys you already have installed.</p>
+<p>In case that doesn't help because a new key is required, you can do a partial upgrade of the keyring to get the missing key, followed by a full upgrade: <code>pacman -Sy msys2-keyring; pacman -Suy</code></p>
 
 
 
