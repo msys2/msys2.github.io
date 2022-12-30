@@ -10,7 +10,6 @@ Installation:
 
 * [Download/Install MSYS2 as usual](../index.md#installation)
 * Execute `clangarm64.exe` in the MSYS2 install directory
-* Uncomment the `clangarm64` config in `/etc/pacman.conf`
 * Run `pacman -Suy`
 * Install clang for example: `pacman -S mingw-w64-clang-aarch64-clang`
 
