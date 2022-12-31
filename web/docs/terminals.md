@@ -79,3 +79,14 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
 }
 ```
 
+* The `commandline` in that profile will launch bash shell by default. To change
+  default login shell, install the corresponding package for that shell and append
+  `-shell` option with the command line. For example,
+  - To set `fish` shell as default:
+    ```
+    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell fish"
+    ```
+  - To set `zsh` shell as default:
+    ```
+    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh"
+    ```
