@@ -1366,6 +1366,17 @@ and WSL can also be extended to support a MSYS2 shell.</p>
 <span class="w">  </span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
+<ul>
+<li>The <code>commandline</code> in that profile will launch bash shell by default. To change
+  default login shell, install the corresponding package for that shell and append
+  <code>-shell</code> option with the command line. For example,</li>
+<li>To set <code>fish</code> shell as default:
+    <div class="highlight"><pre><span></span><code>&quot;commandline&quot;: &quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell fish&quot;
+</code></pre></div></li>
+<li>To set <code>zsh</code> shell as default:
+    <div class="highlight"><pre><span></span><code>&quot;commandline&quot;: &quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh&quot;
+</code></pre></div></li>
+</ul>
 
 
 
