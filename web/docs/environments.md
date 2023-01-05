@@ -17,7 +17,7 @@ The **MSYS** environment contains the unix-like/cygwin based tools, lives under
 inherit from the **MSYS** environment and add various things on top of it.
 
 For example, in the **UCRT64** environment the `$PATH` variable starts with
-`/ucrt64/bin:/usr/bin` so you get all mingw64 based tools as well as all msys
+`/ucrt64/bin:/usr/bin` so you get all ucrt64 based tools as well as all msys
 tools.
 
 ## Overview
