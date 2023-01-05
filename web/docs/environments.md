@@ -13,7 +13,7 @@ mainly environment variables, default compilers/linkers, architecture,
 system libraries used etc. If you are unsure, go with **UCRT64**.
 
 The **MSYS** environment contains the unix-like/cygwin based tools, lives under
-`/usr` and are special in that it is always active. All the other environments
+`/usr` and is special in that it is always active. All the other environments
 inherit from the **MSYS** environment and add various things on top of it.
 
 For example, in the **UCRT64** environment the `$PATH` variable starts with
