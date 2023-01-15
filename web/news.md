@@ -6,6 +6,10 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://twitter.com/msys2org) and [Fosstodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-01-15 - Dropping support for Windows 7 and 8.0
+
+As announced last April we will no longer support Windows 7/8.0 from now on.
+
 ### 2023-01-15 - OpenSSL updated from 1.1.1 to 3.0.x
 
 With v3.0 being out for more than a year and the EOL of v1.1.1 approaching this year we have moved both cygwin and mingw builds to v3.0.x now. If there are any issues let us know.
