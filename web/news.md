@@ -8,7 +8,7 @@ This page lists important changes or issues affecting MSYS2 users. We also post 
 
 ### 2023-01-15 - Dropping support for Windows 7 and 8.0
 
-As announced last April we will no longer support Windows 7/8.0 from now on.
+As announced last April we will no longer support Windows 7 / 8.0 from now on.
 
 ### 2023-01-15 - OpenSSL updated from 1.1.1 to 3.0.x
 
