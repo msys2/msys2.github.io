@@ -5,7 +5,7 @@ summary: Who owns what.
 
 - domains: msys2.org, msys2.net, msys2.com registered through Hover to Elieux, same for mingw-w64.org and mingw-w64.net
 - Twitter: @msys2org registered to Lazka
-- Fosstodon: @msys2org registered to Lazka
+- Mastodon: @msys2org@fosstodon.org registered to Lazka
 - GitHub: msys2 org with multiple owners, msys2-contrib org with multiple owners
 - SourceForge: msys2 project with admins Alexey, Elieux, Lazka
 - server: sponsored by JSDelivr, root access given to Elieux and Lazka
