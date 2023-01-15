@@ -6,6 +6,16 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://twitter.com/msys2org) and [Fosstodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2022-12-26 - Default `_WIN32_WINNT` bumped to Windows 8.1 for UCRT environments
+
+We have bumped the default `_WIN32_WINNT` version defined in mingw-w64 from Windows 7 to Windows 8.1 for non-arm UCRT environments (CLANG32, CLANG64, UCRT64). For projects that don't define their own `_WIN32_WINNT` and conditionally include features depending on the minimum supported Windows version this might mean that new builds will start depending on Windows 8.1. MINGW32/64 will default to Windows 7 for a bit longer to smooth over the transition.
+
+This is part of our goal to phase out Windows 7 support and target newer Windows versions by default.
+
+### 2022-12-16 - Dropping Windows 7 support for the MSYS2 installer
+
+The latest release of the MSYS2 installer (v2022-12-16) has dropped support for Windows 7. It will show an error message and abort if started on Windows 7.
+
 ### 2022-10-29 - Changing the default environment from MINGW64 to UCRT64
 
 About 1.5 years ago we started adding a new variant of the MINGW64 environment called [UCRT64](./docs/environments.md), which uses the Universal CRT instead of
