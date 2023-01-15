@@ -14,7 +14,14 @@ Note that the license of OpenSSL has changed to Apache-2.0 starting with v3.
 
 ### 2023-01-05 - Dropping 32bit support for Qt 6
 
-With upstream Qt no longer providing 32bit builds for Windows, Qt 6 requiring Windows 10, and very few users that need 32bit + Windows 10, we decided to remove 32bit builds for Qt 6 and their dependencies.
+Qt project dropped support for Windows version older than Windows 10 from Qt 6,
+see this official [blog post](https://www.qt.io/blog/qt6-development-hosts-and-targets).
+It was also added that we will not have 32 bit x86 Windows support available.
+With this above condition, we too have very few users who are using 32 bit x86
+Windows 10. So, we decided to remove 32 bit builds for Qt 6 and their dependencies.
+The remaining 32 bit x86 packages which depends on Qt will be linked with Qt 5.
+With this, our Qt 6 packages will be available for all official
+[Windows platforms](https://doc.qt.io/qt-6/windows.html).
 
 ### 2022-12-26 - Default `_WIN32_WINNT` bumped to Windows 8.1 for UCRT environments
 
