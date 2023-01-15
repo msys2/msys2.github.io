@@ -6,6 +6,12 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://twitter.com/msys2org) and [Fosstodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-01-15 - OpenSSL updated from 1.1.1 to 3.0.x
+
+With v3.0 being out for more than a year and the EOL of v1.1.1 approaching this year we have moved both cygwin and mingw builds to v3.0.x now. If there are any issues let us know.
+
+Note that the license of OpenSSL has changed to Apache-2.0 starting with v3.
+
 ### 2023-01-05 - Dropping 32bit support for Qt 6
 
 With upstream Qt no longer providing 32bit builds for Windows, Qt 6 requiring Windows 10, and very few users that need 32bit + Windows 10, we decided to remove 32bit builds for Qt 6 and their dependencies.
