@@ -6,6 +6,10 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [twitter](https://twitter.com/msys2org) and [Fosstodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-01-05 - Dropping 32bit support for Qt 6
+
+With upstream Qt no longer providing 32bit builds for Windows, Qt 6 requiring Windows 10, and very few users that need 32bit + Windows 10, we decided to remove 32bit builds for Qt 6 and their dependencies.
+
 ### 2022-12-26 - Default `_WIN32_WINNT` bumped to Windows 8.1 for UCRT environments
 
 We have bumped the default `_WIN32_WINNT` version defined in mingw-w64 from Windows 7 to Windows 8.1 for non-arm UCRT environments (CLANG32, CLANG64, UCRT64). For projects that don't define their own `_WIN32_WINNT` and conditionally include features depending on the minimum supported Windows version this might mean that new builds will start depending on Windows 8.1. MINGW32/64 will default to Windows 7 for a bit longer to smooth over the transition.
