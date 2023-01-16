@@ -3,7 +3,13 @@
   -->
   <a title="Join the chat at https://gitter.im/msys2/msys2" href="https://gitter.im/msys2/msys2"><img src="https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef"></a><!--
   -->
-  <a title="GitHub Actions" href="https://github.com/msys2/msys2.github.io/actions?query=workflow%3Agithub%20pages"><img alt="github pages' workflow Status" src="https://img.shields.io/github/workflow/status/msys2/msys2.github.io/github%20pages?longCache=true&style=flat-square&label=build&logo=github"></a><!--
+  <a title="GitHub Actions" href="https://github.com/msys2/msys2.github.io/actions?query=workflow%3Agithub%20pages"><img alt="github pages' workflow Status" src="https://img.shields.io/github/actions/workflow/status/msys2/msys2.github.io/main.yml?branch=source&longCache=true&style=flat-square&label=build&logo=github"></a><!--
+  -->
+  <a title="Follow msys2org on Twitter" href="https://twitter.com/msys2org"><img src="https://img.shields.io/twitter/follow/msys2org?color=31A4F1&logo=twitter&logoColor=white&style=flat-square"></a><!--
+  -->
+  <a title="Follow msys2org on Mastodon" href="https://fosstodon.org/@msys2org"><img src="https://img.shields.io/mastodon/follow/109365079526574177?color=000197&domain=https%3A%2F%2Ffosstodon.org%2F&logo=mastodon&logoColor=white&style=flat-square"></a><!--
+  -->
+  <a title="Join the community on Discord" href="https://discord.com/invite/jPQdRdDcT9"><img src="https://img.shields.io/discord/792780131906617355?color=5865F2&label=Discord&logo=discord&logoColor=white&style=flat-square"></a><!--
   -->
 </p>
 
