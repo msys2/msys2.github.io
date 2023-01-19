@@ -24,6 +24,9 @@ theme:
 
     features:
         - navigation.instant
+        - content.action.edit
+        - content.code.copy
+
     custom_dir: overrides
 
 extra_css:

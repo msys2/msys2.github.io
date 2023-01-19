@@ -1,6 +1,3 @@
----
-title: Who Is Using MSYS2?
----
 # Who Is Using MSYS2?
 
 * [RubyInstaller2](https://github.com/oneclick/rubyinstaller2) uses MSYS2 to build Ruby for Windows in CI and as build environment for gems with C extensions.

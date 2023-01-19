@@ -1,5 +1,4 @@
 ---
-title: Terminals
 summary: Terminals with which MSYS2 can be used.
 ---
 # Terminals

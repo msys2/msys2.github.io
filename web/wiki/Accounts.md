@@ -1,7 +1,8 @@
 ---
-title: Accounts and ownership
 summary: Who owns what.
 ---
+
+# Accounts and ownership
 
 - domains: msys2.org, msys2.net, msys2.com registered through Hover to Elieux, same for mingw-w64.org and mingw-w64.net
 - Twitter: @msys2org registered to Lazka

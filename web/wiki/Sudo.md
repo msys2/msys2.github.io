@@ -1,7 +1,9 @@
 ---
-title: Do you need Sudo?
 summary: In regular GNU/Linux environments, people use `sudo` to perform administrative tasks on their system
 ---
+
+# Do you need Sudo?
+
 ## Do you need Sudo?
 
 In regular GNU/Linux environments, people use `sudo` to perform administrative tasks on their system, e.g. installing and removing packages, editing system configuration.  Since the most common way of installing MSYS2 results in the MSYS2 root directory being writable by the user, these tasks can be performed without doing anything special.  If you made your MSYS2 root read only for users or want to run Windows administrative tasks from MSYS2, continue reading.

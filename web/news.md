@@ -1,5 +1,4 @@
 ---
-title: News
 summary: Important events happening.
 ---
 # News

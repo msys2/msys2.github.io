@@ -1,7 +1,9 @@
 ---
-title: How does MSYS2 differ from Cygwin?
 summary: Cygwin and MSYS2 -- as projects -- have significantly different goals.
 ---
+
+# How does MSYS2 differ from Cygwin?
+
 Goals
 =====
 

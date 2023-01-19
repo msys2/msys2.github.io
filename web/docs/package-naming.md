@@ -1,8 +1,9 @@
 ---
-title: Package Naming
 summary: The MSYS2 software distribution provides binary packages with for `pacman` using
     prefixes according to the target environment.
 ---
+
+# Package Naming
 
 ## Overview
 

@@ -1,7 +1,9 @@
 ---
-title: Just-in-time Debugging
 summary: Just-in-time debugging with MSYS2
 ---
+
+# Just-in-time Debugging
+
 ## MSYS2 processes
 
 To get just-in-time debugging of MSYS2 processes, use the `error_start` `MSYS` environment variable setting:

@@ -1,6 +1,5 @@
----
-title: Welcome to the MSYS2 wiki
----
+# Welcome to the MSYS2 wiki
+
 **Welcome to the MSYS2 wiki**
 
 - [Introduction](MSYS2-introduction.md) - overview and important information

@@ -1,5 +1,4 @@
 ---
-title: What is MSYS2?
 summary: MSYS2 provides a native build environment, based on open source software, and
      makes you feel right at home when you are already comfortable with Linux.
 ---
