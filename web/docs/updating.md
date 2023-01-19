@@ -74,7 +74,7 @@ $ pacdiff
 
 ## Potential Issues
 
-If you haven't updated MSYS2 for more then half a year then you could end up in a state where an update would require a new or updated package maintainer's signature key but you haven't gotten it through an update yet. This will lead to pacman failing to verify the package or database signatures:
+If you haven't updated MSYS2 for more than half a year then you could end up in a state where an update would require a new or updated package maintainer's signature key but you haven't gotten it through an update yet. This will lead to pacman failing to verify the package or database signatures:
 
 ```console
 $ pacman -S lftp
