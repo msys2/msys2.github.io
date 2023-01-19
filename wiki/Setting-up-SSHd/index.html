@@ -12,8 +12,14 @@
       
         <link rel="canonical" href="https://www.msys2.org/wiki/Setting-up-SSHd/">
       
+      
+        <link rel="prev" href="../Porting/">
+      
+      
+        <link rel="next" href="../Signing-packages/">
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -21,11 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -137,8 +142,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -146,8 +149,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -186,7 +187,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -308,12 +309,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Documentation
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -418,12 +420,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_7">
+        <label class="md-nav__link" for="__nav_4_7" tabindex="0" aria-expanded="false">
           Package Management
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -535,12 +538,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_9">
+        <label class="md-nav__link" for="__nav_4_9" tabindex="0" aria-expanded="false">
           Languages & Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -674,12 +678,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -700,12 +705,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_1">
+        <label class="md-nav__link" for="__nav_5_1" tabindex="0" aria-expanded="false">
           Packaging
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -827,12 +833,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
           Other Topics
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1229,13 +1236,15 @@
                 
                   
 
-  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/Setting-up-SSHd.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/Setting-up-SSHd.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
 
 
-  <h1>Setting up SSHd</h1>
 
 <p>One can connect to MSYS2 via Win32-OpenSSH by creating a batch file (e.g. C:\msys64\sshd_default_shell.cmd) containing <code>@C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64</code> (you can change -mingw64 to the environment of your choice) and then setting the registry entry HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH\DefaultShell to the path of that batch file.</p>
 <p>MSYS2 can also use its own OpenSSHd.  Use the set-up script below.</p>
@@ -1270,13 +1279,13 @@
 <span class="c1">#   24 Aug 2015 — run server with -e to redirect logs to /var/log/sshd.log</span>
 <span class="c1">#</span>
 
-<span class="nb">set</span> -e
+<span class="nb">set</span><span class="w"> </span>-e
 
 <span class="c1">#</span>
 <span class="c1"># Configuration</span>
 <span class="c1">#</span>
 
-<span class="nv">UNPRIV_USER</span><span class="o">=</span>sshd <span class="c1"># DO NOT CHANGE; this username is hardcoded in the openssh code</span>
+<span class="nv">UNPRIV_USER</span><span class="o">=</span>sshd<span class="w"> </span><span class="c1"># DO NOT CHANGE; this username is hardcoded in the openssh code</span>
 <span class="nv">UNPRIV_NAME</span><span class="o">=</span><span class="s2">&quot;Privilege separation user for sshd&quot;</span>
 
 <span class="nv">EMPTY_DIR</span><span class="o">=</span>/var/empty
@@ -1286,19 +1295,19 @@
 <span class="c1"># Check installation sanity</span>
 <span class="c1">#</span>
 
-<span class="k">if</span> ! /mingw64/bin/editrights -h &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;editrights&#39;. Try: pacman -S mingw-w64-x86_64-editrights.&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>/mingw64/bin/editrights<span class="w"> </span>-h<span class="w"> </span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: Missing &#39;editrights&#39;. Try: pacman -S mingw-w64-x86_64-editrights.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> ! cygrunsrv -v &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;cygrunsrv&#39;. Try: pacman -S cygrunsrv.&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>cygrunsrv<span class="w"> </span>-v<span class="w"> </span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: Missing &#39;cygrunsrv&#39;. Try: pacman -S cygrunsrv.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 
-<span class="k">if</span> ! ssh-keygen -A<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;ssh-keygen&#39;. Try: pacman -S openssh.&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ssh-keygen<span class="w"> </span>-A<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: Missing &#39;ssh-keygen&#39;. Try: pacman -S openssh.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 
 
@@ -1306,11 +1315,11 @@
 <span class="c1"># The unprivileged sshd user (for privilege separation)</span>
 <span class="c1">#</span>
 
-<span class="nv">add</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> &gt;/dev/null<span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">&quot;//add&quot;</span><span class="p">;</span> <span class="k">fi)</span><span class="s2">&quot;</span>
-<span class="k">if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="si">${</span><span class="nv">add</span><span class="si">}</span> //fullname:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_NAME</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-              //homedir:<span class="s2">&quot;</span><span class="k">$(</span>cygpath -w <span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="k">)</span><span class="s2">&quot;</span> //active:no<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to create Windows user </span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
+<span class="nv">add</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(if</span><span class="w"> </span>!<span class="w"> </span>net<span class="w"> </span>user<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;//add&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">fi)</span><span class="s2">&quot;</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>net<span class="w"> </span>user<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="si">${</span><span class="nv">add</span><span class="si">}</span><span class="w"> </span>//fullname:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">              </span>//homedir:<span class="s2">&quot;</span><span class="k">$(</span>cygpath<span class="w"> </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>//active:no<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: Unable to create Windows user </span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 
 
@@ -1318,12 +1327,12 @@
 <span class="c1"># Add or update /etc/passwd entries</span>
 <span class="c1">#</span>
 
-<span class="k">if</span> <span class="nb">test</span> -f /etc/passwd<span class="p">;</span> <span class="k">then</span>
-    sed -i -e <span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/d&#39;</span> /etc/passwd
-    <span class="nv">SED</span><span class="o">=</span><span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/s?^\(\([^:]*:\)\{5\}\).*?\1&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/bin/false?p&#39;</span>
-    mkpasswd -l -u <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^[^:]*+//&#39;</span> <span class="p">|</span> sed -ne <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SED</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-             &gt;&gt; /etc/passwd
-    mkgroup.exe -l &gt; /etc/group
+<span class="k">if</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>-f<span class="w"> </span>/etc/passwd<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/d&#39;</span><span class="w"> </span>/etc/passwd
+<span class="w">    </span><span class="nv">SED</span><span class="o">=</span><span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/s?^\(\([^:]*:\)\{5\}\).*?\1&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/bin/false?p&#39;</span>
+<span class="w">    </span>mkpasswd<span class="w"> </span>-l<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/^[^:]*+//&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-ne<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SED</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>&gt;&gt;<span class="w"> </span>/etc/passwd
+<span class="w">    </span>mkgroup.exe<span class="w"> </span>-l<span class="w"> </span>&gt;<span class="w"> </span>/etc/group
 <span class="k">fi</span>
 
 
@@ -1331,14 +1340,14 @@
 <span class="c1"># Finally, register service with cygrunsrv and start it</span>
 <span class="c1">#</span>
 
-cygrunsrv -R msys2_sshd <span class="o">||</span> <span class="nb">true</span>
-cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /usr/bin/sshd.exe -a <span class="s2">&quot;-D -e&quot;</span> -y tcpip
+cygrunsrv<span class="w"> </span>-R<span class="w"> </span>msys2_sshd<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+cygrunsrv<span class="w"> </span>-I<span class="w"> </span>msys2_sshd<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;MSYS2 sshd&quot;</span><span class="w"> </span>-p<span class="w"> </span>/usr/bin/sshd.exe<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;-D -e&quot;</span><span class="w"> </span>-y<span class="w"> </span>tcpip
 
 <span class="c1"># The SSH service should start automatically when Windows is rebooted. You can</span>
 <span class="c1"># manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`</span>
-<span class="k">if</span> ! net start msys2_sshd<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to start msys2_sshd service&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>net<span class="w"> </span>start<span class="w"> </span>msys2_sshd<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: Unable to start msys2_sshd service&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 </code></pre></div>
 
@@ -1356,42 +1365,6 @@ cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /us
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../Porting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Porting" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Porting
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../Signing-packages/" class="md-footer__link md-footer__link--next" aria-label="Next: Signing Packages" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Signing Packages
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1454,12 +1427,11 @@ cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /us
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-    
     
   </body>
 </html>

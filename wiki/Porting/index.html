@@ -12,8 +12,14 @@
       
         <link rel="canonical" href="https://www.msys2.org/wiki/Porting/">
       
+      
+        <link rel="prev" href="../MSYS2-reinstallation/">
+      
+      
+        <link rel="next" href="../Setting-up-SSHd/">
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -21,11 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -100,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mingw32-make" class="md-skip">
+        <a href="#porting" class="md-skip">
           Skip to content
         </a>
       
@@ -142,8 +147,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -151,8 +154,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -191,7 +192,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -313,12 +314,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Documentation
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -423,12 +425,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_7">
+        <label class="md-nav__link" for="__nav_4_7" tabindex="0" aria-expanded="false">
           Package Management
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -540,12 +543,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_9">
+        <label class="md-nav__link" for="__nav_4_9" tabindex="0" aria-expanded="false">
           Languages & Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -679,12 +683,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -705,12 +710,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_1">
+        <label class="md-nav__link" for="__nav_5_1" tabindex="0" aria-expanded="false">
           Packaging
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -832,12 +838,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
           Other Topics
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1029,6 +1036,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Porting
@@ -1044,6 +1053,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1369,6 +1380,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1516,14 +1529,17 @@
                 
                   
 
-  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/Porting.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/Porting.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
 
 
-  <h1>Porting</h1>
 
+<h1 id="porting">Porting</h1>
 <p>While in our humble opinions, MSYS2 makes collaborative, organised development of open-source software on Windows a workable proposition, there are a few things to be aware of that we commonly run into, mostly due to the design decisions made by Microsoft, our preference for using native tools and compilers rather than cross msys2-to-native ones and our wish to be as flexible as we can be.</p>
 <h2 id="mingw32-make">mingw32-make</h2>
 <p>MSYS2 provides two versions of make, one in the <code>make</code> package and one in the <code>mingw-w64-{i686,x86_64}-make</code> packages. The latter one is called <code>mingw32-make</code> on command line, is fully native and doesn't depend on <code>msys2</code> shells. The downside is that it doesn't work with many <code>Makefile</code>s. Unless you know what you're doing, use the regular <code>make</code>.</p>
@@ -1632,24 +1648,24 @@ $(info The version of MSYS you are running is $(msys_version) (0 meaning not MSY
 <a href="http://lists.gnu.org/archive/html/autoconf/2013-05/msg00090.html">http://lists.gnu.org/archive/html/autoconf/2013-05/msg00090.html</a></p>
 <h2 id="macroinline-function-and-autotools">Macro/inline function and autotools</h2>
 <p><code>AC_CHECK_FUNCS</code> and friends can't deal with function macros and static inline functions (because the checking code tries to <code>#undef</code> the symbol, doesn't include any headers and declares the symbol as extern instead). Possible solution is replacing them with more elaborate checks using <code>AC_LINK_IFELSE</code> or <code>AC_COMPILE_IFELSE</code>. For example this:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">AC_CHECK_FUNCS</span><span class="p">(</span><span class="o">[</span><span class="n">localtime_r</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
-<span class="o">[</span><span class="n">AM_CONDITIONAL([HAVE_LOCALTIME_R</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">)</span><span class="err">]</span><span class="p">,</span><span class="w"></span>
-<span class="o">[</span><span class="n">AM_CONDITIONAL([HAVE_LOCALTIME_R</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">)</span><span class="err">]</span><span class="p">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">AC_CHECK_FUNCS</span><span class="p">(</span><span class="o">[</span><span class="n">localtime_r</span><span class="o">]</span><span class="p">,</span>
+<span class="o">[</span><span class="n">AM_CONDITIONAL([HAVE_LOCALTIME_R</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">)</span><span class="err">]</span><span class="p">,</span>
+<span class="o">[</span><span class="n">AM_CONDITIONAL([HAVE_LOCALTIME_R</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">)</span><span class="err">]</span><span class="p">)</span>
 </code></pre></div>
 
 <p>... can be replaced with this:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">AC_MSG_CHECKING</span><span class="p">([</span><span class="k">for</span><span class="w"> </span><span class="n">localtime_r</span><span class="p">])</span><span class="w"></span>
-<span class="n">AC_LINK_IFELSE</span><span class="p">([</span><span class="n">AC_LANG_PROGRAM</span><span class="p">([[</span><span class="w"></span>
-<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
-<span class="p">]],</span><span class="w"> </span><span class="p">[[</span><span class="w"></span>
-<span class="w">  </span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">localtime_r</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">r</span><span class="p">);</span><span class="w"></span>
-<span class="p">]])],</span><span class="w"></span>
-<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">yes</span><span class="p">])</span><span class="w"></span>
-<span class="w"> </span><span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
-<span class="w"> </span><span class="n">AC_DEFINE</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">Define</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="n">localtime_r</span><span class="err">&#39;</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">macro</span><span class="p">.])],</span><span class="w"></span>
-<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">no</span><span class="p">])</span><span class="w"></span>
-<span class="w"> </span><span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="nb">false</span><span class="p">)])</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">AC_MSG_CHECKING</span><span class="p">([</span><span class="k">for</span><span class="w"> </span><span class="n">localtime_r</span><span class="p">])</span>
+<span class="n">AC_LINK_IFELSE</span><span class="p">([</span><span class="n">AC_LANG_PROGRAM</span><span class="p">([[</span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
+<span class="p">]],</span><span class="w"> </span><span class="p">[[</span>
+<span class="w">  </span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">  </span><span class="n">localtime_r</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+<span class="p">]])],</span>
+<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">yes</span><span class="p">])</span>
+<span class="w"> </span><span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w"> </span><span class="n">AC_DEFINE</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">Define</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="n">localtime_r</span><span class="err">&#39;</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">macro</span><span class="p">.])],</span>
+<span class="p">[</span><span class="n">AC_MSG_RESULT</span><span class="p">([</span><span class="n">no</span><span class="p">])</span>
+<span class="w"> </span><span class="n">AM_CONDITIONAL</span><span class="p">([</span><span class="n">HAVE_LOCALTIME_R</span><span class="p">],</span><span class="w"> </span><span class="nb">false</span><span class="p">)])</span>
 </code></pre></div>
 
 <p>Don't forget to <code>autoreconf -fi</code> after patching <code>configure.ac</code>.</p>
@@ -1708,42 +1724,6 @@ gfortran, open mp and floating point precision by Carl Kleffner:</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../MSYS2-reinstallation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Re-installing MSYS2" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Re-installing MSYS2
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../Setting-up-SSHd/" class="md-footer__link md-footer__link--next" aria-label="Next: Setting up SSHd" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Setting up SSHd
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1806,12 +1786,11 @@ gfortran, open mp and floating point precision by Carl Kleffner:</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-    
     
   </body>
 </html>
