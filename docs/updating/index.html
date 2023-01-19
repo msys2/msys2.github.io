@@ -1390,7 +1390,7 @@
 <span class="go">:: (V)iew, (M)erge, (S)kip, (R)emove pacsave, (O)verwrite with pacsave, (Q)uit: [v/m/s/r/o/q]</span>
 </code></pre></div>
 <h2 id="potential-issues">Potential Issues</h2>
-<p>If you haven't updated MSYS2 for more then half a year then you could end up in a state where an update would require a new or updated package maintainer's signature key but you haven't gotten it through an update yet. This will lead to pacman failing to verify the package or database signatures:</p>
+<p>If you haven't updated MSYS2 for more than half a year then you could end up in a state where an update would require a new or updated package maintainer's signature key but you haven't gotten it through an update yet. This will lead to pacman failing to verify the package or database signatures:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman -S lftp
 <span class="go">[...]</span>
 <span class="go">error: lftp: signature from &quot;Some MSYS2 Maintainer &lt;some.msys2.maintainer@gmail.com&gt;&quot; is unknown trust</span>
