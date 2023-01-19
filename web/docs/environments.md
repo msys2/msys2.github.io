@@ -1,5 +1,4 @@
 ---
-title: Environments
 summary: The differences between the environments is
     mainly between environment variables, default compilers/linkers, architecture,
     system libraries used etc.

@@ -1,5 +1,4 @@
 ---
-title: Using CMake in MSYS2
 summary: There are a few gotchas regarding how to use CMake in MSYS2.
 ---
 # Using CMake in MSYS2

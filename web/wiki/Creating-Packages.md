@@ -1,8 +1,10 @@
 ---
-title: Creating Packages
 summary: The MSYS2 software distribution uses a port of Pacman (known from Arch Linux) to safely install,
     remove and update binary packages and also to build those packages in the first place.
 ---
+
+# Creating Packages
+
 The MSYS2 software distribution uses a port of Pacman (known from Arch Linux) to safely install, remove and update binary packages and also to build those packages in the first place.
 
 ## General information

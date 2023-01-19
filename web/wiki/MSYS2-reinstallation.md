@@ -1,7 +1,9 @@
 ---
-title: Re-installing MSYS2
 summary: When we release new installers and new base tar.zst packages
 ---
+
+# Re-installing MSYS2
+
 Introduction
 ------------
 

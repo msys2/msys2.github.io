@@ -1,8 +1,10 @@
 ---
-title: TODO LIST
 summary: Here are some topics and milestones that deserve more discussion or work. This page should serve as an overview of our long-term issues and goals and be a place
     to write down the decisions and open questions so that they don't get buried in IRC logs or mailing list archives.
 ---
+
+# TODO LIST
+
 Here are some topics and milestones that deserve more discussion or work. This page should serve as an overview of our long-term issues and goals and be a place to write down the decisions and open questions so that they don't get buried in IRC logs or mailing list archives. Each goal should be described in appropriate detail and should be broken up into smaller tasks for interested members to tackle the goal step by step.
 
 ## Finish the SourceForge migration
