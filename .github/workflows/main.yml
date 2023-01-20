@@ -5,7 +5,7 @@ on:
   pull_request:
   push:
     branches-ignore:
-      - master
+      - main
 
 jobs:
   build:
@@ -63,5 +63,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          publish_branch: master
+          publish_branch: main
           cname: www.msys2.org

@@ -21,8 +21,8 @@ This website is written in Markdown and gets built to a static website using
 [mkdocs](https://www.mkdocs.org/) and a modified version of the [mkdocs-material
 theme](https://squidfunk.github.io/mkdocs-material). The main branch of this
 repo is the `source` branch and any new commits will auto deploy a new build to
-the `master` branch using [a GitHub
-action](https://github.com/peaceiris/actions-gh-pages). The `master` branch is
+the `main` branch using [a GitHub
+action](https://github.com/peaceiris/actions-gh-pages). The `main` branch is
 connected to [GitHub pages](https://pages.github.com) and is reachable under
 https://msys2.github.io and https://www.msys2.org. Changes to the `source`
 branch usually take a minute or two until they are live.
