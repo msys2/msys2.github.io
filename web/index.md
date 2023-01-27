@@ -37,10 +37,10 @@ MSYS2 and what for.
 
 ## Installation
 
-1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2022-12-16/msys2-x86_64-20221216.exe" class="button">msys2-x86_64-20221216.exe</a>
+1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2023-01-27/msys2-x86_64-20230127.exe" class="button">msys2-x86_64-20230127.exe</a>
 
-    <span style="opacity: 0.6; word-wrap: break-word;">Verify with SHA256 checksum `de5b410dd0813e5904aeed082bfc3d9a8167e0f93b296f52d80bee2dfec9f13d`
-    or [GPG signature](https://github.com/msys2/msys2-installer/releases/download/2022-12-16/msys2-x86_64-20221216.exe.sig)
+    <span style="opacity: 0.6; word-wrap: break-word;">Verify with SHA256 checksum `d05c0618027299e9a0834de968596c41bd2012ed8b2534b114a3b9d3fca56809`
+    or [GPG signature](https://github.com/msys2/msys2-installer/releases/download/2023-01-27/msys2-x86_64-20230127.exe.sig)
     by [0xf7a49b0ec](http://keyserver.ubuntu.com/pks/lookup?search=0x0ebf782c5d53f7e5fb02a66746bd761f7a49b0ec&fingerprint=on&op=vindex).</span>
 
 2. Run the installer. MSYS2 requires 64 bit Windows 8.1 or newer.
