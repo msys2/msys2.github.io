@@ -25,8 +25,8 @@ Include = /etc/pacman.d/mirrorlist.mingw
 [clang32]
 Include = /etc/pacman.d/mirrorlist.mingw
 
-#[clangarm64]
-#Include = /etc/pacman.d/mirrorlist.mingw
+[clangarm64]
+Include = /etc/pacman.d/mirrorlist.mingw
 ```
 
 For more details about how to install packages see ['Package Management'](package-management.md).
