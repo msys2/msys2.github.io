@@ -1257,17 +1257,11 @@
 
 <h1 id="msys2-installation">MSYS2-Installation</h1>
 <h1 id="i-downloading">I. Downloading</h1>
-<p><strong>MSYS2</strong> ships in the form of installers and base archives. They can be installed or extracted to any place on your computer, but you <strong>MUST</strong> use folder names that consist of only ascii characters and no spaces (also it makes good sense to put it in a path that doesn't use many characters due to PATH_MAX being 260; C:\msys32 or C:\msys64 is ideal).
+<p><strong>MSYS2</strong> ships in the form of installers and base archives. They can be installed or extracted to any place on your computer, but you <strong>MUST</strong> use folder names that consist of only ascii characters and no spaces (also it makes good sense to put it in a path that doesn't use many characters due to PATH_MAX being 260; C:\msys64 is ideal).
   You can download the installers or base MSYS2 archives from the links below:</p>
-<ol>
-<li>
-<p><a href="https://repo.msys2.org/distrib/i686/"><strong>32-bit</strong></a></p>
-</li>
-<li>
-<p><a href="https://repo.msys2.org/distrib/x86_64/"><strong>64-bit</strong></a></p>
-</li>
-</ol>
-<p>Note: if you are using 64-bit Windows, there is <em>no</em> reason to use 32-bit MSYS2. Well, to be honest, there is one reason: you want to develop MSYS2 software (or contribute to MSYS2-packages) and want to test that the software/package also works on 32-bit MSYS2. When it comes to native software, 64-bit MSYS2 can be used to build, install and run both 32-bit and 64-bit variants. 64-bit MSYS2 software (practically speaking) never needs to be "re-based", giving a better user experience.</p>
+<ul>
+<li><a href="https://repo.msys2.org/distrib/x86_64/"><strong>64-bit</strong></a></li>
+</ul>
 <h1 id="ii-installation">II. Installation</h1>
 <p>The installers and base archives only contain the tools necessary to 1) start <strong>MSYS2</strong> 2) update the pre-installed packages and 3) install new packages.</p>
 <ul>
@@ -1306,7 +1300,7 @@
 <strong><code>pacman -Suu</code></strong>
  ... however, because all MSYS2 programs share the same address space for DLLs due to how MSYS2 (well, Cygwin) implements 'fork', updating bash, MSYS2 or Pacman itself can cause subsequent package updates to fail. For this reason, the safest procedure for updating MSYS2 is to do it in two stages; first those 'core' MSYS2 packages:
 <strong><code>pacman --needed -S bash pacman pacman-mirrors msys2-runtime</code></strong>
-... if any packages got updated during this then you <strong>MUST</strong> restart MSYS2 because files that are provided by these packages will be in use and after update you can get fork errors - you need to exit all MSYS2 shells (and if using MSYS2 32bit, run autorebase.bat) then re-launch <strong><code>msys2_shell.bat</code></strong></li>
+... if any packages got updated during this then you <strong>MUST</strong> restart MSYS2 because files that are provided by these packages will be in use and after update you can get fork errors - you need to exit all MSYS2 shells then re-launch <strong><code>msys2_shell.bat</code></strong></li>
 <li>Finally you can do an update of the remaining packages by issuing:
 <strong><code>pacman -Suu</code></strong></li>
 </ul>
