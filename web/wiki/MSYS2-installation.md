@@ -6,14 +6,10 @@ summary: MSYS2 ships in the form of installers and base archives.
 
 I. Downloading
 ==============
-**MSYS2** ships in the form of installers and base archives. They can be installed or extracted to any place on your computer, but you **MUST** use folder names that consist of only ascii characters and no spaces (also it makes good sense to put it in a path that doesn't use many characters due to PATH_MAX being 260; C:\msys32 or C:\msys64 is ideal).
+**MSYS2** ships in the form of installers and base archives. They can be installed or extracted to any place on your computer, but you **MUST** use folder names that consist of only ascii characters and no spaces (also it makes good sense to put it in a path that doesn't use many characters due to PATH_MAX being 260; C:\msys64 is ideal).
   You can download the installers or base MSYS2 archives from the links below:
 
-  1. [**32-bit**](https://repo.msys2.org/distrib/i686/)
-
-  2. [**64-bit**](https://repo.msys2.org/distrib/x86_64/)
-
-Note: if you are using 64-bit Windows, there is *no* reason to use 32-bit MSYS2. Well, to be honest, there is one reason: you want to develop MSYS2 software (or contribute to MSYS2-packages) and want to test that the software/package also works on 32-bit MSYS2. When it comes to native software, 64-bit MSYS2 can be used to build, install and run both 32-bit and 64-bit variants. 64-bit MSYS2 software (practically speaking) never needs to be "re-based", giving a better user experience.
+  * [**64-bit**](https://repo.msys2.org/distrib/x86_64/)
 
 II. Installation
 ================
@@ -44,7 +40,7 @@ III. Updating packages
     **`pacman -Suu`**
      ... however, because all MSYS2 programs share the same address space for DLLs due to how MSYS2 (well, Cygwin) implements 'fork', updating bash, MSYS2 or Pacman itself can cause subsequent package updates to fail. For this reason, the safest procedure for updating MSYS2 is to do it in two stages; first those 'core' MSYS2 packages:
     **`pacman --needed -S bash pacman pacman-mirrors msys2-runtime`**
-    ... if any packages got updated during this then you **MUST** restart MSYS2 because files that are provided by these packages will be in use and after update you can get fork errors - you need to exit all MSYS2 shells (and if using MSYS2 32bit, run autorebase.bat) then re-launch **`msys2_shell.bat`**
+    ... if any packages got updated during this then you **MUST** restart MSYS2 because files that are provided by these packages will be in use and after update you can get fork errors - you need to exit all MSYS2 shells then re-launch **`msys2_shell.bat`**
     - Finally you can do an update of the remaining packages by issuing:
     **`pacman -Suu`**
 
