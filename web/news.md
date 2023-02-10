@@ -5,6 +5,10 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-02-10 - Server maintenance on 2023-02-18/19
+
+There will be a short server maintenance around the weekend of 2023-02-18/19 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some subdomain redirects of our website.
+
 ### 2023-01-15 - Dropping support for Windows 7 and 8.0
 
 As announced last April we will no longer support Windows 7 / 8.0 from now on.
