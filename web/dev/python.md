@@ -12,7 +12,7 @@
 * Figure out which packages need to be rebuild:
     * Use https://github.com/jeremyd2019/package-grokker to detect dependencies on
       the .dll
-    * `pacman -Fqx '/python3\.9/' '.*\.pyc'` to detect the remaining packages
+    * `pacman -Fyqx '/python3\.9/' '.*\.pyc'` to detect the remaining packages
 * Try to update packages that need to be rebuild to get potential Python related
   fixes.
 * Move the PKGBUILD over to `mingw-w64-python` and make it the default one and
