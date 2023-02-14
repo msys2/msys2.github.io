@@ -1315,7 +1315,7 @@
 <li>Figure out which packages need to be rebuild:<ul>
 <li>Use <a href="https://github.com/jeremyd2019/package-grokker">https://github.com/jeremyd2019/package-grokker</a> to detect dependencies on
   the .dll</li>
-<li><code>pacman -Fqx '/python3\.9/' '.*\.pyc'</code> to detect the remaining packages</li>
+<li><code>pacman -Fyqx '/python3\.9/' '.*\.pyc'</code> to detect the remaining packages</li>
 </ul>
 </li>
 <li>Try to update packages that need to be rebuild to get potential Python related
