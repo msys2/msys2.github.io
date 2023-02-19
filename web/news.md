@@ -9,6 +9,8 @@ This page lists important changes or issues affecting MSYS2 users. We also post 
 
 There will be a short server maintenance around the weekend of 2023-02-18/19 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some subdomain redirects of our website.
 
+Update: all done now
+
 ### 2023-01-15 - Dropping support for Windows 7 and 8.0
 
 As announced last April we will no longer support Windows 7 / 8.0 from now on.
