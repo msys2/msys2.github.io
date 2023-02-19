@@ -98,7 +98,7 @@ The MSYS2 team is pretty small and we could use more people.  Some contributors 
 
 What to do to get them:
 
-- respond to them on IRC, Gitter, ML, handle their bug reports and contributions on GitHub in a timely fashion
+- respond to them on IRC, Matrix, ML, handle their bug reports and contributions on GitHub in a timely fashion
 - good documentation helps with frequent inquiries, automated checks help with code reviews
 - get money and pay people?
 - other ideas?

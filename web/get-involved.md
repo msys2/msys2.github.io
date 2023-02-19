@@ -3,7 +3,7 @@ summary: If you're interested in helping the MSYS2 project, we will appreciate i
 ---
 # Get Involved
 
-Hi. If you're interested in helping the MSYS2 project, we will appreciate it. Please come to our IRC channel [#msys2 on OFTC](irc://irc.oftc.net:6667/msys2) or [Gitter room](https://gitter.im/msys2/msys2) or [Discord Server](https://discord.gg/jPQdRdDcT9) and talk to us.
+Hi. If you're interested in helping the MSYS2 project, we will appreciate it. Please come to our IRC channel [#msys2 on OFTC](irc://irc.oftc.net:6667/msys2) or [Matrix room](https://matrix.to/#/#msys2_msys2:gitter.im) or [Discord Server](https://discord.gg/jPQdRdDcT9) and talk to us.
 Don't be discouraged if nobody responds straight away, people are often busy or asleep.
 
 How can you help:

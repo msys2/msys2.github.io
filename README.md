@@ -1,7 +1,7 @@
 <p align="center">
   <a title="msys2.github.io" href="https://msys2.github.io"><img src="https://img.shields.io/website.svg?label=msys2.github.io&longCache=true&style=flat-square&url=http%3A%2F%2Fmsys2.github.io%2Findex.html&logo=github"></a><!--
   -->
-  <a title="Join the chat at https://gitter.im/msys2/msys2" href="https://gitter.im/msys2/msys2"><img src="https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef"></a><!--
+  <a title="Join the chat on Matrix" href="https://matrix.to/#/#msys2_msys2:gitter.im"><img src="https://img.shields.io/badge/chat-on%20matrix-4db797.svg?longCache=true&style=flat-square&logo=matrix&logoColor=e8ecef"></a><!--
   -->
   <a title="GitHub Actions" href="https://github.com/msys2/msys2.github.io/actions?query=workflow%3Agithub%20pages"><img alt="github pages' workflow Status" src="https://img.shields.io/github/actions/workflow/status/msys2/msys2.github.io/main.yml?branch=source&longCache=true&style=flat-square&label=build&logo=github"></a><!--
   -->

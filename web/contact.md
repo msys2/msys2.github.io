@@ -6,7 +6,7 @@
 *   search for and file [issues for mingw-w64 packages on GitHub](https://github.com/msys2/mingw-packages/issues)
 *   follow our [Twitter account](https://twitter.com/msys2org)
 *   follow our [Mastodon account](https://fosstodon.org/@msys2org)
-*   [less active] talk in our [Gitter room](https://gitter.im/msys2/msys2), also available over [Matrix](https://matrix.to/#/#msys2_msys2:gitter.im), and bridged to our Discord server
+*   [less active] talk in our [Matrix room](https://matrix.to/#/#msys2_msys2:gitter.im), bridged to our Discord server
 *   [less active] talk in our [IRC channel](irc://irc.oftc.net:6667/msys2), which is also bridged to our Discord server
 *   [archived] read older [discussion on SourceForge](https://sourceforge.net/p/msys2/discussion/general/)
 *   [archived] search for very old [tickets on SourceForge](https://sourceforge.net/p/msys2/tickets/)
