@@ -71,6 +71,10 @@ or
 
 You can use `pactree` to figure out which packages are needed to make a package working properly, please note that `pactree` command is now belong to the `pacman-contrib` package, so you have to install the package first:
 
+`$ pacman -S pacman-contrib`
+
+After that, you can use the `pactree` command to query the dependencies of a package, such as:
+
 `$ pactree mingw-w64-x86_64-gettext`
 
 ```
