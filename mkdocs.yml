@@ -84,6 +84,7 @@ nav:
         - docs/updating.md
         - docs/ci.md
         - docs/terminals.md
+        - docs/ides-editors.md
         - Package Management:
           - docs/package-management.md
           - docs/package-naming.md
