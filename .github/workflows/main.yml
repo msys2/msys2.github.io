@@ -23,7 +23,7 @@ jobs:
 
       - name: Install poetry
         run: |
-          python3 -m pip install --upgrade poetry==1.2.2
+          python3 -m pip install --upgrade poetry==1.4.0
 
       - name: Setup Python (poetry)
         uses: actions/setup-python@v4
