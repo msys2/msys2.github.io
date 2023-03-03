@@ -459,6 +459,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sublime-text" class="md-nav__link">
+    Sublime Text
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1293,6 +1300,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sublime-text" class="md-nav__link">
+    Sublime Text
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1388,6 +1402,49 @@ and WSL can also be extended to support a MSYS2 shell.</p>
 <li>To set <code>zsh</code> shell as default:
     <div class="highlight"><pre><span></span><code>&quot;commandline&quot;: &quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh&quot;
 </code></pre></div></li>
+</ul>
+<h2 id="sublime-text">Sublime Text</h2>
+<p><img align="right" alt="image" src="../sublime.png" width="45%" /></p>
+<p><a href="https://www.sublimetext.com/">Sublime Text</a> is a text and source code editor.
+It features syntax highlighting, code folding, terminal output window, and more.
+To add the MSYS2 terminal profile in Sublime Text, please follow these steps:</p>
+<ul>
+<li>
+<p>Install <a href="https://packagecontrol.io/packages/Terminus">Terminus package</a> using
+  Package Control.</p>
+</li>
+<li>
+<p>In the menu bar, select Preferences &gt; Package Settings &gt; Terminus &gt; Settings
+  option. This will open Terminus.sublime-settings file in separate Sublime Text
+  window with two panes.</p>
+</li>
+<li>
+<p>In the right pane, add the following configuration for UCRT64.</p>
+</li>
+<li>
+<p>Change the command options as usual to use other terminal environments. If the
+  Terminus.sublime-settings is not empty append the above section after others.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;shell_configs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UCRT64&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;cmd.exe&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;/c&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nt">&quot;enable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;windows&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Now the UCRT64 environment can be opened like any other shell in Sublime Text.
+  Press Ctrl + Shift + P &gt; Terminus: List shells &gt; UCRT64 &gt; Open in tab or pane.</li>
 </ul>
 
 
