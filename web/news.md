@@ -185,8 +185,8 @@ with cancer passed away on 2021-04-20.
 If you want to know more about his life and work see his fundraiser
 descriptions:
 
-* https://uk.gofundme.com/f/help-Ray-fund-a-hospice-bedroom
-* https://uk.gofundme.com/f/arku72-help-ray-fight-cancer
+* https://www.gofundme.com/f/help-Ray-fund-a-hospice-bedroom
+* https://www.gofundme.com/f/arku72-help-ray-fight-cancer
 
 He was always helpful, knowledgeable, and friendly, and he will be greatly missed.
 
@@ -287,8 +287,8 @@ you notice anything wrong with repo.msys2.org since the move, please tell us.
 Alexey is stepping down from his role as the main packager and two new packagers
 have been appointed in his place:
 
-- David Macek with [signing key 0x9078f532](http://keys.gnupg.net/pks/lookup?search=0x87771331B3F1FF5263856A6D974C8BE49078F532&fingerprint=on&op=vindex)
-- Christoph Reiter with [signing key 0xa0aa7f57](http://keys.gnupg.net/pks/lookup?search=0x5F944B027F7FE2091985AA2EFA11531AA0AA7F57&fingerprint=on&op=vindex)
+- David Macek with [signing key 0x9078f532](https://keyserver.ubuntu.com/pks/lookup?search=0x87771331B3F1FF5263856A6D974C8BE49078F532&fingerprint=on&op=vindex)
+- Christoph Reiter with [signing key 0xa0aa7f57](https://keyserver.ubuntu.com/pks/lookup?search=0x5F944B027F7FE2091985AA2EFA11531AA0AA7F57&fingerprint=on&op=vindex)
 
 You can see the keys in full without relying on keyservers in the [msys2-keyring
 GitHub repository](https://github.com/msys2/MSYS2-keyring/).
