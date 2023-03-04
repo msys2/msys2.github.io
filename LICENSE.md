@@ -1,18 +1,21 @@
-For historical reasons the license of the website content isn't very clear.
+For historical reasons the license of the website content isn't very clear. The
+content under `web/wiki` was initially maintained in a Sourceforge wiki, then in
+a GitHub wiki and then it was imported into this repo, and doesn't have a
+license.
 
-The content under `web/wiki` was initially maintained in a Sourceforge wiki,
-then in a GitHub wiki and then it was imported into this repo, and doesn't have a license.
+Any content added after 2023-03-03 is licensed under the following terms:
 
-Any content added after 2023-03-03 is licensed under the
-[BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) license.
+* The website content is licensed under [CC-BY-SA-4.0](./licenses/CC-BY-SA-4.0.txt)
+* All code samples are licensed under [CC0-1.0](./licenses/CC0-1.0.txt)
+* Everything else, like code/configuration/templates/stylesheets and similar, that are used for building and maintaining the website is licensed under [BSD-3-Clause](./licenses/BSD-3-Clause.txt)
 
-The same is true for everything added by the following authors independent of
-when it was added:
+The same is true for all content by the following authors independent of when it
+was added:
 
-* Christoph Reiter <https://github.com/lazka>
+* Christoph Reiter (<https://github.com/lazka>)
 
 This of course does not apply to any content that is explicitly licensed under
-different licenses, like `codeofconduct.md` for example.
+different licenses.
 
 ----
 
