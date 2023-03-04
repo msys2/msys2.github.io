@@ -13,6 +13,7 @@ The same is true for all content by the following authors independent of when it
 was added:
 
 * Christoph Reiter (<https://github.com/lazka>)
+* David Macek (<https://github.com/elieux>)
 
 This of course does not apply to any content that is explicitly licensed under
 different licenses.
