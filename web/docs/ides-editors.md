@@ -28,7 +28,7 @@ To add the MSYS2 terminal profile in Sublime Text, please follow these steps:
       "cmd": [
         "cmd.exe",
         "/c",
-        "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64"
+        "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64"
       ],
       "env": {},
       "enable": true,
@@ -40,3 +40,23 @@ To add the MSYS2 terminal profile in Sublime Text, please follow these steps:
 
 * Now the UCRT64 environment can be opened like any other shell in Sublime Text.
   Press Ctrl + Shift + P > Terminus: List shells > UCRT64 > Open in tab or pane.
+
+## Visual Studio Code
+
+Add these lines to your `settings.json`:
+
+```jsonc
+{
+    "terminal.integrated.profiles.windows": {
+        "MSYS2 UCRT": {
+            "path": "cmd.exe",
+            "args": [
+                "/c",
+                "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64"
+            ]
+        }
+    }
+}
+```
+
+Now the `MSYS2 UCRT` profile is available when launching a terminal.
