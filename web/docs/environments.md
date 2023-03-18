@@ -76,7 +76,7 @@ stuck in the past, not C99 compatible and is missing some features.
   DLLs built for different CRTs can be mixed as long as they don't share
   CRT objects, e.g. `FILE*`, across DLL boundaries.) Same rule is applied for
   MSVC compiled binaries because MSVC uses UCRT by default (if not changed).
-* Works out of the box on every Microsoft Windows versions.
+* Works out of the box on every version of Microsoft Windows.
 
 **UCRT** (Universal C Runtime) is a newer version which is also used by
 Microsoft Visual Studio by default. It should work and behave as if the
