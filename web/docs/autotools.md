@@ -19,7 +19,7 @@ WANT_AUTOMAKE='1.15' autoreconf -fvi
 
 ### autoconf wrapper
 
-The [autoconf wrapper](https://packages.msys2.org/package/autoconf-wrapper) defaults to the newest autoconf version. You can select an older version via the `WANT_AUTOCONF` env var.
+By default the [autoconf wrapper](https://packages.msys2.org/package/autoconf-wrapper) will detect the right version based on existing generated files and things will just work. You can also force a different version via the `WANT_AUTOCONF` env var, and the newest available version via `WANT_AUTOCONF=latest`.
 
 ```bash
 WANT_AUTOCONF='2.69' autoreconf -fvi
