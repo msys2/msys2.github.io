@@ -10,20 +10,20 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/docs/ci/">
+        <link rel="canonical" href="https://www.msys2.org/dev/build-process/">
       
       
-        <link rel="prev" href="../updating/">
+        <link rel="prev" href="../python/">
       
       
-        <link rel="next" href="../terminals/">
+        <link rel="next" href="../../wiki/Home/">
       
       <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Using MSYS2 in CI - MSYS2</title>
+        <title>Automated Build Process - MSYS2</title>
       
     
     
@@ -56,10 +56,10 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2 - Using MSYS2 in CI" />
-<meta property="og:description" content="There are many ways to use MSYS2 in CI. The recommended way is Github Actions." />
+<meta property="og:title" content="MSYS2 - Automated Build Process" />
+<meta property="og:description" content="" />
 
-<meta property="og:url" content="https://www.msys2.org/docs/ci/" />
+<meta property="og:url" content="https://www.msys2.org/dev/build-process/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="250" />
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-msys2-in-ci" class="md-skip">
+        <a href="#automated-build-process" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using MSYS2 in CI
+              Automated Build Process
             
           </span>
         </div>
@@ -311,16 +311,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
@@ -329,7 +327,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Documentation
@@ -342,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../what-is-msys2/" class="md-nav__link">
+      <a href="../../docs/what-is-msys2/" class="md-nav__link">
         What is MSYS2?
       </a>
     </li>
@@ -356,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../who-is-using-msys2/" class="md-nav__link">
+      <a href="../../docs/who-is-using-msys2/" class="md-nav__link">
         Who Is Using MSYS2?
       </a>
     </li>
@@ -370,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environments/" class="md-nav__link">
+      <a href="../../docs/environments/" class="md-nav__link">
         Environments
       </a>
     </li>
@@ -384,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../updating/" class="md-nav__link">
+      <a href="../../docs/updating/" class="md-nav__link">
         Updating MSYS2
       </a>
     </li>
@@ -396,80 +394,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Using MSYS2 in CI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../docs/ci/" class="md-nav__link">
         Using MSYS2 in CI
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#github-actions-recommended" class="md-nav__link">
-    Github Actions (recommended)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#appveyor" class="md-nav__link">
-    Appveyor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-systems" class="md-nav__link">
-    Other Systems
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -481,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminals/" class="md-nav__link">
+      <a href="../../docs/terminals/" class="md-nav__link">
         Terminals
       </a>
     </li>
@@ -495,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ides-editors/" class="md-nav__link">
+      <a href="../../docs/ides-editors/" class="md-nav__link">
         IDEs and Text Editors
       </a>
     </li>
@@ -536,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../package-management/" class="md-nav__link">
+      <a href="../../docs/package-management/" class="md-nav__link">
         Package Management
       </a>
     </li>
@@ -550,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../package-naming/" class="md-nav__link">
+      <a href="../../docs/package-naming/" class="md-nav__link">
         Package Naming
       </a>
     </li>
@@ -564,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../repos-mirrors/" class="md-nav__link">
+      <a href="../../docs/repos-mirrors/" class="md-nav__link">
         Repositories and Mirrors
       </a>
     </li>
@@ -578,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../package-management-tips/" class="md-nav__link">
+      <a href="../../docs/package-management-tips/" class="md-nav__link">
         Tips and Tricks
       </a>
     </li>
@@ -592,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../package-management-faq/" class="md-nav__link">
+      <a href="../../docs/package-management-faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -613,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filesystem-paths/" class="md-nav__link">
+      <a href="../../docs/filesystem-paths/" class="md-nav__link">
         Filesystem Paths
       </a>
     </li>
@@ -654,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cmake/" class="md-nav__link">
+      <a href="../../docs/cmake/" class="md-nav__link">
         Using CMake in MSYS2
       </a>
     </li>
@@ -668,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotools/" class="md-nav__link">
+      <a href="../../docs/autotools/" class="md-nav__link">
         Autotools
       </a>
     </li>
@@ -682,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/" class="md-nav__link">
+      <a href="../../docs/python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -696,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../docs/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -710,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cpp/" class="md-nav__link">
+      <a href="../../docs/cpp/" class="md-nav__link">
         C++
       </a>
     </li>
@@ -731,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../windows_support/" class="md-nav__link">
+      <a href="../../docs/windows_support/" class="md-nav__link">
         Supported Windows Versions and Hardware
       </a>
     </li>
@@ -745,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../docs/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -765,14 +694,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -781,7 +712,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -821,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/new-package/" class="md-nav__link">
+      <a href="../new-package/" class="md-nav__link">
         Creating a new Package
       </a>
     </li>
@@ -835,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/package-guidelines/" class="md-nav__link">
+      <a href="../package-guidelines/" class="md-nav__link">
         Package Guidelines
       </a>
     </li>
@@ -849,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/package-licensing/" class="md-nav__link">
+      <a href="../package-licensing/" class="md-nav__link">
         License Metadata
       </a>
     </li>
@@ -870,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/mirrors/" class="md-nav__link">
+      <a href="../mirrors/" class="md-nav__link">
         Mirrors
       </a>
     </li>
@@ -884,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/keyring/" class="md-nav__link">
+      <a href="../keyring/" class="md-nav__link">
         MSYS2 Keyring
       </a>
     </li>
@@ -898,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/python/" class="md-nav__link">
+      <a href="../python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -910,11 +841,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../dev/build-process/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Automated Build Process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Automated Build Process
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    Security Considerations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1329,36 +1301,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-actions-recommended" class="md-nav__link">
-    Github Actions (recommended)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#appveyor" class="md-nav__link">
-    Appveyor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-systems" class="md-nav__link">
-    Other Systems
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
+  <a href="#security-considerations" class="md-nav__link">
+    Security Considerations
   </a>
   
 </li>
@@ -1378,7 +1322,7 @@
                   
 
   
-    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/docs/ci.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/dev/build-process.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1386,103 +1330,63 @@
   
 
 
-<h1 id="using-msys2-in-ci">Using MSYS2 in CI</h1>
-<h2 id="github-actions-recommended">Github Actions (recommended)</h2>
-<p>Assuming you use GitHub this is the easiest way to get going. We provide a
-GitHub Action which handles everything from installing the latest MSYS2,
-updating it and installing all the packages you need. All you have to do is to
-provide a BASH script that runs your code in the MSYS2 environment.</p>
-<p>1) Create a workflow file, for example <code>.github/workflows/msys2.yml</code>, see <a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#creating-a-workflow-file">the GitHub docs for more details</a></p>
-<p>2) Paste the following into your workflow file:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MSYS2</span>
-<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<h1 id="automated-build-process">Automated Build Process</h1>
+<p>The following graph shows what happens between a PKGBUILD getting changed in git
+and the built package being available in the pacman repo.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant GIT as MSYS2/&lt;br&gt;MINGW-packages
+    participant API as packages.msys2.org
+    participant GHA as GitHub Actions
+    participant DT as msys2-autobuild
+    participant DEV as Developer
+    participant REPO as Pacman Repo
 
-<span class="nt">jobs</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">msys2-ucrt64</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows-latest</span>
-<span class="w">    </span><span class="nt">defaults</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msys2 {0}</span>
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msys2/setup-msys2@v2</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">msystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UCRT64</span>
-<span class="w">          </span><span class="nt">update</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">          </span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git mingw-w64-ucrt-x86_64-gcc</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI-Build</span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">echo &#39;Running in MSYS2!&#39;</span>
-<span class="w">          </span><span class="no">./ci-build.sh</span>
-</code></pre></div>
-<p>For more details on the 'msys2/setup-msys2' action and all the available options
-see <a href="https://github.com/marketplace/actions/setup-msys2">https://github.com/marketplace/actions/setup-msys2</a></p>
-<h2 id="appveyor">Appveyor</h2>
-<p>Appveyor provides a MSYS2 installation on all their images under <code>C:\msys64</code>,
-see <a href="https://www.appveyor.com/docs/windows-images-software/">https://www.appveyor.com/docs/windows-images-software/</a></p>
-<p>Make sure to use the <code>Visual Studio 2019</code> image or newer, as the MSYS2
-installation on older images is outdated and updating there no longer works.</p>
-<p>In case you want to update the MSYS2 installation and install packages you need
-to update MSYS2 first. For this you need to run the following commands:</p>
-<div class="highlight"><pre><span></span><code><span class="c"># Update MSYS2</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;pacman --noconfirm -Syuu&quot;</span>  <span class="c"># Core update (in case any core packages are outdated)</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;pacman --noconfirm -Syuu&quot;</span>  <span class="c"># Normal update</span>
+    GIT-&gt;&gt;GHA: GIT push trigger
+    GHA-&gt;&gt;GHA: parse PKGBUILDs
+    GHA--&gt;&gt;GIT: upload parsed PKGBUILDs
 
-<span class="c"># Then run your code</span>
-<span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
-<span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;UCRT64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s2">&quot;./ci-build.sh&quot;</span>
-</code></pre></div>
-<h2 id="docker">Docker</h2>
-<p>Install MSYS2 under <code>C:\msys64</code> into a Windows based Docker image:</p>
-<div class="highlight"><pre><span></span><code><span class="c"># select as base image matching your host to get process isolation</span>
-<span class="k">FROM</span><span class="w"> </span><span class="s">mcr.microsoft.com/windows/servercore:2004</span>
+loop Every 5 minutes
+    API-&gt;&gt;GIT: fetch parsed PKGBUILDs
+    GIT--&gt;&gt;API: 
+end
 
-<span class="k">SHELL</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;powershell&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Command&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&quot;</span><span class="p">]</span>
+loop Every 2 hours
+    DT-&gt;&gt;GHA: cron trigger
+    GHA-&gt;&gt;API: fetch TODO list
+    API--&gt;&gt;GHA: 
+    GHA-&gt;&gt;GIT: fetch PKGBUILDs
+    GIT--&gt;&gt;GHA: 
+    GHA-&gt;&gt;DT: fetch staging
+    DT--&gt;&gt;GHA: 
+    GHA-&gt;&gt;GHA: build packages
+    GHA--&gt;&gt;DT: upload packages
+end
 
-<span class="k">RUN</span><span class="w"> </span><span class="o">[</span>Net.ServicePointManager<span class="o">]</span>::SecurityProtocol<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>Net.SecurityProtocolType<span class="o">]</span>::Tls12<span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>Invoke-WebRequest<span class="w"> </span>-UseBasicParsing<span class="w"> </span>-uri<span class="w"> </span><span class="s2">&quot;https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe&quot;</span><span class="w"> </span>-OutFile<span class="w"> </span>msys2.exe<span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>.<span class="se">\m</span>sys2.exe<span class="w"> </span>-y<span class="w"> </span>-oC:<span class="se">\;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>Remove-Item<span class="w"> </span>msys2.exe<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="k">function</span><span class="w"> </span>msys<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>C:<span class="se">\m</span>sys64<span class="se">\u</span>sr<span class="se">\b</span>in<span class="se">\b</span>ash.exe<span class="w"> </span>@<span class="o">(</span><span class="s1">&#39;-lc&#39;</span><span class="o">)</span><span class="w"> </span>+<span class="w"> </span>@Args<span class="p">;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>msys<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>msys<span class="w"> </span><span class="s1">&#39;pacman --noconfirm -Syuu&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>msys<span class="w"> </span><span class="s1">&#39;pacman --noconfirm -Syuu&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>msys<span class="w"> </span><span class="s1">&#39;pacman --noconfirm -Scc&#39;</span><span class="p">;</span>
-</code></pre></div>
-<h2 id="other-systems">Other Systems</h2>
-<p>On systems that don't provide MSYS2 integration you need to install and update
-MSYS2 yourself.</p>
-<p>1) Download and install MSYS2. For CI systems we provide a self extracting 
-   archive, so you don't need any additional tools.</p>
-<div class="highlight"><pre><span></span><code><span class="c"># Download the archive</span>
-<span class="p">(</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadFile</span><span class="p">(</span><span class="s1">&#39;https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe&#39;</span><span class="p">,</span> <span class="s1">&#39;msys2.exe&#39;</span><span class="p">)</span>
-<span class="p">.\</span><span class="n">msys2</span><span class="p">.</span><span class="n">exe</span> <span class="n">-y</span> <span class="n">-oC</span><span class="p">:\</span>  <span class="c"># Extract to C:\msys64</span>
-<span class="nb">Remove-Item</span> <span class="n">msys2</span><span class="p">.</span><span class="n">exe</span>  <span class="c"># Delete the archive again</span>
-</code></pre></div>
-<p>2) Run MSYS2 for the first time and update it</p>
-<div class="highlight"><pre><span></span><code><span class="c"># Run for the first time</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39; &#39;</span>
-<span class="c"># Update MSYS2</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;pacman --noconfirm -Syuu&#39;</span>  <span class="c"># Core update (in case any core packages are outdated)</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;pacman --noconfirm -Syuu&#39;</span>  <span class="c"># Normal update</span>
-</code></pre></div>
-<p>3) Run your code (<code>ci-build.sh</code> in this case)</p>
-<div class="highlight"><pre><span></span><code><span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
-<span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;UCRT64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
-<span class="n">C</span><span class="p">:\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;./ci-build.sh&#39;</span>
-</code></pre></div>
-<h2 id="faq">FAQ</h2>
-<p><strong>My CI system doesn't exit at the end of the run and hangs. What's wrong?</strong></p>
-<p>In some cases CI systems will wait until all processes you have started have
-also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
-that will stay around in the background forever. To end them all you can run:</p>
-<div class="highlight"><pre><span></span><code><span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">FI</span> <span class="s2">&quot;MODULES eq msys-2.0.dll&quot;</span>
-</code></pre></div>
-<p><strong>MSYS2 fails to update on Appveyor with some "key is unknown" error. What's wrong?</strong></p>
-<p>The MSYS2 installation on older Appveyor images hasn't been updated in years and
-is no longer supported. Either use the <code>Visual Studio 2019</code> image or newer, or
-install MSYS2 manually as described above.</p>
+    DEV-&gt;&gt;DT: fetch packages
+    DT--&gt;&gt;DEV: 
+    DEV-&gt;&gt;DEV: sign packages
+    DEV-&gt;&gt;REPO: push to repo</code></pre>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Assuming changes to PKGBUILDs are properly reviewed, the pacman signature
+checking works, the upstream source is OK and all MSYS2 organization members are
+trusted we need to consider a bad actor controlling some part of the building
+process between the PKGBUILD getting changed and the package ending up signed in
+the pacman repo.</p>
+<p>A bad actor would need to get a package on the machine of the developer signing
+the package and adding it to the pacman repo. We take the following precautions:</p>
+<ul>
+<li>We only build packages automatically with GitHub Actions without third party
+  actions, excluding the official GitHub ones. We assume the GHA images and
+  official actions are safe.</li>
+<li>The download tool used by the person signing the package checks that the
+  binaries where uploaded by a restricted set of GitHub users or GHA.
+  We assume the bad actor doesn't have git push rights.</li>
+<li>Packages too large for GHA get built/signed by MSYS2 developers on their
+  machines. We assume the developer machines are safe.</li>
+<li>We enforce 2FA for the MSYS2 organization to make account takeovers of
+  existing MSYS2 developers harder.</li>
+</ul>
+<p>Feedback and ideas on how to improve this welcome.</p>
 
 
 
