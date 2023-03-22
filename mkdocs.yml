@@ -66,7 +66,11 @@ markdown_extensions:
     - pymdownx.magiclink
     - pymdownx.mark
     - pymdownx.smartsymbols
-    - pymdownx.superfences
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
     - pymdownx.tasklist:
         custom_checkbox: true
     - pymdownx.tilde
@@ -110,6 +114,7 @@ nav:
         - dev/mirrors.md
         - dev/keyring.md
         - dev/python.md
+        - dev/build-process.md
     - Other Topics:
         # Old stuff that should ideally move to the above categories in the future
         - wiki/Home.md
