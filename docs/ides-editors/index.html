@@ -466,6 +466,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    Visual Studio Code
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1307,6 +1314,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    Visual Studio Code
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1361,7 +1375,7 @@ To add the MSYS2 terminal profile in Sublime Text, please follow these steps:</p
 <span class="w">      </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="s2">&quot;cmd.exe&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;/c&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;</span>
+<span class="w">        </span><span class="s2">&quot;C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;</span>
 <span class="w">      </span><span class="p">],</span>
 <span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
 <span class="w">      </span><span class="nt">&quot;enable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -1374,6 +1388,21 @@ To add the MSYS2 terminal profile in Sublime Text, please follow these steps:</p
 <li>Now the UCRT64 environment can be opened like any other shell in Sublime Text.
   Press Ctrl + Shift + P &gt; Terminus: List shells &gt; UCRT64 &gt; Open in tab or pane.</li>
 </ul>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>Add these lines to your <code>settings.json</code>:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;terminal.integrated.profiles.windows&quot;: {
+        &quot;MSYS2 UCRT&quot;: {
+            &quot;path&quot;: &quot;cmd.exe&quot;,
+            &quot;args&quot;: [
+                &quot;/c&quot;,
+                &quot;C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;
+            ]
+        }
+    }
+}
+</code></pre></div>
+<p>Now the <code>MSYS2 UCRT</code> profile is available when launching a terminal.</p>
 
 
 
