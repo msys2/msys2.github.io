@@ -102,6 +102,7 @@ nav:
           - docs/python.md
           - docs/git.md
           - docs/cpp.md
+          - docs/pkgconfig.md
         - docs/windows_support.md
         - docs/faq.md
     - Development:
