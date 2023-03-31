@@ -31,7 +31,7 @@ LLVM/Clang has now been updated to v16, here are some things to look out for:
   are building with it.
 
 * Packages not compatible with llvm v16: So we don't have to wait for all
-  packages/projects to support the newest llvm version we added new packages for
+  packages/projects to support the newest llvm version, we added new packages for
   llvm v14 and v15 which only contain static builds and are now used by the
   packages not supporting llvm v16. This currently affects python-llvmlite,
   openshadinglanguage and include-what-you-use.
