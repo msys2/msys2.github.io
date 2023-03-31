@@ -25,7 +25,7 @@ LLVM/Clang has now been updated to v16, here are some things to look out for:
   So watch out for changes in your configure results.
 
 * fortran/flang: flang, the llvm based Fortran compiler, is now capable of
-  building some of our Fortran based packages, but despite that it still has
+  building some of our Fortran based packages. But despite that, it still has
   known issues of generating wrong or broken code without warnings and should
   not be used in production. The same is true for all Fortran based packages we
   are building with it.
