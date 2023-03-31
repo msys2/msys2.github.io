@@ -10,20 +10,20 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/docs/ides-editors/">
+        <link rel="canonical" href="https://www.msys2.org/docs/pkgconfig/">
       
       
-        <link rel="prev" href="../terminals/">
+        <link rel="prev" href="../cpp/">
       
       
-        <link rel="next" href="../package-management/">
+        <link rel="next" href="../windows_support/">
       
       <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
-        <title>IDEs and Text Editors - MSYS2</title>
+        <title>pkg-config - MSYS2</title>
       
     
     
@@ -56,10 +56,10 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2 - IDEs and Text Editors" />
+<meta property="og:title" content="MSYS2 - pkg-config" />
 <meta property="og:description" content="" />
 
-<meta property="og:url" content="https://www.msys2.org/docs/ides-editors/" />
+<meta property="og:url" content="https://www.msys2.org/docs/pkgconfig/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="250" />
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ides-and-text-editors" class="md-skip">
+        <a href="#pkg-config" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IDEs and Text Editors
+              pkg-config
             
           </span>
         </div>
@@ -424,59 +424,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          IDEs and Text Editors
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ides-editors/" class="md-nav__link">
         IDEs and Text Editors
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sublime-text" class="md-nav__link">
-    Sublime Text
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visual-studio-code" class="md-nav__link">
-    Visual Studio Code
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -604,14 +556,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" checked>
       
       
       
@@ -620,7 +574,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_10">
           <span class="md-nav__icon md-icon"></span>
           Languages & Tools
@@ -701,11 +655,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../pkgconfig/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          pkg-config
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         pkg-config
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefix-relocation" class="md-nav__link">
+    Prefix / Relocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax-paths-escaping" class="md-nav__link">
+    Syntax, Paths &amp; Escaping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cflagsprivate-static-libraries" class="md-nav__link">
+    Cflags.private / Static Libraries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1322,15 +1338,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sublime-text" class="md-nav__link">
-    Sublime Text
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#visual-studio-code" class="md-nav__link">
-    Visual Studio Code
+  <a href="#prefix-relocation" class="md-nav__link">
+    Prefix / Relocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax-paths-escaping" class="md-nav__link">
+    Syntax, Paths &amp; Escaping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cflagsprivate-static-libraries" class="md-nav__link">
+    Cflags.private / Static Libraries
   </a>
   
 </li>
@@ -1350,7 +1380,7 @@
                   
 
   
-    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/docs/ides-editors.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/docs/pkgconfig.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1358,65 +1388,84 @@
   
 
 
-<h1 id="ides-and-text-editors">IDEs and Text Editors</h1>
-<h2 id="sublime-text">Sublime Text</h2>
-<p><img align="right" alt="image" src="../sublime.png" width="45%" /></p>
-<p><a href="https://www.sublimetext.com/">Sublime Text</a> is a text and source code editor.
-It features syntax highlighting, code folding, terminal output window, and more.
-To add the MSYS2 terminal profile in Sublime Text, please follow these steps:</p>
+<h1 id="pkg-config">pkg-config</h1>
+<p>We default to <a href="https://github.com/pkgconf/pkgconf">pkgconf</a> as our pkg-config
+implementation. This page lists some Windows specific topics/issues/challenges
+for working with pkg-config on Windows.</p>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>By default, the MSYS2 shells set the following environment variables with paths for the active environment to support pkgconf:</p>
 <ul>
-<li>
-<p>Install <a href="https://packagecontrol.io/packages/Terminus">Terminus package</a> using
-  Package Control.</p>
-</li>
-<li>
-<p>In the menu bar, select Preferences &gt; Package Settings &gt; Terminus &gt; Settings
-  option. This will open Terminus.sublime-settings file in separate Sublime Text
-  window with two panes.</p>
-</li>
-<li>
-<p>In the right pane, add the following configuration for UCRT64.</p>
-</li>
-<li>
-<p>Change the command options as usual to use other terminal environments. If the
-  Terminus.sublime-settings is not empty append the above section after others.</p>
-</li>
+<li><code>PKG_CONFIG_PATH</code> - e.g. <code>/ucrt64/lib/pkgconfig:/ucrt64/share/pkgconfig</code></li>
+<li><code>PKG_CONFIG_SYSTEM_INCLUDE_PATH</code> - e.g. <code>/ucrt64/include</code></li>
+<li><code>PKG_CONFIG_SYSTEM_LIBRARY_PATH</code> - e.g. <code>/ucrt64/lib</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;shell_configs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UCRT64&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;cmd.exe&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;/c&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;</span>
-<span class="w">      </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
-<span class="w">      </span><span class="nt">&quot;enable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;windows&quot;</span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
+<h2 id="prefix-relocation">Prefix / Relocation</h2>
+<p>The first few lines of a .pc file usually look something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">prefix</span><span class="o">=</span>/ucrt64
+<span class="nv">includedir</span><span class="o">=</span><span class="si">${</span><span class="nv">prefix</span><span class="si">}</span>/include
+<span class="nv">libdir</span><span class="o">=</span><span class="si">${</span><span class="nv">prefix</span><span class="si">}</span>/lib
 </code></pre></div>
-<ul>
-<li>Now the UCRT64 environment can be opened like any other shell in Sublime Text.
-  Press Ctrl + Shift + P &gt; Terminus: List shells &gt; UCRT64 &gt; Open in tab or pane.</li>
-</ul>
-<h2 id="visual-studio-code">Visual Studio Code</h2>
-<p>Add these lines to your <code>settings.json</code>:</p>
-<div class="highlight"><pre><span></span><code>{
-    &quot;terminal.integrated.profiles.windows&quot;: {
-        &quot;MSYS2 UCRT&quot;: {
-            &quot;path&quot;: &quot;cmd.exe&quot;,
-            &quot;args&quot;: [
-                &quot;/c&quot;,
-                &quot;C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64&quot;
-            ]
-        }
-    }
-}
+<p>As you can see <code>/ucrt64</code> is not a proper Windows path, but that's not a problem
+because by default <code>prefix</code> will be ignored, or rather re-defined by
+pkgconf/pkg-config based on the location of the .pc file itself. It will strip
+of <code>/&lt;...&gt;/pkgconfig</code> from the directory of the <code>.pc</code> file and use the resulting
+path as the new <code>prefix</code> (as documented
+<a href="https://gitlab.freedesktop.org/pkg-config/pkg-config/-/blob/d97db4fae4c1cd099b506970b285dc2afd818ea2/README.win32#L17-22">here</a>,
+which is sightly outdated as the second parent doesn't have to be <code>(lib|share)</code>
+but can be anything)</p>
+<p>So if the file is at <code>C:/msys64/ucrt64/lib/pkgconfig/glib-2.0.pc</code> it will take
+the directory <code>C:/msys64/ucrt64/lib/pkgconfig</code>, then strip of the last two
+parts, leading to <code>C:/msys64/ucrt64</code> and use that as the new prefix. This way
+you will get the right output independent of where MSYS2 is installed. You can
+disable this feature by passing <code>--dont-define-prefix</code> to pkgconf if wanted.</p>
+<p>Relocation depends on all other variables being relative to <code>prefix</code> by using
+<code>${prefix}</code> like in the example above. But some projects use absolute paths and
+in theory don't support relocation, which looks something like:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">prefix</span><span class="o">=</span>/ucrt64
+<span class="nv">includedir</span><span class="o">=</span>/ucrt64/include
+<span class="nv">libdir</span><span class="o">=</span>/ucrt64/lib
 </code></pre></div>
-<p>Now the <code>MSYS2 UCRT</code> profile is available when launching a terminal.</p>
+<p>Luckily both pkg-config and pkgconf include a hack which replace all values that
+start with the value of <code>prefix</code> with <code>${prefix}</code>, so <code>/ucrt64/include</code> becomes
+<code>${prefix}/include</code>, making them relocatable anyway. So, despite <code>prefix</code>
+normally being ignored it might still be useful for such broken <code>.pc</code> files.
+Ideally all projects would only use relative paths, as absolute paths can also
+lead to problems on other platforms, see
+<a href="https://www.bassi.io/articles/2018/03/15/pkg-config-and-paths/">https://www.bassi.io/articles/2018/03/15/pkg-config-and-paths/</a>.</p>
+<p>The above relocation logic sadly breaks down when you install the <code>.pc</code> into a
+different custom location, like <code>/lib/mylib-1.2/pkgconfig</code> as it will derive the
+wrong <code>prefix</code> value for them. See <a href="https://github.com/pkgconf/pkgconf/issues/286">https://github.com/pkgconf/pkgconf/issues/286</a>
+for a more detailed summary of the problem. The only workaround there is to
+patch the <code>.pc</code> file with the wrong prefix in mind, like in this example:
+<a href="https://github.com/msys2/MINGW-packages/blob/9d4a713ce27c363a0ec63877775e229e7e4f36cb/mingw-w64-ffmpeg4.4/PKGBUILD#L215-L217">https://github.com/msys2/MINGW-packages/blob/9d4a713ce27c363a0ec63877775e229e7e4f36cb/mingw-w64-ffmpeg4.4/PKGBUILD#L215-L217</a></p>
+<h2 id="syntax-paths-escaping">Syntax, Paths &amp; Escaping</h2>
+<p>pkg-config values can be dumped as is into a Unix shell, so if you want to use
+backslashes or spaces you need to escape them with <code>\</code>.  So for example:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">mypath</span><span class="o">=</span>C:<span class="se">\\</span>my<span class="se">\ </span>path<span class="se">\ </span>with<span class="se">\ </span>spaces<span class="se">\\</span>file.txt
+</code></pre></div>
+<p>Since this is rather uncommon on Unix systems and tools might not expect it,
+it's recommended to avoid spaces in paths and use forward slashes instead of
+backslashes instead. Ideally both should work though.</p>
+<h2 id="cflagsprivate-static-libraries">Cflags.private / Static Libraries</h2>
+<p><a href="https://github.com/pkgconf/pkgconf">pkgconf</a>, unlike
+<a href="https://gitlab.freedesktop.org/pkg-config/pkg-config">pkg-config</a>, supports an
+additional field called <code>Cflags.private</code> which is especially relevant on
+Windows.</p>
+<p>Many projects require that you define a specific C macro when statically linking
+against it on Windows, something like <code>-DMYLIB_STATIC</code>, or they define a macro
+via <code>Cflags</code> and require that you unset it when linking statically like
+<code>-UMYLIB_DLL</code>.</p>
+<p><code>Cflags.private</code> allows you to add extra CFLAGS that are only emitted via
+<code>--cflags</code> when <code>--static</code> is passed, making static builds work automatically.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pkgconf<span class="w"> </span>--cflags<span class="w"> </span>libxml-2.0
+<span class="go">-IC:/msys64/ucrt64/include/libxml2</span>
+<span class="gp">$ </span>pkgconf<span class="w"> </span>--cflags<span class="w"> </span>--static<span class="w"> </span>libxml-2.0
+<span class="go">-IC:/msys64/ucrt64/include/libxml2 -DLIBXML_STATIC</span>
+<span class="gp">$ </span>pkgconf<span class="w"> </span>--cflags<span class="w"> </span>x264
+<span class="go">-DX264_API_IMPORTS</span>
+<span class="gp">$ </span>pkgconf<span class="w"> </span>--cflags<span class="w"> </span>--static<span class="w"> </span>x264
+<span class="go">-DX264_API_IMPORTS -UX264_API_IMPORTS</span>
+</code></pre></div>
 
 
 
