@@ -17,7 +17,7 @@ LLVM/Clang has now been updated to v16, here are some things to look out for:
   * The Gentoo bug which tracks all related issues in Gentoo: https://bugs.gentoo.org/870412
 
 * autoconf bugs: The stricter defaults in clang v16 exposed some autoconf bugs
-  which leads to some compiler checks returning the wrong results. We have
+  which lead to some compiler checks returning the wrong results. We have
   backported the respective fixes into all our autoconf versions (2.13, 2.69 and
   2.71) and updated autoconf-archive, but this means you will have to run
   autoreconf to get those fixes. There is also a chance that other checks in
