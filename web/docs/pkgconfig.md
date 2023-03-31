@@ -25,7 +25,7 @@ libdir=${prefix}/lib
 As you can see `/ucrt64` is not a proper Windows path, but that's not a problem
 because by default `prefix` will be ignored, or rather re-defined by
 pkgconf/pkg-config based on the location of the .pc file itself. It will strip
-of `/<...>/pkgconf` from the directory of the `.py` file and use the resulting
+of `/<...>/pkgconfig` from the directory of the `.pc` file and use the resulting
 path as the new `prefix` (as documented
 [here](https://gitlab.freedesktop.org/pkg-config/pkg-config/-/blob/d97db4fae4c1cd099b506970b285dc2afd818ea2/README.win32#L17-22),
 which is sightly outdated as the second parent doesn't have to be `(lib|share)`
