@@ -5,6 +5,37 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+# 2023-03-31 - LLVM 16
+
+LLVM/Clang has now been updated to v16, here are some things to look out for:
+
+* Stricter C compiler: Various previously warnings are now errors by default and
+  might make your build fail. See the following for more information:
+
+  * The upstream changelog entry: https://releases.llvm.org/16.0.0/tools/clang/docs/ReleaseNotes.html#potentially-breaking-changes
+  * The Gentoo guide for how to adjust your code for the new stricter defaults: https://wiki.gentoo.org/wiki/Modern_C_porting
+  * The Gentoo bug which tracks all related issues in Gentoo: https://bugs.gentoo.org/870412
+
+* autoconf bugs: The stricter defaults in clang v16 exposed some autoconf bugs
+  which leads to some compiler checks returning the wrong results. We have
+  backported the respective fixes into all our autoconf versions (2.13, 2.69 and
+  2.71) and updated autoconf-archive, but this means you will have to run
+  autoreconf to get those fixes. There is also a chance that other checks in
+  configure.ac or m4 macros shipped with your project will need to be updated.
+  So watch out for changes in your configure results.
+
+* fortran/flang: flang, the llvm based Fortran compiler, is now capable of
+  building some of our Fortran based packages, but despite that it still has
+  known issues of generating wrong or broken code without warnings and should
+  not be used in production. The same is true for all Fortran based packages we
+  are building with it.
+
+* Packages not compatible with llvm v16: So we don't have to wait for all
+  packages/projects to support the newest llvm version we added new packages for
+  llvm v14 and v15 which only contain static builds and are now used by the
+  packages not supporting llvm v16. This currently affects python-llvmlite,
+  openshadinglanguage and include-what-you-use.
+
 ### 2023-02-10 - Server maintenance on 2023-02-18/19
 
 There will be a short server maintenance around the weekend of 2023-02-18/19 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some subdomain redirects of our website.
