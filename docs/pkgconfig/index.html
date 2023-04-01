@@ -1408,7 +1408,7 @@ for working with pkg-config on Windows.</p>
 <p>As you can see <code>/ucrt64</code> is not a proper Windows path, but that's not a problem
 because by default <code>prefix</code> will be ignored, or rather re-defined by
 pkgconf/pkg-config based on the location of the .pc file itself. It will strip
-of <code>/&lt;...&gt;/pkgconfig</code> from the directory of the <code>.pc</code> file and use the resulting
+off <code>/&lt;...&gt;/pkgconfig</code> from the directory of the <code>.pc</code> file and use the resulting
 path as the new <code>prefix</code> (as documented
 <a href="https://gitlab.freedesktop.org/pkg-config/pkg-config/-/blob/d97db4fae4c1cd099b506970b285dc2afd818ea2/README.win32#L17-22">here</a>,
 which is sightly outdated as the second parent doesn't have to be <code>(lib|share)</code>
