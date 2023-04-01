@@ -12,9 +12,9 @@ LLVM/Clang has now been updated to v16, here are some things to look out for:
 * Stricter C compiler: Various previously warnings are now errors by default and
   might make your build fail. See the following for more information:
 
-  * The upstream changelog entry: https://releases.llvm.org/16.0.0/tools/clang/docs/ReleaseNotes.html#potentially-breaking-changes
-  * The Gentoo guide for how to adjust your code for the new stricter defaults: https://wiki.gentoo.org/wiki/Modern_C_porting
-  * The Gentoo bug which tracks all related issues in Gentoo: https://bugs.gentoo.org/870412
+    * The upstream changelog entry: https://releases.llvm.org/16.0.0/tools/clang/docs/ReleaseNotes.html#potentially-breaking-changes
+    * The Gentoo guide for how to adjust your code for the new stricter defaults: https://wiki.gentoo.org/wiki/Modern_C_porting
+    * The Gentoo bug which tracks all related issues in Gentoo: https://bugs.gentoo.org/870412
 
 * autoconf bugs: The stricter defaults in clang v16 exposed some autoconf bugs
   which lead to some compiler checks returning the wrong results. We have
