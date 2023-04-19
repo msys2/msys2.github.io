@@ -44,7 +44,6 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | repo.extreme-ix.org | [HTTPS](https://repo.extreme-ix.org/msys2/) \| [RSYNC](rsync://repo.extreme-ix.org/msys2/) | <sysadmin@x3me.net> |
 | mirrors.hit.edu.cn | [HTTPS](https://mirrors.hit.edu.cn/msys2/) \| [RSYNC](rsync://mirrors.hit.edu.cn/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/180) |
 | mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/185) |
-| mirror2.sandyriver.net | [HTTPS](https://mirror2.sandyriver.net/pub/software/msys2/) \| [RSYNC](rsync://mirror2.sandyriver.net/pub/software/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/196) |
 | quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | <root@quantum-mirror.hu> |
 
 (\*) rsync is required by [mirrorbits](https://github.com/etix/mirrorbits), which we use to auto-redirect users to a local mirror via [mirror.msys2.org](https://mirror.msys2.org)
@@ -56,6 +55,7 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | Name | URLs  | Note    |
 | -    | -     | -       |
 | fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | [website](https://fastmirror.pp.ua) - too slow for T1 |
+| mirror2.sandyriver.net | [HTTPS](https://mirror2.sandyriver.net/pub/software/msys2/) \| [RSYNC](rsync://mirror2.sandyriver.net/pub/software/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/196) - flaky in CI |
 | ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> |
 | mirrors.bit.edu.cn | [HTTPS](https://mirrors.bit.edu.cn/msys2/) | <webmaster@bitnp.net> |
 | mirror.jmu.edu | [HTTPS](https://mirror.jmu.edu/pub/msys2/) | <mirrormaster@jmu.edu> |
