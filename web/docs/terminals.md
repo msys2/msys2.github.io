@@ -89,3 +89,22 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
     ```
     "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh"
     ```
+
+## Konsole
+
+![image](konsole.png){: align=right width=45% }
+
+[Konsole](https://konsole.kde.org/) is a powerful and customizable terminal
+emulator made by KDE. MSYS2 provides it as a [mingw package](https://packages.msys2.org/base/mingw-w64-konsole).
+To use it with MSYS2, first install the appropriate package and create a new
+profile with the following steps.
+
+* In the Konsole window menu bar, select "Settings" > "Create New Profile...".
+* Select it as a default profile to always open msys2 environment at start.
+* Add profile name and following command.
+
+```
+C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64
+```
+
+* Now close and restart Konsole.
