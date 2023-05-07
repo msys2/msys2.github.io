@@ -459,6 +459,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#konsole" class="md-nav__link">
+    Konsole
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1335,6 +1342,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#konsole" class="md-nav__link">
+    Konsole
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1430,6 +1444,22 @@ and WSL can also be extended to support a MSYS2 shell.</p>
 <li>To set <code>zsh</code> shell as default:
     <div class="highlight"><pre><span></span><code>&quot;commandline&quot;: &quot;C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh&quot;
 </code></pre></div></li>
+</ul>
+<h2 id="konsole">Konsole</h2>
+<p><img align="right" alt="image" src="../konsole.png" width="45%" /></p>
+<p><a href="https://konsole.kde.org/">Konsole</a> is a powerful and customizable terminal
+emulator made by KDE. MSYS2 provides it as a <a href="https://packages.msys2.org/base/mingw-w64-konsole">mingw package</a>.
+To use it with MSYS2, first install the appropriate package and create a new
+profile with the following steps.</p>
+<ul>
+<li>In the Konsole window menu bar, select "Settings" &gt; "Create New Profile...".</li>
+<li>Select it as a default profile to always open msys2 environment at start.</li>
+<li>Add profile name and following command.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64
+</code></pre></div>
+<ul>
+<li>Now close and restart Konsole.</li>
 </ul>
 
 
