@@ -57,10 +57,15 @@ MSYS2 and what for.
 
     ![Empty MSYS2 terminal window](images/install-4-terminal.png)
 
-6. You will probably want to install some tools like the mingw-w64 GCC to start compiling:
+6. You will probably want to install some tools like the mingw-w64 GCC to start compiling projects. Run the following command:
 
     ```console
-    $ pacman -S mingw-w64-ucrt-x86_64-gcc
+    pacman -S mingw-w64-ucrt-x86_64-gcc
+    ```
+
+7. The terminal window will show the output as below. Press 'Enter' to continue:
+
+    ```console
     resolving dependencies...
     looking for conflicting packages...
 
@@ -82,14 +87,14 @@ MSYS2 and what for.
     [... downloading and installation continues ...]
     ```
 
-7. Now you can call `gcc` to build software for Windows.
+8. Now you can call `gcc` to build software for Windows.
 
     ```console
     $ gcc --version
     gcc.exe (Rev1, Built by MSYS2 project) 12.2.0
     ```
 
-8. After installing MSYS2 it will update itself via `pacman`, see the [update guide](./docs/updating.md) for more information.
+9. After installing MSYS2 it will update itself via `pacman`, see the [update guide](./docs/updating.md) for more information.
 
 
 ## Sponsors
