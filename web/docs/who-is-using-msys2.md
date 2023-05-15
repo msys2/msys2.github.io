@@ -30,5 +30,6 @@
 * [darktable](https://www.darktable.org/) uses MSYS2 for its Windows releases and for CI ([Documentation](https://github.com/darktable-org/darktable/tree/master/packaging/windows))
 * [Mesh2HRTF](https://mesh2hrtf.sourceforge.io) uses MSYS2 for its Windows NumCalc [binaries](https://sourceforge.net/p/mesh2hrtf-tools/code/ci/master/tree/NumCalc_WindowsExe/) ([Documentation](https://sourceforge.net/p/mesh2hrtf/wiki/Installation_2/#compiling-numcalc-on-windows-using-msys2)).
 * [PVSnesLib](https://github.com/alekmaul/pvsneslib) uses MSYS2 to build ROMs on Windows
+* [Intel® Media Transport Library](https://github.com/OpenVisualCloud/Media-Transport-Library) uses MSYS2 for its Windows building and CI ([Documentation](https://github.com/OpenVisualCloud/Media-Transport-Library/blob/main/doc/build_WIN_MSYS2.md)).
 
 *Feel free to add your project to this list!*
