@@ -29,7 +29,6 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | Name | URLs  |  Note |
 | -    | -     | -     |
 | mirror.umd.edu | [HTTPS](https://mirror.umd.edu/msys2/) \| [RSYNC](rsync://mirror.umd.edu/msys2/) | [website](https://mirror.umd.edu/)|
-| download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) \| [RSYNC](rsync://download.nus.edu.sg/msys2/) | <download@nus.edu.sg> |
 | ftp.acc.umu.se | [HTTPS](https://ftp.acc.umu.se/mirror/msys2.org/) \| [RSYNC](rsync://ftp.acc.umu.se/mirror/msys2.org/) | <ftp-adm@acc.umu.se> |
 | ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> |
 | ftp.osuosl.org | [HTTPS](https://ftp.osuosl.org/pub/msys2/) \| [RSYNC](rsync://rsync.osuosl.org/msys2/) | <hosting-request@osuosl.org> | |
@@ -54,8 +53,6 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 
 | Name | URLs  | Note    |
 | -    | -     | -       |
-| fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | [website](https://fastmirror.pp.ua) - too slow for T1 |
-| mirror2.sandyriver.net | [HTTPS](https://mirror2.sandyriver.net/pub/software/msys2/) \| [RSYNC](rsync://mirror2.sandyriver.net/pub/software/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/196) - flaky in CI |
 | ftp.cc.uoc.gr | [HTTPS](https://ftp.cc.uoc.gr/mirrors/msys2/) | <mirrors@cc.uoc.gr> |
 | mirrors.bit.edu.cn | [HTTPS](https://mirrors.bit.edu.cn/msys2/) | <webmaster@bitnp.net> |
 | mirror.jmu.edu | [HTTPS](https://mirror.jmu.edu/pub/msys2/) | <mirrormaster@jmu.edu> |
@@ -67,10 +64,11 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | mirror.iscas.ac.cn | [HTTPS](https://mirror.iscas.ac.cn/msys2/) | |
 | mirrors.tencent.com | [HTTPS](https://mirrors.tencent.com/msys2/) | <petzhou@tencent.com> |
 | mirror.ufro.cl | [HTTPS](https://mirror.ufro.cl/msys2/) | [Jonathan Gutiérrez](mailto:jonathan.gutierrez@ufrontera.cl) |
+| download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) | <download@nus.edu.sg> |
 
 ## Adding a New Mirror
 
-The repository size is ~550 GiB (see https://mirror.jmu.edu/ for current stats)
+The repository size is ~725 GiB (see https://mirror.jmu.edu/ for current stats)
 with the distribution of sizes like this:
 
 ```
