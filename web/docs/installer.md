@@ -1,4 +1,4 @@
-# MSYS2 Installer & Archives
+# MSYS2 Installer
 
 The [MSYS2 installer](https://github.com/msys2/msys2-installer) can be used to
 set up an initial MSYS2 environment. For further updating pacman is used. See
