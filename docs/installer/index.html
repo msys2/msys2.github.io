@@ -1447,16 +1447,24 @@
 
 
 <h1 id="msys2-installer-archives">MSYS2 Installer &amp; Archives</h1>
-<p>The MSYS2 installer can be used to set up an initial MSYS2 environment. For
-further updating pacman is used. See <a href="../updating/">the updating guide</a> for
-more information.</p>
+<p>The <a href="https://github.com/msys2/msys2-installer">MSYS2 installer</a> can be used to
+set up an initial MSYS2 environment. For further updating pacman is used. See
+<a href="../updating/">the updating guide</a> for more information.</p>
 <p><img alt="screenshot" src="../installer.png" /></p>
-<p>The installer is based on the Qt Installer Framework and built using the
-<a href="https://github.com/msys2/msys2-installer">following scripts</a>. In addition to
-the GUI installer we provide a self extracting archive and a XZ compressed
-archive with the same content.</p>
-<p>The installer executables and tarballs are hosted on <a href="https://github.com/msys2/msys2-installer/releases">GitHub</a> as well as on the <a href="https://repo.msys2.org/distrib">repo server</a>. We also provide <a href="https://github.com/msys2/msys2-installer/releases/tag/nightly-x86_64">nightly builds</a>.</p>
+<p>The installer comes in three variants:</p>
+<ul>
+<li><code>msys2-x86_64-.exe</code>: The GUI installer (see screenshot above)</li>
+<li><code>msys2-base-x86_64-*.sfx.exe</code>: Just the files in a self extracting archive (missing Windows integration like shortcuts, uninstall entry, but otherwise works the same)</li>
+<li><code>msys2-base-x86_64-*.tar.xz</code>: Same as <code>.sfx.exe</code> but as an XZ archive</li>
+</ul>
+<p>The installer executables and tarballs are hosted on
+<a href="https://github.com/msys2/msys2-installer/releases">GitHub</a> as well as on the
+<a href="https://repo.msys2.org/distrib">repo server</a>. We also provide <a href="https://github.com/msys2/msys2-installer/releases/tag/nightly-x86_64">nightly
+builds</a>.</p>
 <h2 id="cli-usage-examples">CLI Usage Examples</h2>
+<p>The GUI installer utilizes the <a href="https://doc.qt.io/qtinstallerframework/">Qt Installer
+Framework</a> which also offers CLI
+options for automation.</p>
 <p>Installing the GUI installer via the CLI to <code>C:\msys64</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">msys2-x86_64-latest</span><span class="p">.</span><span class="n">exe</span> <span class="k">in</span> <span class="p">-</span><span class="n">-confirm-command</span> <span class="p">-</span><span class="n">-accept-messages</span> <span class="p">-</span><span class="n">-root</span> <span class="n">C</span><span class="p">:/</span><span class="n">msys64</span>
 </code></pre></div>
