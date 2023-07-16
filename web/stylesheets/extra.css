@@ -4,7 +4,7 @@
 }
 
 :root {
-    --msys2-red: #c0000d;
+    --msys2-red: #993232;
     --msys2-dark-bg: #333;
     --msys2-text: #3a3a3a;
     --msys2-dark-text: #303030;
@@ -41,7 +41,7 @@
     font-size: 22px;
     margin: 0;
     letter-spacing: -0.5px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.1em;
     padding-bottom: 0.7em;
 }
@@ -65,14 +65,14 @@
 .md-typeset h2 {
     font-size: 1rem;
     color: var(--msys2-red);
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 1.2rem;
 }
 
 .md-typeset h3 {
     font-size: 0.85rem;
     color: var(--msys2-dark-text);
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 1.2rem;
 }
 
