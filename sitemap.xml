@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.msys2.org/docs/installer/</loc>
+         <lastmod>2023-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.msys2.org/docs/package-management-faq/</loc>
          <lastmod>2023-07-16</lastmod>
          <changefreq>daily</changefreq>
