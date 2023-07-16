@@ -1,19 +1,27 @@
 # MSYS2 Installer & Archives
 
-The MSYS2 installer can be used to set up an initial MSYS2 environment. For
-further updating pacman is used. See [the updating guide](./updating.md) for
-more information.
+The [MSYS2 installer](https://github.com/msys2/msys2-installer) can be used to
+set up an initial MSYS2 environment. For further updating pacman is used. See
+[the updating guide](./updating.md) for more information.
 
 ![screenshot](installer.png)
 
-The installer is based on the Qt Installer Framework and built using the
-[following scripts](https://github.com/msys2/msys2-installer). In addition to
-the GUI installer we provide a self extracting archive and a XZ compressed
-archive with the same content.
+The installer comes in three variants:
 
-The installer executables and tarballs are hosted on [GitHub](https://github.com/msys2/msys2-installer/releases) as well as on the [repo server](https://repo.msys2.org/distrib). We also provide [nightly builds](https://github.com/msys2/msys2-installer/releases/tag/nightly-x86_64).
+* `msys2-x86_64-.exe`: The GUI installer (see screenshot above)
+* `msys2-base-x86_64-*.sfx.exe`: Just the files in a self extracting archive (missing Windows integration like shortcuts, uninstall entry, but otherwise works the same)
+* `msys2-base-x86_64-*.tar.xz`: Same as `.sfx.exe` but as an XZ archive
+
+The installer executables and tarballs are hosted on
+[GitHub](https://github.com/msys2/msys2-installer/releases) as well as on the
+[repo server](https://repo.msys2.org/distrib). We also provide [nightly
+builds](https://github.com/msys2/msys2-installer/releases/tag/nightly-x86_64).
 
 ## CLI Usage Examples
+
+The GUI installer utilizes the [Qt Installer
+Framework](https://doc.qt.io/qtinstallerframework/) which also offers CLI
+options for automation.
 
 Installing the GUI installer via the CLI to `C:\msys64`:
 
