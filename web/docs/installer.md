@@ -99,3 +99,14 @@ Primary key fingerprint: 0EBF 782C 5D53 F7E5 FB02  A667 46BD 761F 7A49 B0EC
 ```
 
 For the signature to be valid, gnupg has to print "Good signature" **and** the primary fingerprint shown has to match `0EBF 782C 5D53 F7E5 FB02  A667 46BD 761F 7A49 B0EC`.
+
+### Microsoft Defender SmartScreen prevents me from running the installer
+
+Depending on the age of the installer release and how many people have already
+used it successfully, Windows will show a SmartScreen warning, preventing you
+from running the installer.
+
+You can skip this warning by first clicking on "More info" and then on "Run
+anyway".
+
+![Screenshot of the SmartScreen warning](installer_smartscreen.png){: style="max-width:450px" }
