@@ -37,7 +37,7 @@ MSYS2 and what for.
 
 ## Installation
 
-1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2023-05-26/msys2-x86_64-20230526.exe" class="button">msys2-x86_64-20230526.exe</a>
+1. Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2023-07-18/msys2-x86_64-20230718.exe" class="button">msys2-x86_64-20230718.exe</a>
 
     <span style="opacity: 0.6; word-wrap: break-word;">For more information on the installer, like command line options, or how to verify the checksum and signature of the installer, see the [installer guide](./docs/installer.md).</span>
 
