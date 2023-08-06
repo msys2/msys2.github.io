@@ -22,8 +22,6 @@ if os.name == "nt" and sysconfig.get_platform().startswith("mingw"):
     print("cpython-mingw detected!")
 ```
 
-Unlike many other Windows packages in MSYS2, Python will not look for DLL dependencies in PATH by default, but requires directories to be explicitly added via `os.add_dll_directory()` at runtime. You can disable this behavior, and make it look in PATH, by setting the `PYTHONLEGACYWINDOWSDLLLOADING` environment variable to `1`.
-
 ### Known issues
 
 * C extensions are not compatible with the official CPython, which means pip can't use binary wheels from PyPI and packages have to be build when installing them.

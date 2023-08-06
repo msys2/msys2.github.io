@@ -9,27 +9,28 @@ This page lists important changes or issues affecting MSYS2 users. We also post 
 
 Starting with CPython 3.8, upstream CPython changed their DLL lookup behavior to
 a safer default when loading extension modules, which meant no longer looking in
-PATH, but requiring code to explicitly add directories containing dependencies
-via
+PATH and the current working directory as a fallback, but requiring code to
+explicitly add directories containing dependencies via
 [`os.add_dll_directory()`](https://docs.python.org/3/library/os.html#os.add_dll_directory).
 
 Because many packages weren't ported yet back then, and this behavior interfered
-with our MinGW port build process we decided to revert this change and keep the
-old behavior. This had the downside that `os.add_dll_directory()` did not have
-any effect with our Python port and required different code paths for the
-official CPython and our one.
+with our MinGW port build process we reverted this change and kept the old
+behavior. This had the downsides of being less secure and
+`os.add_dll_directory()` not working.
 
-We have now switched the default to what the official CPython build does, but
-added a new `PYTHONLEGACYWINDOWSDLLLOADING` environment variable which you can
-set to `1` to get back the legacy behavior if needed.
+We have now finally managed to fix this in our port, so that DLL loading works
+the same as with the official CPython distribution.
 
 If this change is causing problems for you:
 
-* Make sure to use `os.add_dll_directory()`, as recommended by upstream, see
-  https://docs.python.org/3/library/os.html#os.add_dll_directory for details
-* If that doesn't work you can use `export PYTHONLEGACYWINDOWSDLLLOADING=1` to
-  revert to the old behavior. Please let us know why you need it, so we can
-  hopefully adjust our build to handle more use cases by default.
+* Make sure to use `os.add_dll_directory()` where needed, as recommended by
+  upstream, see https://docs.python.org/3/library/os.html#os.add_dll_directory
+  for details
+* To ease the transition we've temporarily added a
+  `PYTHONLEGACYWINDOWSDLLLOADING` environment variable, which you can set to `1`
+  to get back the old behavior. We will remove this workaround after some time,
+  so please let us know if there are any problems that can't be solved without
+  it.
 
 ### 2023-04-01 - LLVM 16
 
