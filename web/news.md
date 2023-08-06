@@ -5,6 +5,32 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules
+
+Starting with CPython 3.8, upstream CPython changed their DLL lookup behavior to
+a safer default when loading extension modules, which meant no longer looking in
+PATH, but requiring code to explicitly add directories containing dependencies
+via
+[`os.add_dll_directory()`](https://docs.python.org/3/library/os.html#os.add_dll_directory).
+
+Because many packages weren't ported yet back then, and this behavior interfered
+with our MinGW port build process we decided to revert this change and keep the
+old behavior. This had the downside that `os.add_dll_directory()` did not have
+any effect with our Python port and required different code paths for the
+official CPython and our one.
+
+We have now switched the default to what the official CPython build does, but
+added a new `PYTHONLEGACYWINDOWSDLLLOADING` environment variable which you can
+set to `1` to get back the legacy behavior if needed.
+
+If this change is causing problems for you:
+
+* Make sure to use `os.add_dll_directory()`, as recommended by upstream, see
+  https://docs.python.org/3/library/os.html#os.add_dll_directory for details
+* If that doesn't work you can use `export PYTHONLEGACYWINDOWSDLLLOADING=1` to
+  revert to the old behavior. Please let us know why you need it, so we can
+  hopefully adjust our build to handle more use cases by default.
+
 ### 2023-04-01 - LLVM 16
 
 LLVM/Clang has now been updated to v16, here are some things to look out for:
