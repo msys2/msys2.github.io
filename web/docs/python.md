@@ -22,9 +22,10 @@ if os.name == "nt" and sysconfig.get_platform().startswith("mingw"):
     print("cpython-mingw detected!")
 ```
 
+Unlike many other Windows packages in MSYS2, Python will not look for DLL dependencies in PATH by default, but requires directories to be explicitly added via `os.add_dll_directory()` at runtime. You can disable this behavior, and make it look in PATH, by setting the `PYTHONLEGACYWINDOWSDLLLOADING` environment variable to `1`.
+
 ### Known issues
 
 * C extensions are not compatible with the official CPython, which means pip can't use binary wheels from PyPI and packages have to be build when installing them.
 * Some C extensions don't build out of the box since they don't expect non-MSVC on Windows. In some cases we provide patched versions in our repo.
 * [setuptools](https://github.com/pypa/setuptools) >= 60.0 is currently incompatible with MSYS2. You can set `export SETUPTOOLS_USE_DISTUTILS=stdlib` to work around the issue. We are currently working on restoring compatibility.
-* It still looks up DLLs via PATH and `os.add_dll_directory()` doesn't work, see https://github.com/msys2-contrib/cpython-mingw/issues/48
