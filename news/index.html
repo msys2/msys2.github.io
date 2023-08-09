@@ -323,6 +323,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2023-08-06-python-changed-behavior-when-loading-dll-dependencies-of-extension-modules" class="md-nav__link">
+    2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2023-04-01-llvm-16" class="md-nav__link">
     2023-04-01 - LLVM 16
   </a>
@@ -1578,6 +1585,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2023-08-06-python-changed-behavior-when-loading-dll-dependencies-of-extension-modules" class="md-nav__link">
+    2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2023-04-01-llvm-16" class="md-nav__link">
     2023-04-01 - LLVM 16
   </a>
@@ -1854,6 +1868,29 @@
 
 <h1 id="news">News</h1>
 <p>This page lists important changes or issues affecting MSYS2 users. We also post them to <a href="https://twitter.com/msys2org">Twitter</a> and <a href="https://fosstodon.org/@msys2org">Mastodon</a>, including some not-so-important things :)</p>
+<h3 id="2023-08-06-python-changed-behavior-when-loading-dll-dependencies-of-extension-modules">2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules</h3>
+<p>Starting with CPython 3.8, upstream CPython changed their DLL lookup behavior to
+a safer default when loading extension modules, which meant no longer looking in
+PATH and the current working directory as a fallback, but requiring code to
+explicitly add directories containing dependencies via
+<a href="https://docs.python.org/3/library/os.html#os.add_dll_directory"><code>os.add_dll_directory()</code></a>.</p>
+<p>Because many packages weren't ported yet back then, and this behavior interfered
+with our MinGW port build process we reverted this change and kept the old
+behavior. This had the downsides of being less secure and
+<code>os.add_dll_directory()</code> not working.</p>
+<p>We have now finally managed to fix this in our port, so that DLL loading works
+the same as with the official CPython distribution.</p>
+<p>If this change is causing problems for you:</p>
+<ul>
+<li>Make sure to use <code>os.add_dll_directory()</code> where needed, as recommended by
+  upstream, see <a href="https://docs.python.org/3/library/os.html#os.add_dll_directory">https://docs.python.org/3/library/os.html#os.add_dll_directory</a>
+  for details</li>
+<li>To ease the transition we've temporarily added a
+  <code>PYTHONLEGACYWINDOWSDLLLOADING</code> environment variable, which you can set to <code>1</code>
+  to get back the old behavior. We will remove this workaround after some time,
+  so please let us know if there are any problems that can't be solved without
+  it.</li>
+</ul>
 <h3 id="2023-04-01-llvm-16">2023-04-01 - LLVM 16</h3>
 <p>LLVM/Clang has now been updated to v16, here are some things to look out for:</p>
 <ul>
