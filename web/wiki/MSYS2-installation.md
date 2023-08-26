@@ -49,7 +49,7 @@ IV. General Package Management
   1. Installing new packages:
     **`pacman -S <package_names|package_groups>`**
      For example, `pacman -S make gettext base-devel`
-     In this example <base-devel> is a package group which contains many packages. If you try to install a package group, Pacman will ask you whether you want to install one package from the group or all of the packages from the group.
+     In this example, `base-devel` is a package group which contains many packages. If you try to install a package group, Pacman will ask you whether you want to install one package from the group or all of the packages from the group.
   2. Removing packages:
     **`pacman -R <package_names|package_groups>`**
   3. Searching for packages:
