@@ -7,6 +7,7 @@ Some differences/features compared to the official Windows CPython:
 * In an active MSYS2 environment `os.sep` and `os.altsep` are switched to make relative paths more compatible with Unix tools that don't understand Windows paths. Outside of an active MSYS2 environment it behaves normally though.
 * `sys.path` uses the Unix directory layout, see `python -m site`
 * Virtual environments also work with bash: `python -m venv _venv`, `source _venv/bin/activate` and so on.
+* When building against the limited API only defining `Py_LIMITED_API` isn't enough, you also have to explicitly link against `python3` instead of `python3.y`.
 
 ### Portability
 
