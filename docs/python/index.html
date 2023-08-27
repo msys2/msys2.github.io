@@ -1387,6 +1387,7 @@
 <li>In an active MSYS2 environment <code>os.sep</code> and <code>os.altsep</code> are switched to make relative paths more compatible with Unix tools that don't understand Windows paths. Outside of an active MSYS2 environment it behaves normally though.</li>
 <li><code>sys.path</code> uses the Unix directory layout, see <code>python -m site</code></li>
 <li>Virtual environments also work with bash: <code>python -m venv _venv</code>, <code>source _venv/bin/activate</code> and so on.</li>
+<li>When building against the limited API only defining <code>Py_LIMITED_API</code> isn't enough, you also have to explicitly link against <code>python3</code> instead of <code>python3.y</code>.</li>
 </ul>
 <h3 id="portability">Portability</h3>
 <p>As long as you don't hardcode/assume platform specific values and paths and always use things like <code>os.sep</code>, do path operations with <code>os.path</code> or <code>pathlib</code> and derive Python installation related paths and configuration from the <code>sysconfig</code> module then your Python code should work just like with the official Windows CPython installation.</p>
