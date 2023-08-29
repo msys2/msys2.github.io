@@ -2,277 +2,277 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.msys2.org/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/codeofconduct/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/contact/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/get-involved/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/license/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/news/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/privacy/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/build-process/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/keyring/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/mirrors/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/new-package/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/package-guidelines/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/package-licensing/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/dev/python/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/autotools/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/ci/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/cmake/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/cpp/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/environments/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/faq/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/filesystem-paths/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/git/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/ides-editors/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/installer/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/package-management-faq/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/package-management-tips/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/package-management/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/package-naming/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/pkgconfig/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/python/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/repos-mirrors/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/terminals/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/updating/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/what-is-msys2/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/who-is-using-msys2/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/docs/windows_support/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Accounts/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Creating-Packages/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Devtopics/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Distributing/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/GDB-qtcreator/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/History/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Home/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/How-does-MSYS2-differ-from-Cygwin/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/JIT-Debugging/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Launchers/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/MSYS2-installation/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/MSYS2-introduction/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/MSYS2-reinstallation/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Porting/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Setting-up-SSHd/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Signing-packages/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Sudo/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/Terminals/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.msys2.org/wiki/arm64/</loc>
-         <lastmod>2023-08-27</lastmod>
+         <lastmod>2023-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
