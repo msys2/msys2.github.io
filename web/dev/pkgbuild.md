@@ -32,10 +32,10 @@ The following variables are recognized:
       the cygwin package name for all packages starting with "mingw64-x86_64-",
       minus that prefix: https://cygwin.com/packages/src_package_list.html
     * `pypi` - the PyPI project name: https://pypi.org/search/
-* `changelog_url` - string -  NEWS file in git or the github releases page. In
+* `msys2_changelog_url` - string -  NEWS file in git or the github releases page. In
   case there are multiple, the one that is more useful for packagers
-* `documentation_url` - string - Documentation for the API, tools, etc. provided,
+* `msys2_documentation_url` - string - Documentation for the API, tools, etc. provided,
   in case it's a different website than the homepage.
-* `repository_url` - string - Web view of the repository, e.g. on github or gitlab
-* `issue_tracker_url` - string - The bug tracker, mailing list, etc.
-* `pgp_keys_url` - string - A website containing which keys are used to sign releases
+* `msys2_repository_url` - string - Web view of the repository, e.g. on github or gitlab
+* `msys2_issue_tracker_url` - string - The bug tracker, mailing list, etc.
+* `msys2_pgp_keys_url` - string - A website containing which keys are used to sign releases
