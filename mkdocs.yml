@@ -113,6 +113,7 @@ nav:
           - dev/new-package.md
           - dev/package-guidelines.md
           - dev/package-licensing.md
+          - dev/pkgbuild.md
         - dev/mirrors.md
         - dev/keyring.md
         - dev/python.md
