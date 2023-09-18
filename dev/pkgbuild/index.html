@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/">
+        <link rel="canonical" href="https://www.msys2.org/dev/pkgbuild/">
       
       
+        <link rel="prev" href="../package-licensing/">
       
-        <link rel="next" href="news/">
+      
+        <link rel="next" href="../mirrors/">
       
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
     
     
       
-        <title>MSYS2</title>
+        <title>PKGBUILD - MSYS2</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -42,11 +44,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/fonts.css">
+      <link rel="stylesheet" href="../../stylesheets/fonts.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -55,11 +57,13 @@
     
    
   
+    
+  
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2" />
-<meta property="og:description" content="Software Distribution and Building Platform for Windows" />
+<meta property="og:title" content="MSYS2 - PKGBUILD" />
+<meta property="og:description" content="" />
 
-<meta property="og:url" content="https://www.msys2.org/" />
+<meta property="og:url" content="https://www.msys2.org/dev/pkgbuild/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="250" />
@@ -105,7 +109,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#pkgbuild" class="md-skip">
           Skip to content
         </a>
       
@@ -121,9 +125,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="MSYS2" class="md-header__button md-logo" aria-label="MSYS2" data-md-component="logo">
+    <a href="../.." title="MSYS2" class="md-header__button md-logo" aria-label="MSYS2" data-md-component="logo">
       
-  <img src="logo.svg" alt="logo">
+  <img src="../../logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -140,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              PKGBUILD
             
           </span>
         </div>
@@ -250,9 +254,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="MSYS2" class="md-nav__button md-logo" aria-label="MSYS2" data-md-component="logo">
+    <a href="../.." title="MSYS2" class="md-nav__button md-logo" aria-label="MSYS2" data-md-component="logo">
       
-  <img src="logo.svg" alt="logo">
+  <img src="../../logo.svg" alt="logo">
 
     </a>
     MSYS2
@@ -276,29 +280,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Getting Started
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -307,54 +291,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsors" class="md-nav__link">
-    Sponsors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authors-and-contributors" class="md-nav__link">
-    Authors and Contributors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#donations" class="md-nav__link">
-    Donations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -365,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="news/" class="md-nav__link">
+      <a href="../../news/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/what-is-msys2/" class="md-nav__link">
+      <a href="../../docs/what-is-msys2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/who-is-using-msys2/" class="md-nav__link">
+      <a href="../../docs/who-is-using-msys2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/environments/" class="md-nav__link">
+      <a href="../../docs/environments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/updating/" class="md-nav__link">
+      <a href="../../docs/updating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ci/" class="md-nav__link">
+      <a href="../../docs/ci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/terminals/" class="md-nav__link">
+      <a href="../../docs/terminals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ides-editors/" class="md-nav__link">
+      <a href="../../docs/ides-editors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/installer/" class="md-nav__link">
+      <a href="../../docs/installer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/package-management/" class="md-nav__link">
+      <a href="../../docs/package-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/package-naming/" class="md-nav__link">
+      <a href="../../docs/package-naming/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/repos-mirrors/" class="md-nav__link">
+      <a href="../../docs/repos-mirrors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/package-management-tips/" class="md-nav__link">
+      <a href="../../docs/package-management-tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/package-management-faq/" class="md-nav__link">
+      <a href="../../docs/package-management-faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/filesystem-paths/" class="md-nav__link">
+      <a href="../../docs/filesystem-paths/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cmake/" class="md-nav__link">
+      <a href="../../docs/cmake/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/autotools/" class="md-nav__link">
+      <a href="../../docs/autotools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/python/" class="md-nav__link">
+      <a href="../../docs/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/git/" class="md-nav__link">
+      <a href="../../docs/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cpp/" class="md-nav__link">
+      <a href="../../docs/cpp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/pkgconfig/" class="md-nav__link">
+      <a href="../../docs/pkgconfig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/windows_support/" class="md-nav__link">
+      <a href="../../docs/windows_support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/faq/" class="md-nav__link">
+      <a href="../../docs/faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -966,17 +902,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -989,7 +927,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Development
@@ -1000,17 +938,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
@@ -1023,7 +963,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Packaging
@@ -1036,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/new-package/" class="md-nav__link">
+      <a href="../new-package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/package-guidelines/" class="md-nav__link">
+      <a href="../package-guidelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/package-licensing/" class="md-nav__link">
+      <a href="../package-licensing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,9 +1034,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="dev/pkgbuild/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PKGBUILD
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1105,6 +1065,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extra-metadata" class="md-nav__link">
+    Extra Metadata
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1124,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/mirrors/" class="md-nav__link">
+      <a href="../mirrors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1144,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/keyring/" class="md-nav__link">
+      <a href="../keyring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1164,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/python/" class="md-nav__link">
+      <a href="../python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1184,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/build-process/" class="md-nav__link">
+      <a href="../build-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Home/" class="md-nav__link">
+      <a href="../../wiki/Home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Accounts/" class="md-nav__link">
+      <a href="../../wiki/Accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Creating-Packages/" class="md-nav__link">
+      <a href="../../wiki/Creating-Packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1305,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Devtopics/" class="md-nav__link">
+      <a href="../../wiki/Devtopics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1325,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Distributing/" class="md-nav__link">
+      <a href="../../wiki/Distributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1345,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/GDB-qtcreator/" class="md-nav__link">
+      <a href="../../wiki/GDB-qtcreator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/History/" class="md-nav__link">
+      <a href="../../wiki/History/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1385,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
+      <a href="../../wiki/How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1405,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Launchers/" class="md-nav__link">
+      <a href="../../wiki/Launchers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/MSYS2-installation/" class="md-nav__link">
+      <a href="../../wiki/MSYS2-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/MSYS2-introduction/" class="md-nav__link">
+      <a href="../../wiki/MSYS2-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/MSYS2-reinstallation/" class="md-nav__link">
+      <a href="../../wiki/MSYS2-reinstallation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Porting/" class="md-nav__link">
+      <a href="../../wiki/Porting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Setting-up-SSHd/" class="md-nav__link">
+      <a href="../../wiki/Setting-up-SSHd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Signing-packages/" class="md-nav__link">
+      <a href="../../wiki/Signing-packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1545,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Sudo/" class="md-nav__link">
+      <a href="../../wiki/Sudo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1565,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/Terminals/" class="md-nav__link">
+      <a href="../../wiki/Terminals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1585,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/JIT-Debugging/" class="md-nav__link">
+      <a href="../../wiki/JIT-Debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1605,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wiki/arm64/" class="md-nav__link">
+      <a href="../../wiki/arm64/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1632,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="get-involved/" class="md-nav__link">
+      <a href="../../get-involved/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1651,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="privacy/" class="md-nav__link">
+      <a href="../../privacy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1689,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1708,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="codeofconduct/" class="md-nav__link">
+      <a href="../../codeofconduct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1748,29 +1735,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsors" class="md-nav__link">
-    Sponsors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authors-and-contributors" class="md-nav__link">
-    Authors and Contributors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#donations" class="md-nav__link">
-    Donations
+  <a href="#extra-metadata" class="md-nav__link">
+    Extra Metadata
   </a>
   
 </li>
@@ -1790,7 +1756,7 @@
                   
 
   
-    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/msys2/msys2.github.io/edit/source/web/dev/pkgbuild.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1798,122 +1764,46 @@
   
 
 
-<header>
-<h1>MSYS2</h1>
-<h2>Software Distribution and Building Platform for Windows</h2>
-</header>
-
-<h1 id="_1"></h1>
-<p><strong>MSYS2</strong> is a collection of tools and libraries providing you with an
-easy-to-use environment for building, installing and running native Windows
-software.</p>
-<p>It consists of a command line terminal called
-<a href="https://mintty.github.io/">mintty</a>, bash, version control systems like git and
-subversion, tools like tar and awk and even build systems like autotools, all
-based on a modified version of <a href="https://cygwin.com">Cygwin</a>. Despite some of
-these central parts being based on Cygwin, the main focus of MSYS2 is to provide
-a build environment for native Windows software and the Cygwin-using parts are
-kept at a minimum. MSYS2 provides up-to-date native builds for GCC, mingw-w64,
-CPython, CMake, Meson, OpenSSL, FFmpeg, Rust, Ruby, just to name a few.</p>
-<p>To provide easy installation of packages and a way to keep them updated it
-features a package management system called
-<a href="https://wiki.archlinux.org/index.php/pacman">Pacman</a>, which should be familiar
-to Arch Linux users. It brings many powerful features such as dependency
-resolution and simple complete system upgrades, as well as straight-forward and
-reproducible package building. Our package repository contains <a href="https://packages.msys2.org/base">more than 2900
-pre-built packages</a> ready to install.</p>
-<p>For more details see <a href="docs/what-is-msys2/">'What is MSYS2?'</a> which also
-compares MSYS2 to other software distributions and development environments like
-<a href="https://cygwin.com">Cygwin</a>,
-<a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>,
-<a href="https://chocolatey.org/">Chocolatey</a>, <a href="https://scoop.sh/">Scoop</a>, ... and <a href="docs/who-is-using-msys2/">'Who
-Is Using MSYS2?'</a> to see which projects are using
-MSYS2 and what for.</p>
-<h2 id="installation">Installation</h2>
-<ol>
-<li>
-<p>Download the installer: <a href="https://github.com/msys2/msys2-installer/releases/download/2023-07-18/msys2-x86_64-20230718.exe" class="button">msys2-x86_64-20230718.exe</a></p>
-<p><span style="opacity: 0.6; word-wrap: break-word;">For more information on the installer, like command line options, or how to verify the checksum and signature of the installer, see the <a href="docs/installer/">installer guide</a>.</span></p>
-</li>
-<li>
-<p>Run the installer. MSYS2 requires 64 bit Windows 8.1 or newer.</p>
-</li>
-<li>
-<p>Enter your desired <strong>Installation Folder</strong> (short ASCII-only path on a NTFS volume, no accents, no spaces, no symlinks, no subst or network drives, no FAT).</p>
-<p><img alt="Second screen of MSYS2 installation" src="images/install-2-path.png" /></p>
-</li>
-<li>
-<p>When done, click <strong>Finish</strong>.</p>
-<p><img alt="Third screen of MSYS2 installation" src="images/install-3-finish.png" /></p>
-</li>
-<li>
-<p>Now MSYS2 is ready for you and a terminal for the <a href="docs/environments/">UCRT64 environment</a> will launch.</p>
-<p><img alt="Empty MSYS2 terminal window" src="images/install-4-terminal.png" /></p>
-</li>
-<li>
-<p>You will probably want to install some tools like the mingw-w64 GCC to start compiling projects. Run the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pacman -S mingw-w64-ucrt-x86_64-gcc</span>
-</code></pre></div>
-</li>
-<li>
-<p>The terminal window will show the output as below. Press 'Enter' to continue:</p>
-<div class="highlight"><pre><span></span><code><span class="go">resolving dependencies...</span>
-<span class="go">looking for conflicting packages...</span>
-
-<span class="go">Packages (15) mingw-w64-ucrt-x86_64-binutils-2.39-2</span>
-<span class="go">            mingw-w64-ucrt-x86_64-crt-git-10.0.0.r68.g6eb571448-1</span>
-<span class="go">            mingw-w64-ucrt-x86_64-gcc-libs-12.2.0-1  mingw-w64-ucrt-x86_64-gmp-6.2.1-3</span>
-<span class="go">            mingw-w64-ucrt-x86_64-headers-git-10.0.0.r68.g6eb571448-1</span>
-<span class="go">            mingw-w64-ucrt-x86_64-isl-0.25-1  mingw-w64-ucrt-x86_64-libiconv-1.17-1</span>
-<span class="go">            mingw-w64-ucrt-x86_64-libwinpthread-git-10.0.0.r68.g6eb571448-1</span>
-<span class="go">            mingw-w64-ucrt-x86_64-mpc-1.2.1-1  mingw-w64-ucrt-x86_64-mpfr-4.1.0.p13-1</span>
-<span class="go">            mingw-w64-ucrt-x86_64-windows-default-manifest-6.4-4</span>
-<span class="go">            mingw-w64-ucrt-x86_64-winpthreads-git-10.0.0.r68.g6eb571448-1</span>
-<span class="go">            mingw-w64-ucrt-x86_64-zlib-1.2.12-1  mingw-w64-ucrt-x86_64-zstd-1.5.2-2</span>
-<span class="go">            mingw-w64-ucrt-x86_64-gcc-12.2.0-1</span>
-
-<span class="go">Total Installed Size:  397.59 MiB</span>
-
-<span class="go">:: Proceed with installation? [Y/n]</span>
-<span class="go">[... downloading and installation continues ...]</span>
-</code></pre></div>
-</li>
-<li>
-<p>Now you can call <code>gcc</code> to build software for Windows.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>gcc<span class="w"> </span>--version
-<span class="go">gcc.exe (Rev1, Built by MSYS2 project) 12.2.0</span>
-</code></pre></div>
-</li>
-<li>
-<p>After installing MSYS2 it will update itself via <code>pacman</code>, see the <a href="docs/updating/">update guide</a> for more information.</p>
-</li>
-</ol>
-<h2 id="sponsors">Sponsors</h2>
-<p>Our main server is sponsored by <a href="https://www.jsdelivr.com">jsDelivr</a></p>
-<p><a href="https://www.jsdelivr.com"><img alt="jsdelivr.com" src="sponsors/jsdelivr.svg#gh-light-mode-only" width="250px" /><img alt="jsdelivr.com" src="sponsors/jsdelivr-white.svg#gh-dark-mode-only" width="250px" /></a></p>
-<p><a href="https://opensource.microsoft.com/">Microsoft Open Source Programs Office</a> sponsors us financially via their <a href="https://github.com/microsoft/foss-fund#2022">FOSS Fund</a></p>
-<p><a href="https://opensource.microsoft.com/"><img alt="opensource.microsoft.com" src="sponsors/microsoft.svg#gh-light-mode-only" width="250px" /><img alt="opensource.microsoft.com" src="sponsors/microsoft-white.svg#gh-dark-mode-only" width="250px" /></a></p>
-<p>Various organizations provide us with mirrors all around the world, see <a href="dev/mirrors/">our mirror list</a> for details.</p>
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+<h1 id="pkgbuild">PKGBUILD</h1>
+<p>PKGBUILD is the Arch Linux package build description file, which we inherit by
+using pacman. See <a href="https://man.archlinux.org/man/PKGBUILD.5">https://man.archlinux.org/man/PKGBUILD.5</a> for details on the
+format.</p>
+<p>We have some minor extensions to the format, which are documented here.</p>
+<h2 id="extra-metadata">Extra Metadata</h2>
+<p>Variables starting with <code>msys2_</code> and <code>mingw_</code> can be used to add additional metadata to a package, which will be read and used by our tools. The following datatypes are supported:</p>
 <ul>
-<li><a href="https://github.com/Alexpux">Alexpux (Alexey Pavlov)</a></li>
-<li><a href="https://github.com/martell">martell (Martell Malone)</a></li>
-<li><a href="https://github.com/mingwandroid">mingwandroid (Ray Donnelly)</a></li>
-<li><a href="https://github.com/elieux">Elieux (David Macek)</a></li>
-<li><a href="https://github.com/lazka">lazka (Christoph Reiter)</a></li>
-<li><a href="https://github.com/renatosilva">Renato Silva</a></li>
-<li><a href="https://github.com/niXman">niXman</a></li>
-<li><a href="https://github.com/naveen521kk">naveen521kk (Naveen M K)</a></li>
-<li><a href="https://github.com/Biswa96">Biswa96 (Biswapriyo Nath)</a></li>
-<li><a href="https://github.com/jeremyd2019">jeremyd2019 (Jeremy Drake)</a></li>
-<li><a href="https://github.com/mati865">mati865 (Mateusz Mikuła)</a></li>
-<li><a href="https://github.com/MehdiChinoune">MehdiChinoune (مهدي شينون / Mehdi Chinoune)</a></li>
+<li>Strings: <code>msys2_myvar="example"</code> 🠆 <code>{"myvar": "example"}</code></li>
+<li>Arrays of strings: <code>msys2_myvar=("example1" "example2")</code> 🠆 <code>{"myvar": ["example1", "example2"]}</code></li>
+<li>Mappings of strings to an optional string, separated by <code>":"</code>, values are
+  stripped: <code>msys2_myvar=("example1: value1" "example2")</code> 🠆 <code>{"myvar": {"example1": "value1", "example2": null}}</code></li>
+<li>Booleans (either <code>true</code> or <code>false</code>): <code>msys2_myvar=true</code> 🠆 <code>{"myvar": true}</code></li>
 </ul>
-<h2 id="donations">Donations</h2>
-<p>You can donate to the project via <a href="https://github.com/sponsors/msys2">GitHub Sponsors</a>:</p>
-<p><a href="https://github.com/sponsors/msys2"><img alt="" src="donate/github.png#gh-light-mode-only" width="150px" /><img alt="" src="donate/github-white.png#gh-dark-mode-only" width="150px" /></a></p>
-<p>or via <a href="https://opencollective.com/msys2">Open Collective</a>:</p>
-<p><a href="https://opencollective.com/msys2"><img alt="" src="donate/opencollective.png" width="280px" /></a></p>
+<p>The following variables are recognized:</p>
+<ul>
+<li><code>mingw_arch</code> - array - a list of MSYS2 environments the package is built
+  for. Defaults to an empty list.</li>
+<li><code>msys2_internal</code> - boolean - whether the package is an internal or meta
+  package, and shouldn't be linked to external sources. Defaults to <code>false</code>.</li>
+<li><code>msys2_references</code> - mapping - maps the package to external resources, for
+  example other package repositories. Defining a key without a value means there
+  is no mapping. The following keys exist:<ul>
+<li><code>archlinux</code> - the Arch Linux package name: <a href="https://archlinux.org/packages/">https://archlinux.org/packages/</a></li>
+<li><code>aur</code> - the AUR package name: <a href="https://aur.archlinux.org/packages">https://aur.archlinux.org/packages</a></li>
+<li><code>cygwin</code> - the cygwin package name: <a href="https://cygwin.com/packages/src_package_list.html">https://cygwin.com/packages/src_package_list.html</a></li>
+<li><code>cygwin-mingw64</code> -
+  the cygwin package name for all packages starting with "mingw64-x86_64-",
+  minus that prefix: <a href="https://cygwin.com/packages/src_package_list.html">https://cygwin.com/packages/src_package_list.html</a></li>
+<li><code>pypi</code> - the PyPI project name: <a href="https://pypi.org/search/">https://pypi.org/search/</a></li>
+</ul>
+</li>
+<li><code>changelog_url</code> - string -  NEWS file in git or the github releases page. In
+  case there are multiple, the one that is more useful for packagers</li>
+<li><code>documentation_url</code> - string - Documentation for the API, tools, etc. provided,
+  in case it's a different website than the homepage.</li>
+<li><code>repository_url</code> - string - Web view of the repository, e.g. on github or gitlab</li>
+<li><code>issue_tracker_url</code> - string - The bug tracker, mailing list, etc.</li>
+<li><code>pgp_keys_url</code> - string - A website containing which keys are used to sign releases</li>
+</ul>
 
 
 
@@ -2001,10 +1891,10 @@ MSYS2 and what for.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
       
     
   </body>
