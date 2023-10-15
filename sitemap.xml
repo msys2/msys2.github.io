@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.msys2.org/dev/accounts/</loc>
+         <lastmod>2023-10-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.msys2.org/dev/build-process/</loc>
          <lastmod>2023-10-15</lastmod>
          <changefreq>daily</changefreq>
@@ -187,11 +192,6 @@
     </url>
     <url>
          <loc>https://www.msys2.org/docs/windows_support/</loc>
-         <lastmod>2023-10-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.msys2.org/wiki/Accounts/</loc>
          <lastmod>2023-10-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
