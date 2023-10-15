@@ -6,7 +6,7 @@ summary: The differences between the environments is
 
 # Environments
 
-MSYS2 comes with different environments/subsystems and the first thing you have
+MSYS2 comes with different environments and the first thing you have
 to decide is which one to use. The differences among the environments are
 mainly environment variables, default compilers/linkers, architecture,
 system libraries used etc. If you are unsure, go with **UCRT64**.
