@@ -119,10 +119,10 @@ nav:
         - dev/keyring.md
         - dev/python.md
         - dev/build-process.md
+        - dev/accounts.md
     - Other Topics:
         # Old stuff that should ideally move to the above categories in the future
         - wiki/Home.md
-        - wiki/Accounts.md
         - wiki/Creating-Packages.md
         - wiki/Devtopics.md
         - wiki/Distributing.md
