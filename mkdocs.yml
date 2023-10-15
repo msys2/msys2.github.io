@@ -112,6 +112,7 @@ nav:
         # infrastructure, mirrors etc and everything else.
         - Packaging:
           - dev/new-package.md
+          - dev/update-package.md
           - dev/package-guidelines.md
           - dev/package-licensing.md
           - dev/pkgbuild.md
