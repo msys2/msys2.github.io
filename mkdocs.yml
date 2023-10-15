@@ -97,6 +97,7 @@ nav:
           - docs/package-management-tips.md
           - docs/package-management-faq.md
         - docs/filesystem-paths.md
+        - docs/configuration.md
         - Languages & Tools:
           - docs/cmake.md
           - docs/autotools.md
