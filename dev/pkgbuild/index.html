@@ -1787,26 +1787,58 @@
 <h1 id="pkgbuild">PKGBUILD</h1>
 <p>PKGBUILD is the Arch Linux package build description file, which we inherit by
 using pacman. See <a href="https://man.archlinux.org/man/PKGBUILD.5">https://man.archlinux.org/man/PKGBUILD.5</a> for details on the
-format.</p>
-<p>We have some minor extensions to the format, which are documented here.</p>
+format. We have some minor extensions to the format, which are documented here.</p>
 <h2 id="extra-metadata">Extra Metadata</h2>
-<p>Variables starting with <code>msys2_</code> and <code>mingw_</code> can be used to add additional metadata to a package, which will be read and used by our tools. The following datatypes are supported:</p>
+<p>Variables starting with <code>msys2_</code> and <code>mingw_</code> can be used to add additional metadata to a package, which will be read and used by our tools.
+The following variables are recognized:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mingw_arch</code></td>
+<td>array</td>
+<td>A list of MSYS2 environments the package is built for. Defaults to an empty list.</td>
+</tr>
+<tr>
+<td><code>msys2_internal</code></td>
+<td>boolean</td>
+<td>Whether the package is an internal or meta package and shouldn't be linked to external sources. Defaults to <code>false</code>.</td>
+</tr>
+<tr>
+<td><code>msys2_references</code></td>
+<td>mapping</td>
+<td>Maps the package to external resources, such as other package repositories.</td>
+</tr>
+<tr>
+<td><code>msys2_documentation_url</code></td>
+<td>string</td>
+<td>URL to the documentation for the API, tools, etc., in case it's a different website than the homepage.</td>
+</tr>
+<tr>
+<td><code>msys2_repository_url</code></td>
+<td>string</td>
+<td>URL to the web view of the repository, e.g., on GitHub or GitLab.</td>
+</tr>
+<tr>
+<td><code>msys2_issue_tracker_url</code></td>
+<td>string</td>
+<td>URL to the bug tracker, mailing list archive, etc.</td>
+</tr>
+<tr>
+<td><code>msys2_pgp_keys_url</code></td>
+<td>string</td>
+<td>URL to a website containing which keys are used to sign releases.</td>
+</tr>
+</tbody>
+</table>
+<p>For <code>msys2_references</code> the following keys are recognized:</p>
 <ul>
-<li>Strings: <code>msys2_myvar="example"</code> 🠆 <code>{"myvar": "example"}</code></li>
-<li>Arrays of strings: <code>msys2_myvar=("example1" "example2")</code> 🠆 <code>{"myvar": ["example1", "example2"]}</code></li>
-<li>Mappings of strings to an optional string, separated by <code>":"</code>, values are
-  stripped: <code>msys2_myvar=("example1: value1" "example2")</code> 🠆 <code>{"myvar": {"example1": "value1", "example2": null}}</code></li>
-<li>Booleans (either <code>true</code> or <code>false</code>): <code>msys2_myvar=true</code> 🠆 <code>{"myvar": true}</code></li>
-</ul>
-<p>The following variables are recognized:</p>
-<ul>
-<li><code>mingw_arch</code> - array - a list of MSYS2 environments the package is built
-  for. Defaults to an empty list.</li>
-<li><code>msys2_internal</code> - boolean - whether the package is an internal or meta
-  package, and shouldn't be linked to external sources. Defaults to <code>false</code>.</li>
-<li><code>msys2_references</code> - mapping - maps the package to external resources, for
-  example other package repositories. Defining a key without a value means there
-  is no mapping. The following keys exist:<ul>
 <li><code>archlinux</code> - the Arch Linux package name: <a href="https://archlinux.org/packages/">https://archlinux.org/packages/</a></li>
 <li><code>aur</code> - the AUR package name: <a href="https://aur.archlinux.org/packages">https://aur.archlinux.org/packages</a></li>
 <li><code>cygwin</code> - the cygwin package name: <a href="https://cygwin.com/packages/src_package_list.html">https://cygwin.com/packages/src_package_list.html</a></li>
@@ -1815,14 +1847,14 @@ format.</p>
   minus that prefix: <a href="https://cygwin.com/packages/src_package_list.html">https://cygwin.com/packages/src_package_list.html</a></li>
 <li><code>pypi</code> - the PyPI project name: <a href="https://pypi.org/search/">https://pypi.org/search/</a></li>
 </ul>
-</li>
-<li><code>msys2_changelog_url</code> - string -  NEWS file in git or the github releases page. In
-  case there are multiple, the one that is more useful for packagers</li>
-<li><code>msys2_documentation_url</code> - string - Documentation for the API, tools, etc. provided,
-  in case it's a different website than the homepage.</li>
-<li><code>msys2_repository_url</code> - string - Web view of the repository, e.g. on github or gitlab</li>
-<li><code>msys2_issue_tracker_url</code> - string - The bug tracker, mailing list, etc.</li>
-<li><code>msys2_pgp_keys_url</code> - string - A website containing which keys are used to sign releases</li>
+<p>Defining a key without a value means there is no mapping and the package shouldn't be linked.</p>
+<p>The following datatypes are supported:</p>
+<ul>
+<li><strong>string:</strong> <code>msys2_myvar="example"</code> 🠆 <code>{"myvar": "example"}</code></li>
+<li><strong>array:</strong> Arrays of strings: <code>msys2_myvar=("example1" "example2")</code> 🠆 <code>{"myvar": ["example1", "example2"]}</code></li>
+<li><strong>mapping:</strong> Mappings of strings to an optional string, separated by <code>":"</code>, values are
+  stripped: <code>msys2_myvar=("example1: value1" "example2")</code> 🠆 <code>{"myvar": {"example1": "value1", "example2": null}}</code></li>
+<li><strong>boolean:</strong> either <code>true</code> or <code>false</code>: <code>msys2_myvar=true</code> 🠆 <code>{"myvar": true}</code></li>
 </ul>
 
 
