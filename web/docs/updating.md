@@ -71,6 +71,19 @@ $ pacdiff
 :: (V)iew, (M)erge, (S)kip, (R)emove pacsave, (O)verwrite with pacsave, (Q)uit: [v/m/s/r/o/q]
 ```
 
+### Pruning unsupported packages
+
+In some cases we decide to drop packages from the repositories, for example
+because they are outdated, unmaintained or have been replaced by a better
+alternative. If you've installed them previously then they will stay installed
+but wont get updated anymore. To find such packages you can run:
+
+```console
+$ pacman -Qm
+```
+
+It might be a good idea to remove them, or look for alternatives if you still
+need them.
 
 ## Potential Issues
 
