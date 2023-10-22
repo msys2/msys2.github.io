@@ -58,7 +58,7 @@ MSYS2 and what for.
 6. You will probably want to install some tools like the mingw-w64 GCC to start compiling projects. Run the following command:
 
     ```console
-    pacman -S mingw-w64-ucrt-x86_64-gcc
+    $ pacman -S mingw-w64-ucrt-x86_64-gcc
     ```
 
 7. The terminal window will show the output as below. Press 'Enter' to continue:

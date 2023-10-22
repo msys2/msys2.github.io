@@ -190,3 +190,11 @@ body {
     flex: 1;
     filter: var(--msys2-invert-filter);
 }
+
+
+/* make the console prompt not selectable */
+.highlight .gp {
+    opacity: 0.75;
+    user-select: none;
+}
+

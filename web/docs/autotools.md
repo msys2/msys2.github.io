@@ -31,11 +31,11 @@ These wrappers are developed by [Gentoo Linux](https://devmanual.gentoo.org/gene
 
 Some projects require their configure scripts to be updated to make them build successfully:
 
-```bash
-> pacman -S "${MINGW_PACKAGE_PREFIX}-autotools"
-> autoreconf -fvi
-> ./configure
-> make
+```console
+$ pacman -S "${MINGW_PACKAGE_PREFIX}-autotools"
+$ autoreconf -fvi
+$ ./configure
+$ make
 ...
 ```
 
