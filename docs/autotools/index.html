@@ -1861,11 +1861,11 @@ pacman<span class="w"> </span>-S<span class="w"> </span>autotools<span class="w"
 <p>These wrappers are developed by <a href="https://devmanual.gentoo.org/general-concepts/autotools/index.html">Gentoo Linux</a> and are also used in Cygwin.</p>
 <h3 id="known-issues">Known Issues</h3>
 <p>Some projects require their configure scripts to be updated to make them build successfully:</p>
-<div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MINGW_PACKAGE_PREFIX</span><span class="si">}</span><span class="s2">-autotools&quot;</span>
-&gt;<span class="w"> </span>autoreconf<span class="w"> </span>-fvi
-&gt;<span class="w"> </span>./configure
-&gt;<span class="w"> </span>make
-...
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman<span class="w"> </span>-S<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MINGW_PACKAGE_PREFIX</span><span class="si">}</span><span class="s2">-autotools&quot;</span>
+<span class="gp">$ </span>autoreconf<span class="w"> </span>-fvi
+<span class="gp">$ </span>./configure
+<span class="gp">$ </span>make
+<span class="go">...</span>
 </code></pre></div>
 <p>This is due to some MSYS2 specific patches that have not been upstreamed yet or have not made it into upstream projects.</p>
 
