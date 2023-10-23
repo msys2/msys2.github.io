@@ -53,7 +53,8 @@ MSYS2 and what for.
 
 5. Now MSYS2 is ready for you and a terminal for the [UCRT64 environment](./docs/environments.md) will launch.
 
-    ![Empty MSYS2 terminal window](images/install-4-terminal.png)
+    ![Empty MSYS2 terminal window](images/install-4-terminal.png#gh-light-mode-only)
+    ![Empty MSYS2 terminal window](images/install-4-terminal-dark.png#gh-dark-mode-only)
 
 6. You will probably want to install some tools like the mingw-w64 GCC to start compiling projects. Run the following command:
 
