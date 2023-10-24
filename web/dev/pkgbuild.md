@@ -14,6 +14,7 @@ The following variables are recognized:
 | `mingw_arch`               | array   | A list of MSYS2 environments the package is built for. Defaults to an empty list. |
 | `msys2_internal`           | boolean | Whether the package is an internal or meta package and shouldn't be linked to external sources. Defaults to `false`. |
 | `msys2_references`         | mapping | Maps the package to external resources, such as other package repositories. |
+| `msys2_changelog_url`      | string  | NEWS file in git or the GitHub releases page. In case there are multiple, the one that is more useful for packagers. |
 | `msys2_documentation_url`  | string  | URL to the documentation for the API, tools, etc., in case it's a different website than the homepage. |
 | `msys2_repository_url`     | string  | URL to the web view of the repository, e.g., on GitHub or GitLab. |
 | `msys2_issue_tracker_url`  | string  | URL to the bug tracker, mailing list archive, etc. |
