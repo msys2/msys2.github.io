@@ -767,13 +767,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#the-package-prefix-hack" class="md-nav__link">
-    The package prefix (hack)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1866,13 +1859,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#the-package-prefix-hack" class="md-nav__link">
-    The package prefix (hack)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1985,23 +1971,6 @@ you can use <code>cygpath</code>:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>/usr/bin/python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys, os; print(sys.argv, os.listdir(sys.argv[1]))&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>cygpath<span class="w"> </span>-u<span class="w"> </span>C:/<span class="k">)</span><span class="s2">&quot;</span>
 <span class="o">[</span><span class="s1">&#39;-c&#39;</span>,<span class="w"> </span><span class="s1">&#39;/c/&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;$Recycle.Bin&#39;</span>,<span class="w"> </span><span class="s1">&#39;$SysReset&#39;</span>,<span class="w"> </span>...<span class="o">]</span>
 </code></pre></div>
-<h2 id="the-package-prefix-hack">The package prefix (hack)</h2>
-<p>When looking at some of our package recipes you might have seen something like:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">MSYS2_ARG_CONV_EXCL</span><span class="o">=</span><span class="s2">&quot;--prefix=&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>meson<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--prefix<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MINGW_PREFIX</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>...
-</code></pre></div>
-<p>which results in <code>meson --prefix=/mingw64 ...</code> being executed.</p>
-<p><code>/mingw64</code> in this case is the UNIX prefix where the package will be installed
-to and in addition is a valid Windows path (a drive relative path, so
-<code>C:\mingw64</code>), so the native build tools will concatenate it with DESTDIR and
-copy things to the right place.</p>
-<p>In the native Windows world this path doesn't make much sense, as <code>C:\mingw64</code>
-likely doesn't match where the software lives, but ideally all native Windows
-tools are relocatable and won't use the prefix at runtime anyway. And if they do
-and happen to call Cygwin tools then the prefix resolves to the correct path
-because the Cygwin root path is relocatable.</p>
 
 
 
