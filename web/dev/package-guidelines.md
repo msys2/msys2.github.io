@@ -30,3 +30,27 @@ To create such .pyc files in a PKGBUILD for packages which don't do it themselve
 MSYS2_ARG_CONV_EXCL="-p" \
   python -m compileall -o 0 -o 1 -q -s"${pkgdir}" -p"/" "${pkgdir}${MINGW_PREFIX}"
 ```
+
+## The package prefix (hack)
+
+When looking at some of our package recipes you might have seen something like:
+
+```bash
+MSYS2_ARG_CONV_EXCL="--prefix=" \
+  meson \
+    --prefix="${MINGW_PREFIX}" \
+    ...
+```
+
+which results in `meson --prefix=/mingw64 ...` being executed.
+
+`/mingw64` in this case is the UNIX prefix where the package will be installed
+to and in addition is a valid Windows path (a drive relative path, so
+`C:\mingw64`), so the native build tools will concatenate it with DESTDIR and
+copy things to the right place.
+
+In the native Windows world this path doesn't make much sense, as `C:\mingw64`
+likely doesn't match where the software lives, but ideally all native Windows
+tools are relocatable and won't use the prefix at runtime anyway. And if they do
+and happen to call Cygwin tools then the prefix resolves to the correct path
+because the Cygwin root path is relocatable.
