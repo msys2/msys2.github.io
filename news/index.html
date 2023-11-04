@@ -347,6 +347,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2023-11-05-package-installation-issues-for-very-oldoutdated-installations" class="md-nav__link">
+    2023-11-05 - Package installation issues for very old/outdated installations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2023-08-06-python-changed-behavior-when-loading-dll-dependencies-of-extension-modules" class="md-nav__link">
     2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules
   </a>
@@ -2035,6 +2042,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2023-11-05-package-installation-issues-for-very-oldoutdated-installations" class="md-nav__link">
+    2023-11-05 - Package installation issues for very old/outdated installations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2023-08-06-python-changed-behavior-when-loading-dll-dependencies-of-extension-modules" class="md-nav__link">
     2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules
   </a>
@@ -2318,6 +2332,16 @@
 
 <h1 id="news">News</h1>
 <p>This page lists important changes or issues affecting MSYS2 users. We also post them to <a href="https://twitter.com/msys2org">Twitter</a> and <a href="https://fosstodon.org/@msys2org">Mastodon</a>, including some not-so-important things :)</p>
+<h3 id="2023-11-05-package-installation-issues-for-very-oldoutdated-installations">2023-11-05 - Package installation issues for very old/outdated installations</h3>
+<p>If you haven't updated pacman in 2.5 years or longer, but are installing
+new packages, you will see errors like this, due to a format change in the
+package database:</p>
+<div class="highlight"><pre><span></span><code>error: mingw-w64-ucrt-x86_64-shared-mime-info: missing required signature
+error: mingw-w64-ucrt-x86_64-gtk3: missing required signature
+error: failed to commit transaction (package missing required signature)
+Errors occurred, no packages were upgraded.
+</code></pre></div>
+<p>This can be fixed by <a href="../docs/updating/">updating your installation</a>.</p>
 <h3 id="2023-08-06-python-changed-behavior-when-loading-dll-dependencies-of-extension-modules">2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules</h3>
 <p>Starting with CPython 3.8, upstream CPython changed their DLL lookup behavior to
 a safer default when loading extension modules, which meant no longer looking in
