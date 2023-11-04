@@ -5,6 +5,21 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-11-05 - Package installation issues for very old/outdated installations
+
+If you haven't updated pacman in 2.5 years or longer, but are installing
+new packages, you will see errors like this, due to a format change in the
+package database:
+
+```
+error: mingw-w64-ucrt-x86_64-shared-mime-info: missing required signature
+error: mingw-w64-ucrt-x86_64-gtk3: missing required signature
+error: failed to commit transaction (package missing required signature)
+Errors occurred, no packages were upgraded.
+```
+
+This can be fixed by [updating your installation](./docs/updating.md).
+
 ### 2023-08-06 - Python: Changed behavior when loading DLL dependencies of extension modules
 
 Starting with CPython 3.8, upstream CPython changed their DLL lookup behavior to
