@@ -1881,7 +1881,8 @@
 <h3 id="why-are-gitk-and-git-gui-not-working-in-the-msys-environment">Why are "gitk" and "git gui" not working in the MSYS environment?</h3>
 <p>They depend on Tcl/Tk and we only provide mingw builds for those. In all environments besides MSYS they should work fine though.</p>
 <h3 id="some-tool-i-use-fails-to-work-with-the-git-in-msys2-but-works-fine-with-the-official-one">Some tool I use fails to work with the git in MSYS2, but works fine with the official one</h3>
-<p>One common issue with external tools integrating git, is that they get confused by Unix paths, for example when figuring out the project root path via <code>git rev-parse --show-toplevel</code>. This can be worked around by using <code>git rev-parse --show-prefix</code> instead which outputs a relative path from the root to the current working directory, which is both a valid Unix and Windows path.</p>
+<p>One common issue with external tools integrating git, is that they get confused by Unix paths, for example when figuring out the project root path via <code>git rev-parse --show-toplevel</code>. This can be worked around by using <code>git rev-parse --show-prefix</code> instead which outputs a relative path from the root to the current working directory, which is both a valid Unix and Windows path. Or <code>git rev-parse --show-cdup</code> which outputs a relative path from the current working directory to the root, which is also a valid Unix and Windows path.</p>
+<p>If all fails you can <code>export GIT_DIR=/dev/null</code> to make git not find any repository at all, which usually makes tools skip any git related logic.</p>
 
 
 
