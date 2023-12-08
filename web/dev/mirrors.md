@@ -44,6 +44,7 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/185) |
 | quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | [website](https://quantum-mirror.hu/web/contact_en.html) |
 | fastmirror.pp.ua | [HTTPS](https://fastmirror.pp.ua/msys2/) \| [RSYNC](rsync://fastmirror.pp.ua/msys2/) | [website](https://fastmirror.pp.ua) |
+| mirror.archlinux.tw | [HTTPS](https://mirror.archlinux.tw/MSYS2/) \| [RSYNC](rsync://mirror.archlinux.tw/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/206) |
 
 (\*) rsync is required by [mirrorbits](https://github.com/etix/mirrorbits), which we use to auto-redirect users to a local mirror via [mirror.msys2.org](https://mirror.msys2.org)
 
@@ -59,10 +60,9 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | mirrors.piconets.webwerks.in | [HTTPS](https://mirrors.piconets.webwerks.in/msys2-mirror/) | <mirrors@piconets.com> |
 | mirrors.sjtug.sjtu.edu.cn | [HTTPS](https://mirrors.sjtug.sjtu.edu.cn/msys2/) | |
 | www2.futureware.at | [HTTPS](https://www2.futureware.at/~nickoe/msys2-mirror/) | [Nick Østergaard](mailto:oe.nick@gmail.com) |
-| repo.casualgamer.ca | [HTTPS](https://repo.casualgamer.ca/) | |
 | mirrors.aliyun.com | [HTTPS](https://mirrors.aliyun.com/msys2/) | <ali-yum@alibaba-inc.com> |
 | mirror.iscas.ac.cn | [HTTPS](https://mirror.iscas.ac.cn/msys2/) | |
-| mirrors.tencent.com | [HTTPS](https://mirrors.tencent.com/msys2/) | <petzhou@tencent.com> |
+| mirrors.cloud.tencent.com | [HTTPS](https://mirrors.cloud.tencent.com/msys2/) | <petzhou@tencent.com> |
 | mirror.ufro.cl | [HTTPS](https://mirror.ufro.cl/msys2/) | [Jonathan Gutiérrez](mailto:jonathan.gutierrez@ufrontera.cl) |
 | download.nus.edu.sg | [HTTPS](https://download.nus.edu.sg/mirror/msys2/) | <download@nus.edu.sg> |
 
