@@ -5,6 +5,70 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2023-12-10 - Starting to drop some 32-bit Packages
+
+Three years ago we dropped 32-bit Windows support for running MSYS2 itself, now
+we are taking the next step and slowly starting to reduce the number of 32-bit
+mingw-w64 packages, meaning the packages for the MINGW32 and CLANG32
+environments. The goal of the phase-out is to reduce maintenance costs and CI
+resources while not affecting most users. The focus will be on packages that
+aren't likely to see much use anyway, or where 64-bit alternatives are available
+and viable:
+
+* Packages which are likely not used outside of MSYS2 (re-packaged)
+* End-user applications which are likely not used outside of MSYS2 (GUI apps,
+  ...)
+* Packages for resource intensive work where most external users are likely
+  already on 64-bit (some scientific packages, ...)
+* Leaf packages with complex and resource intensive builds
+* New leaf packages
+
+This does not affect:
+
+* Toolchains and languages (GCC, LLVM, Rust, Python, ...)
+* UI toolkits (qt5, gtk3, gtk4, ...)
+* Common and frequently used dependencies, and their dependencies (glib, ffmpeg,
+  boost, ...)
+
+Ideally not many people should notice these changes, but in case they affect you:
+
+* Switch your workflow to use 64-bit packages instead ;)
+* In case you are packaging or building for external users:
+  * Tell us which packages that were removed you still need and for how long, so
+    we can consider reinstating them.
+  * Drop support for 32-bit and point users to the last version supporting
+    32-bit.
+
+If there are any questions, let us know [on GitHub](https://github.com/msys2/MINGW-packages/discussions/19326).
+
+If you are wondering if you should continue to support 32-bit Windows for your
+users, here are some relevant resources:
+
+Usage stats:
+
+* https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam
+  32-bit Win8.1+ below the list threshold. Heavily biased towards newer hardware
+  though.
+* https://www.pcbenchmarks.net/os-marketshare.html 32-bit users at ~0.1%.
+  Heavily biased towards newer hardware though.
+* https://data.firefox.com/dashboard/hardware 32-bit at ~14%, but this includes
+  ~11% Win7 and other operating systems which we don't support, so it's not
+  clear.
+* In MSYS2 32-bit packages made up ~3.95% of all downloads at the end of 2023,
+  and ~6.45% one year before (ignoring CI downloads)
+
+Some applications dropping 32-bit support:
+
+* [Krita](https://krita.org/) dropped 32-bit support in 2021
+* [qBittorrent](https://www.qbittorrent.org/) dropped 32-bit support in 2022
+* [KeePassXC](https://keepassxc.org) dropped 32-bit support in 2022
+* [SciPy](https://scipy.org/) dropped 32-bit support in 2022
+
+There are of course lots of applications not planning to drop support and 32-bit
+Windows is still supported for nearly 2 more years, so we understand that 32-bit
+support is still required in various cases, and we will try to keep the most
+important packages around for as long as possible.
+
 ### 2023-11-05 - Package installation issues for very old/outdated installations
 
 If you haven't updated pacman in 2.5 years or longer, but are installing
