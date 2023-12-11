@@ -36,9 +36,7 @@ which lists all installed packages which are no longer available in the repo.
 Ideally not many people should notice these changes, but in case they affect you:
 
 * Switch your workflow to use 64-bit packages instead ;)
-* Tell us which packages that were removed you still need, so we can consider reinstating them.
-
-If there are any questions, let us know [on GitHub](https://github.com/msys2/MINGW-packages/discussions/19326).
+* Tell us which packages that were removed you still need, so we can consider reinstating them. Please use the [issue template](https://github.com/msys2/MINGW-packages/issues/new?assignees=&labels=package-request&projects=&template=environment_request.yml&title=Build+%5Bpackage+name%5D+for+%5Benvironment%5D) to file your request.
 
 If you are wondering if you should continue to support 32-bit Windows for your
 users, here are some relevant resources:
