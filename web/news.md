@@ -5,12 +5,12 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
-### 2023-12-10 - Starting to drop some 32-bit Packages
+### 2023-12-11 - Starting to drop some 32-bit Packages
 
 Three years ago we dropped 32-bit Windows support for running MSYS2 itself, now
 we are taking the next step and slowly starting to reduce the number of 32-bit
 mingw-w64 packages, meaning the packages for the MINGW32 and CLANG32
-environments. The goal of the phase-out is to reduce maintenance costs and CI
+environments. The goal of the phase-out is to reduce maintenance costs and server
 resources while not affecting most users. The focus will be on packages that
 aren't likely to see much use anyway, or where 64-bit alternatives are available
 and viable:
@@ -30,14 +30,13 @@ This does not affect:
 * Common and frequently used dependencies, and their dependencies (glib, ffmpeg,
   boost, ...)
 
+To find out if a package you have installed is affected you can run `pacman -Qm`
+which lists all installed packages which are no longer available in the repo.
+
 Ideally not many people should notice these changes, but in case they affect you:
 
 * Switch your workflow to use 64-bit packages instead ;)
-* In case you are packaging or building for external users:
-  * Tell us which packages that were removed you still need and for how long, so
-    we can consider reinstating them.
-  * Drop support for 32-bit and point users to the last version supporting
-    32-bit.
+* Tell us which packages that were removed you still need, so we can consider reinstating them.
 
 If there are any questions, let us know [on GitHub](https://github.com/msys2/MINGW-packages/discussions/19326).
 
@@ -66,8 +65,8 @@ Some applications dropping 32-bit support:
 
 There are of course lots of applications not planning to drop support and 32-bit
 Windows is still supported for nearly 2 more years, so we understand that 32-bit
-support is still required in various cases, and we will try to keep the most
-important packages around for as long as possible.
+support is still required in various cases, and we will try to keep important
+packages around for as long as possible.
 
 ### 2023-11-05 - Package installation issues for very old/outdated installations
 
