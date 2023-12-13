@@ -7,6 +7,10 @@ theme:
     logo: 'logo.svg'
     favicon: 'favicon.ico'
     palette:
+      - media: "(prefers-color-scheme)"
+        toggle:
+          icon: material/brightness-auto
+          name: Switch to light mode
       - scheme: default
         media: "(prefers-color-scheme: light)"
         toggle:
