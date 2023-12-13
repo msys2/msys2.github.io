@@ -103,10 +103,6 @@ Our main server is sponsored by [jsDelivr](https://www.jsdelivr.com)
 
 [![jsdelivr.com](sponsors/jsdelivr.svg#gh-light-mode-only){: width=250px}![jsdelivr.com](sponsors/jsdelivr-white.svg#gh-dark-mode-only){: width=250px}](https://www.jsdelivr.com)
 
-[Microsoft Open Source Programs Office](https://opensource.microsoft.com/) sponsors us financially via their [FOSS Fund](https://github.com/microsoft/foss-fund#2022)
-
-[![opensource.microsoft.com](sponsors/microsoft.svg#gh-light-mode-only){: width=250px}![opensource.microsoft.com](sponsors/microsoft-white.svg#gh-dark-mode-only){: width=250px}](https://opensource.microsoft.com/)
-
 Various organizations provide us with mirrors all around the world, see [our mirror list](dev/mirrors.md) for details.
 
 ##  Authors and Contributors

@@ -27,7 +27,6 @@ Files/content included from other sources:
 * `web/donate/github*.png`: taken from https://github.com/logos
 * `web/donate/opencollective.png`: taken from https://docs.opencollective.com/help/collectives/widgets
 * `web/sponsors/jsdelivr*.svg`: taken from  https://github.com/jsdelivr/jsdelivr-media
-* `web/sponsors/microsoft*.svg`: taken from  https://github.com/microsoft/opensource.microsoft.com/tree/main/assets/images
 * `web/codeofconduct.md`: taken from https://www.contributor-covenant.org/version/2/0/code_of_conduct
 
 See the respective sources for license information.
