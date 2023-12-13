@@ -5,15 +5,14 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
-### 2023-12-11 - Starting to drop some 32-bit Packages
+### 2023-12-13 - Starting to drop some 32-bit Packages
 
 Three years ago we dropped 32-bit Windows support for running MSYS2 itself, now
 we are taking the next step and slowly starting to reduce the number of 32-bit
-mingw-w64 packages, meaning the packages for the MINGW32 and CLANG32
-environments. The goal of the phase-out is to reduce maintenance costs and server
-resources while not affecting most users. The focus will be on packages that
-aren't likely to see much use anyway, or where 64-bit alternatives are available
-and viable:
+packages, meaning the packages for the MINGW32 and CLANG32 environments. The
+goal of the phase-out is to reduce maintenance costs and server resources while
+not affecting most users. The focus will be on packages that aren't likely to
+see much use anyway, or where 64-bit alternatives are available and viable:
 
 * Packages which are likely not used outside of MSYS2 (re-packaged)
 * End-user applications which are likely not used outside of MSYS2 (GUI apps,
