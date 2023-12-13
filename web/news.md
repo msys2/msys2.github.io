@@ -22,17 +22,10 @@ see much use anyway, or where 64-bit alternatives are available and viable:
 * Leaf packages with complex and resource intensive builds
 * New leaf packages
 
-This does not affect:
-
-* Toolchains and languages (GCC, LLVM, Rust, Python, ...)
-* UI toolkits (qt5, gtk3, gtk4, ...)
-* Common and frequently used dependencies, and their dependencies (glib, ffmpeg,
-  boost, ...)
-
 To find out if a package you have installed is affected you can run `pacman -Qm`
 which lists all installed packages which are no longer available in the repo.
-
-Ideally not many people should notice these changes, but in case they affect you:
+Ideally not many people should notice these changes, but in case they affect
+you:
 
 * Switch your workflow to use 64-bit packages instead ;)
 * Tell us which packages that were removed you still need, so we can consider reinstating them. Please use the [issue template](https://github.com/msys2/MINGW-packages/issues/new?assignees=&labels=package-request&projects=&template=environment_request.yml&title=Build+%5Bpackage+name%5D+for+%5Benvironment%5D) to file your request.
