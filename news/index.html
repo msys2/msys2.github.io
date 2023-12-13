@@ -2556,16 +2556,10 @@ see much use anyway, or where 64-bit alternatives are available and viable:</p>
 <li>Leaf packages with complex and resource intensive builds</li>
 <li>New leaf packages</li>
 </ul>
-<p>This does not affect:</p>
-<ul>
-<li>Toolchains and languages (GCC, LLVM, Rust, Python, ...)</li>
-<li>UI toolkits (qt5, gtk3, gtk4, ...)</li>
-<li>Common and frequently used dependencies, and their dependencies (glib, ffmpeg,
-  boost, ...)</li>
-</ul>
 <p>To find out if a package you have installed is affected you can run <code>pacman -Qm</code>
-which lists all installed packages which are no longer available in the repo.</p>
-<p>Ideally not many people should notice these changes, but in case they affect you:</p>
+which lists all installed packages which are no longer available in the repo.
+Ideally not many people should notice these changes, but in case they affect
+you:</p>
 <ul>
 <li>Switch your workflow to use 64-bit packages instead ;)</li>
 <li>Tell us which packages that were removed you still need, so we can consider reinstating them. Please use the <a href="https://github.com/msys2/MINGW-packages/issues/new?assignees=&amp;labels=package-request&amp;projects=&amp;template=environment_request.yml&amp;title=Build+%5Bpackage+name%5D+for+%5Benvironment%5D">issue template</a> to file your request.</li>
