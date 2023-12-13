@@ -29,6 +29,9 @@ theme:
 
     custom_dir: overrides
 
+plugins:
+  - privacy
+
 extra_css:
     - 'stylesheets/extra.css'
     - 'stylesheets/fonts.css'
