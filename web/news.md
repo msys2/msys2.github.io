@@ -19,7 +19,7 @@ see much use anyway, or where 64-bit alternatives are available and viable:
   ...)
 * Packages for resource intensive work where most external users are likely
   already on 64-bit (some scientific packages, ...)
-* Leaf packages with complex and resource intensive builds
+* Leaf packages with complex and resource intensive builds that are likely not used
 * New leaf packages
 
 To find out if a package you have installed is affected you can run `pacman -Qm`
