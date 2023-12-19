@@ -5,7 +5,7 @@
   -->
   <a title="GitHub Actions" href="https://github.com/msys2/msys2.github.io/actions?query=workflow%3Agithub%20pages"><img alt="github pages' workflow Status" src="https://img.shields.io/github/actions/workflow/status/msys2/msys2.github.io/main.yml?branch=source&longCache=true&style=flat-square&label=build&logo=github"></a><!--
   -->
-  <a title="Follow msys2org on Twitter" href="https://twitter.com/msys2org"><img src="https://img.shields.io/twitter/follow/msys2org?color=31A4F1&logo=twitter&logoColor=white&style=flat-square"></a><!--
+  <a title="Follow msys2org on Twitter" href="https://twitter.com/msys2org"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fmsys2org&style=flat-square&logo=x&label=follow%20%40msys2org&color=31A4F1"></a><!--
   -->
   <a title="Follow msys2org on Mastodon" href="https://fosstodon.org/@msys2org"><img src="https://img.shields.io/mastodon/follow/109365079526574177?color=000197&domain=https%3A%2F%2Ffosstodon.org%2F&logo=mastodon&logoColor=white&style=flat-square"></a><!--
   -->
