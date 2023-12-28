@@ -39,7 +39,7 @@ jobs:
       - run: poetry run mkdocs build
 
       - name: Upload Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: website
           path: ./site
@@ -53,7 +53,7 @@ jobs:
     if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/source')
     steps:
       - name: Download Results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: website
           path: ./site
