@@ -40,6 +40,36 @@ jobs:
 For more details on the 'msys2/setup-msys2' action and all the available options
 see https://github.com/marketplace/actions/setup-msys2
 
+## GitLab
+
+GitLab offers [shared Windows runners](https://docs.gitlab.com/ee/ci/runners/saas/windows_saas_runner.html)
+with some [pre-installed software](https://gitlab.com/gitlab-org/ci-cd/shared-runners/images/gcp/windows-containers/blob/main/cookbooks/preinstalled-software/README.md)
+and you can build a project using the following `.gitlab-ci.yml`
+snippet, which illustrates how to build a regular autotools-based
+project.  See [GitLab's CI/CD documentation](https://docs.gitlab.com/ee/topics/build_your_application.html)
+for general reference on CI/CD in GitLab.
+
+```yaml
+Windows-MSYS2-UCRT64:
+  # https://docs.gitlab.com/ee/ci/runners/saas/windows_saas_runner.html
+  tags: [ shared-windows, windows-1809 ]
+  script: # https://www.msys2.org/docs/ci/#gitlab
+  - wget.exe -nv -O msys2.exe https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe
+  - ./msys2.exe -y -oC:\
+  - Remove-Item msys2.exe
+  - $env:CHERE_INVOKING = 'yes'
+  - $env:MSYSTEM = 'UCRT64' # https://www.msys2.org/docs/environments/
+  - C:\msys64\usr\bin\bash -lc ' '
+  - C:\msys64\usr\bin\bash -lc 'pacman --noconfirm -Syuu'
+  - C:\msys64\usr\bin\bash -lc 'pacman --noconfirm -Syuu'
+  - |
+    C:\msys64\usr\bin\bash -lc '
+    pacman --noconfirm -Syu git autoconf automake libtool make mingw-w64-ucrt-x86_64-gcc
+    ./bootstrap
+    ./configure
+    make V=1 check VERBOSE=t'
+```
+
 ## Appveyor
 
 Appveyor provides a MSYS2 installation on all their images under `C:\msys64`,
