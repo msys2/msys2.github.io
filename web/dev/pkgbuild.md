@@ -29,6 +29,7 @@ For `msys2_references` the following keys are recognized:
   the cygwin package name for all packages starting with "mingw64-x86_64-",
   minus that prefix: https://cygwin.com/packages/src_package_list.html
 * `pypi` - the PyPI project name: https://pypi.org/search/
+* `gentoo` - the full Gentoo package name e.g. `dev-python/pyasn1`
 
 Defining a key without a value means there is no mapping and the package shouldn't be linked.
 
