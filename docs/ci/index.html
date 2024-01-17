@@ -531,6 +531,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gitlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitLab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#appveyor" class="md-nav__link">
     <span class="md-ellipsis">
       Appveyor
@@ -1907,6 +1916,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gitlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitLab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#appveyor" class="md-nav__link">
     <span class="md-ellipsis">
       Appveyor
@@ -1996,6 +2014,32 @@ provide a BASH script that runs your code in the MSYS2 environment.</p>
 </code></pre></div>
 <p>For more details on the 'msys2/setup-msys2' action and all the available options
 see <a href="https://github.com/marketplace/actions/setup-msys2">https://github.com/marketplace/actions/setup-msys2</a></p>
+<h2 id="gitlab">GitLab</h2>
+<p>GitLab offers <a href="https://docs.gitlab.com/ee/ci/runners/saas/windows_saas_runner.html">shared Windows runners</a>
+with some <a href="https://gitlab.com/gitlab-org/ci-cd/shared-runners/images/gcp/windows-containers/blob/main/cookbooks/preinstalled-software/README.md">pre-installed software</a>
+and you can build a project using the following <code>.gitlab-ci.yml</code>
+snippet, which illustrates how to build a regular autotools-based
+project.  See <a href="https://docs.gitlab.com/ee/topics/build_your_application.html">GitLab's CI/CD documentation</a>
+for general reference on CI/CD in GitLab.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Windows-MSYS2-UCRT64</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># https://docs.gitlab.com/ee/ci/runners/saas/windows_saas_runner.html</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">shared-windows</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">windows-1809</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="c1"># https://www.msys2.org/docs/ci/#gitlab</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wget.exe -nv -O msys2.exe https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./msys2.exe -y -oC:\</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Remove-Item msys2.exe</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$env:CHERE_INVOKING = &#39;yes&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$env:MSYSTEM = &#39;UCRT64&#39;</span><span class="w"> </span><span class="c1"># https://www.msys2.org/docs/environments/</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:\msys64\usr\bin\bash -lc &#39; &#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:\msys64\usr\bin\bash -lc &#39;pacman --noconfirm -Syuu&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:\msys64\usr\bin\bash -lc &#39;pacman --noconfirm -Syuu&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">C:\msys64\usr\bin\bash -lc &#39;</span>
+<span class="w">    </span><span class="no">pacman --noconfirm -Syu git mingw-w64-ucrt-x86_64-autotools mingw-w64-ucrt-x86_64-gcc</span>
+<span class="w">    </span><span class="no">./bootstrap</span>
+<span class="w">    </span><span class="no">./configure</span>
+<span class="w">    </span><span class="no">make V=1 check VERBOSE=t&#39;</span>
+</code></pre></div>
 <h2 id="appveyor">Appveyor</h2>
 <p>Appveyor provides a MSYS2 installation on all their images under <code>C:\msys64</code>,
 see <a href="https://www.appveyor.com/docs/windows-images-software/">https://www.appveyor.com/docs/windows-images-software/</a></p>
