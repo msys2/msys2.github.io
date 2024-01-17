@@ -64,7 +64,7 @@ Windows-MSYS2-UCRT64:
   - C:\msys64\usr\bin\bash -lc 'pacman --noconfirm -Syuu'
   - |
     C:\msys64\usr\bin\bash -lc '
-    pacman --noconfirm -Syu git autoconf automake libtool make mingw-w64-ucrt-x86_64-gcc
+    pacman --noconfirm -Syu git mingw-w64-ucrt-x86_64-autotools mingw-w64-ucrt-x86_64-gcc
     ./bootstrap
     ./configure
     make V=1 check VERBOSE=t'
