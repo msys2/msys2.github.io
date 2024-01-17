@@ -83,5 +83,7 @@ Microsoft Visual Studio by default. It should work and behave as if the
 code was compiled with MSVC.
 
 * Better compatibility with MSVC, both at build time and at run time.
-* It only ships by default on Windows 10 and for older versions you have to
-  provide it yourself or depend on the user having it installed.
+* It is included as part of the operating system in Windows 10 or later,
+  and Windows Server 2016 or later. For older Windows versions, you have to
+  provide it explicitly or depend on the user having it installed. More
+  information about that can be found in [UCRT deployment](https://learn.microsoft.com/en-us/cpp/windows/universal-crt-deployment).
