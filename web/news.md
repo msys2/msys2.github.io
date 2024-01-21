@@ -54,7 +54,7 @@ Some applications dropping 32-bit support:
 * [SciPy](https://scipy.org/) dropped 32-bit support in 2022
 
 There are of course lots of applications not planning to drop support and 32-bit
-Windows is still supported for nearly 2 more years, so we understand that 32-bit
+Windows is still supported until at least October 2025, so we understand that 32-bit
 support is still required in various cases, and we will try to keep important
 packages around for as long as possible.
 
