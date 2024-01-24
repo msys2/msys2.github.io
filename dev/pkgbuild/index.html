@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
@@ -1917,11 +1917,6 @@ The following variables are recognized:</p>
 <td>A list of MSYS2 environments the package is built for. Defaults to an empty list.</td>
 </tr>
 <tr>
-<td><code>msys2_internal</code></td>
-<td>boolean</td>
-<td>Whether the package is an internal or meta package and shouldn't be linked to external sources. Defaults to <code>false</code>.</td>
-</tr>
-<tr>
 <td><code>msys2_references</code></td>
 <td>mapping</td>
 <td>Maps the package to external resources, such as other package repositories.</td>
@@ -1963,6 +1958,7 @@ The following variables are recognized:</p>
   minus that prefix: <a href="https://cygwin.com/packages/src_package_list.html">https://cygwin.com/packages/src_package_list.html</a></li>
 <li><code>pypi</code> - the PyPI project name: <a href="https://pypi.org/search/">https://pypi.org/search/</a></li>
 <li><code>gentoo</code> - the full Gentoo package name e.g. <code>dev-python/pyasn1</code></li>
+<li><code>internal</code> - special key, which if it exists marks the package as internal and doesn't link it to any external sources</li>
 </ul>
 <p>Defining a key without a value means there is no mapping and the package shouldn't be linked.</p>
 <p>The following datatypes are supported:</p>
@@ -2069,10 +2065,10 @@ The following variables are recognized:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
     
   </body>
