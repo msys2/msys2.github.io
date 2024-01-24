@@ -177,8 +177,8 @@ body {
     </svg>');
 }
 
-.md-nav a[href^="http://"]:not(.md-icon, .md-source, .md-logo):after,
-.md-nav a[href^="https://"]:not(.md-icon, .md-source, .md-logo):after {
+.md-nav a[href^="http://packages"]:not(.md-icon, .md-source, .md-logo):after,
+.md-nav a[href^="https://packages"]:not(.md-icon, .md-source, .md-logo):after {
     content: 'XXX';
     background: no-repeat var(--image-external-link);
     background-size: 1em;
