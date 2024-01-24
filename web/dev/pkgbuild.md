@@ -12,7 +12,6 @@ The following variables are recognized:
 | Variable                   | Type    | Description |
 |--------------------------- |---------|-------------|
 | `mingw_arch`               | array   | A list of MSYS2 environments the package is built for. Defaults to an empty list. |
-| `msys2_internal`           | boolean | Whether the package is an internal or meta package and shouldn't be linked to external sources. Defaults to `false`. |
 | `msys2_references`         | mapping | Maps the package to external resources, such as other package repositories. |
 | `msys2_changelog_url`      | string  | NEWS file in git or the GitHub releases page. In case there are multiple, the one that is more useful for packagers. |
 | `msys2_documentation_url`  | string  | URL to the documentation for the API, tools, etc., in case it's a different website than the homepage. |
@@ -30,6 +29,7 @@ For `msys2_references` the following keys are recognized:
   minus that prefix: https://cygwin.com/packages/src_package_list.html
 * `pypi` - the PyPI project name: https://pypi.org/search/
 * `gentoo` - the full Gentoo package name e.g. `dev-python/pyasn1`
+* `internal` - special key, which if it exists marks the package as internal and doesn't link it to any external sources
 
 Defining a key without a value means there is no mapping and the package shouldn't be linked.
 
