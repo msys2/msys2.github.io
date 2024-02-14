@@ -100,3 +100,11 @@ lastupdate_url='https://repo.msys2.org/lastupdate'
 
 To register your mirror please open an issue here:
 https://github.com/msys2/msys2.github.io/issues
+
+## Admin TODO List
+
+When adding/removing/updating mirrors:
+
+* List all mirrors in https://github.com/msys2/MSYS2-packages/tree/master/pacman-mirrors
+* List tier 1 mirrors in https://github.com/msys2/msys2-main-server/blob/main/services/mirrorbits/add_mirrors.sh
+* Keep this page up-to-date
