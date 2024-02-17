@@ -10,7 +10,7 @@ In regular GNU/Linux environments, people use `sudo` to perform administrative t
 
 ## How to get Sudo
 
-There are several `sudo` alternatives to choose from.  Check the difference sheet below and pick the one you like to download.  For general users, I recommand `gsudo` as it is powerful and modern.  To have it installed, run `winget install gsudo` and reboot your system if you have winget.  Run `echo 'alias sudo=gsudo'` if you are used to typing `sudo`.  Click the links below to learn more advanced features.
+There are several `sudo` alternatives to choose from.  Check the difference sheet below and pick the one you like to download.  For general users, we recommand `gsudo` as it is powerful and modern.  To have it installed, run `winget install gsudo` and reboot your system if you have winget.  Run `echo 'alias sudo=gsudo'` if you are used to typing `sudo`.  Click the links below to learn more advanced features.
 
 ## Difference between various Sudo
 
