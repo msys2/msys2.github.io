@@ -10,4 +10,12 @@ In regular GNU/Linux environments, people use `sudo` to perform administrative t
 
 ## How to get Sudo
 
-Since MSYS2 doesn't support all the things a classic Sudo needs (setuid? PAM?), we need a replacement.  One such replacement that doesn't seem to suffer from horrible security flaws is [*win-sudo*](https://github.com/imachug/win-sudo).  It doesn't support (as of May 2020) the various different arguments (`-H`, `-u` etc.), but it does work in the most common use case of `sudo foo` running `foo` with elevated privileges.  The authorization is handled by UAC, same as any other Windows program.  But for those who chase for a more flawless alternative for sudo, there is also a universal sudo called [*gsudo*](https://github.com/gerardog/gsudo).  Compared with win-sudo, gsudo is written in C# and can take effect on various shells like cmd, Powershell and shells in MSYS2.  Have work on hand but forget to login your shell with privilege?  Just run `gsudo` and your shell is elevated inheriting working directory.  Not to mention gsudo support `-u` argument and can be installed with `winget`.  If you feel typing `gsudo` is a bit long, you can do like `echo 'alias sudo=gsudo' > ~/.bashrc` to have a similar experience in GNU/LINUX.
+There are several `sudo` alternatives to choose from.  Check the difference sheet below and pick the one you like to download.  For general users, I recommand `gsudo` as it is powerful and modern.  To have it installed, run `winget install gsudo` and reboot your system if you have winget.  Run `echo 'alias sudo=gsudo'` if you are used to typing `sudo`.  Click the links below to learn more advanced features.
+
+## Difference between various Sudo
+
+* [gsudo](https://github.com/gerardog/gsudo): Universal implementation in C#, support a wide range of features including `-u`, multiple shells, job control, etc. Installation needed.
+* [win-sudo](https://github.com/purplesyringa/win-sudo): Compact implementation in shell script, lacks some features like job control.
+* [Sudo for Windows](https://github.com/microsoft/sudo): Official implementaion from Microsoft. Coming soon.
+* [NSudo](https://github.com/M2TeamArchived/NSudo)/[MinSudo](https://github.com/M2Team/NanaRun): Poor support for MSYS2, don't choose it.
+
