@@ -54,7 +54,7 @@ extra:
 
 site_url: https://www.msys2.org
 repo_url: https://github.com/msys2/msys2.github.io
-edit_uri: edit/source/web/
+edit_uri: edit/main/web/
 
 markdown_extensions:
     - meta
