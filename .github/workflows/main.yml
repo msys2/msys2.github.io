@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   pull_request:
   push:
-    branches-ignore:
-      - main
 
 jobs:
   build:
@@ -38,30 +36,23 @@ jobs:
 
       - run: poetry run mkdocs build
 
-      - name: Upload Results
-        uses: actions/upload-artifact@v4
+      - name: Upload for pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: website
           path: ./site
 
   deploy:
-    runs-on: ubuntu-22.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     needs: build
     concurrency: ci-${{ github.ref }}
     permissions:
-      contents: write
-    if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/source')
+      pages: write
+      id-token: write
+    if: github.repository != 'msys2/msys2.github.io' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/main')
     steps:
-      - name: Download Results
-        uses: actions/download-artifact@v4
-        with:
-          name: website
-          path: ./site
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          publish_branch: main
-          cname: www.msys2.org
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
