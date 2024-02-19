@@ -3,7 +3,7 @@
   -->
   <a title="Join the chat on Matrix" href="https://matrix.to/#/#msys2_msys2:gitter.im"><img src="https://img.shields.io/badge/chat-on%20matrix-4db797.svg?longCache=true&style=flat-square&logo=matrix&logoColor=e8ecef"></a><!--
   -->
-  <a title="GitHub Actions" href="https://github.com/msys2/msys2.github.io/actions?query=workflow%3Agithub%20pages"><img alt="github pages' workflow Status" src="https://img.shields.io/github/actions/workflow/status/msys2/msys2.github.io/main.yml?branch=source&longCache=true&style=flat-square&label=build&logo=github"></a><!--
+  <a title="GitHub Actions" href="https://github.com/msys2/msys2.github.io/actions?query=workflow%3Agithub%20pages"><img alt="github pages' workflow Status" src="https://img.shields.io/github/actions/workflow/status/msys2/msys2.github.io/main.yml?branch=main&longCache=true&style=flat-square&label=build&logo=github"></a><!--
   -->
   <a title="Follow msys2org on Twitter" href="https://twitter.com/msys2org"><img src="https://img.shields.io/twitter/follow/msys2org?style=flat-square&logo=x&logoColor=white&color=31A4F1"></a><!--
   -->
@@ -19,14 +19,11 @@
 
 This website is written in Markdown and gets built to a static website using
 [mkdocs](https://www.mkdocs.org/) and a modified version of the [mkdocs-material
-theme](https://squidfunk.github.io/mkdocs-material). The main branch of this
-repo is the `source` branch and any new commits will auto deploy a new build to
-the `main` branch using [a GitHub
-action](https://github.com/peaceiris/actions-gh-pages). The `main` branch is
-connected to [GitHub pages](https://pages.github.com) and is reachable under
-https://msys2.github.io and https://www.msys2.org. Changes to the `source`
-branch usually take a minute or two until they are live.
-
+theme](https://squidfunk.github.io/mkdocs-material). Any new commits to the
+`main` branch will auto deploy to [GitHub pages](https://pages.github.com) using
+[a GitHub action](https://github.com/actions/deploy-pages). The resulting
+website is reachable under https://msys2.github.io and https://www.msys2.org.
+Changes to the `main` branch usually take a minute or two until they are live.
 
 ## Development
 
