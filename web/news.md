@@ -5,6 +5,38 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-02-21 - Note to the remaining Windows 7 / 8.0 users
+
+Note to Windows 7 / 8.0 users: While we stopped supporting these systems over a year
+ago, many things in MSYS2 continued to work as before. With the upcoming update
+to Cygwin 3.5, this will change and MSYS2 will no longer start on these systems.
+We're trying to come up with a migration path, but it's not clear yet if and how
+this will work. We'll post here when we know more.
+
+### 2024-02-19 - Removal of non C/C++ packages from the mingw-w64-toolchain group
+
+Unlike the LLVM variant, the GCC variant of the
+[mingw-w64-toolchain](https://packages.msys2.org/basegroups/mingw-w64-toolchain)
+package group also contained non C/C++ toolchains, such as
+fortran/ada/objc/libgccjit due to the nature of them being built from the same
+source. Since this was never the intention of the group and was causing a lot of
+unnecessary downloads and bandwidth usage, we decided to clean this up now.
+
+If this broke things for you, make sure you explicitly install [Fortran/Ada/ObjC
+packages](https://packages.msys2.org/base/mingw-w64-gcc) if you depend on them.
+
+### 2024-02-01 - mingw-w64-gettext converted to split package
+
+[mingw-w64-gettext](https://packages.msys2.org/base/mingw-w64-gettext) has been
+split into "gettext-tools" and "gettext-runtime" subpackages. While this is a
+backwards compatible change, this means that the gettext tools, like msgmerge
+and msgfmt, are less likely to be installed as transitive dependencies via other
+packages, and may now be missing for you if you were implicitly depending on
+them.
+
+If this broke things for you, make sure you explicitly install the [gettext
+tools](https://packages.msys2.org/base/mingw-w64-gettext) if you depend on them.
+
 ### 2023-12-13 - Starting to drop some 32-bit Packages
 
 Three years ago we dropped 32-bit Windows support for running MSYS2 itself, now
