@@ -27,9 +27,12 @@ For `msys2_references` the following keys are recognized:
 * `cygwin-mingw64` -
   the cygwin package name for all packages starting with "mingw64-x86_64-",
   minus that prefix: https://cygwin.com/packages/src_package_list.html
-* `pypi` - the PyPI project name: https://pypi.org/search/
+* `pypi` - the PyPI project name (case-insensitive): https://pypi.org/search/
 * `gentoo` - the full Gentoo package name e.g. `dev-python/pyasn1`
 * `internal` - special key, which if it exists marks the package as internal and doesn't link it to any external sources
+* `purl` - a [package URL](https://github.com/package-url/purl-spec) e.g. `pkg:cargo/ripgrep` (only cargo supported atm)
+  Multiple PURLs supported.
+* `cpe` - a [CPE](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) prefix, either in the 2.2 format (`cpe: cpe:/a:gnu:gcc`) or the 2.3 format (`cpe:2.3:a:gnu:gcc`). `target_sw` etc are currently not supported. Multiple CPEs supported.
 
 Defining a key without a value means there is no mapping and the package shouldn't be linked.
 
@@ -37,6 +40,6 @@ The following datatypes are supported:
 
 * **string:** `msys2_myvar="example"` 🠆 `{"myvar": "example"}`
 * **array:** Arrays of strings: `msys2_myvar=("example1" "example2")` 🠆 `{"myvar": ["example1", "example2"]}`
-* **mapping:** Mappings of strings to an optional string, separated by `":"`, values are
-  stripped: `msys2_myvar=("example1: value1" "example2")` 🠆 `{"myvar": {"example1": "value1", "example2": null}}`
+* **mapping:** Mappings of strings to optional other strings, separated by `":"`, values are
+  stripped: `msys2_myvar=("example1: value1" "example2")` 🠆 `{"myvar": {"example1": ["value1"], "example2": [null]}}`
 * **boolean:** either `true` or `false`: `msys2_myvar=true` 🠆 `{"myvar": true}`
