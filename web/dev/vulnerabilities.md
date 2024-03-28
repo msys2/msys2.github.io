@@ -28,6 +28,20 @@ msys2_references=(
 )
 ```
 
+If a discovered vulnerability doesn't affect our users in the first place (it's
+Unix only for example), or is already fixed (missing or wrong version
+information attached to the vulnerability info), or we have backported a fix for
+it, then we can mark it as ignored by adding the ID to the
+`msys2_ignore_vulnerabilities` list.
+
+Example:
+
+```bash
+msys2_ignore_vulnerabilities=(
+  "CVE-2006-2453"  # some reason why this should be ignored
+)
+```
+
 ## Where to find CPEs and other IDs?
 
 * For Python packages search the package on https://pypi.org
@@ -39,5 +53,4 @@ msys2_references=(
 ## TODO
 
 * Some automated way to sync/update CPEs
-* Add metadata field to ignore certain CVEs for certain packages
 * Add metadata field for the real upstream version, in case we use a different format

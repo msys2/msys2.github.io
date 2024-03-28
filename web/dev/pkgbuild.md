@@ -9,15 +9,16 @@ format. We have some minor extensions to the format, which are documented here.
 Variables starting with `msys2_` and `mingw_` can be used to add additional metadata to a package, which will be read and used by our tools.
 The following variables are recognized:
 
-| Variable                   | Type    | Description |
-|--------------------------- |---------|-------------|
-| `mingw_arch`               | array   | A list of MSYS2 environments the package is built for. Defaults to an empty list. |
-| `msys2_references`         | mapping | Maps the package to external resources, such as other package repositories. |
-| `msys2_changelog_url`      | string  | NEWS file in git or the GitHub releases page. In case there are multiple, the one that is more useful for packagers. |
-| `msys2_documentation_url`  | string  | URL to the documentation for the API, tools, etc., in case it's a different website than the homepage. |
-| `msys2_repository_url`     | string  | URL to the web view of the repository, e.g., on GitHub or GitLab. |
-| `msys2_issue_tracker_url`  | string  | URL to the bug tracker, mailing list archive, etc. |
-| `msys2_pgp_keys_url`       | string  | URL to a website containing which keys are used to sign releases. |
+| Variable                       | Type    | Description                                                                                                          |
+|--------------------------------|---------|----------------------------------------------------------------------------------------------------------------------|
+| `mingw_arch`                   | array   | A list of MSYS2 environments the package is built for. Defaults to an empty list.                                    |
+| `msys2_references`             | mapping | Maps the package to external resources, such as other package repositories.                                          |
+| `msys2_changelog_url`          | string  | NEWS file in git or the GitHub releases page. In case there are multiple, the one that is more useful for packagers. |
+| `msys2_documentation_url`      | string  | URL to the documentation for the API, tools, etc., in case it's a different website than the homepage.               |
+| `msys2_repository_url`         | string  | URL to the web view of the repository, e.g., on GitHub or GitLab.                                                    |
+| `msys2_issue_tracker_url`      | string  | URL to the bug tracker, mailing list archive, etc.                                                                   |
+| `msys2_pgp_keys_url`           | string  | URL to a website containing which keys are used to sign releases.                                                    |
+| `msys2_ignore_vulnerabilities` | array   | A list of CVE and/or GHSA IDs which should be ignored.                                                               |
 
 For `msys2_references` the following keys are recognized:
 
