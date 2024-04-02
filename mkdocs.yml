@@ -42,6 +42,10 @@ extra_css:
     - 'stylesheets/fonts.css'
 
 extra:
+    alternate:
+      - name: 한국어 (ko)
+        link: https://www-msys2-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=ko
+        lang: ko
     social:
         - icon: 'fontawesome/brands/github'
           link: 'https://github.com/msys2'
