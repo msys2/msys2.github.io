@@ -37,6 +37,18 @@ Some caveats:
   zero. We will mainly use them to prioritize updates and be better informed
   about the security status of our packages.
 
+### 2024-03-30 - xz-utils Backdoor
+
+In response to the recent [xz
+backdoor](https://en.wikipedia.org/wiki/XZ_Utils_backdoor) we have rebuilt the
+xz packages for [msys](https://github.com/msys2/MSYS2-packages/pull/4475) and
+[mingw](https://github.com/msys2/MINGW-packages/pull/20479) from the git source
+instead of the tarball, following what [Arch Linux
+did](https://gitlab.archlinux.org/archlinux/packaging/packages/xz/-/commits/main).
+
+Although we have built and shipped the affected versions, there is no indication
+at this time that this issue has affected MSYS2 users.
+
 ### 2024-02-21 - Note to the remaining Windows 7 / 8.0 users
 
 Note to Windows 7 / 8.0 users: While we stopped supporting these systems over a year
