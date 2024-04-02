@@ -5,6 +5,38 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-04-02 - Automated Vulnerability Reporting System
+
+The [package index](https://packages.msys2.org/security) now has some
+rudimentary support for detecting and displaying
+[CVEs](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) and
+other vulnerability reports for the packages included in MSYS2.
+
+We piggyback on existing security scanner tools by using the metadata in the
+package recipes to create a dummy
+[SBOM](https://www.ntia.gov/page/software-bill-materials) file and then feed the
+scan results to our website. This gives us some insight into which
+packages have potential vulnerabilities or which updates should be prioritized.
+For more information on the process see [Vulnerability
+Reporting](./dev/vulnerabilities.md).
+
+Some caveats:
+
+* Only about half of our packages have the necessary metadata to be scanned at
+  all. This is mainly because packages that have never had a CVE assigned also
+  don't have a [CPE](https://nvd.nist.gov/products/cpe) to link to, and partly
+  because it's just incomplete on our end.
+* The CVE system is currently [not fully
+  operational](https://nvd.nist.gov/general/news/nvd-program-transition-announcement),
+  and for the past few weeks most of the incoming CVEs have not been processed
+  at all. This means that newer CVEs are likely not linked to our packages.
+  Since we use [grype](https://github.com/anchore/grype) for scanning we do get
+  some new data from their [nvd-data-overrides
+  effort](https://github.com/anchore/nvd-data-overrides) though.
+* Note that we will not try to reduce the number of reported vulnerabilities to
+  zero. We will mainly use them to prioritize updates and be better informed
+  about the security status of our packages.
+
 ### 2024-02-21 - Note to the remaining Windows 7 / 8.0 users
 
 Note to Windows 7 / 8.0 users: While we stopped supporting these systems over a year
