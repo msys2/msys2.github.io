@@ -5,6 +5,17 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-04-23 - TLS/SSL Support for the Repository Rsync Server
+
+We have added TLS/SSL support for the repository rsync server. This means that
+you can now use
+
+```console
+$ rsync-ssl rsync://repo.msys2.org/builds
+```
+
+to sync the repository over an encrypted connection.
+
 ### 2024-04-02 - Automated Vulnerability Reporting System
 
 The [package index](https://packages.msys2.org/security) now has some
