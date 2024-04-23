@@ -83,7 +83,7 @@ with the distribution of sizes like this:
 You can use rsync to update your mirror using
 
 ```shell
-rsync -rlptH --safe-links --delete-delay --delay-updates \
+rsync-ssl -rlptH --safe-links --delete-delay --delay-updates \
     rsync://repo.msys2.org/builds/ ./msys2
 ```
 
@@ -96,6 +96,9 @@ https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/roles/syncre
 source_url='rsync://repo.msys2.org/builds/'
 lastupdate_url='https://repo.msys2.org/lastupdate'
 ```
+
+Since our server has TLS/SSL support, you can replace the `rsync` command in the
+script with `rsync-ssl`.
 
 To register your mirror please open an issue here:
 https://github.com/msys2/msys2.github.io/issues
