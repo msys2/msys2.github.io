@@ -5,6 +5,19 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-05-03 - Update to Cygwin 3.5 on Unsupported Systems
+
+Users of Windows 7 and 8.0 will find that doing a system upgrade will abort with
+the following error message:
+
+> The MSYS2 runtime version you are about to install will no longer run
+on your version of Windows. To continue using MSYS2, please switch to
+the legacy runtime using:
+>
+> pacman --noconfirm -S msys2-runtime-3.4 msys2-runtime-3.4-devel
+
+Please follow the instructions and let us know if there are any issues.
+
 ### 2024-04-23 - TLS/SSL Support for the Repository Rsync Server
 
 We have added TLS/SSL support for the repository rsync server. This means that
