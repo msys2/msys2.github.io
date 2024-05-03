@@ -18,6 +18,19 @@ the legacy runtime using:
 
 Please follow the instructions and let us know if there are any issues.
 
+### 2024-05-02 - MSYS2 on Linux (Experimental)
+
+We've created a Docker image including a Wine fork + Cygwin fixes + MSYS2, as an
+experiment, so you can run MSYS2 on Linux: https://github.com/msys2/msys2-docker
+
+Be warned, it's very slow and flaky, and signature verification is disabled for
+packages/repos, because otherwise things would be unacceptably slow. Don't
+use it for anything important.
+
+Shout out to [@pojntfx (Felicitas Pojtinger)](https://github.com/pojntfx) for
+the idea and initial Dockerfile and to [@jhol (Joel
+Holdsworth)](https://github.com/jhol) for developing the wine fork.
+
 ### 2024-04-23 - TLS/SSL Support for the Repository Rsync Server
 
 We have added TLS/SSL support for the repository rsync server. This means that
