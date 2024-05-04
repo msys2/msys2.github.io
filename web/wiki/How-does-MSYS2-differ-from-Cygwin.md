@@ -31,7 +31,7 @@ Runtime
 
 Cygwin provides a runtime library called `cygwin1.dll` that provides the POSIX compatibility layer where necessary. The MSYS2 variant of this library is called `msys-2.0.dll` and includes the following changes to support using native Windows programs:
 
-1. Automatic path mangling of command line arguments and environment variables to Windows form on the fly. (This can be [selectively turned off](Porting.md#user-content-filesystem-namespaces).)
+1. Automatic path mangling of command line arguments and environment variables to Windows form on the fly. (This can be [selectively turned off](Porting.md#filesystem-namespaces).)
 2. Ability to change the reported OS using an environment variable (`MSYSTEM`, with values of `MSYS2`, `MINGW32`, and `MINGW64`).  This allows mingw-w64 software to be built in native build mode (as opposed to cross-compilation mode).
 3. Conversion of output of native Windown applications from Windows line endings to POSIX line endings by removing trailing `'\r'` characters, so that e.g. `bb=$(gcc --print-search-dirs)` works as expected.
 4. Replacement of symlinks with copying, so that Windows programs don't trip up on these files. MSYS2 also supports creating native NTFS symlinks, but these are limited in other ways.

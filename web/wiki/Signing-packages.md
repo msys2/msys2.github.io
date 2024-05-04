@@ -39,7 +39,7 @@ To import and sign your key with `pacman-key`:
 2. `pacman-key --lsign-key <keyid>`
 [more...](https://wiki.archlinux.org/index.php/pacman-key#Adding_unofficial_keys)
 
-To make your key a trusted developer key for signing official packages, you have to get your key included in the respective keyring and get it signed by at least 3 master keys. The package and repository is `msys2-keyring` for MSYS2, see [Alexpux/msys2-keyring](https://github.com/Alexpux/MSYS2-keyring/). The package and repository for Arch Linux is `archlinux-keyring`, see https://projects.archlinux.org/archlinux-keyring.git/. These packages install keyring files into `/usr/share/pacman/keyrings` which then can be imported and locally signed in one batch using `pacman-key --populate <keyringname>`.
+To make your key a trusted developer key for signing official packages, you have to get your key included in the respective keyring and get it signed by at least 3 master keys. The package and repository is `msys2-keyring` for MSYS2, see [Alexpux/msys2-keyring](https://github.com/Alexpux/MSYS2-keyring/). The package and repository for Arch Linux is `archlinux-keyring`, see https://gitlab.archlinux.org/archlinux/archlinux-keyring. These packages install keyring files into `/usr/share/pacman/keyrings` which then can be imported and locally signed in one batch using `pacman-key --populate <keyringname>`.
 
 
 Actually sign stuff

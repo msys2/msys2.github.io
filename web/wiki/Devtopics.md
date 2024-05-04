@@ -71,10 +71,10 @@ Altough we are probably not so big among end-users yet, a lot of cross-platform 
 
 Links:
 
-- https://vcpkg.readthedocs.io/en/latest/maintainers/vcpkg_acquire_msys/
+- https://learn.microsoft.com/en-us/vcpkg/maintainers/functions/vcpkg_acquire_msys
 - https://chocolatey.org/packages/msys2/
 - https://github.com/msys2/setup-msys2
-- https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
+- https://github.com/actions/runner-images/blob/main/images/windows/Windows2019-Readme.md (https://github.com/actions/virtual-environments/pull/632 + https://github.com/actions/virtual-environments/pull/630)
 - https://www.appveyor.com/docs/windows-images-software/#mingw-msys-cygwin
 - https://docs.travis-ci.com/user/reference/windows/#how-do-i-use-msys2
 - https://circleci.com/docs/2.0/hello-world-windows/
@@ -82,7 +82,7 @@ Links:
 - https://github.com/Alexpux/Cygwin/pull/8
 - https://gitlab.haskell.org/ghc/ghc/wikis/building/preparation/windows
 - https://wiki.qt.io/MSYS2
-- https://www.gtk.org/download/windows.php#MSYS2
+- https://www.gtk.org/docs/installations/windows
 - https://cran.r-project.org/bin/windows/Rtools/
 - https://wiki.inkscape.org/wiki/index.php?title=Compiling_Inkscape_on_Windows_with_MSYS2
 - https://wiki.gnome.org/Initiatives/Windows
@@ -105,7 +105,7 @@ What to do to get them:
 
 Links:
 
-- https://www.msys2.org/wiki/Contributing-to-MSYS2/
+- https://www.msys2.org/get-involved/
 
 
 Fix pacman errors wrt. conflicts in `bin/foo` vs `bin/foo.exe`
@@ -144,7 +144,7 @@ Links:
 - [GnuWin](http://gnuwin32.sourceforge.net)
 - [UnxUtils](http://unxutils.sourceforge.net/)
 - [GNU on Windows](https://github.com/bmatzelle/gow/wiki)
-- [mksh/Win32](https://www.mirbsd.org/permalinks/wlog-10_e20130718-tg.htm)
+- [mksh/Win32](https://web.archive.org/web/20231203014653/https://www.mirbsd.org/permalinks/wlog-10_e20130718-tg.htm)
 - [busybox-w32](https://frippery.org/busybox/) and [MinGit](https://github.com/git-for-windows/git/wiki/MinGit#experimental-busybox-based-mingit) and [mingw-w64-busybox](https://github.com/git-for-windows/MINGW-packages/tree/main/mingw-w64-busybox)
 
 

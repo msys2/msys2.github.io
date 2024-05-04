@@ -14,7 +14,7 @@ licenses are recorded in a package:
 #### The license array field
 
 * Values starting with `spdx:` are [SPDX license
-  expressions](https://spdx.github.io/spdx-spec/SPDX-license-expressions/).
+  expressions](https://spdx.github.io/spdx-spec/v3.0/annexes/SPDX-license-expressions/).
   Example: `('spdx:GPL-2.0-or-later')`
 * Multiple values starting with `spdx:` are treated as if they are combined with
   `OR`. Example: `('spdx:LGPL-2.1-only', 'spdx:MPL-1.1')` is the same as

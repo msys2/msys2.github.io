@@ -24,7 +24,7 @@ Configuration for [an MSYS2 shell in Visual Studio Code](https://stackoverflow.c
 
 **msystem.bat** and cmd/clink integration in the `filesystem-cmd` package from @userzimmermann. [PR](https://github.com/Alexpux/MSYS2-packages/pull/350), [commits](https://github.com/userzimmermann/MSYS2-packages/commits/ed54eccce9716b9471c63bc1738ebbab637ed552)
 
-**git-bash.exe** and **start-ssh-agent.cmd** as part of the Git for Windows project from @dscho. [GitHub](https://github.com/git-for-windows/git/blob/master/compat/win32/git-wrapper.c), [GitHub](https://github.com/git-for-windows/MINGW-packages/tree/master/mingw-w64-git)
+**git-bash.exe** and **start-ssh-agent.cmd** as part of the Git for Windows project from @dscho. [GitHub](https://github.com/git-for-windows/MINGW-packages/blob/main/mingw-w64-git/git-wrapper.c), [GitHub](https://github.com/git-for-windows/MINGW-packages/tree/master/mingw-w64-git)
 
 **Open MSYS2 here** from @magthe, with contributions from @sushovan-dw and @ryanpfeeley. [Gist+discussion](https://gist.github.com/magthe/a60293fe395af7245a9e)
 

@@ -199,7 +199,7 @@ Cygwin/MSYS2 programs have to deal with a mix of both approaches, but they can a
 
 ["How Command Line Parameters Are Parsed" by David Deley](http://www.daviddeley.com/autohotkey/parameters/parameters.htm)
 
-["Everyone quotes command line arguments the wrong way" by Daniel Colascione](http://blogs.msdn.com/b/twistylittlepassagesallalike/archive/2011/04/23/everyone-quotes-arguments-the-wrong-way.aspx)
+["Everyone quotes command line arguments the wrong way" by Daniel Colascione](https://learn.microsoft.com/en-gb/archive/blogs/twistylittlepassagesallalike/everyone-quotes-command-line-arguments-the-wrong-way)
 
 Other resources
 ---------------
