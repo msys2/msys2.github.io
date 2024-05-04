@@ -2,33 +2,47 @@
 
 We try to cater to two different types of users for our pre-built packages:
 
-* Developers using MSYS2 directly, who usually want the latest software and tend to use newer hardware and keep their Windows up to date.
-* End users, who use bundled applications containing pre-built packages from the MSYS2 repository. They can use [very outdated Windows versions on very outdated hardware](https://data.firefox.com/dashboard/hardware).
+* **Developers using MSYS2 directly:** These users generally prefer the latest software and updates, typically using newer hardware and keeping their Windows operating system updated.
+* **End-users of bundled applications:** These applications include pre-built packages from the MSYS2 repository, and the users may run [very outdated versions of Windows on equally outdated hardware](https://data.firefox.com/dashboard/hardware).
 
 In some cases we can't please both groups at the same time, so we have to find compromises.
 
-## Msys Packages & the Installer
+## Current Policy
 
-This includes the unixy environment and the GUI installer.
+**The GUI Installer:** Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
 
-**Required Windows version:** 64bit Windows 8.1 / Windows Server 2012 R2
+**Msys/Cygwin Packages**: Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
 
-## Mingw Packages
+**Mingw Packages**: Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
+Upstream software may impose additional requirements.
 
-This includes all packages that don't depend on Cygwin.
+**Mingw Toolchains**: MINGW32/MINGW64 environments allow targeting Windows 7+ still. All others allow targeting Windows 8.1+.
 
-**Targeted Windows version (*):** Windows 8.1+
+**Hardware Requirements**: We try to follow the minimum hardware requirements of the oldest Windows versions we support. Upstream software may impose additional requirements.
 
-(*) If possible, depending on the upstream support. In some cases we can delay dropping support by staying on older versions/branches longer, or patching them, but that is not always practical or desirable.
+## Resources for Unsupported Windows Versions
 
-## Supported Hardware
+We no longer support these configurations, but here's a list of resources that might help you get things running either way.
 
-We try to follow the minimum hardware requirements of the Windows versions we support.
+**Windows 7**: The last installer version that worked on Windows 7 is [2022-10-28](https://github.com/msys2/msys2-installer/releases/tag/2022-10-28). Switching to [msys2-runtime-3.4](https://packages.msys2.org/base/msys2-runtime-3.4) should keep the Cygwin parts working. Many Mingw packages will no longer work though (Python for example).
 
-## Additional Resources
+**32-bit Windows**: The last working archive is available at https://repo.msys2.org/distrib/i686 and there is a community maintained repo at https://github.com/jeremyd2019/msys2-build32.
 
-* [Windows 7 Support Dates](https://docs.microsoft.com/en-us/lifecycle/products/windows-7)
-* [Windows 8 Support Dates](https://docs.microsoft.com/en-us/lifecycle/products/windows-8)
-* [Windows 8.1 Support Dates](https://docs.microsoft.com/en-us/lifecycle/products/windows-81)
-* [Windows 10 Support Dates](https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro)
-* [Windows 11 Support Dates](https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro)
+## Changelog
+
+Various changes affecting the supported Windows versions and hardware for both pre-built packages and programs built using our toolchains.
+
+**2024-05-03:** [msys2-runtime](https://packages.msys2.org/base/msys2-runtime)
+was updated to Cygwin 3.5 which dropped support for Windows 7 and will no longer run there.
+
+**2023-12-13:** We will no longer add new 32-bit Mingw packages to the repo unless needed, and will start dropping 32-bit packages without users.
+
+**2023-01-15:** Dropped active support for Windows 7 and 8.0 in general.
+
+**2022-12-26:** Default _WIN32_WINNT bumped to Windows 8.1 for UCRT environments. MINGW32/MINGW64 environments still default to Windows 7.
+
+**2022-12-16:** The GUI installer dropped support for running on Windows 7.
+
+**2022-10-18:** New minimum hardware requirements for pre-built packages matching the minimum requirements of Windows 8.1 (CPUs from ~2006/7+).
+
+**2020-05-17:** 32-bit MSYS2 no longer actively supported. Both packages and the installer will no longer be updated.
