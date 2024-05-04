@@ -1,0 +1,7 @@
+cache = true
+max_cache_age = "1d"
+
+scheme = ["https", "http"]
+exclude_all_private = true
+exclude = [
+]

@@ -43,3 +43,9 @@ For larger changes:
 * Access http://127.0.0.1:8000 - any changes to the sources should be
   immediately visible in your browser
 * Open a PR with your changes or just push them if you have commit rights
+
+### Link Checker
+
+Run `./linkcheck.sh` to check for broken links. This script uses
+[lychee](https://github.com/lycheeverse/lychee) and requires Docker to be
+installed.
