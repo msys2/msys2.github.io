@@ -7,16 +7,22 @@ This page lists important changes or issues affecting MSYS2 users. We also post 
 
 ### 2024-05-03 - Update to Cygwin 3.5 on Unsupported Systems
 
-Users of Windows 7 and 8.0 will find that doing a system upgrade will abort with
-the following error message:
+The update to Cygwin 3.5 means MSYS2 will no longer start on long unsupported
+systems like Windows 7 and 8.0.
 
-> The MSYS2 runtime version you are about to install will no longer run
-on your version of Windows. To continue using MSYS2, please switch to
-the legacy runtime using:
->
-> pacman --noconfirm -S msys2-runtime-3.4 msys2-runtime-3.4-devel
+To keep MSYS2 running for a bit longer on such systems you can switch to the
+legacy runtime using:
 
-Please follow the instructions and let us know if there are any issues.
+```console
+$ pacman --noconfirm -Sy msys2-runtime-3.4 msys2-runtime-3.4-devel
+```
+
+In case you have already updated and can't start MSYS2 anymore, you can use the
+following steps to downgrade:
+
+* Get the [last MSYS2 installer release](https://github.com/msys2/msys2-installer/releases/download/2024-01-13/msys2-base-x86_64-20240113.sfx.exe) and extract it
+* Copy the "msys64\usr\bin\msys-2.0.dll" from there to the same location in your existing MSYS2 installation
+* Start a MSYS2 terminal and switch to the legacy runtime using the command above
 
 ### 2024-05-02 - MSYS2 on Linux (Experimental)
 
