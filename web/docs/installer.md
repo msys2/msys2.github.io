@@ -6,11 +6,12 @@ set up an initial MSYS2 environment. For further updating pacman is used. See
 
 ![screenshot](installer.png)
 
-The installer comes in three variants:
+The installer comes in four variants:
 
 * `msys2-x86_64-.exe`: The GUI installer (see screenshot above)
 * `msys2-base-x86_64-*.sfx.exe`: Just the files in a self extracting archive (missing Windows integration like shortcuts, uninstall entry, but otherwise works the same)
-* `msys2-base-x86_64-*.tar.xz`: Same as `.sfx.exe` but as an XZ archive
+* `msys2-base-x86_64-*.tar.zst`: Same as `.sfx.exe` but as an ZSTD archive
+* `msys2-base-x86_64-*.tar.xz`: Same as `.sfx.exe` but as an XZ archive (deprecated)
 
 The installer executables and tarballs are hosted on
 [GitHub](https://github.com/msys2/msys2-installer/releases) as well as on the

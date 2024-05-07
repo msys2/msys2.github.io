@@ -24,7 +24,10 @@ Upstream software may impose additional requirements.
 
 We no longer support these configurations, but here's a list of resources that might help you get things running either way.
 
-**Windows 7**: The last installer version that worked on Windows 7 is [2022-10-28](https://github.com/msys2/msys2-installer/releases/tag/2022-10-28). Switching to [msys2-runtime-3.4](https://packages.msys2.org/base/msys2-runtime-3.4) should keep the Cygwin parts working. Many Mingw packages will no longer work though (Python for example).
+**Windows 8.1**: The last GUI installer version that worked on Windows 8.1 is
+[2024-01-13](https://github.com/msys2/msys2-installer/releases/tag/2024-01-13).
+
+**Windows 7 and 8.0**: The last installer version that worked on Windows 7 and 8.0 is [2022-10-28](https://github.com/msys2/msys2-installer/releases/tag/2022-10-28). Switching to [msys2-runtime-3.4](https://packages.msys2.org/base/msys2-runtime-3.4) should keep the Cygwin parts working. Many Mingw packages will no longer work though (Python for example).
 
 **32-bit Windows**: The last working archive is available at https://repo.msys2.org/distrib/i686 and there is a community maintained repo at https://github.com/jeremyd2019/msys2-build32.
 
@@ -32,8 +35,10 @@ We no longer support these configurations, but here's a list of resources that m
 
 Various changes affecting the supported Windows versions and hardware for both pre-built packages and programs built using our toolchains.
 
+**2024-05-07**: The GUI installer dropped support for running on Windows 8.1.
+
 **2024-05-03:** [msys2-runtime](https://packages.msys2.org/base/msys2-runtime)
-was updated to Cygwin 3.5 which dropped support for Windows 7 and will no longer run there.
+was updated to Cygwin 3.5 which dropped support for Windows 7 and 8.0 and will no longer run there.
 
 **2023-12-13:** We will no longer add new 32-bit Mingw packages to the repo unless needed, and will start dropping 32-bit packages without users.
 
@@ -41,7 +46,7 @@ was updated to Cygwin 3.5 which dropped support for Windows 7 and will no longer
 
 **2022-12-26:** Default _WIN32_WINNT bumped to Windows 8.1 for UCRT environments. MINGW32/MINGW64 environments still default to Windows 7.
 
-**2022-12-16:** The GUI installer dropped support for running on Windows 7.
+**2022-12-16:** The GUI installer dropped support for running on Windows 7 and 8.0.
 
 **2022-10-18:** New minimum hardware requirements for pre-built packages matching the minimum requirements of Windows 8.1 (CPUs from ~2006/7+).
 
