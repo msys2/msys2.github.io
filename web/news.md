@@ -5,6 +5,17 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-05-10 - GCC 14.1
+
+We have updated GCC to version 14.1. See the [GCC 14.1 release
+notes](https://gcc.gnu.org/gcc-14/changes.html) for more information. Similar to
+recent Clang releases, GCC also got stricter and multiple warnings are now
+errors by default, see the [GCC 14.1 porting
+guide](https://gcc.gnu.org/gcc-14/porting_to.html) for details.
+
+To reduce the maintenance burden we have dropped Ada/Objective-C/libgccjit
+support from the 32-bit/mingw32 variant.
+
 ### 2024-05-03 - Update to Cygwin 3.5 on Unsupported Systems
 
 The update to Cygwin 3.5 means MSYS2 will no longer start on long unsupported
