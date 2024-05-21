@@ -9,7 +9,7 @@ In some cases we can't please both groups at the same time, so we have to find c
 
 ## Current Policy
 
-**The GUI Installer:** Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
+**The GUI Installer:** Requires 64-bit Windows 10 / Windows Server 2019.
 
 **Msys/Cygwin Packages**: Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
 
