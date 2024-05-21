@@ -24,8 +24,8 @@ Upstream software may impose additional requirements.
 
 We no longer support these configurations, but here's a list of resources that might help you get things running either way.
 
-**Windows 8.1**: The last GUI installer version that worked on Windows 8.1 is
-[2024-01-13](https://github.com/msys2/msys2-installer/releases/tag/2024-01-13).
+**GUI Installer on Windows 8.1**: The last GUI installer version that worked on Windows 8.1 is
+[2024-01-13](https://github.com/msys2/msys2-installer/releases/tag/2024-01-13). Use the old installer and then use [pacman to update](./updating.md).
 
 **Windows 7 and 8.0**: The last installer version that worked on Windows 7 and 8.0 is [2022-10-28](https://github.com/msys2/msys2-installer/releases/tag/2022-10-28). Switching to [msys2-runtime-3.4](https://packages.msys2.org/base/msys2-runtime-3.4) should keep the Cygwin parts working. Many Mingw packages will no longer work though (Python for example).
 
