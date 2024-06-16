@@ -56,6 +56,12 @@ It contains the [base](https://packages.msys2.org/package/base) package and all 
 
 ### How can I verify the basic integrity of the downloaded files?
 
+!!! note
+
+     The examples below use old releases and checksums as examples.
+     Make sure to adjust the version numbers and checksums to the ones
+     of the release you are verifying.
+
 You can download the expected checksum by appending `.sha256` to each download URL. You can verify that the downloaded file matches the checksum by computing the checksum either with Powershell:
 
 ```powershell
