@@ -5,6 +5,22 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-06-21 - Server changes
+
+Over the past few weeks we've been experiencing various problems with our
+server, which also led to an extended downtime on 2024-06-12. It turned out that
+both disks were failing and instead of replacing them both we decided to simply
+move to a new server. This transition is now complete and everything should be
+back to normal.
+
+* Old IP: `178.63.98.68`
+* New IP: `88.99.69.85`
+
+Many thanks to [Dmitriy Akulov](https://x.com/jimaek) of
+[jsDelivr](https://www.jsdelivr.com/) and
+[Globalping](https://www.jsdelivr.com/globalping) for helping us diagnose the
+problem and generously providing us with a new server.
+
 ### 2024-05-10 - GCC 14.1
 
 We have updated GCC to version 14.1. See the [GCC 14.1 release
