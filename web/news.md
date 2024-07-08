@@ -5,6 +5,28 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-07-08 - File conflicts when updating python
+
+Due to the recent Python 3.12 update missing .pyc files, you might see file
+conflicts when updating:
+
+```console
+error: failed to commit transaction (conflicting files)
+python: /usr/lib/python3.12/__pycache__/ast.cpython-312.pyc exists in filesystem
+python: /usr/lib/python3.12/__pycache__/dis.cpython-312.pyc exists in filesystem
+python: /usr/lib/python3.12/__pycache__/inspect.cpython-312.pyc exists in filesystem
+python: /usr/lib/python3.12/__pycache__/opcode.cpython-312.pyc exists in filesystem
+...
+```
+
+This can be fixed by running
+
+```console
+$ pacman --overwrite "/usr/lib/python3.12/*" -Suy
+```
+
+Sorry for the inconvenience.
+
 ### 2024-06-21 - Server changes
 
 Over the past few weeks we've been experiencing various problems with our
