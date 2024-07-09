@@ -27,4 +27,9 @@ if os.name == "nt" and sysconfig.get_platform().startswith("mingw"):
 
 * C extensions are not compatible with the official CPython, which means pip can't use binary wheels from PyPI and packages have to be build when installing them.
 * Some C extensions don't build out of the box since they don't expect non-MSVC on Windows. In some cases we provide patched versions in our repo.
-* [setuptools](https://github.com/pypa/setuptools) >= 60.0 is currently incompatible with MSYS2. You can set `export SETUPTOOLS_USE_DISTUTILS=stdlib` to work around the issue. We are currently working on restoring compatibility.
+* Passing `--py-limited-api` to upstream setuptools does not result in linking with the limited ABI DLL. See the [upstream issue](https://github.com/pypa/setuptools/issues/4224). The setuptools package in our repo is patched to fix this.
+
+### Changelog
+
+* 2024-07-01: [setuptools](https://github.com/pypa/setuptools) now supports building C extensions in MSYS2 since [v70.2.0](https://github.com/pypa/setuptools/releases/tag/v70.2.0). Previous versions required `export SETUPTOOLS_USE_DISTUTILS=stdlib` as a workaround.
+* 2023-08-22: The mingw Python now provides the limited ABI DLL (libpython3.dll). Support in upstream setuptools is still missing though.
