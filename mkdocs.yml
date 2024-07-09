@@ -117,6 +117,7 @@ nav:
           - docs/git.md
           - docs/cpp.md
           - docs/pkgconfig.md
+          - docs/pacman.md
         - docs/windows_support.md
         - docs/faq.md
     - Development:
