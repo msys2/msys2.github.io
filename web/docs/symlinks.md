@@ -43,16 +43,16 @@ in MSYS2 and not in Cygwin.
 This is a short primer for native Windows symlinks in case you haven't used them
 before or are only familiar with them on Unix systems.
 
-Symlink support in Windows existed for a long time, but creating them was
+Symlink support in Windows existed since Windows Vista, but creating them was
 initially only possible with administrator accounts. Starting with Windows 10
-(~2016) it is now possible to create symlinks with your normal user account if
-you have the ["Developer Mode"
+(~2016) it is possible to create symlinks with your normal user account if you
+have the ["Developer Mode"
 enabled](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 Existing symlinks that were created by an administrator account, or with the
-"Developer Mode" enabled, can be used and deleted by normal users without rights
+"Developer Mode" enabled, can be used and deleted by normal users without the right
 to create symlinks themselves.
 
-Compare to Unix symlinks, the Windows symlinks come in a "directory" and a
+Compared to Unix symlinks, the Windows symlinks come in a "directory" and a
 "file" type. If you create a file symlink to a directory, or vice versa, or if
 the target type changes after the symlink is created, the symlink will be
 broken.
@@ -90,14 +90,20 @@ version of Powershell](https://winget.run/pkg/Microsoft/PowerShell), use mklink
 via `cmd /c mklink`, or use an elevated prompt. You can check your Powershell
 version with `$PSVersionTable.PSVersion`.
 
+There also exist other types of links on Windows, like hardlinks and junctions,
+which don't require special privileges to create, but have more limitations:
+
+* [Hardlinks](https://learn.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions#hard-links)  (`mklink /h`) can only be created for files and only on the same filesystem, among other limitations.
+* [Junctions](https://learn.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions#junctions) (`mklink /j`) can only be created for directories and can't use relative paths, among other limitations.
+
 ## Known Issues
 
-As stated above, for the deep-copy to work the target needs to exist for the
-symlinking to work. While dangling symlinks are not that common, they can happen
-easily when unpacking a tar file that contains symlinks. If the symlinks is
-unpacked before the target, then creating the symlink will fail. A workaround
-for this is to unpack the tar file twice, first to create the target while
-ignoring any symlink creation errors and then to create the symlinks:
+For the default `winsymlinks:deepcopy` mode in MSYS2 the target needs to exist
+for the symlinking to work. While dangling symlinks are not that common, they
+can happen easily when unpacking a tar file that contains symlinks. If the
+symlinks is unpacked before the target, then creating the symlink will fail. A
+workaround for this is to unpack the tar file twice, first to create the target
+while ignoring any symlink creation errors and then to create the symlinks:
 
 ```bash
 bsdtar -xf "archive.tar.bz2" 2>/dev/null || bsdtar -xf "archive.tar.bz2"
