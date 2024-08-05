@@ -18,6 +18,7 @@
 * [Inkscape](https://inkscape.org) uses MSYS2 for its Windows releases and for CI ([Documentation](https://wiki.inkscape.org/wiki/index.php?title=Compiling_Inkscape_on_Windows_with_MSYS2))
 * [KeePassXC](https://github.com/keepassxreboot/keepassxc) uses MSYS2 for building and running KeePassXC password manager.
 * [Media-autobuild_suite](https://github.com/m-ab-s/media-autobuild_suite) uses MSYS2 for automatically building FFmpeg and other media related tools
+* [Network UPS Tools](https://github.com/networkupstools/nut/wiki/NUT-for-Windows) uses MSYS2/MinGW for "semi-native" builds of NUT for Windows (cross-builds on Linux+MinGW are also possible).
 * [Nuwen's MinGW Build](https://nuwen.net/mingw.html) uses MSYS2 to build the files.
 * [OpenModelica](https://openmodelica.org/) uses MSYS2 for building the OpenModelica tools and compiling the generated simulation code on Windows.
 * [Paperwork](https://openpaper.work) uses MSYS2 for its Windows releases and for CI ([Documentation](https://gitlab.gnome.org/World/OpenPaperwork/paperwork/-/blob/master/doc/devel.windows.markdown))
