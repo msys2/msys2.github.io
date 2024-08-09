@@ -35,6 +35,21 @@ The active environment is selected via the `MSYSTEM` environment variable.
 Setting `MSYSTEM` to `UCRT64` and starting a login shell will put you in that
 environment.
 
+For example, `CLANG64` to `UCRT64`:
+
+```shell
+me@DESKTOP CLANG64 ~
+$ echo $PATH
+/clang64/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/
+
+me@DESKTOP CLANG64 ~
+$ source shell ucrt64
+
+me@DESKTOP UCRT64 ~
+$ echo $PATH
+/ucrt64/bin::/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/
+```
+
 ## GCC vs LLVM/Clang
 
 These are the default compilers/toolchains used for building all packages in the
