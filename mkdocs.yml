@@ -66,6 +66,8 @@ markdown_extensions:
     - codehilite
     - sane_lists
     - admonition
+    - pymdownx.tabbed:
+        alternate_style: true
     - pymdownx.arithmatex
     - pymdownx.betterem:
         smart_enable: all
