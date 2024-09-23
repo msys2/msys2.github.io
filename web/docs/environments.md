@@ -104,6 +104,8 @@ code was compiled with MSVC.
 
 **2022-05-01:** Added CLANG32 environment.
 
+**2022-04-23:** Added CLANG64 environment.
+
 **2021-03-26:** Added UCRT64 environment.
 
 **2020-05-17:** Dropped 32-bit variant of the MSYS environment. See [NEWS](../news.md#2020-05-17-32-bit-msys2-no-longer-actively-supported) for more information.
