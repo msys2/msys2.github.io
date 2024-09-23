@@ -5,6 +5,22 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-09-23 - Starting to drop the CLANG32 environment
+
+9 months ago we started to reduce the number of packages for the 32-bit
+environments. Now we are starting to drop the CLANG32 environment. This means
+that we will no longer add new packages for this environment and will remove the
+existing ones over the next months. If this is affecting you, please let us
+know.
+
+While CLANG32 has some unique features in the context of MSYS2, such as being
+the only environment to use UCRT for 32-bit and the LLVM toolchain, it has seen
+very little use in our download statistics, and we don't think it's worth
+supporting any longer.
+
+If you are in need for a 32-bit LLVM toolchain, consider using [LLVM
+MinGW](https://github.com/mstorsjo/llvm-mingw) instead.
+
 ### 2024-07-28 - MSYS2 support in setuptools v70.0.2
 
 Setuptools v70.0.2 now supports mingw Python and MSYS2 natively. This eliminates
