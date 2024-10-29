@@ -118,6 +118,7 @@ nav:
           - docs/autotools.md
           - docs/python.md
           - docs/git.md
+          - docs/c.md
           - docs/cpp.md
           - docs/pkgconfig.md
           - docs/pacman.md
