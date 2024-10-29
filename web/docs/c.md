@@ -25,7 +25,7 @@ With mingw-w64, there are three ways wildcard expansion can be configured:
 3. You can link in `CRT_noglob.o` or `CRT_glob.o` to disable or enable wildcard expansion, respectively. This will error out if `_dowildcard` is already set in the source.
 
     ```bash
-    # To enable force-enable wildcard expansion
+    # To force-enable wildcard expansion
     cc main.c $(cc -print-file-name=CRT_glob.o)
     # To force-disable wildcard expansion
     cc main.c $(cc -print-file-name=CRT_noglob.o)
