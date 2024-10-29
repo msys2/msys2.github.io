@@ -7,7 +7,7 @@ link [w]setargv.obj to your program. By default it is not enabled. For more
 details see
 https://learn.microsoft.com/en-us/cpp/c-language/expanding-wildcard-arguments
 
-With mingw-w64 there are three ways wildcard expansion con be configured:
+With mingw-w64, there are three ways wildcard expansion can be configured:
 
 1. mingw-w64 can be configured at build time to either enable or disable wildcard expansion by default via the `--enable-wildcard` configure flags. This can to be overridden on a per .exe basis by the user.
 
