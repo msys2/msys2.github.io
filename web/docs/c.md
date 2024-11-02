@@ -11,7 +11,7 @@ With mingw-w64, there are three ways wildcard expansion can be configured:
 
 1. mingw-w64 can be configured at build time to either enable or disable wildcard expansion by default via the `--enable-wildcard` configure flags. This can to be overridden on a per .exe basis by the user.
 
-    Currently wildcard expansion is enabled by default in MSYS2.
+    Wildcard expansion is disabled by default in MSYS2.
 
 2. You can set `_dowildcard` in your source code to either `0` or `-1` to disable or enable wildcard expansion.
 
@@ -30,3 +30,10 @@ With mingw-w64, there are three ways wildcard expansion can be configured:
     # To force-disable wildcard expansion
     cc main.c $(cc -print-file-name=CRT_noglob.o)
     ```
+
+### Changelog
+
+* Starting with 2024-11-03 we have changed mingw-w64 to to disable wildcard
+handling by default. You can still enable it on a per application basis as
+described above. For more info on the change see [the news
+entry](../news.md#2024-11-03---disabling-mingw-w64-wildcard-support-by-default).
