@@ -5,6 +5,42 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-11-03 - Disabling mingw-w64 wildcard support by default
+
+For historical reasons MSYS2 enabled wildcard support in mingw-w64 at build
+time. This means that every built executable had wildcard support enabled by
+default, unless it explicitly opted out. Wildcard support in this case means
+that program arguments containing `?`and `*` can be expanded to one or more file
+paths if the pattern happens to match paths of files on disk. Note that this
+happens directly in the target program, not in a shell beforehand.
+
+This expansion has several problems:
+
+* Behave differently than MSVC built executables
+* It's confusing to users when wildcard handling is accidentally triggered. For
+  example, passing a regex as an argument to a CLI tool that starts matching
+  random files, breaking the pattern.
+* It may have security implications if arguments to executables are forwarded
+  from user-controlled input, in which case an argument could expand to a
+  different string depending on the files present on the filesystem.
+
+Given all this, we have decided to disable wildcard handling by default. This
+means that any package and executable that is built after this change will get
+the new default behavior.
+
+```console
+$ python -c 'import sys; print(sys.argv)' '*a.txt' # before
+['-c', 'a.txt', 'aaaa.txt', 'bla.txt']
+$ python -c 'import sys; print(sys.argv)' '*a.txt' # after
+['-c', '*a.txt']
+```
+
+Our hope/assumption is that this will not affect many users, as most will rely
+on globbing at a higher level, be it bash, or build systems. If you experience
+any problems, please let us know. See also [the
+documentation](./docs/c.md#expanding-wildcard-arguments) on how to force
+wildcard handling for your applications even after this change.
+
 ### 2024-09-23 - Starting to drop the CLANG32 environment
 
 9 months ago we started to reduce the number of packages for the 32-bit
