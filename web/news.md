@@ -5,6 +5,35 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
 
+### 2024-11-09 - Python 3.12 Update
+
+Over the last week we finally moved from Python 3.11 to 3.12. Thanks to
+[@naveen521kk](https://github.com/naveen521kk) for updating the fork, and
+everyone else who helped with rebuild issues. Also thanks to
+[@jeremyd2019](https://github.com/jeremyd2019) for watching the external arm64
+runner while it rebuilt all those 940 packages and fixing arm64 related issues.
+
+There are some minor things to watch out for with this update:
+
+* We've enabled [PEP 668](https://peps.python.org/pep-0668/) by marking the
+  system site-packages directory as externally managed. To prevent this from
+  causing too many problems right away [we have patched our version of
+  pip](https://github.com/msys2/MINGW-packages/commit/4447a7ba7971d3480e7bd24951ec8e51328d23c9)
+  to only give a warning instead of an error if you install outside of a venv.
+  However, we may change this back to a real error in the future. If this is
+  causing any problems or if there are any concerns with re-enabling the error
+  in the future let us know.
+* While not MSYS2 specific, 3.12 is the version that [dropped the included
+  distutils package](https://peps.python.org/pep-0632) and distutils is now only
+  available as part of setuptools. While the current setuptools should handle
+  our Python out of the box, there may be slight differences. This also means
+  that SETUPTOOLS_USE_DISTUTILS=stdlib no longer has any effect.
+* As with every major Python update we had to drop a few packages that were
+  incompatible with the new version and for which no update or patch was
+  available. One notable package there is py2exe which does not support 3.12+
+  right now and there is also no patch available, see [the upstream
+  issue](https://github.com/py2exe/py2exe/issues/191) for details.
+
 ### 2024-11-03 - Disabling mingw-w64 wildcard support by default
 
 For historical reasons MSYS2 enabled wildcard support in mingw-w64 at build
