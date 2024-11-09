@@ -7,6 +7,16 @@ link [w]setargv.obj to your program. By default it is not enabled. For more
 details see
 https://learn.microsoft.com/en-us/cpp/c-language/expanding-wildcard-arguments
 
+Note that enabling wildcard expansion can have usability and security
+implications:
+
+* The program might transform the arguments you passed in, depending on the
+  current directory, leading to user confusion.
+* The program might leak information about the existence and names of files on
+  the filesystem.
+* Input validation might be bypassed if wildcard expansions is not taken into
+  account.
+
 With mingw-w64, there are three ways wildcard expansion can be configured:
 
 1. You can set `_dowildcard` in your source code to either `0` or `-1` to disable or enable wildcard expansion.
