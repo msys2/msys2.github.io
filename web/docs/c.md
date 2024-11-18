@@ -46,4 +46,4 @@ With mingw-w64, there are three ways wildcard expansion can be configured:
 * Starting with 2024-11-03 we have changed mingw-w64 to to disable wildcard
 handling by default. You can still enable it on a per application basis as
 described above. For more info on the change see [the news
-entry](../news.md#2024-11-03---disabling-mingw-w64-wildcard-support-by-default).
+entry](../news.md#2024-11-03-disabling-mingw-w64-wildcard-support-by-default).
