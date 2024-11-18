@@ -3,7 +3,7 @@ summary: Important events happening.
 ---
 # News
 
-This page lists important changes or issues affecting MSYS2 users. We also post them to [Twitter](https://twitter.com/msys2org) and [Mastodon](https://fosstodon.org/@msys2org), including some not-so-important things :)
+This page lists important changes or issues affecting MSYS2 users. We also post them to [X](https://x.com/msys2org) / [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
 ### 2024-11-09 - Python 3.12 Update
 
