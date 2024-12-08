@@ -45,11 +45,13 @@ MSYS2 and what for.
 
 3. Enter your desired **Installation Folder** (short ASCII-only path on a NTFS volume, no accents, no spaces, no symlinks, no subst or network drives, no FAT).
 
-    ![Second screen of MSYS2 installation](images/install-2-path.png)
+    ![Second screen of MSYS2 installation](images/install-2-path.png#gh-light-mode-only)
+    ![Second screen of MSYS2 installation](images/install-2-path-dark.png#gh-dark-mode-only)
 
 4. When done, click **Finish**.
 
-    ![Third screen of MSYS2 installation](images/install-3-finish.png)
+    ![Third screen of MSYS2 installation](images/install-3-finish.png#gh-light-mode-only)
+    ![Third screen of MSYS2 installation](images/install-3-finish-dark.png#gh-dark-mode-only)
 
 5. Now MSYS2 is ready for you and a terminal for the [UCRT64 environment](./docs/environments.md) will launch.
 
