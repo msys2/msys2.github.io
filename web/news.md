@@ -5,6 +5,11 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2024-12-18 - Removal of the CLANG32 Environment
+
+The previously announced removal of the CLANG32 environment is now complete.
+This concludes the gradual phase-out process that began several months ago.
+
 ### 2024-11-09 - Python 3.12 Update
 
 Over the last week we finally moved from Python 3.11 to 3.12. Thanks to
