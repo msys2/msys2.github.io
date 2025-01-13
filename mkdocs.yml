@@ -55,8 +55,6 @@ extra:
           link: 'https://discord.gg/jPQdRdDcT9'
         - icon: 'fontawesome/brands/bluesky'
           link: 'https://bsky.app/profile/msys2org.bsky.social'
-        - icon: 'fontawesome/brands/x-twitter'
-          link: 'https://x.com/msys2org'
 
 site_url: https://www.msys2.org
 repo_url: https://github.com/msys2/msys2.github.io

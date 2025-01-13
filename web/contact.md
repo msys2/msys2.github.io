@@ -4,7 +4,6 @@
 *   talk and get help in our [Discord server](https://discord.gg/jPQdRdDcT9)
 *   search for and file [issues for msys2 packages on GitHub](https://github.com/msys2/msys2-packages/issues)
 *   search for and file [issues for mingw-w64 packages on GitHub](https://github.com/msys2/mingw-packages/issues)
-*   follow our [X account](https://x.com/msys2org)
 *   follow our [Mastodon account](https://fosstodon.org/@msys2org)
 *   follow our [Bluesky account](https://bsky.app/profile/msys2org.bsky.social)
 *   [less active] talk in our [Matrix room](https://matrix.to/#/#msys2_msys2:gitter.im), bridged to our Discord server

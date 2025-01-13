@@ -3,7 +3,7 @@ summary: Important events happening.
 ---
 # News
 
-This page lists important changes or issues affecting MSYS2 users. We also post them to [X](https://x.com/msys2org) / [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
+This page lists important changes or issues affecting MSYS2 users. We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
 ### 2024-11-09 - Python 3.12 Update
 
@@ -128,7 +128,7 @@ back to normal.
 * Old IP: `178.63.98.68`
 * New IP: `88.99.69.85`
 
-Many thanks to [Dmitriy Akulov](https://x.com/jimaek) of
+Many thanks to [Dmitriy Akulov](https://dakulov.com) of
 [jsDelivr](https://www.jsdelivr.com/) and
 [Globalping](https://www.jsdelivr.com/globalping) for helping us diagnose the
 problem and generously providing us with a new server.
