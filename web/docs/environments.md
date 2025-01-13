@@ -96,6 +96,8 @@ code was compiled with MSVC.
 
 ## Changelog
 
+**2024-12-18:** Removed CLANG32 environment.
+
 **2023-12-13:** Start of phase out for 32-bit environments, MINGW32 and CLANG32. See [NEWS](../news.md#2023-12-13-starting-to-drop-some-32-bit-packages) for more information.
 
 **2022-12-30:** Added CLANGARM64 environment.

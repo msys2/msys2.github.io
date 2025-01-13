@@ -22,9 +22,6 @@ Include = /etc/pacman.d/mirrorlist.mingw
 [clang64]
 Include = /etc/pacman.d/mirrorlist.mingw
 
-[clang32]
-Include = /etc/pacman.d/mirrorlist.mingw
-
 [clangarm64]
 Include = /etc/pacman.d/mirrorlist.mingw
 ```

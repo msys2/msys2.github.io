@@ -10,7 +10,6 @@ $ pacman -Suy
  mingw32 is up to date
  mingw64 is up to date
  ucrt64 is up to date
- clang32 is up to date
  clang64 is up to date
  msys is up to date
 :: Starting core system upgrade...
