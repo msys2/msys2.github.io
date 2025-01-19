@@ -8,7 +8,12 @@ Wine fails to run Cygwin binaries and as a result MSYS2 and Git for Windows, whi
 * https://github.com/git-for-windows/git/issues/3478
 * https://bugs.winehq.org/show_bug.cgi?id=40528
 
-It might require fixes in both Wine and Cygwin to get resolved. If anyone makes some progress on this, let us know!
+There exists [a wine fork with some MSYS2 specific
+patches](https://gitlab.winehq.org/jhol/wine/-/commits/msys2-hacks-19) to make
+things work and we provide an experimental Docker image using this fork at:
+https://github.com/msys2/msys2-docker
+
+It might require fixes in both Wine and Cygwin to get this issue fully resolved. If anyone makes some progress on this, let us know!
 
 ### How can I make MSYS2/pacman trust my company's custom TLS CA certificate
 
