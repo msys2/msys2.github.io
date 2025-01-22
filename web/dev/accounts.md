@@ -3,7 +3,6 @@
 All the accounts and services which are associated with the MSYS2 project, including who has access and manages them.
 
 - domains: msys2.org, msys2.net, msys2.com registered through Hover to Elieux, same for mingw-w64.org and mingw-w64.net
-- X: [@msys2org](https://x.com/msys2org) registered to Lazka
 - Mastodon: [@msys2org@fosstodon.org](https://fosstodon.org/@msys2org) registered to Lazka
 - Bluesky: [msys2org.bsky.social](https://bsky.app/profile/msys2org.bsky.social) registered to Lazka
 - GitHub: [msys2](https://github.com/msys2) org with multiple owners, [msys2-contrib](https://github.com/msys2-contrib) org with multiple owners
