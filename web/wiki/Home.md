@@ -8,7 +8,7 @@
 - [Re-installing from scratch](MSYS2-reinstallation.md) - in case of unrecoverable problems
 - [Creating packages](Creating-Packages.md) - how packages are built and how to make new ones
 - [MSYS2 vs. Cygwin](How-does-MSYS2-differ-from-Cygwin.md) - differences and similarities
-- [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/Alexpux/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]
+- [MSYS2 on Wine](https://github.com/TeaCI/tea-ci/wiki/Msys2-on-Wine) - how to install and use MSYS2 under Wine [sadly [broken](https://github.com/msys2/MSYS2-packages/issues/682) with current version of MSYS2 and no-one is actively working on a fix as far as we know]
 - [Porting for MSYS2 or MinGW-w64](Porting.md) - useful resources and common issues
 - [Launchers](Launchers.md) - various ways to launch MSYS2 shells
 - [Distributing software without pacman](Distributing.md) - how to bundle your software built using MSYS2, including all required dependencies, to non-MSYS2-users

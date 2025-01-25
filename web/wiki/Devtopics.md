@@ -52,7 +52,7 @@ Links:
 - https://github.com/Alexpux/Cygwin/commit/4f756d6cc28179319ceccce01dd698de3f22c212
 - https://sourceforge.net/p/mingw-w64/mailman/mingw-w64-public/thread/2F9017D3-8357-48C2-B887-A32FDF4E2141@gmail.com/
 - http://sourceware.org/ml/cygwin/2014-12/msg00084.html
-- https://github.com/Alexpux/MSYS2-packages/issues/83
+- https://github.com/msys2/MSYS2-packages/issues/83
 
 
 Connect with upstreams
