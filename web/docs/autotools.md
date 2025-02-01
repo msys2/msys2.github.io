@@ -11,7 +11,7 @@ Since some projects depend on specific versions of automake and, in some cases, 
 
 ### automake wrapper
 
-By default the [automake wrapper](https://packages.msys2.org/package/automake-wrapper) will detect the right version based on existing generated files and things will just work. You can also force a different version via the `WANT_AUTOMAKE` env var, and the newest available version via `WANT_AUTOMAKE=latest`.
+By default the [automake wrapper](https://packages.msys2.org/package/automake-wrapper) will detect the version to use based on existing generated files and things will just work. If there are no generated files, or if the detected version isn't available it will fall back to the newest available version. You can also force a different version via the `WANT_AUTOMAKE` env var, and the newest available version via `WANT_AUTOMAKE=latest`.
 
 ```shell
 WANT_AUTOMAKE='1.15' autoreconf -fvi
@@ -19,7 +19,7 @@ WANT_AUTOMAKE='1.15' autoreconf -fvi
 
 ### autoconf wrapper
 
-By default the [autoconf wrapper](https://packages.msys2.org/package/autoconf-wrapper) will detect the right version based on existing generated files and things will just work. You can also force a different version via the `WANT_AUTOCONF` env var, and the newest available version via `WANT_AUTOCONF=latest`.
+By default the [autoconf wrapper](https://packages.msys2.org/package/autoconf-wrapper) will detect the version to use based on existing generated files and things will just work. If there are no generated files, or if the detected version isn't available it will fall back to the newest available version. You can also force a different version via the `WANT_AUTOCONF` env var, and the newest available version via `WANT_AUTOCONF=latest`.
 
 ```bash
 WANT_AUTOCONF='2.69' autoreconf -fvi
