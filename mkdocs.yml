@@ -43,6 +43,18 @@ extra_css:
 
 extra:
     alternate:
+      - name: Deutsch (de)
+        link: https://www-msys2-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=de
+        lang: de
+      - name: Español (es)
+        link: https://www-msys2-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=es
+        lang: es
+      - name: Français (fr)
+        link: https://www-msys2-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=fr
+        lang: fr
+      - name: 日本语 (ja)
+        link: https://www-msys2-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=ja
+        lang: ja
       - name: 한국어 (ko)
         link: https://www-msys2-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=ko
         lang: ko
