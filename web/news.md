@@ -31,8 +31,9 @@ There are some minor things to watch out for with this update:
 * While not MSYS2 specific, 3.12 is the version that [dropped the included
   distutils package](https://peps.python.org/pep-0632) and distutils is now only
   available as part of setuptools. While the current setuptools should handle
-  our Python out of the box, there may be slight differences. This also means
-  that SETUPTOOLS_USE_DISTUTILS=stdlib no longer has any effect.
+  our Python out of the box, there may be slight differences. Make sure to
+  remove anything setting `SETUPTOOLS_USE_DISTUTILS=stdlib` as that will lead to
+  distutils import errors.
 * As with every major Python update we had to drop a few packages that were
   incompatible with the new version and for which no update or patch was
   available. One notable package there is py2exe which does not support 3.12+
