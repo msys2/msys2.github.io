@@ -5,6 +5,10 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2025-02-13 - Server maintenance on 2025-02-15/16
+
+There will be a short server maintenance around the weekend of 2025-02-15/16 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some subdomain redirects of our website.
+
 ### 2024-12-18 - Removal of the CLANG32 Environment
 
 The previously announced removal of the CLANG32 environment is now complete.
