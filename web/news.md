@@ -9,6 +9,29 @@ This page lists important changes or issues affecting MSYS2 users. We also post 
 
 There will be a short server maintenance around the weekend of 2025-02-15/16 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some subdomain redirects of our website.
 
+### 2025-02-13 - Moving MSYS(2) closer to Cygwin
+
+In MSYS2, in addition to the native environments such as UCRT64/CLANG64, there is also the "MSYS" environment, which contains mostly Cygwin-based software. Since the start of the MSYS2 project, the Cygwin tools in MSYS have been modified to build for MSYS instead of Cygwin. This means that the languages and tools have been patched to report their platform as "msys", and for the build tools this means that we have our own msys specific target triplet (x86_64-pc-msys), and uname reports "MSYS" as well.
+
+Whatever the motivation was back then, the reality today is that our Cygwin packages are 99% the same as Cygwin's, with only a few things needing tweaking. The downside of defining our own platform/system/triplet is that every build system has to be patched to treat us as Cygwin-like, which is tedious and error-prone when adding/updating packages, and also divides the community. Another drawback is that it's confusing to users, as the names of MSYS2, the project, and MSYS are too similar, and it's not clear that MSYS mostly just means Cygwin.
+
+Some time ago we started to remove these differences and replace "msys" with "cygwin" + patches where possible. So instead of MSYS being a fork of Cygwin, it would just be a slightly modified/extended variant of Cygwin. The goal is that any software that supports Cygwin should be buildable as is under MSYS2. The first change in this direction happened some time ago, when cmake would define both CYGWIN and MSYS as true when building under msys. Since then, we have tweaked several more things to get closer to that goal:
+
+* Meson has reported to be running under cygwin since we added it
+* Python has been changed to report "sys.platform" as "cygwin", and recently "sysconfig.get_platform()" has been changed to report "cygwin-x86_64" as well.
+* Perl has recently been changed to report "$^o" as "cygwin" instead of "msys".
+* Bash has recently been changed to report "$OSTYPE" as "cygwin" instead of "msys".
+* Almost all of our packages have been ported to build for the Cygwin triplet, except for the toolchain packages.
+
+The rule of thumb is that where possible, things will continue to identify as both cygwin and msys, for example, cmake will set both MSYS and CYGWIN, C/C++ will define both `__MSYS__` and `__CYGWIN__`. Where this is not possible, things will simply be identified as cygwin, or we will have to find workarounds.
+
+The next planned steps for this transition are currently:
+
+* Change the default host triplet from "x86_64-pc-msys" to "x86_64-pc-cygwin"
+* Change the runtime to be a superset of cygwin in more places, e.g. make the CYGWIN env var work as a fallback if MSYS is not set. The goal is to make the Cygwin documentation mostly applicable to MSYS2 as well.
+
+For MSYS2 users these changes should be mostly invisible, but if you are a developer targeting the MSYS environment there might be some fallout. Despite that, we hope these changes will lead to better compatibility and easier maintenance in the long run. Let us know if you experience any problems.
+
 ### 2024-12-18 - Removal of the CLANG32 Environment
 
 The previously announced removal of the CLANG32 environment is now complete.
