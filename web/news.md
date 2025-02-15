@@ -33,6 +33,8 @@ For MSYS2 users these changes should be mostly invisible, but if you are a devel
 
 There will be a short server maintenance around the weekend of 2025-02-15/16 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some subdomain redirects of our website.
 
+Update: all done now
+
 ### 2024-12-18 - Removal of the CLANG32 Environment
 
 The previously announced removal of the CLANG32 environment is now complete.
