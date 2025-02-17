@@ -28,12 +28,15 @@ For `msys2_references` the following keys are recognized:
 * `cygwin-mingw64` -
   the cygwin package name for all packages starting with "mingw64-x86_64-",
   minus that prefix: https://cygwin.com/packages/src_package_list.html
-* `pypi` - the PyPI project name (case-insensitive): https://pypi.org/search/
 * `gentoo` - the full Gentoo package name e.g. `dev-python/pyasn1`
 * `internal` - special key, which if it exists marks the package as internal and doesn't link it to any external sources
-* `purl` - a [package URL](https://github.com/package-url/purl-spec) e.g. `pkg:cargo/ripgrep` (only cargo supported atm)
-  Multiple PURLs supported.
-* `cpe` - a [CPE](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) prefix, either in the 2.2 format (`cpe: cpe:/a:gnu:gcc`) or the 2.3 format (`cpe:2.3:a:gnu:gcc`). `target_sw` etc are currently not supported. Multiple CPEs supported.
+* `purl` - a [package URL](https://github.com/package-url/purl-spec). Multiple PURLs supported. Versions are optionally supported, and useful in case the upstream version is different from the package version. Some common PURL types:
+  * [pypi](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#pypi) - example: `pkg:pypi/jinja2` or `pkg:pypi/@3.1.5` - make sure to [normalize](https://packaging.python.org/en/latest/specifications/name-normalization) the package name
+  * [cargo](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#cargo) - example: `pkg:cargo/ripgrep` or `pkg:cargo/ripgrep@14.1.1`
+  * [gem](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#gem) - example: `pkg:gem/asciidoctor`
+  * [github](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github) - example: `pkg:github/curl/curl` or `pkg:github/curl/curl@curl-8_12_1`
+  * ...
+* `cpe` - a [CPE](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) prefix, either in the 2.2 format (`cpe: cpe:/a:gnu:gcc`) or the 2.3 format (`cpe:2.3:a:gnu:gcc`). `version`, `target_sw` etc are currently not supported. Multiple CPEs supported.
 
 Defining a key without a value means there is no mapping and the package shouldn't be linked.
 
@@ -44,3 +47,8 @@ The following datatypes are supported:
 * **mapping:** Mappings of strings to optional other strings, separated by `":"`, values are
   stripped: `msys2_myvar=("example1: value1" "example2")` 🠆 `{"myvar": {"example1": ["value1"], "example2": [null]}}`
 * **boolean:** either `true` or `false`: `msys2_myvar=true` 🠆 `{"myvar": true}`
+
+## Changelog
+
+**2025-02-17:** Added support for the `version` component in `purl` entries, for example `purl: pkg:pypi/jinja2@3.1.5`.
+**2025-02-17:** Removed support for `pypi` in `msys2_references`, use `purl` with the `pypi` type instead, for example `purl: pkg:pypi/jinja2` instead of `pypi: jinja2`.

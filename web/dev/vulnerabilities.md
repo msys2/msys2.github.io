@@ -14,7 +14,7 @@ graph LR;
 
 The following metadata is used to generate the SBOM file, so that CVEs etc. can be matched to our packages:
 
-In the `msys2_references` field in each `PKGBUILD` file the `cpe` key, the `purl` and the `pypi` keys are used to match to CVEs.
+In the `msys2_references` field in each `PKGBUILD` file the `cpe` and `purl` entries are used to match to CVEs.
 The more references the better. Language ecosystem specific references such as pypi and cargo are preferred. For more information about the fields see [PKGBUILD](./pkgbuild.md).
 
 Example:
@@ -23,8 +23,17 @@ Example:
 msys2_references=(
   "cpe: cpe:/a:python-cryptography_project:python-cryptography"
   "cpe: cpe:2.3:a:cryptography_project:cryptography"
-  "pypi: cryptography"
   "purl: pkg:pypi/cryptography"
+)
+```
+
+In case the version format of the referenced ecosystem is different from the PKGBUILD version, you can specify the version in the `purl` field:
+
+```bash
+pkgver=1.0dev1
+_pypiver=1.0.dev1
+msys2_references=(
+  "purl: pkg:pypi/example@${_pypiver}"
 )
 ```
 
