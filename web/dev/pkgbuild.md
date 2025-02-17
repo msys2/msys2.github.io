@@ -51,4 +51,5 @@ The following datatypes are supported:
 ## Changelog
 
 **2025-02-17:** Added support for the `version` component in `purl` entries, for example `purl: pkg:pypi/jinja2@3.1.5`.
+
 **2025-02-17:** Removed support for `pypi` in `msys2_references`, use `purl` with the `pypi` type instead, for example `purl: pkg:pypi/jinja2` instead of `pypi: jinja2`.
