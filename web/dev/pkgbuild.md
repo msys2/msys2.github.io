@@ -31,12 +31,15 @@ For `msys2_references` the following keys are recognized:
 * `gentoo` - the full Gentoo package name e.g. `dev-python/pyasn1`
 * `internal` - special key, which if it exists marks the package as internal and doesn't link it to any external sources
 * `purl` - a [package URL](https://github.com/package-url/purl-spec). Multiple PURLs supported. Versions are optionally supported, and useful in case the upstream version is different from the package version. Some common PURL types:
-  * [pypi](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#pypi) - example: `pkg:pypi/jinja2` or `pkg:pypi/@3.1.5` - make sure to [normalize](https://packaging.python.org/en/latest/specifications/name-normalization) the package name
-  * [cargo](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#cargo) - example: `pkg:cargo/ripgrep` or `pkg:cargo/ripgrep@14.1.1`
-  * [gem](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#gem) - example: `pkg:gem/asciidoctor`
-  * [github](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github) - example: `pkg:github/curl/curl` or `pkg:github/curl/curl@curl-8_12_1`
-  * ...
-* `cpe` - a [CPE](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) prefix, either in the 2.2 format (`cpe: cpe:/a:gnu:gcc`) or the 2.3 format (`cpe:2.3:a:gnu:gcc`). `version`, `target_sw` etc are currently not supported. Multiple CPEs supported.
+    * [pypi](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#pypi) - example: `pkg:pypi/jinja2` or `pkg:pypi/@3.1.5` - make sure to [normalize](https://packaging.python.org/en/latest/specifications/name-normalization) the package name
+    * [cargo](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#cargo) - example: `pkg:cargo/ripgrep` or `pkg:cargo/ripgrep@14.1.1`
+    * [gem](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#gem) - example: `pkg:gem/asciidoctor`
+    * [github](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github) - example: `pkg:github/curl/curl` or `pkg:github/curl/curl@curl-8_12_1`
+    * ...
+* `cpe` - a [CPE](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) prefix, either in the 2.2 or the 2.3 format. Versions are optionally supported, and useful in case the upstream version is different from the package version (`cpe:/a:gnu:gcc:14.2.0`).
+
+    * 2.2: `cpe:/a:gnu:gcc` or `cpe:/a:gnu:gcc:14.2.0`
+    * 2.3: `cpe:2.3:a:gnu:gcc` or `cpe:2.3:a:gnu:gcc:14.2.0`
 
 Defining a key without a value means there is no mapping and the package shouldn't be linked.
 

@@ -21,19 +21,21 @@ Example:
 
 ```bash
 msys2_references=(
+  "purl: pkg:pypi/cryptography"
   "cpe: cpe:/a:python-cryptography_project:python-cryptography"
   "cpe: cpe:2.3:a:cryptography_project:cryptography"
-  "purl: pkg:pypi/cryptography"
 )
 ```
 
-In case the version format of the referenced ecosystem is different from the PKGBUILD version, you can specify the version in the `purl` field:
+In case the version format of the referenced ecosystem is different from the PKGBUILD version, you can specify the version:
 
 ```bash
 pkgver=1.0dev1
 _pypiver=1.0.dev1
 msys2_references=(
   "purl: pkg:pypi/example@${_pypiver}"
+  "cpe: cpe:/a:example:example:${_pypiver}"
+  "cpe: cpe:2.3:a:example:example:${_pypiver}"
 )
 ```
 
