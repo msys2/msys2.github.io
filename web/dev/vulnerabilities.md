@@ -64,4 +64,3 @@ msys2_ignore_vulnerabilities=(
 ## TODO
 
 * Some automated way to sync/update CPEs
-* Add metadata field for the real upstream version, in case we use a different format
