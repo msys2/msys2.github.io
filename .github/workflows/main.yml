@@ -5,11 +5,17 @@ on:
   pull_request:
   push:
 
+permissions: {}
+
 jobs:
   build:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Setup Python (pip)
         uses: actions/setup-python@v5
