@@ -22,6 +22,7 @@ The following variables are recognized:
 
 For `msys2_references` the following keys are recognized:
 
+* `anitya` - The Anitya project ID, for example "2566" for [openssl](https://release-monitoring.org/project/2566).
 * `archlinux` - the Arch Linux package name: https://archlinux.org/packages/
 * `aur` - the AUR package name: https://aur.archlinux.org/packages
 * `cygwin` - the cygwin package name: https://cygwin.com/packages/src_package_list.html
