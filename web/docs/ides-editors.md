@@ -60,3 +60,32 @@ Add these lines to your `settings.json`:
 ```
 
 Now the `MSYS2 UCRT` profile is available when launching a terminal.
+
+## Zed
+
+[Zed](https://zed.dev/) is a text and source code editor. Its syntax
+highlighting and source parsing is based on tree-sitter library. Editor uses
+Vulkan as GUI backend to have highest performance among other editors. Zed
+package provides `zeditor` CLI installed under bin/ directory and `zed-editor`
+executable installed under lib/zed/ directory. To use MSYS2 shell in integrated
+terminal, press Ctrl + , to open settings, then put these lines in the opened
+file
+
+```json
+{
+  "terminal": {
+    "shell": {
+      "with_arguments": {
+        "program": "cmd.exe",
+        "args": ["/c", "C:\\msys64\\msys2_shell.cmd", "-defterm", "-here", "-no-start", "-ucrt64"]
+      }
+    },
+    "env": {
+      "EDITOR": "zeditor.exe --wait"
+    }
+  }
+}
+```
+
+Now UCRT64 shell will be opened if you press Ctrl + ~. EDITOR environment
+variable will be helpful, for example, when you use git from command line.
