@@ -79,13 +79,9 @@ file
         "program": "cmd.exe",
         "args": ["/c", "C:\\msys64\\msys2_shell.cmd", "-defterm", "-here", "-no-start", "-ucrt64"]
       }
-    },
-    "env": {
-      "EDITOR": "zeditor.exe --wait"
     }
   }
 }
 ```
 
-Now UCRT64 shell will be opened if you press Ctrl + ~. EDITOR environment
-variable will be helpful, for example, when you use git from command line.
+Now UCRT64 shell will be opened if you press Ctrl + ~.
