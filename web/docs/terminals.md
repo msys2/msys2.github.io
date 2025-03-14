@@ -108,3 +108,21 @@ C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64
 ```
 
 * Now close and restart Konsole.
+
+## Alacritty
+
+[Alacritty](https://alacritty.org/) is a high performance terminal that use
+OpenGL for GPU accelaration. MSYS2 provides it as a [mingw package](https://packages.msys2.org/base/mingw-w64-alacritty).
+To use it with MSYS2, install the package and change terminal settings with
+following steps:
+
+* Create settings file in `%APPDATA%\alacritty\alacritty.toml`.
+* Open it, then put these lines
+
+```toml
+[terminal.shell]
+program = "cmd.exe"
+args = "["/c", "C:\\msys64\\msys2_shell", "-defterm", "-here", "-no-start", "-ucrt64"]
+```
+
+* Changes will apply after restart
