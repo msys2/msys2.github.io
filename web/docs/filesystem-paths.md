@@ -18,7 +18,7 @@ cases not compatible:
   `C:\foo` for example) and a valid Unix path, but resolves to a different path.
   Again, if it's just forwarded to some other Unix tool then things might work
   out fine.
-* `foo/bar.txt`just works, relative to the current working directory, while
+* `foo/bar.txt` just works, relative to the current working directory, while
   `foo\bar.txt` is only OK with native tools.
 * Path lists, commonly used in environment variables like `FOO=/foo:/bar` also
   will never work, since paths are separated by `;` on Windows and not `:`,
