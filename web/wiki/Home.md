@@ -25,7 +25,7 @@ If you have any problems with the POSIX side of MSYS2 (e.g. ssh, home directorie
 
 There is also an [excellent introduction from Matthieu Vachon](https://sourceforge.net/p/msys2/discussion/general/thread/dcf8f4d3/#8473/588e) describing MSYS2, the shells, pacman and other stuff in a less technical, more practical way.
 
-Some pages on the [Git for Windows wiki](https://github.com/git-for-windows/git/wiki) are relevant to MSYS2 as well.
+Some pages on [Git for Windows' home page](https://gitforwindows.org/sitemap) are relevant to MSYS2 as well.
 
 There are various [communication channels](https://www.msys2.org/#support-or-contact) set up, including the [#msys2 IRC channel](irc://irc.oftc.net:6667/msys2) on OFTC and the mailing list at msys2-users@lists.sourceforge.net.
 
