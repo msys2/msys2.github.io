@@ -27,7 +27,7 @@ cases not compatible:
 
 The only solution here is to avoid mixing Unix/Cygwin and native tools outside
 of makepkg (preferred) or convert them when they get passed between the
-different programs. For the latter MSYS2 provides an automatic conversion that
+different programs. For the latter, MSYS2 provides an automatic conversion that
 just works automatically in many cases.
 
 ## Manual Unix ⟷ Windows Path Conversion
@@ -49,9 +49,9 @@ C:\msys64\mingw64\bin
 
 ### Process Arguments
 
-When calling native executables from the context of Cygwin then all the
+When calling native executables from the context of Cygwin, then all the
 arguments that look like Unix paths will get auto converted to Windows. For
-example when calling native Python from the context of bash:
+example, when calling native Python from the context of bash:
 
 ```shell
 $ python3 -c "import sys; print(sys.argv)" --dir=/foo
@@ -60,9 +60,9 @@ $ python3 -c "import sys; print(sys.argv)" --dir=/foo:/bla
 ['-c', '--dir=C:\\msys64\\foo;C:\\msys64\\bla']
 ```
 
-While this is helpful in many cases it's also not perfect and in corner cases
+While this is helpful in many cases, it's also not perfect and in corner cases
 converts arguments that look like Unix paths while they are not, or detects
-lists of Unix paths where there are none. For these cases you can exclude
+lists of Unix paths where there are none. For these cases, you can exclude
 certain arguments via the `MSYS2_ARG_CONV_EXCL` environment variable:
 
 ```shell
@@ -98,9 +98,9 @@ one or more environment variable prefixes separated by `;`, like
 `MSYS2_ENV_CONV_EXCL=FOO;BAR;/test`. It matches the prefix against the following
 string `KEY=VALUE`.
 
-Cygwin special cases some environment variables that are known to be paths or
-path lists and does less guessing with them. For example `HOME` will never be
-interpreted as a path list even if it contains `:`.
+Cygwin treats certain environment variables that are known to be paths or path 
+lists as special cases and does less guessing with them. For example, `HOME` will 
+never be interpreted as a path list even if it contains `:`.
 
 ## Windows ⟶ Unix Path Conversion
 
