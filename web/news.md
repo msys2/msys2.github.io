@@ -5,6 +5,47 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2025-04-18 - Hosted Windows ARM64 Runners on GitHub Actions
+
+Earlier this week, GitHub finally [added Windows ARM64 runners to GitHub Actions](https://github.blog/changelog/2025-04-14-windows-arm64-hosted-runners-now-available-in-public-preview/), which is great news and will help us a lot producing native ARM64 packages in MSYS2 in the future. Since many of our packages are already available for ARM64, you might be wondering how we managed to do this until now. Let's take a look back:
+
+In early 2021, [Jeremy](https://github.com/jeremyd2019) bootstrapped our CLANGARM64 environment from a Cygwin LLVM build and built our first CLANGARM64 packages. To automate our package builds, we needed GitHub Actions support, which Jeremy also took on himself, and set up a WoA machine with an ARM64 version of GitHub runner, which we integrated into msys2-autobuild in late 2021. The whole ecosystem was in a very early stage at the time, such as the Actions runner itself, ARM64 support for Node.js, ARM64 Windows itself, Windows x64 emulation, etc., so things were not easy. Hardware was also an issue, as emulation was very slow, real hardware was very underpowered, and there were no dev kits in the beginning, so the runner had to move hardware several times over its lifetime.
+
+Another challenge was that the self-hosted runner builds were not isolated, which meant that we could only use them for final package builds, so as not to expose them to untrusted users. So no CI checks on random PRs or other repos that are exposed in any way. While this meant that ARM64-only issues were sometimes found very late in the process, fortunately there was always someone around to debug things on real hardware if needed.
+
+Some stats on the last year of the self-hosted ARM64 runner:
+
+* It ran 1835 jobs
+* It built packages for 1593 hours
+* It built 9869 packages
+* It produced 52.4 GB worth of packages
+
+After building for 3-4 years we now have ~93% of all MSYS2 packages available for ARM64.
+
+Thanks to [Jeremy](https://github.com/jeremyd2019) for maintaining the self-hosted runner for so long, setting it up, updating it, moving it, fixing it, scaling it up for large rebuilds, being very responsive when things got stuck or debugging ARM64-only build issues, and much more. Also thanks to [Dennis Ameling](https://github.com/dennisameling) for funding the "QC710 Dev Kit" and [Zac Walker @ Microsoft](https://github.com/ZacWalk) for providing us with a "Dev Kit 2023".
+
+The future:
+
+With the new hosted runners, we can now test with ARM64 in many more places, such as package updates before they are merged, for all our forks of external projects, our GitHub action, our installer, our integration test, and much more. We can also run more jobs in parallel, which will be helpful for large rebuilds like major Python updates. And it allows our community to debug ARM64 related issues even if they do not have ARM64 hardware available, even though debugging in CI is not much fun.
+
+For users of our "setup-msys2" GitHub Action this means they can easily add ARM64 testing/building to their project:
+
+```yaml
+jobs:
+  msys2-clangarm64:
+    runs-on: windows-11-arm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: CLANGARM64
+          update: true
+      - name: CI-Build
+        shell: msys2 {0}
+        run: |
+          ./ci-build.sh
+```
+
 ### 2025-02-14 - Moving MSYS(2) closer to Cygwin
 
 In MSYS2, in addition to the native environments such as UCRT64/CLANG64, there is also the "MSYS" environment, which contains mostly Cygwin-based software. Since the start of the MSYS2 project, the Cygwin tools in MSYS have been modified to build for MSYS instead of Cygwin. This means that the languages and tools have been patched to report their platform as "msys", and for the build tools this means that we have our own MSYS specific target triplet (x86_64-pc-msys), and uname reports "MSYS" as well.
