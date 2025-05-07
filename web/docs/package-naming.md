@@ -10,15 +10,15 @@ summary: The MSYS2 software distribution provides binary packages with for `pacm
 The following table lists the packages according to their environment, see ['Environments'](environments.md) for general information on these.
 When installing packages, see  ['Package Management'](package-management.md), you'll commonly use the full name including the package prefix as outlined below.
 
-|                                                          | Name [^1]      | Package prefix [^2]        |
-|----------------------------------------------------------|----------------|----------------------------|
-| ![msys](msys.png){: style="max-width:25px" }             | **MSYS**       | None                       |
-| ![mingw64](mingw64.png){: style="max-width:25px" }       | **MINGW64**    | `mingw-w64-x86_64-`        |
-| ![ucrt64](ucrt64.png){: style="max-width:25px" }         | **UCRT64**     | `mingw-w64-ucrt-x86_64-`   |
-| ![clang64](clang64.png){: style="max-width:25px" }       | **CLANG64**    | `mingw-w64-clang-x86_64-`  |
-| ![mingw32](mingw32.png){: style="max-width:25px" }       | **MINGW32**    | `mingw-w64-i686-`          |
-| ![clang32](clang32.png){: style="max-width:25px" }       | **CLANG32**    | `mingw-w64-clang-i686-`    |
-| ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `mingw-w64-clang-aarch64-` |
+|                                                          | Name [^1]      | Package prefix [^2]       |
+|----------------------------------------------------------|----------------|---------------------------|
+| ![msys](msys.png){: style="max-width:25px" }             | **MSYS**       | None                      |
+| ![mingw64](mingw64.png){: style="max-width:25px" }       | **MINGW64**    | `mingw-w64-x86_64`        |
+| ![ucrt64](ucrt64.png){: style="max-width:25px" }         | **UCRT64**     | `mingw-w64-ucrt-x86_64`   |
+| ![clang64](clang64.png){: style="max-width:25px" }       | **CLANG64**    | `mingw-w64-clang-x86_64`  |
+| ![mingw32](mingw32.png){: style="max-width:25px" }       | **MINGW32**    | `mingw-w64-i686`          |
+| ![clang32](clang32.png){: style="max-width:25px" }       | **CLANG32**    | `mingw-w64-clang-i686`    |
+| ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `mingw-w64-clang-aarch64` |
 
 [^1]: environment variable `MSYSTEM` 
 [^2]: environment variable `MINGW_PACKAGE_PREFIX`
