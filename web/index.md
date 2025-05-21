@@ -121,6 +121,7 @@ Various organizations provide us with mirrors all around the world, see [our mir
 * [jeremyd2019 (Jeremy Drake)](https://github.com/jeremyd2019)
 * [mati865 (Mateusz Mikuła)](https://github.com/mati865)
 * [MehdiChinoune (مهدي شينون / Mehdi Chinoune)](https://github.com/MehdiChinoune)
+* [ognevny (Maksim Bondarenkov)](https://github.com/ognevny)
 
 ## Donations
 
