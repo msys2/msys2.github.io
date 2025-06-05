@@ -22,7 +22,7 @@ theme:
         media: "(prefers-color-scheme: dark)"
         toggle:
           icon: material/brightness-4
-          name: Switch to light mode
+          name: Switch to system preference
         primary: 'blue'
         accent: 'blue'
 
