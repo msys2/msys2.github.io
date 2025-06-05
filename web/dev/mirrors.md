@@ -31,7 +31,7 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | mirror.umd.edu | [HTTPS](https://mirror.umd.edu/msys2/) \| [RSYNC](rsync://mirror.umd.edu/msys2/) | [website](https://mirror.umd.edu/)|
 | mirror.accum.se | [HTTPS](https://mirror.accum.se/mirror/msys2.org/) \| [RSYNC](rsync://mirror.accum.se/mirror/msys2.org/) | [issue](https://github.com/msys2/msys2.github.io/issues/323) |
 | ftp.nluug.nl | [HTTPS](https://ftp.nluug.nl/pub/os/windows/msys2/builds/) \| [RSYNC](rsync://ftp.nluug.nl/msys2/builds/) | <ftp-admin@nluug.nl> |
-| ftp.osuosl.org | [HTTPS](https://ftp.osuosl.org/pub/msys2/) \| [RSYNC](rsync://rsync.osuosl.org/msys2/) | <hosting-request@osuosl.org> | |
+| ftp2.osuosl.org | [HTTPS](https://ftp2.osuosl.org/pub/msys2/) \| [RSYNC](rsync://rsync2.osuosl.org/msys2/) | <hosting-request@osuosl.org> | |
 | mirror.internet.asn.au | [HTTPS](https://mirror.internet.asn.au/pub/msys2/) \| [RSYNC](rsync://mirror.internet.asn.au/msys2/) |  <peering@ix.asn.au> |
 | mirror.selfnet.de | [HTTPS](https://mirror.selfnet.de/msys2/) \| [RSYNC](rsync://mirror.selfnet.de/msys2/) | [admin](https://github.com/carrotIndustries) |
 | mirror.yandex.ru | [HTTPS](https://mirror.yandex.ru/mirrors/msys2/) \| [RSYNC](rsync://mirror.yandex.ru/mirrors/msys2/) | - |
