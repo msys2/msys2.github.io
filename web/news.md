@@ -5,6 +5,23 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2025-06-20 - Replacing `x86_64-pc-msys` with `x86_64-pc-cygwin`
+
+As part of our ongoing effort to move MSYS2 closer to Cygwin, we have now
+replaced the `x86_64-pc-msys` triplet with `x86_64-pc-cygwin` as the default
+host triplet for the MSYS environment.
+
+This means:
+
+* The `$MSYSTEM_CHOST` environment variable will now report `x86_64-pc-cygwin`
+  instead of `x86_64-pc-msys`
+* Autotools based configure scripts will default to `x86_64-pc-cygwin` instead
+  of `x86_64-pc-msys`
+* `gcc -dumpmachine` will report `x86_64-pc-cygwin` instead of `x86_64-pc-msys`
+
+Ideally this should not affect most users. If there are any issues with this
+change, please let us know.
+
 ### 2025-04-18 - Hosted Windows ARM64 Runners on GitHub Actions
 
 Earlier this week, GitHub finally [added Windows ARM64 runners to GitHub Actions](https://github.blog/changelog/2025-04-14-windows-arm64-hosted-runners-now-available-in-public-preview/), which is great news and will help us a lot producing native ARM64 packages in MSYS2 in the future. Since many of our packages are already available for ARM64, you might be wondering how we managed to do this until now. Let's take a look back:
