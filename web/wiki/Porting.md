@@ -30,6 +30,8 @@ Identifier           | Platform(s)                | Usage
 ---------------------|----------------------------|----------------------------
 `_WIN32`             | mingw, msvc                | C code (`#ifdef ...`)
 `_WIN64`             | 64-bit mingw, 64-bit msvc  | C code (`#ifdef ...`)
+`__MINGW32__`        | mingw                      | C code (`#ifdef ...`)
+`__MINGW64__`        | 64-bit mingw               | C code (`#ifdef ...`)
 `__CYGWIN__`         | msys2, cygwin              | C code (`#ifdef ...`)
 `__MSYS__`           | msys2                      | C code (`#ifdef ...`)
 `x86_64-pc-msys2`    | 64-bit msys2               | Build scripts (`if [ $host = '...' ]`)
@@ -38,6 +40,8 @@ Identifier           | Platform(s)                | Usage
 `i686-w64-mingw32`   | 32-bit mingw               | Build scripts (`if [ $host = '...' ]`)
 `cygwin`             | msys2                      | Python (`sys.platform`)
 `win32`              | mingw                      | Python (`sys.platform`)
+
+("mingw" here includes all non-msys environments: mingw, clang, ucrt)
 
 Filesystem namespaces
 ---------------------
