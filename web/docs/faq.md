@@ -72,3 +72,23 @@ For this reason, the following scenarios can cause a address memory mismatch:
 4. A separate program loading msys2 in
 
 Since a lot of command line tools pack msys2 with them to provide a nice operating scenario then you may need to make sure that these are aligned correctly. For this reason, make sure to be using compatible versions of msys2 with other components
+
+### My antivirus flagged an MSYS2 file as malicious, what should I do?
+
+Since antivirus software is prone to false positives and MSYS2 contains many
+binaries that can trigger such false positives, and antivirus software typically
+doesn't provide detailed information about why a specific file is flagged, there
+is usually not much we can do.
+
+Still, feel free to open a GitHub issue or contact us about the detection - this
+helps us track widespread issues. There are a few things we can do to help:
+
+* We will upload the file to https://www.virustotal.com/gui/home/upload to see
+  how widespread the issue is and track its status. In many cases only a few
+  vendors detect a specific issue, and some vendors use the same detection
+  engine internally.
+* Some antivirus vendors provide forms to report false positives where we can
+  upload the affected files so they can adjust their heuristics.
+
+If you have any additional proof of a malicious file, besides an antivirus
+report, please let us know and we will investigate further.
