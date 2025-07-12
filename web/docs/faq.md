@@ -15,23 +15,25 @@ https://github.com/msys2/msys2-docker
 
 It might require fixes in both Wine and Cygwin to get this issue fully resolved. If anyone makes some progress on this, let us know!
 
-### How can I make MSYS2/pacman trust my company's custom TLS CA certificate
+### How can I make MSYS2/pacman trust my company's/antivirus's custom TLS CA certificate
 
-In case your computer is managed by an organization they might MITM all your TLS connections and install their own custom CA certificate onto your system so that MITM connections are still marked as secure. Because OpenSSL in MSYS2 currently doesn't integrate with the Windows system CA store, and thus doesn't know about your organization's custom certificates you have to add them and trust them manually.
+In case your computer is managed by an organization or by certain antivirus software (Avast antivirus is known to do this by default) they might MITM all your TLS connections and install their own custom CA certificate onto your system so that MITM connections are still marked as secure. Because OpenSSL in MSYS2 currently doesn't integrate with the Windows system CA store, and thus doesn't know about your organization's/antivirus's custom certificates, you have to add them and trust them manually.
 
 You might be affected if you see the following errors when using pacman, curl or similar:
 
 * `SSL certificate problem: unable to get local issuer certificate`
 * `SSL certificate problem: self signed certificate in certificate chain`
+* `ERROR: The certificate of ‘<website>’ is not trusted.`
+* `ERROR: The certificate of ‘<website>’ doesn't have a known issuer.`
 
-First we need to get the certificates of your organization
+First we need to get the certificates of your organization/antivirus
 
 1) via Firefox:
 
 * Open https://repo.msys2.org in Firefox (the connection should be marked as secure!)
 * Press ctrl+i to open the page info
 * Go to "Security" and click "View Certificate"
-* Go through all tabs where the certificate belongs to your organization, scroll down and click on "PEM (cert)" to download the "*.pem" file
+* Go through all tabs where the certificate belongs to your organization/antivirus, scroll down and click on "PEM (cert)" to download the "*.pem" file
 
 2) or via Chrome/Chromium/Edge:
 
@@ -53,6 +55,8 @@ OK!
 ```
 
 The certificates can be removed again by deleting the .pem/.cer files in `/etc/pki/ca-trust/source/anchors` and running `update-ca-trust` again.
+
+In case your TLS connections are intercepted by an antivirus, you can also turn off this functionality in the antivirus to fix the issue. This can make your computer more vulnerable, the solution described above should therefore be preferred. Instructions on how to turn this off for Avast antivirus can be found [here](https://support.avast.com/en-us/article/use-antivirus-https-scan/#pc). Other antivirus software which intercepts TLS connections may require similar steps to fix the issue.
 
 ### How long are old packages kept on repo.msys2.org?
 
