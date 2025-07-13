@@ -17,7 +17,7 @@ It might require fixes in both Wine and Cygwin to get this issue fully resolved.
 
 ### How can I make MSYS2/pacman trust my company's/antivirus's custom TLS CA certificate
 
-In case your computer is managed by an organization or by certain antivirus software (Avast antivirus is known to do this by default) they might MITM all your TLS connections and install their own custom CA certificate onto your system so that MITM connections are still marked as secure. Because OpenSSL in MSYS2 currently doesn't integrate with the Windows system CA store, and thus doesn't know about your organization's/antivirus's custom certificates, you have to add them and trust them manually.
+In case your computer is managed by an organization or by certain antivirus software (Avast and Norton are known to do this by default) they might MITM all your TLS connections and install their own custom CA certificate onto your system so that MITM connections are still marked as secure. Because OpenSSL in MSYS2 currently doesn't integrate with the Windows system CA store, and thus doesn't know about your organization's/antivirus's custom certificates, you have to add them and trust them manually.
 
 You might be affected if you see the following errors when using pacman, curl or similar:
 
