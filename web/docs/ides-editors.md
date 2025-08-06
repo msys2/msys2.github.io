@@ -45,7 +45,7 @@ To add the MSYS2 terminal profile in Sublime Text, please follow these steps:
 
 Add these lines to your `settings.json`:
 
-```jsonc
+```json
 {
     "terminal.integrated.profiles.windows": {
         "MSYS2 UCRT": {
@@ -65,11 +65,11 @@ Now the `MSYS2 UCRT` profile is available when launching a terminal.
 
 [Zed](https://zed.dev/) is a text and source code editor. Its syntax
 highlighting and source parsing is based on tree-sitter library. Editor uses
-Vulkan as GUI backend to have highest performance among other editors. Zed
+GPU acceleration to have highest performance among other editors. Zed
 package provides `zeditor` CLI installed under bin/ directory and `zed-editor`
 executable installed under lib/zed/ directory. To use MSYS2 shell in integrated
 terminal, press Ctrl + , to open settings, then put these lines in the opened
-file
+file. This is an example given for UCRT64 environment.
 
 ```json
 {
@@ -85,3 +85,15 @@ file
 ```
 
 Now UCRT64 shell will be opened if you press Ctrl + ~.
+
+### AMD GPU support
+
+Starting with v0.198.x, Zed uses DirectX GUI backend. For AMD GPUs users it's
+highly recommended to install AMD AGS library to get fully featured support.
+You may install it with this command:
+
+```bash
+curl --fail --location --output "$MINGW_PREFIX/lib/zed/amd_ags_x64.dll" https://github.com/GPUOpen-LibrariesAndSDKs/AGS_SDK/raw/v$VERSION/ags_lib/lib/amd_ags_x64.dll
+```
+
+$VERSION can be got from post upgrade message or from [upstream source](https://github.com/search?q=repo%3Azed-industries%2Fzed+DownloadAMDGpuServices&type=code)
