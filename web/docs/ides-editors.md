@@ -93,7 +93,7 @@ highly recommended to install AMD AGS library to get fully featured support.
 You may install it with this command:
 
 ```bash
-curl --fail --location --output "$MINGW_PREFIX/lib/zed/amd_ags_x64.dll" https://github.com/GPUOpen-LibrariesAndSDKs/AGS_SDK/raw/v$VERSION/ags_lib/lib/amd_ags_x64.dll
+wcurl --output "$MINGW_PREFIX/lib/zed/amd_ags_x64.dll" https://github.com/GPUOpen-LibrariesAndSDKs/AGS_SDK/raw/v$VERSION/ags_lib/lib/amd_ags_x64.dll
 ```
 
 $VERSION can be got from post upgrade message or from [upstream source](https://github.com/search?q=repo%3Azed-industries%2Fzed+DownloadAMDGpuServices&type=code)
