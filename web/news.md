@@ -931,12 +931,12 @@ issues with the i686 variant.  Run
 `pacman -R mingw-w64-i686-gcc-ada mingw-w64-i686-gcc-objc`, then update.
 
 
-### 2016 - Core update integrated into Pacman; `update-core` removed
+### 2016-07-15 - Core update integrated into Pacman; `update-core` removed
 
 The function of `update-core` is transferred to `pacman -Syuu`.
 
 
-### 2016 - Command window may linger after startup
+### 2016-04-05 - Command window may linger after startup
 
 Change the argument `/K` to `/C` in all three Start menu shortcuts.
 
