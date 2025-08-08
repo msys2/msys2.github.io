@@ -658,7 +658,7 @@ on Sourceforge. They are still available on our main server and on all mirrors.
 Ray Donnelly is a co-founder and developer of MSYS2 and after a multi year fight
 with cancer passed away on 2021-04-20.
 
-![ray](./ray.jpg){: width=589 height=393 style="max-width: 300px; width:100%; border: 2px solid #333; box-shadow: 0px 0px 3px #ccc;" }
+![ray](./ray.jpg){: width=999 height=666 style="max-width: 375px; width:100%; border: 2px solid #333; box-shadow: 0px 0px 3px #ccc;" }
 
 If you want to know more about his life and work see his fundraiser
 descriptions:
