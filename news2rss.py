@@ -83,7 +83,7 @@ def html_to_rss(html_content, feed_title, feed_description):
         while current and current.name != "h3":
             content_parts.append(str(current))
             current = current.next_sibling
-        content = "\n".join(content_parts)
+        content = "".join(content_parts)
 
         # Create RSS item
         item = ET.SubElement(channel, "item")
