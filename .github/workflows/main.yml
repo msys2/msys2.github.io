@@ -40,7 +40,9 @@ jobs:
         run: |
           poetry install
 
-      - run: poetry run mkdocs build
+      - run: |
+          poetry run mkdocs build
+          poetry run python news2rss.py -f site/news/index.html -o site/news.xml
 
       - name: Upload for pages
         uses: actions/upload-pages-artifact@v3
