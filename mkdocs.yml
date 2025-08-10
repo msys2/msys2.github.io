@@ -117,6 +117,7 @@ nav:
         - docs/environments.md
         - docs/updating.md
         - docs/ci.md
+        - docs/mirrors.md
         - docs/terminals.md
         - docs/ides-editors.md
         - docs/installer.md
