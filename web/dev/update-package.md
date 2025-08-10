@@ -1,12 +1,7 @@
 # Updating an existing Package
 
 In case you are looking for packages which need to be updated have a look at our
-[Outdated Packages](https://packages.msys2.org/outofdate) page. To get a list of
-packages which are outdated and have potential security issues have a look at
-the Repology pages for
-[msys2_mingw](https://repology.org/projects/?inrepo=msys2_mingw&outdated=on&vulnerable=on)
-and
-[msys2_msys2](https://repology.org/projects/?inrepo=msys2_msys2&outdated=on&vulnerable=on).
+[Outdated Packages](https://packages.msys2.org/outofdate) page.
 
 ## Updating a Package
 
