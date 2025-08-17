@@ -1,6 +1,8 @@
 #!#!/usr/bin/env python3
 # Converts the news page to an RSS feed
 
+import os
+import base64
 import re
 import argparse
 from bs4 import BeautifulSoup
@@ -103,7 +105,19 @@ def html_to_rss(html_content, feed_title, feed_description):
         description = ET.SubElement(item, "description")
         description.text = content
 
-    return ET.tostring(rss, encoding="unicode", xml_declaration=True)
+    # Embed XSLT stylesheet
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    xsl_file = os.path.join(script_dir, "news2rss.xsl")
+    with open(xsl_file, 'r', encoding='utf-8') as f:
+        xsl_content = f.read()
+    xsl_b64 = base64.b64encode(xsl_content.encode('utf-8')).decode('ascii')
+    data_uri = f"data:text/xsl;base64,{xsl_b64}"
+
+    xml_str = ET.tostring(rss, encoding="unicode")
+    full_xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    full_xml += f'<?xml-stylesheet type="text/xsl" href="{data_uri}"?>\n'
+    full_xml += xml_str
+    return full_xml
 
 
 def main():
