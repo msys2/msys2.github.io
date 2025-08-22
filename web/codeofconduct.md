@@ -77,6 +77,12 @@ reporter of any incident.
 Community leaders will follow these Community Impact Guidelines in determining
 the consequences for any action they deem in violation of this Code of Conduct:
 
+**MSYS2 specific addition**: In case the person in violation of the CoC is not a
+regular contributor to MSYS2, or if there is no obvious way to contact them
+privately, community leaders will consider writing warnings in the same
+communication channel where the violation happened (e.g. GitHub issue, PR,
+mailing list, forum, etc.).
+
 ### 1. Correction
 
 **Community Impact**: Use of inappropriate language or other behavior deemed
