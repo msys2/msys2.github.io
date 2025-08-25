@@ -43,7 +43,7 @@ support (\*), HTTPS support, synced at least once per day from the primary serve
 | mirror.clarkson.edu | [HTTPS](https://mirror.clarkson.edu/msys2/) \| [RSYNC](rsync://mirror.clarkson.edu/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/185) |
 | quantum-mirror.hu | [HTTPS](https://quantum-mirror.hu/mirrors/pub/msys2/) \| [RSYNC](rsync://quantum-mirror.hu/msys2/) | [website](https://quantum-mirror.hu/web/contact_en.html) |
 | distrohub.kyiv.ua | [HTTPS](https://distrohub.kyiv.ua/msys2/) \| [RSYNC](rsync://distrohub.kyiv.ua/msys2/) | [website](https://distrohub.kyiv.ua) |
-| mirror.archlinux.tw | [HTTPS](https://mirror.archlinux.tw/MSYS2/) \| [RSYNC](rsync://mirror.archlinux.tw/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/206) |
+| mirror.archlinux.tw | [HTTPS](https://mirror.archlinux.tw/MSYS2/) \| [RSYNC](rsync://mirror.archlinux.tw/msys2/) | [issue](https://github.com/msys2/msys2.github.io/issues/396) |
 
 (\*) rsync is required by [mirrorbits](https://github.com/etix/mirrorbits), which we use to auto-redirect users to a local mirror via [mirror.msys2.org](https://mirror.msys2.org)
 
