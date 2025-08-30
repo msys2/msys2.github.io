@@ -13,6 +13,8 @@
     --msys2-code-background: #fff;
     --msys2-code-border-color: #dfdfdf;
     --msys2-invert-filter: none;
+    --msys2-button-background: #fff;
+    --msys2-button-border-color: #888;
 }
 
 [data-md-color-scheme=slate] {
@@ -25,6 +27,8 @@
     --msys2-code-background: #333;
     --msys2-code-border-color: #525252;
     --msys2-invert-filter: invert(100%);
+    --msys2-button-background: #222;
+    --msys2-button-border-color: #999;
 }
 
 .md-typeset ol li, .md-typeset ul li {
@@ -76,36 +80,38 @@
     margin-top: 1.2rem;
 }
 
+.download-section {
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 a.button {
-    border-radius: 10px;
-    border-top: solid 1px #cbcbcb;
-    border-left: solid 1px #b7b7b7;
-    border-right: solid 1px #b7b7b7;
-    border-bottom: solid 1px #b3b3b3;
+    border-radius: 7px;
+    border-top: solid 1px var(--msys2-button-border-color);
+    border-left: solid 1px var(--msys2-button-border-color);
+    border-right: solid 1px var(--msys2-button-border-color);
+    border-bottom: solid 1px var(--msys2-button-border-color);
     color: var(--md-typeset-a-color);
     line-height: 25px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     padding: 4px 15px;
     display: inline-block;
-    margin-right: 14px;  
-    background: linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%);
-    -webkit-box-shadow: 10px 10px 5px #888;
-    -moz-box-shadow: 10px 10px 5px #888;
-    box-shadow: 0px 1px 5px #e8e8e8;
-    filter: var(--msys2-invert-filter); /* hacky.. */
+    background: var(--msys2-button-background);
+    box-shadow: 0px 1px 3px var(--msys2-code-border-color);
 }
 
 a.button:hover {
-    border-top: solid 1px #b7b7b7;
-    border-left: solid 1px #b3b3b3;
-    border-right: solid 1px #b3b3b3;
-    border-bottom: solid 1px #b3b3b3;
-    background: linear-gradient(top,  #fdfdfd 0%,#f6f6f6, 100%);
+    border-top: solid 1px var(--msys2-red);
+    border-left: solid 1px var(--msys2-red);
+    border-right: solid 1px var(--msys2-red);
+    border-bottom: solid 1px var(--msys2-red);
 }
 
 .md-typeset table:not([class]) {
-    background-color: var(--msys2-background);
+    background-color: var(--msys2-button-background);
 }
 
 .md-typeset table thead {
