@@ -38,7 +38,7 @@ MSYS2 and what for.
 ## Installation
 
 1. Download the installer:
-    <div class="download-section"><a href="https://github.com/msys2/msys2-installer/releases/download/2025-08-30/msys2-x86_64-20250830.exe" class="button">msys2-x86_64-20250830.exe</a> or <a href="https://github.com/msys2/msys2-installer/releases/download/2025-08-30/msys2-arm64-20250830.exe " class="button">msys2-arm64-20250830.exe</a> (ARM64)</div>
+    <div class="download-section"><a href="https://github.com/msys2/msys2-installer/releases/download/2025-08-30/msys2-x86_64-20250830.exe" class="button">:octicons-download-16: msys2-x86_64-20250830.exe</a> or <a href="https://github.com/msys2/msys2-installer/releases/download/2025-08-30/msys2-arm64-20250830.exe " class="button">:octicons-download-16: msys2-arm64-20250830.exe</a> (ARM64)</div>
 
     <span style="opacity: 0.6; word-wrap: break-word;">(Optional) For more information on the installer, like command line options, or how to verify the checksum and signature of the installer, see the [installer guide](./docs/installer.md).</span>
 
