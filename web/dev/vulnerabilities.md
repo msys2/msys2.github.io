@@ -7,7 +7,9 @@ the known potential vulnerabilities on https://packages.msys2.org/outofdate and 
 graph LR;
     A[Extract PKGBUILD Metadata] --> B[Generate SBOM];
     B --> C[Scan SBOM with Grype];
-    C --> D[packages.msys2.org];
+    C --> D[Add Vulnerability Assessment Status & Add Fixed Versions Info];
+    D --> E[packages.msys2.org];
+    A --> D;
 ```
 
 ## Package Metadata
