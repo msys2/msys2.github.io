@@ -32,63 +32,16 @@ and WSL can also be extended to support a MSYS2 shell.
 
 * Get it via the [Windows app store](https://aka.ms/terminal) if you don't have
   it installed already.
-* In the tab dropdown menu select "Settings" which opens a code editor showing
-  a JSON configuration file.
-* Insert the example profiles shown below under the `profiles` key. Note that
+* In the tab dropdown menu select "Settings" which opens a settings page
+* In the left sidebar, click on "+ Add a new profile" under "Profiles". Note that
   the examples assume that you have MSYS2 installed under `C:\msys64`.
-* You can make one of the MSYS2 profiles the default by setting the `defaultProfile`
-  key to the `guid` value of one of the profile entries.
+* In the opened page, click on "+ New empty profile".
+* Under Name, enter "MSYS" (or the name you want)
+* Under Command line, enter `C:/msys64/msys2_shell.cmd -defterm -no-start -[term]`. Replace `[term]` by the terminal you want you use, such as `msys`, `ucrt64`, etc.
+* Click on "Save changes".
 
 For more info on the different profile settings see
 https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings <br style="clear:both"/>
-
-```json
-// This makes UCRT64 the default shell
-"defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-"profiles": {
-  "list":
-  [
-    // ...
-    {
-      "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-      "name": "UCRT64 / MSYS2",
-      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64",
-      "startingDirectory": "C:/msys64/home/%USERNAME%",
-      "icon": "C:/msys64/ucrt64.ico",
-      "font": 
-      {
-        "face": "Lucida Console",
-        "size": 9
-      }
-    },
-    {
-      "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
-      "name": "MSYS / MSYS2",
-      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
-      "startingDirectory": "C:/msys64/home/%USERNAME%",
-      "icon": "C:/msys64/msys2.ico",
-      "font": 
-      {
-        "face": "Lucida Console",
-        "size": 9
-      }
-    },
-    // ...
-  ]
-}
-```
-
-* The `commandline` in that profile will launch bash shell by default. To change
-  default login shell, install the corresponding package for that shell and append
-  `-shell` option with the command line. For example,
-  - To set `fish` shell as default:
-    ```
-    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell fish"
-    ```
-  - To set `zsh` shell as default:
-    ```
-    "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh"
-    ```
 
 ## Konsole
 
