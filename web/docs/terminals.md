@@ -37,7 +37,7 @@ and WSL can also be extended to support a MSYS2 shell.
   the examples assume that you have MSYS2 installed under `C:\msys64`.
 * In the opened page, click on "+ New empty profile".
 * Under Name, enter "MSYS" (or the name you want)
-* Under Command line, enter `C:/msys64/msys2_shell.cmd -defterm -no-start -[term]`. Replace `[term]` by the terminal you want you use, such as `msys`, `ucrt64`, etc.
+* Under Command line, enter `C:/msys64/msys2_shell.cmd -defterm -no-start -[shell]`. Replace `[shell]` by the shell you want you use, such as `msys`, `ucrt64`, etc.
 * Click on "Save changes".
 
 For more info on the different profile settings see
