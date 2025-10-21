@@ -36,8 +36,7 @@ For small changes:
 
 For larger changes:
 
-* `poetry install`
-* `poetry run mkdocs serve`
+* `uv run mkdocs serve`
 * Access http://127.0.0.1:8000 - any changes to the sources should be
   immediately visible in your browser
 * Open a PR with your changes or just push them if you have commit rights

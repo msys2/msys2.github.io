@@ -3,3 +3,5 @@
 /.vscode
 /.cache
 .lycheecache
+/.venv
+poetry.lock
