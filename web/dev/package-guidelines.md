@@ -54,3 +54,15 @@ likely doesn't match where the software lives, but ideally all native Windows
 tools are relocatable and won't use the prefix at runtime anyway. And if they do
 and happen to call Cygwin tools then the prefix resolves to the correct path
 because the Cygwin root path is relocatable.
+
+## Why are some packages split up, while others are not?
+
+In general, we try to avoid splitting packages unless there is a good reason to do so, in order to keep maintenance overhead low.
+
+Reasons to split packages include:
+
+- Large optional dependencies that most users do not need
+- Large packages where users often only need a small subset of the functionality
+- Development files that are not needed at runtime
+
+We also try to avoid splitting packages into development ('\*-dev' or '\*-devel' packages in other distributions) and runtime parts, except for our Cygwin packages. All Cygwin packages that are part of the base installation are split to minimize the size of the installer. For consistency reasons, many other Cygwin packages are also split, but this is not strictly required.
