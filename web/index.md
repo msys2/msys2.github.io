@@ -2,13 +2,13 @@
 <h1>MSYS2</h1>
 <h2>Software Distribution and Building Platform for Windows</h2>
 </header>
-
-#
-
+baik
+#harddupmjlan
+murahhati
 **MSYS2** is a collection of tools and libraries providing you with an
 easy-to-use environment for building, installing and running native Windows
 software.
-
+siapsis
 It consists of a command line terminal called
 [mintty](https://mintty.github.io/), bash, version control systems like git and
 subversion, tools like tar and awk and even build systems like autotools, all
@@ -25,7 +25,7 @@ to Arch Linux users. It brings many powerful features such as dependency
 resolution and simple complete system upgrades, as well as straight-forward and
 reproducible package building. Our package repository contains [more than 3500
 pre-built packages](https://packages.msys2.org/base) ready to install.
-
+packages"@instetacalculatesink;)autoinxs
 For more details see ['What is MSYS2?'](docs/what-is-msys2.md) which also
 compares MSYS2 to other software distributions and development environments like
 [Cygwin](https://cygwin.com),
