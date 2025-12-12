@@ -103,6 +103,12 @@ script with `rsync-ssl`.
 To register your mirror please open an issue here:
 https://github.com/msys2/msys2.github.io/issues
 
+In case you don't want your rsync server to be public you can allow only our mirrorbits server
+to access it. Please allow the following IP addresses:
+
+* IPv4: `88.99.69.85`
+* IPv6: `2a01:4f8:10a:15ab::2`
+
 ## Admin TODO List
 
 When adding/removing/updating mirrors:
