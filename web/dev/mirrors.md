@@ -97,8 +97,7 @@ source_url='rsync://repo.msys2.org/builds/'
 lastupdate_url='https://repo.msys2.org/lastupdate'
 ```
 
-Since our server has TLS/SSL support, you can replace the `rsync` command in the
-script with `rsync-ssl`.
+Our rsync server has TLS/SSL support, so keep `tls=1` as is.
 
 To register your mirror please open an issue here:
 https://github.com/msys2/msys2.github.io/issues
