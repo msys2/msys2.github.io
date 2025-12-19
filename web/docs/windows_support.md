@@ -9,7 +9,7 @@ In some cases we can't please both groups at the same time, so we have to find c
 
 ## Current Policy
 
-**The GUI Installer:** Requires 64-bit Windows 10 / Windows Server 2019.
+**The GUI Installer:** Requires 64-bit Windows 10 (1809+) / Windows Server 2019.
 
 **Msys/Cygwin Packages**: Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
 
@@ -24,16 +24,25 @@ Upstream software may impose additional requirements.
 
 We no longer support these configurations, but here's a list of resources that might help you get things running either way.
 
+**GUI Installer on Windows Server 2016 / Windows 10 (1607)**: The last GUI installer version that worked on Windows Server 2016 and Windows 10 (1607) is
+[2024-12-08](https://github.com/msys2/msys2-installer/releases/tag/2024-12-08). Use the old installer and then use [pacman to update](./updating.md).
+
 **GUI Installer on Windows 8.1**: The last GUI installer version that worked on Windows 8.1 is
 [2024-01-13](https://github.com/msys2/msys2-installer/releases/tag/2024-01-13). Use the old installer and then use [pacman to update](./updating.md).
 
 **Windows 7 and 8.0**: The last installer version that worked on Windows 7 and 8.0 is [2022-10-28](https://github.com/msys2/msys2-installer/releases/tag/2022-10-28). Switching to [msys2-runtime-3.4](https://packages.msys2.org/base/msys2-runtime-3.4) should keep the Cygwin parts working. Many Mingw packages will no longer work though (Python for example).
 
-**32-bit Windows**: The last working archive is available at https://repo.msys2.org/distrib/i686 and there is a community maintained repo at https://github.com/jeremyd2019/msys2-build32.
+**32-bit Windows**: The last working archive is available at https://repo.msys2.org/distrib/i686 and there is a community maintained repo at https://github.com/jeremyd2019/msys2-build32 (no longer updated since 2025-11)
 
 ## Changelog
 
 Various changes affecting the supported Windows versions and hardware for both pre-built packages and programs built using our toolchains.
+
+**2025-11-18**: The community maintained 32-bit MSYS2 repo at
+https://github.com/jeremyd2019/msys2-build32 is [no longer
+updated](https://github.com/jeremyd2019/msys2-build32/commit/82d133b596146ecddb89d5af8c3560b31e13f726).
+
+**2025-02-21**: The GUI installer dropped support for running on Windows Server 2016 and Windows 10 versions older than 1809.
 
 **2024-05-07**: The GUI installer dropped support for running on Windows 8.1.
 

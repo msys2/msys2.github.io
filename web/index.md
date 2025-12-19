@@ -42,7 +42,7 @@ MSYS2 and what for.
 
     <span style="opacity: 0.6; word-wrap: break-word;">(Optional) For more information on the installer, like command line options, or how to verify the checksum and signature of the installer, see the [installer guide](./docs/installer.md).</span>
 
-2. Run the installer. Installing MSYS2 requires 64 bit Windows 10 or newer.
+2. Run the installer. Installing MSYS2 requires 64 bit Windows 10 (1809+) or newer.
 
 3. Enter your desired **Installation Folder** (short ASCII-only path on a NTFS volume, no accents, no spaces, no symlinks, no subst or network drives, no FAT).
 
