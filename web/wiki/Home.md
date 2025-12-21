@@ -3,7 +3,6 @@
 **Welcome to the MSYS2 wiki**
 
 - [Introduction](MSYS2-introduction.md) - overview and important information
-- [Installing and upgrading](MSYS2-installation.md) - required reading for all users
 - [History](History.md) - about the project's inception and origins
 - [Re-installing from scratch](MSYS2-reinstallation.md) - in case of unrecoverable problems
 - [Creating packages](Creating-Packages.md) - how packages are built and how to make new ones
