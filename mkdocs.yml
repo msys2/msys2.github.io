@@ -39,6 +39,7 @@ plugins:
   - redirects:
       redirect_maps:
         'wiki/JIT-Debugging.md': 'docs/jit-debugging.md'
+        'wiki/arm64.md': 'docs/arm64.md'
 
 extra_css:
     - 'stylesheets/extra.css'
@@ -134,6 +135,7 @@ nav:
         - docs/symlinks.md
         - docs/configuration.md
         - docs/jit-debugging.md
+        - docs/arm64.md
         - Languages & Tools:
           - docs/cmake.md
           - docs/autotools.md
@@ -177,7 +179,6 @@ nav:
         - wiki/Signing-packages.md
         - wiki/Sudo.md
         - wiki/Terminals.md
-        - wiki/arm64.md
     - 'get-involved.md'
     - 'license.md'
     - 'privacy.md'
