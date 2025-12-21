@@ -117,3 +117,31 @@ You can skip this warning by first clicking on "More info" and then on "Run
 anyway".
 
 ![Screenshot of the SmartScreen warning](installer_smartscreen.png){: style="max-width:450px" }
+
+### What are the installation folder recommendations?
+
+We recommend a short ASCII-only path on a NTFS volume, no accents, no spaces, no
+symlinks, no subst or network drives.
+
+While you are free to choose a different installation path, please be aware that
+some tools and packages may not work correctly if you deviate from these
+recommendations.
+
+* Tools that do not handle spaces or non-ASCII characters in paths may fail due
+  to truncated or mangled paths.
+* Tools which work with long absolute paths might hit the Windows MAX_PATH limit
+  (260 characters) if the base installation path is long. This can be partly
+  worked around by enabling long path support in Windows, but not all tools can
+  handle long paths even then.
+
+Please report any issues you encounter with packages or tools due to the
+installation path.
+
+!!! note "Default permissions of the installation folder"
+
+     The installer does not set any special permissions on the installation folder,
+     which means for the default `C:\msys64` path, the permissions are inherited from
+     `C:`, which by default gives all users read/write access. If you need to
+     restrict access to the installation folder, you have to do this manually after
+     installation, or choose a different installation path with the desired
+     permissions.
