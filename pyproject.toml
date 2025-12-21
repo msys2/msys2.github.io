@@ -4,12 +4,14 @@ version = "1.0"
 description = ""
 authors = [{ name = "Christoph Reiter", email = "reiter.christoph@gmail.com" }]
 requires-python = ">=3.10,<4.0"
-dependencies = []
+dependencies = [
+]
 
 [dependency-groups]
 dev = [
     "mkdocs>=1.1.2,<2",
     "mkdocs-material>=9.5.0,<10",
+    "mkdocs-redirects>=1.2.2",
     "beautifulsoup4>=4.13.4,<5",
 ]
 
