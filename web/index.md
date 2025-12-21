@@ -44,10 +44,10 @@ MSYS2 and what for.
 
 2. Run the installer. Installing MSYS2 requires 64 bit Windows 10 (1809+) or newer.
 
-3. Enter your desired **Installation Folder** (We recommend using the default,
+3. Enter your desired **Installation Folder**. We recommend using the default,
    see [installation folder
    recommendations](./docs/installer.md#what-are-the-installation-folder-recommendations)
-   for more information).
+   for more information.
 
     ![Second screen of MSYS2 installation](images/install-2-path.png#gh-light-mode-only)
     ![Second screen of MSYS2 installation](images/install-2-path-dark.png#gh-dark-mode-only)
