@@ -18,3 +18,4 @@ Installation:
 * Not all packages in the repo have native builds yet, let us know if any you need are missing.
 * All unixy tools, like bash, will go through x64 emulation, so they might run slower than expected.
 * Windows 10 ARM64 isn't supported since we require x64 emulation, which was added in Windows 11. The MinGW packages and anything you build yourself should support Windows 10 ARM64 though.
+* We don't support ARM64EC at this time.
