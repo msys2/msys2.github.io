@@ -5,6 +5,32 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-01-10 - Python 3.13 Update
+
+We have now updated to Python 3.13. Please let us know if you encounter any
+issues.
+
+Some notable smaller changes:
+
+* The `_wmi` module, which is used by various functions in the `platform`
+  module, and which was missing from our 3.12 build, is now included.
+* The `SOABI` sysconfig variable format now matches Unix builds, in that it is a
+  subset of `EXT_SUFFIX`.
+* Various sysconfig fixes: `AR` is now a Windows path and `prefix` is now
+  relocated.
+* The `python-config` tool is now a Python script instead of a Bash script.
+* We plan to remove the isatty() patch for detecting Cygwin pipes as an
+  interactive terminal with the next update to 3.14. This should only affect
+  Windows 8.1 users or those with conpty is disabled.
+
+During the package rebuilds, we encountered an issue due to a behavioral change
+in Python 3.13: `os.path.isabs()` now returns False for paths beginning with
+'/'. This change exposed several dependencies on the previous behavior in build
+tools. Something to watch out for.
+
+Thanks to [@Alexpux](https://github.com/Alexpux) for helping with the
+rebase/update and to everyone who fixed packages during the rebuild.
+
 ### 2025-06-20 - Replacing `x86_64-pc-msys` with `x86_64-pc-cygwin`
 
 As part of our ongoing effort to move MSYS2 closer to Cygwin, we have now
