@@ -21,7 +21,7 @@ Some notable smaller changes:
 * The `python-config` tool is now a Python script instead of a Bash script.
 * We plan to remove the isatty() patch for detecting Cygwin pipes as an
   interactive terminal with the next update to 3.14. This should only affect
-  Windows 8.1 users or those with conpty is disabled.
+  Windows 8.1 users or those with conpty disabled.
 
 During the package rebuilds, we encountered an issue due to a behavioral change
 in Python 3.13: `os.path.isabs()` now returns False for paths beginning with
