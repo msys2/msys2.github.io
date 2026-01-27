@@ -68,8 +68,8 @@ highlighting and source parsing is based on tree-sitter library. Editor uses
 GPU acceleration to have highest performance among other editors. Zed
 package provides `zeditor` CLI installed under bin/ directory and `zed-editor`
 executable installed under lib/zed/ directory. To use MSYS2 shell in integrated
-terminal, press Ctrl + , to open settings, then put these lines in the opened
-file. This is an example given for UCRT64 environment.
+terminal, press Ctrl + Alt + , to open settings, then put these lines in the
+opened file. This is an example given for UCRT64 environment.
 
 ```json
 {
