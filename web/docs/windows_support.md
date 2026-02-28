@@ -11,12 +11,12 @@ In some cases we can't please both groups at the same time, so we have to find c
 
 **The GUI Installer:** Requires 64-bit Windows 10 (1809+) / Windows Server 2019.
 
-**Msys/Cygwin Packages**: Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
+**Msys/Cygwin Packages**: Requires 64-bit Windows 10 / Windows Server 2016.
 
-**Mingw Packages**: Requires 64-bit Windows 8.1 / Windows Server 2012 R2.
+**Mingw Packages**: Requires 64-bit Windows 10 / Windows Server 2016.
 Upstream software may impose additional requirements.
 
-**Mingw Toolchains**: MINGW32/MINGW64 environments allow targeting Windows 7+ still. All others allow targeting Windows 8.1+.
+**Mingw Toolchains**: MINGW32/MINGW64 environments allow targeting Windows 7+ still. All others allow targeting Windows 10+.
 
 **Hardware Requirements**: We try to follow the minimum hardware requirements of the oldest Windows versions we support. Upstream software may impose additional requirements.
 
@@ -37,6 +37,8 @@ We no longer support these configurations, but here's a list of resources that m
 ## Changelog
 
 Various changes affecting the supported Windows versions and hardware for both pre-built packages and programs built using our toolchains.
+
+**2026-02-28**: Dropped active support for Windows 8.1 and Windows Server 2012 R2.
 
 **2025-11-18**: The community maintained 32-bit MSYS2 repo at
 https://github.com/jeremyd2019/msys2-build32 is [no longer
