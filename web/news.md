@@ -5,6 +5,14 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-02-28 - Dropping support for Windows 8.1
+
+As Windows 8.1 has been end-of-life (EOL) for three years, Firefox has stopped
+supporting it as of today, and our download statistics show that only <0.05% of
+our users are on Windows 8.1, we have decided to drop support for Windows 8.1 in
+MSYS2. This does not mean that things will immediately stop working on Windows
+8.1, but we will no longer attempt to resolve issues specific to it.
+
 ### 2026-02-01 - Rust Cygwin packages update
 
 Back in September we got our first Rust-based Cygwin package with fish shell v4,
