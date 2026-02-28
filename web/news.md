@@ -5,6 +5,32 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-02-28 - Native Git Now Available in MSYS2
+
+We are pleased to announce that MSYS2 now includes a [native MinGW build of
+Git](https://packages.msys2.org/base/mingw-w64-git) alongside the existing
+Cygwin-based version. This means that there is no need to install ['Git for
+Windows'](https://gitforwindows.org) and integrate it into MSYS2 manually; it
+can simply be installed using pacman. We have also adjusted the dependencies of
+all our native packages to depend on MinGW Git over the Cygwin version wherever
+possible.
+
+This is made possible thanks to the hard work of the ['Git for Windows'
+team](https://github.com/orgs/git-for-windows/people), who made various changes
+in both projects, to make it possible to package their MinGW port of git and
+easily keep it in sync going forward. If you encounter any issues, please report
+them to us first before contacting the 'Git for Windows' team.
+
+For comparison, some quick and unscientific benchmarks for a local clone of the
+[GCC repo](https://gcc.gnu.org/git/gitweb.cgi?p=gcc.git):
+
+| Operation                | Cygwin Git | MinGW Git |
+|--------------------------|------------|-----------|
+| `git status`             | ~1 s       | ~0.5 s    |
+| `git switch` (gcc 14↔15) | ~14.0 s    | ~10.0 s   |
+| `git clone` (local)      | ~45 s      | ~22 s     |
+| `git grep`               | ~2.6 s     | ~0.55 s   |
+
 ### 2026-02-28 - Dropping support for Windows 8.1
 
 As Windows 8.1 has been end-of-life (EOL) for three years, Firefox has stopped
