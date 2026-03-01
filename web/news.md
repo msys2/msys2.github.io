@@ -9,11 +9,7 @@ This page lists important changes or issues affecting MSYS2 users. You can [:mat
 
 We are pleased to announce that MSYS2 now includes a [native MinGW build of
 Git](https://packages.msys2.org/base/mingw-w64-git) alongside the existing
-Cygwin-based version. This means that there is no need to install ['Git for
-Windows'](https://gitforwindows.org) and integrate it into MSYS2 manually; it
-can simply be installed using pacman. We have also adjusted the dependencies of
-all our native packages to depend on MinGW Git over the Cygwin version wherever
-possible.
+Cygwin-based version.
 
 This is made possible thanks to the hard work of the ['Git for Windows'
 team](https://github.com/orgs/git-for-windows/people), who made various changes
@@ -30,6 +26,15 @@ For comparison, some quick and unscientific benchmarks for a local clone of the
 | `git switch` (gcc 14↔15) | ~14.0 s    | ~10.0 s   |
 | `git clone` (local)      | ~45 s      | ~22 s     |
 | `git grep`               | ~2.6 s     | ~0.55 s   |
+
+If you were using the [hack to make 'Git for Windows' work in
+MSYS2](https://gitforwindows.org/install-inside-msys2-proper.html), you might be
+able to simply switch to installing git via pacman instead. This also allows you
+to install native git into environments other than MINGW64, such as UCRT64 or
+CLANG64. Please note that our package is not as fully integrated with Windows
+like the Git for Windows installer version, and lacks some features such as the
+credential manager. It's also not as widely tested yet. Please give it a try and
+let us know if you encounter any issues or missing features.
 
 ### 2026-02-28 - Dropping support for Windows 8.1
 
