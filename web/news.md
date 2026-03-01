@@ -28,13 +28,14 @@ For comparison, some quick and unscientific benchmarks for a local clone of the
 | `git grep`               | ~2.6 s     | ~0.55 s   |
 
 If you were using the [hack to make 'Git for Windows' work in
-MSYS2](https://gitforwindows.org/install-inside-msys2-proper.html), you might be
-able to simply switch to installing git via pacman instead. This also allows you
-to install native git into environments other than MINGW64, such as UCRT64 or
-CLANG64. Please note that our package is not as fully integrated with Windows
-like the Git for Windows installer version, and lacks some features such as the
-credential manager. It's also not as widely tested yet. Please give it a try and
-let us know if you encounter any issues or missing features.
+MSYS2](https://gitforwindows.org/install-inside-msys2-proper.html), which
+involves adding 'Git for Windows' repositories to pacman, you might now be able
+to switch to just installing git from MSYS2's own repositories instead. This
+also allows you to install native git into environments other than MINGW64, such
+as UCRT64 or CLANG64. Please note that our package is not as fully integrated
+with Windows like the Git for Windows installer version, and lacks some features
+such as the credential manager. It's also not as widely tested yet. Please give
+it a try and let us know if you encounter any issues or missing features.
 
 ### 2026-02-28 - Dropping support for Windows 8.1
 
