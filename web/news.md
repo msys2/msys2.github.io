@@ -5,6 +5,15 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-03-15 - Deprecating the MINGW64 Environment
+
+As support for Windows 8.1 has been dropped, there is no longer a need for
+non-UCRT environments such as MINGW64. Consequently, we are beginning to phase
+out the MINGW64 environment. To start, no new packages will be added to this
+environment, and existing leaf packages may be removed if issues arise. If you
+are currently relying on the MINGW64 environment, please consider switching to
+UCRT64 or CLANG64 instead.
+
 ### 2026-02-28 - Native Git Now Available in MSYS2
 
 We are pleased to announce that MSYS2 now includes a [native MinGW build of
