@@ -29,7 +29,6 @@ tools.
     | ![ucrt64](ucrt64.png){: style="max-width:25px" }         | **UCRT64**     | `/ucrt64`     | gcc       | x86_64       | ucrt      | libstdc++   |
     | ![clang64](clang64.png){: style="max-width:25px" }       | **CLANG64**    | `/clang64`    | llvm      | x86_64       | ucrt      | libc++      |
     | ![clangarm64](clangarm64.png){: style="max-width:25px" } | **CLANGARM64** | `/clangarm64` | llvm      | aarch64      | ucrt      | libc++      |
-    | ![mingw64](mingw64.png){: style="max-width:25px" }       | **MINGW64**    | `/mingw64`    | gcc       | x86_64       | msvcrt    | libstdc++   |
 
 === "Legacy Environments"
 
@@ -37,6 +36,7 @@ tools.
     |----------------------------------------------------------|----------------|---------------|-----------|--------------|-----------|-------------|
     | ![clang32](clang32.png){: style="max-width:25px" }       | **CLANG32**    | `/clang32`    | llvm      | i686         | ucrt      | libc++      |
     | ![mingw32](mingw32.png){: style="max-width:25px" }       | **MINGW32**    | `/mingw32`    | gcc       | i686         | msvcrt    | libstdc++   |
+    | ![mingw64](mingw64.png){: style="max-width:25px" }       | **MINGW64**    | `/mingw64`    | gcc       | x86_64       | msvcrt    | libstdc++   |
 
 The active environment is selected via the `MSYSTEM` environment variable.
 Setting `MSYSTEM` to `UCRT64` and starting a login shell will put you in that
@@ -95,6 +95,8 @@ code was compiled with MSVC.
   information about that can be found in [UCRT deployment](https://learn.microsoft.com/en-us/cpp/windows/universal-crt-deployment).
 
 ## Changelog
+
+**2026-03-15**: Deprecating the MINGW64 environment. See [NEWS](../news.md#2026-03-15-soft-deprecating-the-mingw64-environment) for more information.
 
 **2024-12-18:** Removed CLANG32 environment.
 
