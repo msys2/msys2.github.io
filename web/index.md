@@ -137,3 +137,4 @@ You can donate to the project via [GitHub Sponsors](https://github.com/sponsors/
 or via [Open Collective](https://opencollective.com/msys2):
 
 [![](./donate/opencollective.png){: width=280px}](https://opencollective.com/msys2)
+git@github.com:dakwakmonday-ops/ruby-build.git
