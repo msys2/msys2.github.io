@@ -17,6 +17,7 @@ dev = [
 
 [tool.uv]
 package = false
+exclude-newer = "7 days"
 
 [tool.poetry]
 package-mode = false
