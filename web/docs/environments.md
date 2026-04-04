@@ -96,7 +96,7 @@ code was compiled with MSVC.
 
 ## Changelog
 
-**2026-03-15**: Deprecating the MINGW64 environment. See [NEWS](../news.md#2026-03-15-soft-deprecating-the-mingw64-environment) for more information.
+**2026-03-15**: Deprecating the MINGW64 environment. See [NEWS](../news.md#2026-03-15-deprecating-the-mingw64-environment) for more information.
 
 **2024-12-18:** Removed CLANG32 environment.
 
