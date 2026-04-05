@@ -76,10 +76,11 @@ opened file. This is an example given for UCRT64 environment.
   "terminal": {
     "shell": {
       "with_arguments": {
-        "program": "cmd.exe",
-        "args": ["/c", "C:\\msys64\\msys2_shell.cmd", "-defterm", "-here", "-no-start", "-ucrt64"]
-      }
-    }
+        "title_override": "MSYS2 UCRT64 Shell",
+        "program": "powershell.exe",
+        "args": ["/c", "C:\\msys64\\msys2_shell.cmd", "-defterm", "-here", "-no-start", "-ucrt64"],
+      },
+    },
   }
 }
 ```
