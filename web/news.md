@@ -27,7 +27,7 @@ MSYS2:
   which links to libstdc++ with the newest GCC will fix this.
 * Binaries linking to libgcc using emutls (indicated by imports to
   `__emutls_get_address`) will continue to work, but to make use of native TLS
-  will also have to be rebuild.
+  will also have to be rebuilt.
 * A limitation of native TLS compared to emutls (and Linux) is that TLS
   variables cannot be accessed directly across DLLs boundaries and will now
   result in linker errors. You can work around this by accessing TLS variables
