@@ -5,6 +5,39 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-05-12 - Native Thread Local Storage (TLS) with GCC 16
+
+GCC 16 gained support for native TLS, which we just enabled in MSYS2.
+
+Native TLS provides superior performance compared to the emulated variant
+(emutls), which was used by GCC up until now. For example, certain micro
+benchmarks with CPython, which relies heavily on TLS, are now [three times
+faster](https://github.com/msys2/MINGW-packages/issues/22917#issuecomment-4411966245).
+
+All affected packages (~300) in the MSYS2 repository have been rebuilt to make
+use of it. Clang in our GCC environments were also switched to use native TLS.
+Our Clang environments were already using native TLS, so no changes there.
+
+Some things to watch out for in case you build/maintain binaries outside of
+MSYS2:
+
+* libstdc++ lost some symbols (`__emutls_v._ZSt11__once_call` and
+  `__emutls_v._ZSt15__once_callable`), so existing binaries linking against
+  libstdc++ might fail to load after the update. Simply rebuilding your code
+  which links to libstdc++ with the newest GCC will fix this.
+* Binaries linking to libgcc using emutls (indicated by imports to
+  `__emutls_get_address`) will continue to work, but to make use of native TLS
+  will also have to be rebuild.
+* A limitation of native TLS compared to emutls (and Linux) is that TLS
+  variables cannot be accessed directly across DLLs boundaries and will now
+  result in linker errors. You can work around this by accessing TLS variables
+  via accessor functions, or static linking. Note that this limitation also
+  applies to MSVC and Clang on Windows, so cross platform code is very unlikely
+  to be affected.
+
+tl;dr: if your external binaries do any TLS related imports (`grep __emutls_
+*.exe *.dll`) it's recommended to rebuild them.
+
 ### 2026-03-15 - Deprecating the MINGW64 Environment
 
 As support for Windows 8.1 has been dropped, there is no longer a need for
