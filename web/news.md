@@ -15,7 +15,7 @@ benchmarks with CPython, which relies heavily on TLS, are now [three times
 faster](https://github.com/msys2/MINGW-packages/issues/22917#issuecomment-4411966245).
 
 All affected packages (~300) in the MSYS2 repository have been rebuilt to make
-use of it. Clang in our GCC environments were also switched to use native TLS.
+use of it. Clang in our GCC environments was also switched to use native TLS.
 Our Clang environments have already been using native TLS, so no changes there.
 
 Some things to watch out for in case you build/maintain binaries outside of
