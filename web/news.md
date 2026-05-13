@@ -36,7 +36,7 @@ MSYS2:
   to be affected.
 
 tl;dr: if your external binaries do any TLS related imports (`grep __emutls_
-*.exe *.dll`) it's recommended to rebuild them.
+*.exe *.dll *.a`) it's recommended to rebuild them.
 
 ### 2026-03-15 - Deprecating the MINGW64 Environment
 
