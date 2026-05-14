@@ -59,7 +59,6 @@ respective repositories.
 
 * Only uses LLVM tools, LLD as a linker, LIBC++ as a C++ standard library
 * Clang provides ASAN support
-* Native support for TLS (Thread-local storage)
 * LLD is faster than LD, but does not support all the features LD supports
 * Some tools lack feature parity with equivalent GNU tools
 * Supports ARM64/AArch64 architecture on Microsoft Windows 10
