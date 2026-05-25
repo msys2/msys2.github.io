@@ -30,7 +30,7 @@ jobs:
         with:
           msystem: UCRT64
           update: true
-          install: git mingw-w64-ucrt-x86_64-gcc
+          install: mingw-w64-ucrt-x86_64-git mingw-w64-ucrt-x86_64-gcc
       - name: CI-Build
         run: |
           echo 'Running in MSYS2!'
@@ -65,7 +65,7 @@ Windows-MSYS2-UCRT64:
   - C:\msys64\usr\bin\bash -lc 'pacman --noconfirm -Syuu'
   - |
     C:\msys64\usr\bin\bash -lcx '
-    pacman --noconfirm -Syu git mingw-w64-ucrt-x86_64-autotools mingw-w64-ucrt-x86_64-gcc
+    pacman --noconfirm -Syu mingw-w64-ucrt-x86_64-git mingw-w64-ucrt-x86_64-autotools mingw-w64-ucrt-x86_64-gcc
     ./bootstrap
     ./configure
     make V=1 check VERBOSE=t'
