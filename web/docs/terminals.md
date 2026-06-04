@@ -59,7 +59,8 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
       {
         "face": "Lucida Console",
         "size": 9
-      }
+      },
+      "pathTranslationStyle": "msys2"
     },
     {
       "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
@@ -71,7 +72,8 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
       {
         "face": "Lucida Console",
         "size": 9
-      }
+      },
+      "pathTranslationStyle": "msys2"
     },
     // ...
   ]
