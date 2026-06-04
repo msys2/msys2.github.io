@@ -16,7 +16,7 @@
 ## Overview
 
 This website is written in Markdown and gets built to a static website using
-[mkdocs](https://www.mkdocs.org/) and a modified version of the [mkdocs-material
+[properdocs](https://properdocs.org/) and a modified version of the [mkdocs-material
 theme](https://squidfunk.github.io/mkdocs-material). Any new commits to the
 `main` branch will auto deploy to [GitHub pages](https://pages.github.com) using
 [a GitHub action](https://github.com/actions/deploy-pages). The resulting
@@ -29,14 +29,14 @@ For small changes:
 
 * Just use the online editor on GitHub and use the Markdown preview to inspect your changes
 * Open a PR with your changes in case you don't have commit rights
-* **Note:** The Markdown dialect and extensions understood by mkdocs and GitHub is
+* **Note:** The Markdown dialect and extensions understood by properdocs and GitHub is
   slightly different, so double check that the deployed website matches what you
   expected
 * **Note:** Every page on the website has a small "edit" icon in the top right corner which leads you straight to the online editor for that page
 
 For larger changes:
 
-* `uv run mkdocs serve`
+* `uv run properdocs serve`
 * Access http://127.0.0.1:8000 - any changes to the sources should be
   immediately visible in your browser
 * Open a PR with your changes or just push them if you have commit rights

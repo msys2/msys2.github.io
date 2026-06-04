@@ -26,7 +26,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - run: |
-          uv run mkdocs build
+          uv run properdocs build
           uv run python news2rss.py -f site/news/index.html -o site/news.xml
 
       - name: Upload for pages
