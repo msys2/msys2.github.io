@@ -13,6 +13,7 @@ All the accounts and services which are associated with the MSYS2 project, inclu
 - Discord: https://discord.gg/jPQdRdDcT9 owned by Lazka, admins Lazka and Elieux
 - Matrix: `#msys2_msys2:gitter.im` with admin access through GitHub, as well as Lazka and Biswa96 via matrix.org accounts
 - IRC: `#msys2` registered on OFTC to Elieux, Alexey, `#msys2` registered on Libera Chat to Elieux, `#msys2` registered on Freenode to Elieux
+- Azure Artifact Signing: registered to Lazka
 
 Lazka and Elieux have each other's backup contact authorized to solve ownership issues.
 
