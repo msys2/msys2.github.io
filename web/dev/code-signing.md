@@ -75,8 +75,8 @@ it can create an OIDC token and use it to authenticate with Azure as the "App
 registration". The "App registration" has permissions to sign with the "Artifact
 Signing Account".
 
-The signing requires an endpoint, account name, singing profile, client id, and
-tenant id. All of these could be public as knowing them does not allow signing,
+The signing requires an endpoint, account name, signing profile, client id, and
+tenant id. All of these could be public, as knowing them does not allow signing,
 but we keep them secret anyway.
 
 For signing binaries we use [aas-sign](https://github.com/skeeto/aas-sign). For
