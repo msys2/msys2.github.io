@@ -50,7 +50,7 @@ Identity validation requires:
 * A phone with MS Authenticator installed
 * A front-facing camera, for selfies
 
-MS outsources identity validation to https://www.au10tix.com.
+MS outsources identity validation to [AU10TIX](https://en.wikipedia.org/wiki/AU10TIX).
 
 Steps (as far as I can remember):
 
