@@ -161,6 +161,7 @@ nav:
         - dev/python.md
         - dev/build-process.md
         - dev/vulnerabilities.md
+        - dev/code-signing.md
         - dev/accounts.md
     - Other Topics:
         # Old stuff that should ideally move to the above categories in the future
