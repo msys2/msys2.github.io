@@ -87,6 +87,11 @@ our users are on Windows 8.1, we have decided to drop support for Windows 8.1 in
 MSYS2. This does not mean that things will immediately stop working on Windows
 8.1, but we will no longer attempt to resolve issues specific to it.
 
+**Update 2026-07-06:** Firefox decided to push their EOL date for Windows 8.1 to
+at least 2026-08, see https://whattrainisitnow.com/release/?version=esr for
+details. This did not change our decision to drop support for Windows 8.1
+though.
+
 ### 2026-02-01 - Rust Cygwin packages update
 
 Back in September we got our first Rust-based Cygwin package with fish shell v4,
