@@ -73,6 +73,18 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
         "size": 9
       }
     },
+    {
+      "guid": "{82000545-41a2-1092-fa52-d16aaaf08223}",
+      "name": "MSYS / MINGW64",
+      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
+      "startingDirectory": "C:/msys64/home/%USERNAME%",
+      "icon": "C:/msys64/mingw64.ico",
+      "font": 
+      {
+          "face": "Lucida Console",
+          "size": 13
+      }
+    }
     // ...
   ]
 }
