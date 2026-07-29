@@ -49,30 +49,48 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
   "list":
   [
     // ...
-    {
-      "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-      "name": "UCRT64 / MSYS2",
-      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64",
-      "startingDirectory": "C:/msys64/home/%USERNAME%",
-      "icon": "C:/msys64/ucrt64.ico",
-      "font": 
-      {
-        "face": "Lucida Console",
-        "size": 9
-      }
-    },
-    {
-      "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
-      "name": "MSYS / MSYS2",
-      "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
-      "startingDirectory": "C:/msys64/home/%USERNAME%",
-      "icon": "C:/msys64/msys2.ico",
-      "font": 
-      {
-        "face": "Lucida Console",
-        "size": 9
-      }
-    },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64",
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "icon": "C:/msys64/ucrt64.ico",
+                "name": "UCRT64 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -clang64",
+                "guid": "{df7321cb-43f2-4824-851d-3e640cbefaad}",
+                "icon": "C:/msys64/clang64.ico",
+                "name": "CLANG64 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+                "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+                "icon": "C:/msys64/msys2.ico",
+                "name": "MSYS / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
+                "guid": "{78140e9a-3c8a-4282-8d5e-b9645bd6c804}",
+                "icon": "C:/msys64/mingw64.ico",
+                "name": "mingw64 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
+                "guid": "{196a4509-6498-4669-a210-08f1df34ac39}",
+                "icon": "C:/msys64/mingw32.ico",
+                "name": "mingw32 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -clangarm64",
+                "guid": "{0eb16bff-2bad-459f-b065-a3b8a27d8a34}",
+                "icon": "C:/msys64/clangarm64.ico",
+                "name": "CLANGARM64 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
     // ...
   ]
 }
