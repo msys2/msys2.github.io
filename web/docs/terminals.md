@@ -71,20 +71,6 @@ https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-set
                 "startingDirectory": "C:/msys64/home/%USERNAME%"
             },
             {
-                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
-                "guid": "{78140e9a-3c8a-4282-8d5e-b9645bd6c804}",
-                "icon": "C:/msys64/mingw64.ico",
-                "name": "mingw64 / MSYS2",
-                "startingDirectory": "C:/msys64/home/%USERNAME%"
-            },
-            {
-                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
-                "guid": "{196a4509-6498-4669-a210-08f1df34ac39}",
-                "icon": "C:/msys64/mingw32.ico",
-                "name": "mingw32 / MSYS2",
-                "startingDirectory": "C:/msys64/home/%USERNAME%"
-            },
-            {
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -clangarm64",
                 "guid": "{0eb16bff-2bad-459f-b065-a3b8a27d8a34}",
                 "icon": "C:/msys64/clangarm64.ico",
