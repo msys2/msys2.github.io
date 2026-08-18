@@ -127,6 +127,7 @@ Various organizations provide us with mirrors all around the world, see [our mir
 * [MehdiChinoune (مهدي شينون / Mehdi Chinoune)](https://github.com/MehdiChinoune)
 * [ognevny (Maksim Bondarenkov)](https://github.com/ognevny)
 * [striezel (Dirk Stolle)](https://github.com/striezel)
+* [dragon-archer (Zhongteng Gui)](https://github.com/dragon-archer)
 
 ## Donations
 
