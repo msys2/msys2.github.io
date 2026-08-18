@@ -74,20 +74,26 @@ MSYS2 and what for.
     resolving dependencies...
     looking for conflicting packages...
 
-    Packages (15) mingw-w64-ucrt-x86_64-binutils-2.41-2
-                mingw-w64-ucrt-x86_64-crt-git-11.0.0.r216.gffe883434-1
-                mingw-w64-ucrt-x86_64-gcc-libs-13.2.0-2  mingw-w64-ucrt-x86_64-gmp-6.3.0-2
-                mingw-w64-ucrt-x86_64-headers-git-11.0.0.r216.gffe883434-1
-                mingw-w64-ucrt-x86_64-isl-0.26-1  mingw-w64-ucrt-x86_64-libiconv-1.17-3
-                mingw-w64-ucrt-x86_64-libwinpthread-git-11.0.0.r216.gffe883434-1
-                mingw-w64-ucrt-x86_64-mpc-1.3.1-2  mingw-w64-ucrt-x86_64-mpfr-4.2.1-2
-                mingw-w64-ucrt-x86_64-windows-default-manifest-6.4-4
-                mingw-w64-ucrt-x86_64-winpthreads-git-11.0.0.r216.gffe883434-1
-                mingw-w64-ucrt-x86_64-zlib-1.3-1  mingw-w64-ucrt-x86_64-zstd-1.5.5-1
-                mingw-w64-ucrt-x86_64-gcc-13.2.0-2
+    Packages (17) mingw-w64-ucrt-x86_64-binutils-2.47-3
+                mingw-w64-ucrt-x86_64-crt-14.0.0.r283.ga7cb47123-1
+                mingw-w64-ucrt-x86_64-gcc-libs-16.2.0-3
+                mingw-w64-ucrt-x86_64-gettext-runtime-1.0-1
+                mingw-w64-ucrt-x86_64-gmp-6.3.0-2
+                mingw-w64-ucrt-x86_64-headers-14.0.0.r283.ga7cb47123-1
+                mingw-w64-ucrt-x86_64-isl-0.28-1
+                mingw-w64-ucrt-x86_64-libiconv-1.19-1
+                mingw-w64-ucrt-x86_64-libwinpthread-14.0.0.r283.ga7cb47123-1
+                mingw-w64-ucrt-x86_64-mpc-1.4.1-1
+                mingw-w64-ucrt-x86_64-mpfr-4.2.2-3
+                mingw-w64-ucrt-x86_64-tzdata-2026c-1
+                mingw-w64-ucrt-x86_64-windows-default-manifest-20260815-1
+                mingw-w64-ucrt-x86_64-winpthreads-14.0.0.r283.ga7cb47123-1
+                mingw-w64-ucrt-x86_64-zlib-1.3.2-2
+                mingw-w64-ucrt-x86_64-zstd-1.5.7-2
+                mingw-w64-ucrt-x86_64-gcc-16.2.0-3
 
-    Total Download Size:    49.38 MiB
-    Total Installed Size:  418.82 MiB
+    Total Download Size:    69.90 MiB
+    Total Installed Size:  487.51 MiB
 
     :: Proceed with installation? [Y/n]
     [... downloading and installation continues ...]
@@ -97,7 +103,7 @@ MSYS2 and what for.
 
     ```console
     $ gcc --version
-    gcc.exe (Rev2, Built by MSYS2 project) 13.2.0
+    gcc.exe (Rev3, Built by MSYS2 project) 16.2.0
     ```
 
 9. After installing MSYS2 it will update itself via `pacman`, see the [update guide](./docs/updating.md) for more information.
