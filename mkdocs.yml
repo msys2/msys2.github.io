@@ -4,6 +4,7 @@ docs_dir: web/
 theme:
     font: false
     name: material
+    variant: classic
     logo: 'logo.svg'
     favicon: 'favicon.ico'
     palette:
@@ -32,14 +33,6 @@ theme:
         - content.code.copy
 
     custom_dir: overrides
-
-plugins:
-  - search
-  - privacy
-  - redirects:
-      redirect_maps:
-        'wiki/JIT-Debugging.md': 'docs/jit-debugging.md'
-        'wiki/arm64.md': 'docs/arm64.md'
 
 extra_css:
     - 'stylesheets/extra.css'
@@ -94,8 +87,8 @@ markdown_extensions:
     - pymdownx.critic
     - pymdownx.details
     - pymdownx.emoji:
-        emoji_index: !!python/name:material.extensions.emoji.twemoji
-        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+        emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+        emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
     - pymdownx.inlinehilite
     - pymdownx.magiclink
     - pymdownx.mark
@@ -185,4 +178,3 @@ nav:
     - 'privacy.md'
     - 'contact.md'
     - 'codeofconduct.md'
-

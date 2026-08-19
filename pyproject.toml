@@ -7,9 +7,7 @@ requires-python = ">=3.10,<4.0"
 
 [dependency-groups]
 dev = [
-    "properdocs>=1.6.7,<2",
-    "mkdocs-material>=9.5.0,<10",
-    "mkdocs-redirects>=1.2.2",
+    "zensical>=0.0.53,<0.1",
     "beautifulsoup4>=4.13.4,<5",
 ]
 
