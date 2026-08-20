@@ -8,11 +8,11 @@
   {% endif %}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ title }}" />
-{%- if page.is_homepage %}
+{% if page.meta and page.meta.description %}
+<meta property="og:description" content="{{ page.meta.description }}" />
+{% elif config.site_description %}
 <meta property="og:description" content="{{ config.site_description }}" />
-{% else %}{%- if page %}
-<meta property="og:description" content="{{ page.meta.summary }}" />
-{% endif %}{% endif %}
+{% endif %}
 <meta property="og:url" content="{{ page.canonical_url }}" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />

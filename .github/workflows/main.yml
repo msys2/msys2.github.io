@@ -26,7 +26,8 @@ jobs:
         uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
 
       - run: |
-          uv run properdocs build
+          uv run zensical build --clean --config-file mkdocs.yml
+          uv run python localize_cdn.py
           uv run python news2rss.py -f site/news/index.html -o site/news.xml
 
       - name: Upload for pages
