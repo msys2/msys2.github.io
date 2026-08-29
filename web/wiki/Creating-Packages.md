@@ -9,7 +9,7 @@ The MSYS2 software distribution uses a port of Pacman (known from Arch Linux) to
 
 ## General information
 
-There are 3 package repositories, **msys**, **mingw32**, and **mingw64**. **msys** software (from the **msys** repository) is software that depends on `msys-2.0.dll` and is very similar to Cygwin software (which is a POSIX emulation layer for Windows). Native Windows software (from this project's perspective) is software that doesn't depend on `msys-2.0.dll`, and links dynamically to the highly compatible `msvcrt.dll`.
+There are 2 main sets of packages: **msys** (in the _msys2-packages_ Git repository), and **mingw** (in the _mingw-packages_ Git repository). **msys** software depends on `msys-2.0.dll` and is very similar to Cygwin software (which is a POSIX emulation layer for Windows). All **mingw** software is native to Windows (from this project's perspective) and is independent at runtime from the former. In addition, **mingw** software can be built in several different ways and each way is basis for its own [Environment](../docs/environments/), e.g. **UCRT64**.
 
 In this document, to attempt to avoid confusion, MSYS2 refers to the software distribution while **msys** refers to the repository, the packages in that repository and the software in those packages that link to `msys-2.0.dll`.
 
@@ -144,15 +144,15 @@ Create a `PKGBUILD` describing all the steps necessary to build and package the 
 
 Run the makepkg command (`makepkg` or `makepkg-mingw`) on your recipe.
 
-`makepkg-mingw` is essentially a wrapper that does a few checks, sets up the correct environments and runs `makepkg` twice, once for **mingw32** and once for **mingw64**. If you want to build just for one architecture (e.g. if you're on 32-bit Windows), you'll need to define `MINGW_ARCH` in the environment, with either `mingw32` or `mingw64` as the value, for example:
+`makepkg-mingw` is essentially a wrapper that sets up and runs `makepkg` several times, once for each **mingw** environment. If you want to build for a different set of environments, you'll need to define `MINGW_ARCH`, for example:
 
-    MINGW_ARCH=mingw64 makepkg-mingw -sCLf
+    MINGW_ARCH="ucrt64 mingw64" makepkg-mingw -sCLf
 
 ... or you could export it from `~/.profile` so it's set up automatically:
 
-    export MINGW_ARCH=mingw64
+    export MINGW_ARCH="ucrt64 mingw64"
 
-Note that if you want to contribute, we'd appreciate it if you test your packages on both architectures (32 and 64 bits), which is only possible on a 64-bit Windows system. If you can't do that for some reason, we can test your pull requests on a 64-bit system.
+Note that if you contribute a package recipe, we assume you've built and tested it for all currently supported environments.
 
 ### Install package
 
@@ -212,14 +212,14 @@ Read through our wiki, especially the [Porting section](Porting.md).
 
 ### Useful packages and tools
 
-Package                                | Purpose
----------------------------------------|------------------------------------------------------------
-`mingw-w64-{i686,x86_64}-qt-creator`   | to build/debug qmake, qbs, autotools and cmake based packages
-`mingw-w64-{i686,x86_64}-codelite`     | if you dislike qt-creator
-`mingw-w64-{i686,x86_64}-gedit`        | to avoid notepad and notepad++
-`mingw-w64-{i686,x86_64}-meld3`        | to compare files and directories
-`perl-ack`                             | Faster, better replacement for `grep`
-`mingw-w64-{i686,x86_64}-ag`           | Very fast replacement for `grep` or `perl-ack`
+Package                  | Purpose
+-------------------------|--------------------------------------------------------------
+`mingw-w64-qt-creator`   | to build/debug qmake, qbs, autotools and cmake based packages
+`mingw-w64-codelite`     | if you dislike qt-creator
+`mingw-w64-gedit`        | to avoid notepad and notepad++
+`mingw-w64-meld3`        | to compare files and directories
+`perl-ack`               | Faster, better replacement for `grep`
+`mingw-w64-ag`           | Very fast replacement for `grep` or `perl-ack`
 
 ### Various links
 
