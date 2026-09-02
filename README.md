@@ -16,8 +16,7 @@
 ## Overview
 
 This website is written in Markdown and gets built to a static website using
-[properdocs](https://properdocs.org/) and a modified version of the [mkdocs-material
-theme](https://squidfunk.github.io/mkdocs-material). Any new commits to the
+[Zensical](https://zensical.org/). Any new commits to the
 `main` branch will auto deploy to [GitHub pages](https://pages.github.com) using
 [a GitHub action](https://github.com/actions/deploy-pages). The resulting
 website is reachable under https://msys2.github.io and https://www.msys2.org.
@@ -29,14 +28,14 @@ For small changes:
 
 * Just use the online editor on GitHub and use the Markdown preview to inspect your changes
 * Open a PR with your changes in case you don't have commit rights
-* **Note:** The Markdown dialect and extensions understood by properdocs and GitHub is
+* **Note:** The Markdown dialect and extensions understood by Zensical and GitHub are
   slightly different, so double check that the deployed website matches what you
   expected
 * **Note:** Every page on the website has a small "edit" icon in the top right corner which leads you straight to the online editor for that page
 
 For larger changes:
 
-* `uv run properdocs serve`
+* `uv run zensical serve --config-file mkdocs.yml`
 * Access http://127.0.0.1:8000 - any changes to the sources should be
   immediately visible in your browser
 * Open a PR with your changes or just push them if you have commit rights
