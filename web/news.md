@@ -5,6 +5,12 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-09-30 - Server maintenance on 2026-10-03/04
+
+There will be a short server maintenance around the weekend of 2026-10-03/04
+which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some
+subdomain redirects of our website.
+
 ### 2026-05-11 - Native Thread Local Storage (TLS) with GCC 16
 
 GCC 16 gained support for native TLS, which we just enabled in MSYS2.
