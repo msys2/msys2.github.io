@@ -11,6 +11,8 @@ There will be a short server maintenance around the weekend of 2026-10-03/04
 which will affect repo.msys2.org, mirror.msys2.org, packages.msys2.org, and some
 subdomain redirects of our website.
 
+Update: all done now
+
 ### 2026-05-11 - Native Thread Local Storage (TLS) with GCC 16
 
 GCC 16 gained support for native TLS, which we just enabled in MSYS2.
