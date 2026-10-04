@@ -110,6 +110,26 @@ to access it. Please allow the following IP addresses:
 * IPv4: `88.99.69.85`
 * IPv6: `2a01:4f8:10a:15ab::2`
 
+## Mirrors + Caching
+
+Our mirror-redirect-service requires that some of the files served via rsync and
+HTTP are identical at all times, which would break if caching or a CDN is used
+in front of the HTTP server. The result would be updates failing due to
+mismatched signatures or updates alternating between old and new versions.
+
+You can cache files if necessary, but the following glob patterns should never
+be cached. This covers all important files that are not versioned:
+
+```
+**/*.db
+**/*.db.*
+**/*.files
+**/*.files.*
+**/lastsync
+**/lastupdate
+**/distrib/*-latest.*
+```
+
 ## Admin TODO List
 
 When adding/removing/updating mirrors:
