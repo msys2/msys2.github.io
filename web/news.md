@@ -5,6 +5,25 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-10-16 - MSYS2 installer is signed
+
+Belated news entry. Starting with the 2026-06-11 release, the MSYS2 installer is
+signed with a Windows code signing certificate. It took a while for the signing
+certificate to build up reputation with Microsoft SmartScreen, but you should no
+longer see the blue "Windows protected your PC" warning when running the
+installer.
+
+We plan to also sign binaries in the MSYS2 packages in the future this way,
+which might help to reduce false positives with antivirus software.
+
+If you want to know more about how we set up our signing process, see our [code
+signing documentation](./dev/code-signing.md).
+
+Thanks to [@dscho](https://github.com/dscho) for helping us get the "Azure
+Artifact Signing" access set up, and to [@skeeto](https://github.com/skeeto) for
+developing [aas-sign](https://github.com/skeeto/aas-sign), which we use to sign
+our releases in GitHub Actions.
+
 ### 2026-09-30 - Server maintenance on 2026-10-03/04
 
 There will be a short server maintenance around the weekend of 2026-10-03/04
