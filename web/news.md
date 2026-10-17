@@ -5,7 +5,7 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
-### 2026-10-16 - MSYS2 installer is signed
+### 2026-10-16 - MSYS2 installer is signed { #2026-10-16-msys2-installer-signed }
 
 Belated news entry. Starting with the 2026-06-11 release, the MSYS2 installer is
 signed with a Windows code signing certificate. It took a while for the signing
