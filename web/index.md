@@ -134,6 +134,7 @@ Various organizations provide us with mirrors all around the world, see [our mir
 * [ognevny (Maksim Bondarenkov)](https://github.com/ognevny)
 * [striezel (Dirk Stolle)](https://github.com/striezel)
 * [dragon-archer (Zhongteng Gui)](https://github.com/dragon-archer)
+* [Omikorin (Michał Korczak)](https://github.com/Omikorin)
 
 ## Donations
 
