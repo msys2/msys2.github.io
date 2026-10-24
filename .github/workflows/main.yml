@@ -27,7 +27,6 @@ jobs:
 
       - run: |
           uv run zensical build --clean --config-file mkdocs.yml
-          uv run python localize_cdn.py
           uv run python news2rss.py -f site/news/index.html -o site/news.xml
 
       - name: Upload for pages
