@@ -5,6 +5,57 @@ summary: Important events happening.
 
 This page lists important changes or issues affecting MSYS2 users. You can [:material-rss: subscribe via RSS](../news.xml). We also post them to [Mastodon](https://fosstodon.org/@msys2org) / [Bluesky](https://bsky.app/profile/msys2org.bsky.social), including some not-so-important things :)
 
+### 2026-10-24 - MINGW64 deprecation update { #2026-10-24-mingw64-deprecation-update }
+
+Following our [deprecation announcement](#2026-03-15-deprecating-the-mingw64-environment) on 2026-03-15, we've recently begun
+dropping MINGW64 builds from leaf packages as part of regular updates, rather
+than only when problems arise. If you're still using MINGW64, we recommend
+moving your workflows and local installations to UCRT64 or CLANG64.
+
+**GitHub Actions:**
+
+To update your GitHub Actions workflow to use UCRT64 instead of MINGW64, modify
+the `msystem` and `install` fields as shown below:
+
+```diff
+   - uses: msys2/setup-msys2@v2
+     with:
+-      msystem: MINGW64
+-      install: mingw-w64-x86_64-gcc
++      msystem: UCRT64
++      install: mingw-w64-ucrt-x86_64-gcc
+```
+
+Starting with the [v2.33.0
+release](https://github.com/msys2/setup-msys2/releases/tag/v2.33.0), the
+[setup-msys2 action](https://github.com/msys2/setup-msys2) emits a deprecation
+warning if a deprecated environment is used.
+
+**Local installations:**
+
+Switching locally means installing the same packages for the new environment
+(UCRT64 or CLANG64) that you previously had for MINGW64, then using the new
+environment's shell going forward.
+
+To automate this for UCRT64, you can use [this migration
+script](https://gist.github.com/lazka/87606c36f40c6d69ccf40c50c903c963). It
+replaces every installed `mingw-w64-x86_64-*` package with its
+`mingw-w64-ucrt-x86_64-*` counterpart:
+
+```console
+$ ./migrate.sh
+This will replace all installed mingw-w64-x86_64-* packages with their mingw-w64-ucrt-x86_64-* equivalents. Continue? [y/N] y
+Gathering package information...
+Install 19 packages (mingw-w64-ucrt-x86_64-)? [y/N] y
+Installing...
+Remove 19 migrated old packages (mingw-w64-x86_64-)? [y/N] y
+Removing...
+```
+
+Once the migration is done, launch the UCRT64 shell instead of MINGW64, and
+update any scripts, IDE settings, or PATH entries that point to `/mingw64` (e.g.
+`C:\msys64\mingw64\bin` → `C:\msys64\ucrt64\bin`).
+
 ### 2026-10-16 - MSYS2 installer is signed { #2026-10-16-msys2-installer-signed }
 
 Belated news entry. Starting with the 2026-06-11 release, the MSYS2 installer is
@@ -65,7 +116,7 @@ MSYS2:
 tl;dr: if your external binaries do any TLS related imports (`grep __emutls_
 *.exe *.dll *.a`) it's recommended to rebuild them.
 
-### 2026-03-15 - Deprecating the MINGW64 Environment
+### 2026-03-15 - Deprecating the MINGW64 Environment { #2026-03-15-deprecating-the-mingw64-environment }
 
 As support for Windows 8.1 has been dropped, there is no longer a need for
 non-UCRT environments such as MINGW64. Consequently, we are beginning to phase
