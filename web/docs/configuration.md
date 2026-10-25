@@ -23,3 +23,23 @@ While having two locations for configuration can be confusing we want native
 programs to follow Windows conventions and be independent from MSYS2. Also we
 don't want to change the behavior of programs compared to their upstream
 versions unless we have to.
+
+That said, sharing the location for multiple installation of applications is
+still possible, in the sense that:
+
+* Packages with different prefixes may share the same configuration \
+location (as the default of some native x86/x64 Win32 applications).
+* The shared location is not actively checked against by the runtime, so it
+is possible to have different path pointing to the same file system location
+and the applications *may* actually work.
+
+Shared location can be implemented by setting the value of `HOME` environment
+varible (which can be interited from Windows environment) or symbolic link
+on directories, for instance. This is not normally supported. Individual
+applications may fail because they do not expect the configuration being
+shared (e.g. a Unix application may be only compatible to LF as line endings
+in its configuration files, and it will fail to parse CR+LF line endings
+written by a Win32 native application). Some applications (like
+[Mercurial](https://www.mercurial-scm.org/doc/hgrc.5.html)) have different
+search paths for Win32/Unix environments. However, such layout may be useful
+for testing. Use with your own risks when you really know the consequences.
