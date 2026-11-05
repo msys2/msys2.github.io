@@ -11,8 +11,8 @@ The MSYS2 software distribution uses a port of `pacman` (known from Arch Linux) 
 
 Packages in MSYS2 work like packages in popular Linux distributions. A package is an archive containing a piece of software. This normally means executable files, runtime libraries, data, shared and static link libraries, header files, config files, and manual pages. Packages also contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum, and a list of dependencies necessary for the software to run properly. Upon installation, the files contained are extracted into your MSYS2 installation directory and the metadata are stored in a local database.
 
-There are 5 package repositories, the "classical" ones **msys2**, **mingw32**, and **mingw64** and the newer **ucrt64**, and **clang64**.
-The packages in **msys2** are named just like on a Linux distribution, the packages in the others are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages with a secondary prefix `clang` or `ucrt` where applicable.  
+There are 6 package repositories, the "classical" ones **msys2**, **mingw32**, and **mingw64** and the newer **ucrt64**, **clang64** and **clangarm64**.
+The packages in **msys2** are named just like on a Linux distribution, the packages in the others are prefixed by either `mingw-w64-i686-` for 32-bit packages, or `mingw-w64-x86_64-` for 64-bit packages with a secondary prefix `clang` or `ucrt` where applicable, or `mingw-w64-clang-aarch64-` for ARM64 environment.
 For more details about those see ['Environments'](environments.md) and '[Package Naming'](package-naming.md).
 
 
@@ -30,12 +30,12 @@ Example:
         An open source JPEG 2000 codec (mingw-w64)
     mingw32/mingw-w64-i686-openjpeg2 2.1.0-7
         An open source JPEG 2000 codec (mingw-w64)
-    mingw64/mingw-w64-x86_64-openjpeg 1.5.2-7
+    ucrt64/mingw-w64-ucrt-x86_64-openjpeg 1.5.2-7
         An open source JPEG 2000 codec (mingw-w64)
-    mingw64/mingw-w64-x86_64-openjpeg2 2.1.0-7 [installed]
+    ucrt64/mingw-w64-ucrt-x86_64-openjpeg2 2.1.0-7 [installed]
         An open source JPEG 2000 codec (mingw-w64)
 
-As you can see the `mingw-w64-x86_64-openjpeg2` package is installed, while the `mingw-w64-x86_64-openjpeg` package is **not** installed.
+As you can see the `mingw-w64-ucrt-x86_64-openjpeg2` package is installed, while the `mingw-w64-ucrt-x86_64-openjpeg` package is **not** installed.
 
 If you would like to search **only** among the packages which has been already installed, use the following command:
 
@@ -71,30 +71,30 @@ or
 
 You can use `pactree` to figure out which packages are needed to make a package working properly:
 
-`$ pactree mingw-w64-x86_64-gettext`
+`$ pactree mingw-w64-ucrt-x86_64-gettext`
 
 ```
-mingw-w64-x86_64-gettext
-├─mingw-w64-x86_64-expat
-├─mingw-w64-x86_64-gcc-libs
-│ ├─mingw-w64-x86_64-gmp
-│ ├─mingw-w64-x86_64-libwinpthread-git provides mingw-w64-x86_64-libwinpthread
-│ └─mingw-w64-x86_64-gcc-libgfortran
-│   └─mingw-w64-x86_64-gcc-libs
-└─mingw-w64-x86_64-libiconv
+mingw-w64-ucrt-x86_64-gettext
+├─mingw-w64-ucrt-x86_64-expat
+├─mingw-w64-ucrt-x86_64-gcc-libs
+│ ├─mingw-w64-ucrt-x86_64-gmp
+│ ├─mingw-w64-ucrt-x86_64-libwinpthread-git provides mingw-w64-ucrt-x86_64-libwinpthread
+│ └─mingw-w64-ucrt-x86_64-gcc-libgfortran
+│   └─mingw-w64-ucrt-x86_64-gcc-libs
+└─mingw-w64-ucrt-x86_64-libiconv
 ```
 
 Alternatively you can use `pacman -Qi` to get the list of **direct** dependencies of a package:
 
-`$ pacman -Qi mingw-w64-x86_64-gettext`
+`$ pacman -Qi mingw-w64-ucrt-x86_64-gettext`
 
 ```
-Name            : mingw-w64-x86_64-gettext
+Name            : mingw-w64-ucrt-x86_64-gettext
 Version         : 0.19.7-1
 Description     : GNU internationalization library (mingw-w64)
 [...]
-Depends On      : mingw-w64-x86_64-expat  mingw-w64-x86_64-gcc-libs
-                  mingw-w64-x86_64-libiconv
+Depends On      : mingw-w64-ucrt-x86_64-expat  mingw-w64-ucrt-x86_64-gcc-libs
+                  mingw-w64-ucrt-x86_64-libiconv
 ```
 
 ## Finding out which package a file belongs to

@@ -9,7 +9,7 @@ This page is extremely work-in-progress. Eventually it will cover setting up Qt 
 .. To see Python Callstacks and vars when debugging something that intermixes Python and C/C++ (e.g. pygtk)
 .. add to .gdbinit or QtCreator Tools->Options->Debugger->GDB->Additional Startup Commands, enter
   python
-  sys.path.append('C:/msys64/mingw64/share/gdb/python3')
+  sys.path.append('C:/msys64/ucrt64/share/gdb/python3')
   import python-gdb
   reload(python-gdb)
   end
