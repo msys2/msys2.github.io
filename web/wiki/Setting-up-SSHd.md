@@ -1,4 +1,4 @@
-One can connect to MSYS2 via Win32-OpenSSH by creating a batch file (e.g. C:\msys64\sshd_default_shell.cmd) containing `@C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64` (you can change -mingw64 to the environment of your choice) and then setting the registry entry HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH\DefaultShell to the path of that batch file.
+One can connect to MSYS2 via Win32-OpenSSH by creating a batch file (e.g. C:\msys64\sshd_default_shell.cmd) containing `@C:\msys64\msys2_shell.cmd -defterm -here -no-start -ucrt64` (you can change -ucrt64 to the environment of your choice) and then setting the registry entry HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH\DefaultShell to the path of that batch file.
 
 MSYS2 can also use its own OpenSSHd.  Use the set-up script below.
 
@@ -13,7 +13,7 @@ MSYS2 can also use its own OpenSSHd.  Use the set-up script below.
 #
 #  Prerequisites:
 #    — a 64-bit installation of MSYS2 itself: https://msys2.org
-#    — some packages: pacman -S openssh cygrunsrv mingw-w64-x86_64-editrights
+#    — some packages: pacman -S openssh cygrunsrv mingw-w64-ucrt-x86_64-editrights
 #
 #  Gotchas:
 #    — the log file will be /var/log/msys2_sshd.log
@@ -50,8 +50,8 @@ EMPTY_DIR=/var/empty
 # Check installation sanity
 #
 
-if ! /mingw64/bin/editrights -h >/dev/null; then
-    echo "ERROR: Missing 'editrights'. Try: pacman -S mingw-w64-x86_64-editrights."
+if ! /ucrt64/bin/editrights -h >/dev/null; then
+    echo "ERROR: Missing 'editrights'. Try: pacman -S mingw-w64-ucrt-x86_64-editrights."
     exit 1
 fi
 

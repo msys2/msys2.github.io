@@ -39,10 +39,10 @@ for details.
 ```shell
 $ cygpath -u C:\\foo
 /c/foo
-$ cygpath -m /mingw64/bin
-C:/msys64/mingw64/bin
-$ cygpath -w /mingw64/bin
-C:\msys64\mingw64\bin
+$ cygpath -m /ucrt64/bin
+C:/msys64/ucrt64/bin
+$ cygpath -w /ucrt64/bin
+C:\msys64\ucrt64\bin
 ```
 
 ## Automatic Unix ⟶ Windows Path Conversion
