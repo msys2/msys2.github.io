@@ -3,18 +3,17 @@ name = "msys2.org"
 version = "1.0"
 description = ""
 authors = [{ name = "Christoph Reiter", email = "reiter.christoph@gmail.com" }]
-requires-python = ">=3.10,<4.0"
+requires-python = ">=3.11,<4.0"
 
 [dependency-groups]
 dev = [
-    "zensical>=0.0.58,<0.1",
+    "zensical>=0.1,<0.2",
     "beautifulsoup4>=4.13.4,<5",
 ]
 
 [tool.uv]
 package = false
-exclude-newer = "7 days"
-exclude-newer-package = { zensical = false }
+exclude-newer = "3 days"
 
 [tool.poetry]
 package-mode = false
